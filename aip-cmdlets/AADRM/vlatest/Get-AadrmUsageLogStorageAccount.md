@@ -1,0 +1,49 @@
+---
+external help file: Microsoft.RightsManagementServices.Online.Admin.PowerShell.dll-Help.xml
+online version: http://go.microsoft.com/fwlink/?LinkId=400619
+schema: 2.0.0
+---
+
+# Get-AadrmUsageLogStorageAccount
+
+## SYNOPSIS
+Gets the location for usage logs.
+
+## SYNTAX
+
+```
+Get-AadrmUsageLogStorageAccount [<CommonParameters>]
+```
+
+## DESCRIPTION
+The Get-AadrmUsageLogStorageAccount cmdlet gets the Azure storage location for usage logs for Azure Rights Management.
+
+Note: This cmdlet should be used only if you have usage logs prior to the usage logging change in February 2016.
+After this date, the only Windows PowerShell cmdlet that you need for Azure RMS usage logging is Get-AadrmUserLog.
+
+For more information about usage logging, see Logging and analyzing Azure Rights Management usage (https://docs.microsoft.com/rights-management/deploy-use/log-analyze-usage) on the Microsoft documentation site.
+
+## EXAMPLES
+
+### Example 1: Get the log location
+```
+PS C:\>Get-AadrmUsageLogStorageAccount
+```
+
+This command gets the location for your usage logs.
+
+## PARAMETERS
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
+
+## RELATED LINKS
+
+[Set-AadrmUsageLogStorageAccount]()
+
