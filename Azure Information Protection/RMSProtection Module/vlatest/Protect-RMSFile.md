@@ -293,12 +293,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-RMSTemplate](.\Get-RMSTemplate.md)
+[Get-RMSTemplate](./Get-RMSTemplate.md)
 
-[Get-RMSFileStatus](.\Get-RMSFileStatus.md)
+[Get-RMSFileStatus](./Get-RMSFileStatus.md)
 
-[New-RMSProtectionLicense](.\New-RMSProtectionLicense.md)
+[New-RMSProtectionLicense](./New-RMSProtectionLicense.md)
 
-[Unprotect-RMSFile](.\Unprotect-RMSFile.md)
+[Unprotect-RMSFile](./Unprotect-RMSFile.md)
 
 

@@ -47,8 +47,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Disable-AadrmUsageLogFeature](.\Disable-AadrmUsageLogFeature.md)
+[Disable-AadrmUsageLogFeature](./Disable-AadrmUsageLogFeature.md)
 
-[Enable-AadrmUsageLogFeature](.\Enable-AadrmUsageLogFeature.md)
+[Enable-AadrmUsageLogFeature](./Enable-AadrmUsageLogFeature.md)
 
 

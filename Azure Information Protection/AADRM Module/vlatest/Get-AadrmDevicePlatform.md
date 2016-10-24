@@ -189,8 +189,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Disable-AadrmDevicePlatform](.\Disable-AadrmDevicePlatform.md)
+[Disable-AadrmDevicePlatform](./Disable-AadrmDevicePlatform.md)
 
-[Enable-AadrmDevicePlatform](.\Enable-AadrmDevicePlatform.md)
+[Enable-AadrmDevicePlatform](./Enable-AadrmDevicePlatform.md)
 
 

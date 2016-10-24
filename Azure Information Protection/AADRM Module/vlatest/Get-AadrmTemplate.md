@@ -81,12 +81,12 @@ If no description is defined for a template in the current locale, "No descripti
 
 ## RELATED LINKS
 
-[Add-AadrmTemplate](.\Add-AadrmTemplate.md)
+[Add-AadrmTemplate](./Add-AadrmTemplate.md)
 
-[Export-AadrmTemplate](.\Export-AadrmTemplate.md)
+[Export-AadrmTemplate](./Export-AadrmTemplate.md)
 
-[Import-AadrmTemplate](.\Import-AadrmTemplate.md)
+[Import-AadrmTemplate](./Import-AadrmTemplate.md)
 
-[Remove-AadrmTemplate](.\Remove-AadrmTemplate.md)
+[Remove-AadrmTemplate](./Remove-AadrmTemplate.md)
 
 

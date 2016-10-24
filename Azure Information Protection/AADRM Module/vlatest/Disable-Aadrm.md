@@ -47,8 +47,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Enable-Aadrm](.\Enable-Aadrm.md)
+[Enable-Aadrm](./Enable-Aadrm.md)
 
-[Get-Aadrm](.\Get-Aadrm.md)
+[Get-Aadrm](./Get-Aadrm.md)
 
 

@@ -163,6 +163,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-Credential](https://go.microsoft.com/fwlink/?LinkID=293936)
 
-[Disconnect-AadrmService](.\Disconnect-AadrmService.md)
+[Disconnect-AadrmService](./Disconnect-AadrmService.md)
 
 

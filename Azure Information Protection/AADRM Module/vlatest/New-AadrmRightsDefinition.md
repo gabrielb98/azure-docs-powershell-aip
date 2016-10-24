@@ -122,8 +122,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AadrmTemplate](.\Add-AadrmTemplate.md)
+[Add-AadrmTemplate](./Add-AadrmTemplate.md)
 
-[Set-AadrmTemplateProperty](.\Set-AadrmTemplateProperty.md)
+[Set-AadrmTemplateProperty](./Set-AadrmTemplateProperty.md)
 
 

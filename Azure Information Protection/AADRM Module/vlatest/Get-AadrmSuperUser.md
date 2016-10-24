@@ -42,10 +42,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AadrmSuperUser](.\Add-AadrmSuperUser.md)
+[Add-AadrmSuperUser](./Add-AadrmSuperUser.md)
 
-[Remove-AadrmSuperUser](.\Remove-AadrmSuperUser.md)
+[Remove-AadrmSuperUser](./Remove-AadrmSuperUser.md)
 
-[Enable-AadrmSuperUserFeature](.\Enable-AadrmSuperUserFeature.md)
+[Enable-AadrmSuperUserFeature](./Enable-AadrmSuperUserFeature.md)
 
 

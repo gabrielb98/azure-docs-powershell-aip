@@ -42,8 +42,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AadrmSuperUserGroup](.\Get-AadrmSuperUserGroup.md)
+[Get-AadrmSuperUserGroup](./Get-AadrmSuperUserGroup.md)
 
-[Set-AadrmSuperUserGroup](.\Set-AadrmSuperUserGroup.md)
+[Set-AadrmSuperUserGroup](./Set-AadrmSuperUserGroup.md)
 
 
