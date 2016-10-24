@@ -96,12 +96,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AadrmTemplate](.\Add-AadrmTemplate.md)
+[Add-AadrmTemplate](./Add-AadrmTemplate.md)
 
-[Get-AadrmTemplate](.\Get-AadrmTemplate.md)
+[Get-AadrmTemplate](./Get-AadrmTemplate.md)
 
-[Import-AadrmTemplate](.\Import-AadrmTemplate.md)
+[Import-AadrmTemplate](./Import-AadrmTemplate.md)
 
-[Remove-AadrmTemplate](.\Remove-AadrmTemplate.md)
+[Remove-AadrmTemplate](./Remove-AadrmTemplate.md)
 
 

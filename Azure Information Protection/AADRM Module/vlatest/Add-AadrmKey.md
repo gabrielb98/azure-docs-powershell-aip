@@ -109,8 +109,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Use-AadrmKeyVaultKey](.\Use-AadrmKeyVaultKey.md)
+[Use-AadrmKeyVaultKey](./Use-AadrmKeyVaultKey.md)
 
-[Get-AadrmKeys](.\Get-AadrmKeys.md)
+[Get-AadrmKeys](./Get-AadrmKeys.md)
 
 

@@ -109,6 +109,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AadrmMigrationUrl](.\Get-AadrmMigrationUrl.md)
+[Get-AadrmMigrationUrl](./Get-AadrmMigrationUrl.md)
 
 

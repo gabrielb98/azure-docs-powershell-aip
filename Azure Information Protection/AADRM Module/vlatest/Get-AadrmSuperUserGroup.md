@@ -48,10 +48,10 @@ If no super user group exists, an empty **String** is returned.
 
 ## RELATED LINKS
 
-[Add-AadrmSuperUser](.\Add-AadrmSuperUser.md)
+[Add-AadrmSuperUser](./Add-AadrmSuperUser.md)
 
-[Clear-AadrmSuperUserGroup](.\Clear-AadrmSuperUserGroup.md)
+[Clear-AadrmSuperUserGroup](./Clear-AadrmSuperUserGroup.md)
 
-[Set-AadrmSuperUserGroup](.\Set-AadrmSuperUserGroup.md)
+[Set-AadrmSuperUserGroup](./Set-AadrmSuperUserGroup.md)
 
 

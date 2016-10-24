@@ -147,8 +147,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AadrmRoleBasedAdministrator](.\Get-AadrmRoleBasedAdministrator.md)
+[Get-AadrmRoleBasedAdministrator](./Get-AadrmRoleBasedAdministrator.md)
 
-[Remove-AadrmRoleBasedAdministrator](.\Remove-AadrmRoleBasedAdministrator.md)
+[Remove-AadrmRoleBasedAdministrator](./Remove-AadrmRoleBasedAdministrator.md)
 
 

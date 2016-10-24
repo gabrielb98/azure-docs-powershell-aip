@@ -48,16 +48,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Clear-AadrmSuperUserGroup](.\Clear-AadrmSuperUserGroup.md)
+[Clear-AadrmSuperUserGroup](./Clear-AadrmSuperUserGroup.md)
 
-[Enable-AadrmSuperUserFeature](.\Enable-AadrmSuperUserFeature.md)
+[Enable-AadrmSuperUserFeature](./Enable-AadrmSuperUserFeature.md)
 
-[Get-AadrmSuperUserFeature](.\Get-AadrmSuperUserFeature.md)
+[Get-AadrmSuperUserFeature](./Get-AadrmSuperUserFeature.md)
 
-[Get-AadrmSuperUser](.\Get-AadrmSuperUser.md)
+[Get-AadrmSuperUser](./Get-AadrmSuperUser.md)
 
-[Get-AadrmSuperUserGroup](.\Get-AadrmSuperUserGroup.md)
+[Get-AadrmSuperUserGroup](./Get-AadrmSuperUserGroup.md)
 
-[Remove-AadrmSuperUser](.\Remove-AadrmSuperUser.md)
+[Remove-AadrmSuperUser](./Remove-AadrmSuperUser.md)
 
 

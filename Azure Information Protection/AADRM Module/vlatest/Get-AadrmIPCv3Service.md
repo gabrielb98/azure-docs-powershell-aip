@@ -43,8 +43,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Disable-AadrmIPCv3Service](.\Disable-AadrmIPCv3Service.md)
+[Disable-AadrmIPCv3Service](./Disable-AadrmIPCv3Service.md)
 
-[Enable-AadrmIPCv3Service](.\Enable-AadrmIPCv3Service.md)
+[Enable-AadrmIPCv3Service](./Enable-AadrmIPCv3Service.md)
 
 

@@ -134,6 +134,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AadrmMaxUseLicenseValidityTime](.\Get-AadrmMaxUseLicenseValidityTime.md)
+[Get-AadrmMaxUseLicenseValidityTime](./Get-AadrmMaxUseLicenseValidityTime.md)
 
 

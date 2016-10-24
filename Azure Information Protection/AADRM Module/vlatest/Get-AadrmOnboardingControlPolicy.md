@@ -44,6 +44,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-AadrmOnboardingControlPolicy](.\Set-AadrmOnboardingControlPolicy.md)
+[Set-AadrmOnboardingControlPolicy](./Set-AadrmOnboardingControlPolicy.md)
 
 

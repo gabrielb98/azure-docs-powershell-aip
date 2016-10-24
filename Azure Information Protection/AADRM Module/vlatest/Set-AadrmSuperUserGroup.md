@@ -67,10 +67,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AadrmSuperUser](.\Add-AadrmSuperUser.md)
+[Add-AadrmSuperUser](./Add-AadrmSuperUser.md)
 
-[Clear-AadrmSuperUserGroup](.\Clear-AadrmSuperUserGroup.md)
+[Clear-AadrmSuperUserGroup](./Clear-AadrmSuperUserGroup.md)
 
-[Get-AadrmSuperUserGroup](.\Get-AadrmSuperUserGroup.md)
+[Get-AadrmSuperUserGroup](./Get-AadrmSuperUserGroup.md)
 
 

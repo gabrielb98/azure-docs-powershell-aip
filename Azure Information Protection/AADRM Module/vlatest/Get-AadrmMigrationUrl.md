@@ -41,6 +41,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-AadrmMigrationUrl](.\Set-AadrmMigrationUrl.md)
+[Set-AadrmMigrationUrl](./Set-AadrmMigrationUrl.md)
 
 

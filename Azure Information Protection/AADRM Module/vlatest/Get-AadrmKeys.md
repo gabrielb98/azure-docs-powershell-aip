@@ -56,8 +56,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AadrmKey](.\Add-AadrmKey.md)
+[Add-AadrmKey](./Add-AadrmKey.md)
 
-[Import-AadrmTpd](.\Import-AadrmTpd.md)
+[Import-AadrmTpd](./Import-AadrmTpd.md)
 
 

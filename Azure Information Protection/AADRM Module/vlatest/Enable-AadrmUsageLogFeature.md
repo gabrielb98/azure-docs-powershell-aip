@@ -48,10 +48,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Disable-AadrmUsageLogFeature](.\Disable-AadrmUsageLogFeature.md)
+[Disable-AadrmUsageLogFeature](./Disable-AadrmUsageLogFeature.md)
 
-[Get-AadrmUsageLogFeature](.\Get-AadrmUsageLogFeature.md)
+[Get-AadrmUsageLogFeature](./Get-AadrmUsageLogFeature.md)
 
-[Get-AadrmUsageLog](.\Get-AadrmUsageLog.md)
+[Get-AadrmUsageLog](./Get-AadrmUsageLog.md)
 
 
