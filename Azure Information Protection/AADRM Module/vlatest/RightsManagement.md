@@ -9,7 +9,19 @@ ms.assetid: 0B91D740-D2BD-4D57-9E21-C582C9BE2CCA
 
 # RightsManagement Module
 ## Description
-{{Manually Enter Description Here}}
+This topic displays help topics for the Azure Rights Management (RMS) Cmdlets.
+
+The Azure PowerShell cmdlets for Azure RMS let you administer Azure RMS from the command line. Although this enables automation, it also supports reliable and repeated processes to help reduce administrative overheads. In addition, some Azure RMS advanced configurations and operations require Azure PowerShell.
+
+For more information, see [Administering Azure Rights Management by Using Windows PowerShell](https://technet.microsoft.com/library/jj585027.aspx).
+
+>**Tip**
+>
+>If you do not see the cmdlet or options that are documented, make sure that you have [downloaded the latest version of the module](https://technet.microsoft.com/library/jj585012.aspx).
+>
+>The current version is **2.5.0.0**. To check the version you have installed, run: (Get-Module aadrm -ListAvailable).Version
+
+The .dll file for this module is *Microsoft.RightsManagementServices.Online.Admin.PowerShell.dll*.
 
 ## RightsManagement Cmdlets
 ### [Add-AadrmKey](./Add-AadrmKey.md)
