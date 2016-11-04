@@ -19,10 +19,10 @@ Set-AadrmUsageLogStorageAccount -StorageAccount <String> -AccessKey <SecureStrin
 ## DESCRIPTION
 The **Set-AadrmUsageLogStorageAccount** cmdlet sets the Azure storage location for usage logs for Azure Rights Management.
 
-Note: This cmdlet should be used only if you have usage logs prior to the usage logging change in February 2016.
+This cmdlet should be used only if you have usage logs prior to the usage logging change in February 2016.
 After this date, the only Windows PowerShell cmdlet that you need for Azure RMS usage logging is Get-AadrmUserLog.
 
-For more information about usage logging, see Logging and analyzing Azure Rights Management usagehttps://docs.microsoft.com/rights-management/deploy-use/log-analyze-usage (https://docs.microsoft.com/en-us/rights-management/deploy-use/log-analyze-usage) on the Microsoft documentation site.
+For more information about usage logging, see [Logging and analyzing Azure Rights Management usage](https://docs.microsoft.com/rights-management/deploy-use/log-analyze-usage) (https://docs.microsoft.com/en-us/rights-management/deploy-use/log-analyze-usage) on the Microsoft documentation site.
 
 ## EXAMPLES
 
@@ -32,7 +32,7 @@ PS C:\>$AccessKey = ConvertTo-SecureString "aeDpsMswiYNGNwOaCkOrfPiDtIpjRREosiXN
 PS C:\> Set-AadrmUsageLogStorageAccount -AccessKey $AccessKey -StorageAccount "RmsStorageAccount"
 ```
 
-The first command uses the ConvertTo-SecureStringhttp://go.microsoft.com/fwlink/?LinkID=113291 cmdlet to convert your access key to a secure string, and then stores it in the **$AccessKey** variable.
+The first command uses the [ConvertTo-SecureString](http://go.microsoft.com/fwlink/?LinkID=113291) cmdlet to convert your access key to a secure string, and then stores it in the **$AccessKey** variable.
 For more information, type `Get-Help ConvertTo-SecureString`.
 
 The second command specifies the location for your usage logs.
@@ -46,7 +46,7 @@ To view your access key, connect to the Azure Management Portal.
 ```yaml
 Type: SecureString
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -62,7 +62,7 @@ To obtain the name of this account, use the Management Portal.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -84,4 +84,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-AadrmUsageLogStorageAccount](./Get-AadrmUsageLogStorageAccount.md)
 
+[ConvertTo-SecureString](http://go.microsoft.com/fwlink/?LinkID=113291)
 
+[Logging and analyzing Azure Rights Management usage](https://docs.microsoft.com/rights-management/deploy-use/log-analyze-usage)

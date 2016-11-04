@@ -23,7 +23,7 @@ This status remains on for the duration of your Windows PowerShell session.
 
 This cmdlet applies to Azure  RMS only and does not apply to AD RMS.
 This cmdlet also does not apply if you are authenticating to Azure RMS by using your user account.
-For more information, see about_RMSProtection_AzureRMS.
+For more information, see [about_RMSProtection_AzureRMS](./about_RMSProtection_AzureRMS.md).
 
 ## EXAMPLES
 
@@ -32,9 +32,9 @@ For more information, see about_RMSProtection_AzureRMS.
 PS C:\>Get-RMSServerAuthentication
 The RmsServerAuthentication is ON
 
-Base64Key                               AppPrincipalId                          BposTenantId
----------                               --------------                          ------------
-zIeMu8zNJ6U377CLtppkhkbl4gjodmYSXUVwAO5ycgA=                         b5e3f76a-b5c2-4c96-a594-a0807f65bba4                                23976bc6-dcd4-4173-9d96-dad1f48efd42
+Base64Key                                         AppPrincipalId                          BposTenantId
+---------                                         --------------                          ------------
+zIeMu8zNJ6U377CLtppkhkbl4gjodmYSXUVwAO5ycgA=      b5e3f76a-b5c2-4c96-a594-a0807f65bba4    23976bc6-dcd4-4173-9d96-dad1f48efd42
 ```
 
 This command gets the status of the service principal authentication and outputs the currently used identifiers, if authentication is successful.
@@ -54,4 +54,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-RMSServerAuthentication](./Set-RMSServerAuthentication.md)
 
-
+[about_RMSProtection_AzureRMS](./about_RMSProtection_AzureRMS.md)

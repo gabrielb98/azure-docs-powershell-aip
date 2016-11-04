@@ -18,7 +18,7 @@ Clear-AadrmSuperUserGroup [<CommonParameters>]
 
 ## DESCRIPTION
 The **Clear-AadrmSuperUserGroup** cmdlet removes the super user group for your organization.
-This cmdlet does not affect users that are individually assigned the super user privilege with the Add-AadrmSuperUser cmdlet.
+This cmdlet does not affect users that are individually assigned the super user privilege with the [Add-AadrmSuperUser](./Add-AadrmSuperUser.md) cmdlet.
 
 ## EXAMPLES
 
@@ -42,8 +42,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Add-AadrmSuperUser](./Add-AadrmSuperUser.md)
+
 [Get-AadrmSuperUserGroup](./Get-AadrmSuperUserGroup.md)
 
 [Set-AadrmSuperUserGroup](./Set-AadrmSuperUserGroup.md)
-
-

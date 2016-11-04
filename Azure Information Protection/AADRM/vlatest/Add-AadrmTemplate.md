@@ -29,7 +29,7 @@ Important: Before you use this cmdlet, you must first create a rights definition
 You can store a maximum of 500 custom templates (published or archived) in Azure.
 If you can't add new templates because you have reached this limit as a result of keeping many archived templates, consider exporting them to save the information locally and then removing these templates in Azure.
 
-For more information about custom templates, see Configuring custom templates for Azure Rights Managementhttps://docs.microsoft.com/rights-management/deploy-use/configure-custom-templates (https://docs.microsoft.com/rights-management/deploy-use/configure-custom-templates) on the Microsoft documentation site.
+For more information about custom templates, see [Configuring custom templates for Azure Rights Management](https://docs.microsoft.com/rights-management/deploy-use/configure-custom-templates)  (https://docs.microsoft.com/rights-management/deploy-use/configure-custom-templates) on the Microsoft documentation site.
 
 ## EXAMPLES
 
@@ -59,7 +59,7 @@ Use this parameter only if the *ContentExpirationOption* parameter is set to OnD
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -82,7 +82,7 @@ Indicates that content is available for the indicated number of days after it is
 ```yaml
 Type: ContentExpirationType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -98,7 +98,7 @@ Use this parameter only if *ContentExpirationOption* is set to AfterDays.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -123,7 +123,7 @@ $descriptions\[1034\] = "Este contenido es confidencial y no debe ser compartido
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -133,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableInLegacyApps
-Determines the behavior of a departmental template in applications that do not support departmental templates (see the ScopedIdentities parameter).
+Determines the behavior of a departmental template in applications that do not support departmental templates (see the *ScopedIdentities* parameter).
 If set to True and the template is a departmental template, all users trying to protect content from an application that does not support departmental templates will see the template and therefore be able to select it, regardless of whether the users are members of the template ¢â‚¬â"¢s target scope or not.
 If set to False, no users see and therefore cannot select the template in applications that do not support departmental templates, even if the users are members of the template's target scope.
 
@@ -145,17 +145,17 @@ The Rights Management sharing application supports departmental templates wherea
 For these Exchange applications (and all other applications that cannot support departmental templates), you must decide whether all users can select a departmental template from the list of available templates, or no users can select a departmental template from the list.
 This setting does not affect whether a user can access content that is protected by a departmental template; it only affects the ability for a user to select the template itself.
 
-If you have applications that do not yet natively support departmental templates, you can use a custom RMS template download scripthttp://go.microsoft.com/fwlink/?LinkId=524506 (http://go.microsoft.com/fwlink/?LinkId=524506) or other tools to deploy these templates to the local RMS client folder.
-Then, these applications will correctly display the departmental templates: 
+If you have applications that do not yet natively support departmental templates, you can use a custom RMS template download script http://go.microsoft.com/fwlink/?LinkId=524506 (http://go.microsoft.com/fwlink/?LinkId=524506) or other tools to deploy these templates to the local RMS client folder.
+Then, these applications will correctly display the departmental templates:
 
- -- For Office 2010, the client folder is %localappdata%\Microsoft\DRM\Templates. 
+ -- For Office 2010, the client folder is %localappdata%\Microsoft\DRM\Templates.
 
  -- From a client computer that has downloaded all the templates, you can copy and then paste the template files to other computers.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -173,15 +173,15 @@ Increasing this value gives more freedom to users to access the content without 
 To specify unlimited access, use -1.
 To specify that a use license must be obtained each time the protected content is accessed and that content is available only with an Internet connection, specify 0.
 
-Each organization has a maximum use license validity time, which is 30 days by default and can be configured by using the Set-AadrmMaxUseLicenseValidityTime.
-The value that you specify for the LicenseValidityDuration must be lower than that value.
+Each organization has a maximum use license validity time, which is 30 days by default and can be configured by using the [Set-AadrmMaxUseLicenseValidityTime](./Set-AadrmMaxUseLicenseValidityTime.md).
+The value that you specify for the *LicenseValidityDuration* parameter must be lower than that value.
 This setting can also be overridden by a user for a document when they use the RMS sharing application, and select the **Allow me to instantly revoke access to these documents** option, which effectively sets the use license validity time to 0.
 When there are different values like this, Azure RMS uses the most restrictive value.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -206,7 +206,7 @@ $names\[1034\] = "Contenido confidencial"
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -216,7 +216,7 @@ Accept wildcard characters: False
 ```
 
 ### -RightsDefinitions
-Specifies a list of rights definition objects that are specified by using the New-AadrmRightsDefinition cmdlet.
+Specifies a list of rights definition objects that are specified by using the [New-AadrmRightsDefinition](./New-AadrmRightsDefinition.md) cmdlet.
 These rights definition objects express the rights to grant individual users or groups to content that is protected by applying the template.
 
 Rights definition objects contain the email address for the identity and the rights to assign to it.
@@ -224,7 +224,7 @@ Rights definition objects contain the email address for the identity and the rig
 ```yaml
 Type: System.Collections.Generic.List`1[Microsoft.RightsManagementServices.Online.Admin.TemplateRightsDefinition]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -240,7 +240,7 @@ For the specified users to see the templates, the application must support depar
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -260,7 +260,7 @@ Published templates are distributed to users and made available to protect conte
 ```yaml
 Type: TemplateStatus
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -328,5 +328,3 @@ The rights are specified as a list of **Rights Definition** objects that contain
 [New-AadrmRightsDefinition](./New-AadrmRightsDefinition.md)
 
 [Remove-AadrmTemplate](./Remove-AadrmTemplate.md)
-
-

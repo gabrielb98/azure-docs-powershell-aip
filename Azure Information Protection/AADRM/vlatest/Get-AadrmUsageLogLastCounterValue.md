@@ -19,10 +19,10 @@ Get-AadrmUsageLogLastCounterValue [<CommonParameters>]
 ## DESCRIPTION
 The **Get-AadrmUsageLogLastCounterValue** cmdlet gets the last counter value for the usage log.
 
-Note: This cmdlet should be used only if you have usage logs prior to the usage logging change in February 2016.
-After this date, the only Windows PowerShell cmdlet that you need for Azure RMS usage logging is Get-AadrmUserLog.
+This cmdlet should be used only if you have usage logs prior to the usage logging change in February 2016.
+After this date, the only Windows PowerShell cmdlet that you need for Azure RMS usage logging is [Get-AadrmUserLog](./Get-AadrmUserLog.md).
 
-For more information about usage logging, see Logging and analyzing Azure Rights Management usagehttps://docs.microsoft.com/rights-management/deploy-use/log-analyze-usage (https://docs.microsoft.com/rights-management/deploy-use/log-analyze-usage) on the Microsoft documentation site.
+For more information about usage logging, see [Logging and analyzing Azure Rights Management usage](https://docs.microsoft.com/rights-management/deploy-use/log-analyze-usage) (https://docs.microsoft.com/rights-management/deploy-use/log-analyze-usage) on the Microsoft documentation site.
 
 ## EXAMPLES
 
@@ -48,4 +48,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Enable-AadrmUsageLogFeature](./Enable-AadrmUsageLogFeature.md)
 
-
+[Logging and analyzing Azure Rights Management usage](https://docs.microsoft.com/rights-management/deploy-use/log-analyze-usage)

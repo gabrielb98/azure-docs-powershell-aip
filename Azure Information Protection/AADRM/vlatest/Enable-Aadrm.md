@@ -22,8 +22,8 @@ This cmdlet offers an alternative method of activating the Azure Rights Manageme
 You must activate Rights Management before you can begin to use information rights management (IRM) features in Office applications and before you can protect documents and emails by using other applications that use Azure Rights Management.
 When you activate Rights Management, you turn on this service for all rights-enabled applications and services, but some applications and services and might need further configuration before they can use Azure Rights Management.
 
-For more information about activating Rights Management and a link to information about the service plans that include Azure Rights Management, see Activating Azure Rights Managementhttps://docs.microsoft.com/rights-management/deploy-use/activate-service (https://docs.microsoft.com/rights-management/deploy-use/activate-service) on the Microsoft documentation site.
-For more information about other deployment steps that might be needed, see the deployment roadmaphttps://docs.microsoft.com/rights-management/plan-design/deployment-roadmap (https://docs.microsoft.com/rights-management/plan-design/deployment-roadmap).
+For more information about activating Rights Management and a link to information about the service plans that include Azure Rights Management, see [Activating Azure Rights Management](https://docs.microsoft.com/rights-management/deploy-use/activate-service) (https://docs.microsoft.com/rights-management/deploy-use/activate-service) on the Microsoft documentation site.
+For more information about other deployment steps that might be needed, see the [Deployment Roadmap](https://docs.microsoft.com/rights-management/plan-design/deployment-roadmap)  (https://docs.microsoft.com/rights-management/plan-design/deployment-roadmap).
 
 ## EXAMPLES
 
@@ -51,4 +51,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-Aadrm](./Get-Aadrm.md)
 
+[Activating Azure Rights Management](https://docs.microsoft.com/rights-management/deploy-use/activate-service)
 
+[Deployment Roadmap](https://docs.microsoft.com/rights-management/plan-design/deployment-roadmap)

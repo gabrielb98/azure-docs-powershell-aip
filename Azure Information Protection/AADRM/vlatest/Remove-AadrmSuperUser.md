@@ -18,9 +18,9 @@ Remove-AadrmSuperUser -EmailAddress <String> [<CommonParameters>]
 
 ## DESCRIPTION
 The **Remove-AadrmSuperUser** cmdlet removes a user from the list of users who are individually granted super user privileges for your organization.
-This cmdlet does not remove a group or a user from that a group that is assigned super user privileges by using the Set-AadrmSuperUserGroup cmdlet.
-To add or remove super users, you must first enable the super user feature for Azure Rights Management by using the Enable-AadrmSuperUserFeature cmdlet.
-For more information about super users, see the Get-AadrmSuperUser cmdlet.
+This cmdlet does not remove a group or a user from that a group that is assigned super user privileges by using the [Set-AadrmSuperUserGroup](./Set-AadrmSuperUserGroup.md) cmdlet.
+To add or remove super users, you must first enable the super user feature for Azure Rights Management by using the [Enable-AadrmSuperUserFeature](./Enable-AadrmSuperUserFeature.md) cmdlet.
+For more information about super users, see the [Get-AadrmSuperUser](./Get-AadrmSuperUser.md) cmdlet.
 
 ## EXAMPLES
 
@@ -40,7 +40,7 @@ The cmdlet removes the user or group identified by the email address that you sp
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -67,5 +67,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Enable-AadrmSuperUserFeature](./Enable-AadrmSuperUserFeature.md)
 
 [Set-AadrmSuperUserGroup](./Set-AadrmSuperUserGroup.md)
-
-

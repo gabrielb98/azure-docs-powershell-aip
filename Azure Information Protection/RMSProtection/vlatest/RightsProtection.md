@@ -13,7 +13,7 @@ The following list contains links to the help topics for the Microsoft Rights Ma
 
 These RMS Protection cmdlets can be used with Azure Rights Management (Azure RMS) data protection from Azure Information Protection, or with Active Directory Rights Management Services (AD RMS) and these cmdlets supplement other PowerShell modules for these Rights Management deployments. Use these RMS Protection cmdlets to bulk protect and unprotect files for any file type.
 
-The current version of the RMS Protection PowerShell module is **2.2.0.0**. If you have previously downloaded the tool and installed this module, run the following command to check the version: (Get-Module RMSProtection -ListAvailable).Version.
+The current version of the RMS Protection PowerShell module is **2.2.0.0**. If you have previously downloaded the tool and installed this module, run the following command to check the version: `(Get-Module RMSProtection -ListAvailable).Version`.
 
 >**Tip**
 >
@@ -94,6 +94,3 @@ Sets the service principal authentication credentials for Azure RMS.
 
 ### [Unprotect-RMSFile](./Unprotect-RMSFile.md)
 Unprotects a file that is currently protected by RMS.
-
-
-

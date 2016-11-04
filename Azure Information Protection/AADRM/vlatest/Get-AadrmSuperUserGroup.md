@@ -18,9 +18,9 @@ Get-AadrmSuperUserGroup [<CommonParameters>]
 
 ## DESCRIPTION
 The **Get-AadrmSuperUserGroup** cmdlet gets the email address of the Azure Rights Management super user group for your organization.
-This cmdlet does not get users that are individually assigned as super users with the Add-AadrmSuperUser cmdlet.
+This cmdlet does not get users that are individually assigned as super users with the [Add-AadrmSuperUser](./Add-AadrmSuperUser.md) cmdlet.
 
-For more information about super users, see Configuring super users for Azure Rights Management and discovery services or data recoveryhttps://docs.microsoft.com/rights-management/deploy-use/configure-super-users (https://docs.microsoft.com/rights-management/deploy-use/configure-super-users) on the Microsoft documentation site.
+For more information about super users, see Configuring super users for [Azure Rights Management and discovery services or data recovery](https://docs.microsoft.com/rights-management/deploy-use/configure-super-users) (https://docs.microsoft.com/rights-management/deploy-use/configure-super-users) on the Microsoft documentation site.
 
 ## EXAMPLES
 
@@ -54,4 +54,4 @@ If no super user group exists, an empty **String** is returned.
 
 [Set-AadrmSuperUserGroup](./Set-AadrmSuperUserGroup.md)
 
-
+[Azure Rights Management and discovery services or data recovery](https://docs.microsoft.com/rights-management/deploy-use/configure-super-users)

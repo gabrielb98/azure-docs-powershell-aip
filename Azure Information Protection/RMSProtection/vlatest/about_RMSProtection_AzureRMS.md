@@ -25,7 +25,7 @@ additional prerequisite for Azure RMS:
 super user feature must be enabled for your organization and your
 account must be configured to be a super user for Azure RMS.
 3: To protect or unprotect files without interaction: Create a service
-principal account, run Set-RMSServerAuthentication, and consider
+principal account, run [Set-RMSServerAuthentication](./Set-RMSServerAuthentication.md), and consider
 making this service principal a super user for Azure RMS.
 4: For regions outside North America: Edit the registry.
 
@@ -41,7 +41,7 @@ on the Microsoft documentation site.
 
 For the third prerequisite, to use the cmdlets without user interaction
 you must authenticate with the Azure RMS service by using a service principal,
-which you do by using the Set-RMSServerAuthentication cmdlet. You must do this
+which you do by using the **Set-RMSServerAuthentication** cmdlet. You must do this
 for each Windows PowerShell session that runs cmdlets that contact the
 Azure RMS service. Before you run this cmdlet, make sure that you have
 these three identifiers:

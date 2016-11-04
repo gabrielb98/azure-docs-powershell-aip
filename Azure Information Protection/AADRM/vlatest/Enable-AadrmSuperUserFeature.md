@@ -54,5 +54,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Disable-AadrmSuperUserFeature](./Disable-AadrmSuperUserFeature.md)
 
 [Get-AadrmSuperUserFeature](./Get-AadrmSuperUserFeature.md)
-
-

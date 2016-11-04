@@ -25,7 +25,7 @@ By default, document tracking is enabled, so you would run this cmdlet only if s
 After enabling document tracking, users can see information in the document tracking site for all the protected documents that they have shared, and not just information from when you enabled the feature.
 For example, they could revoke a document that they shared when document tracking was disabled.
 
-For more information about document tracking and revocation, see Track and revoke your documents when you use the RMS sharing applicationhttps://docs.microsoft.com/rights-management/rms-client/sharing-app-track-revoke (https://docs.microsoft.com/rights-management/rms-client/sharing-app-track-revoke) from the Rights Management sharing application user guide.
+For more information about document tracking and revocation, see Track and revoke your documents when you use the [RMS sharing application](https://docs.microsoft.com/rights-management/rms-client/sharing-app-track-revoke) (https://docs.microsoft.com/rights-management/rms-client/sharing-app-track-revoke) from the Rights Management sharing application user guide.
 
 ## EXAMPLES
 
@@ -44,7 +44,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -54,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.Prompts you for confirmation before running the cmdlet.
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -70,7 +70,6 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
@@ -99,5 +98,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Disable-AadrmDocumentTrackingFeature](./Disable-AadrmDocumentTrackingFeature.md)
 
 [Get-AadrmDocumentTrackingFeature](./Get-AadrmDocumentTrackingFeature.md)
-
-
