@@ -21,8 +21,8 @@ The **Add-AadrmKey** cmdlet adds a legacy customer-managed tenant key over the I
 The previously active tenant key is archived.
 
 **Note**: This cmdlet is now deprecated because Azure RMS uses Azure Key Vault for customer-managed keys.
-Instead of this cmdlet, use Use-AadrmKeyVaultKey.
-For more information, see Planning and implementing your Azure Rights Management tenant keyhttps://docs.microsoft.com/rights-management/plan-design/plan-implement-tenant-key (https://docs.microsoft.com/rights-management/plan-design/plan-implement-tenant-key) on the Microsoft documentation site.
+Instead of this cmdlet, use [Use-AadrmKeyVaultKey](./Use-AadrmKeyVaultKey.md).
+For more information, see [Planning and implementing your Azure Rights Management tenant key](https://docs.microsoft.com/rights-management/plan-design/plan-implement-tenant-key) (https://docs.microsoft.com/rights-management/plan-design/plan-implement-tenant-key) on the Microsoft documentation site.
 
 ## EXAMPLES
 
@@ -31,8 +31,8 @@ For more information, see Planning and implementing your Azure Rights Management
 PS C:\> Add-AadrmKey -Force -KeyFile "C:\Keys\Key073"
 ```
 
-This command adds the tenant key specified by the **KeyFile** parameter.
-Because the command specifies the **Force** parameter, the command does not prompt you for confirmation.
+This command adds the tenant key specified by the *KeyFile* parameter.
+Because the command specifies the *Force* parameter, the command does not prompt you for confirmation.
 
 ## PARAMETERS
 
@@ -42,7 +42,7 @@ Indicates that the cmdlet adds the tenant key silently without prompting you for
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -57,7 +57,7 @@ Specifies a tenant key file packaged by using the tools to generate your tenant 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -67,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.Prompts you for confirmation before running the cmdlet.
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -83,7 +83,6 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
@@ -112,5 +111,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Use-AadrmKeyVaultKey](./Use-AadrmKeyVaultKey.md)
 
 [Get-AadrmKeys](./Get-AadrmKeys.md)
-
-

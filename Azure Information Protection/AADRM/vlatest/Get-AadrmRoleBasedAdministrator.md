@@ -36,13 +36,13 @@ Specifies a role.
 The cmdlet gets the administrators that belong to the role that you specify.
 The acceptable values for this parameter are:
 
-- ConnectorAdministrator 
+- ConnectorAdministrator
 - GlobalAdministrator
 
 ```yaml
 Type: Role
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -65,5 +65,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Add-AadrmRoleBasedAdministrator](./Add-AadrmRoleBasedAdministrator.md)
 
 [Remove-AadrmRoleBasedAdministrator](./Remove-AadrmRoleBasedAdministrator.md)
-
-

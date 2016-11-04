@@ -25,9 +25,9 @@ Tip: Consider using this cmdlet as a way to back up your custom templates, so th
 
 The export process does not automatically append a file name extension, so you can specify a file name extension to match the application that you will use to view and edit the resulting data.
 
-You can use the Get-AadrmTemplate cmdlet to get the GUIDs of all templates.
+You can use the [Get-AadrmTemplate](./Get-AadrmTemplate.md) cmdlet to get the GUIDs of all templates.
 
-For more information about custom templates, see Configuring custom templates for Azure Rights Managementhttps://docs.microsoft.com/rights-management/deploy-use/configure-custom-templates (https://docs.microsoft.com/rights-management/deploy-use/configure-custom-templates) on the Microsoft documentation site.
+For more information about custom templates, see [Configuring custom templates for Azure Rights Management](https://docs.microsoft.com/rights-management/deploy-use/configure-custom-templates) (https://docs.microsoft.com/rights-management/deploy-use/configure-custom-templates) on the Microsoft documentation site.
 
 ## EXAMPLES
 
@@ -46,7 +46,7 @@ Indicates that the cmdlet overwrites an existing template file that has the same
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -61,7 +61,7 @@ Specifies the path to the location where you want to save the file.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -76,7 +76,7 @@ Specifies the GUID of an Rights Management template.
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -104,4 +104,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Remove-AadrmTemplate](./Remove-AadrmTemplate.md)
 
-
+[Configuring custom templates for Azure Rights Management](https://docs.microsoft.com/rights-management/deploy-use/configure-custom-templates)

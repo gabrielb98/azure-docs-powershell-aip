@@ -26,7 +26,7 @@ The TPD key is now the Azure RMS tenant key.
 After import is successful, the previously active TPD becomes archived.
 
 Warning: Do not run this cmdlet unless you have read and understood the requirements, restrictions, instructions, and implications of migrating from AD RMS to Azure Rights Management.
-For more information, see Migrating from AD RMS to Azure RMShttps://docs.microsoft.com/rights-management/plan-design/migrate-from-ad-rms-to-azure-rms (https://docs.microsoft.com/rights-management/plan-design/migrate-from-ad-rms-to-azure-rms) on the Microsoft documentation site.
+For more information, see [Migrating from AD RMS to Azure RMS](https://docs.microsoft.com/rights-management/plan-design/migrate-from-ad-rms-to-azure-rms) (https://docs.microsoft.com/rights-management/plan-design/migrate-from-ad-rms-to-azure-rms) on the Microsoft documentation site.
 
 After you run this command, the key in the imported TPD becomes available to Azure Rights Management to consume content that AD RMS protected by using this key.
 If the TPD is active, users in your organization begin to use the new Azure RMS tenant TPD to protect documents.
@@ -37,7 +37,7 @@ If the migrated templates are not activated, they can only be used to open docum
 
 You must use the AD RMS management console to export the TPD.
 If you use a hardware security module (HSM) for your keys, you must first repackage the TPD keys by using the Azure Key Vault BYOK tools.
-You can download these tools from the Microsoft Download Sitehttp://www.microsoft.com/download/details.aspx?id=45345 For more information, see How to generate and transfer HSM-protected keys for Azure Key Vaulthttps://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/ (https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/).
+You can download these tools from the [Microsoft Download Site](http://www.microsoft.com/download/details.aspx?id=45345) (http://www.microsoft.com/download/details.aspx?id=45345) For more information, see [How to generate and transfer HSM-protected keys for Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/) (https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/).
 
 ## EXAMPLES
 
@@ -78,7 +78,7 @@ Otherwise you can use these templates only to open documents that they previousl
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -93,7 +93,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -105,13 +105,13 @@ Accept wildcard characters: False
 ### -HsmKeyFile
 Specifies the packaged legacy HSM file that was prepared by using the Azure RMS BYOK tools to upload to your tenant key over the Internet
 
-**Note**: This parameter is deprecated now that Azure RMS BYOK supports Azure Key Vault, and this parameter is replaced with *KeyVaultKeyUrl*.
-If this parameter and -KeyVaultKeyUrl are both supplied, this parameter is ignored.
+This parameter is deprecated now that Azure RMS BYOK supports Azure Key Vault, and this parameter is replaced with *KeyVaultKeyUrl*.
+If this parameter and the *KeyVaultKeyUrl* parameter are both supplied, this parameter is ignored.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -127,7 +127,7 @@ This key will be used in Azure RMS as the root key for all cryptographic operati
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -140,7 +140,7 @@ Accept wildcard characters: False
 Specifies the password that was used to encrypt the exported TPD file.
 
 You can use either **ConvertTo-SecureString -AsPlaintext** or **Read-Host** to specify the SecureString.
-When you use ConvertTo-SecureString and the password has special characters, enter the password between single quotes or escape the special characters.
+When you use **ConvertTo-SecureString** and the password has special characters, enter the password between single quotes or escape the special characters.
 If you do not, the password will not parse correctly and in verbose mode, you will see the following error messages:
 
 **VERBOSE: Trusted Publishing Domain data is corrupted.**
@@ -152,7 +152,7 @@ As a full example, you might type **$pwd = ConvertTo-SecureString 'Pa$$w0rd' -As
 ```yaml
 Type: SecureString
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -167,7 +167,7 @@ Specifies the TPD file exported from your AD RMS server to import to your Azure 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -177,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.Prompts you for confirmation before running the cmdlet.
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -193,7 +193,6 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
@@ -219,4 +218,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Migrating from AD RMS to Azure RMS](https://docs.microsoft.com/rights-management/plan-design/migrate-from-ad-rms-to-azure-rms)
 
+[How to generate and transfer HSM-protected keys for Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/)

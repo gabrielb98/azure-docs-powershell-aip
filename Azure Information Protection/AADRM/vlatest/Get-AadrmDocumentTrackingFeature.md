@@ -44,5 +44,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Disable-AadrmDocumentTrackingFeature](./Disable-AadrmDocumentTrackingFeature.md)
 
 [Enable-AadrmDocumentTrackingFeature](./Enable-AadrmDocumentTrackingFeature.md)
-
-

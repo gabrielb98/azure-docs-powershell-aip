@@ -19,7 +19,7 @@ New-RMSProtectionLicense [-RmsServer <String>] [-OwnerEmail <String>] [-UserEmai
 ```
 
 ## DESCRIPTION
-The **New-RMSProtectionLicense** cmdlet creates an ad-hoc rights policy that you store as a variable and then use to protect a file or files when you run the Protect-RMSFile cmdlet.
+The **New-RMSProtectionLicense** cmdlet creates an ad-hoc rights policy that you store as a variable and then use to protect a file or files when you run the [Protect-RMSFile](./Protect-RMSFile) cmdlet.
 Create an ad-hoc rights policy (also known as a publishing license) when you cannot use a previously created rights policy template.
 
 ## EXAMPLES
@@ -63,7 +63,7 @@ Specifies the description of the rights policy.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -78,7 +78,7 @@ Specifies the name of this  rights policy.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -95,7 +95,7 @@ If you do not specify a value, the cmdlet will use your email address to identif
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -117,18 +117,18 @@ The acceptable values for this parameter are:
 - VIEWRIGHTSDATA
 - EDITRIGHTSDATA
 - EXTRACT
-- OWNER 
+- OWNER
 - DOCEDIT
 - OBJMODEL
 
-Warning: If you later want to remove this rights policy from a file, you must have the EXTRACT or OWNER right to use the Unprotect-RMSFile cmdlet to unprotect a file, or be a Rights Management super user for your organization.
+Warning: If you later want to remove this rights policy from a file, you must have the EXTRACT or OWNER right to use the [Unprotect-RMSFile](./Unprotect-RMSFile) cmdlet to unprotect a file, or be a Rights Management super user for your organization.
 
-For more information about these rights, see Configuring Usage Rights for Azure Rights Managementhttps://technet.microsoft.com/library/mt169423.aspx (https://technet.microsoft.com/library/mt169423.aspx) on TechNet.
+For more information about these rights, see [Configuring Usage Rights for Azure Rights Management](https://technet.microsoft.com/library/mt169423.aspx) (https://technet.microsoft.com/library/mt169423.aspx) on TechNet.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: VIEW, EDIT, PRINT, EXPORT, COMMENT, VIEWRIGHTSDATA, EDITRIGHTSDATA, EXTRACT, OWNER, DOCEDIT, OBJMODEL
 
 Required: False
@@ -145,7 +145,7 @@ This parameter is not applicable for Azure RMS or if your computer knows the rig
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -164,7 +164,7 @@ You can also specify users (but not groups) from another organization.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -181,7 +181,7 @@ However, the owner and a super user can always access the file, even after the e
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -203,4 +203,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Protect-RMSFile](./Protect-RMSFile.md)
 
-
+[Unprotect-RMSFile](./Unprotect-RMSFile.md)

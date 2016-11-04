@@ -24,12 +24,12 @@ Add-AadrmSuperUser -ServicePrincipalId <String> [<CommonParameters>]
 
 ## DESCRIPTION
 The **Add-AadrmSuperUser** cmdlet adds an individual super user by email address or service principal ID for your organization.
-Before you can add a super user, you must enable the super user feature for Azure Rights Management with the Enable-AadrmSuperUserFeature cmdlet.
+Before you can add a super user, you must enable the super user feature for Azure Rights Management with the [Enable-AadrmSuperUserFeature](./Enable-AadrmSuperUserFeature.md) cmdlet.
 In addition, the user that you add must have a proxy address, which requires that the user account is either synchronized from Active Directory Domain Services with the attribute set for the proxy address, or that the user is granted a license for Exchange Online.
 
 When you add a super user, that super user is granted full control over all rights-protected content that is managed by Azure Rights Management for your organization.
 Use this cmdlet to specify one or more individuals as super users for your organization.
-To specify a group whose members have super user privileges, use the Set-AadrmSuperUserGroup cmdlet instead of this **Add-AadrmSuperUser** cmdlet.
+To specify a group whose members have super user privileges, use the [Set-AadrmSuperUserGroup](./Set-AadrmSuperUserGroup.md) cmdlet instead of this **Add-AadrmSuperUser** cmdlet.
 
 Rights Management grants full owner rights to super users for all use licenses that are issued by the subscriber organization.
 Super users can decrypt any rights-protected content file and remove rights-protection for it, even if an expiration date has been set and expired.
@@ -59,7 +59,7 @@ Specifies the email address of a user in your organization to which to grant sup
 ```yaml
 Type: String
 Parameter Sets: EmailAddress
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -70,18 +70,18 @@ Accept wildcard characters: False
 
 ### -ServicePrincipalId
 Specifies the **AppPrincipalId** of the service principal to which to grant super user privileges.
-Use the Get-MsolServicePrincipal cmdlet to get an existing service principal, or the New-MsolServicePrincipalCredential cmdlet to create a new service principal.
+Use the **Get-MsolServicePrincipal** cmdlet to get an existing service principal, or the **New-MsolServicePrincipalCredential** cmdlet to create a new service principal.
 
 The service principal ID is converted to a pseudo-email address and added to the super users list for the organization.
 For example, `Add-AadrmSuperUser -ServicePrincipalId "3C367900-44D1-4865-9379-9A3227042C25"` adds 3C367900-44D1-4865-9379-9A3227042C25@\<rms tenant ID\>.rms.na.aadrm.com to the super user list.
 
-You can remove the service principal from the super user list by using the Remove-AadrmSuperUser cmdlet and this pseudo-email address.
-You can use the Get-AadrmSuperUser cmdlet to verify the email address.
+You can remove the service principal from the super user list by using the [Remove-AadrmSuperUser](./Remove-AadrmSuperUser.md) cmdlet and this pseudo-email address.
+You can use the [Get-AadrmSuperUser](./Get-AadrmSuperUser.md) cmdlet to verify the email address.
 
 ```yaml
 Type: String
 Parameter Sets: SvcPrincipalId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -108,5 +108,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AadrmSuperUser](./Remove-AadrmSuperUser.md)
 
 [Set-AadrmSuperUserGroup](./Set-AadrmSuperUserGroup.md)
-
-

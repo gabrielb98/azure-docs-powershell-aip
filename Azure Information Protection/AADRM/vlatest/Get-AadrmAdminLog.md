@@ -35,7 +35,7 @@ This command generates a log that contains all the Rights Management administrat
 PS C:\>Get-AadrmAdminLog -Path "C:\Temp\AdminLog.log" -FromTime "05/01/2015 00:00:00" -ToTime "05/31/2015 23:59:59"
 ```
 
-This command generates a log of administrative commands for your Azure RMS tenant, limited to items that fall within the specific time period by using the **FromTime** and **ToTime** parameters.
+This command generates a log of administrative commands for your Azure RMS tenant, limited to items that fall within the specific time period by using the *FromTime* and *ToTime* parameters.
 In this example, the time period is all days in May 2015, using the US date format.
 
 ### Example 3: Generate a log of commands for the last 45 days
@@ -43,8 +43,8 @@ In this example, the time period is all days in May 2015, using the US date form
 PS C:\>$days = (Get-Date).AddDays(-45) PS C:\>Get-AadrmAdminLog -Path "C:\Temp\AdminLog.log" -FromTime $days
 ```
 
-This command generates a log of  administrative commands for your Azure RMS tenant, limited to items within the last 45 days (inclusive).
-The first command sets the variable for the -FromTime parameter to be today's date minus 45 days.
+This command generates a log of administrative commands for your Azure RMS tenant, limited to items within the last 45 days (inclusive).
+The first command sets the variable for the *FromTime* parameter to be today's date minus 45 days.
 Then the second command gets the entries from the log for this time period, by using this variable.
 
 ## PARAMETERS
@@ -55,7 +55,7 @@ Indicates that the cmdlet overwrites, without prompting for confirmation, an exi
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -66,14 +66,14 @@ Accept wildcard characters: False
 
 ### -FromTime
 Specifies the start time (inclusive) for the log file as a **DateTime** object.
-To obtain a **DateTime** object, use the Get-Datehttp://go.microsoft.com/fwlink/?LinkID=293966 cmdlet.
+To obtain a **DateTime** object, use the [Get-Date](http://go.microsoft.com/fwlink/?LinkID=293966) cmdlet.
 Specify the date and time according to your system locale settings.
 For more information, type `Get-Help Get-Date`.
 
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -88,7 +88,7 @@ Specifies an existing path for the log.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -99,14 +99,14 @@ Accept wildcard characters: False
 
 ### -ToTime
 Specifies the stop time (inclusive) for the log file as a **DateTime** object.
-To obtain a **DateTime** object, use the Get-Datehttp://go.microsoft.com/fwlink/?LinkID=293966 cmdlet.
+To obtain a **DateTime** object, use the **Get-Date** cmdlet.
 Specify the date and time according to your system locale settings.
 For more information, type `Get-Help Get-Date`.
 
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -116,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.Prompts you for confirmation before running the cmdlet.
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -132,7 +132,6 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
@@ -159,5 +158,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-Date](http://go.microsoft.com/fwlink/?LinkID=293966)
-
-

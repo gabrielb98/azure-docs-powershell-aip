@@ -21,15 +21,15 @@ The **Enable-AadrmUsageLogFeature** cmdlet enables usage logging for Azure Right
 After you enable this feature, Rights Management logs all requests served on behalf of your tenant to your storage account.
 
 Note: This cmdlet is not needed and will not run successfully after the usage logging change in February 2016.
-After this date, usage logging is automatically enabled and the only Windows PowerShell cmdlet that you need for Azure RMS usage logging is Get-AadrmUserLog.
+After this date, usage logging is automatically enabled and the only Windows PowerShell cmdlet that you need for Azure RMS usage logging is [Get-AadrmUserLog](./Get-AadrmUserLog.md).
 
-For more information about usage logging, see Logging and analyzing Azure Rights Management usagehttps://docs.microsoft.com/rights-management/deploy-use/log-analyze-usage (https://docs.microsoft.com/rights-management/deploy-use/log-analyze-usage) on the Microsoft documentation site.
+For more information about usage logging, see [Logging and analyzing Azure Rights Management usage](https://docs.microsoft.com/rights-management/deploy-use/log-analyze-usage)  (https://docs.microsoft.com/rights-management/deploy-use/log-analyze-usage) on the Microsoft documentation site.
 
 ## EXAMPLES
 
 ### Example 1: Enable usage logging
 ```
-PS C:\>Enable-AadrmUsageLogFeature 
+PS C:\>Enable-AadrmUsageLogFeature
 Usage logging is enabled for the Rights management service.
 ```
 
@@ -53,5 +53,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AadrmUsageLogFeature](./Get-AadrmUsageLogFeature.md)
 
 [Get-AadrmUsageLog](./Get-AadrmUsageLog.md)
-
-

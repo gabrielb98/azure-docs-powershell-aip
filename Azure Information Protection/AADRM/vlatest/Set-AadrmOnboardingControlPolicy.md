@@ -30,7 +30,7 @@ If you use the group membership option, you must specify a security group, which
 To specify the group, use the group GUID.
 To obtain that GUID,  use the **Get-MsolGroup** cmdlet from the Azure AD PowerShell administration module.
 
-For more information about the Azure AD PowerShell cmdlets, see Azure Active Directory Cmdletshttp://msdn.microsoft.com/library/azure/jj151815.aspx (http://msdn.microsoft.com/library/azure/jj151815.aspx).
+For more information about the Azure AD PowerShell cmdlets, see [Azure Active Directory Cmdlets](http://msdn.microsoft.com/library/azure/jj151815.aspx) (http://msdn.microsoft.com/library/azure/jj151815.aspx).
 
 Note: This cmdlet does not stop users from consuming protected content.
 
@@ -77,7 +77,7 @@ Indicates that this cmdlet configures the on-boarding control policy even if the
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -87,17 +87,17 @@ Accept wildcard characters: False
 ```
 
 ### -Scope
-Specifies the types of applications to which the on-boarding policy applies. 
-Valid values are: 
+Specifies the types of applications to which the on-boarding policy applies.
+Valid values are:
 
-- All 
+- All
 - WindowsApp
 - MobileApp
 
 ```yaml
 Type: OnboardingControlPolicyScope
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: All, WindowsApp, MobileApp
 
 Required: False
@@ -116,7 +116,7 @@ You can use this parameter  to implement a phased deployment of Azure Rights Man
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -132,7 +132,7 @@ Users can always use Azure Rights Management to consume protected content regard
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -142,7 +142,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.Prompts you for confirmation before running the cmdlet.
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -158,7 +158,6 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
@@ -186,4 +185,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-AadrmOnboardingControlPolicy](./Get-AadrmOnboardingControlPolicy.md)
 
-
+[Azure Active Directory Cmdlets](http://msdn.microsoft.com/library/azure/jj151815.aspx)

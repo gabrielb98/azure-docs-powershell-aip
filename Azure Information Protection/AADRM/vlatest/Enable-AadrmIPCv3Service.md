@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.RightsManagementServices.Online.Admin.PowerShell.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 ms.assetid: 847B715B-0951-40BC-A1CA-8BD6E8AD8148
 ---
@@ -45,5 +45,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Disable-AadrmIPCv3Service](./Disable-AadrmIPCv3Service.md)
 
 [Get-AadrmIPCv3Service](./Get-AadrmIPCv3Service.md)
-
-

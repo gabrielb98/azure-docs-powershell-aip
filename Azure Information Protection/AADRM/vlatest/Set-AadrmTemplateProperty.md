@@ -25,13 +25,13 @@ Set-AadrmTemplateProperty -TemplateId <Guid> [-Names <Hashtable>] [-Descriptions
 The **Set-AadrmTemplateProperty** cmdlet updates a property or properties of a custom Azure Rights Management template.
 The template is identified by its GUID, which must refer to an existing custom Rights Management template.
 You cannot use this cmdlet to update the default templates.
-You can use the Get-AadrmTemplate cmdlet to get the template ID.
+You can use the [Get-AadrmTemplate](./Get-AadrmTemplate.md) cmdlet to get the template ID.
 
 Important: When you update properties of a custom template, the existing settings for those properties will be overwritten (not supplemented) without warning, so be sure to specify all the settings that you need for the properties that you are updating.
-As a best practice, back up the existing template before you run this cmdlet, by using the Export-AadrmTemplate cmdlet.
-Then, if you need to revert to the original configuration, you can use the Import-AadrmTemplate cmdlet to restore the template.
+As a best practice, back up the existing template before you run this cmdlet, by using the [Export-AadrmTemplate](./Export-AadrmTemplate.md) cmdlet.
+Then, if you need to revert to the original configuration, you can use the [Import-AadrmTemplate](./Import-AadrmTemplate.md) cmdlet to restore the template.
 
-For more information about custom templates, see Configuring custom templates for Azure Rights Managementhttps://docs.microsoft.com/rights-management/deploy-use/configure-custom-templates (https://docs.microsoft.com/rights-management/deploy-use/configure-custom-templates) on the Microsoft documentation site.
+For more information about custom templates, see Configuring custom templates for [Azure Rights Management](https://docs.microsoft.com/rights-management/deploy-use/configure-custom-templates) (https://docs.microsoft.com/rights-management/deploy-use/configure-custom-templates) on the Microsoft documentation site.
 
 ## EXAMPLES
 
@@ -76,7 +76,7 @@ Use this parameter only if *ContentExpirationOption* is set to OnDate.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -92,14 +92,14 @@ The acceptable values for this parameter are:
 - Never.
 Indicates that content is available indefinitely.
 - OnDate.
-Indicates that content expires at a certain fixed date. 
+Indicates that content expires at a certain fixed date.
 - AfterDays.
 Indicates that content will be available for the indicated number of days after it is protected.
 
 ```yaml
 Type: ContentExpirationType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -115,7 +115,7 @@ Use this parameter only if *ContentExpirationOption* is set to AfterDays.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -129,7 +129,7 @@ Specifies a list of descriptions for the template.
 
 Create names and descriptions for multiple locale IDs using the hash-table syntax in Windows PowerShell.
 There must be at least one name/description pair.
-The locale IDs for names and descriptions must match each other. 
+The locale IDs for names and descriptions must match each other.
 
 $descriptions = @{}
 
@@ -140,7 +140,7 @@ $descriptions\[1034\] = "Este contenido es confidencial y no debe ser compartido
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -160,17 +160,17 @@ The Rights Management sharing application supports departmental templates wherea
 For these Exchange applications (and all other applications that cannot support departmental templates), you must decide whether all users can select a departmental template from the list of available templates, or no users can select a departmental template from the list.
 This setting does not affect whether a user can access content that is protected by a departmental template; it only affects the ability for a user to select the template itself.
 
-If you have applications that do not yet natively support departmental templates, you can use a custom RMS template download scripthttp://go.microsoft.com/fwlink/?LinkId=524506 (http://go.microsoft.com/fwlink/?LinkId=524506) or other tools to deploy these templates to the local RMS client folder.
-Then, these applications will correctly display the departmental templates: 
+If you have applications that do not yet natively support departmental templates, you can use a [custom RMS template download script](http://go.microsoft.com/fwlink/?LinkId=524506) (http://go.microsoft.com/fwlink/?LinkId=524506) or other tools to deploy these templates to the local RMS client folder.
+Then, these applications will correctly display the departmental templates:
 
- -- For Office 2010, the client folder is %localappdata%\Microsoft\DRM\Templates. 
+ -- For Office 2010, the client folder is %localappdata%\Microsoft\DRM\Templates.
 
  -- From a client computer that has downloaded all the templates, you can copy and then paste the template files to other computers.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -188,15 +188,15 @@ Increasing this value gives more freedom to users to access the content without 
 To specify unlimited access, use -1.
 To specify that a use license must be obtained each time the protected content is accessed and that content is available only with an Internet connection, specify 0.
 
-Each organization has a maximum use license validity time, which is 30 days by default and can be configured by using the Set-AadrmMaxUseLicenseValidityTime.
-The value that you specify for the LicenseValidityDuration must be lower than that value.
+Each organization has a maximum use license validity time, which is 30 days by default and can be configured by using the [Set-AadrmMaxUseLicenseValidityTime](./Set-AadrmMaxUseLicenseValidityTime.md).
+The value that you specify for the *LicenseValidityDuration* parameter must be lower than that value.
 This setting can also be overridden by a user for a document when they use the RMS sharing application, and select the **Allow me to instantly revoke access to these documents** option, which effectively sets the use license validity time to 0.
 When there are different values like this, Azure RMS uses the most restrictive value.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -221,7 +221,7 @@ $names\[1034\] = "Contenido confidencial"
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -231,13 +231,13 @@ Accept wildcard characters: False
 ```
 
 ### -RightsDefinitions
-Specifies a list of rights definition objects that are specified by using the New-AadrmRightsDefinition cmdlet.
+Specifies a list of rights definition objects that are specified by using the [New-AadrmRightsDefinition](./New-AadrmRightsDefinition.md) cmdlet.
 These rights definition objects express the rights to grant individual users or groups to content that is protected by applying the template.
 
 ```yaml
 Type: System.Collections.Generic.List`1[Microsoft.RightsManagementServices.Online.Admin.TemplateRightsDefinition]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -248,12 +248,12 @@ Accept wildcard characters: False
 
 ### -ScopedIdentities
 Lists the users by email address (account or group) that can see and therefore select departmental templates from applications.
-For the specified users to see the templates, the application must support departmental templates or the EnableInLegacyApps parameter must be set to True.
+For the specified users to see the templates, the application must support departmental templates or the *EnableInLegacyApps* parameter must be set to True.
 
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -273,7 +273,7 @@ Published templates are distributed to users and made available to protect conte
 ```yaml
 Type: TemplateStatus
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -288,7 +288,7 @@ Specifies the GUID of a Rights Management template.
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -312,4 +312,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-AadrmTemplateProperty](./Get-AadrmTemplateProperty.md)
 
-
+[Azure Rights Management](https://docs.microsoft.com/rights-management/deploy-use/configure-custom-templates)

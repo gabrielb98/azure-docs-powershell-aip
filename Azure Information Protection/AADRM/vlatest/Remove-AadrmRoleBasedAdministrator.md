@@ -41,7 +41,7 @@ Tip: If you have many groups, use the **Where-Object** cmdlet in Windows PowerSh
 For example, you might enter the following cmdlet to filter and return only groups that start with "Rights": **Get-MsolGroup | where {$_.DisplayName -like "Rights*" }**
 
 2.
-In the output of the **Get-MsolGroup** cmdlet, copy the GUID value that was returned and use (paste) that value into the value of the -ObjectId parameter when you run the **Add-RoleBased Administrator** or Remove-AadrmRoleBasedAdministrator cmdlet.
+In the output of the **Get-MsolGroup** cmdlet, copy the GUID value that was returned and use (paste) that value into the value of the -ObjectId parameter when you run the **Add-RoleBased Administrator** or [Remove-AadrmRoleBasedAdministrator](./Remove-AadrmRoleBasedAdministrator) cmdlet.
 
 ## EXAMPLES
 
@@ -68,7 +68,7 @@ The cmdlet removes administrative rights for the user or group identified by the
 ```yaml
 Type: String
 Parameter Sets: EmailAddress
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -84,7 +84,7 @@ The cmdlet removes administrative rights for the user or group identified by GUI
 ```yaml
 Type: Guid
 Parameter Sets: ObjectId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -98,7 +98,7 @@ Specifies a role.
 The cmdlet removes an administrator that belongs to the role that you specify.
 The acceptable values for this parameter are:
 
-- ConnectorAdministrator 
+- ConnectorAdministrator
 - GlobalAdministrator
 
 If you do not specify a role, the cmdlet removes the administrator from the GlobalAdministrator role.
@@ -106,7 +106,7 @@ If you do not specify a role, the cmdlet removes the administrator from the Glob
 ```yaml
 Type: Role
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -122,7 +122,7 @@ The cmdlet removes administrative rights for the user or group identified by the
 ```yaml
 Type: String
 Parameter Sets: DisplayName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -145,5 +145,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Add-AadrmRoleBasedAdministrator](./Add-AadrmRoleBasedAdministrator.md)
 
 [Get-AadrmRoleBasedAdministrator](./Get-AadrmRoleBasedAdministrator.md)
-
-

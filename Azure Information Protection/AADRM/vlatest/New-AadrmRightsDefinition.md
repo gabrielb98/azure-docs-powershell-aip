@@ -18,7 +18,7 @@ New-AadrmRightsDefinition -EmailAddress <String> -Rights <System.Collections.Gen
 ```
 
 ## DESCRIPTION
-The **New-AadrmRightsDefinition** cmdlet creates a **Rights Definition** object that you store as a variable and then use to create or update a custom rights policy template when you use the Add-AadrmTemplate or Set-AadrmTemplateProperty cmdlet.
+The **New-AadrmRightsDefinition** cmdlet creates a **Rights Definition** object that you store as a variable and then use to create or update a custom rights policy template when you use the [Add-AadrmTemplate](./Add-AadrmTemplate.md) or [Set-AadrmTemplateProperty](./Set-AadrmTemplateProperty.md) cmdlet.
 A **Rights Definition** object expresses the rights of a user or group to content that Azure Rights Management protects.
 
 ## EXAMPLES
@@ -53,7 +53,7 @@ You can see your organization's automatically created email address if you copy 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -64,45 +64,45 @@ Accept wildcard characters: False
 
 ### -Rights
 Specifies a list of rights.
-The list contains one or more of the following: 
+The list contains one or more of the following:
 
 - VIEW.
 Interpreted by most applications as allowed to present the data on the screen.
 - EDIT.
 Interpreted by most applications as allowed to modify content in the document and save it.
 - DOCEDIT.
-Interpreted by most applications as allowed to modify the content of the document. 
+Interpreted by most applications as allowed to modify the content of the document.
 - EXTRACT.
-Interpreted by most applications as allowed to copy the content to the clipboard or otherwise extract the content in unencrypted form. 
+Interpreted by most applications as allowed to copy the content to the clipboard or otherwise extract the content in unencrypted form.
 - VIEWRIGHTSDATA.
-Interpreted by applications as allowed to view the policy on the document. 
+Interpreted by applications as allowed to view the policy on the document.
 - EDITRIGHTSDATA.
-Interpreted by applications as allowed to modify the policy on the document. 
+Interpreted by applications as allowed to modify the policy on the document.
 - OBJMODEL.
-Interpreted by most applications as allowed to access the document programmatically; for example, by using macros. 
+Interpreted by most applications as allowed to access the document programmatically; for example, by using macros.
 - EXPORT.
 Interpreted by most applications as allowed to save the file in unencrypted form.
 For example, this right allows you to save in a different file format that does not support protection.
 - PRINT.
 Interpreted by most applications as allowed to print the document.
 - OWNER.
-User has all rights on the document, including the ability to remove protection. 
+User has all rights on the document, including the ability to remove protection.
 - FORWARD.
-Interpreted by most applications as allowed to forward an email message, and to add recipients to the To and Cc lines. 
+Interpreted by most applications as allowed to forward an email message, and to add recipients to the To and Cc lines.
 - REPLY.
-Interpreted by most applications as allowed to select reply to an email message, without allowing changes in the To or Cc lines. 
+Interpreted by most applications as allowed to select reply to an email message, without allowing changes in the To or Cc lines.
 - REPLYALL.
 Interpreted by most applications as allowed to reply to all recipients of an email message, but does not allow the user to add recipients to the To or Cc lines.
 
 Note: For clarity, the documentation and display text from the module shows these rights as all upper-case letters.
 However, the values are not case-sensitive and you can specify them in lower or upper case.
 
-For more information about the usage rights, see Configuring usage rights for Azure Rights Managementhttps://docs.microsoft.com/rights-management/deploy-use/configure-usage-rights (https://docs.microsoft.com/rights-management/deploy-use/configure-usage-rights) on the Microsoft documentation site.
+For more information about the usage rights, see Configuring usage rights for [Azure Rights Management](https://docs.microsoft.com/rights-management/deploy-use/configure-usage-rights) (https://docs.microsoft.com/rights-management/deploy-use/configure-usage-rights) on the Microsoft documentation site.
 
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -126,4 +126,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-AadrmTemplateProperty](./Set-AadrmTemplateProperty.md)
 
-
+[Azure Rights Management](https://docs.microsoft.com/rights-management/deploy-use/configure-usage-rights)
