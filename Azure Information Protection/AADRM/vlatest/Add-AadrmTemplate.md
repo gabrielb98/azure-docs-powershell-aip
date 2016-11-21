@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.RightsManagementServices.Online.Admin.PowerShell.dll-Help.xml
 online version: http://go.microsoft.com/fwlink/?LinkID=400624
 schema: 2.0.0
@@ -40,7 +40,7 @@ PS C:\> $names[1033] = "New Launch - Confidential content"
 PS C:\> $names[1034] = " Nuevo Lanzamiento - Contenido confidencial"
 PS C:\> $descriptions = @{}
 PS C:\> $descriptions[1033] = "This content is confidential for people working on the New Launch project and should not be shared externally"
-PS C:\> $descriptions[1034] = "Este contenido es confidencial para empleados trabajando en el proyecto Nuevo Lanzamiento y no debe ser compartido fuera de la organizaci Â³n"
+PS C:\> $descriptions[1034] = "Este contenido es confidencial para empleados trabajando en el proyecto Nuevo Lanzamiento y no debe ser compartido fuera de la organización"
 PS C:\> $r1 = New-AadrmRightsDefinition -EmailAddress marketing@contoso.com -Rights "VIEW","EXPORT"
 PS C:\> $r2 = New-AadrmRightsDefinition -EmailAddress engineering@contoso.com -Rights "VIEW","DOCEDIT"
 PS C:\> Add-AadrmTemplate -Names $names -Descriptions $Descriptions -LicenseValidityDuration 5 -RightsDefinitions $r1, $r2 -ScopedIdentities engineering@contoso.com -Status Published
@@ -118,7 +118,7 @@ $descriptions = @{}
 
 $descriptions\[1033\] = "This content is confidential and should not be shared externally"
 
-$descriptions\[1034\] = "Este contenido es confidencial y no debe ser compartido fuera de la organizaci Â³n"
+$descriptions\[1034\] = "Este contenido es confidencial y no debe ser compartido fuera de la organización"
 
 ```yaml
 Type: Hashtable
@@ -134,7 +134,7 @@ Accept wildcard characters: False
 
 ### -EnableInLegacyApps
 Determines the behavior of a departmental template in applications that do not support departmental templates (see the *ScopedIdentities* parameter).
-If set to True and the template is a departmental template, all users trying to protect content from an application that does not support departmental templates will see the template and therefore be able to select it, regardless of whether the users are members of the template ¢â‚¬â"¢s target scope or not.
+If set to True and the template is a departmental template, all users trying to protect content from an application that does not support departmental templates will see the template and therefore be able to select it, regardless of whether the users are members of the template's target scope or not.
 If set to False, no users see and therefore cannot select the template in applications that do not support departmental templates, even if the users are members of the template's target scope.
 
 This setting has no effect on templates that are not departmental templates and also has no effect on applications that natively support departmental templates.
@@ -309,7 +309,7 @@ $descriptions = @{}
 
 $descriptions\[1033\] = "This content is confidential and should not be shared externally"
 
-$descriptions\[1034\] = "Este contenido es confidencial y no debe ser compartido fuera de la organizaci Â³n"
+$descriptions\[1034\] = "Este contenido es confidencial y no debe ser compartido fuera de la organización"
 
 The rights are specified as a list of **Rights Definition** objects that contain the email address for the identity and the rights to assign to it.
 
