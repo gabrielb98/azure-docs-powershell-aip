@@ -17,10 +17,9 @@ Disable-AadrmDocumentTrackingFeature [-Force] [-WhatIf] [-Confirm] [<CommonParam
 ```
 
 ## DESCRIPTION
-The **Disable-AadrmDocumentTrackingFeature** cmdlet disables the document tracking feature for Azure Rights Management (Azure RMS).
-This cmdlet disables access to the document tracking site so that all users in your organization cannot track or revoke access to protected documents that they have shared.
-Document tracking is enabled by default for an organization using Azure RMS but you might need to disable this feature for privacy requirements that are specific to your organization or region.
-This setting is organization-wide; you cannot disable document tracking for some users in your organization and not for others.
+The **Disable-AadrmDocumentTrackingFeature** cmdlet disables the document tracking feature for Azure Rights Management (Azure RMS). This cmdlet disables access to the document tracking site so that all users in your organization cannot track or revoke access to protected documents that they have shared. In addition, activity related to shared documents (who opened them, when, from which location) is not logged to the document tracking site. For example, if you later enable the document tracking site, users will see the documents that they protected while the site was disabled but cannot see who opened them.
+
+Document tracking is enabled by default for an organization using the Azure Rights Management service from Azure Information Protection, but you might need to disable this feature for privacy requirements that are specific to your organization or region. This setting is organization-wide; you cannot disable document tracking for some users in your organization and not for others.
 
 When document tracking is disabled, users still see options that refer to tracking and revocation in applications such as Word and File Explorer, and the RMS sharing application.
 However, when users access the document tracking site, they see the following message:
@@ -28,8 +27,7 @@ However, when users access the document tracking site, they see the following me
 **Your administrator has disabled document tracking for your organization.**
 **Contact your administrator for details.**
 
-You can disable document tracking either before you activate Azure RMS, or after.
-After you have disabled document tracking, you can re-enable it at any time.
+You can disable document tracking either before you activate the Azure Rights Management service, or after. After you have disabled document tracking, you can re-enable it at any time.
 
 For more information about document tracking and revocation, see Track and revoke your documents when you use the [RMS sharing application](https://docs.microsoft.com/rights-management/rms-client/sharing-app-track-revoke) (https://docs.microsoft.com/rights-management/rms-client/sharing-app-track-revoke) from the Rights Management sharing application user guide.
 
