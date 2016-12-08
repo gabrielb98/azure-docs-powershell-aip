@@ -74,10 +74,6 @@ DOCEDIT: Interpreted by most applications as allowed to modify the content of th
 
 EXTRACT: Interpreted by most applications as allowed to copy the content to the clipboard or otherwise extract the content in unencrypted form.
 
-VIEWRIGHTSDATA: Interpreted by applications as allowed to view the policy on the document.
-
-EDITRIGHTSDATA: Interpreted by applications as allowed to modify the policy on the document.
-
 OBJMODEL: Interpreted by most applications as allowed to access the document programmatically; for example, by using macros.
 
 EXPORT: Interpreted by most applications as allowed to save the file in unencrypted form. For example, this right allows you to save in a different file format that does not support protection.
