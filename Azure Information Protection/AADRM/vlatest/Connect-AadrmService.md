@@ -106,8 +106,8 @@ Accept wildcard characters: False
 
 ### -Credential
 Specifies a **PSCredential** object.
-To obtain a **PSCredential** object, use the [Get-Credential](http://go.microsoft.com/fwlink/?LinkID=293936) cmdlet.
-For more information, type `Get-Help Get-Cmdlet`.
+To obtain a **PSCredential** object, use the [Get-Credential](http://go.microsoft.com/fwlink/?LinkID=293936) cmdlet. For more information, type `Get-Help Get-Cmdlet`.
+
 The cmdlet prompts you for a password.
 
 You cannot use this parameter with the *AccessToken* parameter and do not use it if your account is configured to use multi-factor authentication (MFA).
