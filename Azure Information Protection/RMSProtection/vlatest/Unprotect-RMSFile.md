@@ -131,7 +131,12 @@ Accept wildcard characters: False
 
 ### -LogFile
 Specifies the path for log files that list the files that are successfully or unsuccessfully unprotected.
-Three log files are created: Success; Failure; and Debug.
+Three log files are created: 
+
+- Success
+- Failure
+- Debug
+
 For container files, these log files also include nested files.
 
 For the path, you can specify a drive letter or UNC.
