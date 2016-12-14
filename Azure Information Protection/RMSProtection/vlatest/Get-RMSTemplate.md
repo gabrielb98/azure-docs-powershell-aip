@@ -1,4 +1,4 @@
----
+﻿---
 external help file: RMSProtection.dll-Help.xml
 online version: http://go.microsoft.com/fwlink/?LinkID=623205
 schema: 2.0.0
@@ -72,7 +72,7 @@ PS C:\>Get-RMSTemplate -Culture "fr-fr"
 TemplateId        : {e6ee2481-26b9-45e5-b34a-f744eacd53b0}
 CultureInfo       : fr-FR
 Description       : Ce document contient des informations confidentielles destinees a un usage interne uniquement. Il
-                    peut etre modifi Â©, mais ne peut etre ni copie ni imprime.
+                    peut etre modifié, mais ne peut etre ni copie ni imprime.
 Name              : Contoso, Ltd - Confidentiel
 IssuerDisplayName : Contoso, Ltd
 FromTemplate      : True
@@ -94,7 +94,7 @@ This command gets a list of templates for the French locale.
 Specifies the templates to load by locale by using a language-region code-pair, where language is an ISO-639 language code and region is an ISO 3166-1 country or region identifier (for instance, en-us, fr-fr, or es-es).
 If you do not specify this parameter, or you specify this parameter without a value, all available language versions for the same template are returned.
 To load templates for a different locale, specify it as a value with this parameter by using the language-region code-pair.
-For instance, if you are in Canada and your current system locale is set to English but you want to see the template names and description in French, specify -Culture  ¢â‚¬Å"fr-fr ¢â‚¬Â.
+For instance, if you are in Canada and your current system locale is set to English but you want to see the template names and description in French, specify -Culture "fr-fr".
 
 ```yaml
 Type: String

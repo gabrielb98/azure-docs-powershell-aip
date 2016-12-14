@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.RightsManagementServices.Online.Admin.PowerShell.dll-Help.xml
 online version: http://go.microsoft.com/fwlink/?LinkID=400631
 schema: 2.0.0
@@ -135,7 +135,7 @@ $descriptions = @{}
 
 $descriptions\[1033\] = "This content is confidential and should not be shared externally"
 
-$descriptions\[1034\] = "Este contenido es confidencial y no debe ser compartido fuera de la organizaci Â³n"
+$descriptions\[1034\] = "Este contenido es confidencial y no debe ser compartido fuera de la organización"
 
 ```yaml
 Type: Hashtable
