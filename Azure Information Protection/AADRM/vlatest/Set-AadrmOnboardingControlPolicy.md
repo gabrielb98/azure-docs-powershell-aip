@@ -23,12 +23,12 @@ This cmdlet supports a gradual deployment by controlling which users in your org
 This control can be based on assigned user licenses for the service or membership in a designated security group.
 You can also define whether the policy applies to just mobile devices, just Windows clients, or mobile devices and Windows clients.
 
-If you use the assigned license option, you can assign licenses to users by using the Office 365 admin center or by using Azure PowerShell and the **Set-MsolUserLicense** cmdlet from the Azure AD PowerShell administration module.
-You can also use the **Get-MsolAccountSku** cmdlet to obtain the different types of licenses that you can assign in your organization.
+If you use the assigned license option, you can assign licenses to users by using the Office 365 admin center or by using Azure PowerShell and the [Set-MsolUserLicense](./Set-MsolUserLicense.md) cmdlet from the Azure AD PowerShell administration module.
+You can also use the [Get-MsolAccountSku](./Get-MsolAccountSku.md) cmdlet to obtain the different types of licenses that you can assign in your organization.
 
 If you use the group membership option, you must specify a security group, which does not have to be mail-enabled and it can contain other groups.
 To specify the group, use the group GUID.
-To obtain that GUID,  use the **Get-MsolGroup** cmdlet from the Azure AD PowerShell administration module.
+To obtain that GUID,  use the [Get-MsolGroup](./Get-MsolGroup.md) cmdlet from the Azure AD PowerShell administration module.
 
 For more information about the Azure AD PowerShell cmdlets, see [Azure Active Directory Cmdlets](http://msdn.microsoft.com/library/azure/jj151815.aspx) (http://msdn.microsoft.com/library/azure/jj151815.aspx).
 
