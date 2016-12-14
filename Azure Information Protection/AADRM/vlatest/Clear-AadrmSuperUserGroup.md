@@ -8,7 +8,7 @@ ms.assetid: F4A1DD4B-C8B9-4FA8-A809-388F01C0A0F0
 # Clear-AadrmSuperUserGroup
 
 ## SYNOPSIS
-Removes the super user group for your organization.
+Clears the super user group for your organization.
 
 ## SYNTAX
 
@@ -17,7 +17,7 @@ Clear-AadrmSuperUserGroup [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Clear-AadrmSuperUserGroup** cmdlet removes the super user group for your organization.
+The **Clear-AadrmSuperUserGroup** cmdlet clears the super user group for your organization.
 This cmdlet does not affect users that are individually assigned the super user privilege with the [Add-AadrmSuperUser](./Add-AadrmSuperUser.md) cmdlet.
 
 ## EXAMPLES
@@ -27,7 +27,7 @@ This cmdlet does not affect users that are individually assigned the super user 
 PS C:\>Clear-AadrmSuperUserGroup
 ```
 
-This command removes the super user group, if one exists, for the organization.
+This command clears the super user group, if one exists, for the organization.
 
 ## PARAMETERS
 
