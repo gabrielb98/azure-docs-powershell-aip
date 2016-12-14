@@ -44,9 +44,10 @@ If this setting is not enabled, enable it, restart Internet Explorer, and then r
 
 ### Example 1: Connect to Azure RMS and be prompted for your user name and other credentials
 ```
-
+PS C:\> Connect-AadrmService 
 ```
 
+This command connects to the Rights Management service.
 This is the simplest way to connect to Azure Rights Management, by running the cmdlet with no parameters.
 You are prompted for your user name and password.
 If your account is configured to use multi-factor authentication, you are then prompted for your alternative method of authentication, and then connected to the service.
