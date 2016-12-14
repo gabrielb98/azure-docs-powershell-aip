@@ -34,14 +34,14 @@ Note: One of the parameters for this cmdlet uses the ObjectId (GUID).
 Because the Office 365 admin center and the Azure Management Portal does not display the GUIDs that are used to identify specific user or groups objects, use the following two steps to find the values that you need to specify the GUIDs.:
 
 1.
-If you have not already done so, download and install the Azure AD Windows PowerShell module, connect to the service by running **Connect-MsolService**, and then run the **Get-MsolGroup** cmdlet to lookup the GUID of the security group you created to administer role-based administrative rights for Rights Management.
-To install the Azure AD module, see the Install the Windows Azure AD Module section from the Manage Azure AD using Windows PowerShell (http://msdn.microsoft.com/library/windowsazure/jj151815.aspx) topic.
+If you have not already done so, download and install the Azure AD Windows PowerShell module, connect to the service by running [Connect-MsolService](./Connect-MsolService.md), and then run the [Get-MsolGroup](./Get-MsolGroup.md) cmdlet to lookup the GUID of the security group you created to administer role-based administrative rights for Rights Management.
+To install the Azure AD module, see the [Install the Windows Azure AD Module section from the Manage Azure AD using Windows PowerShell](http://msdn.microsoft.com/library/windowsazure/jj151815.aspx) (http://msdn.microsoft.com/library/windowsazure/jj151815.aspx) topic.
 
 Tip: If you have many groups, use the **Where-Object** cmdlet in Windows PowerShell to filter results.
 For example, you might enter the following cmdlet to filter and return only groups that start with "Rights": **Get-MsolGroup | where {$_.DisplayName -like "Rights*" }**
 
 2.
-In the output of the **Get-MsolGroup** cmdlet, copy the GUID value that was returned and use (paste) that value into the value of the -ObjectId parameter when you run the **Add-RoleBased Administrator** or [Remove-AadrmRoleBasedAdministrator](./Remove-AadrmRoleBasedAdministrator) cmdlet.
+In the output of the **Get-MsolGroup** cmdlet, copy the GUID value that was returned and use (paste) that value into the value of the *ObjectId* parameter when you run the **Add-RoleBased Administrator** or [Remove-AadrmRoleBasedAdministrator](./Remove-AadrmRoleBasedAdministrator) cmdlet.
 
 ## EXAMPLES
 
