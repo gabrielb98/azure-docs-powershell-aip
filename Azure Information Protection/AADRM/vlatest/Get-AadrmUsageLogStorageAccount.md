@@ -20,7 +20,7 @@ Get-AadrmUsageLogStorageAccount [<CommonParameters>]
 The **Get-AadrmUsageLogStorageAccount** cmdlet gets the Azure storage location for usage logs for Azure Rights Management.
 
 This cmdlet should be used only if you have usage logs prior to the usage logging change in February 2016.
-After this date, the only Windows PowerShell cmdlet that you need for Azure RMS usage logging is Get-AadrmUserLog.
+After this date, the only Windows PowerShell cmdlet that you need for Azure RMS usage logging is the [Get-AadrmUserLog](./Get-AadrmUserLog.md) cmdlet.
 
 For more information about usage logging, see [Logging and analyzing Azure Rights Management usage](https://docs.microsoft.com/rights-management/deploy-use/log-analyze-usage) (https://docs.microsoft.com/rights-management/deploy-use/log-analyze-usage) on the Microsoft documentation site.
 
@@ -45,6 +45,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AadrmUserLog](./Get-AadrmUserLog.md)
 
 [Set-AadrmUsageLogStorageAccount](./Set-AadrmUsageLogStorageAccount.md)
 
