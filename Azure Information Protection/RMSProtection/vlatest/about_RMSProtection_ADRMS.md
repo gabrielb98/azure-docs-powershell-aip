@@ -24,7 +24,7 @@ additional prerequisite for Azure RMS:
 super user feature must be enabled for your organization and your
 account must be configured to be a super user for Azure RMS.
 3: To protect or unprotect files without interaction: Create a service
-principal account, run Set-RMSServerAuthentication, and consider
+principal account, run [Set-RMSServerAuthentication](./Set-RMSServerAuthentication.md), and consider
 making this service principal a super user for Azure RMS.
 4: For regions outside North America: Edit the registry.
 
@@ -48,7 +48,7 @@ these three identifiers:
 - Symmetric Key
 
 To get BposTenantId:
-- Run the Get-AadrmConfiguration cmdlet from the Azure RMS
+- Run the [Get-AadrmConfiguration](./Get-AadrmConfiguration.md) cmdlet from the Azure RMS
 Windows PowerShell module:
 
 1. If this module is not already installed on your computer, see
@@ -57,7 +57,7 @@ Windows PowerShell module:
 
 2. Start Windows PowerShell with the Run as Administrator option.
 
-3. Use the **Connect-AadrmService** cmdlet to connect to the Azure RMS service:
+3. Use the [Connect-AadrmService](./Connect-AadrmService.md) cmdlet to connect to the Azure RMS service:
 C:\PS> Connect-AadrmService
 
 When prompted, enter your Azure Information Protection tenant
@@ -157,17 +157,15 @@ and unprotect files by using your service principal.
 Consider making this service principal a super user: To ensure that this
 service principal can always unprotect files for others, it can be configured
 to be a super user. In the same way as you configure a standard user account
-to be a super user, you use the same Azure RMS cmdlet, Add-AadrmSuperUser
-(https://msdn.microsoft.com/library/azure/dn629411.aspx) but specify the
--ServicePrincipalId parameter with your AppPrincipalId value.
+to be a super user, you use the same Azure RMS cmdlet, [Add-AadrmSuperUser](https://msdn.microsoft.com/library/azure/dn629411.aspx) but specify the
+*ServicePrincipalId* parameter with your AppPrincipalId value.
 
-For more information about super users, see "Configuring super users for
-Azure Rights Management and discovery services or data recovery"
-(https://docs.microsoft.com/information-protection/deploy-use/configure-super-users)
+For more information about super users, see [Configuring super users for
+Azure Rights Management and discovery services or data recovery](https://docs.microsoft.com/information-protection/deploy-use/configure-super-users) (https://docs.microsoft.com/information-protection/deploy-use/configure-super-users)
 on the Microsoft documentation site.
 
 Note: To use your own account to authenticate to the Azure Rights Management
-service, there's no need to run **Set-RMSServerAuthentication** before you
+service, there's no need to run [Set-RMSServerAuthentication](./Set-RMSServerAuthentication.md) before you
 protect or unprotect files, or get templates.
 
 Finally, for the fourth prerequisite for authentication outside the Azure
@@ -244,7 +242,7 @@ prompted to sign in to Azure and these credentials are then cached for subsequen
 commands. In this scenario, if you later need to sign in as a different user, use
 the **Clear-RMSAuthentication** cmdlet.
 
-Now you know the template ID, you can use it with the **Protect-RMSFile**
+Now you know the template ID, you can use it with the [Protect-RMSFile](./Protect-RMSFile.md)
 cmdlet to protect a single file or all files in a folder. For example, if
 you want to protect a single file only and overwrite the original, by using the
 "Contoso, Ltd - Confidential" template:
@@ -255,7 +253,7 @@ InputFile             EncryptedFile
 ---------             -------------
 C:\Test.docx          C:\Test.docx
 ```
-To protect all files in a folder, use the -Folder parameter with a drive
+To protect all files in a folder, use the *Folder* parameter with a drive
 letter and path, or UNC path. For example:
 ```
 C:\PS> Protect-RMSFile -Folder \Server1\Documents -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0

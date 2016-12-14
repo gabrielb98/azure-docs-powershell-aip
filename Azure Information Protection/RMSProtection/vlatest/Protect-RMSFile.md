@@ -267,7 +267,7 @@ Accept wildcard characters: False
 ```
 
 ### -TemplateID
-Specifies the ID of the template to use to protect the specified file or files if you do not use the *-License* parameter for an ad-hoc policy.
+Specifies the ID of the template to use to protect the specified file or files if you do not use the *License* parameter for an ad-hoc policy.
 If you do not know the ID of the template that you want to use, use the [Get-RMSTemplate](./Get-RMSTemplate.md) cmdlet.
 
 ```yaml
