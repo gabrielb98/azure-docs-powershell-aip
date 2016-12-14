@@ -231,7 +231,7 @@ Accept wildcard characters: False
 
 ### -TemplateId
 Specifies the GUID of a Rights Management template.
-You can use the **Get-AadrmTemplate** cmdlet to obtain the template ID of all templates.
+You can use the [Get-AadrmTemplate](./Get-AadrmTemplate.md) cmdlet to obtain the template ID of all templates.
 
 ```yaml
 Type: Guid
