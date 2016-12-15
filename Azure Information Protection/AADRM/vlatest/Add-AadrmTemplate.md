@@ -24,7 +24,7 @@ Add-AadrmTemplate -Names <Hashtable> [-Descriptions <Hashtable>]
 ## DESCRIPTION
 The **Add-AadrmTemplate** cmdlet creates an Azure Rights Management custom template with the specified name, description, and policy, and sets the status of the template to archived or published.
 
-Important: Before you use this cmdlet, you must first create a rights definition object that specifies the rights that you want to grant and to whom, by using the New-AadrmRightsDefinition cmdlet.
+Important: Before you use this cmdlet, you must first create a rights definition object that specifies the rights that you want to grant and to whom, by using the [New-AadrmRightsDefinition](./New-AadrmRightsDefinition.md) cmdlet.
 
 You can store a maximum of 500 custom templates (published or archived) in Azure.
 If you can't add new templates because you have reached this limit as a result of keeping many archived templates, consider exporting them to save the information locally and then removing these templates in Azure.
@@ -93,7 +93,7 @@ Accept wildcard characters: False
 
 ### -ContentValidityDuration
 Specifies the number of days from the first day of protection after which content protected with the template expires.
-Use this parameter only if *ContentExpirationOption* is set to AfterDays.
+Use this parameter only if the *ContentExpirationOption* parameter is set to AfterDays.
 
 ```yaml
 Type: Int32
@@ -235,7 +235,7 @@ Accept wildcard characters: False
 
 ### -ScopedIdentities
 Lists the users by email address (account or group) that can see and therefore select departmental templates from applications.
-For the specified users to see the templates, the application must support departmental templates or the EnableInLegacyApps parameter must be set to True.
+For the specified users to see the templates, the application must support departmental templates or the *EnableInLegacyApps* parameter must be set to True.
 
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]

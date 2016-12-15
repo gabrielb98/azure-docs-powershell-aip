@@ -39,7 +39,7 @@ John can continue to re-open and read the file even if he does not have an Inter
 --Amelia opens the file a week after it arrives, and then does not open it again for two months.
 When she tries to open it this second time, she does not have an Internet access and cannot open the file.
 
-This setting at the Azure RMS tenant level can be overridden by a more restrictive setting in a rights policy template because of the **LicenseValidityDuration** parameter in the [Set-AadrmTemplateProperty](./Set-AadrmTemplateProperty.md) and [Add-AadrmTemplate](./Add-AadrmTemplate.md) cmdlets, which administrators can also set in the Azure classic portal by configuring the offline access option, Number of days the content is available without an Internet connection.
+This setting at the Azure RMS tenant level can be overridden by a more restrictive setting in a rights policy template because of the *LicenseValidityDuration* parameter in the [Set-AadrmTemplateProperty](./Set-AadrmTemplateProperty.md) and [Add-AadrmTemplate](./Add-AadrmTemplate.md) cmdlets, which administrators can also set in the Azure classic portal by configuring the offline access option, Number of days the content is available without an Internet connection.
 This setting can also be overridden by a user for a document when they use the RMS sharing application, and select the Allow me to instantly revoke access to these documents option, which effectively sets the use license validity time to 0.
 When there are different values like this, Azure RMS uses the most restrictive value.
 
