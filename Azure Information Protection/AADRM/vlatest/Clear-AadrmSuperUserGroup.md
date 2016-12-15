@@ -27,7 +27,7 @@ This cmdlet does not affect users that are individually assigned the super user 
 PS C:\>Clear-AadrmSuperUserGroup
 ```
 
-This command clears the super user group, if one exists, for the organization.
+This command removes the super user group, if one exists, for the organization.
 
 ## PARAMETERS
 
