@@ -1,20 +1,19 @@
----
----
-# TOPIC
-## about_RMSProtection_AzureRMS
+```
+TOPIC
+about_RMSProtection_AzureRMS
 
-## SHORT DESCRIPTION
+SHORT DESCRIPTION
 Information to get started with the RMS Protection tool for an organization
 that uses Azure Rights Management (Azure RMS) data protection.
 
-## LONG DESCRIPTION
+LONG DESCRIPTION
 This topic describes how to start using the RMS Protection tool to protect
 or unprotect files if your organization uses the Azure Rights Management
 service from Azure Information Protection. The information includes:
 - Additional prerequisites that are specific to Azure RMS
 - Using RMS Protection cmdlets - example scenarios
 
-## PREREQUISITES:
+PREREQUISITES:
 In addition to any prerequisites for the RMS Protection tool (see
 RMS Protection Cmdlets on MSDN
 - https://msdn.microsoft.com/library/azure/mt433195.aspx) there are
@@ -41,7 +40,7 @@ on the Microsoft documentation site.
 
 For the third prerequisite, to use the cmdlets without user interaction
 you must authenticate with the Azure RMS service by using a service principal,
-which you do by using the **Set-RMSServerAuthentication** cmdlet. You must do this
+which you do by using the Set-RMSServerAuthentication cmdlet. You must do this
 for each Windows PowerShell session that runs cmdlets that contact the
 Azure RMS service. Before you run this cmdlet, make sure that you have
 these three identifiers:
@@ -201,7 +200,7 @@ if you are using a service principal account rather than your own user account,
 you must run the Set-RMSServerAuthentication command after making this registry
 edit.
 
-## USING RMS PROTECTION CMDLETS - EXAMPLE SCENARIOS
+USING RMS PROTECTION CMDLETS - EXAMPLE SCENARIOS
 A typical scenario for these cmdlets is to protect all files in a folder
 by using a rights policy template, or to unprotect a file.
 
@@ -294,7 +293,7 @@ that you want to research. For example:
 
 C:\PS> Get-Help Get-RMSTemplate
 
-## SEE ALSO
+SEE ALSO
 
 Clear-RMSAuthentication
 Get-RMSFileStatus
@@ -302,3 +301,4 @@ Get-RMSTemplate
 Protect-RMSFile
 Unprotect-RMSFile
 Set-RMSServerAuthentication
+```
