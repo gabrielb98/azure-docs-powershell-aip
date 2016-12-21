@@ -10,6 +10,7 @@ LONG DESCRIPTION
 This topic describes how to start using the RMS Protection tool to protect
 or unprotect files if your organization uses the Azure Rights Management
 service from Azure Information Protection. The information includes:
+
 - Additional prerequisites that are specific to Azure RMS
 - Using RMS Protection cmdlets - example scenarios
 
@@ -57,6 +58,7 @@ Installing Windows PowerShell for Azure Rights Management
 2. Start Windows PowerShell with the Run as Administrator option.
 
 3. Use the Connect-AadrmService cmdlet to connect to the Azure RMS service:
+
 C:\PS> Connect-AadrmService
 
 When prompted, enter your Azure Information Protection tenant
@@ -76,7 +78,7 @@ CertificationIntranetDistributionPointUrl: https://1s302373-f233-4406-9090-4cdf3
 CertificationExtranetDistributionPointUrl: https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/certification
 6. Disconnect from the service:
 
-C:\PS>Disconnect-AadrmService
+C:\PS> Disconnect-AadrmService
 
 To get AppPrincipalId and Symmetric Key:
 - Run the New-MsolServicePrincipal cmdlet from the Azure Active Directory
@@ -134,6 +136,7 @@ to authenticate to the Azure Rights Management service.
 
 From these instructions and our examples, we have the three identifiers
 required to run Set-RMSServerAuthentication:
+
 * Tenant Id: 23976bc6-dcd4-4173-9d96-dad1f48efd42
 * Symmetric key: zIeMu8zNJ6U377CLtppkhkbl4gjodmYSXUVwAO5ycgA=
 * AppPrincipalId: b5e3f76a-b5c2-4c96-a594-a0807f65bba4
@@ -187,6 +190,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation
 EnterpriseCertification and EnterprisePublishing. When you create these
 REG_SZ keys, do not change the Name of "(Default)", but edit them to set
 the Value data:
+
 - For EnterpriseCertification, paste your
 CertificationExtranetDistributionPointUrl value.
 - For EnterprisePublishing, paste your
@@ -232,7 +236,7 @@ Name              : Contoso, Ltd - Confidential
 IssuerDisplayName : Contoso, Ltd
 FromTemplate      : True
 FromTemplate      : True
-```
+
 Note that if you didn't run the Set-RMSServerAuthentication command, you will be
 authenticated to the Azure Rights Management service by using your own user
 account. If you are on a domain-joined computer, your current credentials will
@@ -263,7 +267,7 @@ InputFile                          EncryptedFile
 \Server1\Documents\Test2.docx     \Server1\Documents\Test2.docx
 \Server1\Documents\Test3.docx     \Server1\Documents\Test3.docx
 \Server1\Documents\Test4.docx     \Server1\Documents\Test4.docx
-```
+
 When the file name extension does not change after RMS protection is
 applied, you can always use the Get-RMSFileStatus cmdlet later to check
 whether the file is protected. For example:
