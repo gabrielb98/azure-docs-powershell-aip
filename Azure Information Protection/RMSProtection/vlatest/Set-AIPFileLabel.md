@@ -7,7 +7,7 @@ schema: 2.0.0
 # Set-AIPFileLabel
 
 ## SYNOPSIS
-Sets (or clears) a file label, and sets the RMS protection according to the policy
+Sets a file label, and sets the RMS protection according to the policy
 
 ## SYNTAX
 
@@ -24,7 +24,7 @@ Set-AIPFileLabel [-JustificationMessage <String>] [-RemoveLabel] [-Path] <String
 ## DESCRIPTION
 The **Set-AIPFileLabel** cmdlet applies a label to files (or to files in folders) specified by path, or clears the label from these files.
 
-In order to run this commandlet the user who is running it should have a AIP policy downloaded. If no such policy is found, the user will be prompted to download a policy.
+In order to run this cmdlet the user who is running it should have a AIP policy downloaded. If no such policy is found, the user will be prompted to download a policy.
 
 ## EXAMPLES
 
@@ -36,7 +36,7 @@ FileName           Status ErrorMessage
 C:\temp\Test.docx Passed
 ```
 
-This example sets a confidential label to the file C:\Temp\Test.docx. As this label is associated with an RMS protection template, the template is also set.
+This command sets a confidential label to the file C:\Temp\Test.docx. As this label is associated with an RMS protection template, the template is also set.
 
 ### Example 2 Applies a label to a single file which is currently labeled with a higher label.
 ```
@@ -46,8 +46,8 @@ FileName           Status ErrorMessage
 C:\temp\Test.docx Skipped Justification Required
 ```
 
-This example attempts to set a confidential label to the file C:\Temp\Test.docx. However this file was labeled as Secret, and the policy requires a justification when downgrading a label.
-Therefore the file was skipped, and we receives a "Error Message" of Justification Required. A more general use of this functionality would be if we want to apply a label to all files in a folder, but without downgrading any
+This command attempts to set a confidential label to the file C:\Temp\Test.docx. However this file was labeled as Secret, and the policy requires a justification when downgrading a label.
+Therefore the file was skipped, and we receives a Error Message of Justification Required. A more general use of this functionality would be if we want to apply a label to all files in a folder, but without downgrading any
 existing labeled file.
 
 ### Example 3 Force apply a label to a single file which is currently labeled with a higher label.
@@ -58,7 +58,7 @@ FileName           Status ErrorMessage
 C:\temp\Test.docx Passed
 ```
 
-This example sets a confidential label to the file C:\Temp\Test.docx. Even though this file was labeled as Secret, and the policy requires a justification when downgrading a label, the labelling succeeds, as a justification message was provided.
+This command sets a confidential label to the file C:\Temp\Test.docx. Even though this file was labeled as Secret, and the policy requires a justification when downgrading a label, the labelling succeeds, as a justification message was provided.
 
 ### Example 4 Remove labels from a file.
 ```
@@ -68,7 +68,7 @@ FileName           Status ErrorMessage
 C:\temp\Test.docx Passed
 ```
 
-This example removes labels from the file C:\Temp\Test.docx. As this is considered as downgrading a label, and the policy requires a justification in such cases, a justification message is provided.
+This command removes labels from the file C:\Temp\Test.docx. As this is considered as downgrading a label, and the policy requires a justification in such cases, a justification message is provided.
 
 ## PARAMETERS
 
@@ -88,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -LabelId
-The id of the label to apply. When applying a sub-label, this should be the id of the sub-label. This **LabelId** can be found in the Azure Portal AIP management.
+Specifies the ID of the label to apply. When applying a sub-label, this should be the ID of the sub-label. This *LabelId* can be found in the Azure Portal AIP management.
 
 ```yaml
 Type: Guid
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-Specifies a path to one or more locations. Wildcards are not permitted. Will set (or clear) labels for all files in these locations.
+Specifies a path to one or more locations. Wildcards are not permitted. This cmdlet will clear labels for all files in these locations.
 
 ```yaml
 Type: String[]
@@ -118,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveLabel
-Set this flag if you want to remove labels
+Indicates that this cmdlet removes labels.
 
 ```yaml
 Type: SwitchParameter
@@ -146,4 +146,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
