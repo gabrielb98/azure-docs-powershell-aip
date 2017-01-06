@@ -16,7 +16,7 @@ Get-AIPFileStatus [-Path] <String[]> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Get-AIPFileStatus cmdlet returns the AIP status, which consists of the RMS status (whether the file has RMS protection and if relevant the RMS template information)
+The **Get-AIPFileStatus** cmdlet returns the AIP status, which consists of the RMS status (whether the file has RMS protection and if relevant the RMS template information)
 as well as the Labeling status (whether the file is labeled, and the file labels) of a specified file.
 
 ## EXAMPLES
@@ -39,7 +39,7 @@ RMSTemplateId   : e6ee2481-26b9-45e5-b34a-f744eacd53b0
 RMSTemplateName : Contoso, Ltd - Confidential View Only
 ```
 
-This example gets the AIP status of the file Test.docx. This file has a main lable Confidential, and a SubLabel Microsoft FTE. It is RMS protected with the template "Contoso, Ltd - Confidential View Only".
+This command gets the AIP status of the file Test.docx. This file has a main lable Confidential, and a SubLabel Microsoft FTE. It is RMS protected with the template Contoso, Ltd - Confidential View Only.
 
 ### Example 2 Prepare a report of the status of files in a folder.
 ```
@@ -86,4 +86,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
