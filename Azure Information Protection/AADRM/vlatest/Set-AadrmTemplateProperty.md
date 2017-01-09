@@ -1,4 +1,4 @@
----
+﻿---
 external help file: Microsoft.RightsManagementServices.Online.Admin.PowerShell.dll-Help.xml
 online version: http://go.microsoft.com/fwlink/?LinkID=400631
 schema: 2.0.0
@@ -56,15 +56,15 @@ Because specifying the RightsDefinitions parameter overwrites the existing setti
 ### Example 3: Add new users and rights to a custom template
 ```
 PS C:\> $templateid = "7b1db17a-cb1a-41cf-bad7-b452f9d384c1"
-PS C:\> [array]$r = New-AadrmRightsDefinition -EmailAddress nhollida1@contoso.com -Rights "DOCEDIT", "EXTRACT"
-PS C:\> $r += New-AadrmRightsDefinition -EmailAddress rsimone@vanarsdelltd.com -Rights "VIEW"
+PS C:\> [array]$r = New-AadrmRightsDefinition -EmailAddress pattiful@contoso.com -Rights "DOCEDIT", "EXTRACT"
+PS C:\> $r += New-AadrmRightsDefinition -EmailAddress evannar@vanarsdelltd.com -Rights "VIEW"
 PS C:\> $CurrentRightsDefinitions = [array]((get-aadrmtemplate -templateid $templateid).RightsDefinitions)
 PS C:\> $ResultingRightsDefinitions = $CurrentRightsDefinitions + $r
 PS C:\> Set-AadrmTemplateProperty -TemplateId $templateid -RightsDefinition $ResultingRightsDefinitions
 ```
 
 This set of command adds two new users and their different rights to an existing template, without overwriting the existing users and rights already defined in the template.
-The new users and their rights are **nhollida1.contoso.com** (a user within the organization) who is granted DOCEDIT and EXTRACT rights; and **rsimone@vanarsdelltd.com** (a user from another organization) who is granted VIEW rights.
+The new users and their rights are pattiful.contoso.com (a user within the organization) who is granted DOCEDIT and EXTRACT rights; and evannar@vanarsdelltd.com (a user from another organization) who is granted VIEW rights.
 These users and their rights are added to rights definition objects using an array, which is then added to the existing rights definitions for the template.
 
 ## PARAMETERS
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 
 ### -ContentValidityDuration
 Specifies the number of days from the first day of protection after which content protected with the template expires.
-Use this parameter only if *ContentExpirationOption* is set to AfterDays.
+Use this parameter only if the *ContentExpirationOption* parameter is set to AfterDays.
 
 ```yaml
 Type: Int32
@@ -135,7 +135,7 @@ $descriptions = @{}
 
 $descriptions\[1033\] = "This content is confidential and should not be shared externally"
 
-$descriptions\[1034\] = "Este contenido es confidencial y no debe ser compartido fuera de la organizaci Â³n"
+$descriptions\[1034\] = "Este contenido es confidencial y no debe ser compartido fuera de la organización"
 
 ```yaml
 Type: Hashtable

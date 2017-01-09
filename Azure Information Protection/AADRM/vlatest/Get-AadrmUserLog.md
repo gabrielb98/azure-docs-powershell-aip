@@ -83,7 +83,7 @@ Accept wildcard characters: False
 ### -ForDate
 Specifies a date (and optionally, a time) for the log file as a **DateTime** object.
 Use this parameter when you do not use the *FromDate* parameter.
-To obtain a **DateTime** object, use the **Get-Date** cmdlet.
+To obtain a **DateTime** object, use the [Get-Date](http://go.microsoft.com/fwlink/?LinkID=293966) cmdlet.
 
 ```yaml
 Type: DateTime
@@ -176,3 +176,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Logging and analyzing Azure Rights Management usage](https://docs.microsoft.com/rights-management/deploy-use/log-analyze-usage)
+
+[Get-Date](http://go.microsoft.com/fwlink/?LinkID=293966)

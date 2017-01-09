@@ -21,7 +21,7 @@ The **Export-AadrmTemplate** cmdlet exports all the properties of a rights polic
 You can then import the template to another Azure Rights Management tenant or you can edit it and import it back to the original tenant.
 You can use this technique to perform bulk edits of complex properties in templates, such as multilingual names and descriptions.
 
-Tip: Consider using this cmdlet as a way to back up your custom templates, so that you can revert to a known-good version if required..
+Tip: Consider using this cmdlet as a way to back up your custom templates, so that you can revert to a known-good version if required.
 
 The export process does not automatically append a file name extension, so you can specify a file name extension to match the application that you will use to view and edit the resulting data.
 

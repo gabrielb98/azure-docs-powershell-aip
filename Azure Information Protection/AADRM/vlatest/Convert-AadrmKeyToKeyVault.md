@@ -23,7 +23,7 @@ Do not run this cmdlet without assistance from Microsoft.
 
 Azure RMS now uses Azure Key Vault to manage and monitor a customer-managed Azure RMS tenant key.
 To create a customer-managed Azure RMS tenant key for the first time, run [Use-AadrmKeyVaultKey](./Use-AadrmKeyVaultKey.md) instead of this cmdlet.
-For more information about how to manage your Azure RMS tenant key, see Planning and implementing your Azure Rights Management tenant key https://docs.microsoft.com/en-us/rights-management/plan-design/plan-implement-tenant-key (https://docs.microsoft.com/en-us/rights-management/plan-design/plan-implement-tenant-key) on the Microsoft documentation site.
+For more information about how to manage your Azure RMS tenant key, see [Planning and implementing your Azure Rights Management tenant key](https://docs.microsoft.com/en-us/rights-management/plan-design/plan-implement-tenant-key) (https://docs.microsoft.com/en-us/rights-management/plan-design/plan-implement-tenant-key) on the Microsoft documentation site.
 
 Before you run this cmdlet, you will need to identify your original customer-managed Azure RMS tenant key.
 To do that, use the [Get-AadrmKeys](./Get-AadrmKeys.md) cmdlet.
@@ -137,3 +137,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AadrmKeys](./Get-AadrmKeys.md)
 
 [Use-AadrmKeyVaultKey](./Use-AadrmKeyVaultKey.md)
+
+[Planning and implementing your Azure Rights Management tenant key](https://docs.microsoft.com/en-us/rights-management/plan-design/plan-implement-tenant-key)
