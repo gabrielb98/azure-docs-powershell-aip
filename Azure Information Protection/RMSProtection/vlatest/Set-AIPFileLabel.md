@@ -7,7 +7,7 @@ schema: 2.0.0
 # Set-AIPFileLabel
 
 ## SYNOPSIS
-Sets a file label, and sets the RMS protection according to the policy
+Sets a file label, and sets the protection according to the policy
 
 ## SYNTAX
 
@@ -24,7 +24,7 @@ Set-AIPFileLabel [-JustificationMessage <String>] [-RemoveLabel] [-Path] <String
 ## DESCRIPTION
 The **Set-AIPFileLabel** cmdlet applies a label to files (or to files in folders) specified by path, or clears the label from these files.
 
-In order to run this cmdlet the user who is running it should have a AIP policy downloaded. If no such policy is found, the user will be prompted to download a policy.
+To run this cmdlet, you must have the Azure Information Protection policy downloaded. If this policy is not downloaded, you will be prompted to download it.
 
 ## EXAMPLES
 
@@ -36,9 +36,9 @@ FileName           Status ErrorMessage
 C:\temp\Test.docx Passed
 ```
 
-This command sets a confidential label to the file C:\Temp\Test.docx. As this label is associated with an RMS protection template, the template is also set.
+This command sets a label to the file C:\Temp\Test.docx. Because this label is configured to apply protection by using a Rights Management template, the file is also protected by using this template.
 
-### Example 2 Applies a label to a single file which is currently labeled with a higher label.
+### Example 2 Applies a label to a single file that is currently labeled with a higher label
 ```
 PS C:\> Set-AIPFileLabel C:\Temp\Test.docx -LabelId d9f23ae3-a239-45ea-bf23-f515f824c57b
 FileName           Status ErrorMessage
@@ -46,7 +46,7 @@ FileName           Status ErrorMessage
 C:\temp\Test.docx Skipped Justification Required
 ```
 
-This command attempts to set a confidential label to the file C:\Temp\Test.docx. However this file was labeled as Secret, and the policy requires a justification when downgrading a label.
+This command attempts to set a label to the file C:\Temp\Test.docx. However, because of the label specified, this action xxxxxxxthis file was labeled as Secret, and the policy requires a justification when downgrading a label.
 Therefore the file was skipped, and we receives a Error Message of Justification Required. A more general use of this functionality would be if we want to apply a label to all files in a folder, but without downgrading any
 existing labeled file.
 

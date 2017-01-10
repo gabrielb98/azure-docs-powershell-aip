@@ -1,6 +1,6 @@
-﻿---
+---
 external help file: RMSProtection.dll-Help.xml
-online version: http://go.microsoft.com/fwlink/?LinkID=623205
+online version: https://go.microsoft.com/fwlink/?LinkID=623205
 schema: 2.0.0
 ms.assetid: 569C89B8-0A48-492F-BC48-8D8214F35C71
 ---
@@ -152,5 +152,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-RMSServer](./Get-RMSServer.md)
+
+[Set-AIPFileLabel](./Set-AIPFileLabel.md)
 
 [Protect-RMSFile](./Protect-RMSFile.md)
