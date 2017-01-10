@@ -1,5 +1,5 @@
 ---
-external help file: RMSProtection.dll-Help.xml
+external help file: AIP.dll-Help.xml
 online version: https://go.microsoft.com/fwlink/?linkid=838765
 schema: 2.0.0
 ---
@@ -18,9 +18,11 @@ Get-AIPFileStatus [-Path] <String[]> [<CommonParameters>]
 ## DESCRIPTION
 The **Get-AIPFileStatus** cmdlet returns the Azure Information Protection status of a specified file or of files in a specified folder. This status consists of the protection status (whether the file has Rights Management protection, and if relevant, the Rights Management template information) and the label status (whether the file is labeled, and if so, the label information). 
 
+Note: This cmdlet is currently installed as part of the preview version of the Azure Information Protection client, and not the RMS Protection tool.
+
 ## EXAMPLES
 
-### Example 1 Get the status of a single file.
+### Example 1: Get the status of a single file
 ```
 PS C:\> Get-AIPFileStatus C:\Test.docx
 FileName        : C:\Test.docx
@@ -40,14 +42,14 @@ RMSTemplateName : Contoso, Ltd - Confidential View Only
 
 This command gets the Azure Information Protection status of the file named Test.docx. This file has a main label of Confidential, and a sub-label of All Company. The file is protected by using the template Contoso, Ltd - Confidential View Only.
 
-### Example 2 Create a report of the status of files in a folder.
+### Example 2: Create a report of the status of files in a folder
 ```
 PS C:\> Get-AIPFileStatus \\SharedDrive\SharedFolder\DocsFolder | Export-Csv c:\ReportsFolder\Report.csv -NoTypeInformation
 ```
 
 This example creates a .csv report of all files in the DocsFolder of the shared drive. If a previous report exists in c:\ReportsFolder\Report.csv, it will be overwritten.
 
-### Example 3 Count of confidential files in a folder.
+### Example 3: Count of files with a specific label in a folder
 ```
 PS C:\> (Get-AIPFileStatus \\SharedDrive\SharedFolder\DocsFolder | Where-Object {$_.MainLabelName -eq 'Confidential'}).Count
 ```

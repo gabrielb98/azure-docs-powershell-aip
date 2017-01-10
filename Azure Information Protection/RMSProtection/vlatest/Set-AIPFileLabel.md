@@ -1,13 +1,13 @@
 ---
-external help file: RMSProtection.dll-Help.xml
-online version: https://go.microsoft.com/fwlink/?LinkID=623207
+external help file: AIP.dll-Help.xml
+online version: https://go.microsoft.com/fwlink/?linkid=838766 
 schema: 2.0.0
 ---
 
 # Set-AIPFileLabel
 
 ## SYNOPSIS
-Sets a file label, and sets the protection according to the policy
+Sets or removes a classification label for a file, and sets the protection according to the label configuration.
 
 ## SYNTAX
 
@@ -22,13 +22,15 @@ Set-AIPFileLabel [-JustificationMessage <String>] [-RemoveLabel] [-Path] <String
 ```
 
 ## DESCRIPTION
-The **Set-AIPFileLabel** cmdlet applies a label to files (or to files in folders) specified by path, or clears the label from these files.
+The **Set-AIPFileLabel** cmdlet sets or removes a classification label for one or more files, specified by path. This action can also apply or remove protection when labels are configured for Rights Management protection in the Azure Information Protection policy. 
 
-To run this cmdlet, you must have the Azure Information Protection policy downloaded. If this policy is not downloaded, you will be prompted to download it.
+To run this cmdlet, the Azure Information Protection policy must be downloaded. If this policy is not downloaded, you will be prompted to download it.
+
+Note: This cmdlet is currently installed as part of the preview version of the Azure Information Protection client, and is not installed with the RMS Protection tool. 
 
 ## EXAMPLES
 
-### Example 1 Applies a label to a single file
+### Example 1: Apply a label to a single file
 ```
 PS C:\> Set-AIPFileLabel C:\Temp\Test.docx -LabelId d9f23ae3-a239-45ea-bf23-f515f824c57b
 FileName           Status ErrorMessage
@@ -36,9 +38,9 @@ FileName           Status ErrorMessage
 C:\temp\Test.docx Passed
 ```
 
-This command sets a label to the file C:\Temp\Test.docx. Because this label is configured to apply protection by using a Rights Management template, the file is also protected by using this template.
+This command sets a label for the file named C:\Temp\Test.docx. Because this label is configured to apply protection by using a Rights Management template, the file is also protected by using this template.
 
-### Example 2 Applies a label to a single file that is currently labeled with a higher label
+### Example 2: Unsuccessful attempt to apply a lower classification label to a single file
 ```
 PS C:\> Set-AIPFileLabel C:\Temp\Test.docx -LabelId d9f23ae3-a239-45ea-bf23-f515f824c57b
 FileName           Status ErrorMessage
@@ -46,11 +48,11 @@ FileName           Status ErrorMessage
 C:\temp\Test.docx Skipped Justification Required
 ```
 
-This command attempts to set a label to the file C:\Temp\Test.docx. However, because of the label specified, this action xxxxxxxthis file was labeled as Secret, and the policy requires a justification when downgrading a label.
-Therefore the file was skipped, and we receives a Error Message of Justification Required. A more general use of this functionality would be if we want to apply a label to all files in a folder, but without downgrading any
-existing labeled file.
+This command attempts to set a label for the file named C:\Temp\Test.docx. In this example, the file already has a higher classification label, which triggers the justification prompt that has been enabled in the Azure Information Protection policy. Because no justification string is supplied in the command, the requested label is not applied and the status of "Skipped" is displayed, with "Justification Required" as the error message. 
 
-### Example 3 Force apply a label to a single file which is currently labeled with a higher label.
+A valid scenario for not specifying a justification message is when you want to apply a label to all files in a folder, without lowering any existing classification labels. 
+
+### Example 3: Successfully apply a label to a single file, which requires justification
 ```
 PS C:\> Set-AIPFileLabel C:\Temp\Test.docx -LabelId d9f23ae3-a239-45ea-bf23-f515f824c57b  -JustificationMessage 'The previous label no longer applies'
 FileName           Status ErrorMessage
@@ -58,22 +60,22 @@ FileName           Status ErrorMessage
 C:\temp\Test.docx Passed
 ```
 
-This command sets a confidential label to the file C:\Temp\Test.docx. Even though this file was labeled as Secret, and the policy requires a justification when downgrading a label, the labelling succeeds, as a justification message was provided.
+This command, as in the previous example, attempts to set a label for the file named C:\Temp\Test.docx. This file already has a higher classification label, which triggers the justification prompt that has been enabled in the Azure Information Protection policy. Because this example also specifies a justification message, the new label is successfully applied.
 
-### Example 4 Remove labels from a file.
+### Example 4: Remove a label from a file
 ```
-PS C:\> Set-AIPFileLabel C:\Temp\Test.docx -RemoveLabel  -JustificationMessage 'The previous label no longer applies'
+PS C:\> Set-AIPFileLabel C:\Temp\Test.docx -RemoveLabel -JustificationMessage 'The previous label no longer applies'
 FileName           Status ErrorMessage
 --------           ------ ------------
 C:\temp\Test.docx Passed
 ```
 
-This command removes labels from the file C:\Temp\Test.docx. As this is considered as downgrading a label, and the policy requires a justification in such cases, a justification message is provided.
+This command removes the existing label from the file named C:\Temp\Test.docx, and specifies a justification message that is required because the Azure Information Protection policy setting is enabled that requires justification for lowering the classification label, removing a label, or removing protection.
 
 ## PARAMETERS
 
 ### -JustificationMessage
-The justification message for downgrading labels, if the policy requires one. If this is missing, and the result of the cmdlet would result in downgrading the labels, and the policy requires such a justification, the file will be skipped.
+The justification message for lowering the classification label, removing a label, or removing protection, if the Azure Information Protection policy requires this. If setting a label triggers the justification and this message is not supplied, the label is not applied. In this case, the status returned is "Skipped" with the error message "Justification Required".
 
 ```yaml
 Type: String
@@ -88,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -LabelId
-Specifies the ID of the label to apply. When applying a sub-label, this should be the ID of the sub-label. This *LabelId* can be found in the Azure Portal AIP management.
+Specifies the identity (ID) of the label to apply. When a label has sub-labels, always specify the ID of just a sub-label and not the parent label. The label ID value is displayed in the Azure portal, in the Label blade, when you view or configure the Azure Information Protection policy.
 
 ```yaml
 Type: Guid
@@ -103,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-Specifies a path to one or more locations. Wildcards are not permitted. This cmdlet will clear labels for all files in these locations.
+Specifies a path to the files to which you want to apply labels. When the path includes folders and subfolders, all files are in these folders are automatically included. Wildcards are not supported. 
 
 ```yaml
 Type: String[]
@@ -118,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveLabel
-Indicates that this cmdlet removes labels.
+Removes the specified label.
 
 ```yaml
 Type: SwitchParameter
@@ -146,3 +148,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AIPFileLabel](./Get-AIPFileLabel.md)
