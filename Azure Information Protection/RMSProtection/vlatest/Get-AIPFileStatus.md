@@ -1,13 +1,13 @@
 ---
 external help file: RMSProtection.dll-Help.xml
-online version: http://go.microsoft.com/fwlink/?LinkId=734985
+online version: https://go.microsoft.com/fwlink/?linkid=838765
 schema: 2.0.0
 ---
 
 # Get-AIPFileStatus
 
 ## SYNOPSIS
-Gets the AIP status of a specified file, or of files in a specified folder.
+Gets the Azure Information Protection status of a specified file, or of files in a specified folder.
 
 ## SYNTAX
 
@@ -16,8 +16,7 @@ Get-AIPFileStatus [-Path] <String[]> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-AIPFileStatus** cmdlet returns the AIP status, which consists of the RMS status (whether the file has RMS protection and if relevant the RMS template information)
-as well as the Labeling status (whether the file is labeled, and the file labels) of a specified file.
+The **Get-AIPFileStatus** cmdlet returns the Azure Information Protection status of a specified file or of files in a specified folder. This status consists of the protection status (whether the file has Rights Management protection, and if relevant, the Rights Management template information) and the label status (whether the file is labeled, and if so, the label information). 
 
 ## EXAMPLES
 
@@ -29,36 +28,36 @@ IsLabelled      : True
 MainLabelId     : 074e257c-5848-4582-9a6f-34a182080e71
 MainLabelName   : Confidential
 SubLabelId      : d9f23ae3-a239-45ea-bf23-f515f824c57b
-SubLabelName    : Microsoft FTE
-LabelingRef     : https://api.informationprotection.azure.com/api/72f988bf-86f1-41af-91ab-2d7cd011db47
-LabeledBy       : daschuld@microsoft.com
+SubLabelName    : All Company
+LabelingRef     : https://api.informationprotection.azure.com/api/71f988be-86f1-41aa-91ab-2b7cd011db47
+LabeledBy       : alice@contoso.com
 LabelingMethod  : Manual
 LabelDate       : 12/20/2016 2:51:29 PM
 IsRMSProtected  : True
-RMSTemplateId   : e6ee2481-26b9-45e5-b34a-f744eacd53b0
+RMSTemplateId   : e6ee2485-26b9-45e5-b34a-f744eaca53b0
 RMSTemplateName : Contoso, Ltd - Confidential View Only
 ```
 
-This command gets the AIP status of the file Test.docx. This file has a main lable Confidential, and a SubLabel Microsoft FTE. It is RMS protected with the template Contoso, Ltd - Confidential View Only.
+This command gets the Azure Information Protection status of the file named Test.docx. This file has a main label of Confidential, and a sub-label of All Company. The file is protected by using the template Contoso, Ltd - Confidential View Only.
 
-### Example 2 Prepare a report of the status of files in a folder.
+### Example 2 Create a report of the status of files in a folder.
 ```
 PS C:\> Get-AIPFileStatus \\SharedDrive\SharedFolder\DocsFolder | Export-Csv c:\ReportsFolder\Report.csv -NoTypeInformation
 ```
 
-This example will prepare a csv report of all files in the DocsFolder of the shared drive. If a previous report exists in c:\ReportsFolder\Report.csv, it will be overwritten.
+This example creates a .csv report of all files in the DocsFolder of the shared drive. If a previous report exists in c:\ReportsFolder\Report.csv, it will be overwritten.
 
-### Example 3 Count confidential files in a folder.
+### Example 3 Count of confidential files in a folder.
 ```
 PS C:\> (Get-AIPFileStatus \\SharedDrive\SharedFolder\DocsFolder | Where-Object {$_.MainLabelName -eq 'Confidential'}).Count
 ```
 
-This example will count all files in the DocsFolder of the shared drive which are labeled as Confidential (regardless of sublabel).
+This example counts all files in the DocsFolder of the shared drive when these files are labeled as Confidential (regardless of their sub-label).
 
 ## PARAMETERS
 
 ### -Path
-Specifies a path to one or more locations. Wildcards are not permitted. Will return AIP status for all files in these locations.
+Specifies a path to one or more locations. Wildcards are not permitted. Returns the Azure Information Protection  status for all files in the specified location.
 
 ```yaml
 Type: String[]
@@ -86,3 +85,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-RMSTemplate](./Get-RMSTemplate.md)
+
+[Set-AIPFileLabel](./Set-AIPFileLabel.md)

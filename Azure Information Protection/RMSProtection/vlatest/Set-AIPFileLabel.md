@@ -1,6 +1,6 @@
 ---
 external help file: RMSProtection.dll-Help.xml
-online version: http://go.microsoft.com/fwlink/?LinkID=623207
+online version: https://go.microsoft.com/fwlink/?LinkID=623207
 schema: 2.0.0
 ---
 
