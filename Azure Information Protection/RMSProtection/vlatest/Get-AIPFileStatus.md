@@ -1,5 +1,5 @@
 ---
-external help file: AIP.dll-Help.xml
+external help file: RMSProtection.dll-Help.xml
 online version: https://go.microsoft.com/fwlink/?linkid=838765
 schema: 2.0.0
 ---
@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-AIPFileStatus
 
 ## SYNOPSIS
-Gets the Azure Information Protection status for a specified file or files.
+Get the Azure Information Protection label and protection associated with a file
 
 ## SYNTAX
 
@@ -22,84 +22,56 @@ Note: This cmdlet is currently installed as part of the preview version of the A
 
 ## EXAMPLES
 
-### Example 1: Get the status of a single file
+### Example 1: Get label and protection status on a single file.
 ```
-PS C:\> Get-AIPFileStatus C:\Test.docx
-FileName        : C:\Test.docx
+PS C:\> Get-AIPFileStatus -Path \\finance\projects\project.docx
+FileName        : \\finance\projects\project.docx
 IsLabelled      : True
-MainLabelId     : 074e257c-5848-4582-9a6f-34a182080e71
+MainLabelId     : 074e257c-1234-1234-1234-34a182080e71
 MainLabelName   : Confidential
-SubLabelId      : d9f23ae3-a239-45ea-bf23-f515f824c57b
-SubLabelName    : All Company
-LabelingRef     : https://api.informationprotection.azure.com/api/71f988be-86f1-41aa-91ab-2b7cd011db47
-LabeledBy       : alice@contoso.com
+SubLabelId      : d9f23ae3-1234-1234-1234-f515f824c57b
+SubLabelName    : Finance group
+LabelingRef     : https://api.informationprotection.azure.com/api/72f988bf-1234-1234-1234-2d7cd011db47
+LabeledBy       : John@Contoso.com
 LabelingMethod  : Manual
-LabelDate       : 12/20/2016 2:51:29 PM
+LabelDate       : 12/12/2016 12:24:36 PM
 IsRMSProtected  : True
-RMSTemplateId   : e6ee2485-26b9-45e5-b34a-f744eaca53b0
-RMSTemplateName : Contoso, Ltd - Confidential View Only
+RMSTemplateId   : e6ee2481-1234-1234-1234-f744eacd53b0
+RMSTemplateName : Contoso - Confidential Finance  
 ```
 
-This command gets the Azure Information Protection status of the file named Test.docx. In this example, the file has a main label of Confidential, and a sub-label of All Company. The file is protected by using the template Contoso, Ltd - Confidential View Only.
+This command provides information about a file that is labeled as Confidential \ Finance Group. This file was labeled manually by John. This file is also encrypted. 
 
-### Example 2: Get the status of multiple files
+### Example 2: Get label and protection status on all files stored in a specific folder. Export the results to a CSV file.
 ```
-PS C:\> Get-AIPFileStatus -Path C:\Reports
-FileName        : C:\Reports\Dec.docx
-IsLabelled      : True
-MainLabelId     : 074e257c-5848-4582-9a6f-34a182080e71
-MainLabelName   : Confidential
-SubLabelId      : d9f23ae3-a239-45ea-bf23-f515f824c57b
-SubLabelName    : All Company
-LabelingRef     : https://api.informationprotection.azure.com/api/71f988be-86f1-41aa-91ab-2b7cd011db47
-LabeledBy       : alice@contoso.com
-LabelingMethod  : Manual
-LabelDate       : 12/20/2016 2:51:29 PM
-IsRMSProtected  : True
-RMSTemplateId   : e6ee2485-26b9-45e5-b34a-f744eaca53b0
-RMSTemplateName : Contoso, Ltd - Confidential View Only
-
-FileName        : C:\Reports\In progress\Jan.docx
-IsLabelled      : False
-MainLabelId     : 
-MainLabelName   : 
-SubLabelId      : 
-SubLabelName    : 
-LabelingRef     : 
-LabeledBy       : 
-LabelingMethod  : 
-LabelDate       : 
-IsRMSProtected  : False
-RMSTemplateId   : 
-RMSTemplateName : 
+PS C:\> Get-AIPFileStatus -Path \\finance\projects\ | Export-Csv c:\reports\AIP-status.csv 
 ```
 
-This command gets the Azure Information Protection status of all files in the C:\Reports folder and any subfolders. In this example, the command returns one file that is labeled and protected, and another file that is not labeled or protected.
+This example provides the label and protection information about all files under the projects folder (and its entire subfolders) in the finance server. The results are exported to AIP-status.CSV
 
-### Example 3: Create a report that contains the status of all files in a folder
+### Example 3: List all “Confidential” files that are stored in a specific folder. Export the results to a CSV file.
 ```
-PS C:\> Get-AIPFileStatus -Path \\SharedDrive\SharedFolder\DocsFolder | Export-Csv C:\ReportsFolder\Report.csv -NoTypeInformation
-```
-
-This command creates a .csv report of all files in the DocsFolder of the shared drive, so that you can more easily sort and find Azure Information Protection status information for multiple files. If a previous report exists in C:\ReportsFolder\Report.csv, it will be overwritten.
-
-### Example 4: Count of files with a specific label in a folder
-```
-PS C:\> (Get-AIPFileStatus -Path \\SharedDrive\SharedFolder\DocsFolder | Where-Object {$_.MainLabelName -eq 'Confidential'}).Count
-5
+PS C:\> Get-AIPFileStatus -Path \\finance\projects\ | Where-Object {$_.MainLabelName -eq 'Confidential'} | Export-Csv c:\reports\AIP-status.csv
 ```
 
-This command counts all files in the DocsFolder of the shared drive when these files are labeled as Confidential (regardless of their sub-label). In this example, 5 files are found.
+This example provides information about all Confidential files stored in the “projects” folder (and its entire subfolders) in the finance server. The results are exported to AIP-status.CSV
+
+### Example 4: Count how many "Confidential" files are stored in a folder.
+```
+PS C:\> (Get-AIPFileStatus -Path c:\projects\ | Where-Object {$_.MainLabelName -eq 'Confidential'}).Count
+```
+
+This example provides the number of all "Confidential" files stored in the c:\projects folder (and its entire subfolders) 
 
 ## PARAMETERS
 
 ### -Path
-Specifies the path to the file or files for which you want to get the Azure Information Protection status. When the path includes folders or subfolders, all files are in these folders are automatically included. Wildcards are not supported.
+Specifies a local or network path to one or more locations. (examples: c:\folder\ c:\folder\filename, \\server\folder). Wildcards are not permitted. 
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: FullName
+Aliases: FullName, FileName
 
 Required: True
 Position: 0
@@ -126,3 +98,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-RMSTemplate](./Get-RMSTemplate.md)
 
 [Set-AIPFileLabel](./Set-AIPFileLabel.md)
+
