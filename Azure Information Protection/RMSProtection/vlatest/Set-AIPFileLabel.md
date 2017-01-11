@@ -40,7 +40,7 @@ C:\Temp\Test.docx                           Success
 
 This command sets a label for the file named C:\Temp\Test.docx. Because this label is configured to apply protection by using a Rights Management template, the file is also protected by using this template.
 
-### Example 2: Apply a label to a multiple files
+### Example 2: Apply a label to multiple files
 ```
 PS C:\> Set-AIPFileLabel -Path \\SharedDrive\DocsFolder -LabelId d9f23ae3-c839-75ef-ba62-a523e414c84c
 FileName                                       Status  Comment
@@ -64,7 +64,7 @@ FileName                                       Status  Comment
 
 This command attempts to set a label for all files in the DocsFolder folder and any subfolder when some files are already labeled and the Azure Information Protection policy is configured to require justification for lowering the classification label, removing a label, or removing protection. Because some files are already labeled with a higher classification and a justification message is not provided in the command, these files keep their existing label while the unlabeled file has the specified label applied.
 
-### Example 3: Apply a label to a single file, which requires justification
+### Example 4: Apply a label to a single file, which requires justification
 ```
 PS C:\> Set-AIPFileLabel C:\Temp\Test.docx -LabelId d9f23ae3-a239-45ea-bf23-f515f824c57b -JustificationMessage 'The previous label no longer applies'
 FileName                                    Status  Comment
@@ -74,7 +74,7 @@ C:\Temp\Test.docx                           Success
 
 This command set a label for the file named C:\Temp\Test.docx, which is already labeled with a higher classification label. The Azure Information Protection policy is configured to require justification for lowering the classification label, removing a label, or removing protection. Because the command includes a justification message, the new label is successfully applied.
 
-### Example 4: Remove a label from a file
+### Example 5: Remove a label from a file
 ```
 PS C:\> Set-AIPFileLabel C:\Temp\Test.docx -RemoveLabel -JustificationMessage 'The previous label no longer applies'
 FileName                                    Status  Comment
