@@ -36,6 +36,7 @@ FileName                    Status      Comment
 C:\Projects\Project1.docx   Success
 C:\Projects\Datasheet.pdf   Success
 C:\Projects\Image.jpg       Success
+C:\Projects\Analysis.xlsx   Skipped    Justification required
 C:\Projects\Dashboard.xlsx  Success
 ```
 
