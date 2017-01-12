@@ -1,5 +1,5 @@
 ---
-external help file: RMSProtection.dll-Help.xml
+external help file: AIP.dll-Help.xml
 online version: https://go.microsoft.com/fwlink/?linkid=838765
 schema: 2.0.0
 ---
@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-AIPFileStatus
 
 ## SYNOPSIS
-Get the Azure Information Protection label and protection associated with a file
+Get the Azure Information Protection label and protection information for a specified file or files.
 
 ## SYNTAX
 
@@ -16,16 +16,16 @@ Get-AIPFileStatus [-Path] <String[]> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-AIPFileStatus** cmdlet returns the Azure Information Protection status of a specified file or all files in a specified path. This status includes whether the file has a label, and if it does, the label name, who applied it, how it was applied, and when. In addition, the status includes whether the file is protected by Rights Management, and it is, what Rights Management template was used to apply this protection.  
+The **Get-AIPFileStatus** cmdlet returns the Azure Information Protection status of a specified file or all files in a specified path. This status includes whether the file has a label, and if it does, the label name, who applied it, how it was applied, and when. In addition, the status includes whether the file is protected by Rights Management, and if it is, what Rights Management template was used to apply this protection.  
 
-Note: This cmdlet is currently installed as part of the preview version of the Azure Information Protection client, and not the RMS Protection tool.
+Note: This cmdlet is currently installed as part of the preview version of the Azure Information Protection client, and is not included in the RMS Protection tool.
 
 ## EXAMPLES
 
-### Example 1: Get label and protection status on a single file.
+### Example 1: Get the label and protection status of a single file
 ```
-PS C:\> Get-AIPFileStatus -Path \\finance\projects\project.docx
-FileName        : \\finance\projects\project.docx
+PS C:\> Get-AIPFileStatus -Path \\Finance\Projects\Project.docx
+FileName        : \\Finance\Projects\Project.docx
 IsLabelled      : True
 MainLabelId     : 074e257c-1234-1234-1234-34a182080e71
 MainLabelName   : Confidential
@@ -40,33 +40,34 @@ RMSTemplateId   : e6ee2481-1234-1234-1234-f744eacd53b0
 RMSTemplateName : Contoso - Confidential Finance  
 ```
 
-This command provides information about a file that is labeled as Confidential \ Finance Group. This file was labeled manually by John. This file is also encrypted. 
+This command provides information about a file that is labeled as Confidential \ Finance Group. This file was labeled manually by John and it is also protected by using the Rights Management template, "Contoso - Confidential Finance". 
 
-### Example 2: Get label and protection status on all files stored in a specific folder. Export the results to a CSV file.
+### Example 2: Get the label and protection status for all files in a  folder and export the results to a CSV file
 ```
-PS C:\> Get-AIPFileStatus -Path \\finance\projects\ | Export-Csv c:\reports\AIP-status.csv 
-```
-
-This example provides the label and protection information about all files under the projects folder (and its entire subfolders) in the finance server. The results are exported to AIP-status.CSV
-
-### Example 3: List all “Confidential” files that are stored in a specific folder. Export the results to a CSV file.
-```
-PS C:\> Get-AIPFileStatus -Path \\finance\projects\ | Where-Object {$_.MainLabelName -eq 'Confidential'} | Export-Csv c:\reports\AIP-status.csv
+PS C:\> Get-AIPFileStatus -Path \\Finance\Projects\ | Export-Csv C:\Reports\AIP-status.csv 
 ```
 
-This example provides information about all Confidential files stored in the “projects” folder (and its entire subfolders) in the finance server. The results are exported to AIP-status.CSV
+This command gets the label and protection information of all files on the Finance server, in the Projects folder and any of its subfolders. The results are exported to the file named AIP-status.csv so that they can be more easily searched and sorted. If a previous report exists in C:\Reports\Report.csv, it will be overwritten.
 
-### Example 4: Count how many "Confidential" files are stored in a folder.
+### Example 3: List the files labeled "Confidential" and export the results to a CSV file
 ```
-PS C:\> (Get-AIPFileStatus -Path c:\projects\ | Where-Object {$_.MainLabelName -eq 'Confidential'}).Count
+PS C:\> Get-AIPFileStatus -Path \\Finance\Projects\ | Where-Object {$_.MainLabelName -eq 'Confidential'} | Export-Csv C:\Reports\AIP-status.csv
 ```
 
-This example provides the number of all "Confidential" files stored in the c:\projects folder (and its entire subfolders) 
+This command gets the label and protection information for just the files that are labeled "Confidential" (regardless of their sub-label) on the Finance server, in the Projects folder and any of its subfolders. The results are exported to the file named AIP-status.csv so that they can be more easily searched and sorted. If a previous report exists in C:\Reports\Report.csv, it will be overwritten.
+
+### Example 4: Count of files with a "Confidential" label
+```
+PS C:\> (Get-AIPFileStatus -Path C:\Projects\ | Where-Object {$_.MainLabelName -eq 'Confidential'}).Count
+5
+```
+
+This command provides the number of files with the "Confidential" label that are in the C:\Projects folder and any of its subfolders. In this example, 5 files are found.
 
 ## PARAMETERS
 
 ### -Path
-Specifies a local or network path to one or more locations. (examples: c:\folder\ c:\folder\filename, \\server\folder). Wildcards are not permitted. 
+Specifies a local or network path to the files for which you want to get the label and protection information. Examples include C:\Folder\, C:\Folder\Filename, \\Server\Folder). Wildcards are not supported. 
 
 ```yaml
 Type: String[]
