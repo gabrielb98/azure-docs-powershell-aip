@@ -301,17 +301,14 @@ Get-Help <cmdlet name> cmdlet, where <cmdlet name> is the name of the cmdlet
 that you want to research. For example:
 
 C:\PS> Get-Help Get-RMSTemplate
+
+SEE ALSO
+
+Clear-RMSAuthentication
+Get-RMSFileStatus
+Get-RMSTemplate
+Protect-RMSFile
+Unprotect-RMSFile
+Set-RMSServerAuthentication
+
 ```
-## SEE ALSO
-
-[Clear-RMSAuthentication](./Clear-RMSAuthentication.md)
-
-[Get-RMSFileStatus](./Get-RMSFileStatus.md)
-
-[Get-RMSTemplate](./Get-RMSTemplate.md)
-
-[Protect-RMSFile](./Protect-RMSFile.md)
-
-[Unprotect-RMSFile](./Unprotect-RMSFile.md)
-
-[Set-RMSServerAuthentication](./Set-RMSServerAuthentication.md)
