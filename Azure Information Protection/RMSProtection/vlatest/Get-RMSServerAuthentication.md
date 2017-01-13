@@ -17,13 +17,10 @@ Get-RMSServerAuthentication [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-RMSServerAuthentication** cmdlet gets the status and details of your service principal authentication to Azure Rights Management (Azure  RMS) that was previous set by using [Set-RMSServerAuthentication](./Set-RMSServerAuthentication.md).
-The status must be ON for you to protect or unprotect files for Azure RMS by using a service principal rather than your user account.
+The **Get-RMSServerAuthentication** cmdlet gets the status and details of your service principal authentication to Azure Rights Management (Azure  RMS) that was previous set by using [Set-RMSServerAuthentication](./Set-RMSServerAuthentication.md). The status must be ON for you to protect or unprotect files for Azure RMS by using a service principal rather than your user account.
 This status remains on for the duration of your Windows PowerShell session.
 
-This cmdlet applies to Azure  RMS only and does not apply to AD RMS.
-This cmdlet also does not apply if you are authenticating to Azure RMS by using your user account.
-For more information, see [about_RMSProtection_AzureRMS](./about_RMSProtection_AzureRMS.md).
+This cmdlet applies to Azure  RMS only and does not apply to AD RMS. This cmdlet also does not apply if you are authenticating to Azure RMS by using your user account. For more information, see [about_RMSProtection_AzureRMS](./about_RMSProtection_AzureRMS.md).
 
 ## EXAMPLES
 

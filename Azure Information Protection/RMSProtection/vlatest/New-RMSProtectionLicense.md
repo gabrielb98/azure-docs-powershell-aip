@@ -20,6 +20,7 @@ New-RMSProtectionLicense [-RmsServer <String>] [-OwnerEmail <String>] [-UserEmai
 
 ## DESCRIPTION
 The **New-RMSProtectionLicense** cmdlet creates an ad-hoc rights policy that you store as a variable and then use to protect a file or files when you run the [Protect-RMSFile](./Protect-RMSFile) cmdlet.
+
 Create an ad-hoc rights policy (also known as a publishing license) when you cannot use a previously created rights policy template.
 
 ## EXAMPLES
@@ -29,8 +30,7 @@ Create an ad-hoc rights policy (also known as a publishing license) when you can
 PS C:\>$License = New-RMSProtectionLicense -OwnerEmail "user1@contoso.com" -UserEmail "user2@contoso.com" -Permission "EDIT"
 ```
 
-This command creates an ad-hoc rights policy that sets user1@contoso.com as the owner and grants user2@contoso.com EDIT rights, and stores this policy in a variable named License.
-This ad-hoc policy can then be used to apply protection to a file or files.
+This command creates an ad-hoc rights policy that sets user1@contoso.com as the owner and grants user2@contoso.com EDIT rights, and stores this policy in a variable named License. This ad-hoc policy can then be used to apply protection to a file or files.
 
 There is no output displayed for this command.
 
@@ -53,6 +53,7 @@ C:\Test.txt           C:\Test.ptxt
 ```
 
 The first command creates an ad-hoc rights policy that sets user1@contoso.com as the owner and grants user2@contoso.com and user3@ contoso.com VIEW and PRINT rights, and stores this policy in a variable named License.
+
 The second command then uses the created ad-hoc policy to protect the file C:\Test.txt.
 
 ## PARAMETERS
@@ -88,9 +89,11 @@ Accept wildcard characters: False
 ```
 
 ### -OwnerEmail
-Specifies the owner of the rights policy by email address, which can be a single account or a group account (distribution list or emailed-enabled security group).
-You can use this parameter to set an owner other than yourself.
-If you do not specify a value, the cmdlet will use your email address to identify you as the owner of this ad-hoc rights policy.
+Specifies the Rights Management owner of the rights policy by email address, which can be a single account or a group account (distribution list or emailed-enabled security group). You can use this parameter to set an owner other than yourself.
+
+The Rights Management owner has Full Control Rights Management permissions and is independent from the Windows file system owner. 
+
+If you do not specify a value, the cmdlet will use your email address to identify you as the Rights Management owner of this ad-hoc rights policy.
 
 ```yaml
 Type: String
@@ -107,7 +110,8 @@ Accept wildcard characters: False
 ### -Permission
 Specifies the usage rights for the ad-hoc policy.
 Use this parameter and the *UserEmail* parameter to grant rights to specified users.
-The acceptable values for this parameter are:
+
+The acceptable values for this parameter:
 
 - VIEW
 - EDIT
@@ -140,6 +144,7 @@ Accept wildcard characters: False
 
 ### -RmsServer
 Specifies the name of an AD RMS server (or cluster) to use when creating this ad-hoc rights policy.
+
 This parameter is not applicable for Azure RMS or if your computer knows the right AD RMS server to use by using service discovery.
 
 ```yaml
@@ -175,8 +180,8 @@ Accept wildcard characters: False
 
 ### -ValidForDays
 Specifies an expiry period in number of days, which starts when the ad-hoc policy is applied to a file or files.
-After this expiry period, the specified users will no longer be able to access the file or files.
-However, the owner and a super user can always access the file, even after the expiry period is reached.
+
+After this expiry period, the specified users will no longer be able to access the file or files. However, the owner and a super user can always access the file, even after the expiry period is reached.
 
 ```yaml
 Type: String

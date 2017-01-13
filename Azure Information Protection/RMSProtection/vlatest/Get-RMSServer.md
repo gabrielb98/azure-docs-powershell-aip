@@ -18,8 +18,8 @@ Get-RMSServer [<CommonParameters>]
 
 ## DESCRIPTION
 The **Get-RMSServer** cmdlet returns a list of RMS servers that can issue rights policy templates to apply Rights Management protection.
-This cmdlet is not relevant to Azure RMS and not necessary if you have a single Active Directory Rights Management Services (AD RMS) deployment.
-Use this cmdlet when you have multiple deployments of AD RMS, so that you can identify the server (or cluster) name to specify when you use the [Get-RMSTemplate](./Get-RMSTemplate.md) cmdlet to identify the template that you want to use.
+
+This cmdlet is not relevant to Azure RMS and not necessary if you have a single Active Directory Rights Management Services (AD RMS) deployment. Use this cmdlet when you have multiple deployments of AD RMS, so that you can identify the server (or cluster) name to specify when you use the [Get-RMSTemplate](./Get-RMSTemplate.md) cmdlet to identify the template that you want to use.
 
 ## EXAMPLES
 
@@ -39,7 +39,8 @@ Microsoft.Information     Contoso                     True
 Microsoft.Information     Fabrikam                    True
 ```
 
-This command gets a list of AD RMS servers by name that can provide templates.
+This command gets a list of AD RMS servers by name that can provide templates. 
+
 When the servers are configured in an AD RMS cluster, the cluster name only is displayed.
 
 ## PARAMETERS
