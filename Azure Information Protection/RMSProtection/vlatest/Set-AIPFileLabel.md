@@ -1,5 +1,5 @@
 ---
-external help file: RMSProtection.dll-Help.xml
+external help file: AIP.dll-Help.xml
 online version: https://go.microsoft.com/fwlink/?linkid=838766
 schema: 2.0.0
 ---
@@ -7,7 +7,7 @@ schema: 2.0.0
 # Set-AIPFileLabel
 
 ## SYNOPSIS
-Sets a file label, and sets the RMS protection according to the policy
+Sets or removes an Azure Information Protection label for a file, and sets the protection according to the label configuration.
 
 ## SYNTAX
 
@@ -22,76 +22,76 @@ Set-AIPFileLabel [-JustificationMessage <String>] [-RemoveLabel] [-Path] <String
 ```
 
 ## DESCRIPTION
-Use the **Set-AIPFileLabel** cmdlet to apply or clear a label using Azure Information Protection. Upon label action this cmdlet may apply or remove RMS protection automatically – based on the protection action that is associated with this label on your Azure Information Protection policy.
+The **Set-AIPFileLabel** cmdlet sets or removes an Azure Information Protection label for one or more files. This action can automatically apply or remove protection when labels are configured for Rights Management protection in the Azure Information Protection policy. When the command runs successfully, any existing label or protection is replaced.
+
+Note: This cmdlet is currently installed as part of the preview version of the Azure Information Protection client, and is not included in the RMS Protection tool.. 
 
 ## EXAMPLES
 
-### Example 1: Apply "Confidential" label on all files in a folder (and its entire subfolders)
+### Example 1: Apply the "Confidential" label to all files in a folder and any of its subfolders
 ```
-PS C:\> Set-AIPFileLabel -Path c:\projects\ -LabelId d9f23ae3-1324-1234-1234-f515f824c57b
+PS C:\> Set-AIPFileLabel -Path C:\Projects\ -LabelId d9f23ae3-1324-1234-1234-f515f824c57b
 FileName                    Status      Comment
 --------                    ------      ------------
-C:\projects\project1.docx   Success
-C:\projects\datasheet.pdf   Success
-C:\projects\image.jpg       Success
-C:\projects\analysis.xlsx   Skipped    Justification required
-C:\projects\dashboard.xlsx  Success
+C:\Projects\Project1.docx   Success
+C:\Projects\Datasheet.pdf   Success
+C:\Projects\Image.jpg       Success
+C:\Projects\Analysis.xlsx   Skipped    Justification required
+C:\Projects\Dashboard.xlsx  Success
 ```
 
-This command sets a Confidential label on all files in the Projects folder, and its entire subfolders. 
-Files labeled Confidential may become encrypted (in place) if your Azure Information Protection policy applies encryption for files labeled Confidential.
-The labeling and encryption owner is the user that is signed-in to the device running this PowerShell command.
-Note that in this example the analysis.xlsx file was not labeled, as it is currently classified with a higher label, and a justification was not provided in the cmdlet. 
+This command sets a label named "Confidential" on all files in the Projects folder and any of its subfolders.
 
+If the Confidential label is configured in the Azure Information Protection policy to apply Rights Management protection, the files that were successfully labeled with this command will also be protected. In this case, the Rights Management owner (who has the Rights Management Full Control permission) of these files is the user who ran the PowerShell command.
 
-### Example 2: Apply "Confidential" label on a single file, providing business justification, in case that the file is classified with a higher label 
+In our example, one file was not labeled (skipped) with the comment that justification is required. This might be the intended outcome to ensure that a file with a higher classification label or protection isn't accidentally overwritten with a lower classification label or has protection removed. To enable this safeguard, the Azure Information Protection policy must be configured to require justification for lowering the classification label, removing a label, or removing protection. When you then run this command without the **JustificationMessage** parameter and the label triggers justification, the file is skipped. 
+
+### Example 2: Apply the "Confidential" label to a single file, which requires justification 
 ```
-PS C:\> Set-AIPFileLabel -Path \\finance\projects\analysis.xlsx -LabelId d9f23ae3-1324-1234-1234-f515f824c57b -JustificationMessage 'The previous label no longer applies'
+PS C:\> Set-AIPFileLabel -Path \\Finance\Projects\Analysis.xlsx -LabelId d9f23ae3-1324-1234-1234-f515f824c57b -JustificationMessage 'The previous label no longer applies'
 FileName                          Status      Comment
 --------                          ------      ------------
 \\finance\projects\analysis.xlsx  Success     
 ```
 
-This command labels a file as “Confidential” using a business justification. 
-This justification is used and logged when required by the policy, on cases of downgrade the label, remove the protection or clear the label. 
+This command sets the "Confidential" label for a file that is already labeled with a higher classification label. The Azure Information Protection policy is configured to require justification for lowering the classification label, removing a label, or removing protection. Because the command includes a justification message, the new label is successfully applied and the justification reason is logged on the local computer.
 
-### Example 3: Apply “Internal” label on all files that are currently NOT labeled  
+### Example 3: Apply the "Internal" label to all files that do not currently have a label
 ```
-PS C:\> Get-AIPFileStatus -Path \\finance\projects\ | where {$_.IsLabelled -eq $False} | Set-AIPFileLabel -LabelId d9f23ae3-4321-4321-4321-f515f824c57b
+PS C:\> Get-AIPFileStatus -Path \\Finance\Projects\ | where {$_.IsLabelled -eq $False} | Set-AIPFileLabel -LabelId d9f23ae3-4321-4321-4321-f515f824c57b
 FileName                              Status Comment
 --------                              ------ ------------
-\\finance\projects\image.jpg          Success
-\\finance\projects\pricelist.pdf      Success
-\\finance\projects\announcement.docx  Success
-\\finance\projects\analysis.xlsx      Success
+\\Finance\Projects\Image.jpg          Success
+\\Finance\Projects\Pricelist.pdf      Success
+\\Finance\Projects\Announcement.docx  Success
+\\Finance\Projects\Analysis.xlsx      Success
 ```
 
-This command identifies all files that are not labeled using the Get-AIPFileStatus cmdlet. 
-These files are then labeled using the Set-AIPFilelabel cmdlet.
+This command first identifies all files that are not labeled by using the Get-AIPFileStatus cmdlet. Then, these files are labeled by specifying the "Internal" label by its ID.
 
-### Example 4: Apply "Confidential" label on DOCX files that are not labeled 
+### Example 4: Apply the "Confidential" label to .docx files that are not labeled 
 ```
 PS C:\> Get-ChildItem C:\Projects\*.docx -File -Recurse | Get-AIPFileStatus | where {$_.IsLabelled -eq $False} | Set-AIPFileLabel -LabelId d9f23ae3-1234-1234-1234-f515f824c57b
 FileName                   Status  Comment
 --------                   ------  ------------
-C:\Projects\analysis.docx  Success
-C:\Projects\projects.docx  Success
+C:\Projects\Analysis.docx  Success
+C:\Projects\Projects.docx  Success
 ```
 
-This example first identifies all DOCX files in the c:\Projects folder (and its subfolders) using Get-Child-Item, then finds the files that are not labeled using the Get-AIPFileStatus cmdlet. 
-These files are then labeled using the Set-AIPFilelabel cmdlet.
-Note: Get-Child-Item can be used with Get-AIPFileStatus as the FullName is an alias for Path. 
+This command first identifies all .docx files in the C:\Projects folder (and its subfolders) by using Get-Child-Item, then finds from these files the ones that are not labeled by using the Get-AIPFileStatus cmdlet. The resulting files are then labeled by specifying the "Confidential" label by its ID.
 
-### Example 5: Remove a label from a file.
+Note: This command makes use of the Path alias of FullName, so that Get-Child-Item can be used with Get-AIPFileStatus. 
+
+### Example 5: Remove a label from a file
 ```
-PS C:\> Set-AIPFileLabel C:\Projects\analysis.docx -RemoveLabel -JustificationMessage 'The previous label no longer applies'
+PS C:\> Set-AIPFileLabel C:\Projects\Analysis.docx -RemoveLabel -JustificationMessage 'The previous label no longer applies'
 
 FileName                   Status Comment
 --------                   ------ ------------
-C:\Projects\analysis.docx  Success
+C:\Projects\Analysis.docx  Success
 ```
 
-This command removes the Azure Information Protection label from C:\Projects\analysis.docx. 
+This command removes the existing label from the file named C:\Projects\Analysis.docx, and specifies a justification message that is required because the Azure Information Protection policy setting is enabled that requires justification for lowering the classification label, removing a label, or removing protection. 
 
 ## PARAMETERS
 
@@ -129,7 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-Specifies the path to the file or files to which you want to apply labels. When the path includes folders and subfolders, all files in these folders are automatically included. Wildcards are not supported. 
+Specifies a local or network path to the file or files to which you want to apply labels. Examples include C:\Folder\, C:\Folder\Filename, \\Server\Folder). Wildcards are not supported.
 
 ```yaml
 Type: String[]
@@ -144,7 +144,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveLabel
-Indicates that this cmdlet removes labels.
+Removes any label that has been applied to a file.
 
 ```yaml
 Type: SwitchParameter
