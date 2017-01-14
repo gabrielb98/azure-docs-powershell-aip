@@ -17,13 +17,9 @@ Set-RMSServerAuthentication -Key <String> -AppPrincipalId <String> -BposTenantId
 ```
 
 ## DESCRIPTION
-The **Set-RMSServerAuthentication** cmdlet specifies identifiers for a service principal to authenticate with Azure RMS, so that you can then protect or unprotect files by using Azure RMS.
-Use a service principal when you need to protect or unprotect files without interaction, for example, a script that automatically protects files on a file server.
-You need run this command just one time for your Windows PowerShell session.
+The **Set-RMSServerAuthentication** cmdlet specifies identifiers for a service principal to authenticate with Azure RMS, so that you can then protect or unprotect files by using Azure RMS. Use a service principal when you need to protect or unprotect files without interaction, for example, a script that automatically protects files on a file server. You need run this command just one time for your Windows PowerShell session.
 
-This cmdlet is for Azure RMS only and is not used for AD RMS.
-This cmdlet also does not apply if you are authenticating to Azure RMS by using your user account.
-For more information about this cmdlet and how to get the identifiers that it requires, see about_RMSProtection_AzureRMShttp://go.microsoft.com/fwlink/?LinkId=620287.
+This cmdlet is for Azure RMS only and is not used for AD RMS. This cmdlet also does not apply if you are authenticating to Azure RMS by using your user account. For more information about this cmdlet and how to get the identifiers that it requires, see [about_RMSProtection_AzureRMS](http://go.microsoft.com/fwlink/?LinkId=620287).
 
 ## EXAMPLES
 
