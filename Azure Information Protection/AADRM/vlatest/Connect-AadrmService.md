@@ -106,8 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-Specifies a **PSCredential** object.
-To obtain a **PSCredential** object, use the [Get-Credential](http://go.microsoft.com/fwlink/?LinkID=293936) cmdlet. For more information, type `Get-Help Get-Cmdlet`.
+Specifies a **PSCredential** object. To obtain a **PSCredential** object, use the [Get-Credential](http://go.microsoft.com/fwlink/?LinkID=293936) cmdlet. For more information, type `Get-Help Get-Cmdlet`.
 
 The cmdlet prompts you for a password.
 
