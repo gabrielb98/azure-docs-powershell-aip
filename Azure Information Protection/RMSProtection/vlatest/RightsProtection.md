@@ -1,5 +1,5 @@
 ---
-Module Name: RightsProtection
+Module Name: RMSProtection
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 Download Help Link: {{Please enter FwLink manually}}
 Help Version: {{Please enter version of help manually (X.X.X.X) format}}
@@ -7,7 +7,7 @@ Locale: en-US
 ms.assetid: 35D99F89-BD73-457E-95C7-73857656FB59
 ---
 
-# RightsProtection Module
+# RMSProtection Module
 ## Description
 The following list contains links to the help topics for the Microsoft Rights Management services (RMS) Protection cmdlets, which are installed with the [RMS Protection Tool](https://www.microsoft.com/en-us/download/details.aspx?id=47256). The RMS Protection Tool replaces the AD RMS Bulk Protection Tool. Support for the AD RMS Bulk Protection Tool will stop March 1, 2017.
 
