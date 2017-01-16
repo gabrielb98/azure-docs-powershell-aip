@@ -90,8 +90,7 @@ This command gets a list of templates for the French locale.
 ## PARAMETERS
 
 ### -Culture
-Specifies the templates to load by locale by using a language-region code-pair, where language is an ISO-639 language code and region is an ISO 3166-1 country or region identifier (for instance, en-us, fr-fr, or es-es).
-If you do not specify this parameter, or you specify this parameter without a value, all available language versions for the same template are returned.
+Specifies the templates to load by locale by using a language-region code-pair, where language is an ISO-639 language code and region is an ISO 3166-1 country or region identifier (for instance, en-us, fr-fr, or es-es). If you do not specify this parameter, or you specify this parameter without a value, all available language versions for the same template are returned.
 
 To load templates for a different locale, specify it as a value with this parameter by using the language-region code-pair. For example, if you are in Canada and your current system locale is set to English but you want to see the template names and description in French, specify `-Culture "fr-fr"`.
 
@@ -127,6 +126,9 @@ Specifies the name of the RMS server or cluster to get the templates if you are 
 
 This parameter is not applicable to Azure RMS.
 
+If you don't specify a server, the cmdlet gets the list of templates from your computer's default Rights Management deployment by using service discovery. Typically, you need to specify this parameter only if you have multiple deployments of AD RMS or service discovery cannot find an AD RMS server. If you are not sure what server name to specify, use the [Get-RMSServer](./Get-RMSServer) cmdlet. 
+
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -145,9 +147,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
-
-## NOTES
-If you don't specify a template server, the **Get-RMSTemplate** cmdlet gets the list of templates from your computer's default RMS deployment by using service discovery. Typically, you need to specify this parameter only if you have multiple deployments of AD RMS or service discovery cannot find an AD RMS server. If you are not sure what server name to specify, use the [Get-RMSServer](./Get-RMSServer) cmdlet. When you specify a template server, **Get-RMSTemplate** gets the list from the specified AD RMS server (or cluster).
 
 ## RELATED LINKS
 

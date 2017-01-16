@@ -87,8 +87,7 @@ Notice that for a .rar input file, the unprotected file is a .zip file.
 ## PARAMETERS
 
 ### -File
-Specifies the path and file to unprotect.
-For the path, you can specify a drive letter or UNC.
+Specifies the path and file to unprotect. For the path, you can specify a drive letter or UNC.
 
 ```yaml
 Type: String

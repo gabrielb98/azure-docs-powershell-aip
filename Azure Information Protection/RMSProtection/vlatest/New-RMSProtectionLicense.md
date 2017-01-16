@@ -91,7 +91,7 @@ Accept wildcard characters: False
 ### -OwnerEmail
 Specifies the Rights Management owner of the rights policy by email address, which can be a single account or a group account (distribution list or emailed-enabled security group). You can use this parameter to set an owner other than yourself.
 
-The Rights Management owner has Full Control Rights Management permissions and is independent from the Windows file system owner. 
+The Rights Management owner has all rights (Full Control) for the file. The  Rights Management owner is independent from the Windows file system owner. 
 
 If you do not specify a value, the cmdlet will use your email address to identify you as the Rights Management owner of this ad-hoc rights policy.
 
@@ -160,11 +160,9 @@ Accept wildcard characters: False
 ```
 
 ### -UserEmail
-Specifies users who will have rights to use the file or files that is protected by this ad-hoc policy.
-Use this parameter and the *Permission* parameter to grant rights to specified users.
+Specifies users who will have rights to use the file or files that is protected by this ad-hoc policy. Use this parameter and the *Permission* parameter to grant rights to specified users.
 
-You can specify single users, or specify a group of users from your organization by using an emailed-enabled security group or a distribution group.
-You can also specify users (but not groups) from another organization.
+You can specify single users, or specify a group of users from your organization by using an emailed-enabled security group or a distribution group. You can also specify users (but not groups) from another organization.
 
 ```yaml
 Type: String[]
