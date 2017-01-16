@@ -52,7 +52,7 @@ InputFile             EncryptedFile
 C:\Test.docx          C:\Test-Copy.docx
 ```
 
-This command is the same as the previous example, except that it doesn't use the *InPlace* parameter. Because it also doesn't use the *OutputFolder* parameter, the protected file is created in the current folder with "-Copy" appended to the file name. The original, unprotected file remains in the current folder.
+This command is the same as the previous example, except that it doesn't use the InPlace parameter. Because it also doesn't use the OutputFolder parameter, the protected file is created in the current folder with "-Copy" appended to the file name. The original, unprotected file remains in the current folder.
 
 ### Example 3: Create a protected version of a file by using a template
 ```
