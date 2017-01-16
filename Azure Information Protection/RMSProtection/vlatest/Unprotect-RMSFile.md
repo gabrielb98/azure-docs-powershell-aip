@@ -61,7 +61,7 @@ C:\Protected\Test.ptxt     C:\Temp\Protected\Test.txt
 C:\Protected\Word.docx     C:\Temp\Protected\Word.docx
 ```
 
-This command unprotects a folder, retaining the original protected files and creating the unprotected versions in the folder location named C:\Temp and creates a corresponding subfolder of "Protected". This command can also be used with the *Recurse* parameter, which determines whether to include the processing of subfolders.
+This command unprotects a folder, retaining the original protected files and creating the unprotected versions in the folder location named C:\Temp and creates a corresponding subfolder of "Protected". This command can also be used with the Recurse parameter, which determines whether to include the processing of subfolders.
 
 ### Example 4: Unprotect a .PST file
 ```
