@@ -1,8 +1,8 @@
 ---
-external help file: RMSProtection.dll-Help.xml
-online version: http://go.microsoft.com/fwlink/?LinkID=623208
+external help file: AIP.dll-Help.xml
+online version: 
 schema: 2.0.0
-ms.assetid: B46B757C-DF4D-4BCE-9732-527A86498619
+ms.assetid: 83B4D09E-ADAE-4DF9-9924-132A9FE47DFF
 ---
 
 # Set-RMSServerAuthentication
