@@ -38,7 +38,7 @@ The command includes the rights VIEW and DOCEDIT for a user in the Contoso organ
 PS C:\>$R2 = New-AadrmRightsDefinition -DomainName "Contoso.com" -Rights "VIEW"
 ```
 
-This command creates a rights definition object for all users in the organization and stores this policy in a variable named R2, which can then be used to create or update a custom template.
+This command creates a rights definition object for all users in the organization and stores this policy in a variable named R2, which can then be used to create or update a custom template.The command includes the VIEW right for all users in the Contoso organization.
 
 ## PARAMETERS
 
