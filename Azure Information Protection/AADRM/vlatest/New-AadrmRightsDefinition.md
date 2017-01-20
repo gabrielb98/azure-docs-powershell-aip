@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.RightsManagementServices.Online.Admin.PowerShell.dll-Help.xml
+ms.assetid: BE20B1AF-4D47-4182-A46A-2FB0AB504A93
 online version: http://go.microsoft.com/fwlink/?LinkID=400629
 schema: 2.0.0
-ms.assetid: BE20B1AF-4D47-4182-A46A-2FB0AB504A93
 ---
 
 # New-AadrmRightsDefinition
@@ -13,8 +13,8 @@ Creates a Rights Definition object for Rights Management.
 ## SYNTAX
 
 ```
-New-AadrmRightsDefinition -EmailAddress <String> -Rights <System.Collections.Generic.List`1[System.String]>
- [<CommonParameters>]
+New-AadrmRightsDefinition [-EmailAddress <String>] [-DomainName <String>]
+ -Rights <System.Collections.Generic.List`1[System.String]> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,6 +44,21 @@ The command includes the VIEW right for all users in the Contoso organization, b
 
 ## PARAMETERS
 
+### -DomainName
+{{Fill DomainName Description}}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EmailAddress
 Specifies the email address of a user or group. You can specify external email addresses for users outside your organization but external email addresses for groups are not currently supported.
 
@@ -54,9 +69,9 @@ Tip: If you want to specify all users in your organization, use the automaticall
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -95,7 +110,7 @@ For more information about the usage rights, see Configuring usage rights for [A
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
