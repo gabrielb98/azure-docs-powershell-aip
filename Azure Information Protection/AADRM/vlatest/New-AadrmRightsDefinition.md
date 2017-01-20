@@ -33,19 +33,18 @@ This command creates a rights definition object for the specified user and store
 
 The command includes the rights VIEW and DOCEDIT for a user in the Contoso organization.
 
-### Example 2: Create a rights definition object for all users
+### Example 2: Create a rights definition object for all users 
 ```
-PS C:\>$R2 = New-AadrmRightsDefinition -EmailAddress "AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com" -Rights "VIEW"
+PS C:\>$R2 = New-AadrmRightsDefinition -DomainName "Contoso.com" -Rights "VIEW"
 ```
 
 This command creates a rights definition object for all users in the organization and stores this policy in a variable named R2, which can then be used to create or update a custom template.
 
-The command includes the VIEW right for all users in the Contoso organization, by using the automatically created "AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@{tenant_name}.onmicrosoft.com" group that is created for the organization when the Azure Rights Management service is activated.
-
 ## PARAMETERS
 
 ### -DomainName
-{{Fill DomainName Description}}
+Specifies the domain name of your or external organization. All members in given domain name will be included.
+
 
 ```yaml
 Type: String
@@ -64,7 +63,7 @@ Specifies the email address of a user or group. You can specify external email a
 
 The cmdlet associates the rights that the *Rights* parameter specifies to the user or group that the address specifies.
 
-Tip: If you want to specify all users in your organization, use the automatically created group, AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@{tenant_name}.onmicrosoft.com. For example, this group might look like the following for Contoso: **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com**. You can see your organization's automatically created email address if you copy one of the default rights policy templates in the Azure portal, and then identify the USER NAME on the RIGHTS page.
+Tip: If you want to specify all users in your organization, use the DomainName parameter. 
 
 ```yaml
 Type: String
