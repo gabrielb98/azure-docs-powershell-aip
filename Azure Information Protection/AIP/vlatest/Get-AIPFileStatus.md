@@ -1,7 +1,8 @@
 ---
 external help file: AIP.dll-Help.xml
-online version: https://go.microsoft.com/fwlink/?linkid=838765
+online version: 
 schema: 2.0.0
+ms.assetid: ED3F3730-434E-4EDF-969B-0ABE30D68030
 ---
 
 # Get-AIPFileStatus

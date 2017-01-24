@@ -1,7 +1,8 @@
 ---
 external help file: AIP.dll-Help.xml
-online version: https://go.microsoft.com/fwlink/?linkid=838766
+online version: 
 schema: 2.0.0
+ms.assetid: 566E595C-D574-4DED-AE38-CBCD75694B45
 ---
 
 # Set-AIPFileLabel
