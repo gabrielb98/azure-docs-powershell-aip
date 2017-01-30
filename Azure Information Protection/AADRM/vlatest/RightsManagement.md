@@ -19,7 +19,7 @@ For more information, see [Administering Azure Rights Management by Using Window
 >
 >If you do not see the cmdlet or options that are documented, make sure that you have [downloaded the latest version of the module](https://technet.microsoft.com/library/jj585012.aspx).
 >
->The current version is **2.5.0.0**. To check the version you have installed, run: (Get-Module aadrm -ListAvailable).Version
+>The current version is **2.7.0.0**. To check the version you have installed, run: (Get-Module aadrm -ListAvailable).Version
 
 The .dll file for this module is *Microsoft.RightsManagementServices.Online.Admin.PowerShell.dll*.
 
