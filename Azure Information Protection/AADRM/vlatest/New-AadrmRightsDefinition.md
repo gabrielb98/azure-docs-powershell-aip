@@ -63,7 +63,7 @@ Specifies the email address of a user or group. You can specify external email a
 
 The cmdlet associates the rights that the *Rights* parameter specifies to the user or group that the address specifies.
 
-Tip: If you want to specify all members in your organization or all members in another organization, use the DomainName parameter. 
+Tip: If you want to specify all users in your organization or all users in another organization, use the DomainName parameter. 
 
 ```yaml
 Type: String
