@@ -1,8 +1,8 @@
 ---
-Module Name: RMSProtection
-Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
-Download Help Link: {{Please enter FwLink manually}}
-Help Version: {{Please enter version of help manually (X.X.X.X) format}}
+Module Name: AzureInformationProtectionn
+Module Guid: NA
+Download Help Link: NA
+Help Version: NA
 Locale: en-US
 ms.assetid: 35D99F89-BD73-457E-95C7-73857656FB59
 ---
@@ -15,7 +15,7 @@ These cmdlets can be used with the Azure Information Protection service, the Azu
 
 The current version of the AzureInformationProtection module is **1.3.155.2**. If you have previously installed this module, run the following command to check the version: `(Get-Module AzureInformationProtection -ListAvailable).Version`.
 
-For instructions to use these cmdlets, any current limitations, prerequisites, and examples, see the following documentation from the Azure Information Protection client administrator guide: 
+For instructions to use these cmdlets, any current limitations, prerequisites, and scenario examples, see the following documentation from the Azure Information Protection client administrator guide: 
 
 - [Using PowerShell with the Azure Information Protection client](/information-protection/rms-client/client-admin-guide-powershell)
 
