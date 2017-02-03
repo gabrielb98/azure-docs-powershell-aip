@@ -11,7 +11,7 @@ ms.assetid: 0B91D740-D2BD-4D57-9E21-C582C9BE2CCA
 ## Description
 This topic displays help topics for the Azure Rights Management (RMS) Cmdlets.
 
-The Azure PowerShell cmdlets for Azure RMS let you administer Azure RMS from the command line. Although this enables automation, it also supports reliable and repeated processes to help reduce administrative overheads. In addition, some Azure RMS advanced configurations and operations require Azure PowerShell.
+The Azure PowerShell cmdlets for Azure RMS let you administer the Azure Rights Management service from the command line. Although this enables automation, it also supports reliable and repeated processes to help reduce administrative overheads. In addition, some Azure Rights Management service advanced configurations and operations require Azure PowerShell.
 
 For more information, see [Administering Azure Rights Management by Using Windows PowerShell](https://technet.microsoft.com/library/jj585027.aspx).
 

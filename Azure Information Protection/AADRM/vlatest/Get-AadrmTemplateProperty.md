@@ -21,8 +21,7 @@ Get-AadrmTemplateProperty -TemplateId <Guid> [-Names] [-Descriptions] [-RightsDe
 ## DESCRIPTION
 The **Get-AadrmTemplateProperty** cmdlet gets specified properties of an Azure Rights Management template, by using the *TemplateId* parameter.
 
-You can query properties of a default template, or a custom template.
-For more information about custom templates, see [Configuring custom templates for Azure Rights Management](https://docs.microsoft.com/rights-management/deploy-use/configure-custom-templates) (https://docs.microsoft.com/rights-management/deploy-use/configure-custom-templates) on the Microsoft documentation site.
+You can query properties of a default template, or a custom template. For more information about custom templates, see [Configuring custom templates for Azure Rights Management](https://docs.microsoft.com/rights-management/deploy-use/configure-custom-templates) (https://docs.microsoft.com/rights-management/deploy-use/configure-custom-templates) on the Microsoft documentation site.
 
 ## EXAMPLES
 
@@ -38,13 +37,13 @@ This command gets the description and the usage rights for all users or groups t
 PS C:\>$templates = Get-AadrmTemplate PS C:\>foreach ($template in $templates) {Get-AadrmTemplateProperty -TemplateId $template.TemplateId -Name -RightsDefinitions -ReadOnly -Status}
 ```
 
-The first command gets all the template IDs and stores them in a variable.
-The second command then uses this variable to get the template name, the usage rights, whether it is read-only (True for a default template, False for a custom template), and the status (Published or Archived) for each template.
+The first command gets all the template IDs and stores them in a variable. The second command then uses this variable to get the template name, the usage rights, whether it is read-only (True for a default template, False for a custom template), and the status (Published or Archived) for each template.
 
 ## PARAMETERS
 
 ### -ContentExpirationDate
 Lists the date on which content protected with the template expires.
+
 Use this parameter only if *ContentExpirationOption* is set to OnDate.
 
 ```yaml
@@ -61,6 +60,7 @@ Accept wildcard characters: False
 
 ### -ContentExpirationOption
 Gets the content expiration configuration setting for content that is protected with the template.
+
 One of the following values is returned:
 
 - Never.
@@ -84,6 +84,7 @@ Accept wildcard characters: False
 
 ### -ContentValidityDuration
 Lists the number of days from the day of protection after which content protected with the template expires.
+
 Use this parameter only if *ContentExpirationOption* is set to AfterDays.
 
 ```yaml
@@ -115,7 +116,9 @@ Accept wildcard characters: False
 
 ### -EnableInLegacyApps
 Indicates the behavior of a departmental template in applications that do not support departmental templates (see the *ScopedIdentities* parameter).
+
 If set to True and the template is a departmental template, all users trying to protect content from an application that does not support departmental templates will see the template and therefore be able to select it, regardless of whether the users are members of the template's target scope or not.
+
 If set to False, no users see and therefore cannot select the template in applications that do not support departmental templates, even if the users are members of the template's target scope.
 
 This setting has no effect on templates that are not departmental templates and also has no effect on applications that natively support departmental templates.
@@ -136,6 +139,7 @@ Accept wildcard characters: False
 
 ### -LicenseValidityDuration
 Lists the number of days content is accessible offline after a license to consume it is acquired.
+
 -1 indicates unlimited access.
 0 indicates that a license must be obtained for each use and that content is only available online.
 
@@ -198,6 +202,7 @@ Accept wildcard characters: False
 
 ### -ScopedIdentities
 Lists the users by email address (account or group) that can see and therefore select departmental templates from applications.
+
 For the specified users to see the templates, the application must support departmental templates or the *EnableInLegacyApps* parameter must be set to True.
 
 ```yaml
@@ -214,8 +219,10 @@ Accept wildcard characters: False
 
 ### -Status
 Indicates that this cmdlet displays the status of the template.
-Archived templates are available to consume previously protected content but are not presented to users.
-Published templates are distributed to users and made available to protect content.
+
+- Archived templates are available to consume previously protected content but are not presented to users.
+
+- Published templates are distributed to users and made available to protect content.
 
 ```yaml
 Type: SwitchParameter
