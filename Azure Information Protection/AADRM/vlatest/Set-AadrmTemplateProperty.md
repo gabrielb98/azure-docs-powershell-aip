@@ -50,8 +50,7 @@ PS C:\> $r2 = New-AadrmRightsDefinition -EmailAddress engineering@contoso.com -R
 PS C:\>Set-AadrmTemplateProperty -TemplateID 28168524-29c3-44f1-9e11-ea6c60bb6522 -RightsDefinitions ($r1, $r2)
 ```
 
-This example updates the existing custom template **New Launch - Confidential Content** for new users and rights.
-Whereas the existing template granted View and Export rights to the marketing department (which should not change), the engineering department must now also have View rights.
+This example updates the existing custom template **New Launch - Confidential Content** for new users and rights. Whereas the existing template granted View and Export rights to the marketing department (which should not change), the engineering department must now also have View rights.
 
 Because specifying the RightsDefinitions parameter overwrites the existing settings, the first rights definition object keeps the existing settings for marketing, and another rights definition object creates the new engineering department rights.
 
@@ -132,9 +131,7 @@ Accept wildcard characters: False
 ### -Descriptions
 Specifies a list of descriptions for the template.
 
-Create names and descriptions for multiple locale IDs using the hash-table syntax in Windows PowerShell.
-There must be at least one name/description pair.
-The locale IDs for names and descriptions must match each other.
+Create names and descriptions for multiple locale IDs using the hash-table syntax in Windows PowerShell. There must be at least one name/description pair. The locale IDs for names and descriptions must match each other.
 
 $descriptions = @{}
 
