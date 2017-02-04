@@ -17,7 +17,8 @@ Get-AadrmRoleBasedAdministrator [-Role <Role>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-AadrmRoleBasedAdministrator** cmdlet gets the role-based administrators for Azure Rights Management. You can get the administrators for a specified role.
+The **Get-AadrmRoleBasedAdministrator** cmdlet gets the role-based administrators for Azure Rights Management.
+You can get the administrators for a specified role.
 
 ## EXAMPLES
 
@@ -31,8 +32,8 @@ This command lists the role-based administrators for Rights Management.
 ## PARAMETERS
 
 ### -Role
-Specifies a role. The cmdlet gets the administrators that belong to the role that you specify.
-
+Specifies a role.
+The cmdlet gets the administrators that belong to the role that you specify.
 The acceptable values for this parameter are:
 
 - ConnectorAdministrator

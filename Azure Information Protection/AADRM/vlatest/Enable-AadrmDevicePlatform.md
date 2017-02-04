@@ -24,7 +24,8 @@ Enable-AadrmDevicePlatform [-Windows] [-WindowsStore] [-WindowsPhone] [-Mac] [-i
 ```
 
 ## DESCRIPTION
-The **Enable-AadrmDevicePlatform** cmdlet enables Rights Management support for device platforms. Your organization can support any combination of the following device platforms:
+The **Enable-AadrmDevicePlatform** cmdlet enables Rights Management support for device platforms.
+Your organization can support any combination of the following device platforms:
 
 - Android
 - iOS
@@ -55,7 +56,8 @@ This command enables Rights Management support for all device platforms.
 ## PARAMETERS
 
 ### -All
-Indicates that the cmdlet specifies all device platforms. The cmdlet enables Rights Management support for all device platforms.
+Indicates that the cmdlet specifies all device platforms.
+The cmdlet enables Rights Management support for all device platforms.
 
 ```yaml
 Type: SwitchParameter
@@ -70,7 +72,8 @@ Accept wildcard characters: False
 ```
 
 ### -Android
-Indicates that the cmdlet specifies the Android device platform. The cmdlet enables Rights Management support for the specified device platform.
+Indicates that the cmdlet specifies the Android device platform.
+The cmdlet enables Rights Management support for the specified device platform.
 
 ```yaml
 Type: SwitchParameter
@@ -85,7 +88,8 @@ Accept wildcard characters: False
 ```
 
 ### -iOS
-Indicates that the cmdlet specifies the iOS device platform. The cmdlet enables Rights Management support for the specified device platform.
+Indicates that the cmdlet specifies the iOS device platform.
+The cmdlet enables Rights Management support for the specified device platform.
 
 ```yaml
 Type: SwitchParameter
@@ -100,7 +104,8 @@ Accept wildcard characters: False
 ```
 
 ### -Mac
-Indicates that the cmdlet specifies the Macintosh operating system device platform. The cmdlet enables Rights Management support for the specified device platform.
+Indicates that the cmdlet specifies the Macintosh operating system device platform.
+The cmdlet enables Rights Management support for the specified device platform.
 
 ```yaml
 Type: SwitchParameter
@@ -115,7 +120,8 @@ Accept wildcard characters: False
 ```
 
 ### -Web
-Indicates that the cmdlet specifies the web device platform. The cmdlet enables Rights Management support for the specified device platform.
+Indicates that the cmdlet specifies the web device platform.
+The cmdlet enables Rights Management support for the specified device platform.
 
 ```yaml
 Type: SwitchParameter
@@ -130,7 +136,8 @@ Accept wildcard characters: False
 ```
 
 ### -Windows
-Indicates that the cmdlet specifies the Windows operating system device platform. The cmdlet enables Rights Management support for the specified device platform.
+Indicates that the cmdlet specifies the Windows operating system device platform.
+The cmdlet enables Rights Management support for the specified device platform.
 
 ```yaml
 Type: SwitchParameter
@@ -145,7 +152,8 @@ Accept wildcard characters: False
 ```
 
 ### -WindowsPhone
-Indicates that the cmdlet specifies the Windows Phone device platform. The cmdlet enables Rights Management support for the specified device platform.
+Indicates that the cmdlet specifies the Windows Phone device platform.
+The cmdlet enables Rights Management support for the specified device platform.
 
 ```yaml
 Type: SwitchParameter
@@ -160,7 +168,8 @@ Accept wildcard characters: False
 ```
 
 ### -WindowsStore
-Indicates that the cmdlet specifies the Windows Store device platform. The cmdlet enables Rights Management support for the specified device platform.
+Indicates that the cmdlet specifies the Windows Store device platform.
+The cmdlet enables Rights Management support for the specified device platform.
 
 ```yaml
 Type: SwitchParameter

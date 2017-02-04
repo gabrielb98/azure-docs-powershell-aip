@@ -18,10 +18,11 @@ Remove-AadrmTemplate -TemplateId <Guid> [<CommonParameters>]
 
 ## DESCRIPTION
 The **Remove-AadrmTemplate** cmdlet deletes an Azure Rights Management rights policy template.
-
-You can delete only custom templates. You can set default templates to an archived state but you cannot delete them.
-
-After a template is deleted, content protected with that template might become inaccessible. Users who are super users can continue to access content that was previously protected with a template that is now deleted. For more information about super users, see [Configuring super users for Azure Rights Management and discovery services or data recovery](https://docs.microsoft.com/rights-management/deploy-use/configure-super-users) (https://docs.microsoft.com/rights-management/deploy-use/configure-super-users) on the Microsoft documentation site.
+You can delete only custom templates.
+You can set default templates to an archived state but you cannot delete them.
+After a template is deleted, content protected with that template might become inaccessible.
+Users who are super users can continue to access content that was previously protected with a template that is now deleted.
+For more information about super users, see [Configuring super users for Azure Rights Management and discovery services or data recovery](https://docs.microsoft.com/rights-management/deploy-use/configure-super-users) (https://docs.microsoft.com/rights-management/deploy-use/configure-super-users) on the Microsoft documentation site.
 
 This cmdlet requires the template ID, which you can get with the [Get-AadrmTemplate](./Get-AadrmTemplate.md) cmdlet.
 

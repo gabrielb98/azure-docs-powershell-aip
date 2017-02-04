@@ -1,8 +1,8 @@
 ---
-external help file: AIP.dll-Help.xml
+external help file: RMSProtection.dll-Help.xml
 online version: http://go.microsoft.com/fwlink/?LinkId=734985
 schema: 2.0.0
-ms.assetid: D0D6B294-8664-4E9A-8553-5031F452CC64
+ms.assetid: ED6B146C-069C-4DB2-9477-65D9783BC002
 ---
 
 # Clear-RMSAuthentication

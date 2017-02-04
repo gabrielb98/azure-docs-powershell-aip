@@ -17,7 +17,8 @@ Disable-AadrmIPCv3Service [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Disable-AadrmIPCv3Service** cmdlets disables the MSIPC v3 platform on mobile devices such as iOS and Android. This platform must be enabled to support Rights Management.
+The **Disable-AadrmIPCv3Service** cmdlets disables the MSIPC v3 platform on mobile devices such as iOS and Android.
+This platform must be enabled to support Rights Management.
 
 ## EXAMPLES
 
