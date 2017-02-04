@@ -17,22 +17,17 @@ Get-AadrmKeys [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-AadrmKeys** cmdlet lists all tenant keys associated with your tenant for the Azure Rights Management service.
-The tenant keys include the initial tenant key that Microsoft generates for you, and any tenant keys that are stored in Azure Key Vault.
-For more information about Azure RMS tenant keys, see Planning and implementing your [Azure Rights Management tenant key](https://docs.microsoft.com/rights-management/plan-design/plan-implement-tenant-key) (https://docs.microsoft.com/rights-management/plan-design/plan-implement-tenant-key) on the Microsoft documentation site.
+The **Get-AadrmKeys** cmdlet lists all tenant keys associated with your tenant for the Azure Rights Management service. The tenant keys include the initial tenant key that Microsoft generates for you, and any tenant keys that are stored in Azure Key Vault. For more information, see [Planning and implementing your Azure Rights Management tenant key](https://docs.microsoft.com/rights-management/plan-design/plan-implement-tenant-key) (https://docs.microsoft.com/rights-management/plan-design/plan-implement-tenant-key) on the Microsoft documentation site.
+
 For security reasons, the cmdlet does not display the value of the tenant keys.
 
 When you run this cmdlet, you will see **Status** and **KeyType**:
 
-- The **Status** value shows **Archived** or **Active**.
-Archived identifies a tenant key that can be used to open previously protected content.
-Active identities the tenant key is currently in use to protect content.
+- The **Status** value shows **Archived** or **Active**. Archived identifies a tenant key that can be used to open previously protected content. Active identities the tenant key is currently in use to protect content.
 
-- The **KeyType** value shows **Microsoft-managed** or **Customer-managed (BYOK)**.
-Microsoft-managed identifies the tenant key as managed by Microsoft (the default).
-Customer-managed identifies the tenant key as managed by your organization in Azure Key Vault.
+- The **KeyType** value shows **Microsoft-managed** or **Customer-managed (BYOK)**. Microsoft-managed identifies the tenant key as managed by Microsoft (the default). Customer-managed identifies the tenant key as managed by your organization in Azure Key Vault. For a customer-managed key, you also see **Publickey**, which shows the base-64 encoded public key that is associated with the KeyIdentifier and that corresponds to the same information that Azure Key Vault provides for your key.
 
-For security reasons, the cmdlet does not display the value of the tenant keys.
+For security reasons, the cmdlet does not display the value of the Microsoft-managed key and displays only the public key information of customer-managed (BYOK) keys.
 
 ## EXAMPLES
 
