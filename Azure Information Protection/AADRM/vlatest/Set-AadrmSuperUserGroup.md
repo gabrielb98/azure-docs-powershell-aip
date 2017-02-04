@@ -18,8 +18,8 @@ Set-AadrmSuperUserGroup -GroupEmailAddress <String> [<CommonParameters>]
 
 ## DESCRIPTION
 The **Set-AadrmSuperUserGroup** cmdlet sets the super user group for your organization in Azure Rights Management.
-
-If a super user group already exists, this operation overwrites it. This cmdlet does not affect users that are individually assigned as super users with the [Add-AadrmSuperUser](./Add-AadrmSuperUser.md) cmdlet.
+If a super user group already exists, this operation overwrites it.
+This cmdlet does not affect users that are individually assigned as super users with the [Add-AadrmSuperUser](./Add-AadrmSuperUser.md) cmdlet.
 
 An organization can have only one super user group in addition to multiple users who are assigned the privilege individually, but you can nest groups.
 
@@ -38,7 +38,6 @@ This command sets the super user group for the organization to SuperUserGroup@co
 
 ### -GroupEmailAddress
 Specifies the group email address for the super user group.
-
 *GroupEmailAddress* can specify a group that contains individual users or other nested groups.
 
 The *GroupEmailAddress* must be a valid group email address in the organization.

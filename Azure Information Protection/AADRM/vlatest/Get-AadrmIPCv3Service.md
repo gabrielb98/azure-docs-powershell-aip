@@ -17,7 +17,8 @@ Get-AadrmIPCv3Service [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-AadrmIPCv3Service** cmdlets displays the status of the MSIPC v3 platform on mobile devices such as iOS and Android. This platform must be enabled to support Rights Management.
+The **Get-AadrmIPCv3Service** cmdlets displays the status of the MSIPC v3 platform on mobile devices such as iOS and Android.
+This platform must be enabled to support Rights Management.
 
 ## EXAMPLES
 
@@ -26,7 +27,8 @@ The **Get-AadrmIPCv3Service** cmdlets displays the status of the MSIPC v3 platfo
 PS C:\>Get-AadrmIPCv3Service
 ```
 
-This command displays whether the MSIPC v3 platform is enabled or disabled. This platform must be enabled on iOS and Android mobile devices to support Azure Rights Management.
+This command displays whether the MSIPC v3 platform is enabled or disabled.
+This platform must be enabled on iOS and Android mobile devices to support Azure Rights Management.
 
 ## PARAMETERS
 
