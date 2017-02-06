@@ -21,7 +21,8 @@ Protect-RMSFile [-File <String>] [-Folder <String>] [-Recurse] [-TemplateID <Str
 ## DESCRIPTION
 The **Protect-RMSFile** cmdlet protects a file or all files in a specified folder by using Azure RMS or AD RMS. If the file was previously protected, it will be protected again, to apply any changes such as those that might be made to the template that is being used to protect the file.
 
-All file types can be protected in the same way that the RMS sharing application can protect all files. However, different levels of protection will be  automatically applied (native or generic), depending on the file type. You can change the level of protection by editing the registry. In addition, some files change their file name extension after they are protected by Rights Management. For more information, see [File API configuration](https://docs.microsoft.com/information-protection/develop/file-api-configuration) (https://docs.microsoft.com/information-protection/develop/file-api-configuration) on the Microsoft documentation site.
+Multiple file types can be protected in the same way that the Azure Information Protection client can protect files when you use the "Classify and protect" right-click option from File Explorer. Different levels of protection aree automatically applied (native or generic), depending on the file type. You can change the level of protection by editing the registry. In addition, some files change their file name extension after they are protected by Rights Management. For more information, see the [File types supported for protection](/information-protection/rms-client/client-admin-guide-file-types.md#file-types-supported-for-protection) section from the Azure Information Protection client admin guide (https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-file-types#file-types-supported-for-protection).
+
 
 When you run this cmdlet, you have the following options:
 
@@ -30,7 +31,7 @@ When you run this cmdlet, you have the following options:
 - - All files in the specified folder are protected in the current location, replacing the original files that were unprotected.
 - All files in the specified folder remains unprotected and a protected version of each file is created in another location.
 
-Tip: For step-by-step instructions to use this cmdlet to protect files on a Windows Server file share, using File Resource Manager and File Classification Infrastructure, see [RMS Protection with Windows Server File Classification Infrastructure (FCI)](https://docs.microsoft.com/information-protection/rms-client/configure-fci)  (https://docs.microsoft.com/information-protection/rms-client/configure-fci) on the Microsoft documentation site.
+Tip: For step-by-step instructions to use this cmdlet to protect files on a Windows Server file share, using File Resource Manager and File Classification Infrastructure, see [RMS Protection with Windows Server File Classification Infrastructure (FCI)](https://docs.microsoft.com/information-protection/rms-client/configure-fci) (https://docs.microsoft.com/information-protection/rms-client/configure-fci) on the Microsoft documentation site.
 
 ## EXAMPLES
 
@@ -219,7 +220,7 @@ If you become the Rights Management owner of the protected file, make sure that 
 
 Because users see this email address when they open generically protected files and if they try to access protected files that do not grant them access permissions, consider specifying a group email address such as your help desk or IT department. However, do not specify a group name if members of that group should not have full control rights for the file.
 
-Important: Although this parameter is optional, if you do not specify it when you protect files by using Azure RMS and a service principal, the email address that users see in these messages from the Rights Management sharing application will not be helpful.Because of this, we recommend that you always specify this parameter when you protect files by using Azure RMS and a service principal rather than your user account.
+Important: Although this parameter is optional, if you do not specify it when you protect files by using Azure RMS and a service principal, the email address that users see in these messages from the Azure Information Protection client or the Rights Management sharing application will not be helpful.Because of this, we recommend that you always specify this parameter when you protect files by using Azure RMS and a service principal rather than your user account.
 
 ```yaml
 Type: String
