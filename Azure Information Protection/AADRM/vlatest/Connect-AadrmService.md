@@ -44,8 +44,7 @@ Tip: If you are not prompted for your credentials, and you see an error message 
 PS C:\> Connect-AadrmService
 ```
 
-This command connects to the Rights Management service.
-This is the simplest way to connect to Azure Rights Management, by running the cmdlet with no parameters.
+This command connects to the Rights Management service. This is the simplest way to connect to Azure Rights Management, by running the cmdlet with no parameters.
 
 You are prompted for your user name and password. If your account is configured to use multi-factor authentication, you are then prompted for your alternative method of authentication, and then connected to the service.
 

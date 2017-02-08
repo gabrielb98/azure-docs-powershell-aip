@@ -17,11 +17,11 @@ Add-AadrmKey [-Force] -KeyFile <String> [-WhatIf] [-Confirm] [<CommonParameters>
 ```
 
 ## DESCRIPTION
-The **Add-AadrmKey** cmdlet adds a legacy customer-managed tenant key over the Internet to the Azure Rights Management service, and makes that key the active tenant key for your tenant.
-The previously active tenant key is archived.
+The **Add-AadrmKey** cmdlet adds a legacy customer-managed tenant key over the Internet to the Azure Rights Management service, and makes that key the active tenant key for your tenant. The previously active tenant key is archived.
 
 **Note**: This cmdlet is now deprecated because Azure RMS uses Azure Key Vault for customer-managed keys.
 Instead of this cmdlet, use [Use-AadrmKeyVaultKey](./Use-AadrmKeyVaultKey.md).
+
 For more information, see [Planning and implementing your Azure Rights Management tenant key](https://docs.microsoft.com/rights-management/plan-design/plan-implement-tenant-key) (https://docs.microsoft.com/rights-management/plan-design/plan-implement-tenant-key) on the Microsoft documentation site.
 
 ## EXAMPLES
@@ -82,8 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

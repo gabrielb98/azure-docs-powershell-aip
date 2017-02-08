@@ -24,8 +24,7 @@ Get-AadrmDevicePlatform [-Windows] [-WindowsStore] [-WindowsPhone] [-Mac] [-iOS]
 ```
 
 ## DESCRIPTION
-The **Get-AadrmDevicePlatform** cmdlet gets the device platforms that Azure Rights Management supports for your organization.
-For information about supported device platforms, see the [Enable-AadrmDevicePlatform](./Enable-AadrmDevicePlatform.md) cmdlet.
+The **Get-AadrmDevicePlatform** cmdlet gets the device platforms that Azure Rights Management supports for your organization. For information about supported device platforms, see the [Enable-AadrmDevicePlatform](./Enable-AadrmDevicePlatform.md) cmdlet.
 
 ## EXAMPLES
 
@@ -50,8 +49,7 @@ This command determines which of all device platforms in your organization suppo
 ## PARAMETERS
 
 ### -All
-Indicates that the cmdlet specifies all device platforms.
-The cmdlet gets the Rights Management support status of all device platforms.
+Indicates that the cmdlet specifies all device platforms. The cmdlet gets the Rights Management support status of all device platforms.
 
 ```yaml
 Type: SwitchParameter
@@ -66,8 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -Android
-Indicates that the cmdlet specifies the Android device platform.
-The cmdlet gets the Rights Management support status for the specified device platform.
+Indicates that the cmdlet specifies the Android device platform. The cmdlet gets the Rights Management support status for the specified device platform.
 
 ```yaml
 Type: SwitchParameter
@@ -82,8 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -iOS
-Indicates that the cmdlet specifies the iOS device platform.
-The cmdlet gets the Rights Management support status for the specified device platform.
+Indicates that the cmdlet specifies the iOS device platform. The cmdlet gets the Rights Management support status for the specified device platform.
 
 ```yaml
 Type: SwitchParameter
@@ -98,8 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -Mac
-Indicates that the cmdlet specifies the Macintosh operating system device platform.
-The cmdlet gets the Rights Management support status for the specified device platform.
+Indicates that the cmdlet specifies the Macintosh operating system device platform. The cmdlet gets the Rights Management support status for the specified device platform.
 
 ```yaml
 Type: SwitchParameter
@@ -114,8 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -Web
-Indicates that the cmdlet specifies the web device platform.
-The cmdlet gets the Rights Management support status for the specified device platform.
+Indicates that the cmdlet specifies the web device platform. The cmdlet gets the Rights Management support status for the specified device platform.
 
 ```yaml
 Type: SwitchParameter
@@ -130,8 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -Windows
-Indicates that the cmdlet specifies the Windows operating system device platform.
-The cmdlet gets the Rights Management support status for the specified device platform.
+Indicates that the cmdlet specifies the Windows operating system device platform. The cmdlet gets the Rights Management support status for the specified device platform.
 
 ```yaml
 Type: SwitchParameter
@@ -146,8 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -WindowsPhone
-Indicates that the cmdlet specifies the Windows Phone device platform.
-The cmdlet gets the Rights Management support status for the specified device platform.
+Indicates that the cmdlet specifies the Windows Phone device platform. The cmdlet gets the Rights Management support status for the specified device platform.
 
 ```yaml
 Type: SwitchParameter
@@ -162,8 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### -WindowsStore
-Indicates that the cmdlet specifies the Windows Store device platform.
-The cmdlet gets the Rights Management support status for the specified device platform.
+Indicates that the cmdlet specifies the Windows Store device platform. The cmdlet gets the Rights Management support status for the specified device platform.
 
 ```yaml
 Type: SwitchParameter

@@ -19,8 +19,7 @@ Set-AadrmUsageLogStorageAccount -StorageAccount <String> -AccessKey <SecureStrin
 ## DESCRIPTION
 The **Set-AadrmUsageLogStorageAccount** cmdlet sets the Azure storage location for usage logs for Azure Rights Management.
 
-This cmdlet should be used only if you have usage logs prior to the usage logging change in February 2016.
-After this date, the only Windows PowerShell cmdlet that you need for Azure RMS usage logging is Get-AadrmUserLog.
+This cmdlet should be used only if you have usage logs prior to the usage logging change in February 2016. After this date, the only Windows PowerShell cmdlet that you need for Azure RMS usage logging is Get-AadrmUserLog.
 
 For more information about usage logging, see [Logging and analyzing Azure Rights Management usage](https://docs.microsoft.com/rights-management/deploy-use/log-analyze-usage) (https://docs.microsoft.com/en-us/rights-management/deploy-use/log-analyze-usage) on the Microsoft documentation site.
 
@@ -41,6 +40,7 @@ The second command specifies the location for your usage logs.
 
 ### -AccessKey
 Specifies your access key as a secure string.
+
 To view your access key, connect to the Azure Management Portal.
 
 ```yaml
@@ -57,6 +57,7 @@ Accept wildcard characters: False
 
 ### -StorageAccount
 Specifies a storage account.
+
 To obtain the name of this account, use the Management Portal.
 
 ```yaml

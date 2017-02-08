@@ -2,6 +2,7 @@
 external help file: AIP.dll-Help.xml
 online version: https://go.microsoft.com/fwlink/?linkid=838766
 schema: 2.0.0
+ms.assetid: 566E595C-D574-4DED-AE38-CBCD75694B45
 ---
 
 # Set-AIPFileLabel
@@ -24,7 +25,7 @@ Set-AIPFileLabel [-JustificationMessage <String>] [-RemoveLabel] [-Path] <String
 ## DESCRIPTION
 The **Set-AIPFileLabel** cmdlet sets or removes an Azure Information Protection label for one or more files. This action can automatically apply or remove protection when labels are configured for Rights Management protection in the Azure Information Protection policy. When the command runs successfully, any existing label or protection is replaced.
 
-Note: This cmdlet is currently installed as part of the preview version of the Azure Information Protection client, and is not included in the RMS Protection tool. In addition, this cmdlet does not support a service principal account in Azure Active Directory; you must run it interactively with a user account. 
+This cmdlet does not support a service principal account in Azure Active Directory; you must run it interactively with a user account. 
 
 ## EXAMPLES
 

@@ -18,9 +18,9 @@ Get-AadrmOnboardingControlPolicy [<CommonParameters>]
 
 ## DESCRIPTION
 The **Get-AadrmOnboardingControlPolicy** cmdlet obtains your Azure Rights Management user on-boarding control policy to support a gradual deployment by controlling which users in your organization can protect content by using Azure Rights Management.
+
 This control can be based on assigned user licenses for the service or membership in a designated security group.
-You can also define whether the policy applies to just mobile devices, just Windows clients, or mobile devices and Windows clients.
-For more information, see [Set-AadrmOnboardingControlPolicy](./Set-AadrmOnboardingControlPolicy.md).
+You can also define whether the policy applies to just mobile devices, just Windows clients, or mobile devices and Windows clients. For more information, see [Set-AadrmOnboardingControlPolicy](./Set-AadrmOnboardingControlPolicy.md).
 
 ## EXAMPLES
 
