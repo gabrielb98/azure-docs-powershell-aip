@@ -19,7 +19,7 @@ Get-RMSServerAuthentication [<CommonParameters>]
 ## DESCRIPTION
 The **Get-RMSServerAuthentication** cmdlet gets the status and details of your service principal authentication to Azure Rights Management (Azure  RMS) that was previous set by using [Set-RMSServerAuthentication](./Set-RMSServerAuthentication.md). The status must be ON for you to protect or unprotect files for Azure RMS by using a service principal rather than your user account. This status remains on for the duration of your Windows PowerShell session.
 
-This cmdlet applies to Azure  RMS only and does not apply to AD RMS. This cmdlet also does not apply if you are authenticating to Azure RMS by using your user account. For more information about using a service principal account to connect to the Azure Rights Management service, see [Prerequisite 3: To protect or unprotect files without user interaction](./information-protection/rms-client/client-admin-guide-powershell#prerequisite-3-to-protect-or-unprotect-files-without-user-interaction) from the Azure Information Protection client admin guide.
+This cmdlet applies to Azure  RMS only and does not apply to AD RMS. This cmdlet also does not apply if you are authenticating to Azure RMS by using your user account. For more information about using a service principal account to connect to the Azure Rights Management service, see "Using PowerShell with the Azure Information Protection client" (https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell) from the Azure Information Protection client admin guide.
 
 ## EXAMPLES
 
@@ -50,4 +50,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-RMSServerAuthentication](./Set-RMSServerAuthentication.md)
 
-[Using PowerShell with the Azure Information Protection client](./information-protection/rms-client/client-admin-guide-powershell)

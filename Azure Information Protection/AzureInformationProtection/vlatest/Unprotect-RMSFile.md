@@ -21,7 +21,6 @@ Unprotect-RMSFile [-File <String>] [-Folder <String>] [-Recurse] [-OutputFolder 
 The **Unprotect-RMSFile** cmdlet removes Rights Management (RMS) protection from one or more files in a specified folder if those files were previously protected by AD RMS or Azure RMS.
 
 When you run this cmdlet, you have the following options:
-
 - The file is unprotected in the same folder so that the original protected file and the new unprotected file co-exist.
 - The original file remains protected and an unprotected version of the file is created in another location.
 - All files in the specified folder are unprotected in the current location, replacing the original files that were protected.
@@ -220,4 +219,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Protect-RMSFile](./Protect-RMSFile.md)
 
-[Using PowerShell with the Azure Information Protection client](./information-protection/rms-client/client-admin-guide-powershell)

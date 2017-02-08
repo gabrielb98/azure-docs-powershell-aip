@@ -112,7 +112,6 @@ Specifies the usage rights for the ad-hoc policy.
 Use this parameter and the *UserEmail* parameter to grant rights to specified users.
 
 The acceptable values for this parameter:
-
 - VIEW
 - EDIT
 - PRINT
@@ -127,7 +126,7 @@ The acceptable values for this parameter:
 
 Warning: If you later want to remove this rights policy from a file, you must have the EXTRACT or OWNER right to use the [Unprotect-RMSFile](./Unprotect-RMSFile) cmdlet to unprotect a file, or be a Rights Management super user for your organization.
 
-For more information about these rights, see [Configuring Usage Rights for Azure Rights Management](https://technet.microsoft.com/library/mt169423.aspx) (https://technet.microsoft.com/library/mt169423.aspx) on TechNet.
+For more information about these rights, see "Configuring usage rights for Azure Rights Management" (https://docs.microsoft.com/information-protection/deploy-use/configure-usage-rights) on the Microsoft documentation site.
 
 ```yaml
 Type: String[]
@@ -208,4 +207,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Unprotect-RMSFile](./Unprotect-RMSFile.md)
 
-[Using PowerShell with the Azure Information Protection client](./information-protection/rms-client/client-admin-guide-powershell)

@@ -58,4 +58,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-RMSTemplate](./Get-RMSTemplate.md)
 
-[Using PowerShell with the Azure Information Protection client](./information-protection/rms-client/client-admin-guide-powershell)

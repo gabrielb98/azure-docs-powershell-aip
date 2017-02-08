@@ -86,4 +86,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Unprotect-RMSFile](./Unprotect-RMSFile.md)
 
-[Using PowerShell with the Azure Information Protection client](./information-protection/rms-client/client-admin-guide-powershell)
