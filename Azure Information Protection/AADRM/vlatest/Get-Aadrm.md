@@ -17,7 +17,8 @@ Get-Aadrm [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-Aadrm** cmdlet gets the activation status of Azure Rights Management for your organization. The status of Rights Management is enabled (activated) or disabled (deactivated).
+The **Get-Aadrm** cmdlet gets the activation status of Azure Rights Management for your organization.
+The status of Rights Management is enabled (activated) or disabled (deactivated).
 
 ## EXAMPLES
 
