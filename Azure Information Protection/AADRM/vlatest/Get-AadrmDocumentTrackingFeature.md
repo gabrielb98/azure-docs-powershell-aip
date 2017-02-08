@@ -8,7 +8,7 @@ ms.assetid: 3F0BC472-41CC-41CA-A1B5-ACB84B1C2DA9
 # Get-AadrmDocumentTrackingFeature
 
 ## SYNOPSIS
-Indicates whether document tracking is enabled or disabled for Rights Management.
+Indicates whether document tracking is enabled or disabled for Azure Information Protection.
 
 ## SYNTAX
 
@@ -17,16 +17,16 @@ Get-AadrmDocumentTrackingFeature [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-AadrmDocumentTrackingFeature** cmdlet indicates whether the Azure Rights Management (Azure RMS) document tracking feature is enabled or disabled.
+The **Get-AadrmDocumentTrackingFeature** cmdlet indicates whether the Azure Information Protection document tracking feature is enabled or disabled.
 
 ## EXAMPLES
 
-### Example: Determine whether Azure RMS is enabled
+### Example: Determine whether the document tracking site is enabled
 ```
 PS C:\>Get-AadrmDocumentTrackingFeature
 ```
 
-This command determines whether the Azure RMS document tracking feature is enabled.
+This command determines whether the Azure Information Protection document tracking feature is enabled.
 
 ## PARAMETERS
 
