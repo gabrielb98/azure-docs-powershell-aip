@@ -19,18 +19,19 @@ Convert-AadrmKeyToKeyVault -KeyVaultKeyUrl <String> -KeyIdentifier <String> [-Fo
 
 ## DESCRIPTION
 The **Convert-AadrmKeyToKeyVault** cmdlet is only for customers who have previously created a customer-managed key in Azure RMS and have received an invitation from AskIPteam at Microsoft to migrate their Azure RMS tenant key to Azure Key Vault.
-
 Do not run this cmdlet without assistance from Microsoft.
 
-Azure RMS now uses Azure Key Vault to manage and monitor a customer-managed Azure RMS tenant key. To create a customer-managed Azure RMS tenant key for the first time, run [Use-AadrmKeyVaultKey](./Use-AadrmKeyVaultKey.md) instead of this cmdlet.
-
+Azure RMS now uses Azure Key Vault to manage and monitor a customer-managed Azure RMS tenant key.
+To create a customer-managed Azure RMS tenant key for the first time, run [Use-AadrmKeyVaultKey](./Use-AadrmKeyVaultKey.md) instead of this cmdlet.
 For more information about how to manage your Azure RMS tenant key, see [Planning and implementing your Azure Rights Management tenant key](https://docs.microsoft.com/en-us/rights-management/plan-design/plan-implement-tenant-key) (https://docs.microsoft.com/en-us/rights-management/plan-design/plan-implement-tenant-key) on the Microsoft documentation site.
 
 Before you run this cmdlet, you will need to identify your original customer-managed Azure RMS tenant key.
-To do that, use the [Get-AadrmKeys](./Get-AadrmKeys.md) cmdlet. From the output and identified key, you will need the KeyIdentifier value for the *KeyIdentifier* parameter when you run this cmdlet.
+To do that, use the [Get-AadrmKeys](./Get-AadrmKeys.md) cmdlet.
+From the output and identified key, you will need the KeyIdentifier value for the *KeyIdentifier* parameter when you run this cmdlet.
 
-Also, your organization's administrator for Azure Key Vault must create a new key for Azure RMS and supply you with a URL for this key. You will need to specify the URL for the *KeyVaultKeyUrl* parameter when you run this cmdlet. This Azure Key Vault administrator must also grant Azure RMS access to the key vault that contains the key.
-
+Also, your organization's administrator for Azure Key Vault must create a new key for Azure RMS and supply you with a URL for this key.
+You will need to specify the URL for the *KeyVaultKeyUrl* parameter when you run this cmdlet.
+This Azure Key Vault administrator must also grant Azure RMS access to the key vault that contains the key.
 For security reasons, this cmdlet does not let you change the access control for the key; this must be done from Key Vault.
 
 ## EXAMPLES
@@ -61,7 +62,6 @@ Accept wildcard characters: False
 
 ### -KeyIdentifier
 Specifies the key identifier value of the original customer-managed Azure RMS tenant key that you now want to manage from Azure Key Vault.
-
 To get the key identifier value, use the **Get-AadrmKeys** cmdlet.
 
 ```yaml
@@ -77,7 +77,8 @@ Accept wildcard characters: False
 ```
 
 ### -KeyVaultKeyUrl
-Specifies the URL of the key in Azure Key Vault that you want to use for the Azure RMS tenant key. This key will be used in Azure RMS as the root key for all cryptographic operations for your Azure RMS tenant.
+Specifies the URL of the key in Azure Key Vault that you want to use for the Azure RMS tenant key.
+This key will be used in Azure RMS as the root key for all cryptographic operations for your Azure RMS tenant.
 
 ```yaml
 Type: String
@@ -107,7 +108,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

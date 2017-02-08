@@ -43,9 +43,9 @@ This command saves the specified range of usage logs to the E:\Logs\UsageLogRang
 ## PARAMETERS
 
 ### -FromCounter
-Specifies a counter value. 
-
-The cmdlet gets entries as far back as this counter value. To obtain a counter value, use the [Get-AadrmUsageLogLastCounterValue](./Get-AadrmUsageLogLastCounterValue.md) cmdlet.
+Specifies a counter value.
+The cmdlet gets entries as far back as this counter value.
+To obtain a counter value, use the [Get-AadrmUsageLogLastCounterValue](./Get-AadrmUsageLogLastCounterValue.md) cmdlet.
 
 ```yaml
 Type: Int32
@@ -76,7 +76,6 @@ Accept wildcard characters: False
 
 ### -ToCounter
 Specifies a counter value.
-
 The cmdlet gets entries as far forward as this counter value.
 
 ```yaml
