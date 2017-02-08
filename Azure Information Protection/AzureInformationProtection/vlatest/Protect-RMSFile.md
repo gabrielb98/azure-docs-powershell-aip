@@ -281,4 +281,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-RMSProtectionLicense](./New-RMSProtectionLicense.md)
 
 [Unprotect-RMSFile](./Unprotect-RMSFile.md)
-
