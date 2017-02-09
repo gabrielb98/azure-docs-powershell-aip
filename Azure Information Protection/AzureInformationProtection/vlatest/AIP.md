@@ -9,7 +9,7 @@ ms.assetid: 35D99F89-BD73-457E-95C7-73857656FB59
 
 # AzureInformationProtection Module
 ## Description
-The following list contains links to the help topics for the Microsoft Azure Information Protection (AIP) cmdlets, which are installed with the [Azure Information Protection client](/information-protection/aip-client). This PowerShell module replaces the RMS Protection Tool and the AD RMS Bulk Protection Tool. 
+The following list contains links to the help topics for the Microsoft Azure Information Protection (AIP) cmdlets, which are installed with the [Azure Information Protection client](/information-protection/rms-client/aip-client). This PowerShell module replaces the RMS Protection Tool and the AD RMS Bulk Protection Tool. 
 
 These cmdlets can be used with the Azure Information Protection service, the Azure Rights Management service (Azure RMS), and Active Directory Rights Management Services (AD RMS). 
 

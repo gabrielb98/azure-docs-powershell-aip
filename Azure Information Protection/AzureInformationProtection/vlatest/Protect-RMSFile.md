@@ -25,13 +25,12 @@ Multiple file types can be protected in the same way that the Azure Information 
 
 
 When you run this cmdlet, you have the following options:
-
 - The file is protected in the current location, replacing the original file that was unprotected.
 - The original file remains unprotected and a protected version of the file is created in another location.
-- - All files in the specified folder are protected in the current location, replacing the original files that were unprotected.
+- All files in the specified folder are protected in the current location, replacing the original files that were unprotected.
 - All files in the specified folder remains unprotected and a protected version of each file is created in another location.
 
-Tip: For step-by-step instructions to use this cmdlet to protect files on a Windows Server file share, using File Resource Manager and File Classification Infrastructure, see [RMS Protection with Windows Server File Classification Infrastructure (FCI)](https://docs.microsoft.com/information-protection/rms-client/configure-fci) (https://docs.microsoft.com/information-protection/rms-client/configure-fci) on the Microsoft documentation site.
+Tip: For step-by-step instructions to use this cmdlet to protect files on a Windows Server file share, using File Resource Manager and File Classification Infrastructure, see "RMS Protection with Windows Server File Classification Infrastructure (FCI)" (https://docs.microsoft.com/information-protection/rms-client/configure-fci) on the Microsoft documentation site.
 
 ## EXAMPLES
 
