@@ -17,7 +17,9 @@ Export-AadrmTemplate -TemplateId <Guid> -Path <String> [-Force] [<CommonParamete
 ```
 
 ## DESCRIPTION
-The **Export-AadrmTemplate** cmdlet exports all the properties of a rights policy template to a file. You can then import the template to another Azure Rights Management tenant or you can edit it and import it back to the original tenant. You can use this technique to perform bulk edits of complex properties in templates, such as multilingual names and descriptions.
+The **Export-AadrmTemplate** cmdlet exports all the properties of a Rights Management template to a file. You can then import the template to another Azure Rights Management tenant or you can edit it and import it back to the original tenant. You can use this technique to perform bulk edits of complex properties in templates, such as multilingual names and descriptions.
+
+Although you can configure Rights Management templates in the Azure classic portal, you must use PowerShell to export and import these templates.
 
 Tip: Consider using this cmdlet as a way to back up your custom templates, so that you can revert to a known-good version if required.
 
@@ -25,7 +27,7 @@ The export process does not automatically append a file name extension, so you c
 
 You can use the [Get-AadrmTemplate](./Get-AadrmTemplate.md) cmdlet to get the GUIDs of all templates.
 
-For more information about custom templates, see [Configuring custom templates for Azure Rights Management](https://docs.microsoft.com/rights-management/deploy-use/configure-custom-templates) (https://docs.microsoft.com/rights-management/deploy-use/configure-custom-templates) on the Microsoft documentation site.
+For more information about custom templates, including how to configure them in the Azure classic portal, see "Configuring custom templates for Azure Rights Management" (https://docs.microsoft.com/rights-management/deploy-use/configure-custom-templates) on the Microsoft documentation site.
 
 ## EXAMPLES
 

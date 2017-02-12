@@ -28,6 +28,8 @@ PS C:\>Get-AadrmDocumentTrackingFeature
 
 This command determines whether the Azure Information Protection document tracking feature is enabled.
 
+You must use PowerShell to get this document tracking status; you cannot get this status by using a management portal.
+
 ## PARAMETERS
 
 ### CommonParameters

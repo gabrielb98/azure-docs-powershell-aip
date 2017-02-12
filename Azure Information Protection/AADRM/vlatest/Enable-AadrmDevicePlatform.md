@@ -25,7 +25,6 @@ Enable-AadrmDevicePlatform [-Windows] [-WindowsStore] [-WindowsPhone] [-Mac] [-i
 
 ## DESCRIPTION
 The **Enable-AadrmDevicePlatform** cmdlet enables Rights Management support for device platforms. Your organization can support any combination of the following device platforms:
-
 - Android
 - iOS
 - Macintosh operating system
@@ -35,6 +34,8 @@ The **Enable-AadrmDevicePlatform** cmdlet enables Rights Management support for 
 - Windows Store
 
 To support all platforms, specify the **All** parameter.
+
+You must use PowerShell to do this configuration; you cannot do this configuration by using a management portal.
 
 ## EXAMPLES
 

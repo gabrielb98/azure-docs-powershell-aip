@@ -24,7 +24,9 @@ Set-AadrmTemplateProperty -TemplateId <Guid> [-Names <Hashtable>] [-Descriptions
 ## DESCRIPTION
 The **Set-AadrmTemplateProperty** cmdlet updates a property or properties of a custom Azure Rights Management template.
 
-The template is identified by its GUID, which must refer to an existing custom Rights Management template. You cannot use this cmdlet to update the default templates.
+You can also update these properties in the Azure classic portal.
+
+When you use this cmdlet, the template is identified by its GUID, which must refer to an existing custom Rights Management template. You cannot use this cmdlet to update the default templates.
 
 You can use the [Get-AadrmTemplate](./Get-AadrmTemplate.md) cmdlet to get the template ID.
 
@@ -32,7 +34,7 @@ Important: When you update properties of a custom template, the existing setting
 
 As a best practice, back up the existing template before you run this cmdlet, by using the [Export-AadrmTemplate](./Export-AadrmTemplate.md) cmdlet. Then, if you need to revert to the original configuration, you can use the [Import-AadrmTemplate](./Import-AadrmTemplate.md) cmdlet to restore the template.
 
-For more information about custom templates, see [Configuring custom templates for Azure Rights Management](/rights-management/deploy-use/configure-custom-templates) (https://docs.microsoft.com/rights-management/deploy-use/configure-custom-templates) on the Microsoft documentation site.
+For more information about custom templates, including how to configure them in the Azure classic portal, see "Configuring custom templates for Azure Rights Management" (https://docs.microsoft.com/rights-management/deploy-use/configure-custom-templates) on the Microsoft documentation site.
 
 ## EXAMPLES
 
@@ -165,9 +167,7 @@ The Azure Information Protection client and the Rights Management sharing applic
 This setting does not affect whether a user can access content that is protected by a departmental template; it only affects the ability for a user to select the template itself.
 
 If you have applications that do not yet natively support departmental templates, you can use a [custom RMS template download script](http://go.microsoft.com/fwlink/?LinkId=524506) (http://go.microsoft.com/fwlink/?LinkId=524506) or other tools to deploy these templates to the local RMS client folder. Then, these applications will correctly display the departmental templates:
-
  -- For Office 2010, the client folder is %localappdata%\Microsoft\DRM\Templates.
-
  -- From a client computer that has downloaded all the templates, you can copy and then paste the template files to other computers.
 
 ```yaml

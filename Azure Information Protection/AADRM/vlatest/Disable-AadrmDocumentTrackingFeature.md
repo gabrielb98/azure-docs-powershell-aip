@@ -19,6 +19,8 @@ Disable-AadrmDocumentTrackingFeature [-Force] [-WhatIf] [-Confirm] [<CommonParam
 ## DESCRIPTION
 The **Disable-AadrmDocumentTrackingFeature** cmdlet disables the document tracking feature for Azure Information Protection. This cmdlet disables access to the document tracking site so that all users in your organization cannot track or revoke access to documents that they have protected. In addition, activity related to shared documents (who opened them, when, from which location) is not logged to the document tracking site. For example, if you later enable the document tracking site, users will see the documents that they protected while the site was disabled but cannot see who opened them.
 
+You must use PowerShell to disable document tracking; you cannot do this configuration by using a management portal.
+
 Document tracking is enabled by default for an organization using the Azure Rights Management service from Azure Information Protection, but you might need to disable this feature for privacy requirements that are specific to your organization or region. This setting is organization-wide; you cannot disable document tracking for some users in your organization and not for others.
 
 When document tracking is disabled, users still see options that refer to tracking and revocation in applications such as Word and File Explorer, and the Azure Information Protection client. However, when users access the document tracking site, they see the following message:

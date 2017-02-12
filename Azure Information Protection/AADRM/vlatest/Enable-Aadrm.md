@@ -17,9 +17,11 @@ Enable-Aadrm [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Enable-Aadrm** cmdlet enables your organization to use Azure Rights Management when you have a subscription that includes this service. This cmdlet offers an alternative method of activating the Azure Rights Management service rather than using the management portals.
+The **Enable-Aadrm** cmdlet enables your organization to use Azure Rights Management when you have a subscription that includes this service. 
 
-You must activate Rights Management before you can begin to use information rights management (IRM) features in Office applications and before you can protect documents and emails by using other applications that use Azure Rights Management.
+You can also do this action in a management portal. For more information, see "Activating Azure Rights Management" (https://docs.microsoft.com/rights-management/deploy-use/decommission-deactivate) on the Microsoft documentation site). 
+
+The Azure Rights Management service must be activated before you can begin to use information rights management (IRM) features in Office applications and before you can protect documents and emails by using other applications that use Azure Rights Management.
 
 When you activate Rights Management, you turn on this service for all rights-enabled applications and services, but some applications and services and might need further configuration before they can use Azure Rights Management.
 

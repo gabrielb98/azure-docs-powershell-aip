@@ -23,6 +23,8 @@ If a super user group already exists, this operation overwrites it. This cmdlet 
 
 An organization can have only one super user group in addition to multiple users who are assigned the privilege individually, but you can nest groups.
 
+You must use PowerShell to configure super users; you cannot do this configuration by using a management portal.
+
 For more information about super users, see [Configuring super users for Azure Rights Management and discovery services or data recovery](https://docs.microsoft.com/rights-management/deploy-use/configure-super-users) (https://docs.microsoft.com/rights-management/deploy-use/configure-super-users) on the Microsoft documentation site.
 
 ## EXAMPLES

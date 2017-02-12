@@ -21,6 +21,8 @@ The **Clear-AadrmSuperUserGroup** cmdlet removes the super user group for your o
 
 This cmdlet does not affect users that are individually assigned the super user privilege with the [Add-AadrmSuperUser](./Add-AadrmSuperUser.md) cmdlet.
 
+You must use PowerShell to configure super users; you cannot do this configuration by using a management portal.
+
 ## EXAMPLES
 
 ### Example 1: Remove the super user group

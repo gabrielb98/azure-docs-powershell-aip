@@ -33,6 +33,8 @@ To specify a group whose members have super user privileges, use the [Set-AadrmS
 
 Rights Management grants full owner rights to super users for all use licenses that are issued by the subscriber organization. Super users can decrypt any rights-protected content file and remove rights-protection for it, even if an expiration date has been set and expired. Typically, this level of access is required for legal eDiscovery and by auditing teams.
 
+You must use PowerShell to configure super users; you cannot do this configuration by using a management portal.
+
 ## EXAMPLES
 
 ### Example 1: Add a user as a super user

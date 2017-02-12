@@ -19,6 +19,8 @@ Get-AadrmRoleBasedAdministrator [-Role <Role>] [<CommonParameters>]
 ## DESCRIPTION
 The **Get-AadrmRoleBasedAdministrator** cmdlet gets the role-based administrators for Azure Rights Management. You can get the administrators for a specified role.
 
+You must use PowerShell to configure delegated administrative control for the Azure Rights Management service; you cannot do this configuration by using a management portal.
+
 ## EXAMPLES
 
 ### Example 1: List administrators
