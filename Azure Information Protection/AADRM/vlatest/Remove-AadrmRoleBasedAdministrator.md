@@ -32,15 +32,14 @@ The **Remove-AadrmRoleBasedAdministrator** cmdlet removes administrative rights 
 
 You must use PowerShell to configure delegated administrative control for the Azure Rights Management service; you cannot do this configuration by using a management portal.
 
-Note: One of the parameters for this cmdlet uses the ObjectId (GUID). Because the Office 365 admin center and the Azure Management Portal does not display the GUIDs that are used to identify specific user or groups objects, use the following two steps to find the values that you need to specify the GUIDs.:
+Note: One of the parameters for this cmdlet uses the ObjectId (also known as a GUID). Because the Office 365 admin center and the Azure classic portal does not display the GUIDs that are used to identify specific user or groups objects, you can use the following two steps to find the values that you need to specify the GUIDs. Or, you can use the Azure portal to find these values.
 
-1. If you have not already done so, download and install the Azure AD Windows PowerShell module, connect to the service by running [Connect-MsolService](./Connect-MsolService.md), and then run the [Get-MsolGroup](./Get-MsolGroup.md) cmdlet to lookup the GUID of the security group you created to administer role-based administrative rights for Rights Management.
+1. If you have not already done so, download and install a PowerShell module for Azure AD. Connect to the service and get details of the security group that you want to specify. For example, connect to the service by running **Connect-MsolService**, and then run **Get-MsolGroup**. 
 
-To install the Azure AD module, see "Install the Windows Azure AD Module" section from "Manage Azure AD using Windows PowerShell" (http://msdn.microsoft.com/library/windowsazure/jj151815.aspx).
+Tip: If you have many groups, use the **Where-Object** cmdlet in Windows PowerShell to filter results.
+For example, you might enter the following cmdlet to filter and return only groups that start with "Rights": **Get-MsolGroup | where {$_.DisplayName -like "Rights*" }**
 
-Tip: If you have many groups, use the **Where-Object** cmdlet in Windows PowerShell to filter results. For example, you might enter the following cmdlet to filter and return only groups that start with "Rights": **Get-MsolGroup | where {$_.DisplayName -like "Rights*" }**
-
-2. In the output of the **Get-MsolGroup** cmdlet, copy the GUID value that was returned and use (paste) that value into the value of the *ObjectId* parameter when you run the **Add-RoleBased Administrator** or [Remove-AadrmRoleBasedAdministrator](./Remove-AadrmRoleBasedAdministrator) cmdlet.
+2. From the output of the cmdlet, copy the GUID value that was returned and use (paste) that value into the value of the *ObjectId* parameter when you run the **Add-RoleBased Administrator** or [Remove-AadrmRoleBasedAdministrator](./Remove-AadrmRoleBasedAdministrator) cmdlet.
 
 ## EXAMPLES
 

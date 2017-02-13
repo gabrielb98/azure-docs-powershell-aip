@@ -112,7 +112,7 @@ Specifies a list of rights. The list contains one or more of the following:
 
 Note: For clarity, the documentation and display text from the module shows these rights as all upper-case letters. However, the values are not case-sensitive and you can specify them in lower or upper case.
 
-For more information about the usage rights, see [Configuring usage rights for Azure Rights Management](https://docs.microsoft.com/rights-management/deploy-use/configure-usage-rights) (https://docs.microsoft.com/rights-management/deploy-use/configure-usage-rights) on the Microsoft documentation site.
+For more information about the usage rights, see [Configuring usage rights for Azure Rights Management](https://docs.microsoft.com/rights-management/deploy-use/configure-usage-rights) on the Microsoft documentation site.
 
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]

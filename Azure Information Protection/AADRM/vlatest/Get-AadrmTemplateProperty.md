@@ -23,7 +23,7 @@ The **Get-AadrmTemplateProperty** cmdlet gets specified properties of an Azure R
 
 Similar configuration information can also be viewed in the Azure classic portal, but this cmdlet also includes the template GUID.
 
-You can query properties of a default template, or a custom template. For more information about custom templates, including how to configure them in the Azure classic portal, see "Configuring custom templates for Azure Rights Management" (https://docs.microsoft.com/rights-management/deploy-use/configure-custom-templates) on the Microsoft documentation site.
+You can query properties of a default template, or a custom template. For more information about custom templates, including how to configure them in the Azure classic portal, see [Configuring custom templates for Azure Rights Management](https://docs.microsoft.com/rights-management/deploy-use/configure-custom-templates) on the Microsoft documentation site.
 
 ## EXAMPLES
 
@@ -220,9 +220,7 @@ Accept wildcard characters: False
 
 ### -Status
 Indicates that this cmdlet displays the status of the template.
-
 -- Archived templates are available to consume previously protected content but are not presented to users.
-
 -- Published templates are distributed to users and made available to protect content.
 
 ```yaml

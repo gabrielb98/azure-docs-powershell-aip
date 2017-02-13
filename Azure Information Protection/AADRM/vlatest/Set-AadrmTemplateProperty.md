@@ -34,7 +34,7 @@ Important: When you update properties of a custom template, the existing setting
 
 As a best practice, back up the existing template before you run this cmdlet, by using the [Export-AadrmTemplate](./Export-AadrmTemplate.md) cmdlet. Then, if you need to revert to the original configuration, you can use the [Import-AadrmTemplate](./Import-AadrmTemplate.md) cmdlet to restore the template.
 
-For more information about custom templates, including how to configure them in the Azure classic portal, see "Configuring custom templates for Azure Rights Management" (https://docs.microsoft.com/rights-management/deploy-use/configure-custom-templates) on the Microsoft documentation site.
+For more information about custom templates, including how to configure them in the Azure classic portal, see [Configuring custom templates for Azure Rights Management](https://docs.microsoft.com/rights-management/deploy-use/configure-custom-templates) on the Microsoft documentation site.
 
 ## EXAMPLES
 
@@ -93,7 +93,6 @@ Accept wildcard characters: False
 Specifies the type of content expiration for content protected with the template.
 
 The acceptable values for this parameter are:
-
 - Never.
 Indicates that content is available indefinitely.
 - OnDate.
@@ -166,7 +165,7 @@ The Azure Information Protection client and the Rights Management sharing applic
 
 This setting does not affect whether a user can access content that is protected by a departmental template; it only affects the ability for a user to select the template itself.
 
-If you have applications that do not yet natively support departmental templates, you can use a [custom RMS template download script](http://go.microsoft.com/fwlink/?LinkId=524506) (http://go.microsoft.com/fwlink/?LinkId=524506) or other tools to deploy these templates to the local RMS client folder. Then, these applications will correctly display the departmental templates:
+If you have applications that do not yet natively support departmental templates, you can use a [custom RMS template download script](http://go.microsoft.com/fwlink/?LinkId=524506) or other tools to deploy these templates to the local RMS client folder. Then, these applications will correctly display the departmental templates:
  -- For Office 2010, the client folder is %localappdata%\Microsoft\DRM\Templates.
  -- From a client computer that has downloaded all the templates, you can copy and then paste the template files to other computers.
 
