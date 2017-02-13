@@ -22,7 +22,7 @@ The **New-AadrmRightsDefinition** cmdlet creates a **Rights Definition** object 
 
 A **Rights Definition** object expresses the rights that users have to content that Azure Rights Management protects. You can specify a user, a group, or all users in an organization.
 
-Similar configuration information can also be done when you create or configure a custom template in the Azure classic portal, but this cmdlet offers more fine-grained control.
+Similar configuration can also be done when you create or configure a custom template in the Azure classic portal, but this cmdlet offers more fine-grained control.
 
 Tip: You can this cmdlet to enable secure collaboration with other organizations. For example, provide an external group VIEW and DOCEDIT rights to collaborate on a joint project. Or, provide VIEW rights to all users in a partner organization.
 

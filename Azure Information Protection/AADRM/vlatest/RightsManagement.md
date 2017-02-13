@@ -23,7 +23,7 @@ For more information about when you must use these PowerShell cmdlets and to see
 
 The .dll file for this module is *Microsoft.RightsManagementServices.Online.Admin.PowerShell.dll*.
 
-## AADRM Cmdlets
+## Azure Rights Management Cmdlets
 ### [Add-AadrmKey](./Add-AadrmKey.md)
 Adds a legacy customer-managed tenant key for Rights Management, and makes it the active key.
 

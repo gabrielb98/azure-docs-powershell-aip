@@ -17,7 +17,10 @@ Enable-AadrmSuperUserFeature [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Enable-AadrmSuperUserFeature** cmdlet enables the super user feature. With this feature enabled, you can add or remove super users for Azure Rights Management.
+The **Enable-AadrmSuperUserFeature** cmdlet enables the super user feature. With this feature enabled, you can add or remove super users for Azure Rights Management. 
+
+You must use PowerShell to configure super users; you cannot do this configuration by using a management portal.
+
 By default, the super users feature is not enabled, and no users are assigned to this feature.
 
 Super users have full control over all rights-protected content managed by Azure Rights Management. These users are granted full owner rights for all use licenses that are issued by the subscriber organization. 

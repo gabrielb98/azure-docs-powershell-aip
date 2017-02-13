@@ -19,6 +19,8 @@ Get-AadrmDocumentTrackingFeature [<CommonParameters>]
 ## DESCRIPTION
 The **Get-AadrmDocumentTrackingFeature** cmdlet indicates whether the Azure Information Protection document tracking feature is enabled or disabled.
 
+You must use PowerShell to get this information about document tracking; you cannot get this information by using a management portal.
+
 ## EXAMPLES
 
 ### Example: Determine whether the document tracking site is enabled
