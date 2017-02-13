@@ -17,9 +17,11 @@ Import-AadrmTemplate -Path <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Import-AadrmTemplate** cmdlet creates a custom rights policy template for Azure Rights Management and sets its properties according to data contained in a template file.
+The **Import-AadrmTemplate** cmdlet creates a custom Rights Management template for Azure Rights Management and sets its properties according to data contained in a template file.
 
-The file you import must be a valid rights policy template file that has been exported from Azure RMS or AD RMS. The file can have any file name extension.
+Although you can configure Rights Management templates in the Azure classic portal, you must use PowerShell to export and import these templates.
+
+The file you import must be a valid Rights Management template file that has been exported from Azure RMS or AD RMS. The file can have any file name extension.
 
 If you import a template file identified by a GUID that matches the GUID of an existing template for the tenant, the original template is overwritten without warning. During the import operation, the GUID for the new template is set to the GUID in the input file, so the new template is valid to consume content protected with the imported template as long as Azure RMS has the necessary decryption keys.
 
@@ -27,7 +29,7 @@ If the name of the template in the import file matches the name of an existing t
 
 You can store a maximum of 500 custom templates (published or archived) in Azure. If you can't import templates because you have reached this limit as a result of keeping many archived templates, consider exporting them to save the information locally and then removing these templates from Azure RMS.
 
-For more information about custom templates, see [Configuring custom templates for Azure Rights Management](https://docs.microsoft.com/rights-management/deploy-use/configure-custom-templates) (https://docs.microsoft.com/rights-management/deploy-use/configure-custom-templates) on the Microsoft documentation site.
+For more information about custom templates, see [Configuring custom templates for Azure Rights Management](https://docs.microsoft.com/rights-management/deploy-use/configure-custom-templates) on the Microsoft documentation site.
 
 ## EXAMPLES
 

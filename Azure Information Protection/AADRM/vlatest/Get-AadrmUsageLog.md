@@ -19,10 +19,12 @@ Get-AadrmUsageLog -Path <String> [-FromCounter <Int32>] [-ToCounter <Int32>] [<C
 ## DESCRIPTION
 The **Get-AadrmUsageLog** cmdlet downloads Azure Rights Management usage logs to local storage.
 
+You must use PowerShell to get these logs; you cannot do this action by using a management portal.
+
 Note: This cmdlet should be used only if you have usage logs prior to the usage logging change in February 2016.
 After this date, the only Windows PowerShell cmdlet that you need for Azure RMS usage logging is [Get-AadrmUserLog](./Get-AadrmUserLog.md).
 
-For more information about usage logging, see [Logging and analyzing Azure Rights Management usage](https://docs.microsoft.com/rights-management/deploy-use/log-analyze-usage) (https://docs.microsoft.com/rights-management/deploy-use/log-analyze-usage) on the Microsoft documentation site.
+For more information about usage logging, see [Logging and analyzing Azure Rights Management usage](https://docs.microsoft.com/rights-management/deploy-use/log-analyze-usage) on the Microsoft documentation site.
 
 ## EXAMPLES
 

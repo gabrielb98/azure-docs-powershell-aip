@@ -20,6 +20,8 @@ Import-AadrmTpd [-Force] -TpdFile <String> -ProtectionPassword <SecureString> [-
 ## DESCRIPTION
 The **Import-AadrmTpd** cmdlet imports an Active Directory Rights Management Services (AD RMS) trusted publishing domain (TPD) over the Internet into your tenant for Azure Rights Management so that you can migrate Rights Management from on-premises to the cloud.
 
+You must use PowerShell to configure your tenant key; you cannot do this configuration by using a management portal.
+
 This cmdlet sets the TPD to an active or archived state. The TPD contains your private key and RMS templates.
 
 Active means that Rights Management uses the TPD key to protect all new content. The TPD key is now the Azure RMS tenant key.After import is successful, the previously active TPD becomes archived.

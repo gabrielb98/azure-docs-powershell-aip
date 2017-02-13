@@ -19,6 +19,8 @@ Enable-AadrmDocumentTrackingFeature [-Force] [-WhatIf] [-Confirm] [<CommonParame
 ## DESCRIPTION
 The **Enable-AadrmDocumentTrackingFeature** cmdlet enables the document tracking feature for Azure Information Protection. This cmdlet enables access to the document tracking site so that users can track or revoke access to documents that they have protected. This setting is organization-wide; you cannot enable document tracking for some users in your organization and not for others.
 
+You must use PowerShell to enable document tracking; you cannot do this configuration by using a management portal.
+
 By default, document tracking is enabled, so you would run this cmdlet only if somebody had previously disabled document tracking for your organization. When document tracking is enabled, users can access the document tracking site to see the protected documents that they have shared to date. Activity related to shared documents (who opened them, when, from which location) is shown for only when the document tracking site is enabled. For example, a user could revoke a document that they shared when document tracking was disabled but they cannot not see who opened this document when document tracking was disabled.
 
 For more information about document tracking and revocation, see [Track and revoke your documents](https://docs.microsoft.com/information-protection/rms-client/track-and-revoke) (https://docs.microsoft.com/information-protection/rms-client/track-and-revoke) from the Azure Information Protection user guide.

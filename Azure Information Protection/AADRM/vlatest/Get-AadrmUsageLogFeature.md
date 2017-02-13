@@ -19,9 +19,11 @@ Get-AadrmUsageLogFeature [<CommonParameters>]
 ## DESCRIPTION
 The **Get-AadrmUsageLogFeature** cmdlet gets the status of usage logging for Azure Rights Management.
 
+You must use PowerShell to get this information; you cannot do this action by using a management portal.
+
 Note: This cmdlet always returns **False** after the usage logging change in February 2016. After this date, usage logging is enabled automatically and the only Windows PowerShell cmdlet that you need for Azure RMS usage logging is [Get-AadrmUserLog](./Get-AadrmUserLog.md).
 
-For more information about usage logging, see [Logging and analyzing Azure Rights Management usage](https://docs.microsoft.com/rights-management/deploy-use/log-analyze-usage) (https://docs.microsoft.com/rights-management/deploy-use/log-analyze-usage) on the Microsoft documentation site.
+For more information about usage logging, see [Logging and analyzing Azure Rights Management usage](https://docs.microsoft.com/rights-management/deploy-use/log-analyze-usage) on the Microsoft documentation site.
 
 ## EXAMPLES
 

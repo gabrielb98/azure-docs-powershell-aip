@@ -1,5 +1,5 @@
 ---
-Module Name: RightsManagement
+Module Name: AADRM
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 Download Help Link: {{Please enter FwLink manually}}
 Help Version: {{Please enter version of help manually (X.X.X.X) format}}
@@ -7,13 +7,13 @@ Locale: en-US
 ms.assetid: 0B91D740-D2BD-4D57-9E21-C582C9BE2CCA
 ---
 
-# RightsManagement Module
+# AADRM Module
 ## Description
-This topic displays help topics for the Azure Rights Management (RMS) Cmdlets.
+This topic displays help topics for the cmdlets that administer the Azure Rights Management (Azure RMS) service.
 
-The Azure PowerShell cmdlets for Azure RMS let you administer the Azure Rights Management service from the command line. Although this enables automation, it also supports reliable and repeated processes to help reduce administrative overheads. In addition, some Azure Rights Management service advanced configurations and operations require Azure PowerShell.
+These PowerShell cmdlets for Azure RMS let you administer the Azure Rights Management service from the command line. Although this enables automation, it also supports reliable and repeated processes to help reduce administrative overheads. In addition,  advanced configurations and some operations require PowerShell.
 
-For more information, see [Administering Azure Rights Management by Using Windows PowerShell](https://technet.microsoft.com/library/jj585027.aspx).
+For more information about when you must use these PowerShell cmdlets and to see groupings of cmdlets by administration tasks, see [Administering Azure Rights Management by Using Windows PowerShell](https://technet.microsoft.com/library/jj585027.aspx).
 
 >**Tip**
 >
@@ -23,7 +23,7 @@ For more information, see [Administering Azure Rights Management by Using Window
 
 The .dll file for this module is *Microsoft.RightsManagementServices.Online.Admin.PowerShell.dll*.
 
-## RightsManagement Cmdlets
+## Azure Rights Management Cmdlets
 ### [Add-AadrmKey](./Add-AadrmKey.md)
 Adds a legacy customer-managed tenant key for Rights Management, and makes it the active key.
 

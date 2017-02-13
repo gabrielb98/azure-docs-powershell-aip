@@ -19,6 +19,8 @@ Enable-AadrmIPCv3Service [<CommonParameters>]
 ## DESCRIPTION
 The **Enable-AadrmIPCv3Service** cmdlets enables the MSIPC v3 platform on mobile devices such as iOS and Android. This platform must be enabled to support Rights Management.
 
+You must use PowerShell to do this configuration; you cannot do this configuration by using a management portal.
+
 ## EXAMPLES
 
 ### Example1: Enable the MSIPC v3 platform for iOS and Android devices

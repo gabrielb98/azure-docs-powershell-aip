@@ -8,7 +8,7 @@ ms.assetid: D7136388-0197-4074-AC15-BA4DA07223C7
 # Get-AadrmAdminLog
 
 ## SYNOPSIS
-Generates logs for all Rights Management  administrative commands.
+Generates logs for all Rights Management administrative commands.
 
 ## SYNTAX
 
@@ -19,6 +19,8 @@ Get-AadrmAdminLog -Path <String> [-FromTime <DateTime>] [-ToTime <DateTime>] [-F
 
 ## DESCRIPTION
 The **Get-AadrmAdminLog** cmdlet generates logs for all Rights Management administrative commands. You can specify a start time and stop time of entries to include.
+
+You must use PowerShell to get these admin logs; you cannot do this action by using a management portal.
 
 ## EXAMPLES
 

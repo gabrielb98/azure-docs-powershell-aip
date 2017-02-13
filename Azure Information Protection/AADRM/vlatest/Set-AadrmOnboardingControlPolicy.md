@@ -20,6 +20,8 @@ Set-AadrmOnboardingControlPolicy [-Force] -UseRmsUserLicense <Boolean> [-Securit
 ## DESCRIPTION
 The **Set-AadrmOnboardingControlPolicy** cmdlet sets the policy that controls user on-boarding for Azure Rights Management. This cmdlet supports a gradual deployment by controlling which users in your organization can protect content by using Azure Rights Management.
 
+You must use PowerShell to set this configuration; you cannot do this configuration by using a management portal.
+
 This control can be based on assigned user licenses for the service or membership in a designated security group.
 You can also define whether the policy applies to just mobile devices, just Windows clients, or mobile devices and Windows clients.
 

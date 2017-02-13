@@ -19,6 +19,8 @@ Get-AadrmUsageLogLastCounterValue [<CommonParameters>]
 ## DESCRIPTION
 The **Get-AadrmUsageLogLastCounterValue** cmdlet gets the last counter value for the usage log.
 
+You must use PowerShell to get this information; you cannot do this action by using a management portal.
+
 This cmdlet should be used only if you have usage logs prior to the usage logging change in February 2016.
 After this date, the only Windows PowerShell cmdlet that you need for Azure RMS usage logging is [Get-AadrmUserLog](./Get-AadrmUserLog.md).
 

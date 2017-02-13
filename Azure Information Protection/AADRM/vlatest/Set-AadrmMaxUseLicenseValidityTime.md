@@ -20,6 +20,8 @@ Set-AadrmMaxUseLicenseValidityTime [-MaxUseLicenseValidityTime] <UInt16> [-Force
 ## DESCRIPTION
 The **Set-AadrmMaxUseLicenseValidityTime** cmdlet sets the maximum validity time for use licenses that Azure Rights Management grants for your organization when it protects files and email messages. The default value is 30 days.
 
+You must use PowerShell to set this configuration at the organization level; you cannot do this configuration by using a management portal.
+
 A use license is a per-document certificate that is granted to a user who opens a protected file or email message. This certificate contains that user's rights for the file or email message and the encryption key that was used to encrypt the content, as well as additional access restrictions defined in the document's policy.
 
 When the validity period of the use license is expired for a file or email message, the user credentials must be submitted to Azure RMS again to open that content. If the credentials are cached, the user is not prompted, and this happens in the background but an Internet connection is still required to send the cached credentials. 
@@ -38,7 +40,7 @@ John can continue to re-open and read the file even if he does not have an Inter
 --Amelia opens the file a week after it arrives, and then does not open it again for two months.
 When she tries to open it this second time, she does not have an Internet access and cannot open the file.
 
-This setting at the Azure RMS tenant level can be overridden by a more restrictive setting in a rights policy template because of the *LicenseValidityDuration* parameter in the [Set-AadrmTemplateProperty](./Set-AadrmTemplateProperty.md) and [Add-AadrmTemplate](./Add-AadrmTemplate.md) cmdlets, which administrators can also set in the Azure classic portal by configuring the offline access option, Number of days the content is available without an Internet connection.
+This setting at the Azure RMS tenant level can be overridden by a more restrictive setting in a Rights Management template because of the *LicenseValidityDuration* parameter in the [Set-AadrmTemplateProperty](./Set-AadrmTemplateProperty.md) and [Add-AadrmTemplate](./Add-AadrmTemplate.md) cmdlets, which administrators can also set in the Azure classic portal by configuring the offline access option, Number of days the content is available without an Internet connection.
 
 This setting can also be overridden by a user for a document when they use the RMS sharing application, and select the "Allow me to instantly revoke access to these documents" option, which effectively sets the use license validity time to 0. When there are different values like this, Azure RMS uses the most restrictive value.
 

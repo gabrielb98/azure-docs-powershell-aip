@@ -19,6 +19,8 @@ Get-AadrmUsageLogStorageAccount [<CommonParameters>]
 ## DESCRIPTION
 The **Get-AadrmUsageLogStorageAccount** cmdlet gets the Azure storage location for usage logs for Azure Rights Management.
 
+You must use PowerShell to get this information; you cannot do this action by using a management portal.
+
 This cmdlet should be used only if you have usage logs prior to the usage logging change in February 2016.
 After this date, the only Windows PowerShell cmdlet that you need for Azure RMS usage logging is the [Get-AadrmUserLog](./Get-AadrmUserLog.md) cmdlet.
 

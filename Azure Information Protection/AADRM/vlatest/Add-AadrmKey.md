@@ -19,6 +19,8 @@ Add-AadrmKey [-Force] -KeyFile <String> [-WhatIf] [-Confirm] [<CommonParameters>
 ## DESCRIPTION
 The **Add-AadrmKey** cmdlet adds a legacy customer-managed tenant key over the Internet to the Azure Rights Management service, and makes that key the active tenant key for your tenant. The previously active tenant key is archived.
 
+You must use PowerShell to configure your tenant key; you cannot do this configuration by using a management portal.
+
 **Note**: This cmdlet is now deprecated because Azure RMS uses Azure Key Vault for customer-managed keys.
 Instead of this cmdlet, use [Use-AadrmKeyVaultKey](./Use-AadrmKeyVaultKey.md).
 

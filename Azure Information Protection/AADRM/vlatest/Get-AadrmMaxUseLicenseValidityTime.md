@@ -19,6 +19,8 @@ Get-AadrmMaxUseLicenseValidityTime [<CommonParameters>]
 ## DESCRIPTION
 The **Get-AadrmMaxUseLicenseValidityTime** cmdlet gets the maximum validity time, in days, for Azure Rights Management use licenses in your organization. The default value is 30 days.
 
+You must use PowerShell to view this configuration at the organization level; you cannot view this configuration by using a management portal.
+
 ## EXAMPLES
 
 ### Example 1: Get the maximum validity time

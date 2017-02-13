@@ -19,9 +19,11 @@ Set-AadrmMigrationUrl -Domain <String> [-Force] [-WhatIf] [-Confirm] [<CommonPar
 ## DESCRIPTION
 The **Set-AadrmMigrationUrl** cmdlet sets the migration URL for Azure Rights Management.
 
-Migration URLs let you migrate from Rights Management to a supported on-premises Rights Management server. Use this migration technique if you need indefinite access to content that has been previously protected by using Azure Rights Management and you have decided to no longer use Azure Rights Management.
+You must use PowerShell to set the migration URL; you cannot do this action by using a management portal.
 
-In addition to setting this migration URL for clients, you must export your keys and policies from the cloud service in the form of a trusted publishing domain (TPD file) and import them into an on-premises Rights Management server. For more information, see the instructions for exporting your tenant key in [Microsoft-managed: Tenant key lifecycle operations](https://docs.microsoft.com/rights-management/deploy-use/operations-microsoft-managed-tenant-key) (https://docs.microsoft.com/rights-management/deploy-use/operations-microsoft-managed-tenant-key) on the Microsoft documentation site.
+Migration URLs let you migrate from Azure Rights Management to a supported on-premises Rights Management server. Use this migration technique if you need indefinite access to content that has been previously protected by using Azure Rights Management and you have decided to no longer use Azure Rights Management.
+
+In addition to setting this migration URL for clients, you must export your keys and policies from the cloud service in the form of a trusted publishing domain (TPD file) and import them into an on-premises Rights Management server. For more information, see the instructions for exporting your tenant key in [Microsoft-managed: Tenant key lifecycle operations](https://docs.microsoft.com/rights-management/deploy-use/operations-microsoft-managed-tenant-key) on the Microsoft documentation site.
 
 ## EXAMPLES
 

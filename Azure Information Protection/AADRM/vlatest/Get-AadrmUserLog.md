@@ -20,6 +20,8 @@ Get-AadrmUserLog -Path <String> [-FromDate <DateTime>] [-ToDate <DateTime>] [-Fo
 ## DESCRIPTION
 The **Get-AadrmUserLog** cmdlet downloads Azure Rights Management user logs to local storage.
 
+You must use PowerShell to get these user logs; you cannot do this action by using a management portal.
+
 When you run this command and specify a date only for the **DateTime** objects, the time is assumed to be 00:00:00 in your local time, and then converted to UTC. 
 
 When you specify a time with a date (for example, -fordate "2/1/2016 15:00:00"), that date and time is converted to UTC. The **Get-AadrmUserLog** command then gets the logs for that UTC time period. 
