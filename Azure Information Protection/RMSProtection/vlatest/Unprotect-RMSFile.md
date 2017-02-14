@@ -20,14 +20,13 @@ Unprotect-RMSFile [-File <String>] [-Folder <String>] [-Recurse] [-OutputFolder 
 ## DESCRIPTION
 The **Unprotect-RMSFile** cmdlet removes Rights Management (RMS) protection from one or more files in a specified folder if those files were previously protected by AD RMS or Azure RMS.
 
-When you run this cmdlet, you have the following options:
+If you are unprotecting a container file, each child is recursively extracted, unprotected, and repackaged. Supported container file types are .zip, .rar, .7z, .msg, and .pst.
 
+When you run this cmdlet, you have the following options:
 - The file is unprotected in the same folder so that the original protected file and the new unprotected file co-exist.
 - The original file remains protected and an unprotected version of the file is created in another location.
 - All files in the specified folder are unprotected in the current location, replacing the original files that were protected.
 - All files in the specified folder remains protected and an unprotected version of each file is created in another location.
-
-If you are unprotecting a container file, each child is recursively extracted, unprotected, and repackaged. Supported container file types are .zip, .rar, .7z, .msg, and .pst.
 
 ## EXAMPLES
 
@@ -82,6 +81,7 @@ C:\Test.rar   C:\Temp\Test.zip
 ```
 
 This command unprotects a .rar archive file. Because .rar files are container files that hold nested files, these nested files can also be archives. Every child file and nested container is also unprotected by this operation. 
+
 Notice that for a .rar input file, the unprotected file is a .zip file.
 
 ## PARAMETERS
@@ -122,7 +122,6 @@ Accept wildcard characters: False
 
 ### -LogFile
 Specifies the path for log files that list the files that are successfully or unsuccessfully unprotected. Three log files are created: 
-
 - Success
 - Failure
 - Debug

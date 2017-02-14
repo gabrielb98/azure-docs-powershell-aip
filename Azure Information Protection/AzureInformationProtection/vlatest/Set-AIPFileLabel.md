@@ -25,7 +25,9 @@ Set-AIPFileLabel [-JustificationMessage <String>] [-RemoveLabel] [-Path] <String
 ## DESCRIPTION
 The **Set-AIPFileLabel** cmdlet sets or removes an Azure Information Protection label for one or more files. This action can automatically apply or remove protection when labels are configured for Rights Management protection in the Azure Information Protection policy. When the command runs successfully, any existing label or protection is replaced.
 
-This cmdlet does not support a service principal account in Azure Active Directory; you must run it interactively with a user account. 
+Currently, you cannot create or edit labels by using PowerShell but must do this by using the Azure portal. For instructions, see [Configuring Azure Information Protection policy](https://docs.microsoft.com/information-protection/deploy-use/configure-policy).
+
+In addition, this cmdlet does not support a service principal account in Azure Active Directory; you must run it interactively with a user account.
 
 ## EXAMPLES
 
