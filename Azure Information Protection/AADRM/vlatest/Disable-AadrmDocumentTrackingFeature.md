@@ -30,7 +30,7 @@ When document tracking is disabled, users still see options that refer to tracki
 
 You can disable document tracking either before you activate the Azure Rights Management service, or after. After you have disabled document tracking, you can re-enable it at any time.
 
-For more information about document tracking and revocation, see [Track and revoke your documents](/information-protection/rms-client/client-track-revoke) (https://docs.microsoft.com/information-protection/rms-client/client-track-revoke) from the Azure Information Protection user guide.
+For additional information about the document tracking site, see [Configuring and using document tracking for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-document-tracking) from the Azure Information Protection client administrator guide.
 
 ## EXAMPLES
 
