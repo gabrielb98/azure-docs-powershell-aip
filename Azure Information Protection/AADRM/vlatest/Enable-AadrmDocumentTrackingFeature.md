@@ -23,7 +23,7 @@ You must use PowerShell to enable document tracking; you cannot do this configur
 
 By default, document tracking is enabled, so you would run this cmdlet only if somebody had previously disabled document tracking for your organization. When document tracking is enabled, users can access the document tracking site to see the protected documents that they have shared to date. Activity related to shared documents (who opened them, when, from which location) is shown for only when the document tracking site is enabled. For example, a user could revoke a document that they shared when document tracking was disabled but they cannot not see who opened this document when document tracking was disabled.
 
-For more information about document tracking and revocation, see [Track and revoke your documents](https://docs.microsoft.com/information-protection/rms-client/track-and-revoke) (https://docs.microsoft.com/information-protection/rms-client/track-and-revoke) from the Azure Information Protection user guide.
+For additional information about the document tracking site, see [Configuring and using document tracking for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-document-tracking) from the Azure Information Protection client administrator guide.
 
 ## EXAMPLES
 

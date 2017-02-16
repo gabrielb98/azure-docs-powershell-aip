@@ -24,9 +24,9 @@ A **Rights Definition** object expresses the rights that users have to content t
 
 Similar configuration can also be done when you create or configure a custom template in the Azure classic portal, but this cmdlet offers more fine-grained control.
 
-Tip: You can this cmdlet to enable secure collaboration with other organizations. For example, provide an external group VIEW and DOCEDIT rights to collaborate on a joint project. Or, provide VIEW rights to all users in a partner organization.
+Tip: You can this cmdlet to enable secure collaboration with other organizations when they have user accounts in Azure Active Directory and Office 365. For example, provide an external group VIEW and DOCEDIT rights to collaborate on a joint project. Or, provide VIEW rights to all users in a partner organization.
 
-For more information about custom templates, including how to configure them in the Azure classic portal, see "Configuring custom templates for Azure Rights Management" (https://docs.microsoft.com/rights-management/deploy-use/configure-custom-templates) on the Microsoft documentation site.
+For more information about custom templates, including how to configure them in the Azure classic portal, see [Configuring custom templates for Azure Rights Management](https://docs.microsoft.com/rights-management/deploy-use/configure-custom-templates) on the Microsoft documentation site.
 
 ## EXAMPLES
 
@@ -53,6 +53,8 @@ Specifies a domain name for your organization or another organization, to be use
 
 Specify one domain name only for all users in an organization; to grant rights to more than one organization, create another Rights Definition object.
 
+Note that for authentication to be successful, the user must have an account in Azure Active Directory. Office 365 users automatically have an account in Azure Active Directory. 
+
 
 ```yaml
 Type: String
@@ -67,11 +69,11 @@ Accept wildcard characters: False
 ```
 
 ### -EmailAddress
-Specifies the email address of a user or group. The user or group can be internal to your organization, or external.
+Specifies the email address of a user or group. The user or group can be internal to your organization, or external. However, for authentication to be successful, the user must have an account in Azure Active Directory. Office 365 users automatically have an account in Azure Active Directory.
 
 The cmdlet associates the rights that the *Rights* parameter specifies to the user or group that the address specifies.
 
-Tip: If you want to specify all users in your organization or all users in another organization, use the DomainName parameter. 
+Tip: If you want to specify all users in your organization or all users in another organization, use the **DomainName** parameter. 
 
 ```yaml
 Type: String
