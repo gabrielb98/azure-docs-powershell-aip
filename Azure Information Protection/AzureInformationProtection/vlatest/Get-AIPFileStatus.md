@@ -32,7 +32,7 @@ MainLabelId     : 074e257c-1234-1234-1234-34a182080e71
 MainLabelName   : Confidential
 SubLabelId      : d9f23ae3-1234-1234-1234-f515f824c57b
 SubLabelName    : Finance group
-LabelingRef     : https://api.informationprotection.azure.com/api/72f988bf-1234-1234-1234-2d7cd011db47
+LabelingSiteId  : 72f988bf-1234-1234-1234-2d7cd011db47
 LabeledBy       : John@Contoso.com
 LabelingMethod  : Manual
 LabelDate       : 12/12/2016 12:24:36 PM
