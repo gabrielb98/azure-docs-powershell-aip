@@ -23,11 +23,15 @@ The **Protect-RMSFile** cmdlet protects a file or all files in a specified folde
 
 All file types can be protected in the same way that the RMS sharing application can protect all files. However, different levels of protection will be  automatically applied (native or generic), depending on the file type. You can change the level of protection by editing the registry. In addition, some files change their file name extension after they are protected by Rights Management. For more information, see [File API configuration](https://docs.microsoft.com/information-protection/develop/file-api-configuration) on the Microsoft documentation site.
 
+Before you run this cmdlet, you must run [Get-RMSTemplate](./Get-RMSTemplate.md) to download the templates onto your computer. If the template that you want to use has been modified since you ran this cmdlet, run it again with the **-force** parameter to download the revised template.
+
 When you run this cmdlet, you have the following options:
 - The file is protected in the current location, replacing the original file that was unprotected.
 - The original file remains unprotected and a protected version of the file is created in another location.
 - All files in the specified folder are protected in the current location, replacing the original files that were unprotected.
 - All files in the specified folder remains unprotected and a protected version of each file is created in another location.
+
+You cannot run this command concurrently but must wait for the original command to complete before running it again. If you try to run it again before the previous command has finished, the new command will fail.
 
 Tip: For step-by-step instructions to use this cmdlet to protect files on a Windows Server file share, using File Resource Manager and File Classification Infrastructure, see [RMS Protection with Windows Server File Classification Infrastructure (FCI)](https://docs.microsoft.com/information-protection/rms-client/configure-fci) on the Microsoft documentation site.
 

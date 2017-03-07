@@ -28,6 +28,9 @@ When you run this cmdlet, you have the following options:
 - All files in the specified folder are unprotected in the current location, replacing the original files that were protected.
 - All files in the specified folder remains protected and an unprotected version of each file is created in another location.
 
+You can run this command concurrently when you specify a different path for the *LogFile* parameter for each command that runs in parallel. If you do not specify a different log file path and the previous command has not finished, the new command will fail.
+
+
 ## EXAMPLES
 
 ### Example 1: Unprotect a single file, replacing the original file
