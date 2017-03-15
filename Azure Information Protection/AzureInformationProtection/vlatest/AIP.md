@@ -13,7 +13,7 @@ The following list contains links to the help topics for the Microsoft Azure Inf
 
 These cmdlets can be used with the Azure Information Protection service, the Azure Rights Management service (Azure RMS), and Active Directory Rights Management Services (AD RMS). 
 
-The current version of the AzureInformationProtection module is **1.3.155.2**. If you have previously installed this module, run the following command to check the version: `(Get-Module AzureInformationProtection -ListAvailable).Version`.
+The current version of the AzureInformationProtection module is **1.4.21.0**. If you have previously installed this module, run the following command to check the version: `(Get-Module AzureInformationProtection -ListAvailable).Version`.
 
 For instructions to use these cmdlets, any current limitations, prerequisites, and scenario examples, see the following documentation from the Azure Information Protection client administrator guide: 
 
