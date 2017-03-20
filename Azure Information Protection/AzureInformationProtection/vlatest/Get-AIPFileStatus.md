@@ -68,7 +68,9 @@ This command provides the number of files with the "Confidential" label that are
 ## PARAMETERS
 
 ### -Path
-Specifies a local or network path to the files for which you want to get the label and protection information. Examples include C:\Folder\, C:\Folder\Filename, \\Server\Folder). Wildcards are not supported. 
+Specifies a local or network path to the files for which you want to get the label and protection information. Wildcards are not supported.
+
+Examples include C:\Folder\, C:\Folder\Filename, \\Server\Folder.
 
 ```yaml
 Type: String[]
