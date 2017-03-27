@@ -1,0 +1,19 @@
+{
+    "azureipps": {
+        "azure-docs-powershell-aip/Azure Information Protection": {
+            "AADRM": {
+                "_displayName": "AADRM",
+                "_version": "vlatest"
+            },
+            "AzureInformationProtection": {
+                "_displayName": "Azure Information Protection",
+                "_version": "vlatest"
+            },
+            "RMSProtection": {
+                "_displayName": "RMS Protection",
+                "_version": "vlatest"
+            }
+        }
+    }
+      
+}
