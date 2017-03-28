@@ -3,15 +3,15 @@
         "azure-docs-powershell-aip/Azure Information Protection": {
             "AADRM": {
                 "_displayName": "AADRM",
-                "_version": "vlatest"
+                "_version": "latest"
             },
             "AzureInformationProtection": {
                 "_displayName": "Azure Information Protection",
-                "_version": "vlatest"
+                "_version": "latest"
             },
             "RMSProtection": {
                 "_displayName": "RMS Protection",
-                "_version": "vlatest"
+                "_version": "latest"
             }
         }
     }
