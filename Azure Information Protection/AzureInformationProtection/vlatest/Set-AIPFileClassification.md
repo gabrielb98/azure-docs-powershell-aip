@@ -44,8 +44,8 @@ SubLabelName  : Finance group
 SubLabelId    : d9f23ae3-1234-1234-1234-f515f824c57b
 
 FileName      : C:\Projects\Datasheet.pdf
-Status        : Success
-Comment       :
+Status        : Skipped
+Comment       : No matched condition
 MainLabelName : 
 MainLabelId   : 
 SubLabelName  : 
@@ -53,7 +53,15 @@ SubLabelId    :
 
 FileName      : C:\Projects\Analysis.xlsx
 Status        : Skipped
-Comment       : This file already has labels
+Comment       : This file was classified manually
+MainLabelName : 
+MainLabelId   : 
+SubLabelName  : 
+SubLabelId    : 
+
+FileName      : C:\Projects\Pricelist.xlsx
+Status        : Skipped
+Comment       : This file has a higher classification
 MainLabelName : 
 MainLabelId   : 
 SubLabelName  : 
@@ -68,7 +76,7 @@ SubLabelName  :
 SubLabelId    :
 ```
 
-This command scans all files in the Projects folder and any of its subfolders, and sets labels according to the configured conditions in the Azure Information Protection policy. In this example, there are four files and two files are automatically labeled. The Datasheet.pdf file is not labeled because its contents does not match the configured conditions for automatic classification, and Analysis.xlsx is already labeled. Because the command is run without the *-Force* parameter, the existing label for Analysis.xlsx is not overwritten.
+This command scans all files in the Projects folder and any of its subfolders, and sets labels according to the configured conditions in the Azure Information Protection policy. In this example, there are five files and two files are automatically labeled. The Datasheet.pdf file is not labeled because its contents does not match the configured conditions for automatic classification Analysis.xlsx was already manually labeled, and Pricelist.xlsx has a higher label. Because the command is run without the *-Force* parameter, the existing labels for Analysis.xlsx and Pricelist.xlsx are not overwritten.
 
 If the applied labels are also configured to apply Rights Management protection, the files that are successfully labeled with this command are also protected. In this case, the Rights Management owner (who has the Rights Management Full Control permission) of these files is the user who ran the PowerShell command.
 
@@ -86,8 +94,8 @@ SubLabelName  : Finance group
 SubLabelId    : d9f23ae3-1234-1234-1234-f515f824c57b
 
 FileName      : C:\Projects\Datasheet.pdf
-Status        : Success
-Comment       :
+Status        : Skipped
+Comment       : No matched condition
 MainLabelName : 
 MainLabelId   : 
 SubLabelName  : 
@@ -101,16 +109,24 @@ MainLabelId   : f018e9e7-0cfc-4c69-b27a-ac3cb7df43cc
 SubLabelName  : 
 SubLabelId    : 
 
+FileName      : C:\Projects\Pricelist.xlsx
+Status        : Success
+Comment       :
+MainLabelName : Public
+MainLabelId   : f018e9e7-0cfc-4c69-b27a-ac3cb7df43cc
+SubLabelName  : 
+SubLabelId    : 
+
 FileName      : C:\Projects\Dashboard.xlsx
 Status        : Success
-Comment       : This file already has labels
+Comment       : 
 MainLabelName : Public
 MainLabelId   : f018e9e7-0cfc-4c69-b27a-ac3cb7df43cc
 SubLabelName  : 
 SubLabelId    :
 ```
 
-This command is similar to the previous example in that it also scans all files in the Projects folder and any of its subfolders, and sets labels according to the configured conditions in the Azure Information Protection policy. However, this time, because the command includes the *-Force* parameter, it also replaces the existing label for Dashboard.xlsx. The contents of Datasheet.pdf did not match any configured conditions and this file remains without a label.  
+This command is similar to the previous example in that it also scans all files in the Projects folder and any of its subfolders, and sets labels according to the configured conditions in the Azure Information Protection policy. However, this time, because the command includes the *-Force* parameter, it also replaces the existing label for Dashboard.xlsx, and Pricelist.xlsx. The contents of Datasheet.pdf did not match any configured conditions and this file remains without a label.  
 
 ## PARAMETERS
 
