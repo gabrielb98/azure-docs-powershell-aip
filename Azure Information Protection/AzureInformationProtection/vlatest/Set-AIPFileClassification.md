@@ -45,7 +45,7 @@ SubLabelId    : d9f23ae3-1234-1234-1234-f515f824c57b
 
 FileName      : C:\Projects\Datasheet.pdf
 Status        : Skipped
-Comment       : No matched condition
+Comment       : No conditions match for this file
 MainLabelName : 
 MainLabelId   : 
 SubLabelName  : 
@@ -53,7 +53,7 @@ SubLabelId    :
 
 FileName      : C:\Projects\Analysis.xlsx
 Status        : Skipped
-Comment       : This file was classified manually
+Comment       : The file is labeled manually
 MainLabelName : 
 MainLabelId   : 
 SubLabelName  : 
@@ -61,7 +61,7 @@ SubLabelId    :
 
 FileName      : C:\Projects\Pricelist.xlsx
 Status        : Skipped
-Comment       : This file has a higher classification
+Comment       : The file has a higher classification label
 MainLabelName : 
 MainLabelId   : 
 SubLabelName  : 
@@ -95,7 +95,7 @@ SubLabelId    : d9f23ae3-1234-1234-1234-f515f824c57b
 
 FileName      : C:\Projects\Datasheet.pdf
 Status        : Skipped
-Comment       : No matched condition
+Comment       : No conditions match for this file
 MainLabelName : 
 MainLabelId   : 
 SubLabelName  : 
