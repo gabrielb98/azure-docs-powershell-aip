@@ -16,7 +16,7 @@ Set-AIPFileClassification [-JustificationMessage <String>] [-Force] [-Path] <Str
 ```
 
 ## DESCRIPTION
-The Set-AIPFileClassification cmdlet can automatically apply an Azure Information Protection label for one or more files when you configure labels in your Azure Information Protection policy to use conditions. By default, labels are applied when the conditions are configured for automatic classification, but you can also apply labels that are configured for recommended classification. For more information about conditions, see [How to configure conditions for automatic and recommended classification for Azure Information Protection](/information-protection/deploy-use/configure-policy-classification).
+The Set-AIPFileClassification cmdlet can automatically apply an Azure Information Protection label for one or more files when you configure labels in your Azure Information Protection policy to use conditions. Labels are applied when the conditions are configured for automatic classification. For more information about conditions, see [How to configure conditions for automatic and recommended classification for Azure Information Protection](/information-protection/deploy-use/configure-policy-classification).
 
 When this cmdlet is run, it inspects the file contents and if the condition is met for a label, that label is applied. This action can automatically apply or remove protection when the applied label is also configured for Rights Management protection in the Azure Information Protection policy.
 
@@ -80,7 +80,7 @@ This command scans all files in the Projects folder and any of its subfolders, a
 
 If the applied labels are also configured to apply Rights Management protection, the files that are successfully labeled with this command are also protected. In this case, the Rights Management owner (who has the Rights Management Full Control permission) of these files is the user who ran the PowerShell command.
 
-### Example 2: Scan all files in a folder and any of its subfolders, and apply labels according to the configured conditions for automatic or recommended classification, overriding any existing labels
+### Example 2: Scan all files in a folder and any of its subfolders, and apply labels according to the configured conditions for automatic classification, overriding any existing labels
 ```
 PS C:\> Set-AIPFileClassification -Path C:\Projects\ -Force 
 
