@@ -14,7 +14,7 @@ Imports a TPD from AD RMS for Rights Management.
 
 ```
 Import-AadrmTpd [-Force] -TpdFile <String> -ProtectionPassword <SecureString> [-HsmKeyFile <String>]
- -Active <Boolean> [-KeyVaultKeyUrl <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-FriendlyName <String>] [-KeyVaultKeyUrl <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -22,15 +22,11 @@ The **Import-AadrmTpd** cmdlet imports an Active Directory Rights Management Ser
 
 You must use PowerShell to configure your tenant key; you cannot do this configuration by using a management portal.
 
-This cmdlet sets the TPD to an active or archived state. The TPD contains your private key and RMS templates.
-
-Active means that Rights Management uses the TPD key to protect all new content. The TPD key is now the Azure RMS tenant key.After import is successful, the previously active TPD becomes archived.
+This cmdlet sets the TPD to an archived state. The TPD contains your private key and RMS templates.
 
 Warning: Do not run this cmdlet unless you have read and understood the requirements, restrictions, instructions, and implications of migrating from AD RMS to Azure Rights Management. For more information, see [Migrating from AD RMS to Azure RMS](https://docs.microsoft.com/rights-management/plan-design/migrate-from-ad-rms-to-azure-rms) (https://docs.microsoft.com/rights-management/plan-design/migrate-from-ad-rms-to-azure-rms) on the Microsoft documentation site.
 
 After you run this command, the key in the imported TPD becomes available to Azure Rights Management to consume content that AD RMS protected by using this key.
-
-If the TPD is active, users in your organization begin to use the new Azure RMS tenant TPD to protect documents. Existing users do not start to use the new keys until they are reactivated.
 
 If you migrate templates from your AD RMS as active, you can edit these templates in the Azure classic portal. You can publish these templates so that users can select them from applications. If the migrated templates are not activated, they can only be used to open documents that they previously protected.
 
@@ -41,7 +37,7 @@ You must use the AD RMS management console to export the TPD. If you use a hardw
 ### Example 1: Import TPD with a software key
 ```
 PS C:\>$Password = Read-Host -AsSecureString -Prompt "Password: "
-PS C:\> Import-AadrmTpd -TpdFile "C:\rms_tpd.xml" -ProtectionPassword $Password -Active $True -Verbose
+PS C:\> Import-AadrmTpd -TpdFile "C:\rms_tpd.xml" -ProtectionPassword $Password -Verbose
 ```
 
 The first command creates a password as a secure string by using the **Read-Host** cmdlet, and then stores the secure string in the $Password variable. For more information, type `Get-Help Read-Host`.
@@ -51,35 +47,16 @@ The second command imports a TPD with a software key.
 ### Example 2: Import TPD with an HSM key
 ```
 PS C:\>$Password = Read-Host -AsSecureString -Prompt "Password: "
-PS C:\> Import-AadrmTpd -TpdFile "C:\no_key_tpd.xml" -ProtectionPassword $Password -KeyVaultKeyUrl "https://contoso-byok-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333"-Active $True -Verbose
+PS C:\> Import-AadrmTpd -TpdFile "C:\no_key_tpd.xml" -ProtectionPassword $Password -KeyVaultKeyUrl "https://contoso-byok-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333" -FriendlyName "Contoso BYOK key" -Verbose
 ```
 
 The first command creates a password as a secure string, and then stores the secure string in the $Password variable.
 
-The second command imports a TPD to be used with a key that is stored in Azure Key Vault.
+The second command imports a TPD to be used with a key that is stored in Azure Key Vault. Additionaly command changes friendly name of the key to Contoso BYOK key.
 
 Our example uses the key vault name of contoso-byok-kv, the key name of contosorms-byok, and the version number of aaaabbbbcccc111122223333.
 
 ## PARAMETERS
-
-### -Active
-Specifies whether to upload migrated TPD as active or archived.
-
-Specify a value of $True to set the TPD to be active. Users in your organization begin to use the new TPD to help protect documents. Existing users do not start to use the new keys until they are reactivated.
-
-If you migrate templates from your AD RMS as active, then you can edit these templates in the Azure classic portal and activate them for use. Otherwise you can use these templates only to open documents that they previously protected.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
-```
 
 ### -Force
 Forces the command to run without asking for user confirmation.
@@ -93,6 +70,23 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FriendlyName
+Specifies the friendly name of the TDP and the key.
+
+This parameter is optional. If friendly name is not supplied, the key name will be used insted.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
@@ -210,6 +204,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Set-AadrmKeyProperties](./Set-AadrmKeyProperties.md)
 
 [Migrating from AD RMS to Azure RMS](https://docs.microsoft.com/rights-management/plan-design/migrate-from-ad-rms-to-azure-rms)
 

@@ -13,7 +13,7 @@ Tells Rights Management to use a customer-managed tenant key in Azure Key Vault.
 ## SYNTAX
 
 ```
-Use-AadrmKeyVaultKey -KeyVaultKeyUrl <String> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Use-AadrmKeyVaultKey -KeyVaultKeyUrl <String> [-FriendlyName <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -76,6 +76,23 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
+### -FriendlyName
+Specifies the friendly name of the key.
+
+This parameter is optional. If friendly name is not supplied, the key name will be used insted.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
 
@@ -120,6 +137,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-AadrmKeys](./Get-AadrmKeys.md)
+
+[Set-AadrmKeyProperties](./Set-AadrmKeyProperties.md)
 
 [Planning and implementing your Azure Rights Management tenant key](https://docs.microsoft.com/en-us/rights-management/plan-design/plan-implement-tenant-key)
 
