@@ -77,9 +77,9 @@ Accept wildcard characters: False
 ```
 
 ### -FriendlyName
-Specifies the friendly name of the key.
+Specifies the friendly name of the TDP and the key. If you have Office 2010 and Office 2013 in your environment, then you should set the FriendlyName of the imported key as the name of the DefaultServer in the AD RMS system. 
 
-This parameter is optional. If friendly name is not supplied, the key name will be used insted.
+This parameter is optional. If friendly name is not supplied, the key identifier will be used as the name instead.
 
 ```yaml
 Type: String

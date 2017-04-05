@@ -18,15 +18,12 @@ Import-AadrmTpd [-Force] -TpdFile <String> -ProtectionPassword <SecureString> [-
 ```
 
 ## DESCRIPTION
-The **Import-AadrmTpd** cmdlet imports an Active Directory Rights Management Services (AD RMS) trusted publishing domain (TPD) over the Internet into your tenant for Azure Rights Management so that you can migrate Rights Management from on-premises to the cloud.
+The **Import-AadrmTpd** cmdlet imports an Active Directory Rights Management Services (AD RMS) trusted publishing domain (TPD) over the Internet into your tenant for Azure Rights Management so that you can migrate Rights Management from on-premises to the cloud. The TPD contains your private key and RMS templates.
 
 You must use PowerShell to configure your tenant key; you cannot do this configuration by using a management portal.
-
-This cmdlet sets the TPD to an archived state. The TPD contains your private key and RMS templates.
+This cmdlet always sets the key from the imported TPD to an archived state. After you run this command, the key in the imported TPD becomes available to Azure Rights Management to consume content that AD RMS protected by using this key. Use the [Set-AadrmKeyProperties](./Set-AadrmKeyProperties.md) cmdlet to change the state of the imported TPD to Active.
 
 Warning: Do not run this cmdlet unless you have read and understood the requirements, restrictions, instructions, and implications of migrating from AD RMS to Azure Rights Management. For more information, see [Migrating from AD RMS to Azure RMS](https://docs.microsoft.com/rights-management/plan-design/migrate-from-ad-rms-to-azure-rms) (https://docs.microsoft.com/rights-management/plan-design/migrate-from-ad-rms-to-azure-rms) on the Microsoft documentation site.
-
-After you run this command, the key in the imported TPD becomes available to Azure Rights Management to consume content that AD RMS protected by using this key.
 
 If you migrate templates from your AD RMS as active, you can edit these templates in the Azure classic portal. You can publish these templates so that users can select them from applications. If the migrated templates are not activated, they can only be used to open documents that they previously protected.
 
@@ -74,9 +71,9 @@ Accept wildcard characters: False
 ```
 
 ### -FriendlyName
-Specifies the friendly name of the TDP and the key.
+Specifies the friendly name of the TDP and the key. If you have Office 2010 and Office 2013 in your environment, then you should set the FriendlyName of the imported key as the name of the DefaultServer in the AD RMS system. 
 
-This parameter is optional. If friendly name is not supplied, the key name will be used insted.
+This parameter is optional. If friendly name is not supplied, the key identifier will be used as the name instead.
 
 ```yaml
 Type: String

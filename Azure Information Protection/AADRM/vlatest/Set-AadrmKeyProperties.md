@@ -8,43 +8,41 @@ ms.assetid: A1C99424-D986-4A5A-B2E1-6D18EEF11B21
 # Set-AadrmKeyProperties
 
 ## SYNOPSIS
-Sets the properties of the tenant key. Can activate the key.
+Edit the properties of a key object in the Azure Rights Management Service.
 
 ## SYNTAX
 
 ```
-Set-AadrmKeyProperties [-Force] -Active <Bool> -KeyIdentifier <string> [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-AadrmKeyProperties [-Force] -KeyIdentifier <string> -Active <Bool> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Set-AadrmKeyProperties** cmdlet sets properties of the tenant key over the Internet to the Azure Rights Management service, can make that key the active tenant key for your tenant. The previously active tenant key is archived.
+The **Set-AadrmKeyProperties** cmdlet edits the properties of an Azure Rights Management Service key object that is specified by the KeyIdentifier. 
 
-You must use PowerShell to configure your tenant key; you cannot do this configuration by using a management portal.
+The Azure Rights Management Service uses the Active key object to protect all new content. This cmdlet can set the specified key object as Active for the tenant, in effect "rolling the key" within the Azure Rights Management Service. The previously active key object is automatically set to an Archived state since there can be only one active key at any point in time.
 
-Active means that Rights Management uses the key to protect all new content. After set is successful, the previously active key becomes archived.
+The operation will also re-sign all templates with the new key pair that has been activated. Depending on the number of templates defined, this can be a time-consuming operation, and it is not recommended to run this operation frequently. Existing users will start to use the new key pair when the client machine is bootstrapped again, typically within 30 days.
 
-**Note**: Key state cannot be changed to Archived. To archive specified key you need to select another key to activate.
+**Note**: The key object's state cannot be changed to Archived. To archive a specified key object, you need to pick another key object to activate.
 
 Warning: Do not run this cmdlet unless you have read and understood the requirements, restrictions, instructions, and implications of migrating from AD RMS to Azure Rights Management. For more information, see [Migrating from AD RMS to Azure RMS](https://docs.microsoft.com/rights-management/plan-design/migrate-from-ad-rms-to-azure-rms) (https://docs.microsoft.com/rights-management/plan-design/migrate-from-ad-rms-to-azure-rms) on the Microsoft documentation site.
-
-If the key is active, users in your organization begin to use the new Azure RMS tenant key to protect documents. Existing users do not start to use the new keys until they are reactivated.
 
 For more information, see [Planning and implementing your Azure Rights Management tenant key](https://docs.microsoft.com/rights-management/plan-design/plan-implement-tenant-key) (https://docs.microsoft.com/rights-management/plan-design/plan-implement-tenant-key) on the Microsoft documentation site.
 
 ## EXAMPLES
 
-### Example 1: Activate a tenant key
+### Example 1: Activate a different tenant key
 ```
 PS C:\> Set-AadrmKeyProperties -Force -KeyIdentifier "c0f102b3-02cc-4816-b732-fcee73edd0e6" -Active $True
 ```
 
-This command activates the tenant key specified by the *KeyIdentifier* parameter.
+This command activates the tenant key specified by the *KeyIdentifier* parameter. The *KeyIdentifier* to be used can be chosen from the output of [Get-AadrmKeys](./Get-AadrmKeys.md).
 Because the command specifies the *Force* parameter, the command does not prompt you for confirmation.
 
 ## PARAMETERS
 
 ### -Force
-Indicates that the cmdlet adds the tenant key silently without prompting you for confirmation.
+Indicates that the cmdlet should update the key object silently without prompting for confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -59,7 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### -KeyIdentifier
-Specifies a tenant key indetifier of the key we need to update.
+Specifies the key identifier for which the properties need to be updated.
 
 ```yaml
 Type: String
@@ -74,12 +72,9 @@ Accept wildcard characters: False
 ```
 
 ### -Active
-Specifies key state of the key.
+Changes the state of the key object.
 
-Active means that Rights Management uses the key to protect all new content. After set is successful, the previously active key becomes archived.
-Specify a value of $True to set the TPD to be active. Users in your organization begin to use the new TPD to help protect documents. Existing users do not start to use the new keys until they are reactivated.
-
-Can only be set to true. Key state cannot be changed to Archived. To archive specified key you need to select another key to activate.
+If the state of a key object is *Active*, then the Azure Rights Management Service uses this key to encrypt/decrypt all new content. The parameter only takes a value of $True, and the state of an Active key object cannot be explicitly set to *Archived*. To archive the current active key object, select another key object to activate instead.
 
 ```yaml
 Type: Bool
