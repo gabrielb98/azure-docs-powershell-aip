@@ -71,9 +71,9 @@ Accept wildcard characters: False
 ```
 
 ### -FriendlyName
-Specifies the friendly name of the TDP and the key. If you have Office 2010 and Office 2013 in your environment, then you should set the FriendlyName of the imported key as the name of the DefaultServer in the AD RMS system. 
+Specifies the friendly name of the TDP and the key. If you have Office 2016 and Office 2013 in your environment, then you should set the FriendlyName correctly. This field is available under the *Server Certificate* properties of your on-premises ADRMS setup. 
 
-This parameter is optional. If friendly name is not supplied, the key identifier will be used as the name instead.
+This parameter is optional. If friendly name is not supplied then the host name of the licensing server as a default value, specified in the imported server licensor certificate.
 
 ```yaml
 Type: String
