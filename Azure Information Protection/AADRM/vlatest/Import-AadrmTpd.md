@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -FriendlyName
-Specifies the friendly name of a trusted publishing domain (TPD) and the SLC key that you imported from AD RMS. If users run Office 2016 or Office 2013, specify the same Friendly Name value in the **Server Certificate** properties of your AD RMS cluster. 
+Specifies the friendly name of a trusted publishing domain (TPD) and the SLC key that you imported from AD RMS. If users run Office 2016 or Office 2013, specify the same **Friendly name** value that is set for the AD RMS cluster properties on the **Server Certificate** tab.
 
 This parameter is optional. If you don't use it, the key identifier is used instead.
 
