@@ -2,7 +2,7 @@
 Module Name: AADRM
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 Download Help Link: N/A
-Help Version: 2.8.0.0
+Help Version: 2.9.0.0
 Locale: en-US
 ms.assetid: 0B91D740-D2BD-4D57-9E21-C582C9BE2CCA
 ---
@@ -19,7 +19,7 @@ For more information about when you must use these PowerShell cmdlets and to see
 >
 >If you do not see the cmdlet or options that are documented, make sure that you have [downloaded the latest version of the module](/information-protection/deploy-use/install-powershell).
 >
->The current version is **2.8.0.0**. To check the version you have installed, run: (Get-Module aadrm -ListAvailable).Version
+>The current version is **2.9.0.0**. To check the version you have installed, run: (Get-Module aadrm -ListAvailable).Version
 
 The .dll file for this module is *Microsoft.RightsManagementServices.Online.Admin.PowerShell.dll*.
 
