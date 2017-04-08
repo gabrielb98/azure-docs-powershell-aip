@@ -8,7 +8,7 @@ ms.assetid: 7b1adf8c-d7a6-42f6-9010-4cc45308691c
 # Set-AadrmKeyProperties
 
 ## SYNOPSIS
-Edit the properties of a tenant key object for Rights Management.
+Updates the properties of a tenant key object for Rights Management.
 
 ## SYNTAX
 
