@@ -1,7 +1,5 @@
 ---
-external help file: Microsoft.RightsManagementServices.Online.Admin.PowerShell.dll-Help.xml
-online version: http://go.microsoft.com/fwlink/?LinkId=400592
-schema: 2.0.0
+title: Add-AadrmKey-retired| Microsoft Docs
 ms.assetid: A1C99424-D986-4A5A-B2E1-6D18EEF11B21
 ---
 
