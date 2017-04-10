@@ -103,4 +103,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-AadrmDocumentTrackingFeature](./Get-AadrmDocumentTrackingFeature.md)
 
-[RMS sharing application](https://docs.microsoft.com/rights-management/rms-client/sharing-app-track-revoke)
