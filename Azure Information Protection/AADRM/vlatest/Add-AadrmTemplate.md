@@ -73,11 +73,13 @@ Specifies the type of content expiration for content protected with the template
 
 The acceptable values for this parameter are:
 
-- Never.
+- **Never**.
 Indicates that content is available indefinitely.
-- OnDate.
+
+- **OnDate**.
 Indicates that content expires at a certain fixed date.
-- AfterDays.
+
+- **AfterDays**.
 Indicates that content is available for the indicated number of days after it is protected.
 
 ```yaml
@@ -147,11 +149,11 @@ The Azure Information Protection client and the Rights Management sharing applic
 
 This setting does not affect whether a user can access content that is protected by a departmental template; it only affects the ability for a user to select the template itself.
 
-If you have applications that do not yet natively support departmental templates, you can use a custom RMS template download script http://go.microsoft.com/fwlink/?LinkId=524506 (http://go.microsoft.com/fwlink/?LinkId=524506) or other tools to deploy these templates to the local RMS client folder. Then, these applications will correctly display the departmental templates:
+If you have applications that do not yet natively support departmental templates, you can use a [custom RMS template download script](https://go.microsoft.com/fwlink/?LinkId=524506) or other tools to deploy these templates to the local RMS client folder. Then, these applications will correctly display the departmental templates:
 
- -- For Office 2010, the client folder is %localappdata%\Microsoft\DRM\Templates.
+- For Office 2010, the client folder is %localappdata%\Microsoft\DRM\Templates.
 
- -- From a client computer that has downloaded all the templates, you can copy and then paste the template files to other computers.
+- From a client computer that has downloaded all the templates, you can copy and then paste the template files to other computers.
 
 ```yaml
 Type: Boolean
@@ -254,7 +256,7 @@ Accept wildcard characters: False
 ### -Status
 Specifies the status of the template.
 
-Allowed values are Archived and Published.
+Allowed values are **Archived** and **Published**.
 
 - Archived templates are available to consume previously protected content but are not visible to users. 
 
