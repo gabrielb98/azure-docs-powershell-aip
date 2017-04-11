@@ -26,10 +26,9 @@ You must use PowerShell to configure your tenant key; you cannot do this configu
 
 Azure RMS now uses Azure Key Vault to manage and monitor a customer-managed Azure RMS tenant key. To create a customer-managed Azure RMS tenant key for the first time, run [Use-AadrmKeyVaultKey](./Use-AadrmKeyVaultKey.md) instead of this cmdlet.
 
-For more information about how to manage your Azure RMS tenant key, see [Planning and implementing your Azure Rights Management tenant key](https://docs.microsoft.com/en-us/rights-management/plan-design/plan-implement-tenant-key) (https://docs.microsoft.com/en-us/rights-management/plan-design/plan-implement-tenant-key) on the Microsoft documentation site.
+For more information about how to manage your Azure RMS tenant key, see [Planning and implementing your Azure Information Protection tenant key](/information-protection/plan-design/plan-implement-tenant-key).
 
-Before you run this cmdlet, you will need to identify your original customer-managed Azure RMS tenant key.
-To do that, use the [Get-AadrmKeys](./Get-AadrmKeys.md) cmdlet. From the output and identified key, you will need the KeyIdentifier value for the *KeyIdentifier* parameter when you run this cmdlet.
+Before you run this cmdlet, you will need to identify your original customer-managed Azure RMS tenant key. To do that, use the [Get-AadrmKeys](./Get-AadrmKeys.md) cmdlet. From the output and identified key, you will need the KeyIdentifier value for the *KeyIdentifier* parameter when you run this cmdlet.
 
 Also, your organization's administrator for Azure Key Vault must create a new key for Azure RMS and supply you with a URL for this key. You will need to specify the URL for the *KeyVaultKeyUrl* parameter when you run this cmdlet. This Azure Key Vault administrator must also grant Azure RMS access to the key vault that contains the key.
 
@@ -138,4 +137,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Use-AadrmKeyVaultKey](./Use-AadrmKeyVaultKey.md)
 
-[Planning and implementing your Azure Rights Management tenant key](https://docs.microsoft.com/en-us/rights-management/plan-design/plan-implement-tenant-key)
+[Planning and implementing your Azure Information Protection tenant key](https://docs.microsoft.com/en-us/information-protection/plan-design/plan-implement-tenant-key)

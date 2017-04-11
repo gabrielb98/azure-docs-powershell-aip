@@ -9,6 +9,6 @@ This cmdlet is now removed from the latest version of the Azure Rights Managemen
 
 Instead, use [Use-AadrmKeyVaultKey](/powershell/module/aadrm/use-aadrmkeyvaultkey). For more information, see [Planning and implementing your Azure Information Protection tenant key](/information-protection/plan-design/plan-implement-tenant-key).
 
-In addition, update your version of the module so it is **2.8.0.0** or later. For instructions, see [Installing Windows PowerShell for Azure Rights Management](/information-protection/deploy-use/install-powershell).
+In addition, update your version of the module so it is **2.9.0.0** or later. For instructions, see [Installing Windows PowerShell for Azure Rights Management](/information-protection/deploy-use/install-powershell).
 
 

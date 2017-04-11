@@ -23,7 +23,7 @@ Similar configuration information can also be viewed in the Azure classic portal
 
 The cmdlet output is a list of template objects that contain all the template properties that you can use for further processing. The output of this command displays the template GUID, name, and description in the current locale. For additional template properties, such as usage rights and whether the template is published or archived, use the [Get-AadrmTemplateProperty](./Get-AadrmTemplateProperty.md) cmdlets.
 
-For more information about custom templates, including how to configure them in the Azure classic portal, see [Configuring custom templates for Azure Rights Management](https://docs.microsoft.com/rights-management/deploy-use/configure-custom-templates) on the Microsoft documentation site.
+For more information about custom templates, including how to configure them in the Azure classic portal, see [Configuring custom templates for the Azure Rights Managementservice](https://docs.microsoft.com/rights-management/deploy-use/configure-custom-templates).
 
 ## EXAMPLES
 
@@ -87,4 +87,4 @@ If no description is defined for a template in the current locale, "No descripti
 
 [Remove-AadrmTemplate](./Remove-AadrmTemplate.md)
 
-[Configuring custom templates for Azure Rights Management](https://docs.microsoft.com/rights-management/deploy-use/configure-custom-templates)
+[Configuring custom templates for the Azure Rights Management service](https://docs.microsoft.com/rights-management/deploy-use/configure-custom-templates)

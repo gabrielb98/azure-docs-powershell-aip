@@ -27,7 +27,7 @@ The export process does not automatically append a file name extension, so you c
 
 You can use the [Get-AadrmTemplate](./Get-AadrmTemplate.md) cmdlet to get the GUIDs of all templates.
 
-For more information about custom templates, including how to configure them in the Azure classic portal, see "Configuring custom templates for Azure Rights Management" (https://docs.microsoft.com/rights-management/deploy-use/configure-custom-templates) on the Microsoft documentation site.
+For more information about custom templates, including how to configure them in the Azure classic portal, see [Configuring custom templates for the Azure Rights Management service](https://docs.microsoft.com/information-protection/deploy-use/configure-custom-templates).
 
 ## EXAMPLES
 
@@ -104,4 +104,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Remove-AadrmTemplate](./Remove-AadrmTemplate.md)
 
-[Configuring custom templates for Azure Rights Management](https://docs.microsoft.com/rights-management/deploy-use/configure-custom-templates)
+[Configuring custom templates for the Azure Rights Management service](https://docs.microsoft.com/information-protection/deploy-use/configure-custom-templates)

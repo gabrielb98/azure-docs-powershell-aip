@@ -23,15 +23,13 @@ Add-AadrmSuperUser -ServicePrincipalId <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Add-AadrmSuperUser** cmdlet adds an individual super user by email address or service principal ID for your organization. Before you can add a super user, you must enable the super user feature for Azure Rights Management with the [Enable-AadrmSuperUserFeature](./Enable-AadrmSuperUserFeature.md) cmdlet.
+The **Add-AadrmSuperUser** cmdlet adds an individual account to the super user list for your organization, by specifying the user's email address or service principal ID. Use this cmdlet to specify one or more individuals as super users for your organization. This operation grants full owner rights to content that is protected by your organization. This means that these super users can decrypt this rights-protected content and remove rights-protection from it, even if an expiration date has been set and expired. Typically, this level of access is required for legal eDiscovery and by auditing teams.
 
-In addition, the user that you add must have a proxy address, which requires that the user account is either synchronized from Active Directory Domain Services with the attribute set for the proxy address, or that the user is granted a license for Exchange Online.
+However, before a super user can do these operations, the super user feature for Azure Rights Management must be enabled by using the [Enable-AadrmSuperUserFeature](./Enable-AadrmSuperUserFeature.md) cmdlet. By default, the super user feature is not enabled.
 
-When you add a super user, that super user is granted full control over all rights-protected content that is managed by Azure Rights Management for your organization. Use this cmdlet to specify one or more individuals as super users for your organization.
+The user that you add must have an Azure AD proxy address, which requires that the user account is either synchronized from Active Directory Domain Services with the attribute set for the proxy address, or that the user is granted a license for Exchange Online.
 
-To specify a group whose members have super user privileges, use the [Set-AadrmSuperUserGroup](./Set-AadrmSuperUserGroup.md) cmdlet instead of this **Add-AadrmSuperUser** cmdlet.
-
-Rights Management grants full owner rights to super users for all use licenses that are issued by the subscriber organization. Super users can decrypt any rights-protected content file and remove rights-protection for it, even if an expiration date has been set and expired. Typically, this level of access is required for legal eDiscovery and by auditing teams.
+To specify a group rather than individual users, use the [Set-AadrmSuperUserGroup](./Set-AadrmSuperUserGroup.md) cmdlet instead of this **Add-AadrmSuperUser** cmdlet.
 
 You must use PowerShell to configure super users; you cannot do this configuration by using a management portal.
 
@@ -42,19 +40,19 @@ You must use PowerShell to configure super users; you cannot do this configurati
 PS C:\>Add-AadrmSuperUser -EmailAddress "EvanNarvaez@Contoso.com"
 ```
 
-This command adds an individual user to your organization's super user list for Rights Management by specifying the user's email address.
+This command adds an individual user to your organization's super user list for the Azure Rights Management service, by specifying the user's email address.
 
 ### Example 2: Add a service principal as a super user
 ```
 PS C:\>Add-AadrmSuperUser -ServicePrincipalId "3C367900-44D1-4865-9379-9A3227042C25"
 ```
 
-This command adds a service principal to your organization's super user list by specifying the service principal's AppPrincipalId.
+This command adds a service principal to your organization's super user list for the Azure Rights Management service, by specifying the service principal's AppPrincipalId.
 
 ## PARAMETERS
 
 ### -EmailAddress
-Specifies the email address of a user in your organization to which to grant super user privileges.
+Specifies the email address of a user in your organization when you want to grant this user super user privileges.
 
 ```yaml
 Type: String
@@ -69,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServicePrincipalId
-Specifies the **AppPrincipalId** of the service principal to which to grant super user privileges. Use the **Get-MsolServicePrincipal** cmdlet to get an existing service principal, or the [New-MsolServicePrincipalCredential](./New-MsolServicePrincipalCredential.md) cmdlet to create a new service principal.
+Specifies the **AppPrincipalId** of the service principal in your organization when you want to grant this account super user privileges. Use the **Get-MsolServicePrincipal** cmdlet to get an existing service principal, or the [New-MsolServicePrincipalCredential](./New-MsolServicePrincipalCredential.md) cmdlet to create a new service principal.
 
 The service principal ID is converted to a pseudo-email address and added to the super users list for the organization. For example, `Add-AadrmSuperUser -ServicePrincipalId "3C367900-44D1-4865-9379-9A3227042C25"` adds 3C367900-44D1-4865-9379-9A3227042C25@\<rms tenant ID\>.rms.na.aadrm.com to the super user list.
 
