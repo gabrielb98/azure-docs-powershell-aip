@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-AadrmRightsDefinition
 
 ## SYNOPSIS
-Creates a Rights Definition object for Rights Management.
+Creates a rights definition object for Rights Management.
 
 ## SYNTAX
 
@@ -18,15 +18,15 @@ New-AadrmRightsDefinition [-EmailAddress <String>] [-DomainName <String>]
 ```
 
 ## DESCRIPTION
-The **New-AadrmRightsDefinition** cmdlet creates a **Rights Definition** object that you store as a variable and then use to create or update a custom Rights Management template when you use the [Add-AadrmTemplate](./Add-AadrmTemplate.md) or [Set-AadrmTemplateProperty](./Set-AadrmTemplateProperty.md) cmdlet.
+The **New-AadrmRightsDefinition** cmdlet creates a **rights definition** object that you store as a variable and then use to create or update a custom Rights Management template when you use the [Add-AadrmTemplate](./Add-AadrmTemplate.md) or [Set-AadrmTemplateProperty](./Set-AadrmTemplateProperty.md) cmdlet.
 
-A **Rights Definition** object expresses the rights that users have to content that Azure Rights Management protects. You can specify a user, a group, or all users in an organization.
+A rights definition object expresses the rights that users have to content that Azure Rights Management protects. You can specify a user, a group, or all users in an organization.
 
 Similar configuration can also be done when you create or configure a custom template in the Azure classic portal, but this cmdlet offers more fine-grained control.
 
 Tip: You can this cmdlet to enable secure collaboration with other organizations when they have user accounts in Azure Active Directory and Office 365. For example, provide an external group VIEW and DOCEDIT rights to collaborate on a joint project. Or, provide VIEW rights to all users in a partner organization.
 
-For more information about custom templates, including how to configure them in the Azure classic portal, see [Configuring custom templates for Azure Rights Management](https://docs.microsoft.com/rights-management/deploy-use/configure-custom-templates) on the Microsoft documentation site.
+For more information about custom templates, including how to configure them in the Azure classic portal, see [Configuring custom templates for the Azure Rights Management service](https://docs.microsoft.com/information-protection/deploy-use/configure-custom-templates).
 
 ## EXAMPLES
 
@@ -39,7 +39,7 @@ This command creates a rights definition object for the specified user and store
 
 The command includes the rights VIEW and DOCEDIT for a user in the Contoso organization.
 
-### Example 2: Create a rights definition object for all members
+### Example 2: Create a rights definition object for all users
 ```
 PS C:\>$R2 = New-AadrmRightsDefinition -DomainName "Contoso.com" -Rights "VIEW"
 ```
@@ -114,7 +114,7 @@ Specifies a list of rights. The list contains one or more of the following:
 
 Note: For clarity, the documentation and display text from the module shows these rights as all upper-case letters. However, the values are not case-sensitive and you can specify them in lower or upper case.
 
-For more information about the usage rights, see [Configuring usage rights for Azure Rights Management](https://docs.microsoft.com/rights-management/deploy-use/configure-usage-rights) on the Microsoft documentation site.
+For more information about the usage rights, see [Configuring usage rights for Azure Rights Management](https://docs.microsoft.com/information-protection/deploy-use/configure-usage-rights).
 
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
@@ -143,4 +143,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-AadrmTemplateProperty](./Set-AadrmTemplateProperty.md)
 
-[Azure Rights Management](https://docs.microsoft.com/rights-management/deploy-use/configure-usage-rights)
+[Configuring usage rights for Azure Rights Management](https://docs.microsoft.com/information-protection/deploy-use/configure-usage-rights)

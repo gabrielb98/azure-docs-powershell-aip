@@ -34,7 +34,7 @@ Important: When you update properties of a custom template, the existing setting
 
 As a best practice, back up the existing template before you run this cmdlet, by using the [Export-AadrmTemplate](./Export-AadrmTemplate.md) cmdlet. Then, if you need to revert to the original configuration, you can use the [Import-AadrmTemplate](./Import-AadrmTemplate.md) cmdlet to restore the template.
 
-For more information about custom templates, including how to configure them in the Azure classic portal, see [Configuring custom templates for Azure Rights Management](https://docs.microsoft.com/rights-management/deploy-use/configure-custom-templates) on the Microsoft documentation site.
+For more information about custom templates, including how to configure them in the Azure classic portal, see [Configuring custom templates for the Azure Rights Management service](https://docs.microsoft.com/information-protection/deploy-use/configure-custom-templates).
 
 ## EXAMPLES
 
@@ -93,12 +93,9 @@ Accept wildcard characters: False
 Specifies the type of content expiration for content protected with the template.
 
 The acceptable values for this parameter are:
-- Never.
-Indicates that content is available indefinitely.
-- OnDate.
-Indicates that content expires at a certain fixed date.
-- AfterDays.
-Indicates that content will be available for the indicated number of days after it is protected.
+- **Never**. Indicates that content is available indefinitely.
+- **OnDate**. Indicates that content expires at a certain fixed date.
+- **AfterDays**.Indicates that content will be available for the indicated number of days after it is protected.
 
 ```yaml
 Type: ContentExpirationType
@@ -165,9 +162,10 @@ The Azure Information Protection client and the Rights Management sharing applic
 
 This setting does not affect whether a user can access content that is protected by a departmental template; it only affects the ability for a user to select the template itself.
 
-If you have applications that do not yet natively support departmental templates, you can use a [custom RMS template download script](http://go.microsoft.com/fwlink/?LinkId=524506) or other tools to deploy these templates to the local RMS client folder. Then, these applications will correctly display the departmental templates:
- -- For Office 2010, the client folder is %localappdata%\Microsoft\DRM\Templates.
- -- From a client computer that has downloaded all the templates, you can copy and then paste the template files to other computers.
+If you have applications that do not yet natively support departmental templates, you can use a [custom RMS template download script](https://go.microsoft.com/fwlink/?LinkId=524506) or other tools to deploy these templates to the local RMS client folder. Then, these applications will correctly display the departmental templates:
+
+- For Office 2010, the client folder is %localappdata%\Microsoft\DRM\Templates.
+- From a client computer that has downloaded all the templates, you can copy and then paste the template files to other computers.
 
 ```yaml
 Type: Boolean
@@ -194,7 +192,7 @@ To specify that a use license must be obtained each time the protected content i
 
 Each organization has a maximum use license validity time, which is 30 days by default and can be configured by using the [Set-AadrmMaxUseLicenseValidityTime](./Set-AadrmMaxUseLicenseValidityTime.md). The value that you specify for the *LicenseValidityDuration* parameter must be lower than that value.
 
-This setting can also be overridden by a user for a document when they use the RMS sharing application, and select the **Allow me to instantly revoke access to these documents** option, which effectively sets the use license validity time to 0. When there are different values like this, Azure RMS uses the most restrictive value.
+This setting can also be overridden by a user for a document when they use the RMS sharing application, and select the **Allow me to instantly revoke access to these documents** option, which effectively sets the use license validity time to 0. When there are different values like this, the Azure Rights Management service uses the most restrictive value.
 
 ```yaml
 Type: Int32
@@ -266,11 +264,10 @@ Accept wildcard characters: False
 ```
 
 ### -Status
-Specifies the status of the template. Valid values are: Published or Archived.
+Specifies the status of the template. Valid values are: **Published** or **Archived**.
 
-Archived templates are available to consume content previously protected but are not visible to users.
-
-Published templates are distributed to users and made available to protect content.
+- Archived templates are available to consume content previously protected but are not visible to users.
+- Published templates are distributed to users and made available to protect content.
 
 ```yaml
 Type: TemplateStatus
@@ -314,4 +311,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-AadrmTemplateProperty](./Get-AadrmTemplateProperty.md)
 
-[Azure Rights Management](https://docs.microsoft.com/rights-management/deploy-use/configure-custom-templates)
+[Configuring custom templates for the Azure Rights Management service](https://docs.microsoft.com/information-protection/deploy-use/configure-custom-templates)

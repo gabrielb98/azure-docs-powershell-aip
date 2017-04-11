@@ -22,41 +22,40 @@ The **Set-AadrmOnboardingControlPolicy** cmdlet sets the policy that controls us
 
 You must use PowerShell to set this configuration; you cannot do this configuration by using a management portal.
 
-This control can be based on assigned user licenses for the service or membership in a designated security group.
-You can also define whether the policy applies to just mobile devices, just Windows clients, or mobile devices and Windows clients.
+This control can be based on assigned user licenses for the service or membership in a designated security group. You can also define whether the policy applies to just mobile devices, just Windows clients, or mobile devices and Windows clients.
 
 If you use the assigned license option, you can assign licenses to users by using the Office 365 admin center or by using Azure PowerShell and the [Set-MsolUserLicense](./Set-MsolUserLicense.md) cmdlet from the Azure AD PowerShell administration module. You can also use the [Get-MsolAccountSku](./Get-MsolAccountSku.md) cmdlet to obtain the different types of licenses that you can assign in your organization.
 
-If you use the group membership option, you must specify a security group, which does not have to be mail-enabled and it can contain other groups. To specify the group, use the group GUID. To obtain that GUID,  use the [Get-MsolGroup](./Get-MsolGroup.md) cmdlet from the Azure AD PowerShell administration module.
+If you use the group membership option, you must specify a security group, which does not have to be mail-enabled and it can contain other groups. To specify the group, use the group GUID. To obtain that GUID, use the [Get-MsolGroup](./Get-MsolGroup.md) cmdlet from the Azure AD PowerShell administration module.
 
-For more information about the Azure AD PowerShell cmdlets, see [Azure Active Directory Cmdlets](http://msdn.microsoft.com/library/azure/jj151815.aspx) (http://msdn.microsoft.com/library/azure/jj151815.aspx).
+For more information about the Azure AD PowerShell cmdlets, see [Azure Active Directory PowerShell](https://docs.microsoft.com/powershell/azure/overview?view=azureadps-2.0).
 
-Note: This cmdlet does not stop users from consuming protected content.
+Note: This cmdlet does not stop users from consuming protected content or prevent administrators from configuring services for Azure Rights Management (for example, Exchange Online transport rules, SharePoint protected libraries, Windows Server FCI). Instead, it is designed for user applications such as Office, so that users do not see the options or templates to use Azure Rights Management protection.
 
 ## EXAMPLES
 
-### Example 1: Restrict Azure RMS to users who have a license and are members of a specified group
+### Example 1: Restrict Azure Rights Management to users who have a license and are members of a specified group
 ```
 PS C:\> Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $True -SecurityGroupObjectId "fba99fed-32a0-44e0-b032-37b419009501" -Scope All
 ```
 
-This command configures the Azure RMS service to allow only users who have a license to use Azure Rights Management to protect content. Further, the command requires users to be members of the security group with the specified object ID. The restriction applies to Windows clients and mobile devices.
+This command configures the Azure Rights Management service to allow only users who have a license to use Azure Rights Management to protect content. Further, the command requires users to be members of the security group with the specified object ID. The restriction applies to Windows clients and mobile devices.
 
-### Example 2: Restrict Azure RMS to users who are members of a specified group
+### Example 2: Restrict Azure Rights Management to users who are members of a specified group
 ```
 PS C:\> Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $False -SecurityGroupObjectId "fba99fed-32a0-44e0-b032-37b419009501" -Scope All
 ```
 
 This command allows only users that are members of the security group with the specified object ID to protect content by using Azure Rights Management. The command applies to Windows clients and mobile devices.
 
-### Example 3: Restrict Azure RMS to users who have a license
+### Example 3: Restrict Azure Rights Management to users who have a license
 ```
 PS C:\> Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $True -Scope All
 ```
 
-This command allows only users who have a  license assigned to protect content by using Azure Rights Management. The command applies to Windows clients and mobile devices.
+This command allows only users who have a license assigned to protect content by using Azure Rights Management. The command applies to Windows clients and mobile devices.
 
-### Example 4: Do not restrict Azure RMS for users
+### Example 4: Do not restrict Azure Rights Management for users
 ```
 PS C:\> Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $False -Scope All
 ```
