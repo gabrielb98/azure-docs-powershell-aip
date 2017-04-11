@@ -38,6 +38,7 @@ Specifies a role. The cmdlet gets the administrators that belong to the role tha
 The acceptable values for this parameter are:
 
 - ConnectorAdministrator
+
 - GlobalAdministrator
 
 ```yaml

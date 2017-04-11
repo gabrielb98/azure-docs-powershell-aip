@@ -29,7 +29,7 @@ You must use PowerShell to get these admin logs; you cannot do this action by us
 PS C:\>Get-AadrmAdminLog -Path "C:\Temp\AdminLog.log"
 ```
 
-This command generates a log that contains all the Rights Management administrative commands that have been run for your Azure Rights Management tenant.
+This command generates a log that contains all the Rights Management administrative commands that have been run for your organization's Azure Rights Management service.
 
 ### Example 2: Generate a log of commands for a specified time period
 ```

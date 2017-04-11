@@ -23,7 +23,7 @@ The **Get-AadrmTemplateProperty** cmdlet gets specified properties of an Azure R
 
 Similar configuration information can also be viewed in the Azure classic portal, but this cmdlet also includes the template GUID.
 
-You can query properties of a default template, or a custom template. For more information about custom templates, including how to configure them in the Azure classic portal, see [Configuring custom templates for Azure Rights Management](https://docs.microsoft.com/rights-management/deploy-use/configure-custom-templates) on the Microsoft documentation site.
+You can query properties of a default template, or a custom template. For more information about custom templates, including how to configure them in the Azure classic portal, see [Configuring custom templates for the Azure Rights Management service](https://docs.microsoft.com/information-protection/deploy-use/configure-custom-templates).
 
 ## EXAMPLES
 
@@ -64,12 +64,12 @@ Accept wildcard characters: False
 Gets the content expiration configuration setting for content that is protected with the template.
 
 One of the following values is returned:
--- Never.
-Indicates that content is available indefinitely.
--- OnDate.
-Indicates that content expires at a certain fixed date.
--- AfterDays.
-Indicates that content is available for the indicated number of days after it is protected.
+
+- **Never**. Indicates that content is available indefinitely.
+
+- **OnDate**. Indicates that content expires at a certain fixed date.
+
+- **AfterDays**. Indicates that content is available for the indicated number of days after it is protected.
 
 ```yaml
 Type: SwitchParameter
@@ -142,6 +142,7 @@ Accept wildcard characters: False
 Lists the number of days content is accessible offline after a license to consume it is acquired.
 
 -1 indicates unlimited access.
+
 0 indicates that a license must be obtained for each use and that content is only available online.
 
 ```yaml
@@ -219,9 +220,11 @@ Accept wildcard characters: False
 ```
 
 ### -Status
-Indicates that this cmdlet displays the status of the template.
--- Archived templates are available to consume previously protected content but are not presented to users.
--- Published templates are distributed to users and made available to protect content.
+The status of the template:
+
+-**Archived** templates are available to consume previously protected content but are not displayed to users.
+
+--**Published** templates are available to users to protect content.
 
 ```yaml
 Type: SwitchParameter
@@ -237,6 +240,7 @@ Accept wildcard characters: False
 
 ### -TemplateId
 Specifies the GUID of a Rights Management template.
+
 You can use the [Get-AadrmTemplate](./Get-AadrmTemplate.md) cmdlet to obtain the template ID of all templates.
 
 ```yaml
@@ -266,4 +270,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-AadrmTemplateProperty](./Set-AadrmTemplateProperty.md)
 
-[Configuring custom templates for Azure Rights Management](https://docs.microsoft.com/rights-management/deploy-use/configure-custom-templates)
+[Configuring custom templates for the Azure Rights Management service](https://docs.microsoft.com/information-protection/deploy-use/configure-custom-templates)
