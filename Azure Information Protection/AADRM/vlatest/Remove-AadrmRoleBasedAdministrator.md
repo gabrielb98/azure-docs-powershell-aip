@@ -36,8 +36,7 @@ Note: One of the parameters for this cmdlet uses the ObjectId (also known as a G
 
 1. If you have not already done so, download and install a PowerShell module for Azure AD. Connect to the service and get details of the security group that you want to specify. For example, connect to the service by running **Connect-MsolService**, and then run **Get-MsolGroup**. 
 
-Tip: If you have many groups, use the **Where-Object** cmdlet in Windows PowerShell to filter results.
-For example, you might enter the following cmdlet to filter and return only groups that start with "Rights": **Get-MsolGroup | where {$_.DisplayName -like "Rights*" }**
+Tip: If you have many groups, use the **Where-Object** cmdlet in Windows PowerShell to filter results. For example, you might enter the following cmdlet to filter and return only groups that start with "Rights": **Get-MsolGroup | where {$_.DisplayName -like "Rights*" }**
 
 2. From the output of the cmdlet, copy the GUID value that was returned and use (paste) that value into the value of the *ObjectId* parameter when you run the **Add-RoleBased Administrator** or [Remove-AadrmRoleBasedAdministrator](./Remove-AadrmRoleBasedAdministrator) cmdlet.
 
@@ -48,21 +47,21 @@ For example, you might enter the following cmdlet to filter and return only grou
 PS C:\>Remove-AadrmRoleBasedAdministrator -SecurityGroupDisplayName "Finance Employees"
 ```
 
-This command removes administrative rights from the group named Finance Employees for Rights Management service.
+This command removes Azure Rights Management administrative rights from the group named Finance Employees.
 
 ### Example 2: Remove administrative rights by using an email address
 ```
 PS C:\>Remove-AadrmRoleBasedAdministrator -EmailAddress "EvanNarvaez@Contoso.com"
 ```
 
-This command removes administrative rights from the group that has the specified email address for Rights Management.
+This command removes Azure Rights Management administrative rights from the group that has the specified email address.
 
 ## PARAMETERS
 
 ### -EmailAddress
 Specifies the email address of a user or group.
 
-The cmdlet removes administrative rights for the user or group identified by the email address that you specify.
+The cmdlet removes Azure Rights Management administrative rights for the user or group identified by the email address that you specify.
 
 ```yaml
 Type: String
@@ -79,7 +78,7 @@ Accept wildcard characters: False
 ### -ObjectId
 Specifies the GUID of a user or group.
 
-The cmdlet removes administrative rights for the user or group identified by GUID that you specify.
+The cmdlet removes Azure Rights Management administrative rights for the user or group identified by GUID that you specify.
 
 ```yaml
 Type: Guid
@@ -99,6 +98,7 @@ Specifies a role. The cmdlet removes an administrator that belongs to the role t
 The acceptable values for this parameter are:
 
 - ConnectorAdministrator
+
 - GlobalAdministrator
 
 If you do not specify a role, the cmdlet removes the administrator from the GlobalAdministrator role.
@@ -116,8 +116,9 @@ Accept wildcard characters: False
 ```
 
 ### -SecurityGroupDisplayName
-Specifies the display name of a user or group.
-The cmdlet removes administrative rights for the user or group identified by the name that you specify.
+Specifies the display name of a user or group. 
+
+The cmdlet removes Azure Rights Management administrative rights for the user or group identified by the name that you specify.
 
 ```yaml
 Type: String

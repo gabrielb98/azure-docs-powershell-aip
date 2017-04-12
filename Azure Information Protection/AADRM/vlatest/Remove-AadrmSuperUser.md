@@ -21,7 +21,7 @@ The **Remove-AadrmSuperUser** cmdlet removes a user from the list of users who a
 
 This cmdlet does not remove a group or a user from that a group that is assigned super user privileges by using the [Set-AadrmSuperUserGroup](./Set-AadrmSuperUserGroup.md) cmdlet.
 
-To add or remove super users, you must first enable the super user feature for Azure Rights Management by using the [Enable-AadrmSuperUserFeature](./Enable-AadrmSuperUserFeature.md) cmdlet. For more information about super users, see the [Get-AadrmSuperUser](./Get-AadrmSuperUser.md) cmdlet.
+For more information about super users, see the [Get-AadrmSuperUser](./Get-AadrmSuperUser.md) cmdlet.
 
 You must use PowerShell to configure super users; you cannot do this configuration by using a management portal.
 

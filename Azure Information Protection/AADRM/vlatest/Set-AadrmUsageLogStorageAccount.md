@@ -23,7 +23,7 @@ You must use PowerShell to set this information; you cannot do this action by us
 
 This cmdlet should be used only if you have usage logs prior to the usage logging change in February 2016. After this date, the only Windows PowerShell cmdlet that you need for Azure RMS usage logging is Get-AadrmUserLog.
 
-For more information about usage logging, see [Logging and analyzing Azure Rights Management usage](https://docs.microsoft.com/rights-management/deploy-use/log-analyze-usage) on the Microsoft documentation site.
+For more information about usage logging, see [Logging and analyzing usage of the Azure Rights Management service](https://docs.microsoft.com/information-protection/deploy-use/log-analyze-usage).
 
 ## EXAMPLES
 
@@ -43,7 +43,7 @@ The second command specifies the location for your usage logs.
 ### -AccessKey
 Specifies your access key as a secure string.
 
-To view your access key, connect to the Azure Management Portal.
+To view your access key, connect to the Azure portal.
 
 ```yaml
 Type: SecureString
@@ -60,7 +60,7 @@ Accept wildcard characters: False
 ### -StorageAccount
 Specifies a storage account.
 
-To obtain the name of this account, use the Management Portal.
+To obtain the name of this account, use the Azure portal.
 
 ```yaml
 Type: String
@@ -89,4 +89,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [ConvertTo-SecureString](http://go.microsoft.com/fwlink/?LinkID=113291)
 
-[Logging and analyzing Azure Rights Management usage](https://docs.microsoft.com/rights-management/deploy-use/log-analyze-usage)
+[Logging and analyzing usage of the Azure Rights Management service](https://docs.microsoft.com/information-protection/deploy-use/log-analyze-usage)
