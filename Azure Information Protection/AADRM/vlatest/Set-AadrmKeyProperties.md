@@ -17,17 +17,17 @@ Set-AadrmKeyProperties [-Force] -KeyIdentifier <string> -Active <Bool> [-WhatIf]
 ```
 
 ## DESCRIPTION
-The **Set-AadrmKeyProperties** cmdlet changes an Archived status for a specified key object for the tenant to be Active. This operation creates a new key pair and is sometimes referred to as "rolling the key". Because there can be only one active tenant key at any one time, the previously active tenant key is automatically set to Archived.
+The **Set-AadrmKeyProperties** cmdlet changes an Archived status for a specified key object for the tenant to be Active. Because there can be only one active tenant key at any one time, the previously active tenant key is automatically set to Archived.
 
-New users of the Azure Rights Management service immediately use the new tenant key to protect content. Existing users of the service gradually transition from the old tenant key to the new tenant key, and this staggered transition can take a few weeks to complete. You can force the update on clients by re-initializing the user environment (also known as bootstrapping). Documents and files that were protected with the old tenant key remain accessible to authorized users by using the tenant key that is now archived.
+New users of the Azure Rights Management service immediately use the identified tenant key to protect content. Existing users of the service gradually transition from the previously active tenant key to the newly active tenant key, and this staggered transition can take a few weeks to complete. You can force the update on clients by re-initializing the user environment (also known as bootstrapping). Documents and files that were protected with the previously active tenant key remain accessible to authorized users by using the tenant key that is now archived.
 
-Setting the tenant key object status to Active also re-signs all templates with the new key pair. Because this can be a time-consuming operation, especially if you have many templates, we do not recommend that you run this operation frequently. 
+Setting the tenant key object status to Active also re-signs all templates with the newly active tenant key. Because this can be a time-consuming operation, especially if you have many templates, we do not recommend that you run this operation frequently. 
 
 To run this cmdlet, you must specify the KeyIdentifier for the tenant key object that you want to set to Active. To get this value, use the [Get-AadrmKeys](./Get-AadrmKeys.md) cmdlet. 
 
 Note that you cannot use this cmdlet to change an Active status to be Archived. To set a tenant key object to have a status of Archived, you must set another tenant key object to Active.
 
-For more information about the tenant key, see [Planning and implementing your Azure Information Protection  tenant key](/information-protection/plan-design/plan-implement-tenant-key).
+For more information about the tenant key, see [Planning and implementing your Azure Information Protection  tenant key](https://docs.microsoft.com/information-protection/plan-design/plan-implement-tenant-key).
 
 ## EXAMPLES
 
