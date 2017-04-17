@@ -178,5 +178,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-AadrmOnboardingControlPolicy](./Get-AadrmOnboardingControlPolicy.md)
-
-[Azure Active Directory Cmdlets](http://msdn.microsoft.com/library/azure/jj151815.aspx)
