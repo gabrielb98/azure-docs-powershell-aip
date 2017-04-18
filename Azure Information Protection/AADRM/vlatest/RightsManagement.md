@@ -216,7 +216,7 @@ Removes a super user from Rights Management.
 Deletes a Rights Management rights policy template.
 
 
-### [Set-​Aadrm​Key​Properties](./Set-Aadrm​Key​Properties.md)
+### [Set-AadrmKeyProperties](./Set-AadrmKeyProperties.md)
 Updates the properties of a tenant key object for Rights Management.
 
 
