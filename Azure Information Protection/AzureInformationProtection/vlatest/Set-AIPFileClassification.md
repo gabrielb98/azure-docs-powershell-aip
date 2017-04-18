@@ -165,7 +165,7 @@ Accept wildcard characters: False
 ### -Path
 Specifies a local or network path to the file or files to which you want to apply labels. 
 
-Examples include C:\Folder\, C:\Folder\Filename, \\Server\Folder.
+Examples include C:\Folder\, C:\Folder\Filename, \\\Server\Folder.
 
 Wildcards are not supported.
 
