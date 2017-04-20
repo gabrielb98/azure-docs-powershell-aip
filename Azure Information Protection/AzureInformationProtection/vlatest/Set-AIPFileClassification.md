@@ -26,8 +26,6 @@ Currently, you cannot create or edit labels by using PowerShell but must do this
 
 In addition, this cmdlet does not support a service principal account in Azure Active Directory; you must run it interactively with a user account.
 
-NOTE: This cmdlet is currently in preview and is not included in the 1.4.21.0 version of the module. To run this cmdlet, you must install a preview version of the client and the module version number must be at least 1.5.16.0.
-
 ## EXAMPLES
 
 ### Example 1: Scan all files in a folder and any of its subfolders, and apply labels according to the configured conditions for automatic classification
