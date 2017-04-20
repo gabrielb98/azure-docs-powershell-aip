@@ -23,9 +23,13 @@ The **Unprotect-RMSFile** cmdlet removes Rights Management (RMS) protection from
 If you are unprotecting a container file, each child is recursively extracted, unprotected, and repackaged. Supported container file types are .zip, .rar, .7z, .msg, and .pst.
 
 When you run this cmdlet, you have the following options:
+
 - The file is unprotected in the same folder so that the original protected file and the new unprotected file co-exist.
+
 - The original file remains protected and an unprotected version of the file is created in another location.
+
 - All files in the specified folder are unprotected in the current location, replacing the original files that were protected.
+
 - All files in the specified folder remains protected and an unprotected version of each file is created in another location.
 
 You can run this command concurrently when you specify a different path for the *LogFile* parameter for each command that runs in parallel. If you do not specify a different log file path and the previous command has not finished, the new command will fail.
@@ -124,9 +128,12 @@ Accept wildcard characters: False
 
 ### -LogFile
 Specifies the path for log files that list the files that are successfully or unsuccessfully unprotected. Three log files are created: 
-- Success
-- Failure
-- Debug
+
+- **Success**
+
+- **Failure**
+
+- **Debug**
 
 For container files, these log files also include nested files.
 

@@ -26,14 +26,18 @@ Multiple file types can be protected in the same way that the Azure Information 
 Before you run this cmdlet, you must run [Get-RMSTemplate](./Get-RMSTemplate.md) to download the templates onto your computer. If the template that you want to use has been modified since you ran this cmdlet, run it again with the **-force** parameter to download the revised template.
 
 When you run this cmdlet, you have the following options:
+
 - The file is protected in the current location, replacing the original file that was unprotected.
+
 - The original file remains unprotected and a protected version of the file is created in another location.
+
 - All files in the specified folder are protected in the current location, replacing the original files that were unprotected.
+
 - All files in the specified folder remains unprotected and a protected version of each file is created in another location.
 
 You cannot run this command concurrently but must wait for the original command to complete before running it again. If you try to run it again before the previous command has finished, the new command will fail.
 
-Tip: For step-by-step instructions to use this cmdlet to protect files on a Windows Server file share, using File Resource Manager and File Classification Infrastructure, see [RMS Protection with Windows Server File Classification Infrastructure (FCI)](https://docs.microsoft.com/information-protection/rms-client/configure-fci) on the Microsoft documentation site.
+Tip: For step-by-step instructions to use this cmdlet to protect files on a Windows Server file share, using File Resource Manager and File Classification Infrastructure, see [RMS Protection with Windows Server File Classification Infrastructure (FCI)](https://docs.microsoft.com/information-protection/rms-client/configure-fci).
 
 ## EXAMPLES
 
@@ -129,10 +133,13 @@ Specifies that the content key for the file or files this cmdlet protects does n
 
 The acceptable values for this parameter:
 
-- Disk:  The content key is prevented from being cached locally in the license store.
-For example, on Windows computers, the license store is %localappdata%\Microsoft\MSIPC.
-- License:  The content key is prevented from being inserted within the serialized publishing license.
-- All:  The content key is prevented from being cached locally in the license store and being inserted within the serialized publishing license.
+- **Disk**: The content key is prevented from being cached locally in the license store.
+
+    For example, on Windows computers, the license store is %localappdata%\Microsoft\MSIPC.
+
+- **License**:  The content key is prevented from being inserted within the serialized publishing license.
+
+- **All**: The content key is prevented from being cached locally in the license store and being inserted within the serialized publishing license.
 
 ```yaml
 Type: String
