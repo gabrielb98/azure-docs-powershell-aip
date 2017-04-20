@@ -26,7 +26,7 @@ Currently, you cannot create or edit labels by using PowerShell but must do this
 
 In addition, this cmdlet does not support a service principal account in Azure Active Directory; you must run it interactively with a user account.
 
-Note: Currently, this cmdlet is in preview.
+Note: This cmdlet is currently in preview.
 
 ## EXAMPLES
 
