@@ -108,8 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -Permission
-Specifies the usage rights for the ad-hoc policy.
-Use this parameter and the *UserEmail* parameter to grant rights to specified users.
+Specifies the usage rights for the ad-hoc policy. Use this parameter and the *UserEmail* parameter to grant rights to specified users.
 
 The acceptable values for this parameter:
 - VIEW

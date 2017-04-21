@@ -41,9 +41,8 @@ This command sets the super user group for the organization to SuperUserGroup@co
 ### -GroupEmailAddress
 Specifies the group email address for the super user group.
 
-*GroupEmailAddress* can specify a group that contains individual users or other nested groups.
+*GroupEmailAddress* can specify a group that contains individual users or other nested groups. It must be a valid group email address for an existing group in the organization.
 
-The *GroupEmailAddress* must be a valid group email address in the organization.
 
 ```yaml
 Type: String
