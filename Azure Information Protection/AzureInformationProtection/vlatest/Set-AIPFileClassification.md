@@ -16,17 +16,15 @@ Set-AIPFileClassification [-JustificationMessage <String>] [-Force] [-Path] <Str
 ```
 
 ## DESCRIPTION
-The Set-AIPFileClassification cmdlet can automatically apply an Azure Information Protection label for one or more files when you configure labels in your Azure Information Protection policy to use conditions. Labels are applied when the conditions are configured for automatic classification. For more information about conditions, see [How to configure conditions for automatic and recommended classification for Azure Information Protection](/information-protection/deploy-use/configure-policy-classification).
+The Set-AIPFileClassification cmdlet can automatically apply an Azure Information Protection label for one or more files when you configure labels in your Azure Information Protection policy to use conditions. Labels are applied when the conditions are configured for automatic classification. For more information about conditions, see [How to configure conditions for automatic and recommended classification for Azure Information Protection](https://docs.microsoft.com/information-protection/deploy-use/configure-policy-classification).
 
 When this cmdlet is run, it inspects the file contents and if the condition is met for a label, that label is applied. This action can automatically apply or remove protection when the applied label is also configured for Rights Management protection in the Azure Information Protection policy.
 
 By default, if the file already has a label, the existing label or protection is not replaced.
 
-Currently, you cannot create or edit labels by using PowerShell but must do this by using the Azure portal. For instructions, see Configuring Azure Information Protection policy (https://docs.microsoft.com/information-protection/deploy-use/configure-policy).
+Currently, you cannot create or edit labels by using PowerShell but must do this by using the Azure portal. For instructions, see [Configuring Azure Information Protection policy](https://docs.microsoft.com/information-protection/deploy-use/configure-policy).
 
 In addition, this cmdlet does not support a service principal account in Azure Active Directory; you must run it interactively with a user account.
-
-NOTE: This cmdlet is currently in preview and is not included in the 1.4.21.0 version of the module. To run this cmdlet, you must install a preview version of the client and the module version number must be at least 1.5.16.0.
 
 ## EXAMPLES
 
@@ -195,4 +193,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-​AI​PFile​Status](./Get-​AI​PFile​Status.md)
+
+[Set-AIPFileLabel](./Set-AIPFileLabel.md)
 

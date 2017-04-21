@@ -23,7 +23,7 @@ You must use PowerShell to set the migration URL; you cannot do this action by u
 
 Migration URLs let you migrate from Azure Rights Management to a supported on-premises Rights Management server. Use this migration technique if you need indefinite access to content that has been previously protected by using Azure Rights Management and you have decided to no longer use Azure Rights Management.
 
-In addition to setting this migration URL for clients, you must export your keys and policies from the cloud service in the form of a trusted publishing domain (TPD file) and import them into an on-premises Rights Management server. For more information, see the instructions for exporting your tenant key in [Microsoft-managed: Tenant key lifecycle operations](https://docs.microsoft.com/rights-management/deploy-use/operations-microsoft-managed-tenant-key) on the Microsoft documentation site.
+In addition to setting this migration URL for clients, you must export your keys and policies from the cloud service in the form of a trusted publishing domain (TPD file) and import them into an on-premises Rights Management server. For more information, see the instructions for exporting your tenant key in [Microsoft-managed: Tenant key lifecycle operations](https://docs.microsoft.com/information-protection/deploy-use/operations-microsoft-managed-tenant-key).
 
 ## EXAMPLES
 
@@ -109,4 +109,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-AadrmMigrationUrl](./Get-AadrmMigrationUrl.md)
 
-[Microsoft-managed: Tenant key lifecycle operations](https://docs.microsoft.com/rights-management/deploy-use/operations-microsoft-managed-tenant-key)
+[Microsoft-managed: Tenant key lifecycle operations](https://docs.microsoft.com/information-protection/deploy-use/operations-microsoft-managed-tenant-key)

@@ -179,3 +179,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-AIPFileStatus](./Get-AIPFileStatus.md)
+
+[Set-AIPFileClassification](./Set-AIPFileClassification.md)
