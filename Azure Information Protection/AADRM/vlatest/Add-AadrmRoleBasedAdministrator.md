@@ -28,20 +28,18 @@ Add-AadrmRoleBasedAdministrator [-EmailAddress <String>] [-Role <Role>] [<Common
 ```
 
 ## DESCRIPTION
-The **Add-AadrmRoleBasedAdministrator** cmdlet grants administrative rights to Azure Rights Management within your organization. Specify a user or group to have administrative rights.
+The **Add-AadrmRoleBasedAdministrator** cmdlet grants administrative rights to your organization's Azure Rights Management service, so that administrators you delegate to configure this service can do so by using PowerShell commands. 
 
 You must use PowerShell to configure delegated administrative control for the Azure Rights Management service; you cannot do this configuration by using a management portal.
 
-This cmdlet adds a member user or group to the list of users and groups that can administer Rights Management. By default, all Microsoft Office 365 global administrators can run all the PowerShell cmdlets for Rights Management. To grant rights to another administrator within your organization, use this cmdlet to specify a security group that can administer the service.
+When you run this cmdlet, you can specify a user or a group in Azure AD, and you can run the cmdlet multiple times to add new users and new groups. To see the full list, use [Get-AadrmRoleBasedAdministrator](./Get-AadrmRoleBasedAdministrator.md).
 
-Note: One of the parameters for this cmdlet uses the ObjectId (also known as a GUID). Because the Office 365 admin center and the Azure classic portal does not display the GUIDs that are used to identify specific user or groups objects, you can use the following two steps to find the values that you need to specify the GUIDs. Or, you can use the Azure portal to find these values.
+If you specify a group, it can be any group in Azure AD and does not need to be mail-enabled. To specify a group that is not mail-enabled, use either the *SecurityGroupDisplayName* parameter, or the *ObjectId* parameter. You can also use these parameters or the EmailAddress parameter for a mail-enabled group.
 
-1. If you have not already done so, download and install a PowerShell module for Azure AD. Connect to the service and get details of the security group that you want to specify. For example, connect to the service by running **Connect-MsolService**, and then run **Get-MsolGroup**. 
+For more information about the user and group requirements, see [Preparing users and groups for Azure Information Protection](https://docs.microsoft.com/information-protection/plan-design/prepare). This information includes how to identify the different group types and how to find the values to specify them when you run this cmdlet. 
 
-Tip: If you have many groups, use the **Where-Object** cmdlet in Windows PowerShell to filter results.
-For example, you might enter the following cmdlet to filter and return only groups that start with "Rights": **Get-MsolGroup | where {$_.DisplayName -like "Rights*" }**
+After delegating control to other administrators, they might find it useful to reference a list of the cmdlets they can run, grouped by administrative task. For this information, see [Administering the Azure Rights Management service by using Windows PowerShell](/information-protection/deploy-use/administer-powershell).
 
-2. From the output of the cmdlet, copy the GUID value that was returned and use (paste) that value into the value of the *ObjectId* parameter when you run the **Add-RoleBased Administrator** or [Remove-AadrmRoleBasedAdministrator](./Remove-AadrmRoleBasedAdministrator) cmdlet.
 
 ## EXAMPLES
 
@@ -50,19 +48,19 @@ For example, you might enter the following cmdlet to filter and return only grou
 PS C:\>Add-AadrmRoleBasedAdministrator -SecurityGroupDisplayName "Finance Employees"
 ```
 
-This command grants administrative rights to Rights Management for the group named Finance Employees.
+This command grants administrative rights to the Azure Rights Management service for the group that has a display name of "Finance Employees".
 
 ### Example 2: Grant administrative rights by using a GUID
 ```
 PS C:\>Add-AadrmRoleBasedAdministrator -ObjectId 2c8afe23-bf58-4289-bea1-05131aeb50ab
 ```
 
-This command grants administrative rights to Rights Management for the group that has the specified GUID.
+This command grants administrative rights to the Azure Rights Management service for the group that has the specified GUID.
 
 ## PARAMETERS
 
 ### -EmailAddress
-Specifies the email address of a user or group. The cmdlet adds administrative rights for the user or group that is identified by the email address that you specify.
+Specifies the email address of a user or group to have administrative rights for the Azure Rights Management service. If the user has no email address, specify the user's Universal Principal Name.
 
 ```yaml
 Type: String
@@ -77,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectId
-Specifies the GUID of a user or group. The cmdlet adds administrative rights for the user or group that is identified by a GUID that you specify.
+Specifies the GUID of a user or group to have administrative rights for the Azure Rights Management service.
 
 ```yaml
 Type: Guid
@@ -92,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -Role
-Specifies a role of either **Azure Rights Management global administrator** (the user can configure all aspects of Azure RMS by using Azure RMS PowerShell commands) or **Azure Rights Management connector administrator** (the account is granted least privileges to configure and run the RMS connector).
+Specifies a role of either **Azure Rights Management global administrator** (the user can configure all aspects of the Azure Rights Management service by using PowerShell commands) or **Azure Rights Management connector administrator** (the account is granted least privileges to configure and run the RMS connector).
 
 To specify these roles, use the following values:  
 
@@ -115,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -SecurityGroupDisplayName
-Specifies the display name of a user or group. The cmdlet adds administrative rights for the user or group that is identified by the name that you specify.
+Specifies the display name of a user or group to have administrative rights for the Azure Rights Management service.
 
 ```yaml
 Type: String
