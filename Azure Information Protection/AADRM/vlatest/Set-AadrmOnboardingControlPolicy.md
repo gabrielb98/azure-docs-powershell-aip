@@ -26,7 +26,7 @@ This control can be based on assigned user licenses for the service or membershi
 
 If you use the assigned license option, you can assign licenses to users by using the Office 365 admin center or by using Azure PowerShell and the [Set-MsolUserLicense](./Set-MsolUserLicense.md) cmdlet from the Azure AD PowerShell administration module. You can also use the [Get-MsolAccountSku](./Get-MsolAccountSku.md) cmdlet to obtain the different types of licenses that you can assign in your organization.
 
-If you use the group membership option, you must specify a security group, which does not have to be mail-enabled and it can contain other groups. To specify the group, use the group GUID. To obtain that GUID, use the [Get-MsolGroup](./Get-MsolGroup.md) cmdlet from the Azure AD PowerShell administration module.
+If you use the group membership option, you must specify a security group, which does not have to be mail-enabled and it can contain other groups. To specify the group, use the group GUID. For more information about the user and group requirements and how to find the group GUID, see [Preparing users and groups for Azure Information Protection](https://docs.microsoft.com/information-protection/plan-design/prepare).
 
 For more information about the Azure AD PowerShell cmdlets, see [Azure Active Directory PowerShell](https://docs.microsoft.com/powershell/azure/overview?view=azureadps-2.0).
 
@@ -102,9 +102,9 @@ Accept wildcard characters: False
 ```
 
 ### -SecurityGroupObjectId
-Specifies the object ID of a security group.
+Specifies the object ID of a security group in Azure AD. If you try to specify the object ID of a distribution group, you will see an error.
 
-The specified group restricts which users can protect content by using Rights Management.If you also enable license enforcement, only users that have a license assigned and are members of this specified group can protect content by using Azure Rights Management.
+The specified group restricts which users can protect content by using Rights Management. If you also enable license enforcement, only users that have a license assigned and are members of this specified group can protect content by using Azure Rights Management.
 
 You can use this parameter to implement a phased deployment of Azure Rights Management even if all users have a license assigned to them.
 
@@ -152,6 +152,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
+
 The cmdlet is not run.
 
 ```yaml
@@ -178,5 +179,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-AadrmOnboardingControlPolicy](./Get-AadrmOnboardingControlPolicy.md)
-
-[Azure Active Directory Cmdlets](http://msdn.microsoft.com/library/azure/jj151815.aspx)

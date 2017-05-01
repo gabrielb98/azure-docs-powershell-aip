@@ -177,7 +177,7 @@ Gets a list of Rights Management templates.
 
 
 ### [Get-AadrmUsageLogFeature](./Get-AadrmUsageLogFeature.md)
-Gets the status of usage logging for Rights Management.
+Deprecated: Gets the status of legacy usage logging for Rights Management.
 
 
 ### [Get-AadrmUsageLogLastCounterValue](./Get-AadrmUsageLogLastCounterValue.md)
