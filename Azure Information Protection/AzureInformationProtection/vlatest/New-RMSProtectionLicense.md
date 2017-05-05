@@ -89,9 +89,9 @@ Accept wildcard characters: False
 ```
 
 ### -OwnerEmail
-Specifies the Rights Management owner of the rights policy by email address, which can be a single account or a group account (distribution list or emailed-enabled security group). You can use this parameter to set an owner other than yourself.
+Specifies the Rights Management owner of the rights policy by email address. You can use this parameter to set a Rights Management owner other than yourself.
 
-The Rights Management owner has all rights (Full Control) for the file. The  Rights Management owner is independent from the Windows file system owner. 
+By default, the account running this cmdlet is both the Rights Management issuer and the Rights Management owner of the protected file. This parameter lets you assign a different Rights Management owner to the protected file so that the specified account has all usage rights (Full Control) for the file and can always access it. The Rights Management owner is independent from the Windows file system owner. For more information, see [Rights Management issuer and Rights Management owner](https://docs.microsoft.com/information-protection/deploy-use/configure-usage-rights#rights-management-issuer-and-rights-management-owner).
 
 If you do not specify a value, the cmdlet will use your email address to identify you as the Rights Management owner of this ad-hoc rights policy.
 
