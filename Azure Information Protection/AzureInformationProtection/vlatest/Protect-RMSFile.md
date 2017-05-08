@@ -21,35 +21,39 @@ Protect-RMSFile [-File <String>] [-Folder <String>] [-Recurse] [-TemplateID <Str
 ## DESCRIPTION
 The **Protect-RMSFile** cmdlet protects a file or all files in a specified folder by using Azure RMS or AD RMS. If the file was previously protected, it will be protected again, to apply any changes such as those that might be made to the template that is being used to protect the file.
 
-Multiple file types can be protected in the same way that the Azure Information Protection client can protect files when you use the "Classify and protect" right-click option from File Explorer. Different levels of protection aree automatically applied (native or generic), depending on the file type. You can change the level of protection by editing the registry. In addition, some files change their file name extension after they are protected by Rights Management. For more information, see the [File types supported for protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-file-types#file-types-supported-for-protection) section from the Azure Information Protection client admin guide.
+Multiple file types can be protected in the same way that the Azure Information Protection client can protect files when you use the "Classify and protect" right-click option from File Explorer. Different levels of protection are automatically applied (native or generic), depending on the file type. You can change the level of protection by editing the registry. In addition, some files change their file name extension after they are protected by Rights Management. For more information, see the [File types supported for protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-file-types#file-types-supported-for-protection) section from the Azure Information Protection client admin guide.
 
 Before you run this cmdlet, you must run [Get-RMSTemplate](./Get-RMSTemplate.md) to download the templates onto your computer. If the template that you want to use has been modified since you ran this cmdlet, run it again with the **-force** parameter to download the revised template.
 
 When you run this cmdlet, you have the following options:
+
 - The file is protected in the current location, replacing the original file that was unprotected.
+
 - The original file remains unprotected and a protected version of the file is created in another location.
+
 - All files in the specified folder are protected in the current location, replacing the original files that were unprotected.
+
 - All files in the specified folder remains unprotected and a protected version of each file is created in another location.
 
 You cannot run this command concurrently but must wait for the original command to complete before running it again. If you try to run it again before the previous command has finished, the new command will fail.
 
-Tip: For step-by-step instructions to use this cmdlet to protect files on a Windows Server file share, using File Resource Manager and File Classification Infrastructure, see [RMS Protection with Windows Server File Classification Infrastructure (FCI)](https://docs.microsoft.com/information-protection/rms-client/configure-fci) on the Microsoft documentation site.
+Tip: For step-by-step instructions to use this cmdlet to protect files on a Windows Server file share, using File Resource Manager and File Classification Infrastructure, see [RMS Protection with Windows Server File Classification Infrastructure (FCI)](https://docs.microsoft.com/information-protection/rms-client/configure-fci).
 
 ## EXAMPLES
 
 ### Example 1: Protect and replace a single file by using a template
 ```
-PS C:\>Protect-RMSFile -File "C:\Test.docx" -InPlace -TemplateID 82bf3474-6efe-4fa1-8827-d1bd93339119 -OwnerEmail "IT@Contoso.com"
+PS C:\>Protect-RMSFile -File "C:\Test.docx" -InPlace -TemplateID 82bf3474-6efe-4fa1-8827-d1bd93339119
 InputFile             EncryptedFile
 ---------             -------------
 C:\Test.docx          C:\Test.docx
 ```
 
-This command protects a single file named Test.docx by using a template, and replaces the original unprotected file. The Rights Management owner of the file, and the email address that might be displayed to users when they access the protected file, is for the IT department.
+This command protects a single file named Test.docx by using a template, and replaces the original unprotected file. The Rights Management owner of the file, and the email address that might be displayed to users when they access the protected file, is automatically set as the email address for the account running the command.
 
 ### Example 2: Create a protected copy of a single file by using a template
 ```
-PS C:\>Protect-RMSFile -File "Test.docx" -TemplateID 82bf3474-6efe-4fa1-8827-d1bd93339119 -OwnerEmail "IT@Contoso.com"
+PS C:\>Protect-RMSFile -File "Test.docx" -TemplateID 82bf3474-6efe-4fa1-8827-d1bd93339119
 InputFile             EncryptedFile
 ---------             -------------
 C:\Test.docx          C:\Test-Copy.docx
@@ -84,7 +88,7 @@ InputFile                        EncryptedFile
 \\server1\Docs\Jan2015.txt       \\server1\Docs\Jan2015.ptxt
 ```
 
-This command protects all files in a server share (single folder only, not subfolders), replacing the unprotected files. The Rights Management owner of the file, and the email address that might be displayed to users when they access the protected file, is for the IT department.
+This command protects all files in a server share (single folder only, not subfolders), replacing the unprotected files. The email address that is displayed to users when they do not have access, is for the IT department group and this group is granted Full Control usage rights in the template so that they can change the usage rights for the protected files. 
 
 ### Example 5: Protected files with a specific file name extension in a folder by using a template
 ```
@@ -103,7 +107,7 @@ InputFile                                   EncryptedFile
 \\server1\Docs\Reports\Jan2015.docx         \\server1\Docs\Reports\Jan2015.docx
 ```
 
-This command protects only files that have a .docx file name extension in a folder (and all subfolders) on a server share, replacing the unprotected files. The Rights Management owner of the file, and the email address that might be displayed to users when they access the protected file, is for the IT department.
+This command protects only files that have a .docx file name extension in a folder (and all subfolders) on a server share, replacing the unprotected files. As in the previous example, the email address that is displayed to users when they do not have access, is for the IT department.
 
 Although the [Protect-RMSFile](./Protect-RMSFile.md) command does not natively support wildcards, you can use Windows PowerShell to achieve this, and change the file name extension in the example, as required.
 
@@ -129,10 +133,13 @@ Specifies that the content key for the file or files this cmdlet protects does n
 
 The acceptable values for this parameter:
 
-- Disk:  The content key is prevented from being cached locally in the license store.
-For example, on Windows computers, the license store is %localappdata%\Microsoft\MSIPC.
-- License:  The content key is prevented from being inserted within the serialized publishing license.
-- All:  The content key is prevented from being cached locally in the license store and being inserted within the serialized publishing license.
+- **Disk**: The content key is prevented from being cached locally in the license store.
+
+    For example, on Windows computers, the license store is %localappdata%\Microsoft\MSIPC.
+
+- **License**:  The content key is prevented from being inserted within the serialized publishing license.
+
+- **All**: The content key is prevented from being cached locally in the license store and being inserted within the serialized publishing license.
 
 ```yaml
 Type: String
@@ -214,15 +221,15 @@ Accept wildcard characters: False
 ### -OwnerEmail
 Specifies the Rights Management owner of the protected file or files by email address.
 
-The Rights Management owner has all rights (Full Control) for the file. The  Rights Management owner is independent from the Windows file system owner. 
+By default, the account running this cmdlet is both the Rights Management issuer and the Rights Management owner of the protected file. This parameter lets you assign a different Rights Management owner to the protected file so that the specified account has all usage rights (Full Control) for the file and can always access it. The Rights Management owner is independent from the Windows file system owner. For more information, see [Rights Management issuer and Rights Management owner](https://docs.microsoft.com/information-protection/deploy-use/configure-usage-rights#rights-management-issuer-and-rights-management-owner).
 
-You can use this parameter to set an owner other than yourself. If you don't specify a value, the cmdlet will use the email address of your authenticated session to identify the Rights Management owner of the protected file or files. If you use AD RMS, or Azure RMS with a user account to protect files, this will be your email address. If you use Azure RMS with a service principal account, this email address will be long string of numbers and letters.
+If you don't specify a value for this parameter, the cmdlet will use the email address of your authenticated session to identify the Rights Management owner of the protected file or files. If you use AD RMS, or Azure RMS with a user account to protect files, this will be your email address. If you use Azure RMS with a service principal account, this email address will be long string of numbers and letters. This email address is displayed to users who do not have permssions to view the protected document, so that they can request permissions.
 
-If you become the Rights Management owner of the protected file, make sure that the rights you apply to the file do not restrict the original file owner from making changes to the file and using it as intended.
+If you run this cmdlet for Azure RMS with a service principal account, and you own the file or files that you are protecting, specify your own email address for this parameter. If you run this cmdlet for Azure RMS with a service principal account, and a single user owns the file or all the files that you are protecting, specify their email address so that you do not restrict the original file owner from making changes to the file and using it as intended. 
 
-Because users see this email address when they open generically protected files and if they try to access protected files that do not grant them access permissions, consider specifying a group email address such as your help desk or IT department. However, do not specify a group name if members of that group should not have full control rights for the file.
+If you run this cmdlet with multiple files that belong to different users, make sure that those users are granted Full Control usage rights and consider which email address to assign for this parameter. Although you can specify a group email address and this address is displayed to request access permissions, members of the group are not made the Rights Management owner and by default, have no usage rights for the protect file. In this scenario, choose whether to assign a single user (such as an administrator) or specify a group email address that you also assign Full Control usage rights. For the group email configuration, this might be your Help Desk, for example.
 
-Important: Although this parameter is optional, if you do not specify it when you protect files by using Azure RMS and a service principal, the email address that users see in these messages from the Azure Information Protection client or the Rights Management sharing application will not be helpful.Because of this, we recommend that you always specify this parameter when you protect files by using Azure RMS and a service principal rather than your user account.
+Important: Although this parameter is optional, if you do not specify it when you protect files by using Azure RMS and a service principal, the email address that users see from the Azure Information Protection client or the Rights Management sharing application will not be helpful. Because of this, we recommend that you always specify this parameter when you protect files by using Azure RMS and a service principal rather than your user account.
 
 ```yaml
 Type: String

@@ -23,11 +23,11 @@ Add-AadrmSuperUser -ServicePrincipalId <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Add-AadrmSuperUser** cmdlet adds an individual account to the super user list for your organization, by specifying the user's email address or service principal ID. Use this cmdlet to specify one or more individuals as super users for your organization. This operation grants full owner rights to content that is protected by your organization. This means that these super users can decrypt this rights-protected content and remove rights-protection from it, even if an expiration date has been set and expired. Typically, this level of access is required for legal eDiscovery and by auditing teams.
+The **Add-AadrmSuperUser** cmdlet adds an individual account to the super user list for your organization. This operation makes the account a Rights Management owner for all content that is protected by your organization. This means that these super users can decrypt this rights-protected content and remove rights-protection from it, even if an expiration date has been set and expired. Typically, this level of access is required for legal eDiscovery and by auditing teams.
 
 However, before a super user can do these operations, the super user feature for Azure Rights Management must be enabled by using the [Enable-AadrmSuperUserFeature](./Enable-AadrmSuperUserFeature.md) cmdlet. By default, the super user feature is not enabled.
 
-The user that you add must have an Azure AD proxy address, which requires that the user account is either synchronized from Active Directory Domain Services with the attribute set for the proxy address, or that the user is granted a license for Exchange Online.
+Specify the account by email address or service principal ID. To specify a user who does not have an email address, specify their User Principal Name instead. For more information, see [Preparing users and groups for Azure Information Protection](https://docs.microsoft.com/information-protection/plan-design/prepare). 
 
 To specify a group rather than individual users, use the [Set-AadrmSuperUserGroup](./Set-AadrmSuperUserGroup.md) cmdlet instead of this **Add-AadrmSuperUser** cmdlet.
 
@@ -52,7 +52,7 @@ This command adds a service principal to your organization's super user list for
 ## PARAMETERS
 
 ### -EmailAddress
-Specifies the email address of a user in your organization when you want to grant this user super user privileges.
+Specifies the email address of a user in your organization to grant this user super user privileges.
 
 ```yaml
 Type: String
@@ -67,9 +67,9 @@ Accept wildcard characters: False
 ```
 
 ### -ServicePrincipalId
-Specifies the **AppPrincipalId** of the service principal in your organization when you want to grant this account super user privileges. Use the **Get-MsolServicePrincipal** cmdlet to get an existing service principal, or the [New-MsolServicePrincipalCredential](./New-MsolServicePrincipalCredential.md) cmdlet to create a new service principal.
+Specifies the **AppPrincipalId** of the service principal in your organization to grant this account super user privileges. Use the **Get-MsolServicePrincipal** cmdlet to get an existing service principal, or the [New-MsolServicePrincipalCredential](./New-MsolServicePrincipalCredential.md) cmdlet to create a new service principal.
 
-The service principal ID is converted to a pseudo-email address and added to the super users list for the organization. For example, `Add-AadrmSuperUser -ServicePrincipalId "3C367900-44D1-4865-9379-9A3227042C25"` adds 3C367900-44D1-4865-9379-9A3227042C25@\<rms tenant ID\>.rms.na.aadrm.com to the super user list.
+The service principal ID is converted to a pseudo-email address and added to the super user list for the organization. For example, `Add-AadrmSuperUser -ServicePrincipalId "3C367900-44D1-4865-9379-9A3227042C25"` adds 3C367900-44D1-4865-9379-9A3227042C25@\<rms tenant ID\>.rms.na.aadrm.com to the super user list.
 
 You can remove the service principal from the super user list by using the [Remove-AadrmSuperUser](./Remove-AadrmSuperUser.md) cmdlet and this pseudo-email address. You can use the [Get-AadrmSuperUser](./Get-AadrmSuperUser.md) cmdlet to verify the email address.
 
