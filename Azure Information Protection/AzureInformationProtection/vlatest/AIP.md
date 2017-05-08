@@ -13,7 +13,7 @@ The following list contains links to the help topics for the Microsoft Azure Inf
 
 These cmdlets can be used with the Azure Information Protection service, the Azure Rights Management service (Azure RMS), and Active Directory Rights Management Services (AD RMS). 
 
-The current version of the AzureInformationProtection module is **1.4.21.0**. If you have previously installed this module, run the following command to check the version: `(Get-Module AzureInformationProtection -ListAvailable).Version`.
+The current version of the AzureInformationProtection module is **1.7.204.0**. If you have previously installed this module, run the following command to check the version: `(Get-Module AzureInformationProtection -ListAvailable).Version`.
 
 For instructions to use these cmdlets, any current limitations, prerequisites, and scenario examples, see the following documentation from the Azure Information Protection client administrator guide: 
 
@@ -52,6 +52,10 @@ Creates an ad-hoc rights policy for RMS protection.
 
 ### [Protect-RMSFile](./Protect-RMSFile.md)
 Protects a specified file or the files in a specified folder by using RMS.
+
+
+### [Set-AIPFileClassification](./Set-AIPFileClassification)
+Scans a file to automatically set an Azure Information Protection label for a file, according to conditions that are configured in the policy.
 
 
 ### [Set-AIPFileLabel](./Set-AIPFileLabel)
