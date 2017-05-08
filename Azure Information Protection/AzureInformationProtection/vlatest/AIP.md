@@ -1,5 +1,5 @@
 ---
-Module Name: AzureInformationProtectionn
+Module Name: AzureInformationProtection
 Module Guid: NA
 Download Help Link: NA
 Help Version: NA
