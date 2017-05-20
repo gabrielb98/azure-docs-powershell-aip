@@ -74,7 +74,7 @@ This command protects a single file named Test.docx by using a template and plac
 
 ### Example 4: Protected all files in a folder by using a template
 ```
-PS C:\>Protect-RMSFile -Folder "\\server1\Docs" -InPlace -TemplateID e6ee2481-26b9-45e5-b34a-f744eacd53b0 -OwnerEmail "IT@Contoso.com"
+PS C:\>Protect-RMSFile -Folder "\\server1\Docs" -InPlace -DoNotPersistEncryptionKey All -TemplateID e6ee2481-26b9-45e5-b34a-f744eacd53b0 -OwnerEmail "IT@Contoso.com"
 
 InputFile                        EncryptedFile
 
@@ -90,9 +90,11 @@ InputFile                        EncryptedFile
 
 This command protects all files in a server share (single folder only, not subfolders), replacing the unprotected files. The email address that is displayed to users when they do not have access, is for the IT department group and this group is granted Full Control usage rights in the template so that they can change the usage rights for the protected files. 
 
+Because this scenario is protecting files on behalf of others, the *DoNotPersistEncryptionKey* parameter is used for maximum performance and to prevent unused files from being saved to disk.
+
 ### Example 5: Protected files with a specific file name extension in a folder by using a template
 ```
-PS C:\>foreach ($file in (Get-ChildItem -Path \\server1\Docs -Recurse -Force | where {!$_.PSIsContainer} | Where-Object {$_.Extension -eq ".docx"})) {Protect-RMSFile -File $file.PSPath -InPlace -TemplateID "e6ee2481-26b9-45e5-b34a-f744eacd53b0" -OwnerEmail "IT@Contoso.com"}
+PS C:\>foreach ($file in (Get-ChildItem -Path \\server1\Docs -Recurse -Force | where {!$_.PSIsContainer} | Where-Object {$_.Extension -eq ".docx"})) {Protect-RMSFile -File $file.PSPath -InPlace -DoNotPersistEncryptionKey All -TemplateID "e6ee2481-26b9-45e5-b34a-f744eacd53b0" -OwnerEmail "IT@Contoso.com"}
 
 
 InputFile                                   EncryptedFile
@@ -129,17 +131,19 @@ Note that unless your email address is user1@contoso.com, you will not be able t
 ## PARAMETERS
 
 ### -DoNotPersistEncryptionKey
-Specifies that the content key for the file or files this cmdlet protects does not persist, which means that the protected file or files cannot be accessed offline. This is a more secure setting, because the user must be authenticated each time the file is accessed and the policy is checked for any changes. However, it is also less flexible for users who might not have the network connectivity to authenticate. 
+Prevents a self-granted end user license for the Rights Management issuer from being saved when a file is protected. This license lets the Rights Management issuer open the protected file without authenticating to the Rights Management service. This helps to ensure that the person who ran this cmdlet can always open their own files that they protected, even when that person is offline. It also results in minimal delays for that user to open these protected files.  
+
+The Rights Management issuer is the account that protects the files. For more information, see [Rights Management issuer and Rights Management owner](https://docs.microsoft.com/information-protection/deploy-use/configure-usage-rights#rights-management-issuer-and-rights-management-owner). 
+
+By default, this self-granted end user license is saved in both the file itself and on the computer from which the cmdlet is run. The file name starts with EUL and it is created in %localappdata%\Microsoft\MSIPC. Use this parameter to prevent this end user license from saving in the file, on the computer, or both. Specifying this parameter is appropriate if you are protecting files on behalf of others, for example, with Windows Server FCI. In this scenario, the Rights Management issuer will not be opening the protected files and therefore creating and saving the end user license decreases the protection performance and unnecessarily generates a lot of files that can fill up the available disk space.
 
 The acceptable values for this parameter:
 
-- **Disk**: The content key is prevented from being cached locally in the license store.
+- **Disk**: An end user license for the Rights Management issuer is not generated for each file in %localappdata%\Microsoft\MSIPC.
 
-    For example, on Windows computers, the license store is %localappdata%\Microsoft\MSIPC.
+- **License**:  An end user license for the Rights Management issuer is not inserted in the publishing license for the file.
 
-- **License**:  The content key is prevented from being inserted within the serialized publishing license.
-
-- **All**: The content key is prevented from being cached locally in the license store and being inserted within the serialized publishing license.
+- **All**: No end user license for the Rights Management issuer is created and saved when a file is protected.
 
 ```yaml
 Type: String
