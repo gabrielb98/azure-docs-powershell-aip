@@ -74,7 +74,7 @@ This command protects a single file named Test.docx by using a template and plac
 
 ### Example 4: Protected all files in a folder by using a template
 ```
-PS C:\>Protect-RMSFile -Folder "\\server1\Docs" -InPlace DoNotPersistEncryptionKey All -TemplateID e6ee2481-26b9-45e5-b34a-f744eacd53b0 -OwnerEmail "IT@Contoso.com"
+PS C:\>Protect-RMSFile -Folder "\\server1\Docs" -InPlace -DoNotPersistEncryptionKey All -TemplateID e6ee2481-26b9-45e5-b34a-f744eacd53b0 -OwnerEmail "IT@Contoso.com"
 
 InputFile                        EncryptedFile
 
@@ -94,7 +94,7 @@ Because this scenario is protecting files on behalf of others, the *DoNotPersist
 
 ### Example 5: Protected files with a specific file name extension in a folder by using a template
 ```
-PS C:\>foreach ($file in (Get-ChildItem -Path \\server1\Docs -Recurse -Force | where {!$_.PSIsContainer} | Where-Object {$_.Extension -eq ".docx"})) {Protect-RMSFile -File $file.PSPath -InPlace DoNotPersistEncryptionKey All -TemplateID "e6ee2481-26b9-45e5-b34a-f744eacd53b0" -OwnerEmail "IT@Contoso.com"}
+PS C:\>foreach ($file in (Get-ChildItem -Path \\server1\Docs -Recurse -Force | where {!$_.PSIsContainer} | Where-Object {$_.Extension -eq ".docx"})) {Protect-RMSFile -File $file.PSPath -InPlace -DoNotPersistEncryptionKey All -TemplateID "e6ee2481-26b9-45e5-b34a-f744eacd53b0" -OwnerEmail "IT@Contoso.com"}
 
 
 InputFile                                   EncryptedFile
