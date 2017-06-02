@@ -126,7 +126,7 @@ Specifies the name of the RMS server or cluster to get the templates if you are 
 
 This parameter is not applicable to Azure RMS.
 
-If you don't specify a server, the cmdlet gets the list of templates from your computer's default Rights Management deployment by using service discovery. Typically, you need to specify this parameter only if you have multiple deployments of AD RMS or service discovery cannot find an AD RMS server. If you are not sure what server name to specify, use the [Get-RMSServer](./Get-RMSServer) cmdlet. 
+If you don't specify a server, the cmdlet gets the list of templates from your computer's default Rights Management deployment by using service discovery. Typically, you need to specify this parameter only if you have multiple deployments of AD RMS or service discovery cannot find an AD RMS server. If you are not sure what server name to specify, use the [Get-RMSServer](./Get-RMSServer.md) cmdlet. 
 
 
 ```yaml
