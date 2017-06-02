@@ -19,7 +19,7 @@ New-RMSProtectionLicense [-RmsServer <String>] [-OwnerEmail <String>] [-UserEmai
 ```
 
 ## DESCRIPTION
-The **New-RMSProtectionLicense** cmdlet creates an ad-hoc rights policy that you store as a variable and then use to protect a file or files when you run the [Protect-RMSFile](./Protect-RMSFile) cmdlet.
+The **New-RMSProtectionLicense** cmdlet creates an ad-hoc rights policy that you store as a variable and then use to protect a file or files when you run the [Protect-RMSFile](./Protect-RMSFile.md) cmdlet.
 
 Create an ad-hoc rights policy (also known as a publishing license) when you cannot use a previously created rights policy template.
 
@@ -123,7 +123,7 @@ The acceptable values for this parameter:
 - DOCEDIT
 - OBJMODEL
 
-Warning: If you later want to remove this rights policy from a file, you must have the EXTRACT or OWNER right to use the [Unprotect-RMSFile](./Unprotect-RMSFile) cmdlet to unprotect a file, or be a Rights Management super user for your organization.
+Warning: If you later want to remove this rights policy from a file, you must have the EXTRACT or OWNER right to use the [Unprotect-RMSFile](./Unprotect-RMSFile.md) cmdlet to unprotect a file, or be a Rights Management super user for your organization.
 
 For more information about these rights, see [Configuring usage rights for Azure Rights Management](https://docs.microsoft.com/information-protection/deploy-use/configure-usage-rights) on the Microsoft documentation site.
 
