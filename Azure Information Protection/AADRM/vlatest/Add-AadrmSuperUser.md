@@ -100,7 +100,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-AadrmSuperUser](./Get-AadrmSuperUser.md)
 
-[New-MsolServicePrincipalCredential](./New-MsolServicePrincipalCredential.md)
+[New-MsolServicePrincipalCredential](https://docs.microsoft.com/en-us/powershell/module/msonline/new-msolserviceprincipalcredential?view=azureadps-1.0)
 
 [Remove-AadrmSuperUser](./Remove-AadrmSuperUser.md)
 
