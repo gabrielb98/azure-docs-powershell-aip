@@ -21,7 +21,7 @@ The **Enable-AadrmSuperUserFeature** cmdlet enables the super user feature for y
 
 You must use PowerShell to configure super users; you cannot do this configuration by using a management portal.
 
-By default, the super user feature is not enabled, and no users are assigned to this feature. To assign users, you must use [Add-AadrmSuperUserFeature](./Add-AadrmSuperUserFeature.md) or [Set-AadrmSuperUserGroup](./Set-AadrmSuperUserGroup.md).
+By default, the super user feature is not enabled, and no users are assigned to this feature. To assign users, you must use [Add-AadrmSuperUser](./Add-AadrmSuperUser.md) or [Set-AadrmSuperUserGroup](./Set-AadrmSuperUserGroup.md).
 
 Caution: We recommend that you enable the super user feature on an as-needed basis. During standard operations, we recommend that you disable the super user feature, unless you use it to provide a trusted application with the ability to decrypt rights-protected content. For example, this exception might be needed for an application to scan the contents of a file for malware.
 
