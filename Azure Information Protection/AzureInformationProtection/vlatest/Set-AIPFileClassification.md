@@ -26,8 +26,6 @@ Currently, you cannot create or edit labels by using PowerShell but must do this
 
 In addition, this cmdlet does not support a service principal account in Azure Active Directory; you must run it interactively with a user account.
 
-Note: This cmdlet is currently in preview.
-
 ## EXAMPLES
 
 ### Example 1: Scan all files in a folder and any of its subfolders, and apply labels according to the configured conditions for automatic classification
@@ -195,4 +193,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-​AI​PFile​Status](./Get-​AI​PFile​Status.md)
+
+[Set-AIPFileLabel](./Set-AIPFileLabel.md)
 
