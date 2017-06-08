@@ -27,7 +27,7 @@ This cmdlet does not support a service principal account in Azure Active Directo
 ```
 PS C:\> Get-AIPFileStatus -Path \\Finance\Projects\Project.docx
 FileName        : \\Finance\Projects\Project.docx
-IsLabelled      : True
+IsLabeled      : True
 MainLabelId     : 074e257c-1234-1234-1234-34a182080e71
 MainLabelName   : Confidential
 SubLabelId      : d9f23ae3-1234-1234-1234-f515f824c57b

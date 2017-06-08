@@ -61,7 +61,7 @@ This command sets the "General" label for a file that is already labeled with a 
 
 ### Example 3: Apply the "General" label to all files that do not currently have a label
 ```
-PS C:\> Get-AIPFileStatus -Path \\Finance\Projects\ | where {$_.IsLabelled -eq $False} | Set-AIPFileLabel -LabelId d9f23ae3-4321-4321-4321-f515f824c57b
+PS C:\> Get-AIPFileStatus -Path \\Finance\Projects\ | where {$_.IsLabeled -eq $False} | Set-AIPFileLabel -LabelId d9f23ae3-4321-4321-4321-f515f824c57b
 FileName                              Status Comment
 --------                              ------ ------------
 \\Finance\Projects\Image.jpg          Success
@@ -74,7 +74,7 @@ This command first identifies all files that are not labeled by using the Get-AI
 
 ### Example 4: Apply the "General" label to .docx files that are not labeled 
 ```
-PS C:\> Get-ChildItem C:\Projects\*.docx -File -Recurse | Get-AIPFileStatus | where {$_.IsLabelled -eq $False} | Set-AIPFileLabel -LabelId d9f23ae3-1234-1234-1234-f515f824c57b
+PS C:\> Get-ChildItem C:\Projects\*.docx -File -Recurse | Get-AIPFileStatus | where {$_.IsLabeled -eq $False} | Set-AIPFileLabel -LabelId d9f23ae3-1234-1234-1234-f515f824c57b
 FileName                   Status  Comment
 --------                   ------  ------------
 C:\Projects\Analysis.docx  Success
