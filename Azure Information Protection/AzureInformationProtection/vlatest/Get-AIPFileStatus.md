@@ -33,7 +33,7 @@ MainLabelName   : Confidential
 SubLabelId      : d9f23ae3-1234-1234-1234-f515f824c57b
 SubLabelName    : Finance group
 LabelingSiteId  : 72f988bf-1234-1234-1234-2d7cd011db47
-LabeledBy       : John@Contoso.com
+Owner           : John@Contoso.com
 LabelingMethod  : Manual
 LabelDate       : 12/12/2016 12:24:36 PM
 IsRMSProtected  : True
@@ -68,9 +68,9 @@ This command provides the number of files with the "Confidential" label that are
 ## PARAMETERS
 
 ### -Path
-Specifies a local or network path to the files for which you want to get the label and protection information. Wildcards are not supported.
+Specifies a local, network path, or Sharepoint url to the files for which you want to get the label and protection information. Wildcards are not supported.
 
-Examples include C:\Folder\, C:\Folder\Filename, \\\Server\Folder.
+Examples include C:\Folder\, C:\Folder\Filename, \\\Server\Folder, 'http://sharepoint.contoso.com/Shared Documents/Folder', http://sharepoint.contoso.com/Shared%20Documents/Folder/FileName.
 
 ```yaml
 Type: String[]
