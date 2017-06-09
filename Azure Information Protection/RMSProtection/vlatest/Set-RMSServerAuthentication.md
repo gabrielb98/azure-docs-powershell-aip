@@ -1,8 +1,8 @@
 ---
 external help file: RMSProtection.dll-Help.xml
-online version: http://go.microsoft.com/fwlink/?LinkID=623208
-schema: 2.0.0
 ms.assetid: B46B757C-DF4D-4BCE-9732-527A86498619
+online version: https://go.microsoft.com/fwlink/?LinkID=623208
+schema: 2.0.0
 ---
 
 # Set-RMSServerAuthentication
@@ -39,7 +39,7 @@ Specifies the AppPrincipalId value of the service principal.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -54,7 +54,7 @@ Specifies the BposTenantId value (the tenant ID) to which the service principal 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -69,7 +69,7 @@ Specifies the symmetric key value for the service principal.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named

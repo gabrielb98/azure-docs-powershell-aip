@@ -1,8 +1,8 @@
 ---
 external help file: RMSProtection.dll-Help.xml
-online version: http://go.microsoft.com/fwlink/?LinkID=623207
-schema: 2.0.0
 ms.assetid: D0B8B71F-85E0-481B-B615-CE8D34EF564A
+online version: https://go.microsoft.com/fwlink/?LinkID=623207
+schema: 2.0.0
 ---
 
 # Protect-RMSFile
@@ -13,7 +13,7 @@ Protects a specified file or the files in a specified folder by using RMS.
 ## SYNTAX
 
 ```
-Protect-RMSFile [-File <String>] [-Folder <String>] [-Recurse] [-TemplateID <String>]
+Protect-RMSFile [-File <String>] [-Folder <String>] [-InPlace] [-Recurse] [-TemplateID <String>]
  [-License <SafeInformationProtectionLicenseHandle>] [-DoNotPersistEncryptionKey <String>]
  [-OutputFolder <String>] [-OwnerEmail <String>] [<CommonParameters>]
 ```
@@ -144,7 +144,7 @@ The acceptable values for this parameter:
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: all, disk, license
 
 Required: False
@@ -160,7 +160,7 @@ Specifies the path and file name to be protected. For the path, you can use a dr
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -177,7 +177,25 @@ All the files currently in the specified folder will be protected. New files add
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InPlace
+The file or the files in the specified folder are protected in the current location, replacing the unprotected original file or files. This parameter is ignored if the *OutputFolder* parameter is specified.
+
+If neither *InPlace* nor *OutputFolder* is specified, the new file is created in the current directory with "-Copy" appended to the file name, using the same naming convention that File Explorer uses when a file is copied and pasted into the same folder. For example, if a file with Document.docx is unprotected, the protected version is named Document-Copy.docx. If a file named Document-Copy.docx already exists, Document-Copy(2).docx is created, and so on.
+
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
 
 Required: False
 Position: Named
@@ -192,7 +210,7 @@ Specifies the variable name that stores an ad hoc rights policy that was created
 ```yaml
 Type: SafeInformationProtectionLicenseHandle
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -209,7 +227,7 @@ For the path, you can use a drive letter or UNC.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -234,7 +252,7 @@ Important: Although this parameter is optional, if you do not specify it when yo
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -249,7 +267,7 @@ When used with the *Folder* parameter, indicates that all the current files in t
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -264,7 +282,7 @@ Specifies the ID of the template to use to protect the specified file or files i
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named

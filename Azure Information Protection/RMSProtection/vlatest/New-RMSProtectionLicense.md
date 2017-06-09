@@ -1,8 +1,8 @@
 ---
 external help file: RMSProtection.dll-Help.xml
+ms.assetid: 7ABE0E1B-354F-4017-B4B0-C13AD1FF7A6D
 online version: http://go.microsoft.com/fwlink/?LinkID=623206
 schema: 2.0.0
-ms.assetid: 7ABE0E1B-354F-4017-B4B0-C13AD1FF7A6D
 ---
 
 # New-RMSProtectionLicense
@@ -64,7 +64,7 @@ Specifies the description of the rights policy.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -79,7 +79,7 @@ Specifies the name of this  rights policy.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -98,7 +98,7 @@ If you do not specify a value, the cmdlet will use your email address to identif
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -131,7 +131,7 @@ For more information about these rights, see [Configuring Usage Rights for Azure
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 Accepted values: VIEW, EDIT, PRINT, EXPORT, COMMENT, VIEWRIGHTSDATA, EDITRIGHTSDATA, EXTRACT, OWNER, DOCEDIT, OBJMODEL
 
 Required: False
@@ -149,7 +149,7 @@ This parameter is not applicable for Azure RMS or if your computer knows the rig
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -166,7 +166,7 @@ You can specify single users, or specify a group of users from your organization
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -183,7 +183,7 @@ After this expiry period, the specified users will no longer be able to access t
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
