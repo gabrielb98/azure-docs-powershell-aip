@@ -1,8 +1,8 @@
 ---
-external help file: RMSProtection.dll-Help.xml
+external help file: AIP.dll-Help.xml
+ms.assetid: 074F42BF-D30C-45C4-88F9-E445A7DFEA41
 online version: http://go.microsoft.com/fwlink/?LinkID=623199
 schema: 2.0.0
-ms.assetid: 074F42BF-D30C-45C4-88F9-E445A7DFEA41
 ---
 
 # Get-RMSFileStatus
@@ -62,7 +62,7 @@ Specifies the fully qualified path to the file to verify whether it is protected
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
