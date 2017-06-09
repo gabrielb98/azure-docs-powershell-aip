@@ -12,8 +12,7 @@ Scans a file to automatically set an Azure Information Protection label for a fi
 ## SYNTAX
 
 ```
-Set-AIPFileClassification [-JustificationMessage <String>] [-Force] [-Owner <String>] [-PreserveFileDetails]
- [-Path] <String[]> [<CommonParameters>]
+Set-AIPFileClassification [-JustificationMessage <String>] [-Force] [-Path] <String[]> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -31,7 +30,7 @@ In addition, this cmdlet does not support a service principal account in Azure A
 
 ### Example 1: Scan all files in a folder and any of its subfolders, and apply labels according to the configured conditions for automatic classification
 ```
-PS C:\> Set-AIPFileClassification -Path C:\Projects\ -PreserveFileDetails
+PS C:\> Set-AIPFileClassification -Path C:\Projects\
 
 
 FileName      : C:\Projects\Project1.docx
@@ -79,11 +78,9 @@ This command scans all files in the Projects folder and any of its subfolders, a
 
 If the applied labels are also configured to apply Rights Management protection, the files that are successfully labeled with this command are also protected. In this case, the Rights Management owner (who has the Rights Management Full Control permission) of these files is the user who ran the PowerShell command.
 
-As PreserveFileDetails is specified, the Date Modified of the files isn't changed.
-
 ### Example 2: Scan all files in a folder and any of its subfolders, and apply labels according to the configured conditions for automatic classification, overriding any existing labels
 ```
-PS C:\> Set-AIPFileClassification -Path C:\Projects\ -Force -PreserveFileDetails
+PS C:\> Set-AIPFileClassification -Path C:\Projects\ -Force 
 
 
 FileName      : C:\Projects\Project1.docx
@@ -166,7 +163,7 @@ Accept wildcard characters: False
 ### -Path
 Specifies a local or network path to the file or files to which you want to apply labels. 
 
-Examples include C:\Folder\, C:\Folder\Filename, \\\Server\Folder, 'http://sharepoint.contoso.com/Shared Documents/Folder', http://sharepoint.contoso.com/Shared%20Documents/Folder/FileName.
+Examples include C:\Folder\, C:\Folder\Filename, \\\Server\Folder.
 
 Wildcards are not supported.
 
@@ -179,35 +176,6 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
-```
-
-### -Owner
-On the label: the email address used in the Owner custom property. On the protection: the encryption uses the -OwnerEmail. This is the person who will get full control for the item and will be considered to be the encryption owner.```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PreserveFileDetails
-When setting a label on a local or network file, will not change the file Last Modified date to now, but will leave it unchanged.
-When setting a label on a sharepoint file, will not change neither the file Modified date, nor the file Modified By
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
