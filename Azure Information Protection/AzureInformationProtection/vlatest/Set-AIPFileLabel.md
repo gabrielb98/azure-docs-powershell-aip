@@ -1,8 +1,8 @@
 ---
 external help file: AIP.dll-Help.xml
+ms.assetid: 566E595C-D574-4DED-AE38-CBCD75694B45
 online version: https://go.microsoft.com/fwlink/?linkid=838766
 schema: 2.0.0
-ms.assetid: 566E595C-D574-4DED-AE38-CBCD75694B45
 ---
 
 # Set-AIPFileLabel
@@ -49,12 +49,12 @@ If the General label is configured in the Azure Information Protection policy to
 
 In this example, one file was not labeled (skipped) with the comment that justification is required. This might be the intended outcome to ensure that a file with a higher classification label or protection isn't accidentally overwritten with a lower classification label or has protection removed. To enable this safeguard, the Azure Information Protection policy must be configured to require justification for lowering the classification label, removing a label, or removing protection. When you then run this command without the **JustificationMessage** parameter and the label triggers justification, the file is skipped. 
 
-### Example 2: Apply the "General" label to a single file, which requires justification 
+### Example 2: Apply the "General" label to a single file, which requires justification
 ```
 PS C:\> Set-AIPFileLabel -Path \\Finance\Projects\Analysis.xlsx -LabelId d9f23ae3-1324-1234-1234-f515f824c57b -JustificationMessage 'The previous label no longer applies'
 FileName                          Status      Comment
 --------                          ------      ------------
-\\finance\projects\analysis.xlsx  Success     
+\\finance\projects\analysis.xlsx  Success
 ```
 
 This command sets the "General" label for a file that is already labeled with a higher classification label. The Azure Information Protection policy is configured to require justification for lowering the classification label, removing a label, or removing protection. Because the command includes a justification message, the new label is successfully applied and the justification reason is logged on the local computer.
@@ -72,7 +72,7 @@ FileName                              Status Comment
 
 This command first identifies all files that are not labeled by using the Get-AIPFileStatus cmdlet. Then, these files are labeled by specifying the "General" label by its ID.
 
-### Example 4: Apply the "General" label to .docx files that are not labeled 
+### Example 4: Apply the "General" label to .docx files that are not labeled
 ```
 PS C:\> Get-ChildItem C:\Projects\*.docx -File -Recurse | Get-AIPFileStatus | where {$_.IsLabeled -eq $False} | Set-AIPFileLabel -LabelId d9f23ae3-1234-1234-1234-f515f824c57b
 FileName                   Status  Comment

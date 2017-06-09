@@ -1,8 +1,8 @@
 ---
 external help file: AIP.dll-Help.xml
+ms.assetid: 83B4D09E-ADAE-4DF9-9924-132A9FE47DFF
 online version: https://go.microsoft.com/fwlink/?linkid=841549
 schema: 2.0.0
-ms.assetid: 83B4D09E-ADAE-4DF9-9924-132A9FE47DFF
 ---
 
 # Set-RMSServerAuthentication
@@ -39,7 +39,7 @@ Specifies the AppPrincipalId value of the service principal.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -54,7 +54,7 @@ Specifies the BposTenantId value (the tenant ID) to which the service principal 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -69,7 +69,7 @@ Specifies the symmetric key value for the service principal.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named

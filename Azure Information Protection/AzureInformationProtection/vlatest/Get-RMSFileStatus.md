@@ -1,8 +1,8 @@
 ---
 external help file: AIP.dll-Help.xml
+ms.assetid: 104C7431-A41A-4178-AA0B-74FF1A5B51AA
 online version: https://go.microsoft.com/fwlink/?linkid=841543
 schema: 2.0.0
-ms.assetid: 104C7431-A41A-4178-AA0B-74FF1A5B51AA
 ---
 
 # Get-RMSFileStatus
@@ -63,7 +63,7 @@ Specifies the fully qualified path to the file to verify whether it is protected
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
