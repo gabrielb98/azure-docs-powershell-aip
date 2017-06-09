@@ -194,7 +194,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-​AI​PFile​Status](./Get-​AI​PFile​Status.md)
+[Get-​AI​PFile​Status](./Get-AIPFileStatus.md)
 
 [Set-AIPFileLabel](./Set-AIPFileLabel.md)
 
