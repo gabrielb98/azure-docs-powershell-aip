@@ -1,7 +1,7 @@
 ---
-external help file: AIP.dll-Help.xml
+external help file: RMSProtection.dll-Help.xml
 ms.assetid: C07C0831-92B3-43CE-B18F-F2A12F3283DC
-online version: http://go.microsoft.com/fwlink/?LinkID=623209
+online version: https://go.microsoft.com/fwlink/?LinkID=623209
 schema: 2.0.0
 ---
 
