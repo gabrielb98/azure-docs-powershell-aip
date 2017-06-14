@@ -58,6 +58,6 @@
       "breadcrumb_path": "/powershell/bread/toc.json",
       "ms.devlang": "powershell"
     },
-    "dest": "powershell-aip-with-plugin"
+    "dest": "azureps-aip"
   }
 }

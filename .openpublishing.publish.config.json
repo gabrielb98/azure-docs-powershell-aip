@@ -69,8 +69,8 @@
     {
       "TopLevelTOC": "azureipps/toc.yml",
       "ConceptualTOC": "azureipps/docs-conceptual/toc.yml",
-      "ReferenceTOCUrl": "/powershell-with-plugin/module/aip/toc.json?view=azureipps",
-      "ConceptualTOCUrl": "/powershell-with-plugin/azure/aip/toc.json?view=azureipps"
+      "ReferenceTOCUrl": "/powershell/module/aip/toc.json?view=azureipps",
+      "ConceptualTOCUrl": "/powershell/azure/aip/toc.json?view=azureipps"
     }
   ],
   "need_generate_pdf_url_template": false,
