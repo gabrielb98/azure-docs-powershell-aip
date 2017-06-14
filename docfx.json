@@ -28,6 +28,11 @@
         "src": "azureipps/docs-conceptual",
         "version": "azureipps",
         "dest": "azure/aip"
+      },
+      {
+        "files": [
+          "azureps-cmdlets-docs/**/*.md"
+        ]
       }
     ],
     "versions": {
