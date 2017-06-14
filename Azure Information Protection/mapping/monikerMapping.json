@@ -1,19 +1,22 @@
 {
     "azureipps": {
-        "azure-docs-powershell-aip/Azure Information Protection": {
+        "packageRoot": "Azure Information Protection",
+        "modules": {
+            "docs-conceptual": {
+                "_type": "conceptual"
+            },
             "AADRM": {
                 "_displayName": "AADRM",
-                "_version": "latest"
+                "_version": "vlatest"
             },
             "AzureInformationProtection": {
                 "_displayName": "Azure Information Protection",
-                "_version": "latest"
+                "_version": "vlatest"
             },
             "RMSProtection": {
                 "_displayName": "RMS Protection",
-                "_version": "latest"
+                "_version": "vlatest"
             }
         }
     }
-      
 }
