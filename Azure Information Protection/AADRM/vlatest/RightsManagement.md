@@ -2,7 +2,7 @@
 Module Name: AADRM
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 Download Help Link: N/A
-Help Version: 2.9.0.0
+Help Version: 2.10.0.0
 Locale: en-US
 ms.assetid: 0B91D740-D2BD-4D57-9E21-C582C9BE2CCA
 ---
@@ -19,7 +19,10 @@ For more information about when you must use these PowerShell cmdlets and to see
 >
 >If you do not see the cmdlet or options that are documented, make sure that you have [downloaded the latest version of the module](/information-protection/deploy-use/install-powershell).
 >
->The current version is **2.9.0.0**. To check the version you have installed, run: (Get-Module aadrm -ListAvailable).Version
+>The current version is **2.10.0.0**. To check the version you have installed, run: `(Get-Module aadrm -ListAvailable).Version` If this command or any cmdlet from this module fails to run, first run **Import-Module AADRM**.
+
+
+
 
 The .dll file for this module is *Microsoft.RightsManagementServices.Online.Admin.PowerShell.dll*.
 
@@ -35,6 +38,10 @@ Adds a super user to Rights Management.
 
 ### [Add-AadrmTemplate](./Add-AadrmTemplate.md)
 Creates a Rights Management template.
+
+
+### [Clear-AadrmDoNotTrackUserGroup](./Clear-AadrmDoNotTrackUserGroup.md)
+Clears the group for the users who must not be tracked by Rights Management.
 
 
 ### [Clear-AadrmSuperUserGroup](./Clear-AadrmSuperUserGroup.md)
@@ -119,6 +126,10 @@ Gets the device platforms in your organization that support Rights Management.
 
 ### [Get-AadrmDocumentTrackingFeature](./Get-AadrmDocumentTrackingFeature.md)
 Indicates whether document tracking is enabled or disabled for Rights Management.
+
+
+### [Get-AadrmDoNotTrackUserGroup](./AadrmDoNotTrackUserGroup.md)
+Gets the group for the users who must not be tracked by Rights Management.
 
 
 ### [Get-AadrmIPCv3Service](./Get-AadrmIPCv3Service.md)
@@ -211,6 +222,10 @@ Removes a super user from Rights Management.
 
 ### [Remove-AadrmTemplate](./Remove-AadrmTemplate.md)
 Deletes a Rights Management rights policy template.
+
+
+### [Set-AadrmDoNotTrackUserGroup](./Set-AadrmDoNotTrackUserGroup.md)
+Sets a group for the users who must not be tracked by Rights Management.
 
 
 ### [Set-AadrmKeyProperties](./Set-AadrmKeyProperties.md)
