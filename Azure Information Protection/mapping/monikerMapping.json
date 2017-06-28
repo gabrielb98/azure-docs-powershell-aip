@@ -10,11 +10,11 @@
                 "_version": "vlatest"
             },
             "AzureInformationProtection": {
-                "_displayName": "Azure Information Protection",
+                "_displayName": "AzureInformationProtection",
                 "_version": "vlatest"
             },
             "RMSProtection": {
-                "_displayName": "RMS Protection",
+                "_displayName": "RMSProtection",
                 "_version": "vlatest"
             }
         }
