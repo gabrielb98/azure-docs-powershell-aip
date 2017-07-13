@@ -1,5 +1,6 @@
 ---
 external help file: AIP.dll-Help.xml
+ms.assetid: ed1080cd-ae6f-4720-bac7-e719e31c708b
 online version: https://go.microsoft.com/fwlink/?linkid=845215
 schema: 2.0.0
 ---
@@ -79,7 +80,7 @@ This command scans all files in the Projects folder and any of its subfolders, a
 
 If the applied labels are also configured to apply Rights Management protection, the files that are successfully labeled with this command are also protected. In this case, the Rights Management owner (who has the Rights Management Full Control permission) of these files is the user who ran the PowerShell command.
 
-As PreserveFileDetails is specified, the Date Modified of the files isn't changed.
+Because the PreserveFileDetails parameter is specified, the Date Modified of the labeled files remains unchanged.
 
 ### Example 2: Scan all files in a folder and any of its subfolders, and apply labels according to the configured conditions for automatic classification, overriding any existing labels
 ```
@@ -149,7 +150,7 @@ Accept wildcard characters: False
 ### -JustificationMessage
 The justification reason for lowering the classification label, removing a label, or removing protection, if the Azure Information Protection policy requires users to supply this information.
 
-If setting a label triggers the justification and this reason is not supplied, the label is not applied, even if the *-Force* paramter is set. In this case, the status returned is "Skipped" with the comment "Justification required".
+If setting a label triggers the justification and this reason is not supplied, the label is not applied, even if the *-Force* parameter is set. In this case, the status returned is "Skipped" with the comment "Justification required".
 
 ```yaml
 Type: String
@@ -164,11 +165,9 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-Specifies a local, network path, or Sharepoint url to the files for which you want to get the label and protection information. Wildcards are not supported.
+Specifies a local path, network path, or SharePoint URL to the files for which you want to get the label and protection information. Wildcards are not supported.
 
-Examples include C:\Folder\, C:\Folder\Filename, \\\Server\Folder, 'http://sharepoint.contoso.com/Shared Documents/Folder', http://sharepoint.contoso.com/Shared%20Documents/Folder/FileName.
-
-Wildcards are not supported.
+Examples include C:\Folder\, C:\Folder\Filename, \\\Server\Folder, http://sharepoint.contoso.com/Shared%20Documents/Folder. Paths can include spaces when you enclose the path value with quotes.
 
 ```yaml
 Type: String[]
@@ -183,7 +182,9 @@ Accept wildcard characters: False
 ```
 
 ### -Owner
-On the label: the email address used in the Owner custom property. On the protection: the encryption uses the -OwnerEmail. This is the person who will get full control for the item and will be considered to be the encryption owner.```yaml
+Specify the email address that is written to the Owner custom property. 
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -196,8 +197,11 @@ Accept wildcard characters: False
 ```
 
 ### -PreserveFileDetails
-When setting a label on a local or network file, will not change the file Last Modified date to now, but will leave it unchanged.
-When setting a label on a sharepoint file, will not change neither the file Modified date, nor the file Modified By
+Specify this parameter to leave the date unchanged for documents that you label.
+
+For local or network files, the Last Modified date remains unchanged.
+
+For SharePoint files, the Modified date and Modified By date remains unchanged.
 
 ```yaml
 Type: SwitchParameter
