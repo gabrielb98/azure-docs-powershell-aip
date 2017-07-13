@@ -14,12 +14,14 @@ Sets or removes an Azure Information Protection label for a file, and sets the p
 
 ### Set
 ```
-Set-AIPFileLabel [-LabelId] <Guid> [-JustificationMessage <String>] [-Path] <String[]> [<CommonParameters>]
+Set-AIPFileLabel [-LabelId] <Guid> [-JustificationMessage <String>] [-Owner <String>] [-PreserveFileDetails]
+ [-Path] <String[]> [<CommonParameters>]
 ```
 
 ### Clear
 ```
-Set-AIPFileLabel [-JustificationMessage <String>] [-RemoveLabel] [-Path] <String[]> [<CommonParameters>]
+Set-AIPFileLabel [-JustificationMessage <String>] [-RemoveLabel] [-Owner <String>] [-PreserveFileDetails]
+ [-Path] <String[]> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -132,9 +134,9 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-Specifies a local or network path to the file or files to which you want to apply labels. Wildcards are not supported.
+Specifies a local path, network path, or SharePoint URL to the files for which you want to get the label and protection information. Wildcards are not supported.
 
-Examples include C:\Folder\, C:\Folder\Filename, \\\Server\Folder.
+Examples include C:\Folder\, C:\Folder\Filename, \\\Server\Folder, http://sharepoint.contoso.com/Shared%20Documents/Folder. Paths can include spaces when you enclose the path value with quotes.
 
 ```yaml
 Type: String[]
@@ -157,6 +159,40 @@ Parameter Sets: Clear
 Aliases: 
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Owner
+Specify the email address that is written to the Owner custom property.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PreserveFileDetails
+Specify this parameter to leave the date unchanged for documents that you label.
+
+For local or network files, the Last Modified date remains unchanged.
+
+For SharePoint files, the Modified date and Modified By date remains unchanged.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
