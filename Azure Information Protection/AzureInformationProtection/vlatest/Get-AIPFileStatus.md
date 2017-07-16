@@ -21,6 +21,8 @@ The **Get-AIPFileStatus** cmdlet returns the Azure Information Protection status
 
 This cmdlet does not support a service principal account in Azure Active Directory; you must run it interactively with a user account. 
 
+Note: You can run this cmdlet non-interactively with the preview version of the Azure Information Protection client. For more information, see [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection) from the admin guide.
+
 ## EXAMPLES
 
 ### Example 1: Get the label and protection status of a single file

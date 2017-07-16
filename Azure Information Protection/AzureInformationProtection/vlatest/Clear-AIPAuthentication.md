@@ -21,6 +21,8 @@ The Clear-AIPAuthentication cmdlet deletes the cached authentication for the cur
 
 In addition, all Rights Management templates from the %LocalAppData%\Microsoft\MSIPC\msip folder are deleted for the current user. Rights Management templates are not deleted from the %LocalAppData\Microsoft\MSIPC folder that Office uses.
 
+Note: This cmdlet requires the preview version of the Azure Information Protection client.
+
 
 ## EXAMPLES
 
