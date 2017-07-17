@@ -1,5 +1,6 @@
 ---
 external help file: AIP.dll-Help.xml
+ms.assetid: ed1080cd-ae6f-4720-bac7-e719e31c708b
 online version: https://go.microsoft.com/fwlink/?linkid=845215
 schema: 2.0.0
 ---
@@ -12,7 +13,8 @@ Scans a file to automatically set an Azure Information Protection label for a fi
 ## SYNTAX
 
 ```
-Set-AIPFileClassification [-JustificationMessage <String>] [-Force] [-Path] <String[]> [<CommonParameters>]
+Set-AIPFileClassification [-JustificationMessage <String>] [-Force] [-Owner <String>] [-PreserveFileDetails]
+ [-Path] <String[]> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -26,11 +28,13 @@ Currently, you cannot create or edit labels by using PowerShell but must do this
 
 In addition, this cmdlet does not support a service principal account in Azure Active Directory; you must run it interactively with a user account.
 
+Note: You can run this cmdlet non-interactively with the preview version of the Azure Information Protection client. For more information, see [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection) from the admin guide.
+
 ## EXAMPLES
 
 ### Example 1: Scan all files in a folder and any of its subfolders, and apply labels according to the configured conditions for automatic classification
 ```
-PS C:\> Set-AIPFileClassification -Path C:\Projects\
+PS C:\> Set-AIPFileClassification -Path C:\Projects\ -PreserveFileDetails
 
 
 FileName      : C:\Projects\Project1.docx
@@ -78,9 +82,11 @@ This command scans all files in the Projects folder and any of its subfolders, a
 
 If the applied labels are also configured to apply Rights Management protection, the files that are successfully labeled with this command are also protected. In this case, the Rights Management owner (who has the Rights Management Full Control permission) of these files is the user who ran the PowerShell command.
 
+Because the PreserveFileDetails parameter is specified, the Date Modified of the labeled files remains unchanged.
+
 ### Example 2: Scan all files in a folder and any of its subfolders, and apply labels according to the configured conditions for automatic classification, overriding any existing labels
 ```
-PS C:\> Set-AIPFileClassification -Path C:\Projects\ -Force 
+PS C:\> Set-AIPFileClassification -Path C:\Projects\ -Force -PreserveFileDetails
 
 
 FileName      : C:\Projects\Project1.docx
@@ -146,7 +152,7 @@ Accept wildcard characters: False
 ### -JustificationMessage
 The justification reason for lowering the classification label, removing a label, or removing protection, if the Azure Information Protection policy requires users to supply this information.
 
-If setting a label triggers the justification and this reason is not supplied, the label is not applied, even if the *-Force* paramter is set. In this case, the status returned is "Skipped" with the comment "Justification required".
+If setting a label triggers the justification and this reason is not supplied, the label is not applied, even if the *-Force* parameter is set. In this case, the status returned is "Skipped" with the comment "Justification required".
 
 ```yaml
 Type: String
@@ -161,11 +167,9 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-Specifies a local or network path to the file or files to which you want to apply labels. 
+Specifies a local path, network path, or SharePoint URL to the files for which you want to get the label and protection information. Wildcards are not supported.
 
-Examples include C:\Folder\, C:\Folder\Filename, \\\Server\Folder.
-
-Wildcards are not supported.
+Examples include C:\Folder\, C:\Folder\Filename, \\\Server\Folder, http://sharepoint.contoso.com/Shared%20Documents/Folder. Paths can include spaces when you enclose the path value with quotes.
 
 ```yaml
 Type: String[]
@@ -176,6 +180,44 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -Owner
+Specify the email address that is written to the Owner custom property. 
+
+Note: This parameter requires the preview version of the Azure Information Protection client.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PreserveFileDetails
+Specify this parameter to leave the date unchanged for documents that you label.
+
+For local or network files, the Last Modified date remains unchanged.
+
+For SharePoint files, the Modified date and Modified By date remains unchanged.
+
+Note: This cmdlet requires the preview version of the Azure Information Protection client.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
