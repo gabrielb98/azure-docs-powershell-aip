@@ -224,3 +224,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AIPFileStatus](./Get-AIPFileStatus.md)
 
 [Set-AIPFileClassification](./Set-AIPFileClassification.md)
+
+[Set-AIPAuthentication](./Set-AIPAuthentication.md)
