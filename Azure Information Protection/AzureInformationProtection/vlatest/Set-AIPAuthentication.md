@@ -107,6 +107,8 @@ Accept wildcard characters: False
 
 [Clear-AIPAuthentication](./Clear-AIPAuthentication.md)
 
+[Get-AIPFileStatus](./Get-AIPFileStatus.md)
+
 [Set-AIPFileClassification](./Set-AIPFileClassification.md)
 
 [Set-AIPFileLabel](./Set-AIPFileLabel.md)
