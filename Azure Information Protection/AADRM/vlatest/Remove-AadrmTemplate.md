@@ -21,7 +21,7 @@ The **Remove-AadrmTemplate** cmdlet deletes an Azure Rights Management rights po
 
 You can delete only custom templates. You can set default templates to an archived state but you cannot delete them.
 
-You can also do this action in the Azure classic portal.
+Although you can configure Rights Management templates in the Azure portal, unless the templates are converted to labels, you must use PowerShell to remove these templates.
 
 After a template is deleted, content protected with that template might become inaccessible. Users who are super users can continue to access content that was previously protected with a template that is now deleted. For more information about super users, see [Configuring super users for Azure Rights Management and discovery services or data recovery](https://docs.microsoft.com/information-protection/deploy-use/configure-super-users).
 
@@ -37,7 +37,7 @@ This cmdlet performs the following operations:
 
 - Calls the service to remove the template with the specified GUID.
 
-For more information about custom templates, including how to configure them in the Azure classic portal, see [Configuring custom templates for the Azure Rights Management service](https://docs.microsoft.com/information-protection/deploy-use/configure-custom-templates).
+For more information about custom templates, including how to configure them in the Azure portal, see [Configuring and managing templates for Azure Information Protection](https://docs.microsoft.com/information-protection/deploy-use/configure-policy-templates).
 
 ## EXAMPLES
 
@@ -83,7 +83,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AadrmTemplate](./Get-AadrmTemplate.md)
 
 [Import-AadrmTemplate](./Import-AadrmTemplate.md)
-
-[Configuring super users for Azure Rights Management and discovery services or data recovery](https://docs.microsoft.com/information-protection/deploy-use/configure-super-users)
-
-[Configuring custom templates for the Azure Rights Management service](https://docs.microsoft.com/information-protection/deploy-use/configure-custom-templates)

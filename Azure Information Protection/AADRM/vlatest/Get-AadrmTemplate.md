@@ -19,11 +19,11 @@ Get-AadrmTemplate [-TemplateId <Guid>] [<CommonParameters>]
 ## DESCRIPTION
 The **Get-AadrmTemplate** cmdlet gets all existing or selected templates from the active Azure Rights Management tenant. Use the *TemplateID* parameter to get a specific template. If you do not specify the *TemplateId*, all templates are retrieved.
 
-Similar configuration information can also be viewed in the Azure classic portal, but this cmdlet also returns the template GUID that isn't available in the portal.
+Similar configuration information can also be viewed in the Azure portal, but this cmdlet also returns the template GUID that isn't available in the portal.
 
 The cmdlet output is a list of template objects that contain all the template properties that you can use for further processing. The output of this command displays the template GUID, name, and description in the current locale. For additional template properties, such as usage rights and whether the template is published or archived, use the [Get-AadrmTemplateProperty](./Get-AadrmTemplateProperty.md) cmdlets.
 
-For more information about custom templates, including how to configure them in the Azure classic portal, see [Configuring custom templates for the Azure Rights Managementservice](https://docs.microsoft.com/information-protection/deploy-use/configure-custom-templates).
+For more information about custom templates, including how to configure them in the Azure portal, see [Configuring and managing templates for Azure Information Protection](https://docs.microsoft.com/information-protection/deploy-use/configure-policy-templates).
 
 ## EXAMPLES
 
@@ -87,4 +87,3 @@ If no description is defined for a template in the current locale, "No descripti
 
 [Remove-AadrmTemplate](./Remove-AadrmTemplate.md)
 
-[Configuring custom templates for the Azure Rights Management service](https://docs.microsoft.com/information-protection/deploy-use/configure-custom-templates)

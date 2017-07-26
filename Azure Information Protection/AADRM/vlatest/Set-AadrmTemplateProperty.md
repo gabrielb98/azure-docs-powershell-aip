@@ -24,7 +24,7 @@ Set-AadrmTemplateProperty -TemplateId <Guid> [-Names <Hashtable>] [-Descriptions
 ## DESCRIPTION
 The **Set-AadrmTemplateProperty** cmdlet updates a property or properties of a custom Azure Rights Management template.
 
-You can also update these properties in the Azure classic portal.
+You can update most of these properties in the Azure portal.
 
 When you use this cmdlet, the template is identified by its GUID, which must refer to an existing custom Rights Management template. You cannot use this cmdlet to update the default templates.
 
@@ -34,7 +34,7 @@ Important: When you update properties of a custom template, the existing setting
 
 As a best practice, back up the existing template before you run this cmdlet, by using the [Export-AadrmTemplate](./Export-AadrmTemplate.md) cmdlet. Then, if you need to revert to the original configuration, you can use the [Import-AadrmTemplate](./Import-AadrmTemplate.md) cmdlet to restore the template.
 
-For more information about custom templates, including how to configure them in the Azure classic portal, see [Configuring custom templates for the Azure Rights Management service](https://docs.microsoft.com/information-protection/deploy-use/configure-custom-templates).
+For more information about custom templates, including how to configure them in the Azure portal, see [Configuring and managing templates for Azure Information Protection](https://docs.microsoft.com/information-protection/deploy-use/configure-policy-templates).
 
 ## EXAMPLES
 
@@ -310,5 +310,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AadrmTemplate](./Get-AadrmTemplate.md)
 
 [Get-AadrmTemplateProperty](./Get-AadrmTemplateProperty.md)
-
-[Configuring custom templates for the Azure Rights Management service](https://docs.microsoft.com/information-protection/deploy-use/configure-custom-templates)
