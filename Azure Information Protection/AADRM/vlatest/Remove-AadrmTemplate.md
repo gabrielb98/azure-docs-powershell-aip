@@ -21,7 +21,7 @@ The **Remove-AadrmTemplate** cmdlet deletes an Azure Rights Management rights po
 
 You can delete only custom templates. You can set default templates to an archived state but you cannot delete them.
 
-Although you can configure Rights Management templates in the Azure portal, unless the templates are converted to labels, you must use PowerShell to remove these templates.
+Although you can configure Rights Management templates in the Azure portal, you must use PowerShell to remove these templates.
 
 After a template is deleted, content protected with that template might become inaccessible. Users who are super users can continue to access content that was previously protected with a template that is now deleted. For more information about super users, see [Configuring super users for Azure Rights Management and discovery services or data recovery](https://docs.microsoft.com/information-protection/deploy-use/configure-super-users).
 
