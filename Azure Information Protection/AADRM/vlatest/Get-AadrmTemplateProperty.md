@@ -21,9 +21,9 @@ Get-AadrmTemplateProperty -TemplateId <Guid> [-Names] [-Descriptions] [-RightsDe
 ## DESCRIPTION
 The **Get-AadrmTemplateProperty** cmdlet gets specified properties of an Azure Rights Management template, by using the *TemplateId* parameter.
 
-Similar configuration information can also be viewed in the Azure classic portal, but this cmdlet also includes the template GUID.
+Similar configuration information can also be viewed in the Azure portal, but this cmdlet also includes the template GUID.
 
-You can query properties of a default template, or a custom template. For more information about custom templates, including how to configure them in the Azure classic portal, see [Configuring custom templates for the Azure Rights Management service](https://docs.microsoft.com/information-protection/deploy-use/configure-custom-templates).
+You can query properties of a default template, or a custom template. For more information about custom templates, including how to configure them in the Azure portal, see [Configuring and managing templates for Azure Information Protection](https://docs.microsoft.com/information-protection/deploy-use/configure-policy-templates).
 
 ## EXAMPLES
 
@@ -270,4 +270,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-AadrmTemplateProperty](./Set-AadrmTemplateProperty.md)
 
-[Configuring custom templates for the Azure Rights Management service](https://docs.microsoft.com/information-protection/deploy-use/configure-custom-templates)
