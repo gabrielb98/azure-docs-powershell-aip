@@ -39,6 +39,8 @@ Specifies the email address of the group whose members will be exempt from being
 
 You can specify a group that contains individual users, or nested groups. The email address must be a valid group email address that already exists in the organization.
 
+Note: Global administrators can always track the activities of these members, when they sign in to the documentation tracking site by usng the Admin icon.
+
 
 ```yaml
 Type: String
