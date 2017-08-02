@@ -144,19 +144,27 @@ Accept wildcard characters: False
 ```
 
 ### -LogFile
-Specifies the path for log files that list the files that are successfully or unsuccessfully unprotected. Three log files are created: 
+Specifies the path and base file name, with optional file name extension for log files. These log files list the files that are successfully or unsuccessfully unprotected. The following three log files are created for success, failure, and debug respectively: 
 
-- **Success**
+- **\<file name>.\<file name extension>**
 
-- **Failure**
+- **\<file name>-failure.\<file name extension>**
 
-- **Debug**
+- **\<file name>-debug.\<file name extension>**
 
 For container files, these log files also include nested files.
 
-For the path, you can specify a drive letter or UNC. If the log file location is specified, success and failure files are written to that path as separate files. Debug log files are always written to the default location.
+For example, if you specify "C:\Users\Administrator\Unprotect-RMSFile.txt" for this parameter, the following log files are created:
 
-The default log file location is %localappdata%\RMSProtection\Logging.
+- For files that were successfully unprotected: **C:\Users\Administrator\Unprotect-RMSFile.txt**
+
+- For any files that couldn't be unprotected: **C:\Users\Administrator\Unprotect-RMSFile-failure.txt**
+
+- For debug information: **C:\Users\Administrator\Unprotect-RMSFile-debug.txt**
+
+For the path, you can specify a drive letter or UNC. 
+
+If you do not specify this parameter, the log files **Success.log**, **Failure.log**, and **Debug.log** are written to the default log file location of %localappdata%\Microsoft\MSIPC\pscmdlet\Logs\[GUID].
 
 ```yaml
 Type: String
