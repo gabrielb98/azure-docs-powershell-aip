@@ -56,6 +56,7 @@
     },
     "globalMetadata": {
       "showPowerShellPicker": "true",
+      "apiPlatform": "powershell",
       "brand": "azure",
       "searchScope": [
         "Azure"
