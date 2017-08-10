@@ -10,6 +10,7 @@
       "locale": "en-us",
       "monikers": [],
       "open_to_public_contributors": false,
+
       "type_mapping": {
         "Conceptual": "Content",
         "ManagedReference": "Content",
@@ -24,8 +25,7 @@
       ],
       "customized_tasks": {
         "docset_prebuild": [
-          "_dependentPackages/Microsoft.OpenPublishing.AzurePSPlugin/tools/Restructure.ps1",
-          "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1"
+          "_dependentPackages/Microsoft.OpenPublishing.AzurePSPlugin/tools/Restructure.ps1"
         ]
       }
     }
@@ -45,8 +45,8 @@
     {
       "path_to_root": "_dependentPackages/azurecli.plugins",
       "id": "opbuild.templates.azurecli",
-      "version": "latest",
-      "nuget_feed": "https://www.myget.org/F/op/api/v2"
+      "version": "latest-prerelease",
+      "nuget_feed": "https://www.myget.org/F/op-dev/api/v2"
     },
     {
       "id": "Microsoft.OpenPublishing.AzurePSPlugin",
@@ -64,14 +64,6 @@
   ],
   "monikerPath": [
     "Azure Information Protection/mapping/monikerMapping.json"
-  ],
-  "JoinTOCPlugin": [
-    {
-      "TopLevelTOC": "azureipps/toc.yml",
-      "ConceptualTOC": "azureipps/docs-conceptual/toc.yml",
-      "ReferenceTOCUrl": "/powershell/module/aip/toc.json?view=azureipps",
-      "ConceptualTOCUrl": "/powershell/azure/aip/toc.json?view=azureipps"
-    }
   ],
   "need_generate_pdf_url_template": false,
   "dest": "_site"
