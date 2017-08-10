@@ -1,6 +1,8 @@
 {
     "azureipps": {
         "packageRoot": "Azure Information Protection",
+        "conceptualTocUrl": "/powershell/azure/aip/toc.json",
+        "referenceTocUrl": "/powershell/module/aip/toc.json",
         "modules": {
             "docs-conceptual": {
                 "_type": "conceptual"
