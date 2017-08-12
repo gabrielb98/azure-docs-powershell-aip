@@ -29,9 +29,7 @@ The **Set-AIPFileLabel** cmdlet sets or removes an Azure Information Protection 
 
 Currently, you cannot create or edit labels by using PowerShell but must do this by using the Azure portal. For instructions, see [Configuring Azure Information Protection policy](https://docs.microsoft.com/information-protection/deploy-use/configure-policy).
 
-In addition, this cmdlet does not support a service principal account in Azure Active Directory; you must run it interactively with a user account. However, you can run it concurrently.
-
-Note: You can run this cmdlet non-interactively with the preview version of the Azure Information Protection client. For more information, see [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection) from the admin guide.
+You can run this cmdlet concurrently. To run this cmdlet non-interactively, see [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection) from the admin guide.
 
 
 ## EXAMPLES
@@ -171,7 +169,6 @@ Accept wildcard characters: False
 ### -Owner
 Specify the email address that is written to the Owner custom property.
 
-Note: This parameter requires the preview version of the Azure Information Protection client.
 
 ```yaml
 Type: String
@@ -192,7 +189,6 @@ For local or network files, the Last Modified date remains unchanged.
 
 For SharePoint files, the Modified date and Modified By date remains unchanged.
 
-Note: This cmdlet requires the preview version of the Azure Information Protection client.
 
 ```yaml
 Type: SwitchParameter

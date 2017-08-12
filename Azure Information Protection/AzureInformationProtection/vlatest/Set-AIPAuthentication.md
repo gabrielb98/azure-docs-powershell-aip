@@ -25,7 +25,6 @@ If you run this cmdlet without parameters, the account acquires an access token 
 
 To control when the access token expires, run this cmdlet with parameters. This lets you configure the access token for 1 year, 2 years, or to never expire. This configuration requires you to have two applications registered in Azure Active Directory: **A web app / API** application and a **native application**. Use these applications to supply the parameters for the Set-AIPAuthentication cmdlet. For instructions, see [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection) from the admin guide.
 
-Note: This cmdlet requires the preview version of the Azure Information Protection client.
 
 ## EXAMPLES
 
