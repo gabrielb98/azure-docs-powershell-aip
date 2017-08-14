@@ -17,7 +17,7 @@ Disable-AadrmSuperUserFeature [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Disable-AadrmSuperUserFeature** cmdlet disables the super user feature. This action does not automatically remove the previously added users or group from the super user list, and they continue to be displayed when you run the [Get-AadrmSuperUser](./Get-AadrmSuperUser.md) or [Get-AadrmSuperUserGroup](./Get-AadrmSuperGroup.md) cmdlets. Therefore, if you enable the super user feature again, these users are automatically super users again, until you manually remove them.
+The **Disable-AadrmSuperUserFeature** cmdlet disables the super user feature. This action does not automatically remove the previously added users or group from the super user list, and they continue to be displayed when you run the [Get-AadrmSuperUser](./Get-AadrmSuperUser.md) or [Get-AadrmSuperUserGroup](./Get-AadrmSuperUserGroup.md) cmdlets. Therefore, if you enable the super user feature again, these users are automatically super users again, until you manually remove them.
 
 If there are users in the current super list who must not be a super user if this feature is enabled again, remove them from the super user list before you disable the super user feature. If these users are individually specified, remove them with the [Remove-AadrmSuperUser](./Remove-AadrmSuperUser.md) cmdlet. If they are a member of a group that you have specified to be a super user group, either remove those users from the specified super user group, or remove the super user group by using the [Clear-AadrmSuperUserGroup](./Clear-AadrmSuperUserGroup.md) cmdlet.
 

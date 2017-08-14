@@ -1,13 +1,14 @@
 ---
 external help file: AIP.dll-Help.xml
-ms.assetid: ED096DBB-1B3B-43DA-B0DE-C7BACC54D18B
+online version: https://go.microsoft.com/fwlink/?linkid=851286
+assetid: ED096DBB-1B3B-43DA-B0DE-C7BACC54D18B
 schema: 2.0.0
 ---
 
 # Set-AIPAuthentication
 
 ## SYNOPSIS
-Sets the authentication credentials for the AIP applications.
+Sets the authentication credentials for the Azure Information Protection client.
 
 ## SYNTAX
 
@@ -16,9 +17,14 @@ Set-AIPAuthentication [[-WebAppId] <String>] [[-WebAppKey] <String>] [[-NativeAp
 ```
 
 ## DESCRIPTION
-The Set-AIPAuthentication cmdlet can be use in 2 ways:
-1. When called without parameters, command will perform user token acquisition via ADAL with UI – token will be valid for 90 days or until the used user password would expire or change.
-2. When called with parameters, command will perform user token acquisition via ADAL with UI, then acquire application token on-behalf of the user that logged in – token validation will be determined by the expiration chosen upon generation of the web application key (1 year, 2 years, unlimited).
+The **Set-AIPAuthentication** cmdlet sets credentials by using an access token so that you can then use the labeling cmdlets non-interactively. For example, you want to run a scheduled PowerShell script that automatically labels and protects files on a file server by using the [Set-AIPFileClassification](./Set-AIPFileClassification.md) or [Set-AIPFileLabel](./Set-AIPFileLabel.md) cmdlets. Or, you have a data loss prevention (DLP) solution that that you want to augment by automatically labeling and protecting files that this solution identifies. 
+
+The first time you run this cmdlet, you are prompted to sign in for Azure Information Protection. After that, you can then run the labeling cmdlets non-interactively until your authentication token expires. When the token expires, run the cmdlet again to acquire a new token.
+
+If you run this cmdlet without parameters, the account acquires an access token that is valid for 90 days or until your password expires.  
+
+To control when the access token expires, run this cmdlet with parameters. This lets you configure the access token for 1 year, 2 years, or to never expire. This configuration requires you to have two applications registered in Azure Active Directory: **A web app / API** application and a **native application**. Use these applications to supply the parameters for the Set-AIPAuthentication cmdlet. For instructions, see [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection) from the admin guide.
+
 
 ## EXAMPLES
 
@@ -28,7 +34,7 @@ PS C:\> Set-AIPAuthentication
 Acquired access token
 ```
 
-This command prompts the user for AAD credentials which are used to acquire a user access token.
+This command prompts you for your Azure AD credentials that are used to acquire a user access token that is valid for 90 days or until your password expires.
 
 ### Example 2
 ```
@@ -36,12 +42,12 @@ PS C:\> Set-AIPAuthentication -webAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -
 Acquired application access token on behalf of the user
 ```
 
-This command prompts the user for AAD credentials which are used to acquire a user access token to be combined with the web application details to acquire an application access token on behalf of the user.
+This command prompts you for your Azure AD credentials that are used to acquire a user access token. This token is then combined with the web application details to acquire an application access token on behalf of the user. This token is then valid for 1 year, 2 years, or never expires, according to your configuration of the web app /API in Azure AD.
 
 ## PARAMETERS
 
 ### -WebAppId
-Application ID of the “Web app / API” application created for the OnBehalfOf flow in AAD.
+Specifies the application ID of the "Web app / API" application in Azure AD.
 
 ```yaml
 Type: String
@@ -56,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -WebAppKey
-Secret key generated in the “Web app / API” application created for the OnBehalfOf flow in AAD.
+Specifies the key value generated in the "Web app / API" application in Azure AD.
 
 ```yaml
 Type: String
@@ -71,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -NativeAppId
-Application ID of the “Native” application created for the OnBehalfOf flow in AAD.
+Specifies the application ID of the "Native" application in Azure AD.
 
 ```yaml
 Type: String
@@ -97,3 +103,11 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
+
+[Clear-AIPAuthentication](./Clear-AIPAuthentication.md)
+
+[Get-AIPFileStatus](./Get-AIPFileStatus.md)
+
+[Set-AIPFileClassification](./Set-AIPFileClassification.md)
+
+[Set-AIPFileLabel](./Set-AIPFileLabel.md)

@@ -19,7 +19,11 @@ Get-AIPFileStatus [-Path] <String[]> [<CommonParameters>]
 ## DESCRIPTION
 The **Get-AIPFileStatus** cmdlet returns the Azure Information Protection status of a specified file or all files in a specified path. This status includes whether the file has a label, and if it does, the label name, who applied it, how it was applied, and when. In addition, the status includes whether the file is protected by Rights Management, and if it is, what Rights Management template was used to apply this protection.  
 
+Note that password-protected files always return the protection status of **False**.
+
 This cmdlet does not support a service principal account in Azure Active Directory; you must run it interactively with a user account. 
+
+Note: You can run this cmdlet non-interactively with the preview version of the Azure Information Protection client. For more information, see [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection) from the admin guide.
 
 ## EXAMPLES
 
@@ -68,9 +72,9 @@ This command provides the number of files with the "Confidential" label that are
 ## PARAMETERS
 
 ### -Path
-Specifies a local, network path, or Sharepoint url to the files for which you want to get the label and protection information. Wildcards are not supported.
+Specifies a local path, network path, or SharePoint URL to the files for which you want to get the label and protection information. Wildcards are not supported.
 
-Examples include C:\Folder\, C:\Folder\Filename, \\\Server\Folder, 'http://sharepoint.contoso.com/Shared Documents/Folder', http://sharepoint.contoso.com/Shared%20Documents/Folder/FileName.
+Examples include C:\Folder\, C:\Folder\Filename, \\\Server\Folder, http://sharepoint.contoso.com/Shared%20Documents/Folder. Paths can include spaces when you enclose the path value with quotes.
 
 ```yaml
 Type: String[]
@@ -99,8 +103,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-RMSTemplate](./Get-RMSTemplate.md)
+[Set-AIPAuthentication](./Set-AIPAuthentication.md)
 
 [Set-AIPFileClassification](./Set-AIPFileClassification.md)
 
 [Set-AIPFileLabel](./Set-AIPFileLabel.md)
+
+[Get-RMSTemplate](./Get-RMSTemplate.md)
+

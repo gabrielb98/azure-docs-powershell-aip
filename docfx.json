@@ -1,0 +1,69 @@
+{
+  "build": {
+    "content": [
+      {
+        "files": [
+          "*.yml"
+        ],
+        "src": "azureipps",
+        "version": "azureipps",
+        "dest": "module/aip"
+      },
+      {
+        "files": [
+          "**/*.md"
+        ],
+        "src": "azureipps",
+        "version": "azureipps",
+        "exclude": [
+          "docs-conceptual/**"
+        ],
+        "dest": "module"
+      },
+      {
+        "files": [
+          "**/*.yml",
+          "**/*.md"
+        ],
+        "src": "azureipps/docs-conceptual",
+        "version": "azureipps",
+        "dest": "azure/aip"
+      },
+      {
+        "files": [
+          "azureps-cmdlets-docs/**/*.md"
+        ]
+      }
+    ],
+    "versions": {
+      "azureipps": {
+        "dest": "azureipps"
+      }
+    },
+    "filemetadata": {
+      "ms.author": {
+        "azureipps/**/*.md": "cabailey"
+      },
+      "author": {
+        "azureipps/**/*.md": "cabailey"
+      },
+      "ms.manager": {
+        "azureipps/**/*.md": "mbaldwin"
+      },
+      "ms.service": {
+        "azureipps/**/*.md": "rights-management"
+      }
+    },
+    "globalMetadata": {
+      "showPowerShellPicker": "true",
+      "apiPlatform": "powershell",
+      "brand": "azure",
+      "searchScope": [
+        "Azure"
+      ],
+      "breadcrumb_path": "/powershell/bread/toc.json",
+      "ms.devlang": "powershell"
+    },
+    "dest": "azureps-aip"
+  }
+}

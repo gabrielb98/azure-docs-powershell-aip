@@ -13,7 +13,7 @@ The following list contains links to the help topics for the Microsoft Azure Inf
 
 These cmdlets can be used with the Azure Information Protection service, the Azure Rights Management service (Azure RMS), and Active Directory Rights Management Services (AD RMS). 
 
-The current version of the AzureInformationProtection module is **1.7.210.0**. If you have previously installed this module, run the following command to check the version: `(Get-Module AzureInformationProtection -ListAvailable).Version`.
+The current general availability version of the AzureInformationProtection module is **1.10.52.0**. You might have a later version if you have installed a preview version. To check the version that you have installed, run the following command: `(Get-Module AzureInformationProtection -ListAvailable).Version`.
 
 For instructions to use these cmdlets, any current limitations, prerequisites, and scenario examples, see the following documentation from the Azure Information Protection client administrator guide: 
 
@@ -23,6 +23,11 @@ For instructions to use these cmdlets, any current limitations, prerequisites, a
 The .dll file for this module is *AIP.dll*.
 
 ## AzureInformationProtection cmdlets
+
+### [Clear-AIPAuthentication](./Clear-AIPAuthentication.md )
+Clears the authentication token and RMS templates for the current user.
+
+
 ### [Clear-RMSAuthentication](./Clear-RMSAuthentication.md)
 Clears credentials for a user who is authenticated to the Azure RMS service.
 
@@ -45,7 +50,6 @@ Gets a list of RMS servers that can issue templates.
 ### [Get-RMSTemplate](./Get-RMSTemplate.md)
 Gets a list of RMS templates.
 
-
 ### [New-RMSProtectionLicense](./New-RMSProtectionLicense.md)
 Creates an ad-hoc rights policy for RMS protection.
 
@@ -53,6 +57,9 @@ Creates an ad-hoc rights policy for RMS protection.
 ### [Protect-RMSFile](./Protect-RMSFile.md)
 Protects a specified file or the files in a specified folder by using RMS.
 
+
+### [Set-AIPAuthentication](./Set-AIPAuthentication.md)
+Sets the authentication credentials for the Azure Information Protection client.
 
 ### [Set-AIPFileClassification](./Set-AIPFileClassification)
 Scans a file to automatically set an Azure Information Protection label for a file, according to conditions that are configured in the policy.

@@ -1,0 +1,9 @@
+{
+  "redirections": [
+    {
+      "source_path": "azureps-cmdlets-docs/index.md",
+      "redirect_url": "/powershell/azure/overview",
+      "redirect_document_id": false
+    }
+  ]
+}

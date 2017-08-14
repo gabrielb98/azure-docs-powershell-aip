@@ -29,7 +29,8 @@ The **Set-AIPFileLabel** cmdlet sets or removes an Azure Information Protection 
 
 Currently, you cannot create or edit labels by using PowerShell but must do this by using the Azure portal. For instructions, see [Configuring Azure Information Protection policy](https://docs.microsoft.com/information-protection/deploy-use/configure-policy).
 
-In addition, this cmdlet does not support a service principal account in Azure Active Directory; you must run it interactively with a user account. However, you can run it concurrently.
+You can run this cmdlet concurrently. To run this cmdlet non-interactively, see [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection) from the admin guide.
+
 
 ## EXAMPLES
 
@@ -134,9 +135,9 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-Specifies a local, network path, or Sharepoint url to the files for which you want to get the label and protection information. Wildcards are not supported.
+Specifies a local path, network path, or SharePoint URL to the files for which you want to get the label and protection information. Wildcards are not supported.
 
-Examples include C:\Folder\, C:\Folder\Filename, \\\Server\Folder, 'http://sharepoint.contoso.com/Shared Documents/Folder', http://sharepoint.contoso.com/Shared%20Documents/Folder/FileName.
+Examples include C:\Folder\, C:\Folder\Filename, \\\Server\Folder, http://sharepoint.contoso.com/Shared%20Documents/Folder. Paths can include spaces when you enclose the path value with quotes.
 
 ```yaml
 Type: String[]
@@ -166,7 +167,10 @@ Accept wildcard characters: False
 ```
 
 ### -Owner
-On the label: the email address used in the Owner custom property. On the protection: the encryption uses the -OwnerEmail. This is the person who will get full control for the item and will be considered to be the encryption owner.```yaml
+Specify the email address that is written to the Owner custom property.
+
+
+```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: 
@@ -179,8 +183,12 @@ Accept wildcard characters: False
 ```
 
 ### -PreserveFileDetails
-When setting a label on a local or network file, will not change the file Last Modified date to now, but will leave it unchanged.
-When setting a label on a sharepoint file, will not change neither the file Modified date, nor the file Modified By
+Specify this parameter to leave the date unchanged for documents that you label.
+
+For local or network files, the Last Modified date remains unchanged.
+
+For SharePoint files, the Modified date and Modified By date remains unchanged.
+
 
 ```yaml
 Type: SwitchParameter
@@ -212,3 +220,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AIPFileStatus](./Get-AIPFileStatus.md)
 
 [Set-AIPFileClassification](./Set-AIPFileClassification.md)
+
+[Set-AIPAuthentication](./Set-AIPAuthentication.md)
