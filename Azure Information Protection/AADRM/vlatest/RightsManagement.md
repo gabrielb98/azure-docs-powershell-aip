@@ -128,7 +128,7 @@ Gets the device platforms in your organization that support Rights Management.
 Indicates whether document tracking is enabled or disabled for Rights Management.
 
 
-### [Get-AadrmDoNotTrackUserGroup](./AadrmDoNotTrackUserGroup.md)
+### [Get-AadrmDoNotTrackUserGroup](./Get-AadrmDoNotTrackUserGroup.md)
 Gets the group for the users who must not be tracked by Rights Management.
 
 
