@@ -40,10 +40,10 @@ This command gets the server mode status and the output indicates that a service
 ### Example 2: Get the serer mode status when you are using AD RMS
 ```
 PS C:\>Get-RMSServerAuthentication
-Integrated authentication is enabled
+The RmsServerAuthentication is ON
 ```
 
-This command gets the server mode status and the output indicates that you are using integrated authentication for AD RMS. 
+This command gets the server mode status and because there are no identifiers, the output indicates that you are using integrated authentication for AD RMS. 
 
 ## PARAMETERS
 
