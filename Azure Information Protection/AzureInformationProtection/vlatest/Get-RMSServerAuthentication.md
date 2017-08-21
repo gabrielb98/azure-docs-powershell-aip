@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-RMSServerAuthentication
 
 ## SYNOPSIS
-Gets the status of your service principal authentication to Azure RMS.
+Gets the status of your server mode for authentication to RMS.
 
 ## SYNTAX
 
@@ -17,13 +17,15 @@ Get-RMSServerAuthentication [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-RMSServerAuthentication** cmdlet gets the status and details of your service principal authentication to Azure Rights Management (Azure  RMS) that was previous set by using [Set-RMSServerAuthentication](./Set-RMSServerAuthentication.md). The status must be ON for you to protect or unprotect files for Azure RMS by using a service principal rather than your user account. This status remains on for the duration of your Windows PowerShell session.
+The **Get-RMSServerAuthentication** cmdlet gets the status and details of the server mode that was previous set by using [Set-RMSServerAuthentication](./Set-RMSServerAuthentication.md). Server mode must be set to protect or unprotect files non-interactively. This status remains on for the duration of your PowerShell session.
 
-This cmdlet applies to Azure  RMS only and does not apply to AD RMS. This cmdlet also does not apply if you are authenticating to Azure RMS by using your user account. For more information about using a service principal account to connect to the Azure Rights Management service, see [Using PowerShell with the Azure Information Protection client](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell) from the Azure Information Protection client admin guide.
+This cmdlet does not apply if you protect or unprotect files by using your user account. 
+
+To use server mode with the Azure Rights Management service, you must use a service principal account. For more information about this requirement, see [Using PowerShell with the Azure Information Protection client](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell) from the Azure Information Protection client admin guide.
 
 ## EXAMPLES
 
-### Example 1: Get the status of your service principal authentication to Azure RMS
+### Example 1: Get the server mode status when you are using Azure RMS
 ```
 PS C:\>Get-RMSServerAuthentication
 The RmsServerAuthentication is ON
@@ -33,7 +35,15 @@ Base64Key                                         AppPrincipalId                
 zIeMu8zNJ6U377CLtppkhkbl4gjodmYSXUVwAO5ycgA=      b5e3f76a-b5c2-4c96-a594-a0807f65bba4    23976bc6-dcd4-4173-9d96-dad1f48efd42
 ```
 
-This command gets the status of the service principal authentication and outputs the currently used identifiers, if authentication is successful.
+This command gets the server mode status and the output indicates that a service principal account is being used to authenticate to the Azure Rights Management service. The outputs includes the currently used identifiers, if authentication is successful.
+
+### Example 2: Get the serer mode status when you are using AD RMS
+```
+PS C:\>Get-RMSServerAuthentication
+Integrated authentication is enabled
+```
+
+This command gets the server mode status and the output indicates that you are using integrated authentication for AD RMS. 
 
 ## PARAMETERS
 
