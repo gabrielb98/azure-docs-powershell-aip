@@ -36,6 +36,7 @@ This command sets the service principle authentication credentials for Azure RMS
 ### Example 2: Set the server mode for AD RMS
 ```
 PS C:\>Set-RMSServerAuthentication -IntegratedAuth
+Integrated authentication is enabled
 ```
 
 This command sets the server mode for AD RMS.
@@ -44,7 +45,9 @@ This command sets the server mode for AD RMS.
 ## PARAMETERS
 
 ### -AppPrincipalId
-Specifies the AppPrincipalId value of the service principal.
+Specifies the AppPrincipalId value of the service principal. 
+
+Applies to Azure RMS only. Specify this parameter with the *BposTenantId* parameter and the *Key* parameter.
 
 ```yaml
 Type: String
@@ -61,6 +64,8 @@ Accept wildcard characters: False
 ### -BposTenantId
 Specifies the BposTenantId value (the tenant ID) to which the service principal belongs.
 
+Applies to Azure RMS only. Specify this parameter with the *AppPrincipal* parameter and the *Key* parameter.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -76,6 +81,8 @@ Accept wildcard characters: False
 ### -Key
 Specifies the symmetric key value for the service principal.
 
+Applies to Azure RMS only. Specify this parameter with the *AppPrincipal* parameter and the *BposTenantId* parameter.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -90,6 +97,8 @@ Accept wildcard characters: False
 
 ### -IntegratedAuth
 Specifies server mode for AD RMS so that cmdlets can run non-interactively.
+
+Applies to AD RMS only.
 
 ```yaml
 Type: SwitchParameter
