@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-RMSServerAuthentication
 
 ## SYNOPSIS
-Sets the mode for server mode, which is required for non-interactive sessions.
+Sets the server mode, which is required for non-interactive sessions.
 
 ## SYNTAX
 
@@ -18,34 +18,38 @@ Set-RMSServerAuthentication [-Key <String>] [-AppPrincipalId <String>] [-BposTen
 ```
 
 ## DESCRIPTION
-The **Set-RMSServerAuthentication** cmdlet sets the server mode so that commands can be run non-interactively. For Azure RMS, server mode requires you to specify credentials for a service principal to authenticate with the Azure Rights Management service. For AD RMS, server mode requires you to specify integrated authentication. Use server mode when you need to protect or unprotect files without interaction, for example, a script that automatically protects files on a file server. You need run this command just one time for your PowerShell session.
+The **Set-RMSServerAuthentication** cmdlet sets the server mode so that commands can be run non-interactively. Use server mode when you need to protect or unprotect files without interaction. For example, if you protect files by using Windows Server and File Classification Infrastructure (FCI), or a scheduled script that automatically protects files on a computer or network share. You need run this command just one time for your PowerShell session.
 
 This cmdlet does not apply if you use your user account to protect or unprotect files. 
 
-For more information about how to get the identifiers that the service principal requires for Azure RMS, see [Using PowerShell with the Azure Information Protection client](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell) from the Azure Information Protection client admin guide.
+- For Azure RMS: Server mode requires you to specify credentials for a service principal account that authenticates to the Azure Rights Management service. 
+
+- For AD RMS: Server mode requires you to specify Windows integrated authentication so that the computer account can be authenticated with the AD RMS service. The computer account must be granted permissions to ServerCertification.asmx.
+
+For information how to get the identifiers that the service principal requires for Azure RMS, and how to grant the permissions for AD RMS, see [Using PowerShell with the Azure Information Protection client](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell) from the Azure Information Protection client admin guide.
 
 ## EXAMPLES
 
-### Example 1: Set the server mode for Azure RMS and specify the service principal credentials
+### Example 1: Set the server mode for Azure RMS by specifying the credentials for a service principal account
 ```
 PS C:\>Set-RMSServerAuthentication -BposTenantId "23976bc6-dcd4-4173-9d96-dad1f48efd42" -Key "zIeMu8zNJ6U377CLtppkhkbl4gjodmYSXUVwAO5ycgA=" -AppPrincipalId "b5e3f76a-b5c2-4c96-a594-a0807f65bba4"
 ```
 
-This command sets the service principle authentication credentials for Azure RMS, by specifying the required three identifiers for a previously created service principal.
+This command sets credentials that lets a service principle account authenticate to Azure RMS, by specifying the required three identifiers.
 
-### Example 2: Set the server mode for AD RMS
+### Example 2: Set the server mode for AD RMS by specifying Windows integrated authentication
 ```
 PS C:\>Set-RMSServerAuthentication -IntegratedAuth
 Integrated authentication is enabled
 ```
 
-This command sets the server mode for AD RMS.
+This command sets the server mode for Windows integrated authentication, which lets a computer account authenticate to AD RMS.
 
 
 ## PARAMETERS
 
 ### -AppPrincipalId
-Specifies the AppPrincipalId value of the service principal. 
+Specifies the AppPrincipalId value of a service principal account in Azure AD. 
 
 Applies to Azure RMS only. Specify this parameter with the *BposTenantId* parameter and the *Key* parameter.
 
@@ -62,9 +66,9 @@ Accept wildcard characters: False
 ```
 
 ### -BposTenantId
-Specifies the BposTenantId value (the tenant ID) to which the service principal belongs.
+Specifies the BposTenantId value (the tenant ID) to which the service principal account belongs.
 
-Applies to Azure RMS only. Specify this parameter with the *AppPrincipal* parameter and the *Key* parameter.
+Applies to Azure RMS only. Specify this parameter with the *AppPrincipalId* parameter and the *Key* parameter.
 
 ```yaml
 Type: String
@@ -79,9 +83,9 @@ Accept wildcard characters: False
 ```
 
 ### -Key
-Specifies the symmetric key value for the service principal.
+Specifies the symmetric key value for the service principal account in Azure AD.
 
-Applies to Azure RMS only. Specify this parameter with the *AppPrincipal* parameter and the *BposTenantId* parameter.
+Applies to Azure RMS only. Specify this parameter with the *AppPrincipalId* parameter and the *BposTenantId* parameter.
 
 ```yaml
 Type: String
@@ -96,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -IntegratedAuth
-Specifies server mode for AD RMS so that cmdlets can run non-interactively.
+Specifies server mode for AD RMS so that cmdlets can run non-interactively by using Windows integrated authentication for the computer account.
 
 Applies to AD RMS only.
 

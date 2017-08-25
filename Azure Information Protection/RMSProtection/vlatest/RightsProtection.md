@@ -27,7 +27,7 @@ This release of the RMS Protection module has the following limitations:
 
 - You can unprotect Outlook protected email messages (.rpmsg files) when they are in a Outlook personal folder (.pst), but you cannot unprotect .rpmsg files outside a personal folder.
 
-- To protect or unprotect files for AD RMS, you must use your user account interactively. To run the cmdlets non-interactively for AD RMS, upgrade to the AzureInformationProtection module that installs with the Azure Information Protection client. To support non-interactive sessions for AD RMS, in this newer module, specify the parameter *IntegratedAuth*, for the Set-RMSServerAuthentication cmdlet.
+- To protect or unprotect files for AD RMS, you must use your user account interactively. To run the cmdlets non-interactively with AD RMS (for example, with Windows Server FCI), upgrade to the AzureInformationProtection module that installs with the current preview version of the [Azure Information Protection client](https://www.microsoft.com/en-us/download/details.aspx?id=53018). To support non-interactive sessions for AD RMS, in this newer module, specify the  *IntegratedAuth* parameter for the [Set-RMSServerAuthentication](/powershell/module/azureinformationprotection/set-rmsserverauthentication) cmdlet.
 
 - For Azure Rights Management only:
 
