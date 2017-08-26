@@ -40,7 +40,7 @@ Gets the RMS protection status of a specified file.
 
 
 ### [Get-RMSServerAuthentication](./Get-RMSServerAuthentication.md)
-Gets the status of your server mode for authentication to RMS.
+Gets the server mode status that is used for authentication to RMS.
 
 
 ### [Get-RMSServer](./Get-RMSServer.md)
