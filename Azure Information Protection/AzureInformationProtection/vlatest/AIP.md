@@ -40,7 +40,7 @@ Gets the RMS protection status of a specified file.
 
 
 ### [Get-RMSServerAuthentication](./Get-RMSServerAuthentication.md)
-Gets the status of your service principal authentication to Azure RMS.
+Gets the server mode status that is used for authentication to RMS.
 
 
 ### [Get-RMSServer](./Get-RMSServer.md)
@@ -70,7 +70,7 @@ Sets or removes an Azure Information Protection label for a file, and sets the p
 
 
 ### [Set-RMSServerAuthentication](./Set-RMSServerAuthentication.md)
-Sets the service principal authentication credentials for Azure RMS.
+Sets the server mode, which is required for non-interactive sessions.
 
 
 ### [Unprotect-RMSFile](./Unprotect-RMSFile.md)
