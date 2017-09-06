@@ -21,9 +21,7 @@ The **Get-AIPFileStatus** cmdlet returns the Azure Information Protection status
 
 Note that password-protected files always return the protection status of **False**.
 
-This cmdlet does not support a service principal account in Azure Active Directory; you must run it interactively with a user account. 
-
-Note: You can run this cmdlet non-interactively with the preview version of the Azure Information Protection client. For more information, see [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection) from the admin guide.
+To run this cmdlet non-interactively, see [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection) from the admin guide.
 
 ## EXAMPLES
 
@@ -72,7 +70,9 @@ This command provides the number of files with the "Confidential" label that are
 ## PARAMETERS
 
 ### -Path
-Specifies a local path, network path, or SharePoint URL to the files for which you want to get the label and protection information. Wildcards are not supported.
+Specifies a local path, network path, or SharePoint Server URL to the files for which you want to get the label and protection information. Wildcards are not supported.
+
+For SharePoint paths: SharePoint Server 2013 and SharePoint Server 2016 are supported.
 
 Examples include C:\Folder\, C:\Folder\Filename, \\\Server\Folder, http://sharepoint.contoso.com/Shared%20Documents/Folder. Paths can include spaces when you enclose the path value with quotes.
 
