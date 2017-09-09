@@ -17,17 +17,21 @@ Use-AadrmKeyVaultKey -KeyVaultKeyUrl <String> [-FriendlyName <String>] [-Force] 
 ```
 
 ## DESCRIPTION
-The **Use-AadrmKeyVaultKey** cmdlet tells the Azure Rights Management service to use a customer-managed key (BYOK) that has been created by an administrator in your organization who is responsible for managing Azure Key Vault. This key then becomes the customer-managed tenant key for the Azure Rights Management service in your organization.
+The **Use-AadrmKeyVaultKey** cmdlet tells the Azure Rights Management service from Azure Information Protection to use a customer-managed key (BYOK) in Azure Key Vault.
 
 You must use PowerShell to configure your tenant key; you cannot do this configuration by using a management portal.
 
 You can run this cmdlet before or after the Azure Rights Management service is activated. 
 
-Before you run this cmdlet, make sure that the Azure Rights Management service principal has been granted permissions to the key vault that contains the key you want to use for Azure Information Protection. These permissions are granted by running the Azure Key Vault cmdlet, [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy).
+Before you run this cmdlet, make sure that the Azure Rights Management service principal has been granted permissions to the key vault that contains the key you want to use for Azure Information Protection. These permissions are granted by running the Azure Key Vault cmdlet, [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy).  
 
-For security reasons, the Use-AadrmKeyVaultKey cmdlet does not let you set or change the access control for your tenant key in Azure Key Vault. After that access is granted, run this cmdlet to tell the Azure Rights Management service to use the key and version that you specify with the *KeyVaultKeyUrl* parameter.
+For security reasons, the Use-AadrmKeyVaultKey cmdlet does not let you set or change the access control for the key in Azure Key Vault. After that access is granted by running Set-AzureRmKeyVaultAccessPolicy, run Use-AadrmKeyVaultKey to tell the Azure Rights Management service to use the key and version that you specify with the *KeyVaultKeyUrl* parameter.
 
-After you run this cmdlet, the Azure Rights Management service uses Azure Key Vault to centrally manage and monitor use of your tenant key. All calls to your tenant key will be made to and from a key vault that your organization owns. You can confirm which key you are using in Key Vault by using the [Get-AadrmKeys](./Get-AadrmKeys.md) cmdlet.
+Note: If you run this cmdlet before the permissions are granted to the key vault, you see an error that displays **The Rights Management service failed to add the key** with correlation **ID 5c8b98ec-f68a-4d4a-8d87-27a923c13ef6**. To see more detailed information, run the command again, with -*Verbose*. If the permissions are not granted, you see **VERBOSE: Failure to access Azure KeyVault**.
+
+When your command successfully runs, the key is added as an archived customer-managed tenant key for the Azure Rights Management service in your organization. To make it the active tenant key for Azure Information Protection, you must then run the [Set-AadrmKeyProperties](./Set-AadrmKeyProperties.md) cmdlet.
+
+Use Azure Key Vault to centrally manage and monitor use of the key that you specified. All calls to your tenant key will be made to the key vault that your organization owns. You can confirm which key you are using in Key Vault by using the [Get-AadrmKeys](./Get-AadrmKeys.md) cmdlet.
 
 For more information about the types of tenant keys that the Azure Rights Management service supports, see [Planning and implementing your Azure Information Protection tenant key](https://docs.microsoft.com/information-protection/plan-design/plan-implement-tenant-key).
 
