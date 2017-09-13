@@ -23,14 +23,14 @@ The Remove-AIPScannerRepository cmdlet removes a repository from a list of scann
 ### Example 1: Remove \\server1\HR from the repositories list
 ```
 PS C:\> Remove-AIPScannerRepository -Path \\server1\HR 
-```
+
 The repository \\server1\HR was removed successfully.
 ```
 
 ### Example 2: Empty list of repositories
 ```
 PS C:\> Get-AIPScannerRepository | Remove-AIPScannerRepository 
-```
+
 The repository http://sp2016.res.local/Shared Documents/Folder was removed successfully.
 The repository http://sp2013/Documents was removed successfully.
 The repository d:\data\Finance was removed successfully.
