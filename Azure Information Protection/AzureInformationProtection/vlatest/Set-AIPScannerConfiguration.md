@@ -39,7 +39,7 @@ Configuration was set successfully.
 ### Example 3: Sets Azure Information Protection Scanner to run scanning cycle in order to label and protect files using AIP policy and create detailed reports of changed and skipped files (Debug reporting level), and set  owner to admin@contoso.msft.
 ```
 PS C:\> Set-AIPScannerConfiguration -ScanMode Enforce -Schedule OneTime -ReportLevel Debug -DefaultOwner admin@contoso.msft.
-```
+
 Configuration was set successfully.
 ```
 

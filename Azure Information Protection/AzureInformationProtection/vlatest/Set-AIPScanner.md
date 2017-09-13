@@ -23,8 +23,9 @@ The Set-AIPScanner cmdlet updates Azure Information Protection Scanner service a
 ### Example 1: Changes Azure Information Protection Scanner DB to SERVER1\AIPSCANNER
 ```
 PS C:\> Set-AIPScanner -SqlServerInstance SERVER1\AIPSCANNER
-```
+
 Azure Information Protection Scanner service configuration change completed successfully.
+```
 
 ## PARAMETERS
 

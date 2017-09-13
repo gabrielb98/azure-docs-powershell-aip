@@ -23,7 +23,6 @@ The Set-AIPScanner cmdlet gets Azure Information Protection Scanner service conf
 ### Example 1: Gets current Azure Information Protection Scanner configuration
 ```
 PS C:\> Get-AIPScannerConfiguration
-```
 
 ScanMode             : Discover
 OverrideLabel        : AppliedByScanner

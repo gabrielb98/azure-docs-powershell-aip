@@ -23,12 +23,12 @@ The Get-AIPScannerRepository gets a list of repositores scanned by Azure Informa
 ### Example 1: Get list of current repositores
 ```
 PS C:\> Get-AIPScannerRepository
-```
+
 http://sp2016.res.local/Shared Documents/Folder
 http://sp2013/Documents
 \\server1\HR
 d:\data\Finance
-
+```
 
 ## PARAMETERS
 

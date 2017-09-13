@@ -27,9 +27,10 @@ Note: Azure Information Protection Scanner is a preview feature. Scope of the fe
 ### Example 1: Uninstall Azure Information Protection Scanner service
 ```
 PS C:\> Uninstall-AIPScanner
-```
+
 Azure Information Protection Scanner service was removed successfully. Azure Information Protection Scanner DB was not removed and should be removed manually if needed.
 Please restart the comouter in order to complete service removal.
+```
 
 ## PARAMETERS
 
