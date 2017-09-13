@@ -1,6 +1,6 @@
 ---
 external help file: AIP.dll-Help.xml
-online version: 
+online version: https://go.microsoft.com/fwlink/?linkid=858202
 schema: 2.0.0
 ---
 
@@ -81,3 +81,16 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
+[Install-AIPScanner](./Install-AIPScanner.md)
+
+[Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration.md)
+
+[Get-AIPScannerConfiguration](./Get-AIPScannerConfiguration.md)
+
+[Uninstall-AIPScanner](./Uninstall-AIPScanner.md)
+
+[Remove-AIPScannerRepository](./Remove-AIPScannerRepository.md)
+
+[Set-AIPScanner](./Set-AIPScanner.md)
+
+[Get-AIPScannerRepository](./Get-AIPScannerRepository.md)

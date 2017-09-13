@@ -1,6 +1,6 @@
 ---
 external help file: AIP.dll-Help.xml
-online version: https://go.microsoft.com/fwlink/?linkid=838766
+online version: https://go.microsoft.com/fwlink/?linkid=858205
 schema: 2.0.0
 ---
 
@@ -25,14 +25,14 @@ The Set-AIPScannerConfiguration cmdlet sets optional Azure Information Protectio
 ### Example 1: Sets Azure Information Protection Scanner to run one time discovery of configured repositories and create a report for newly discovered files since last run (Info repoting level)
 ```
 PS C:\> Set-AIPScannerConfiguration -ScanMode Discover -Schedule OneTime -ReportLevel Info
-```
+
 Configuration was set successfully.
 ```
 
 ### Example 2: Sets Azure Information Protection Scanner to label and protect files (Enforce policy mode) and run on continous mode. 
 ```
 PS C:\> Set-AIPScannerConfiguration -ScanMode Enforce -Schedule Continuous
-```
+
 Configuration was set successfully.
 ```
 
@@ -46,7 +46,7 @@ Configuration was set successfully.
 ### Example 4: Sets Azure Information Protection Scanner to run one time discovery of configured repositories and create a report for all files (full rescan)
 ```
 PS C:\> Set-AIPScannerConfiguration -ScanMode Enforce -Schedule OneTime -ReportLevel Debug -Type Full
-```
+
 Configuration was set successfully.
 ```
 
@@ -214,4 +214,18 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
+
+[Add-AIPScannerRepository](./Add-AIPScannerRepository.md)
+
+[Install-AIPScanner](./Install-AIPScanner.md)
+
+[Get-AIPScannerConfiguration](./Get-AIPScannerConfiguration.md)
+
+[Uninstall-AIPScanner](./Uninstall-AIPScanner.md)
+
+[Remove-AIPScannerRepository](./Remove-AIPScannerRepository.md)
+
+[Set-AIPScanner](./Set-AIPScanner.md)
+
+[Get-AIPScannerRepository](./Get-AIPScannerRepository.md)
 

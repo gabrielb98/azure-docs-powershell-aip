@@ -1,6 +1,6 @@
 ---
 external help file: AIP.dll-Help.xml
-online version: https://go.microsoft.com/fwlink/?linkid=838765
+online version: https://go.microsoft.com/fwlink/?linkid=858206
 schema: 2.0.0
 ---
 
@@ -49,3 +49,16 @@ DefaultOwner         :
 
 ## RELATED LINKS
 
+[Add-AIPScannerRepository](./Add-AIPScannerRepository.md)
+
+[Install-AIPScanner](./Install-AIPScanner.md)
+
+[Get-AIPScannerConfiguration](./Get-AIPScannerConfiguration.md)
+
+[Uninstall-AIPScanner](./Uninstall-AIPScanner.md)
+
+[Remove-AIPScannerRepository](./Remove-AIPScannerRepository.md)
+
+[Set-AIPScanner](./Set-AIPScanner.md)
+
+[Get-AIPScannerRepository](./Get-AIPScannerRepository.md)
