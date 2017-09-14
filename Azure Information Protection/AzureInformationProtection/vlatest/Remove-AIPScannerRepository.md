@@ -16,18 +16,23 @@ Remove-AIPScannerRepository [-Path] <String>
 ```
 
 ## DESCRIPTION
-The Remove-AIPScannerRepository cmdlet removes a repository from a list of scanned repositories. The cmdlet can be used in conjunction with Get-AIPScannerRepository in order to remove all defined repositories
+The Remove-AIPScannerRepository cmdlet removes a data repository from the list of data repositories that the Azure Information Protection scanner is configured to scan. These data repositories are specified by using the [Add-AIPScannerRepository](./Add-AIPScannerRepository) cmdlet.
+
+Tip: You can use this cmdlet with [Get-AIPScannerRepository](./Get-AIPScannerRepository.md) to quickly remove all data repositories that are currently specified for the scanner.
+
 
 ## EXAMPLES
 
-### Example 1: Remove \\server1\HR from the repositories list
+### Example 1: Remove a file share from the data repositories list
 ```
 PS C:\> Remove-AIPScannerRepository -Path \\server1\HR 
 
 The repository \\server1\HR was removed successfully.
 ```
 
-### Example 2: Empty list of repositories
+This command removes the file share named \\server1\HR from the list of data repositories that the scanner is configured to scan.
+
+### Example 2: Remove all data repositories that are currently specified
 ```
 PS C:\> Get-AIPScannerRepository | Remove-AIPScannerRepository 
 
@@ -36,10 +41,18 @@ The repository http://sp2013/Documents was removed successfully.
 The repository d:\data\Finance was removed successfully.
 ```
 
+This command first gets all the data repositories that are currently specified for the scanner and then removes them. In this example, three data repositories are found and removed from the scanner's configuration.
+
+
 ## PARAMETERS
 
 ### -Path
-Local path, UNC path or SharePoint 2013/2016 site or library. 
+Specifies a local path, network path, or SharePoint Server URL for the data repository that you no longer want to scan. Wildcards are not supported.
+
+For SharePoint paths: SharePoint Server 2013 and SharePoint Server 2016 are supported.
+
+Examples include C:\Folder\, C:\Folder\Filename, \\\Server\Folder, http://sharepoint.contoso.com/Shared%20Documents/Folder. Paths can include spaces when you enclose the path value with quotes.
+ 
 
 ```yaml
 Type: String

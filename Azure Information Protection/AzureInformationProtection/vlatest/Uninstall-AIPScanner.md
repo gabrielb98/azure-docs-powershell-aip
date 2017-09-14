@@ -7,7 +7,7 @@ schema: 2.0.0
 # Uninstall-AIPScanner
 
 ## SYNOPSIS
-Uninstalls Azure Information Protection Scanner service.
+Uninstalls the Windows Server service for the Azure Information Protection scanner.
 
 ## SYNTAX
 
@@ -16,21 +16,22 @@ Uninstall-AIPScanner
 ```
 
 ## DESCRIPTION
-The Uninstall-AIPScanner cmdlet uninstalls Azure Information Protection Scanner service. The command removes Windows service, but doesn't remove the DB created by Install-AIPScanner service. Manual cleanup of the DB should be performed if required. 
+The Uninstall-AIPScanner cmdlet uninstalls the Windows Server service for the Azure Information Protection scanner. This command does not remove the SQL Server database that was created by running the [Install-AIPScanner](./Install-AIPScanner.md) cmdlet. You must manually remove this database if it is no longer required. 
 
-In order to complete the command local administrator rights are required.
+To run this command, you must have local Administrator rights for the Windows Server computer and you must restart the computer after running the command to complete the removal process.
 
-Note: Azure Information Protection Scanner is a preview feature. Scope of the feature and command syntax might change.
 
 ## EXAMPLES
 
-### Example 1: Uninstall Azure Information Protection Scanner service
+### Example 1: Uninstall the Azure Information Protection Scanner service
 ```
 PS C:\> Uninstall-AIPScanner
 
 Azure Information Protection Scanner service was removed successfully. Azure Information Protection Scanner DB was not removed and should be removed manually if needed.
 Please restart the comouter in order to complete service removal.
 ```
+
+This command removes the service for the Azure Information Protection scanner.
 
 ## PARAMETERS
 

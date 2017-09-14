@@ -7,7 +7,7 @@ schema: 2.0.0
 # Add-AIPScannerRepository
 
 ## SYNOPSIS
-Adds a data repository to a list of repositories for the Azure Information Protection scanner. 
+Adds a data repository to be scanned by the Azure Information Protection scanner. 
 
 ## SYNTAX
 
@@ -16,33 +16,37 @@ Add-AIPScannerRepository [-Path] <String>
 ```
 
 ## DESCRIPTION
-The Add-AIPScannerRepository cmdlet adds a data repository to a list of scanned repositories for the Azure Information Protection scanner to scan. You can specify local folders, UNC paths, and SharePoint Server sites and libraries. 
+The Add-AIPScannerRepository cmdlet adds a data repository to be scanned by the Azure Information Protection scanner. You can specify local folders, UNC paths, and SharePoint Server URLs for SharePoint sites and libraries. 
 
 When you specify a data repository for SharePoint Server:
 
-- You can scan all documents and subfolders when you specify (includes documents in subfolders) under "Shared Documents": Specify the path "http://servername/Documents".
+- You can scan all documents and all documents in subfolders when you specify the parent path. For example, "http://servername/Shared Documents".
 
 - To scan just specific subfolders under Shared Documents should be scanned path "http://servername/Shared Documents/Folder" should be used.
 
 ## EXAMPLES
 
-### Example 1: Scan local D:\Data\Finance
+### Example 1: Configure a local folder to be scanned
 
 ```
-PS C:\> Add-AIPScannerRepository -Path 
+PS C:\> Add-AIPScannerRepository -Path D:\Data\Finance
 
 The repository was added successfully.
 ```
 
-### Example 2: Scan NAS fileshare \\NAS\HR
+This command adds the local folder named Data\Finance on the D drive to be scanned.
+
+### Example 2: Configure a network-attached storage (NAS) file share to be scanned
 
 ```
-PS C:\> Add-AIPScannerRepository -Path 
+PS C:\> Add-AIPScannerRepository -Path \\NAS\HR
 
 The repository was added successfully.
 ```
 
-### Example 3: Scan all shared documents in http://sp2013/Documents
+This command adds the file share named HR on the network-attached storage device named NAS to be scanned.
+
+### Example 3: Scan all shared documents on SharePoint Server
 
 ```
 PS C:\> Add-AIPScannerRepository -Path http://sp2013/Documents
@@ -50,18 +54,26 @@ PS C:\> Add-AIPScannerRepository -Path http://sp2013/Documents
 The repository was added successfully.
 ```
 
+This command adds the SharePoint Server site named Documents to be scanned.
+
 ### Example 4: Scan fodler named HR under Shared Documetns in SharePoint server named SP2016.res.local in http://sp2016.res.local/Shared Documents/HR
 
 ```
-PS C:\> Add-AIPScannerRepository -Path http://sp2016.res.local/Shared Documents/
+PS C:\> Add-AIPScannerRepository -Path http://sp2016.res.local/Shared Documents/HR
 
 The repository was added successfully.
 ```
 
+This command adds the SharePoint Server folder named HR that's a child folder of http://sp2016.res.local/Shared Documents to be scanned.
+
 ## PARAMETERS
 
 ### -Path
-Local path, UNC path or SharePoint 2013/2016 site or library. SharePoint Online repositories are not supported.
+Specifies a local path, network path, or SharePoint Server URL for the data repository that you want to scan. Wildcards are not supported.
+
+For SharePoint paths: SharePoint Server 2013 and SharePoint Server 2016 are supported.
+
+Examples include C:\Folder\, C:\Folder\Filename, \\\Server\Folder, http://sharepoint.contoso.com/Shared%20Documents/Folder. Paths can include spaces when you enclose the path value with quotes.
 
 ```yaml
 Type: String

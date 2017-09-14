@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-AIPScannerConfiguration
 
 ## SYNOPSIS
-Gets Azure Information Protection Scanner service configuration
+Gets the optional configuration for the Azure Information Protection scanner.
 
 ## SYNTAX
 
@@ -16,11 +16,12 @@ Get-AIPScannerConfiguration
 ```
 
 ## DESCRIPTION
-The Set-AIPScanner cmdlet gets Azure Information Protection Scanner service configuration. Azure Information Protection Scanner includes settings for scan mode, report level, schedule etc.
+The Get-AIPScannerConfiguration cmdlet gets the optional configuration for the Azure Information Protection scanner, which was configured by using the [Get-AIPScannerConfiguration](./Get-AIPScannerConfiguration.md) cmdlet. The optional configuration that you can set is the scan mode, the schedule, label override settings, the justification message, preserve file details, the report level, and the default owner.
 
 ## EXAMPLES
 
-### Example 1: Gets current Azure Information Protection Scanner configuration
+### Example 1: Gets the optional configuration for the Azure Information Protection scanner
+
 ```
 PS C:\> Get-AIPScannerConfiguration
 
@@ -32,6 +33,9 @@ Schedule             : OneTime
 JustificationMessage : Reclassified by Azure Information Protection Scanner
 DefaultOwner         :
 
+```
+
+This command gets the the optional configuration for the Azure Information Protection scanner. The configuration displayed includes the scan mode of discovery, file details are preserved, and successfully labeled files are reported. 
 
 ## PARAMETERS
 

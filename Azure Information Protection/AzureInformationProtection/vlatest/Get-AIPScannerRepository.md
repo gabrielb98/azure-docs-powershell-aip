@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-AIPScannerRepository
 
 ## SYNOPSIS
-Gets a list of repositores scanned by Azure Information Protection Scanner
+Gets a list of data repositories that the Azure Information Protection scanner is configured to scan.
 
 ## SYNTAX
 
@@ -16,19 +16,23 @@ Get-AIPScannerRepository
 ```
 
 ## DESCRIPTION
-The Get-AIPScannerRepository gets a list of repositores scanned by Azure Information Protection Scanner. You can use the command as a pipe for Remove-AIPScannerRepository in order to cleanup the list of the repositores
+The Get-AIPScannerRepository gets a list of data repositories that the Azure Information Protection scanner is configured to scan by using the [Add-AIPScannerRepository](./Add-AIPScannerRepository) cmdlet. 
+
+Tip: You can use the output of this cmdlet with [Remove-AIPScannerRepository](./Remove-AIPScannerRepository.md) to clean up the list of the data repositories for the scanner. For example: Add-AIPScannerRepository | Remove-AIPScannerRepository
 
 ## EXAMPLES
 
-### Example 1: Get list of current repositores
+### Example 1: Get the list of the current data repositories
 ```
 PS C:\> Get-AIPScannerRepository
 
 http://sp2016.res.local/Shared Documents/Folder
 http://sp2013/Documents
 \\server1\HR
-d:\data\Finance
+d:\Data\Finance
 ```
+
+This command gets the list of the data repositories that the Azure Information Protection scanner is currently configured to scan. The list displays two paths from SharePoint Server, a file server share, and a local disk and folder.
 
 ## PARAMETERS
 
