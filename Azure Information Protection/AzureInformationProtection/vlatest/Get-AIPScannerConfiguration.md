@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-AIPScannerConfiguration
 
 ## SYNOPSIS
-Gets the optional configuration for the Azure Information Protection scanner.
+Gets the configuration settings for the Azure Information Protection scanner.
 
 ## SYNTAX
 
@@ -16,11 +16,13 @@ Get-AIPScannerConfiguration
 ```
 
 ## DESCRIPTION
-The Get-AIPScannerConfiguration cmdlet gets the optional configuration for the Azure Information Protection scanner, which was configured by using the [Get-AIPScannerConfiguration](./Get-AIPScannerConfiguration.md) cmdlet. The optional configuration that you can set is the scan mode, the schedule, label override settings, the justification message, preserve file details, the report level, and the default owner.
+The Get-AIPScannerConfiguration cmdlet gets the configuration settings for the Azure Information Protection scanner. Most of the settings have a default value, so you need to specify them only if you want to use another value, or you have previously set them and now need to reconfigure them. To do so, use the [Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration.md) cmdlet. 
+
+The configuration settings include whether the scanner is in discovery mode only or applies labels, whether a file will be relabeled, whether file attributes are changed, what is logged in the reports, whether the scanner runs once or continuously, what justification message to use when required, and the Rights Management owner for protected files.
 
 ## EXAMPLES
 
-### Example 1: Gets the optional configuration for the Azure Information Protection scanner
+### Example 1: Gets the configuration for the Azure Information Protection scanner
 
 ```
 PS C:\> Get-AIPScannerConfiguration
@@ -35,7 +37,21 @@ DefaultOwner         :
 
 ```
 
-This command gets the the optional configuration for the Azure Information Protection scanner. The configuration displayed includes the scan mode of discovery, file details are preserved, and successfully labeled files are reported. 
+This command gets the current configuration settings for the Azure Information Protection scanner. In this example, the output shows that the scanner is using default values for its settings. The one exception is the justification message, which has been specified.
+
+- The scanner is in discovery mode for reporting purposes only. Labels are not applied to files.
+
+- The scanner will apply a different label to a file that's already labeled only when these files have been labeled by the current scanner account.
+
+- The scanner will not overwrite file attributes when a file is labeled.
+
+- The reports contains details of files that were successfully labeled.
+ 
+- The scanner will run one time and then stop the service, rather than run continuously.
+
+- The string "Reclassified by Azure Information Protection Scanner" is supplied and logged when the scanner applies a label that requires justification.
+
+- No specific account is specified for the Rights Management owner when a file is protected, so default values are used.
 
 ## PARAMETERS
 

@@ -24,34 +24,48 @@ The optional configuration that you can set is the scan mode, the schedule, labe
 
 ## EXAMPLES
 
-### Example 1: Sets Azure Information Protection Scanner to run one time discovery of configured repositories and create a report for newly discovered files since last run (Info repoting level)
+### Example 1: Configure the Azure Information Protection scanner to run a one time discovery and create a report for files that would be labeled
 ```
 PS C:\> Set-AIPScannerConfiguration -ScanMode Discover -Schedule OneTime -ReportLevel Info
 
 Configuration was set successfully.
 ```
 
-### Example 2: Sets Azure Information Protection Scanner to label and protect files (Enforce policy mode) and run on continous mode. 
+This command configures the scanner to run a one-time discovery for files in the specified data repositories, to create a report that lists the files that meet the conditions to be labeled.
+
+Note that because these parameters specify the default values, you need to specify them only if you previously specified them with values other than the defaults.
+
+### Example 2: Configure the Azure Information Protection scanner to continuously discover and label files
+ 
 ```
 PS C:\> Set-AIPScannerConfiguration -ScanMode Enforce -Schedule Continuous
 
 Configuration was set successfully.
 ```
 
-### Example 3: Sets Azure Information Protection Scanner to run scanning cycle in order to label and protect files using AIP policy and create detailed reports of changed and skipped files (Debug reporting level), and set  owner to admin@contoso.msft.
+This command configures the scanner to continuously discover files in the specified data repositories and label the files that meet the conditions in the Azure Information Protection policy. For these files, they are classified and protected (or have protection removed), according to the label's configuration.  
+
+### Example 3: Configure the Azure Information Protection scanner to run a one time discovery to label files and set the Rights Management owner, and log changed and skipped files
+
 ```
-PS C:\> Set-AIPScannerConfiguration -ScanMode Enforce -Schedule OneTime -ReportLevel Debug -DefaultOwner admin@contoso.msft.
+PS C:\> Set-AIPScannerConfiguration -ScanMode Enforce -Schedule OneTime -ReportLevel Debug -DefaultOwner admin@contoso.com.
 
 Configuration was set successfully.
 ```
 
-### Example 4: Sets Azure Information Protection Scanner to run one time discovery of configured repositories and create a report for all files (full rescan)
+This command configures the scanner for a one-time discovery of files in the specified data repositories and label the files that meet the conditions in the Azure Information Protection policy. For these files, they are classified and protected (or have protection removed), according to the label's configuration. For files that are protected, the Rights Management owner is set to admin@contoso.com. Actions for changed and skipped files are logged in the report. 
+
+
+### Example 4: Configure the Azure Information Protection scanner to scan and label all files one time, using the latest Azure Information Protection policy, and log changed and skipped files
 
 ```
 PS C:\> Set-AIPScannerConfiguration -ScanMode Enforce -Schedule OneTime -ReportLevel Debug -Type Full
 
 Configuration was set successfully.
 ```
+
+This command configures the scanner to check for any changes to the Azure Information Protection policy and then do a one-time discovery of all files in the specified data repositories and label the files that meet the conditions in the Azure Information Protection policy. For these files, they are classified and protected (or have protection removed), according to the label's configuration. Actions for changed and skipped files are logged in the report. 
+
 
 ## PARAMETERS
 
@@ -97,9 +111,9 @@ Accept wildcard characters: False
 ```
 
 ### -OverrideLabel
-Specifies whether to reclassify a file that's already classified. By default, the scanner reclassifies these files only when they have been classified by the current scanner account. 
+Specifies whether to apply a different label to a file that's already labeled. By default, the scanner relabels these files only when they have been labeled by the current scanner account. 
 
-To prevent this reclassification, set this parameter to Off. To reclassify files that have been classified by another account (for example, another classification solution), set this parameter to On. 
+To prevent this relabeling, set this parameter to Off. To relabel files that have been labeled by another account (for example, manually by a user or by another labeling solution), set this parameter to On. 
 
 
 ```yaml
@@ -116,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -PreserveFileDetails
-Specify whether to keep the following file attributes when a file is labeled, or overwrite them: The archive flag, Date Modified, and Owner.
+Specify whether to keep the following file attributes when a file is labeled (the default value), or overwrite them: The archive flag, Date Modified, and Owner.
 
 Set this parameter to On to preserve these file attributes and Off to overwrite them.
 
@@ -134,12 +148,20 @@ Accept wildcard characters: False
 ```
 
 ### -ReportLevel
-Defines the level of logging for detailed report. 
+Defines the level of logging for the scanner reports. By default, only files that are successfully labeled by the scanner are included in the log file.
 
-Debug – includes the skipped items, useful for troubleshooting, but has a performance impact on Azure Information Protection Scanner.
-Info – logs only files with applied action.
-Error – logs errors only.
-Off – disables reporting, best for performance.
+Log files are stored in %localappdata%\Microsoft\MSIP\Scanner\Reports and have a .csv file format. They include the time taken to scan, the number of scanned files, and statistics of how many files were classified and protected. This folder stores up to 60 reports for each scanning cycle and all but the latest report is compressed to help minimize the required disk space.
+
+- Debug: Includes the skipped files. This level of logging is useful for troubleshooting, but has a performance impact on the Azure Information Protection scanner.
+
+- Info: Logs only the files that were successfully labeled by the scanner.
+
+- Error: Logs only the files that the scanner attempted to label but could not. For example, a justification reason was required but not specified.
+
+Off: Disables reporting, which results in the best performance for the scanner.
+
+Windows Application event logs contain additional logging information, which includes the start and end times for each scanning cycle, when a scanned file has a label applied, and when protection is applied or removed.
+
 
 
 ```yaml
@@ -156,10 +178,11 @@ Accept wildcard characters: False
 ```
 
 ### -ScanMode
-Set to Discover to instruct Azure Information Protection Scanner to scan the repositories in “whatif” mode. In this mode scanner inspects the files and creates a report for discovered files without changing the files (no labeling or protection is applied).
+Specifies whether the scanner only logs the files that meet the conditions in the Azure Information Protection policy without applying the corresponding label (the default action), or applies the label: 
 
-Set to Enforce to instruct scanner to scan the repositories and apply AIP policy. In this mode scanner inspects the files, classifies them and applies labels and protection according to the defined AIP policy.
+- Discover: Scans the data repositories in the "what if" mode, to log results only without setting the classification or protection that the corresponding label would apply.
 
+- Enforce: Scans the data repositories, and for files that meet the conditions, apply the corresponding label to set the classification and optionally, protection.
 
 ```yaml
 Type: ScanMode
@@ -175,11 +198,11 @@ Accept wildcard characters: False
 ```
 
 ### -Schedule
-Set to OneTime for single scan. In this case Azure Information Protection Scanner scans the defined repositories one time and then the service is stopped.
-This mode is useful for Discover mode that scans repository one time and prepares the report of discovered data.
+Specifies when and how often the scanner runs on the specified data repositories:
 
-Set to Continuous for continuous scan. In this case scanner service runs always and once the scan cycle passed through all files in the defined repositories the scanner starts the new scan cycle of the repositories.
-This mode is useful for Enforce mode when continous labeling and protection of newly creatd files is required.
+- OneTime: A single scan, after which the Azure Information Protection Scanner service is stopped. This option is useful when the *ScanMode* is set to Discover, so that the scanner runs one time and you can check the results in the report. 
+
+- Continuous: The specified data repositories are repeatedly scanned in sequence and the Azure Information Protection Scanner service is not stopped. Use this option to scan for files that are modified or added to the data repositories. However, for files that are modified, check the configuration of the *OverrideLabel* parameter. This option is most useful when the the *ScanMode* is set to Enforce because it ensures all files will be scanned.
 
 
 ```yaml
@@ -196,8 +219,14 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-By default is set to Incermental, where Azure Information Protection Scanner maintains a list of already scanneed files and evaluates only newly created files or files that were changed since last scan cycle, in case the policy was not changed since last scan cycle. 
-In order to initiate full rescan regardless of previuous scan or file timestampt set this paramter to Full.
+Specifies whether the scanner maintains a list of previously scanned files so it can scan only new or modified files since the service started, using the same Azure Information Protection policy that was downloaded when the service started. This is the default behavior. 
+
+If this list is not maintained, all files in the specified data repositories are scanned with each scanning cycle. In this case, before the scanner repeats the cycle, it first checks whether there are any changes to the Azure Information Protection policy and downloads any changes.
+
+- Incremental: The scanner maintains a list of previously scanned files so it can scan only new or modified files. The Azure Information Protection policy is not checked for changes. 
+
+- Full: Each time the cycle finishes, the scanner checks for changes in the Azure Information Protection policy and downloads these if necessary. Then, all files in the specified data repositories are scanned again.
+
 
 ```yaml
 Type: ScanType
