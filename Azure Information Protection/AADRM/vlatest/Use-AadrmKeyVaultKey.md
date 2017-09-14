@@ -27,7 +27,7 @@ Before you run this cmdlet, make sure that the Azure Rights Management service p
 
 For security reasons, the Use-AadrmKeyVaultKey cmdlet does not let you set or change the access control for the key in Azure Key Vault. After that access is granted by running Set-AzureRmKeyVaultAccessPolicy, run Use-AadrmKeyVaultKey to tell the Azure Rights Management service to use the key and version that you specify with the *KeyVaultKeyUrl* parameter.
 
-Note: If you run this cmdlet before the permissions are granted to the key vault, you see an error that displays **The Rights Management service failed to add the key** with correlation **ID 5c8b98ec-f68a-4d4a-8d87-27a923c13ef6**. To see more detailed information, run the command again, with -*Verbose*. If the permissions are not granted, you see **VERBOSE: Failure to access Azure KeyVault**.
+Note: If you run this cmdlet before the permissions are granted to the key vault, you will see an error that displays **The Rights Management service failed to add the key**. To see more detailed information, run the command again, with -*Verbose*. If the permissions are not granted, you see **VERBOSE: Failure to access Azure KeyVault**.
 
 When your command successfully runs, the key is added as an archived customer-managed tenant key for the Azure Rights Management service in your organization. To make it the active tenant key for Azure Information Protection, you must then run the [Set-AadrmKeyProperties](./Set-AadrmKeyProperties.md) cmdlet.
 
