@@ -7,7 +7,7 @@ schema: 2.0.0
 # Set-AIPScannerConfiguration
 
 ## SYNOPSIS
-Sets Azure Information Protection Scanner service optional configuration. The configuration will be used in next scanner cycle. Restart the Azure Information Protection Scanner service in order to apply changes immediately.
+Sets optional configuration for the Azure Information Protection scanner.
 
 ## SYNTAX
 
@@ -18,7 +18,9 @@ Set-AIPScannerConfiguration [-ScanMode <ScanMode>] [-OverrideLabel <OverrideLabe
 ```
 
 ## DESCRIPTION
-The Set-AIPScannerConfiguration cmdlet sets optional Azure Information Protection Scanner configuration: scan mode, schedule, label override settings, reclassificaion justification message, fiel details preservation settings, report level and default owner.
+The Set-AIPScannerConfiguration cmdlet sets optional configuration for the Azure Information Protection scanner, which will be used the next time the scanner runs. If you need the changes to take effect immediately, restart the Azure Information Protection Scanner service on the Windows server computer.
+
+The optional configuration that you can set is the scan mode, the schedule, label override settings, the justification message, preserve file details, the report level, and the default owner.
 
 ## EXAMPLES
 
@@ -44,6 +46,7 @@ Configuration was set successfully.
 ```
 
 ### Example 4: Sets Azure Information Protection Scanner to run one time discovery of configured repositories and create a report for all files (full rescan)
+
 ```
 PS C:\> Set-AIPScannerConfiguration -ScanMode Enforce -Schedule OneTime -ReportLevel Debug -Type Full
 
@@ -53,8 +56,15 @@ Configuration was set successfully.
 ## PARAMETERS
 
 ### -DefaultOwner
-For files stored in SharePoint scanner uses SharePoint author property to set RMS owner of the file. For files without author or for files stored on other repositories (shares or local fodlers) scanner sets service account as an owner if DefaultOwner is not set.
-In order to set scanner to use another account as owner for files without author field or for scanned files via CIFS or local files set desired owner’s email using parameter. Use "" in order to remove default owner
+Specifies the Rights Management owner by email address when the scanner protects files. For more information about the Rights Management owner, see [Rights Management issuer and Rights Management owner](https://docs.microsoft.com/information-protection/deploy-use/configure-usage-rights#rights-management-issuer-and-rights-management-owner).
+
+If you do not specify this parameter, default values are used for the Rights Management owner:
+
+- For files on SharePoint Server, the SharePoint author is used to set the Rights Management owner. 
+
+- For files on SharePoint Server that do not have the author property set and for files that are stored on file shares or local folders, the scanner's account is used to set the Rights Management owner.
+
+To remove the currently set Rights Management owner, specify "".
 
 
 ```yaml
@@ -70,7 +80,9 @@ Accept wildcard characters: False
 ```
 
 ### -JustificationMessage
-Azure Information Protection Scanner can downgrade senstivity level of the file. This setting is required in order to enable Azure Information Protection Scanner to be able to lower sensitivity level and if your policy requires justification for this action. The justification specified in this parameter will be logged as a justification message for files that were reclassified by a scaner to a lower sensitivity level.
+Specifies the justification reason for lowering the classification label or removing protection, if the Azure Information Protection policy requires users to supply this information.
+
+If setting a label triggers the justification and this reason is not supplied, the label is not applied.
 
 ```yaml
 Type: String
@@ -85,10 +97,9 @@ Accept wildcard characters: False
 ```
 
 ### -OverrideLabel
-Defines if the scanner reapplies the label and its action on already labeled files.
-By default, scanner reclassifies only files that were classified by scanner itself.
+Specifies whether to reclassify a file that's already classified. By default, the scanner reclassifies these files only when they have been classified by the current scanner account. 
 
-In order to enable scanner to reclassify files previously classified by another account set this parameter to On.
+To prevent this reclassification, set this parameter to Off. To reclassify files that have been classified by another account (for example, another classification solution), set this parameter to On. 
 
 
 ```yaml
@@ -105,10 +116,9 @@ Accept wildcard characters: False
 ```
 
 ### -PreserveFileDetails
-Set to On in order to preserve file attributes, like archive flag, Date Modified and Owner for the labeled and protected files.
+Specify whether to keep the following file attributes when a file is labeled, or overwrite them: The archive flag, Date Modified, and Owner.
 
-Set to Off if you want to reflect the change of the file in the attributes listed above
-
+Set this parameter to On to preserve these file attributes and Off to overwrite them.
 
 ```yaml
 Type: PreserveFileDetails
