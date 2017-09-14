@@ -53,7 +53,7 @@ The repository was added successfully.
 
 This command adds the SharePoint Server site named Shared Documents to be scanned.
 
-### Example 4: Scan fodler named HR under Shared Documetns in SharePoint server named SP2016.res.local in http://sp2016.res.local/Shared Documents/HR
+### Example 4: Scan a specific folder on SharePoint Server
 
 ```
 PS C:\> Add-AIPScannerRepository -Path http://sp2016.res.local/Documents/HR
@@ -61,7 +61,7 @@ PS C:\> Add-AIPScannerRepository -Path http://sp2016.res.local/Documents/HR
 The repository was added successfully.
 ```
 
-This command adds the SharePoint Server folder named HR that's a child folder of "http://sp2016.res.local/Documents" to be scanned.
+This command adds the SharePoint Server folder named HR that's a child folder of http://sp2016.res.local/Documents to be scanned.
 
 ## PARAMETERS
 

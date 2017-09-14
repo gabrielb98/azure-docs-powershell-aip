@@ -16,13 +16,13 @@ Install-AIPScanner [-ServiceUserCredentials] <PSCredential> [-SqlServerInstance]
 ```
 
 ## DESCRIPTION
-The Install-AIPScanner cmdlet installs and configures the Azure Information Protection Scanner service on a computer running Windows Server 2016 or Windows Server 2012 R2. This service can scan files on data stores that use the Common Internet File System (CIFS) protocol, and on SharePoint Server 2016 and SharePoint Server 2013. By using the conditions that you configure for automatic classification in the Azure Information Protection policy, files that this service discovers can then be labeled. Labels apply classification, and optionally, apply protection or remove protection.
+The Install-AIPScanner cmdlet installs and configures the Azure Information Protection Scanner service on a computer running Windows Server 2016 or Windows Server 2012 R2. The Azure Information Protection scanner uses this service to scan files on data stores that use the Common Internet File System (CIFS) protocol, and on SharePoint Server 2016 and SharePoint Server 2013. By using the conditions that you configure for automatic classification in the Azure Information Protection policy, files that this scanner discovers can then be labeled. Labels apply classification, and optionally, apply protection or remove protection.
 
 For more information about how to configure the Azure Information Protection policy, see [Configuring the Azure Information Protection policy](https://docs.microsoft.com/information-protection/deploy-use/configure-policy).
 
 You must run this cmdlet before you run any other cmdlet for the Azure Information Protection scanner.
 
-The command creates a Windows service named Azure Information Protection Scanner, creates and configures a database on SQL Server, and grants the required rights to an account that you specify to run this scanner service.
+The command creates a Windows service named Azure Information Protection Scanner, creates and configures a database on SQL Server, and grants the required rights to an account that you specify to run the scanner service.
 
 To run this command, you must have local Administrator rights for the Windows Server computer, and Sysadmin rights on the instance of SQL Server that you will use for the scanner.
 
@@ -75,7 +75,7 @@ The transacted install has completed.
 
 ```
 
-This command installs the Azure Information Protection Scanner service by using a SQL Server instance named AIPSCANNER, which runs on the server named SQLSERVER1. It prompts for credentials, and then displays the progress, where the install log is located, and the creation of the new Windows Application event log.
+This command installs the Azure Information Protection Scanner service by using a SQL Server instance named AIPSCANNER, which runs on the server named SQLSERVER1. It prompts for credentials, and then displays the progress, where the install log is located, and the creation of the new Windows Application event log named Azure Information Protection Scanner.
 
 ### Example 2: Install the Azure Information Protection Scanner service by using the SQL Server default instance
 ```
@@ -117,7 +117,7 @@ The Commit phase completed successfully.
 The transacted install has completed.
 ```
 
-This command installs the Azure Information Protection Scanner service by using the SQL Server default instance that runs on the server named SQLSERVER1. As with the previous example, you are prompted for credentials, and then the command displays the progress, where the install log is located, and the creation of the new WindowsApplication event log.
+This command installs the Azure Information Protection Scanner service by using the SQL Server default instance that runs on the server named SQLSERVER1. As with the previous example, you are prompted for credentials, and then the command displays the progress, where the install log is located, and the creation of the new Windows Application event log.
 
 
 ### Example 3: Install the Azure Information Protection Scanner service by using SQL Express 
@@ -160,7 +160,7 @@ The Commit phase completed successfully.
 The transacted install has completed.
 ```
 
-This command installs the Azure Information Protection Scanner service by using SQL Server Express that runs on the server named SQLSERVER1. As with the previous examples, you are prompted for credentials, and then the command displays the progress, where the install log is located, and the creation of the new WindowsApplication event log.
+This command installs the Azure Information Protection Scanner service by using SQL Server Express that runs on the server named SQLSERVER1. As with the previous examples, you are prompted for credentials, and then the command displays the progress, where the install log is located, and the creation of the new Windows Application event log.
 
 ## PARAMETERS
 
@@ -195,7 +195,7 @@ Accept wildcard characters: False
 ### -SqlServerInstance
 Specifies the SQL Server instance on which to create a database for the Azure Information Protection scanner. 
 
-The account that runs the Azure Information Protection scanner is automatically granted permisisons to read and write to this database.
+The account that runs the Azure Information Protection scanner is automatically granted permissions to read and write to this database.
 
 You can use a local or remote SQL Server instance when SQL Server 2012 R2 is the minimum version on the following editions:
 
@@ -207,7 +207,7 @@ You can use a local or remote SQL Server instance when SQL Server 2012 R2 is the
 
 For the default instance, specify the server name. For example: SQLSERVER1. 
 
-For a named instance, specify the server name and instance name. For exmaple: SQLSERVER1\AIPSCANNER. 
+For a named instance, specify the server name and instance name. For example: SQLSERVER1\AIPSCANNER. 
 
 For SQL Server Express, specify the server name and SQLEXPRESS. For example: SQLSERVER1\SQLEXPRESS.
 
