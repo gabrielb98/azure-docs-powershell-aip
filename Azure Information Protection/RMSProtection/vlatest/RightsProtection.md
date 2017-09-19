@@ -21,15 +21,17 @@ The current version of the RMS Protection PowerShell module is **2.2.0.0**. If y
 >
 >If you want to automatically protect files on a file share by using Windows Server File Resource Manager and File Classification Infrastructure, see the step-by-step instructions in [RMS Protection with Windows Server File Classification Infrastructure (FCI)](https://docs.microsoft.com/information-protection/rms-client/configure-fci).
 
-The current release of the RMS Protection module has the following limitations:
+This release of the RMS Protection module has the following limitations:
 
 - You can unprotect Outlook personal folders (.pst files), but you cannot currently natively protect these files or other container files by using the RMS Protection Tool.
 
 - You can unprotect Outlook protected email messages (.rpmsg files) when they are in a Outlook personal folder (.pst), but you cannot unprotect .rpmsg files outside a personal folder.
 
+- To protect or unprotect files for AD RMS, you must use your user account interactively. To run the cmdlets non-interactively with AD RMS (for example, with Windows Server FCI), upgrade to the AzureInformationProtection module that installs with the current preview version of the [Azure Information Protection client](https://www.microsoft.com/en-us/download/details.aspx?id=53018). To support non-interactive sessions for AD RMS, in this newer module, specify the  *IntegratedAuth* parameter for the [Set-RMSServerAuthentication](/powershell/module/azureinformationprotection/set-rmsserverauthentication) cmdlet.
+
 - For Azure Rights Management only:
 
- - By default, the cmdlets are not supported outside North America. As a workaround, you can edit the registry, as documented in [about_RMSProtection_AzureRMS](https://msdn.microsoft.com/en-us/library/mt433202.aspx). Without this registry change, authentication to the Azure Rights Management service fails outside the Azure North America region.
+ - By default, the cmdlets are not supported outside North America. As a workaround, you can edit the registry, as documented in [about_RMSProtection_AzureRMS](https://msdn.microsoft.com/en-us/library/mt433202.aspx). Without this registry change, service discovery to the Azure Rights Management service fails outside the Azure North America region.
 
 - For Windows 7 SP1 and Windows Server 2012:
 
