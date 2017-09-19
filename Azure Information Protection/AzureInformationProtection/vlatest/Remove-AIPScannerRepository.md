@@ -81,14 +81,14 @@ Accept wildcard characters: False
 
 [Add-AIPScannerRepository](./Add-AIPScannerRepository.md)
 
-[Install-AIPScanner](./Install-AIPScanner.md)
-
-[Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration.md)
-
 [Get-AIPScannerConfiguration](./Get-AIPScannerConfiguration.md)
 
-[Uninstall-AIPScanner](./Uninstall-AIPScanner.md)
+[Get-AIPScannerRepository](./Get-AIPScannerRepository.md)
+
+[Install-AIPScanner](./Install-AIPScanner.md)
 
 [Set-AIPScanner](./Set-AIPScanner.md)
 
-[Get-AIPScannerRepository](./Get-AIPScannerRepository.md)
+[Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration.md)
+
+[Uninstall-AIPScanner](./Uninstall-AIPScanner.md)

@@ -35,19 +35,13 @@ This command configures the Azure Information Protection scanner to start using 
 ## PARAMETERS
 
 ### -ServiceUserCredentials
-Specifies a **PSCredential** object for the new account to run the Azure Information Protection Scanner service. For the user name, use the following format: Domain\Username. You are prompted for a password. 
+Specifies a **PSCredential** object for the new service account to run the Azure Information Protection Scanner service. For the user name, use the following format: Domain\Username. You are prompted for a password. 
 
 To obtain a PSCredential object, use the [Get-Credential](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/get-credential) cmdlet. For more information, type `Get-Help Get-Cmdlet`. 
 
-This account must be an Active Directory account that requires the following:
+If you do not specify this parameter, you are prompted for the user name and password.
 
-- **Log on locally** right. This right is required for the installation and configuration of the scanner, but not for operation. You can remove this right after you have confirmed that the scanner can discover, classify, and protect files.
-
-- **Log on as a service** right. This right is required for the installation, configuration, and operation of the scanner.
-
-- For labels that apply or remove protection: The account must be synchronized to Azure AD and have an email account. In addition, this account must be a super user for the Azure Rights Management service. For more information about super users, see [Configuring super users for Azure Rights Management and discovery services or data recovery](https://docs.microsoft.com/information-protection/deploy-use/configure-super-users).
-
-- Access to the data repositories to scan: Read permissions for discovery mode only (files are not classified or protected). Read and Write permissions for applying labels that meet the conditions in the Azure Information Protection policy. 
+This account must be an Active Directory account. For additional requirements, see [Prerequisites for the Azure Information Protection scanner](https://docs.microsoft.com/information-protection/deploy-use/deploy-aip-scannerpPrerequisites-for-the-azure-information-protection-scanner).
 
 
 ```yaml
@@ -65,19 +59,11 @@ Accept wildcard characters: False
 ### -SqlServerInstance
 Specifies the new SQL Server instance on which to create a database for the Azure Information Protection scanner. 
 
-The account that runs the Azure Information Protection scanner is automatically granted permissions to read and write to this database.
-
-You can use a local or remote SQL Server instance when SQL Server 2012 R2 is the minimum version on the following editions:
-
-- SQL Server Express
-
-- SQL Server Standard
-
-- SQL Server Enterprise
+For information about the SQL Server requirements, see [Prerequisites for the Azure Information Protection scanner](https://docs.microsoft.com/information-protection/deploy-use/deploy-aip-scannerpPrerequisites-for-the-azure-information-protection-canner).
 
 For the default instance, specify the server name. For example: SQLSERVER1. 
 
-For a named instance, specify the server name and instance name. For exmaple: SQLSERVER1\AIPSCANNER. 
+For a named instance, specify the server name and instance name. For example: SQLSERVER1\AIPSCANNER. 
 
 For SQL Server Express, specify the server name and SQLEXPRESS. For example: SQLSERVER1\SQLEXPRESS.
 
@@ -108,14 +94,14 @@ Accept wildcard characters: False
 
 [Add-AIPScannerRepository](./Add-AIPScannerRepository.md)
 
-[Install-AIPScanner](./Install-AIPScanner.md)
-
-[Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration.md)
-
 [Get-AIPScannerConfiguration](./Get-AIPScannerConfiguration.md)
 
-[Uninstall-AIPScanner](./Uninstall-AIPScanner.md)
+[Get-AIPScannerRepository](./Get-AIPScannerRepository.md)
+
+[Install-AIPScanner](./Install-AIPScanner.md)
 
 [Remove-AIPScannerRepository](./Remove-AIPScannerRepository.md)
 
-[Get-AIPScannerRepository](./Get-AIPScannerRepository.md)
+[Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration.md)
+
+[Uninstall-AIPScanner](./Uninstall-AIPScanner.md)

@@ -18,6 +18,12 @@ Add-AIPScannerRepository [-Path] <String>
 ## DESCRIPTION
 The Add-AIPScannerRepository cmdlet adds a data repository to be scanned by the Azure Information Protection scanner. You can specify local folders, UNC paths, and SharePoint Server URLs for SharePoint sites and libraries. 
 
+When you add a SharePoint path for "Shared Documents":
+
+- Specify "Shared Documents" in the path when you want to scan all documents and all folders from Shared Documents. For example: "http://sp2013/Shared Documents"
+
+- Specify "Documents" in the path when you want to scan all documents and all folders from a subfolder under Shared Documents. For example: "http://sp2013/Documents/Sales Reports"
+
 If you later need to remove a data repository that you added, use the [Remove-AIPScannerRepository](./Remove-AIPScannerRepository) cmdlet.
 
 
@@ -43,7 +49,7 @@ The repository was added successfully.
 
 This command adds the file share named HR on the network-attached storage device named NAS to be scanned.
 
-### Example 3: Scan all shared documents on SharePoint Server
+### Example 3: Scan all documents and folders from the SharePoint Server "Shared Documents" library
 
 ```
 PS C:\> Add-AIPScannerRepository -Path "http://sp2013/Shared Documents"
@@ -51,9 +57,9 @@ PS C:\> Add-AIPScannerRepository -Path "http://sp2013/Shared Documents"
 The repository was added successfully.
 ```
 
-This command adds the SharePoint Server site named Shared Documents to be scanned.
+This command adds the SharePoint Server "Shared Documents" library to be scanned.
 
-### Example 4: Scan a specific folder on SharePoint Server
+### Example 4: Scan a specific folder in the SharePoint Server "Shared Documents" library
 
 ```
 PS C:\> Add-AIPScannerRepository -Path http://sp2016.res.local/Documents/HR
@@ -61,7 +67,9 @@ PS C:\> Add-AIPScannerRepository -Path http://sp2016.res.local/Documents/HR
 The repository was added successfully.
 ```
 
-This command adds the SharePoint Server folder named HR that's a child folder of http://sp2016.res.local/Documents to be scanned.
+This command adds the SharePoint Server folder named HR, from the "Shared Documents" library. 
+
+Note that the path syntax for this scenario uses "Documents" rather than "Shared Documents".
 
 ## PARAMETERS
 
@@ -97,16 +105,17 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[Install-AIPScanner](./Install-AIPScanner.md)
-
-[Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration.md)
-
 [Get-AIPScannerConfiguration](./Get-AIPScannerConfiguration.md)
 
-[Uninstall-AIPScanner](./Uninstall-AIPScanner.md)
+[Get-AIPScannerRepository](./Get-AIPScannerRepository.md)
+
+[Install-AIPScanner](./Install-AIPScanner.md)
 
 [Remove-AIPScannerRepository](./Remove-AIPScannerRepository.md)
 
 [Set-AIPScanner](./Set-AIPScanner.md)
 
-[Get-AIPScannerRepository](./Get-AIPScannerRepository.md)
+[Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration.md)
+
+[Uninstall-AIPScanner](./Uninstall-AIPScanner.md)
+

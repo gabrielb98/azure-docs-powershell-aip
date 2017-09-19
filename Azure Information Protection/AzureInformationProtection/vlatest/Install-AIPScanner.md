@@ -22,9 +22,9 @@ For more information about how to configure the Azure Information Protection pol
 
 You must run this cmdlet before you run any other cmdlet for the Azure Information Protection scanner.
 
-The command creates a Windows service named Azure Information Protection Scanner, creates and configures a database on SQL Server, and grants the required rights to an account that you specify to run the scanner service.
+The command creates a Windows service named Azure Information Protection Scanner. It also creates and configures a database on SQL Server to store configuration and operational information for the scanner. The service that you specify to run the scanner is automatically granted the required rights to read and write to the database that is created.
 
-To run this command, you must have local Administrator rights for the Windows Server computer, and Sysadmin rights on the instance of SQL Server that you will use for the scanner.
+To run this command, you must have local administrator rights for the Windows Server computer, and Sysadmin rights on the instance of SQL Server that you will use for the scanner.
 
 Note: If you later need to change the account and database that you specified when you ran this cmdlet, you can do so by using the [Set-AIPScanner](./Set-AIPScanner.md) cmdlet.
 
@@ -38,83 +38,16 @@ For step-by-step instructions to install, configure, and use the scanner, see [D
 ```
 PS C:\> Install-AIPScanner -SqlServerInstance SQLSERVER1\AIPSCANNER
 
-cmdlet Install-AIPScanner at command pipeline position 1
-Supply values for the following parameters:
-ServiceUserCredentials
-
-Running a transacted installation.
-
-Beginning the Install phase of the installation.
-See the contents of the log file for the C:\Program Files (x86)\Microsoft Azure Information Protection\MSIP.Scanner.exe
-The file is located at C:\Program Files (x86)\Microsoft Azure Information Protection\MSIP.Scanner.InstallLog.
-Installing assembly 'C:\Program Files (x86)\Microsoft Azure Information Protection\MSIP.Scanner.exe'.
-Affected parameters are:
-   logtoconsole =
-   assemblypath = C:\Program Files (x86)\Microsoft Azure Information Protection\MSIP.Scanner.exe
-   logfile = C:\Program Files (x86)\Microsoft Azure Information Protection\MSIP.Scanner.InstallLog
-   user = res\aipscannersvc
-   password = ********
-Installing service Azure Information Protection Scanner...
-Service Azure Information Protection Scanner has been successfully installed.
-Creating EventLog source Azure Information Protection Scanner in log Application...
-
-The Install phase completed successfully, and the Commit phase is beginning.
-See the contents of the log file for the C:\Program Files (x86)\Microsoft Azure Information Protection\MSIP.Scanner.exe
-The file is located at C:\Program Files (x86)\Microsoft Azure Information Protection\MSIP.Scanner.InstallLog.
-Committing assembly 'C:\Program Files (x86)\Microsoft Azure Information Protection\MSIP.Scanner.exe'.
-Affected parameters are:
-   logtoconsole =
-   assemblypath = C:\Program Files (x86)\Microsoft Azure Information Protection\MSIP.Scanner.exe
-   logfile = C:\Program Files (x86)\Microsoft Azure Information Protection\MSIP.Scanner.InstallLog
-   user = res\aipscannersvc
-   password = ********
-
-The Commit phase completed successfully.
-
-The transacted install has completed.
-
 ```
 
-This command installs the Azure Information Protection Scanner service by using a SQL Server instance named AIPSCANNER, which runs on the server named SQLSERVER1. It prompts for credentials, and then displays the progress, where the install log is located, and the creation of the new Windows Application event log named Azure Information Protection Scanner.
+This command installs the Azure Information Protection Scanner service by using a SQL Server instance named AIPSCANNER, which runs on the server named SQLSERVER1. You are prompted to provide the Active Directory account details for the scanner service account. It then displays the progress, where the install log is located, and the creation of the new Windows Application event log named Azure Information Protection Scanner. 
+
+At the end of the output, you see **The transacted install has completed**.
 
 ### Example 2: Install the Azure Information Protection Scanner service by using the SQL Server default instance
 ```
 PS C:\> Install-AIPScanner -SqlServerInstance SQLSERVER1
 
-cmdlet Install-AIPScanner at command pipeline position 1
-Supply values for the following parameters:
-ServiceUserCredentials
-
-Running a transacted installation.
-
-Beginning the Install phase of the installation.
-See the contents of the log file for the C:\Program Files (x86)\Microsoft Azure Information Protection\MSIP.Scanner.exe
-The file is located at C:\Program Files (x86)\Microsoft Azure Information Protection\MSIP.Scanner.InstallLog.
-Installing assembly 'C:\Program Files (x86)\Microsoft Azure Information Protection\MSIP.Scanner.exe'.
-Affected parameters are:
-   logtoconsole =
-   assemblypath = C:\Program Files (x86)\Microsoft Azure Information Protection\MSIP.Scanner.exe
-   logfile = C:\Program Files (x86)\Microsoft Azure Information Protection\MSIP.Scanner.InstallLog
-   user = res\aipscannersvc
-   password = ********
-Installing service Azure Information Protection Scanner...
-Service Azure Information Protection Scanner has been successfully installed.
-Creating EventLog source Azure Information Protection Scanner in log Application...
-
-The Install phase completed successfully, and the Commit phase is beginning.
-See the contents of the log file for the C:\Program Files (x86)\Microsoft Azure Information Protection\MSIP.Scanner.exe
-The file is located at C:\Program Files (x86)\Microsoft Azure Information Protection\MSIP.Scanner.InstallLog.
-Committing assembly 'C:\Program Files (x86)\Microsoft Azure Information Protection\MSIP.Scanner.exe'.
-Affected parameters are:
-   logtoconsole =
-   assemblypath = C:\Program Files (x86)\Microsoft Azure Information Protection\MSIP.Scanner.exe
-   logfile = C:\Program Files (x86)\Microsoft Azure Information Protection\MSIP.Scanner.InstallLog
-   user = res\aipscannersvc
-   password = ********
-
-The Commit phase completed successfully.
-
-The transacted install has completed.
 ```
 
 This command installs the Azure Information Protection Scanner service by using the SQL Server default instance that runs on the server named SQLSERVER1. As with the previous example, you are prompted for credentials, and then the command displays the progress, where the install log is located, and the creation of the new Windows Application event log.
@@ -124,40 +57,6 @@ This command installs the Azure Information Protection Scanner service by using 
 ```
 PS C:\> Install-AIPScanner -SqlServerInstance SQLSERVER1\SQLEXPRESS
 
-cmdlet Install-AIPScanner at command pipeline position 1
-Supply values for the following parameters:
-ServiceUserCredentials
-
-Running a transacted installation.
-
-Beginning the Install phase of the installation.
-See the contents of the log file for the C:\Program Files (x86)\Microsoft Azure Information Protection\MSIP.Scanner.exe
-The file is located at C:\Program Files (x86)\Microsoft Azure Information Protection\MSIP.Scanner.InstallLog.
-Installing assembly 'C:\Program Files (x86)\Microsoft Azure Information Protection\MSIP.Scanner.exe'.
-Affected parameters are:
-   logtoconsole =
-   assemblypath = C:\Program Files (x86)\Microsoft Azure Information Protection\MSIP.Scanner.exe
-   logfile = C:\Program Files (x86)\Microsoft Azure Information Protection\MSIP.Scanner.InstallLog
-   user = res\aipscannersvc
-   password = ********
-Installing service Azure Information Protection Scanner...
-Service Azure Information Protection Scanner has been successfully installed.
-Creating EventLog source Azure Information Protection Scanner in log Application...
-
-The Install phase completed successfully, and the Commit phase is beginning.
-See the contents of the log file for the C:\Program Files (x86)\Microsoft Azure Information Protection\MSIP.Scanner.exe
-The file is located at C:\Program Files (x86)\Microsoft Azure Information Protection\MSIP.Scanner.InstallLog.
-Committing assembly 'C:\Program Files (x86)\Microsoft Azure Information Protection\MSIP.Scanner.exe'.
-Affected parameters are:
-   logtoconsole =
-   assemblypath = C:\Program Files (x86)\Microsoft Azure Information Protection\MSIP.Scanner.exe
-   logfile = C:\Program Files (x86)\Microsoft Azure Information Protection\MSIP.Scanner.InstallLog
-   user = res\aipscannersvc
-   password = ********
-
-The Commit phase completed successfully.
-
-The transacted install has completed.
 ```
 
 This command installs the Azure Information Protection Scanner service by using SQL Server Express that runs on the server named SQLSERVER1. As with the previous examples, you are prompted for credentials, and then the command displays the progress, where the install log is located, and the creation of the new Windows Application event log.
@@ -165,20 +64,13 @@ This command installs the Azure Information Protection Scanner service by using 
 ## PARAMETERS
 
 ### -ServiceUserCredentials
-Specifies a **PSCredential** object for the account to run the Azure Information Protection Scanner service. For the user name, use the following format: Domain\Username. You are prompted for a password. 
+Specifies a **PSCredential** object for the service account to run the Azure Information Protection Scanner service. For the user name, use the following format: Domain\Username. You are prompted for a password. 
 
 To obtain a PSCredential object, use the [Get-Credential](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/get-credential) cmdlet. For more information, type `Get-Help Get-Cmdlet`. 
 
-This account must be an Active Directory account that requires the following:
+If you do not specify this parameter, you are prompted for the user name and password.
 
-- **Log on locally** right. This right is required for the installation and configuration of the scanner, but not for operation. You can remove this right after you have confirmed that the scanner can discover, classify, and protect files.
-
-- **Log on as a service** right. This right is required for the installation, configuration, and operation of the scanner.
-
-- For labels that apply or remove protection: The account must be synchronized to Azure AD and have an email account. In addition, this account must be a super user for the Azure Rights Management service. For more information about super users, see [Configuring super users for Azure Rights Management and discovery services or data recovery](https://docs.microsoft.com/information-protection/deploy-use/configure-super-users).
-
-- Access to the data repositories to scan: Read permissions for discovery mode only (files are not classified or protected). Read and Write permissions for applying labels that meet the conditions in the Azure Information Protection policy. 
-
+This account must be an Active Directory account. For additional requirements, see [Prerequisites for the Azure Information Protection scanner](https://docs.microsoft.com/information-protection/deploy-use/deploy-aip-scannerpPrerequisites-for-the-azure-information-protection-scanner).
 
 ```yaml
 Type: PSCredential
@@ -195,15 +87,7 @@ Accept wildcard characters: False
 ### -SqlServerInstance
 Specifies the SQL Server instance on which to create a database for the Azure Information Protection scanner. 
 
-The account that runs the Azure Information Protection scanner is automatically granted permissions to read and write to this database.
-
-You can use a local or remote SQL Server instance when SQL Server 2012 R2 is the minimum version on the following editions:
-
-- SQL Server Express
-
-- SQL Server Standard
-
-- SQL Server Enterprise
+For information about the SQL Server requirements, see [Prerequisites for the Azure Information Protection scanner](https://docs.microsoft.com/information-protection/deploy-use/deploy-aip-scannerpPrerequisites-for-the-azure-information-protection-canner).
 
 For the default instance, specify the server name. For example: SQLSERVER1. 
 
@@ -239,15 +123,14 @@ Accept wildcard characters: False
 
 [Add-AIPScannerRepository](./Add-AIPScannerRepository.md)
 
-[Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration.md)
-
 [Get-AIPScannerConfiguration](./Get-AIPScannerConfiguration.md)
 
-[Uninstall-AIPScanner](./Uninstall-AIPScanner.md)
+[Get-AIPScannerRepository](./Get-AIPScannerRepository.md)
 
 [Remove-AIPScannerRepository](./Remove-AIPScannerRepository.md)
 
 [Set-AIPScanner](./Set-AIPScanner.md)
 
-[Get-AIPScannerRepository](./Get-AIPScannerRepository.md)
+[Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration.md)
 
+[Uninstall-AIPScanner](./Uninstall-AIPScanner.md)
