@@ -7,7 +7,7 @@ schema: 2.0.0
 # Install-AIPScanner
 
 ## SYNOPSIS
-Installs the Windows Server service for the Azure Information Protection scanner.
+Installs the Azure Information Protection scanner.
 
 ## SYNTAX
 

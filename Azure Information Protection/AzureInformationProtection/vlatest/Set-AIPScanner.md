@@ -7,7 +7,7 @@ schema: 2.0.0
 # Set-AIPScanner
 
 ## SYNOPSIS
-Sets the Azure Information Protection Scanner service account and database instance.
+Sets the service account and database for the Azure Information Protection scanner.
 
 ## SYNTAX
 

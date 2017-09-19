@@ -7,7 +7,7 @@ schema: 2.0.0
 # Remove-AIPScannerRepository
 
 ## SYNOPSIS
-Removes a data repository from a list of scanned repositories. 
+Removes a data repository for the Azure Information Protection scanner. 
 
 ## SYNTAX
 

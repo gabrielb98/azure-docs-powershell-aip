@@ -8,7 +8,7 @@ schema: 2.0.0
 # Clear-AIPAuthentication
 
 ## SYNOPSIS
-Clears the authentication token and RMS templates for the current user.
+Clears the user settings and RMS templates for the current user.
 
 ## SYNTAX
 

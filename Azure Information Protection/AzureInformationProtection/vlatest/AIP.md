@@ -25,24 +25,27 @@ The .dll file for this module is *AIP.dll*.
 ## AzureInformationProtection cmdlets
 
 ### Add-AIPScannerRepository
-Supported only for customers in the private preview program for the Azure Information Protection scanner.
+Adds a data repository to be scanned by the Azure Information Protection scanner.
 
 
 ### [Clear-AIPAuthentication](./Clear-AIPAuthentication.md )
-Clears the authentication token and RMS templates for the current user.
+Clears the user settings and RMS templates for the current user.
 
 
 ### [Clear-RMSAuthentication](./Clear-RMSAuthentication.md)
 Clears credentials for a user who is authenticated to the Azure RMS service.
 
+
 ### [Get-AIPFileStatus](./Get-AIPFileStatus.md)
 Gets the Azure Information Protection label and protection information for a specified file or files.
 
+
 ### Get-AIPScannerConfiguration
-Supported only for customers in the private preview program for the Azure Information Protection scanner.
+Gets the configuration settings for the Azure Information Protection scanner.
+
 
 ### Get-AIPScannerRepository
-Supported only for customers in the private preview program for the Azure Information Protection scanner.
+Gets a list of data repositories that the Azure Information Protection scanner is configured to scan.
 
 
 ### [Get-RMSFileStatus](./Get-RMSFileStatus.md)
@@ -62,7 +65,7 @@ Gets a list of RMS templates.
 
 
 ## Install-AIPScanner
-Supported only for customers in the private preview program for the Azure Information Protection scanner.
+Installs the Azure Information Protection scanner.
 
 
 ### [New-RMSProtectionLicense](./New-RMSProtectionLicense.md)
@@ -74,7 +77,7 @@ Protects a specified file or the files in a specified folder by using RMS.
 
 
 ## Remove-AIPScannerRepository
-Supported only for customers in the private preview program for the Azure Information Protection scanner.
+Removes a data repository for the Azure Information Protection scanner.
 
 
 ### [Set-AIPAuthentication](./Set-AIPAuthentication.md)
@@ -90,11 +93,11 @@ Sets or removes an Azure Information Protection label for a file, and sets the p
 
 
 ### Set-AIPScanner
-Supported only for customers in the private preview program for the Azure Information Protection scanner.
+Sets the service account and database for the Azure Information Protection scanner.
 
 
 ## Set-AIPScannerConfiguration
-Supported only for customers in the private preview program for the Azure Information Protection scanner.
+Sets optional configuration for the Azure Information Protection scanner.
 
 
 ### [Set-RMSServerAuthentication](./Set-RMSServerAuthentication.md)
@@ -102,7 +105,7 @@ Sets the server mode, which is required for non-interactive sessions.
 
 
 ## Uninstall-AIPScanner
-Supported only for customers in the private preview program for the Azure Information Protection scanner.
+Uninstalls the Windows Server service for the Azure Information Protection scanner.
 
 
 ### [Unprotect-RMSFile](./Unprotect-RMSFile.md)
