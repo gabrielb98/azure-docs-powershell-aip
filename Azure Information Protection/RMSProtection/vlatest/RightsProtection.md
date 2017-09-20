@@ -9,11 +9,11 @@ ms.assetid: 35D99F89-BD73-457E-95C7-73857656FB59
 
 # RMSProtection Module
 ## Description
-The following list contains links to the help topics for the Microsoft Rights Management services (RMS) Protection cmdlets, which are installed with the [RMS Protection Tool](https://www.microsoft.com/en-us/download/details.aspx?id=47256). The RMS Protection tool is now replaced by the [Azure Information Protection client](/information-protection/rms-client/aip-client), which includes a new PowerShell module, [AzureInformationProtection](/powershell/azureinformationprotection/vlatest/aip).
+The following list contains links to the help topics for the Microsoft Rights Management services (RMS) Protection cmdlets, which are installed with the [Rights Management Protection Tool](https://www.microsoft.com/en-us/download/details.aspx?id=47256). 
 
-In turn, the RMS Protection Tool replaced the AD RMS Bulk Protection Tool. Support for the AD RMS Bulk Protection Tool will stop March 1, 2017.
+The Rights Management Protection Tool is being replaced by the [Azure Information Protection client](/information-protection/rms-client/aip-client). Support for the RMS Protection tool will retire on February 10th 2018. The Azure Information Protection client includes the PowerShell module, [AzureInformationProtection](/powershell/azureinformationprotection/vlatest/aip).
 
-These RMS Protection cmdlets can be used with Azure Rights Management (Azure RMS) data protection from Azure Information Protection, or with Active Directory Rights Management Services (AD RMS) and these cmdlets supplement other PowerShell modules for these Rights Management deployments. Use these RMS Protection cmdlets to bulk protect and unprotect files for any file type.
+The RMS Protection cmdlets can be used with Azure Rights Management (Azure RMS) data protection from Azure Information Protection, or with Active Directory Rights Management Services (AD RMS). Use these RMS Protection cmdlets to bulk protect and unprotect files for any file type.
 
 The current version of the RMS Protection PowerShell module is **2.2.0.0**. If you have previously downloaded the tool and installed this module, run the following command to check the version: `(Get-Module RMSProtection -ListAvailable).Version`.
 
