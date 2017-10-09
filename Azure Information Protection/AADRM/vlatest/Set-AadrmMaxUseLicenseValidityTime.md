@@ -28,29 +28,23 @@ When the validity period of the use license is expired for a file or email messa
 
 For example, if a user shares a protected file by email and the protected file has the default use license validity period of 30 days:
 
---Anna opens the file immediately, authenticates to Azure RMS, and reads the file.
-The following day, she reads the file again but does not have an Internet connection.
-Because the use license validity period has not expired, she can read the file.
-She accesses the file again 30 days later when she has an Internet connection and re-authenticates with Azure RMS, so she could now continue to read the file without authenticating again for a further 30 days.
+- Anna opens the file immediately, authenticates to Azure RMS, and reads the file. The following day, she reads the file again but does not have an Internet connection. Because the use license validity period has not expired, she can read the file. She accesses the file again 30 days later when she has an Internet connection and re-authenticates with Azure RMS, so she could now continue to read the file without authenticating again for a further 30 days.
 
---John does not open the file for 31 days.
-When he does, he has Internet access that lets him authenticates to Azure RMS, and he can then open and read the file.
-John can continue to re-open and read the file even if he does not have an Internet connection again for a further 30 days.
+- John does not open the file for 31 days. When he does, he has Internet access that lets him authenticates to Azure RMS, and he can then open and read the file. John can continue to re-open and read the file even if he does not have an Internet connection again for a further 30 days.
 
---Amelia opens the file a week after it arrives, and then does not open it again for two months.
-When she tries to open it this second time, she does not have an Internet access and cannot open the file.
+- Amelia opens the file a week after it arrives, and then does not open it again for two months. When she tries to open it this second time, she does not have an Internet access and cannot open the file.
 
-This setting at the Azure RMS tenant level can be overridden by a more restrictive setting in a Rights Management template because of the *LicenseValidityDuration* parameter in the [Set-AadrmTemplateProperty](./Set-AadrmTemplateProperty.md) and [Add-AadrmTemplate](./Add-AadrmTemplate.md) cmdlets, which administrators can also set in the Azure portal by configuring the offline access option, Number of days the content is available without an Internet connection.
+This setting at the tenant level can be overridden by a more restrictive setting in a Rights Management template because of the *LicenseValidityDuration* parameter in the [Set-AadrmTemplateProperty](./Set-AadrmTemplateProperty.md) and [Add-AadrmTemplate](./Add-AadrmTemplate.md) cmdlets, which administrators can also set in the Azure portal by configuring the offline access option, Number of days the content is available without an Internet connection.
 
-This setting can also be overridden by a user for a document when they use the RMS sharing application, and select the "Allow me to instantly revoke access to these documents" option, which effectively sets the use license validity time to 0. When there are different values like this, Azure RMS uses the most restrictive value.
+This setting can also be overridden by a user for a document when they use the RMS sharing application, and select the "Allow me to instantly revoke access to these documents" option, which effectively sets the use license validity time to 0. There is no equivalent setting for Azure Information Protection client. When there are different values like this, Azure RMS uses the most restrictive value.
 
 Because the use license validity time can be overridden with more restrictive values, when you change the default value by using this cmdlet, choose a maximum value that best suits your organization. 
 
 Decide on the best compromise between security and offline access for longer periods:
 
---The lower the value, the more often users will be authenticated (which requires an Internet connection) but is a more secure setting because users will more quickly pick up changes such as the document has been revoked or the usage rights have changed for the protected document.
+- The lower the value, the more often users will be authenticated (which requires an Internet connection) but is a more secure setting because users will more quickly pick up changes such as the document has been revoked or the usage rights have changed for the protected document.
 
---The higher the value, the less frequently users will be authenticated (and can continue to access protected documents even without an Internet connection) and is less secure because it will take longer for users to pick up changes such as the document has been revoked or the usage rights have changed for the protected document.
+- The higher the value, the less frequently users will be authenticated (and can continue to access protected documents even without an Internet connection) and is less secure because it will take longer for users to pick up changes such as the document has been revoked or the usage rights have changed for the protected document.
 
 ## EXAMPLES
 
