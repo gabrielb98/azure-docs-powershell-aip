@@ -32,7 +32,7 @@ For example, if a user shares a protected file by email and the protected file h
 
 - John does not open the file for 31 days. When he does, he has Internet access that lets him authenticates to Azure RMS, and he can then open and read the file. John can continue to re-open and read the file even if he does not have an Internet connection again for a further 30 days.
 
-- Amelia opens the file a week after it arrives, and then does not open it again for two months. When she tries to open it this second time, she does not have an Internet access and cannot open the file.
+- Amelia opens the file a week after it arrives, and then does not open it again for two months. When she tries to open it this second time, she does not have Internet access and so she cannot open the file.
 
 This setting at the tenant level can be overridden by a more restrictive setting in a Rights Management template because of the *LicenseValidityDuration* parameter in the [Set-AadrmTemplateProperty](./Set-AadrmTemplateProperty.md) and [Add-AadrmTemplate](./Add-AadrmTemplate.md) cmdlets, which administrators can also set in the Azure portal by configuring the offline access option, Number of days the content is available without an Internet connection.
 
