@@ -16,7 +16,7 @@ Remove-AIPScannerRepository [-Path] <String>
 ```
 
 ## DESCRIPTION
-The Remove-AIPScannerRepository cmdlet removes a data repository from the list of data repositories that the Azure Information Protection scanner is configured to scan. These data repositories are specified by using the [Add-AIPScannerRepository](./Add-AIPScannerRepository) cmdlet.
+The Remove-AIPScannerRepository cmdlet removes a data repository from the list of data repositories that the Azure Information Protection scanner is configured to scan. These data repositories are specified by using the [Add-AIPScannerRepository](./Add-AIPScannerRepository.md) cmdlet.
 
 Tip: You can use this cmdlet with [Get-AIPScannerRepository](./Get-AIPScannerRepository.md) to quickly remove all data repositories that the scanner is currently configured to scan.
 

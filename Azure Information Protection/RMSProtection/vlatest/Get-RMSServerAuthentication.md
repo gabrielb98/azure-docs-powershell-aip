@@ -50,4 +50,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-RMSServerAuthentication](./Set-RMSServerAuthentication.md)
 
-[about_RMSProtection_AzureRMS](./about_RMSProtection_AzureRMS.md)
