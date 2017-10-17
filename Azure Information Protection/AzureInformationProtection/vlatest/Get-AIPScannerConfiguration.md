@@ -20,6 +20,8 @@ The Get-AIPScannerConfiguration cmdlet gets the configuration settings for the A
 
 The configuration settings include whether the scanner is in discovery mode only or applies labels, whether a file will be relabeled, whether file attributes are changed, what is logged in the reports, whether the scanner runs once or continuously, what justification message to use when required, and the Rights Management owner for protected files.
 
+Note: This cmdlet is in preview and requires the current preview version of the Azure Information Protection client.
+
 ## EXAMPLES
 
 ### Example 1: Gets the configuration for the Azure Information Protection scanner
