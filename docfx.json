@@ -5,7 +5,7 @@
         "files": [
           "*.yml"
         ],
-        "src": "azureipps",
+        "src": "Azure Information Protection",
         "version": "azureipps",
         "dest": "module/aip"
       },
@@ -13,7 +13,7 @@
         "files": [
           "**/*.md"
         ],
-        "src": "azureipps",
+        "src": "Azure Information Protection",
         "version": "azureipps",
         "exclude": [
           "docs-conceptual/**"
@@ -25,7 +25,7 @@
           "**/*.yml",
           "**/*.md"
         ],
-        "src": "azureipps/docs-conceptual",
+        "src": "Azure Information Protection/docs-conceptual",
         "version": "azureipps",
         "dest": "azure/aip"
       },
@@ -42,16 +42,16 @@
     },
     "filemetadata": {
       "ms.author": {
-        "azureipps/**/*.md": "cabailey"
+        "Azure Information Protection/**/*.md": "cabailey"
       },
       "author": {
-        "azureipps/**/*.md": "cabailey"
+        "Azure Information Protection/**/*.md": "cabailey"
       },
       "ms.manager": {
-        "azureipps/**/*.md": "mbaldwin"
+        "Azure Information Protection/**/*.md": "mbaldwin"
       },
       "ms.service": {
-        "azureipps/**/*.md": "rights-management"
+        "Azure Information Protection/**/*.md": "rights-management"
       }
     },
     "globalMetadata": {
