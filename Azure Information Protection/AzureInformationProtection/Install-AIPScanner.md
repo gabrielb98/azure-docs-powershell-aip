@@ -32,6 +32,8 @@ After you have run this command, specify the data repositories to scan by using 
 
 For step-by-step instructions to install, configure, and use the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](https://docs.microsoft.com/information-protection/deploy-use/deploy-aip-scanner).
 
+Note: This cmdlet is in preview and requires the current preview version of the Azure Information Protection client.
+
 ## EXAMPLES
 
 ### Example 1:Install the Azure Information Protection Scanner service by using a SQL Server instance

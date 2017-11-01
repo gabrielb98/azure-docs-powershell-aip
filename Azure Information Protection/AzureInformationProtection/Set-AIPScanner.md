@@ -20,6 +20,7 @@ The Set-AIPScanner cmdlet updates the service account and SQL Server database in
 
 The new configuration takes effects when the Azure Information Protection Scanner service is next started. This cmdlet does not automatically restart this service.
 
+Note: This cmdlet is in preview and requires the current preview version of the Azure Information Protection client.
 
 ## EXAMPLES
 
