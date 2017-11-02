@@ -55,7 +55,7 @@ PS C:\> Install-AIPScanner -SqlServerInstance SQLSERVER1
 This command installs the Azure Information Protection Scanner service by using the SQL Server default instance that runs on the server named SQLSERVER1. As with the previous example, you are prompted for credentials, and then the command displays the progress, where the install log is located, and the creation of the new Windows Application event log.
 
 
-### Example 3: Install the Azure Information Protection Scanner service by using SQL Express 
+### Example 3: Install the Azure Information Protection Scanner service by using SQL Server Express 
 ```
 PS C:\> Install-AIPScanner -SqlServerInstance SQLSERVER1\SQLEXPRESS
 
