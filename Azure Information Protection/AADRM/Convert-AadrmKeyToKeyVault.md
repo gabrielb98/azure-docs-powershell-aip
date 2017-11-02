@@ -18,9 +18,9 @@ Convert-AadrmKeyToKeyVault -KeyVaultKeyUrl <String> -KeyIdentifier <String> [-Fo
 ```
 
 ## DESCRIPTION
-The **Convert-AadrmKeyToKeyVault** cmdlet is only for customers who have previously created a customer-managed key for the Azure Rights Management service and have received an invitation from AskIPteam at Microsoft to migrate their Azure Rights Management tenant key to Azure Key Vault.
+The **Convert-AadrmKeyToKeyVault** cmdlet is only for customers who have previously created a customer-managed key for the Azure Rights Management service and have received an invitation from Microsoft to migrate their Azure Rights Management tenant key to Azure Key Vault.
 
-Do not run this cmdlet without assistance from Microsoft.
+Important: Do not run this cmdlet if you have not received this invitation from Microsoft and do not run this cmdlet without assistance from Microsoft.
 
 You must use PowerShell to configure your tenant key; you cannot do this configuration by using a management portal.
 
