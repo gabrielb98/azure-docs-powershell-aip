@@ -69,7 +69,6 @@ This command installs the Azure Information Protection Scanner service by using 
 Specifies a **PSCredential** object for the service account to run the Azure Information Protection Scanner service. For the user name, use the following format: Domain\Username. You are prompted for a password. 
 
 To obtain a PSCredential object, use the [Get-Credential](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/get-credential) cmdlet. For more information, type `Get-Help Get-Cmdlet`. 
-
 If you do not specify this parameter, you are prompted for the user name and password.
 
 This account must be an Active Directory account. For additional requirements, see [Prerequisites for the Azure Information Protection scanner](https://docs.microsoft.com/information-protection/deploy-use/deploy-aip-scanner#prerequisites-for-the-azure-information-protection-scanner).
