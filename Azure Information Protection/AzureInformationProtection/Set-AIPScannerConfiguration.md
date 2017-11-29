@@ -175,15 +175,16 @@ Define the level of logging for the scanner reports. When the scanner is first i
 Log files are stored in %localappdata%\Microsoft\MSIP\Scanner\Reports and have a .csv file format. They include the time taken to scan, the number of scanned files, and statistics of how many files were classified and protected. This folder stores up to 60 reports for each scanning cycle and all but the latest report is compressed to help minimize the required disk space.
 
 - Debug: Logs every file that was discovered and the resulting action. This level of logging is useful for troubleshooting but slows down the Azure Information Protection scanner.
+    
+    This category includes files that don't meet any of the conditions and files that are skipped because of an unsupported file type. For example, trying to label a file for classification-only when the file type doesn't support this action, and trying to label files that are automatically excluded. For more information about the last two scenarios, see [File types supported by the Azure Information Protection client](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-file-types) from the admin guide. 
 
-- Info: Logs only the files that were successfully labeled by the scanner, or would be labeled if the scanner is in discovery mode.
+- Info: Logs only the files that were successfully labeled by the scanner, or would be labeled when the scanner is in discovery mode.
 
-- Error: Logs only the files that the scanner attempted to label but could not. For example, a justification reason was required but not specified. Or, a file was in use, or the scanner service did not have write access to the file.
+- Error: Logs only the files that the scanner attempted to label but could not. For example, a justification reason was required but not specified. Or, a file was in use, or the scanner service did not have write access to the file. 
 
-Off: Disables reporting, which results in the best performance for the scanner.
+- Off: Disables reporting, which results in the best performance for the scanner.
 
-The Windows Application event logs for **Azure Information Protection Scanner** contain additional logging information. These logs include the start and end times for each scanning cycle, when a scanned file has a label applied, and when protection is applied or removed.
-
+The local Windows **Applications and Services** event log, **Azure Information Protection** contains additional logging information. The events include the start and end times for each scanning cycle, when a scanned file has a label applied, and when protection is applied or removed. For more information, see [Event log IDs and descriptions](https://docs.microsoft.com/information-protection/deploy-use/deploy-aip-scanner#event-log-ids-and-descriptions).
 
 
 ```yaml
@@ -247,12 +248,13 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-Specifies whether the scanner maintains a list of previously scanned files so it can scan only new or modified files since the service started. This is the default behavior. 
+Specifies whether the scanner maintains a list of previously scanned files so it can scan only new or modified files since the service started. This is the default behavior and offers the best performance. 
 
 If this list is not maintained, all files in the specified data repositories are scanned with each scanning cycle.
 
 - Incremental: The scanner maintains a list of previously scanned files so it can scan only new or modified files. 
-- Full: Each time the cycle finishes, all files in the specified data repositories are scanned again.
+
+- Full: Each time the cycle finishes, all files in the specified data repositories are scanned again. This setting is most useful when you want all files to be listed in the reports.
 
 
 ```yaml
