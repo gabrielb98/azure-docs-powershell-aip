@@ -176,9 +176,9 @@ Log files are stored in %localappdata%\Microsoft\MSIP\Scanner\Reports and have a
 
 - Debug: Logs every file that was discovered and the resulting action. This level of logging is useful for troubleshooting but slows down the Azure Information Protection scanner.
 
-- Info: Logs only the files that were successfully labeled by the scanner, or would be labeled if the scanner is in discovery mode.
+- Info: Logs only the files that were successfully labeled by the scanner, or would be labeled when the scanner is in discovery mode.
 
-- Error: Logs only the files that the scanner attempted to label but could not. For example, a justification reason was required but not specified. Or, a file was in use, or the scanner service did not have write access to the file.
+- Error: Logs only the files that the scanner attempted to label but could not. For example, a justification reason was required but not specified. Or, a file was in use, or the scanner service did not have write access to the file. Other reasons include trying to label a file for classification-only when the file type doesn't support this action, and trying to label files that are automatically excluded. For more information about the last two scenarios, see [File types supported by the Azure Information Protection client](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-file-types) from the admin guide.
 
 - Off: Disables reporting, which results in the best performance for the scanner.
 
@@ -246,12 +246,13 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-Specifies whether the scanner maintains a list of previously scanned files so it can scan only new or modified files since the service started. This is the default behavior. 
+Specifies whether the scanner maintains a list of previously scanned files so it can scan only new or modified files since the service started. This is the default behavior and offers the best performance. 
 
 If this list is not maintained, all files in the specified data repositories are scanned with each scanning cycle.
 
 - Incremental: The scanner maintains a list of previously scanned files so it can scan only new or modified files. 
-- Full: Each time the cycle finishes, all files in the specified data repositories are scanned again.
+
+- Full: Each time the cycle finishes, all files in the specified data repositories are scanned again. This setting is most useful when you want all files to be listed in the reports.
 
 
 ```yaml
