@@ -20,7 +20,6 @@ The Get-AIPScannerConfiguration cmdlet gets the configuration settings for the A
 
 The configuration settings include whether the scanner is in discovery mode only or applies labels, whether a file will be relabeled, whether file attributes are changed, what is logged in the reports, whether the scanner runs once or continuously, whether all files are scanned or only new and changed files, what justification message to use when required, and the Rights Management owner for protected files.
 
-Note: This cmdlet is in preview and requires the current preview version of the Azure Information Protection client.
 
 ## EXAMPLES
 
@@ -30,7 +29,7 @@ Note: This cmdlet is in preview and requires the current preview version of the 
 PS C:\> Get-AIPScannerConfiguration
 
 ScanMode             : Discover
-OverrideLabel        : AppliedByScanner
+OverrideLabel        : Off
 PreserveFileDetails  : On
 ReportLevel          : Info
 Schedule             : OneTime
@@ -44,7 +43,7 @@ This command gets the current configuration settings for the Azure Information P
 
 - The scanner is in discovery mode for reporting purposes only. Labels are not applied to files.
 
-- The scanner will apply a different label to a file that is already labeled only when these files have been labeled by the current scanner account.
+- The scanner will not apply a different label to a file that is already labeled.
 
 - The scanner will not overwrite file attributes when a file is labeled.
 

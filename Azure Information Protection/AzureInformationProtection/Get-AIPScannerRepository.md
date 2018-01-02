@@ -20,7 +20,6 @@ The Get-AIPScannerRepository cmdlet gets the list of data repositories that the 
 
 Tip: You can use the output of this cmdlet with [Remove-AIPScannerRepository](./Remove-AIPScannerRepository.md) to clean up the list of the data repositories for the scanner. For example: Get-AIPScannerRepository | Remove-AIPScannerRepository
 
-Note: This cmdlet is in preview and requires the current preview version of the Azure Information Protection client.
 
 ## EXAMPLES
 
