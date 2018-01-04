@@ -12,7 +12,7 @@ Gets the configuration settings for the Azure Information Protection scanner.
 ## SYNTAX
 
 ```
-Get-AIPScannerConfiguration
+Get-AIPScannerConfiguration [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -20,11 +20,9 @@ The Get-AIPScannerConfiguration cmdlet gets the configuration settings for the A
 
 The configuration settings include whether the scanner is in discovery mode only or applies labels, whether a file will be relabeled, whether file attributes are changed, what is logged in the reports, whether the scanner runs once or continuously, whether all files are scanned or only new and changed files, what justification message to use when required, and the Rights Management owner for protected files.
 
-
 ## EXAMPLES
 
 ### Example 1: Gets the configuration for the Azure Information Protection scanner
-
 ```
 PS C:\> Get-AIPScannerConfiguration
 
@@ -36,7 +34,6 @@ Schedule             : OneTime
 Type                 : Full
 JustificationMessage : Reclassified by Azure Information Protection Scanner
 DefaultOwner         :
-
 ```
 
 This command gets the current configuration settings for the Azure Information Protection scanner. In this example, the output shows that the scanner is using the installation default values. The one exception is the justification message, which has been specified.
@@ -59,10 +56,12 @@ This command gets the current configuration settings for the Azure Information P
 
 ## PARAMETERS
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### None
-
 
 ## OUTPUTS
 

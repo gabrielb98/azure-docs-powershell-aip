@@ -1,7 +1,7 @@
 ---
+assetid: ED096DBB-1B3B-43DA-B0DE-C7BACC54D18B
 external help file: AIP.dll-Help.xml
 online version: https://go.microsoft.com/fwlink/?linkid=851286
-assetid: ED096DBB-1B3B-43DA-B0DE-C7BACC54D18B
 schema: 2.0.0
 ---
 
@@ -14,6 +14,7 @@ Sets the authentication credentials for the Azure Information Protection client.
 
 ```
 Set-AIPAuthentication [[-WebAppId] <String>] [[-WebAppKey] <String>] [[-NativeAppId] <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -24,7 +25,6 @@ The first time you run this cmdlet, you are prompted to sign in for Azure Inform
 If you run this cmdlet without parameters, the account acquires an access token that is valid for 90 days or until your password expires.  
 
 To control when the access token expires, run this cmdlet with parameters. This lets you configure the access token for 1 year, 2 years, or to never expire. This configuration requires you to have two applications registered in Azure Active Directory: **A web app / API** application and a **native application**. Use these applications to supply the parameters for the Set-AIPAuthentication cmdlet. For instructions, see [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection) from the admin guide.
-
 
 ## EXAMPLES
 
@@ -91,10 +91,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### None
-
 
 ## OUTPUTS
 

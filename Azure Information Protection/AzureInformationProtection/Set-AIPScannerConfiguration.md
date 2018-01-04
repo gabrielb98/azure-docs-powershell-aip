@@ -14,7 +14,7 @@ Sets optional configuration for the Azure Information Protection scanner.
 ```
 Set-AIPScannerConfiguration [-ScanMode <ScanMode>] [-OverrideLabel <OverrideLabel>]
  [-PreserveFileDetails <PreserveFileDetails>] [-ReportLevel <ReportLevel>] [-Schedule <Schedule>]
- [-JustificationMessage <String>] [-DefaultOwner <String>] [-Type <ScanType>]
+ [-JustificationMessage <String>] [-DefaultOwner <String>] [-Type <ScanType>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -36,7 +36,6 @@ This command configures the scanner to run a one-time discovery for files in the
 Note that because these parameters specify the values that are set by default when the scanner is installed, you need to specify them only if you previously specified other values.
 
 ### Example 2: Configure the Azure Information Protection scanner to continuously discover and label files
- 
 ```
 PS C:\> Set-AIPScannerConfiguration -ScanMode Enforce -Schedule Continuous
 
@@ -48,7 +47,6 @@ This command configures the scanner to continuously discover files in the specif
 For these files, they are classified and protected (or have protection removed), according to the label configuration.  
 
 ### Example 3: Configure the Azure Information Protection scanner to run a one time discovery to label files, set the Owner custom property and Rights Management owner, and log all files
-
 ```
 PS C:\> Set-AIPScannerConfiguration -ScanMode Enforce -Schedule OneTime -ReportLevel Debug -DefaultOwner admin@contoso.com.
 
@@ -61,9 +59,7 @@ For these files, they are classified and protected (or have protection removed),
 
 Every discovered file and the resulting action is logged in the reports. 
 
-
 ### Example 4: Configure the Azure Information Protection scanner to scan and label all files one time, remove the Owner custom property and Rights Management owner, and log all files
-
 ```
 PS C:\> Set-AIPScannerConfiguration -ScanMode Enforce -Schedule OneTime -ReportLevel Debug -Type Full -DefaultOwner ""
 
@@ -77,7 +73,6 @@ For these files, they are classified and protected (or have protection removed),
 Every discovered file and the resulting action is logged in the reports. 
 
 ### Example 5: Configure the Azure Information Protection scanner to set the Owner custom property and Rights Management owner to an administrator's account
-
 ```
 PS C:\> Set-AIPScannerConfiguration -DefaultOwner "admin@contoso.com"
 
@@ -89,7 +84,6 @@ This command keeps the current scanner configuration, except that it sets the Ow
 ## PARAMETERS
 
 ### -DefaultOwner
-
 Specify the email address for the Owner custom property when a file is classified, and for the Rights Management owner when a file is protected. For more information about the Rights Management owner, see [Rights Management issuer and Rights Management owner](https://docs.microsoft.com/information-protection/deploy-use/configure-usage-rights#rights-management-issuer-and-rights-management-owner).
 
 If you specify this parameter, it is applied to all scanned files except for files on SharePoint that have an author value in a valid email format. For these files, the author value is always used to set the Owner custom property and the Rights Management owner.
@@ -272,10 +266,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### None
-
 
 ## OUTPUTS
 
