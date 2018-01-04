@@ -26,8 +26,6 @@ When you add a SharePoint path for "Shared Documents":
 
 If you later need to remove a data repository that you added, use the [Remove-AIPScannerRepository](./Remove-AIPScannerRepository.md) cmdlet.
 
-Note: This cmdlet is in preview and requires the current preview version of the Azure Information Protection client.
-
 
 ## EXAMPLES
 

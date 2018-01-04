@@ -133,9 +133,11 @@ Accept wildcard characters: False
 ```
 
 ### -OverrideLabel
-Specify whether to apply a different label to a file that's already labeled. By default, the scanner relabels these files only when they have been labeled by the current scanner account. 
+Specify whether to apply a different label to a file that's already labeled. By default, the scanner relabels files only when their current classification is lower than the newer classification and the current label was applied by using automatic classification. For more information about automatic classification, see [How to configure conditions for automatic and recommended classification for Azure Information Protection](https://docs.microsoft.com/information-protection/deploy-use/configure-policy-classification ).
 
-To prevent this relabeling, set this parameter to Off. To relabel files that have been labeled by another account (for example, manually by a user or by another labeling solution), set this parameter to On. 
+To always relabel files, set this parameter to On. 
+
+Note: Do not use the AppliedByScanner option. This option is no longer supported and will be removed in a later version.
 
 
 ```yaml
