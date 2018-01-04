@@ -12,15 +12,13 @@ Sets the service account and database for the Azure Information Protection scann
 ## SYNTAX
 
 ```
-Set-AIPScanner [[-SqlServerInstance] <String>] [-ServiceUserCredentials] <PSCredential>
+Set-AIPScanner [[-SqlServerInstance] <String>] [-ServiceUserCredentials] <PSCredential> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The Set-AIPScanner cmdlet updates the service account and SQL Server database instance for the Azure Information Protection scanner. Use this command when you want to change the account or database details that was previously specified, for example, when you installed the scanner by running the [Install-AIPScanner](./Install-AIPScanner.md) cmdlet.
 
 The new configuration takes effects when the Azure Information Protection Scanner service is next started. This cmdlet does not automatically restart this service.
-
-Note: This cmdlet is in preview and requires the current preview version of the Azure Information Protection client.
 
 ## EXAMPLES
 
@@ -80,10 +78,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### None
-
 
 ## OUTPUTS
 

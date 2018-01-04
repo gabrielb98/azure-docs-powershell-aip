@@ -12,7 +12,7 @@ Adds a data repository to be scanned by the Azure Information Protection scanner
 ## SYNTAX
 
 ```
-Add-AIPScannerRepository [-Path] <String>
+Add-AIPScannerRepository [-Path] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -26,13 +26,9 @@ When you add a SharePoint path for "Shared Documents":
 
 If you later need to remove a data repository that you added, use the [Remove-AIPScannerRepository](./Remove-AIPScannerRepository.md) cmdlet.
 
-Note: This cmdlet is in preview and requires the current preview version of the Azure Information Protection client.
-
-
 ## EXAMPLES
 
 ### Example 1: Configure a local folder to be scanned
-
 ```
 PS C:\> Add-AIPScannerRepository -Path D:\Data\Finance
 
@@ -42,7 +38,6 @@ The repository was added successfully.
 This command adds the local folder named Data\Finance on the D drive to be scanned.
 
 ### Example 2: Configure a network-attached storage (NAS) file share to be scanned
-
 ```
 PS C:\> Add-AIPScannerRepository -Path \\NAS\HR
 
@@ -52,7 +47,6 @@ The repository was added successfully.
 This command adds the file share named HR on the network-attached storage device named NAS to be scanned.
 
 ### Example 3: Scan all documents and folders from the SharePoint Server "Shared Documents" library
-
 ```
 PS C:\> Add-AIPScannerRepository -Path "http://sp2013/Shared Documents"
 
@@ -62,7 +56,6 @@ The repository was added successfully.
 This command adds the SharePoint Server "Shared Documents" library to be scanned.
 
 ### Example 4: Scan a specific folder in the SharePoint Server "Shared Documents" library
-
 ```
 PS C:\> Add-AIPScannerRepository -Path http://sp2016.res.local/Documents/HR
 
@@ -94,10 +87,12 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### System.String
-
 
 ## OUTPUTS
 
