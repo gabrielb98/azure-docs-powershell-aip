@@ -13,7 +13,7 @@ Clears the user settings and RMS templates for the current user.
 ## SYNTAX
 
 ```
-Clear-AIPAuthentication
+Clear-AIPAuthentication [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -26,18 +26,18 @@ In addition, all Rights Management templates from the %LocalAppData%\Microsoft\M
 ### Example 1
 ```
 PS C:\> Clear-AIPAuthentication
-
 ```
 
 This command is functionally the equivalent of selecting the **Reset Settings** from the Help and Feedback menu option, and deleting the templates.
 
-
 ## PARAMETERS
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### None
-
 
 ## OUTPUTS
 

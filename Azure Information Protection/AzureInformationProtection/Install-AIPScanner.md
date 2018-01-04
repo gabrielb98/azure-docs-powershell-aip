@@ -12,7 +12,7 @@ Installs the Azure Information Protection scanner.
 ## SYNTAX
 
 ```
-Install-AIPScanner [-ServiceUserCredentials] <PSCredential> [-SqlServerInstance] <String>
+Install-AIPScanner [-ServiceUserCredentials] <PSCredential> [-SqlServerInstance] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -32,13 +32,11 @@ After you have run this command, specify the data repositories to scan by using 
 
 For step-by-step instructions to install, configure, and use the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](https://docs.microsoft.com/information-protection/deploy-use/deploy-aip-scanner).
 
-
 ## EXAMPLES
 
 ### Example 1:Install the Azure Information Protection Scanner service by using a SQL Server instance
 ```
 PS C:\> Install-AIPScanner -SqlServerInstance SQLSERVER1\AIPSCANNER
-
 ```
 
 This command installs the Azure Information Protection Scanner service by using a SQL Server instance named AIPSCANNER, which runs on the server named SQLSERVER1. You are prompted to provide the Active Directory account details for the scanner service account. It then displays the progress, where the install log is located, and the creation of the new Windows Application event log named Azure Information Protection Scanner. 
@@ -48,16 +46,13 @@ At the end of the output, you see **The transacted install has completed**.
 ### Example 2: Install the Azure Information Protection Scanner service by using the SQL Server default instance
 ```
 PS C:\> Install-AIPScanner -SqlServerInstance SQLSERVER1
-
 ```
 
 This command installs the Azure Information Protection Scanner service by using the SQL Server default instance that runs on the server named SQLSERVER1. As with the previous example, you are prompted for credentials, and then the command displays the progress, where the install log is located, and the creation of the new Windows Application event log.
 
-
-### Example 3: Install the Azure Information Protection Scanner service by using SQL Server Express 
+### Example 3: Install the Azure Information Protection Scanner service by using SQL Server Express
 ```
 PS C:\> Install-AIPScanner -SqlServerInstance SQLSERVER1\SQLEXPRESS
-
 ```
 
 This command installs the Azure Information Protection Scanner service by using SQL Server Express that runs on the server named SQLSERVER1. As with the previous examples, you are prompted for credentials, and then the command displays the progress, where the install log is located, and the creation of the new Windows Application event log.
@@ -108,10 +103,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### None
-
 
 ## OUTPUTS
 
