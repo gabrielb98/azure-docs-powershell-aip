@@ -17,7 +17,7 @@ Get-RMSServerAuthentication [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-RMSServerAuthentication** cmdlet gets the server mode status and details that is set by using [Set-RMSServerAuthentication](./Set-RMSServerAuthentication.md). Server mode must be set to protect or unprotect files non-interactively. For example, if you protect files by using Windows Server and File Classification Infrastructure (FCI). This status remains on for the duration of your PowerShell session.
+The **Get-RMSServerAuthentication** cmdlet gets the server mode status and details that are set by using [Set-RMSServerAuthentication](./Set-RMSServerAuthentication.md). Server mode must be set to protect or unprotect files non-interactively. For example, if you protect files by using Windows Server and File Classification Infrastructure (FCI). This status remains on for the duration of your PowerShell session.
 
 This cmdlet does not apply if you protect or unprotect files by using your user account. 
 

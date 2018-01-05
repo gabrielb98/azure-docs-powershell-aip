@@ -20,9 +20,9 @@ The Add-AIPScannerRepository cmdlet adds a data repository to be scanned by the 
 
 When you add a SharePoint path for "Shared Documents":
 
-- Specify "Shared Documents" in the path when you want to scan all documents and all folders from Shared Documents. For example: "http://sp2013/Shared Documents"
+- Specify "Shared Documents" in the path when you want to scan all documents and all folders from Shared Documents. For example: `"http://sp2013/Shared Documents"`
 
-- Specify "Documents" in the path when you want to scan all documents and all folders from a subfolder under Shared Documents. For example: "http://sp2013/Documents/Sales Reports"
+- Specify "Documents" in the path when you want to scan all documents and all folders from a subfolder under Shared Documents. For example: `"http://sp2013/Documents/Sales Reports"`
 
 If you later need to remove a data repository that you added, use the [Remove-AIPScannerRepository](./Remove-AIPScannerRepository.md) cmdlet.
 
