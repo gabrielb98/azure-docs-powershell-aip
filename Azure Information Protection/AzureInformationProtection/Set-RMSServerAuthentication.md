@@ -26,7 +26,7 @@ This cmdlet does not apply if you use your user account to protect or unprotect 
 
 - For AD RMS: Server mode requires you to specify Windows integrated authentication so that the computer account can be authenticated with the AD RMS service. The computer account must be granted permissions to ServerCertification.asmx.
     
-    Server mode for AD RMS is currently in preview and requires the current preview version of the Azure Information Protection client.
+    Server mode for AD RMS requires the current GA version of the Azure Information Protection client.
 
 For information how to get the identifiers that the service principal requires for Azure RMS, and how to grant the permissions for AD RMS, see [Using PowerShell with the Azure Information Protection client](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell) from the Azure Information Protection client admin guide.
 
@@ -105,7 +105,6 @@ Specifies server mode for AD RMS so that cmdlets can run non-interactively by us
 
 Applies to AD RMS only.
 
-NOTE: This parameter is currently in preview and requires the current preview version of the Azure Information Protection client
 
 ```yaml
 Type: SwitchParameter
