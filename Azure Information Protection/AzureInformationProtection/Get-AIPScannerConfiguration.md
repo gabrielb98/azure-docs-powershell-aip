@@ -33,7 +33,6 @@ OverrideLabel        : Off
 PreserveFileDetails  : On
 ReportLevel          : Info
 Schedule             : OneTime
-Type                 : Full
 JustificationMessage : Reclassified by Azure Information Protection Scanner
 DefaultOwner         :
 
@@ -50,8 +49,6 @@ This command gets the current configuration settings for the Azure Information P
 - The reports contains details of files that were successfully labeled.
  
 - The scanner will run one time and then stop the service, rather than run continuously.
-
-- The scanner will run discovery on all files.
 
 - The string "Reclassified by Azure Information Protection Scanner" is supplied and logged when the scanner applies a label that requires justification.
 
