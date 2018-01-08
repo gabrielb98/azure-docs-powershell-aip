@@ -16,7 +16,9 @@ The current general availability version of the AzureInformationProtection modul
 
 For instructions to use these cmdlets, any current limitations, prerequisites, and scenario examples, see the following documentation from the Azure Information Protection client administrator guide:
 
-- Using PowerShell with the Azure Information Protection client The .dll file for this module is AIP.dll .
+- [Using PowerShell with the Azure Information Protection client](/information-protection/rms-client/client-admin-guide-powershell)
+
+The .dll file for this module is *AIP.dll*.
 
 ## AzureInformationProtection Cmdlets
 ### [Add-AIPScannerRepository](Add-AIPScannerRepository.md)
