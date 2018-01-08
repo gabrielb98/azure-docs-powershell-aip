@@ -47,7 +47,6 @@ Integrated authentication is enabled
 
 This command sets the server mode for Windows integrated authentication, which lets a computer account authenticate to AD RMS.
 
-
 ## PARAMETERS
 
 ### -AppPrincipalId

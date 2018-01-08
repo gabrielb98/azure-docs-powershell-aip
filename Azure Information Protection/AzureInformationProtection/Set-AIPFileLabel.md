@@ -31,7 +31,6 @@ Currently, you cannot create or edit labels by using PowerShell but must do this
 
 You can run this cmdlet concurrently. To run this cmdlet non-interactively, see [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection) from the admin guide.
 
-
 ## EXAMPLES
 
 ### Example 1: Apply the "General" sub-label to all files in a folder and any of its subfolders
