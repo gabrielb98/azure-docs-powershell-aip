@@ -234,7 +234,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-​AI​PFile​Status](./Get-AIPFileStatus.md)
+[Get-AIPFileStatus](./Get-AIPFileStatus.md)
 
 [Set-AIPAuthentication](./Set-AIPAuthentication.md)
 
