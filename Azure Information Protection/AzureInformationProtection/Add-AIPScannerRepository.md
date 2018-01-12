@@ -18,8 +18,7 @@ Add-AIPScannerRepository [-Path] <String> [-OverrideLabel <OverrideLabel>]
 ```
 
 ## DESCRIPTION
-The Add-AIPScannerRepository cmdlet adds a data repository to be scanned by the Azure Information Protection scanner. 
-Every repository can be scanned using different scanning profile, including defaul label and label override settings.
+The Add-AIPScannerRepository cmdlet adds a data repository to be scanned by the Azure Information Protection scanner, and creates a profile of settings to be used for that repository. For example, for each data repository, you can specify a default label for unlabeled files, and whether to override an existing label.
 
 You can specify local folders, UNC paths, and SharePoint Server URLs for SharePoint sites and libraries. 
 
@@ -29,36 +28,43 @@ When you add a SharePoint path for "Shared Documents":
 
 - Specify "Documents" in the path when you want to scan all documents and all folders from a subfolder under Shared Documents. For example: "http://sp2013/Documents/Sales Reports"
 
-If you later need to remove a data repository that you added, use the [Remove-AIPScannerRepository](./Remove-AIPScannerRepository.md) cmdlet.
+If you later need to change the settings for this data repository, use the [Set-AIPScannerRepository](./Set-AIPScannerRepository.md) cmdlet. To remove a data repository, complete with its scanning settings, use the [Remove-AIPScannerRepository](./Remove-AIPScannerRepository.md) cmdlet.
 
 ## EXAMPLES
 
-### Example 1: Configure a local folder to be scanned, default label specified in the AIP policy is applied on unlabled files 
+### Example 1: Configure a local folder to be scanned and set the default label that is specified in the Azure Information Protection policy
 ```
 PS C:\> Add-AIPScannerRepository -Path D:\Data\Finance -SetDefaultLabel UsePolicyDefault
 
 The repository was added successfully.
 ```
 
-This command adds the local folder named Data\Finance on the D drive to be scanned.
+This command adds the local folder named Data\Finance on the D drive to be scanned. For unlabeled files, apply the default label that is specified in the Azure Information Protection policy.
 
-### Example 2: Configure a network-attached storage (NAS) file share to be scanned, default label with GUID f018e9e7-0cfc-4c69-b27a-ac3cb7df43cc is applied  on unlabled files. Intruct scanner to relabel all already labeled files in this repository based on conditions in AIP policy. Configure the Azure Information Protection scanner to set the Owner custom property and Rights Management owner to an administrator's account 
+### Example 2: Configure a network-attached storage (NAS) file share to be scanned with settings that apply a specific label to unlabeled files, override existing labels, and set the Owner custom property and Rights Management owner 
 ```
 PS C:\> Add-AIPScannerRepository -Path \\NAS\HR -SetDefaultLabel On -DefaultLabelId -SetDefaultLabel f018e9e7-0cfc-4c69-b27a-ac3cb7df43cc -OverrideLabel On -DefaultOwner "admin@contoso.com"
 
 The repository was added successfully.
 ```
 
-This command adds the file share named HR on the network-attached storage device named NAS to be scanned. 
+This command adds the file share named HR on the network-attached storage device named NAS to be scanned and use the following settings:
 
-### Example 3: Scan all documents and folders from the SharePoint Server "Shared Documents" library, do not apply any default label.
+- For unlabeled files, apply the label that has an ID of f018e9e7-0cfc-4c69-b27a-ac3cb7df43cc.
+
+- For files that are already labeled, override that label with the new label.
+
+- Set the Owner custom property and Rights Management owner to the administrator's account
+
+
+### Example 3: Scan all documents and folders from the SharePoint Server "Shared Documents" library, and do not apply a default label
 ```
 PS C:\> Add-AIPScannerRepository -Path "http://sp2013/Shared Documents" -SetDefaultLabel Off
 
 The repository was added successfully.
 ```
 
-This command adds the SharePoint Server "Shared Documents" library to be scanned.
+This command adds the SharePoint Server "Shared Documents" library to be scanned. For unlabeled files, do not apply a default label.
 
 ### Example 4: Scan a specific folder in the SharePoint Server "Shared Documents" library. 
 ```
@@ -93,10 +99,11 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultLabelId
-Specifies the identity (ID) of the label used as default label for this repository. Default label is applied on unlabled file in case no automatic rule is matched.
-This parameter is used only if SetDefaultLabel switch is set to On. Otherwise this setting is ignored.
+Specifies the label ID to use as the default label for this data repository. This default label is applied to unlabeled files if no conditions are matched and the *SetDefaultLabel* parameter is set to On.  
 
-When a label has sub-labels, always specify the ID of just a sub-label and not the parent label.
+This parameter is ignored if *SetDefaultLabel* is set to Off. 
+
+When a label has sublabels, always specify the ID of just a sublabel and not the parent label.
 
 The label ID value is displayed in the Azure portal, on the Label blade, when you view or configure the Azure Information Protection policy. For files that have labels applied, you can also run the Get-AIPFileStatus cmdlet to identify the label ID (MainLabelId or SubLabelId).
 
@@ -113,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultOwner
-Specifies the email address for the Owner custom property when a file is classified, and for the Rights Management owner when a file is protected. For more    information about the Rights Management owner, see Rights Management issuer and Rights Management owner
+Specifies the email address for the Owner custom property when a file is classified, and for the Rights Management owner when a file is protected. For more information about the Rights Management owner, see Rights Management issuer and Rights Management owner
 (https://docs.microsoft.com/information-protection/deploy-use/configure-usage-rights#rights-management-issuer-and-rights-management-owner).
 
 If you do not specify this parameter, default values are used for the Owner custom property and the Rights Management owner:
@@ -176,13 +183,13 @@ Accept wildcard characters: False
 ```
 
 ### -SetDefaultLabel
-Specifies if scanner sets default label on unlabled files in this repository. By default, scanner uses the policy setting for default label for all repositories. Use this paramter in order to specify if the scanner uses the policy default label, doesn't have any default label or applies repository specific default label.
+Specifies whether the scanner sets a default label on unlabeled files for this data repository. You can apply the default label from the Azure Information Protection policy, or another label.
 
-- UsePolicyDefault: Default label specified in the AIP policy is applied by scanner on unlabled files in this repository
+- UsePolicyDefault: For unlabeled files, apply the default label that is specified in the Azure Information Protection policy.
 
-- Off: No default label is applied by scanner on unlabled files in this repository
+- Off: For unlabeled files, do not apply a default label.
 
-- On: Label specified using DefaultLabelId parameter is applied by scanner on unlabled files in this repository
+- On: For unlabeled files, apply the label that is specified by its label ID.
 
 ```yaml
 Type: DefaultLabel
@@ -223,6 +230,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-AIPScanner](./Set-AIPScanner.md)
 
 [Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration.md)
+
+[Set-AIPScannerRepository](./Set-AIPScannerRepository.md)
 
 [Uninstall-AIPScanner](./Uninstall-AIPScanner.md)
 

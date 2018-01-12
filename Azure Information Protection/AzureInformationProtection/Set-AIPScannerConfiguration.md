@@ -17,7 +17,7 @@ Set-AIPScannerConfiguration [-ScanMode <ScanMode>] [-ReportLevel <ReportLevel>] 
 ```
 
 ## DESCRIPTION
-The Set-AIPScannerConfiguration cmdlet sets optional configuration settings for the Azure Information Protection scanner. When the scanner is installed, these settings are configured for you with their default values. Use this cmdlet to change the settings, which will be used the next time the scanner runs. If you need the changes to take effect immediately, restart the Azure Information Protection Scanner service on the Windows server computer.
+The Set-AIPScannerConfiguration cmdlet sets optional configuration settings for the Azure Information Protection scanner. When you install the scanner, these settings are configured for you with their default installation values. Use this cmdlet to change the settings, which will be used the next time the scanner runs. If you need the changes to take effect immediately, restart the Azure Information Protection Scanner service on the Windows server computer.
 
 The configuration settings include whether the scanner is in discovery mode only or applies labels, whether a file will be relabeled, whether file attributes are changed, what is logged in the reports, whether the scanner runs once or continuously, what justification message to use when required, and the Rights Management owner for protected files.
 
@@ -32,7 +32,7 @@ Configuration was set successfully.
 
 This command configures the scanner to run a one-time discovery for files in the specified data repositories, and then create a report that lists the files that meet the conditions to be labeled.
 
-Note that because these parameters specify the values that are set by default when the scanner is installed, you need to specify them only if you previously specified other values.
+Note that because these parameters specify the values that are set by the scanner installation, you need to specify them only if you previously specified other values.
 
 ### Example 2: Configure the Azure Information Protection scanner to continuously discover and label files
 ```
@@ -46,7 +46,7 @@ This command configures the scanner to continuously discover files in the specif
 For these files, they are classified and protected (or have protection removed), according to the label configuration.  
 
 
-### Example 3: Configure the Azure Information Protection scanner to scan and label all files one time,and log all files
+### Example 3: Configure the Azure Information Protection scanner to scan and label all files one time, and log all files
 ```
 PS C:\> Set-AIPScannerConfiguration -ScanMode Enforce -Schedule OneTime -ReportLevel Debug -Type Full
 
@@ -111,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScanMode
-Specifies whether the scanner only logs the files that meet the conditions in the Azure Information Protection policy without applying the corresponding label (the default setting), or applies the label: 
+Specifies whether the scanner only logs the files that meet the conditions in the Azure Information Protection policy without applying the corresponding label (the installation default setting), or applies the label: 
 
 - Discover: Scans the data repositories in the "what if" mode, to log results only, without setting the classification or protection that the corresponding label would apply.
 
@@ -158,13 +158,13 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-Specifies whether the scanner maintains a list of previously scanned files so it can scan only new or modified files since the service started. This is the default behavior and offers the best performance. 
+Specifies whether the scanner maintains a list of previously scanned files so it can scan only new or modified files since the service started. This is the default installation behavior and offers the best performance.
 
 If this list is not maintained, all files in the specified data repositories are scanned with each scanning cycle.
 
 - Incremental: The scanner maintains a list of previously scanned files so it can scan only new or modified files. 
 
-- Full: Each time the cycle finishes, all files in the specified data repositories are scanned again. This setting is most useful when you want all files to be listed in the reports.
+- Full: All files in the specified data repositories are scanned, after which this parameter is automatically set to Incremental. To scan all files again, you must change this parameter to Full. This setting is most useful when you want all files to be listed in the reports.
 
 
 ```yaml

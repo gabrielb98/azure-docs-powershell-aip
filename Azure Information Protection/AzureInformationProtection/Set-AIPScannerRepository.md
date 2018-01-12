@@ -1,13 +1,13 @@
 ---
 external help file: AIP.dll-Help.xml
-online version: https://go.microsoft.com/fwlink/?linkid=858202
+online version: https://go.microsoft.com/fwlink/?linkid=xxx
 schema: 2.0.0
 ---
 
 # Set-AIPScannerRepository
 
 ## SYNOPSIS
-Sets a configuraion for a data repository to be scanned by the Azure Information Protection scanner. 
+Updates a profile of configuration settings for a data repository to be scanned by the Azure Information Protection scanner. 
 
 ## SYNTAX
 
@@ -18,38 +18,45 @@ Set-AIPScannerRepository [-Path] <String> [-OverrideLabel <OverrideLabel>]
 ```
 
 ## DESCRIPTION
-The Set-AIPScannerRepository cmdlet sets a configuration for a data repository to be scanned by the Azure Information Protection scanner. 
-Every repository can be scanned using different scanning profile, including defaul label and label override settings.
+The Set-AIPScannerRepository cmdlet updates a profile of configuration settings for a data repository that you have specified to be scanned by the Azure Information Protection scanner.
+
+For example, for each data repository that you specified, you can change the default label for unlabeled files, and whether to override an existing label.
 
 
 ## EXAMPLES
 
-### Example 1: For D:\Data\Finance repostiory use default label specified in the AIP policy to be applied on unlabled files 
+### Example 1: For unlabeled files in a local folder, change the default label that is specified in the Azure Information Protection policy
 ```
 PS C:\> Set-AIPScannerRepository -Path D:\Data\Finance -SetDefaultLabel UsePolicyDefault
 
 The settings were updated successfully.
 ```
 
-This command updates D:\Data\Finance repostiory setting of defautl label to use default label specified in the AIP policy.
+This command updates the profile for the D:\Data\Finance repository, which specifies that unlabeled files will be labeled with the default label from the Azure Information Protection policy.
 
-### Example 2: Update a configuraion of \\NAS\HR  repository to apply default label with GUID f018e9e7-0cfc-4c69-b27a-ac3cb7df43cc on unlabled files. Intruct scanner to relabel all already labeled files in this repository based on conditions in AIP policy. Configure the Azure Information Protection scanner to set the Owner custom property and Rights Management owner to an administrator's account 
+### Example 2: For files in a network-attached storage (NAS) file share repository, change the default label to a specific label, change the override behavior to always relabel files, and set the Owner custom property and Rights Management owner
 ```
 PS C:\> Set-AIPScannerRepository -Path \\NAS\HR -SetDefaultLabel On -DefaultLabelId -SetDefaultLabel f018e9e7-0cfc-4c69-b27a-ac3cb7df43cc -OverrideLabel On -DefaultOwner "admin@contoso.com"
 
 The settings were updated successfully.
 ```
 
-This command sets \\NAS\HR repository's default label to f018e9e7-0cfc-4c69-b27a-ac3cb7df43cc, instructs scanner to relabel already labeled files, and sets the default owner to "admin@contoso.com"
+This command sets the following configuration for the \\NAS\HR data repository:
 
-### Example 3: Do not apply any default label on scanned file in the "http://sp2013/Shared Documents" repository. 
+- For unlabeled files, apply the label that has an ID of f018e9e7-0cfc-4c69-b27a-ac3cb7df43cc.
+
+- For files that are already labeled, override that label with the new label.
+
+- Set the Owner custom property and Rights Management owner to the administrator's account.
+
+### Example 3: Stop applying a default label to unlabeled files in a SharePoint library 
 ```
 PS C:\> Set-AIPScannerRepository -Path "http://sp2013/Shared Documents" -SetDefaultLabel Off
 
 The settings were updated successfully.
 ```
 
-This command sets the SharePoint "http://sp2013/Shared Documents" repository repository to have no default label.
+This command updates the default label behavior so that unlabeled files in the specified data repository remain unlabeled.
 
 
 ## PARAMETERS
@@ -195,7 +202,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-AIPScannerConfiguration](./Get-AIPScannerConfiguration.md)
 
-[Get-AIPScannerRepository](./Get-AIPScannerRepository.md)
+[Set-AIPScannerRepository](./Set-AIPScannerRepository.md)
 
 [Install-AIPScanner](./Install-AIPScanner.md)
 
