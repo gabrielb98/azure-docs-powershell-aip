@@ -105,7 +105,7 @@ Accepted values: Off, Debug, Info, Error
 
 Required: False
 Position: Named
-Default value: Info
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -125,7 +125,7 @@ Accepted values: Enforce, Discover
 
 Required: False
 Position: Named
-Default value: Discover
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -152,7 +152,7 @@ Accepted values: OneTime, Continuous, Never
 
 Required: False
 Position: Named
-Default value: OneTime
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -175,7 +175,7 @@ Accepted values: Incremental, Full
 
 Required: False
 Position: Named
-Default value: Incremental
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
