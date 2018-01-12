@@ -4,72 +4,53 @@ online version: https://go.microsoft.com/fwlink/?linkid=858202
 schema: 2.0.0
 ---
 
-# Add-AIPScannerRepository
+# Set-AIPScannerRepository
 
 ## SYNOPSIS
-Adds a data repository to be scanned by the Azure Information Protection scanner. 
+Sets a configuraion for a data repository to be scanned by the Azure Information Protection scanner. 
 
 ## SYNTAX
 
 ```
-Add-AIPScannerRepository [-Path] <String> [-OverrideLabel <OverrideLabel>]
+Set-AIPScannerRepository [-Path] <String> [-OverrideLabel <OverrideLabel>]
  [-PreserveFileDetails <PreserveFileDetails>] [-DefaultOwner <String>] [-SetDefaultLabel <DefaultLabel>]
  [-DefaultLabelId <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Add-AIPScannerRepository cmdlet adds a data repository to be scanned by the Azure Information Protection scanner. 
+The Set-AIPScannerRepository cmdlet sets a configuration for a data repository to be scanned by the Azure Information Protection scanner. 
 Every repository can be scanned using different scanning profile, including defaul label and label override settings.
 
-You can specify local folders, UNC paths, and SharePoint Server URLs for SharePoint sites and libraries. 
-
-When you add a SharePoint path for "Shared Documents":
-
-- Specify "Shared Documents" in the path when you want to scan all documents and all folders from Shared Documents. For example: "http://sp2013/Shared Documents"
-
-- Specify "Documents" in the path when you want to scan all documents and all folders from a subfolder under Shared Documents. For example: "http://sp2013/Documents/Sales Reports"
-
-If you later need to remove a data repository that you added, use the [Remove-AIPScannerRepository](./Remove-AIPScannerRepository.md) cmdlet.
 
 ## EXAMPLES
 
-### Example 1: Configure a local folder to be scanned, default label specified in the AIP policy is applied on unlabled files 
+### Example 1: For D:\Data\Finance repostiory use default label specified in the AIP policy to be applied on unlabled files 
 ```
-PS C:\> Add-AIPScannerRepository -Path D:\Data\Finance -SetDefaultLabel UsePolicyDefault
+PS C:\> Set-AIPScannerRepository -Path D:\Data\Finance -SetDefaultLabel UsePolicyDefault
 
-The repository was added successfully.
-```
-
-This command adds the local folder named Data\Finance on the D drive to be scanned.
-
-### Example 2: Configure a network-attached storage (NAS) file share to be scanned, default label with GUID f018e9e7-0cfc-4c69-b27a-ac3cb7df43cc is applied  on unlabled files. Intruct scanner to relabel all already labeled files in this repository based on conditions in AIP policy. Configure the Azure Information Protection scanner to set the Owner custom property and Rights Management owner to an administrator's account 
-```
-PS C:\> Add-AIPScannerRepository -Path \\NAS\HR -SetDefaultLabel On -DefaultLabelId -SetDefaultLabel f018e9e7-0cfc-4c69-b27a-ac3cb7df43cc -OverrideLabel On -DefaultOwner "admin@contoso.com"
-
-The repository was added successfully.
+The settings were updated successfully.
 ```
 
-This command adds the file share named HR on the network-attached storage device named NAS to be scanned. 
+This command updates D:\Data\Finance repostiory setting of defautl label to use default label specified in the AIP policy.
 
-### Example 3: Scan all documents and folders from the SharePoint Server "Shared Documents" library, do not apply any default label.
+### Example 2: Update a configuraion of \\NAS\HR  repository to apply default label with GUID f018e9e7-0cfc-4c69-b27a-ac3cb7df43cc on unlabled files. Intruct scanner to relabel all already labeled files in this repository based on conditions in AIP policy. Configure the Azure Information Protection scanner to set the Owner custom property and Rights Management owner to an administrator's account 
 ```
-PS C:\> Add-AIPScannerRepository -Path "http://sp2013/Shared Documents" -SetDefaultLabel Off
+PS C:\> Set-AIPScannerRepository -Path \\NAS\HR -SetDefaultLabel On -DefaultLabelId -SetDefaultLabel f018e9e7-0cfc-4c69-b27a-ac3cb7df43cc -OverrideLabel On -DefaultOwner "admin@contoso.com"
 
-The repository was added successfully.
-```
-
-This command adds the SharePoint Server "Shared Documents" library to be scanned.
-
-### Example 4: Scan a specific folder in the SharePoint Server "Shared Documents" library. 
-```
-PS C:\> Add-AIPScannerRepository -Path http://sp2016.res.local/Documents/HR
-
-The repository was added successfully.
+The settings were updated successfully.
 ```
 
-This command adds the SharePoint Server folder named HR, from the "Shared Documents" library. 
+This command sets \\NAS\HR repository's default label to f018e9e7-0cfc-4c69-b27a-ac3cb7df43cc, instructs scanner to relabel already labeled files, and sets the default owner to "admin@contoso.com"
 
-Note that the path syntax for this scenario uses "Documents" rather than "Shared Documents".
+### Example 3: Do not apply any default label on scanned file in the "http://sp2013/Shared Documents" repository. 
+```
+PS C:\> Set-AIPScannerRepository -Path "http://sp2013/Shared Documents" -SetDefaultLabel Off
+
+The settings were updated successfully.
+```
+
+This command sets the SharePoint "http://sp2013/Shared Documents" repository repository to have no default label.
+
 
 ## PARAMETERS
 
