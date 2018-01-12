@@ -54,7 +54,7 @@ This command adds the file share named HR on the network-attached storage device
 
 - For files that are already labeled, override that label with the new label.
 
-- Set the Owner custom property and Rights Management owner to the administrator's account
+- Set the Owner custom property and Rights Management owner to the administrator's account.
 
 
 ### Example 3: Scan all documents and folders from the SharePoint Server "Shared Documents" library, and do not apply a default label
