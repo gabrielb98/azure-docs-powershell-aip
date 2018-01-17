@@ -43,7 +43,7 @@ This command adds the local folder named Data\Finance on the D drive to be scann
 
 ### Example 2: Configure a network-attached storage (NAS) file share to be scanned with settings that apply a specific label to unlabeled files, override existing labels, and set the Owner custom property and Rights Management owner
 ```
-PS C:\> Add-AIPScannerRepository -Path \\NAS\HR -SetDefaultLabel On -DefaultLabelId -SetDefaultLabel f018e9e7-0cfc-4c69-b27a-ac3cb7df43cc -OverrideLabel On -DefaultOwner "admin@contoso.com"
+PS C:\> Add-AIPScannerRepository -Path \\NAS\HR -SetDefaultLabel On -DefaultLabelId f018e9e7-0cfc-4c69-b27a-ac3cb7df43cc -OverrideLabel On -DefaultOwner "admin@contoso.com"
 
 The repository was added successfully.
 ```
