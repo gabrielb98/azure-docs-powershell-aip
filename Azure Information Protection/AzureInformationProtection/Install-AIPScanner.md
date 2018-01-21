@@ -130,4 +130,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration.md)
 
+[Set-AIPScannerRepository](./Set-AIPScannerRepository.md)
+
 [Uninstall-AIPScanner](./Uninstall-AIPScanner.md)
