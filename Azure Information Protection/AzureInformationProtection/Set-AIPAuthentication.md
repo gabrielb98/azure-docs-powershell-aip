@@ -41,7 +41,7 @@ This command prompts you for your Azure AD credentials that are used to acquire 
 
 ### Example 2: Set the authentication credentials by using applications that are registered in Azure Active Directory and when prompted, sign in
 ```
-PS C:\> Set-AIPAuthentication -webAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -webAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -nativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f"
+PS C:\> Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f"
 Acquired application access token on behalf of the user
 ```
 
@@ -49,7 +49,7 @@ This command prompts you for your Azure AD credentials that are used to acquire 
 
 ### Example 3: Step 1 of 2 to set the authentication credentials for a service account that can't interactively sign in
 ```
-PS C:\> (Set-AIPAuthentication -webAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -webAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -nativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f").token | clip
+PS C:\> (Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f").token | clip
 Acquired application access token on behalf of the user
 ```
 
@@ -60,7 +60,7 @@ The access token is copied to the clipboard so that you can run this cmdlet agai
 
 ### Example 4: Step 2 of 2 to set the authentication credentials for a service account that can't interactively sign in
 ```
-PS C:\> Set-AIPAuthentication -webAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -webAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -nativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f" -token AwAAAAEAAACDAWh0dHBzOi8vbG9naW4u...
+PS C:\> Set-AIPAuthentication -webAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f" -Token AwAAAAEAAACDAWh0dHBzOi8vbG9naW4u...
 Acquired application access token on behalf of the user
 ```
 
