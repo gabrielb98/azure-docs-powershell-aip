@@ -1,54 +1,47 @@
 ---
 external help file: AIP.dll-Help.xml
-online version: https://go.microsoft.com/fwlink/?linkid=858202
+online version: https://go.microsoft.com/fwlink/?linkid=866449
 schema: 2.0.0
 ---
 
-# Add-AIPScannerRepository
+# Set-AIPScannerRepository
 
 ## SYNOPSIS
-Adds a data repository to be scanned by the Azure Information Protection scanner. 
+Updates a profile of configuration settings for a data repository to be scanned by the Azure Information Protection scanner. 
 
 ## SYNTAX
 
 ```
-Add-AIPScannerRepository [-Path] <String> [-OverrideLabel <OverrideLabel>]
+Set-AIPScannerRepository [-Path] <String> [-OverrideLabel <OverrideLabel>]
  [-PreserveFileDetails <PreserveFileDetails>] [-DefaultOwner <String>] [-SetDefaultLabel <DefaultLabel>]
  [-DefaultLabelId <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Add-AIPScannerRepository cmdlet adds a data repository to be scanned by the Azure Information Protection scanner, and creates a profile of settings to be used for that repository. For example, you can specify a default label for unlabeled files, and whether to override an existing label.
+The Set-AIPScannerRepository cmdlet updates a profile of configuration settings for a data repository that you have specified to be scanned by the Azure Information Protection scanner.
 
-For the data repository, you can specify local folders, UNC paths, and SharePoint Server URLs for SharePoint sites and libraries. 
+For example, for each data repository that you specified by running [Add-AIPScannerRepository](./Add-AIPScannerRepository.md), you can change the default label for unlabeled files, and whether to override an existing label.
 
-When you add a SharePoint path for "Shared Documents":
-
-- Specify "Shared Documents" in the path when you want to scan all documents and all folders from Shared Documents. For example: "http://sp2013/Shared Documents"
-
-- Specify "Documents" in the path when you want to scan all documents and all folders from a subfolder under Shared Documents. For example: "http://sp2013/Documents/Sales Reports"
-
-If you later need to change the settings for this data repository, use the [Set-AIPScannerRepository](./Set-AIPScannerRepository.md) cmdlet. To remove this data repository, complete with its scanning settings, use the [Remove-AIPScannerRepository](./Remove-AIPScannerRepository.md) cmdlet.
 
 ## EXAMPLES
 
-### Example 1: Configure a local folder to be scanned and set the default label that is specified in the Azure Information Protection policy
+### Example 1: For unlabeled files in a local folder, change the default label that is specified in the Azure Information Protection policy
 ```
-PS C:\> Add-AIPScannerRepository -Path D:\Data\Finance -SetDefaultLabel UsePolicyDefault
+PS C:\> Set-AIPScannerRepository -Path D:\Data\Finance -SetDefaultLabel UsePolicyDefault
 
-The repository was added successfully.
-```
-
-This command adds the local folder named Data\Finance on the D drive to be scanned. For unlabeled files, apply the default label that is specified in the Azure Information Protection policy.
-
-### Example 2: Configure a network-attached storage (NAS) file share to be scanned with settings that apply a specific label to unlabeled files, override existing labels, and set the Owner custom property and Rights Management owner
-```
-PS C:\> Add-AIPScannerRepository -Path \\NAS\HR -SetDefaultLabel On -DefaultLabelId f018e9e7-0cfc-4c69-b27a-ac3cb7df43cc -OverrideLabel On -DefaultOwner "admin@contoso.com"
-
-The repository was added successfully.
+The settings were updated successfully.
 ```
 
-This command adds the file share named HR on the network-attached storage device named NAS to be scanned with the following settings:
+This command updates the profile for the D:\Data\Finance repository, which specifies that unlabeled files will be labeled with the default label from the Azure Information Protection policy.
+
+### Example 2: For files in a network-attached storage (NAS) file share repository, change the default label to a specific label, change the override behavior to always relabel files, and set the Owner custom property and Rights Management owner
+```
+PS C:\> Set-AIPScannerRepository -Path \\NAS\HR -SetDefaultLabel On -DefaultLabelId -SetDefaultLabel f018e9e7-0cfc-4c69-b27a-ac3cb7df43cc -OverrideLabel On -DefaultOwner "admin@contoso.com"
+
+The settings were updated successfully.
+```
+
+This command sets the following configuration for the \\NAS\HR data repository:
 
 - For unlabeled files, apply the label that has an ID of f018e9e7-0cfc-4c69-b27a-ac3cb7df43cc.
 
@@ -56,26 +49,15 @@ This command adds the file share named HR on the network-attached storage device
 
 - Set the Owner custom property and Rights Management owner to the administrator's account.
 
-
-### Example 3: Configure a SharePoint "Shared Documents" library to be scanned with settings that do not apply a default label
+### Example 3: Stop applying a default label to unlabeled files in a SharePoint library 
 ```
-PS C:\> Add-AIPScannerRepository -Path "http://sp2013/Shared Documents" -SetDefaultLabel Off
+PS C:\> Set-AIPScannerRepository -Path "http://sp2013/Shared Documents" -SetDefaultLabel Off
 
-The repository was added successfully.
-```
-
-This command adds a SharePoint data repository to be scanned for all documents and folders from the "Shared Documents" library. For unlabeled files, do not apply a default label.
-
-### Example 4: Configure a specific folder in the SharePoint Server "Shared Documents" library to be scanned 
-```
-PS C:\> Add-AIPScannerRepository -Path http://sp2016.res.local/Documents/HR
-
-The repository was added successfully.
+The settings were updated successfully.
 ```
 
-This command adds the SharePoint Server folder named HR, from the "Shared Documents" library. 
+This command updates the default label behavior so that unlabeled files in the specified data repository remain unlabeled.
 
-Note that the path syntax for this scenario uses "Documents" rather than "Shared Documents".
 
 ## PARAMETERS
 
@@ -219,9 +201,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AIPScannerConfiguration](./Get-AIPScannerConfiguration.md)
+[Add-AIPScannerRepository](./Add-AIPScannerRepository.md)
 
-[Get-AIPScannerRepository](./Get-AIPScannerRepository.md)
+[Get-AIPScannerConfiguration](./Get-AIPScannerConfiguration.md)
 
 [Install-AIPScanner](./Install-AIPScanner.md)
 

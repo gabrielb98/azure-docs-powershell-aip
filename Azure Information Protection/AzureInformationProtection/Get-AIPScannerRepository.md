@@ -26,10 +26,29 @@ Tip: You can use the output of this cmdlet with [Remove-AIPScannerRepository](./
 ```
 PS C:\> Get-AIPScannerRepository
 
-http://sp2016.res.local/Shared Documents/Folder
-http://sp2013/Documents
-\\server1\HR
-d:\Data\Finance
+Repository          : http://sp2016.res.local/Shared Documents/Folder
+OverrideLabel       : On
+PreserveFileDetails : On
+DefaultOwner        : "admin@contoso.msft"  
+DefaultLabel        : PolicyDefaultLabel
+
+Repository          : http://sp2013/Documents
+OverrideLabel       : Off
+PreserveFileDetails : On
+DefaultOwner        :
+DefaultLabel        : f018e9e7-0cfc-4c69-b27a-ac3cb7df43cc
+
+Repository          : \\server1\HR
+OverrideLabel       : Off
+PreserveFileDetails : On
+DefaultOwner        :
+DefaultLabel        : None
+
+Repository          : d:\Data\Finance
+OverrideLabel       : Off
+PreserveFileDetails : On
+DefaultOwner        :
+DefaultLabel        : None
 ```
 
 This command gets the list of the data repositories that the Azure Information Protection scanner is currently configured to scan. The list displays two paths from SharePoint Server, a file server share, and a local disk and folder.
@@ -53,14 +72,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Add-AIPScannerRepository](./Add-AIPScannerRepository.md)
 
-[Install-AIPScanner](./Install-AIPScanner.md)
-
-[Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration.md)
-
 [Get-AIPScannerConfiguration](./Get-AIPScannerConfiguration.md)
 
-[Uninstall-AIPScanner](./Uninstall-AIPScanner.md)
+[Install-AIPScanner](./Install-AIPScanner.md)
 
 [Remove-AIPScannerRepository](./Remove-AIPScannerRepository.md)
 
 [Set-AIPScanner](./Set-AIPScanner.md)
+
+[Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration.md)
+
+[Set-AIPScannerRepository](./Set-AIPScannerRepository.md)
+
+[Uninstall-AIPScanner](./Uninstall-AIPScanner.md)
