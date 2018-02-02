@@ -53,7 +53,9 @@ Specifies a domain name for your organization or another organization, to be use
 
 Specify one domain name only for all users in an organization; to grant rights to more than one organization, create another Rights Definition object.
 
-Note that for authentication to be successful, the user must have an account in Azure Active Directory. Office 365 users automatically have an account in Azure Active Directory. 
+Note that for authentication to be successful for Azure AD, the user must have an account in Azure Active Directory. Office 365 users automatically have an account in Azure Active Directory. 
+
+You can specify domain names from social providers (such as gmail.com) but authentication for accounts that are not in Azure AD are supported for email only, and when Exchange Online is configured for the new capabilities for Office 365 Message Encryption.
 
 
 ```yaml
@@ -69,7 +71,9 @@ Accept wildcard characters: False
 ```
 
 ### -EmailAddress
-Specifies the email address of a user or group. The user or group can be internal to your organization, or external. However, for authentication to be successful, the user must have an account in Azure Active Directory. Office 365 users automatically have an account in Azure Active Directory.
+Specifies the email address of a user or group. The user or group can be internal to your organization, or external. However, for Azure AD authentication to be successful, the user must have an account in Azure Active Directory. Office 365 users automatically have an account in Azure Active Directory.
+
+You can specify an email address from a social provider (for example, a Gmail account) but authentication for accounts that are not in Azure AD are supported for email only, and when Exchange Online is configured for the new capabilities for Office 365 Message Encryption.
 
 The cmdlet associates the rights that the *Rights* parameter specifies to the user or group that the address specifies.
 
