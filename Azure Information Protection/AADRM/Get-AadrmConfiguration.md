@@ -23,7 +23,7 @@ You must use PowerShell to see a full list of configuration values for your tena
 
 ## EXAMPLES
 
-### Example 1: Display Rights Management  configuration
+### Example 1: Display Rights Management configuration
 ```
 PS C:\>Get-AadrmConfiguration
 BPOSId                                    : 9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a
@@ -38,7 +38,9 @@ CertificationIntranetDistributionPointUrl : https://5c6bb73b-1038-4eec-863d-49bd
 
 CertificationExtranetDistributionPointUrl: https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/certification
 
-AdminConnectionUrl                        : https://admin.na.aadrm.com/admin/admin.svc/Tenants/ 5c6bb73b-1038-4eec-863d-49bded473437
+AdminConnectionUrl                        : https://admin.na.aadrm.com/admin/admin.svc/Tenants/5c6bb73b-1038-4eec-863d-49bded473437
+
+AdminV2ConnectionUrl                      : https://admin.na.aadrm.com/adminV2/admin.svc/Tenants/5c6bb73b-1038-4eec-863d-49bded473437
 
 OnPremiseDomainName                       :
 
@@ -67,6 +69,11 @@ ProvisioningDate                          : 1/30/2014 9:01:31 PM
 IPCv3ServiceFunctionalState               : Enabled
 
 DevicePlatformState                       : {Windows -> True, WindowsStore -> True, WindowsPhone -> True, Mac ->
+
+FciEnabledForConnectorAuthorization       : True
+
+DocumentTrackingFeatureState              : Enabled
+
 ```
 
 This command displays the current Rights Management configuration for your organization.
