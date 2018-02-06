@@ -12,15 +12,13 @@ Removes a data repository for the Azure Information Protection scanner.
 ## SYNTAX
 
 ```
-Remove-AIPScannerRepository [-Path] <String>
+Remove-AIPScannerRepository [-Path] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The Remove-AIPScannerRepository cmdlet removes a data repository from the list of data repositories that the Azure Information Protection scanner is configured to scan. These data repositories are specified by using the [Add-AIPScannerRepository](./Add-AIPScannerRepository.md) cmdlet.
 
 Tip: You can use this cmdlet with [Get-AIPScannerRepository](./Get-AIPScannerRepository.md) to quickly remove all data repositories that the scanner is currently configured to scan.
-
-Note: This cmdlet is in preview and requires the current preview version of the Azure Information Protection client.
 
 ## EXAMPLES
 
@@ -44,7 +42,6 @@ The repository d:\data\Finance was removed successfully.
 
 This command first gets all the data repositories that are currently specified for the scanner and then removes them. In this example, three data repositories are found and removed from the scanner's configuration.
 
-
 ## PARAMETERS
 
 ### -Path
@@ -67,10 +64,12 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### System.String
-
 
 ## OUTPUTS
 
@@ -91,5 +90,7 @@ Accept wildcard characters: False
 [Set-AIPScanner](./Set-AIPScanner.md)
 
 [Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration.md)
+
+[Set-AIPScannerRepository](./Set-AIPScannerRepository.md)
 
 [Uninstall-AIPScanner](./Uninstall-AIPScanner.md)

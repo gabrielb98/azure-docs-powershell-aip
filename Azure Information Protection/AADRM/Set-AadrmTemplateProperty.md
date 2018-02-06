@@ -150,19 +150,19 @@ Accept wildcard characters: False
 ```
 
 ### -EnableInLegacyApps
-Determines the behavior of a departmental template in applications that do not support departmental templates.
+Determines the behavior of a departmental template in client applications that do not support departmental templates. For this scenario, decide whether all users can see departmental templates from the list of available templates, or no users can see departmental templates in the list.
 
-If set to True and the template is a departmental template, all users trying to protect content from an application that does not support departmental templates will see the template and therefore be able to select it, regardless of whether the users are members of the template's target scope or not.
+Departmental templates can be created by using the *ScopedIdentities* parameter, or by creating protection settings in a scoped policy for Azure Information Protection. Department templates might also have been created by using the Azure classic portal (now retired).
 
-If set to False, no users see and therefore cannot select the template in applications that do not support departmental templates, even if the users are members of the template's target scope.
+- If set to True and the template is a departmental template, all users will see the template and therefore be able to select it, regardless of whether the users are members of the template's scope or not.
 
-This setting has no effect on templates that are not departmental templates and also has no effect on applications that natively support departmental templates.
+- If set to False, no users see and therefore cannot select the template, even if the users are members of the template's target scope.
 
-The Azure Information Protection client and the Rights Management sharing application support departmental templates whereas Exchange Outlook Web Access and Exchange ActiveSync are examples of applications that do not currently support departmental templates. For these Exchange applications (and all other applications that cannot support departmental templates), you must decide whether all users can select a departmental template from the list of available templates, or no users can select a departmental template from the list.
+This setting has no effect on templates that are not departmental templates and also has no effect on client applications that natively support departmental templates. This setting also has no effect for Outlook on the web that uses Exchange Online rather than Exchange on-premises and for this scenario, departmental templates are never displayed to users.
 
-This setting does not affect whether a user can access content that is protected by a departmental template; it only affects the ability for a user to select the template itself.
+Note that this setting does not affect whether a user can access content that is protected by a departmental template; it only affects the ability for a user to see and therefore select the template itself.
 
-If you have applications that do not yet natively support departmental templates, you can use a [custom RMS template download script](https://go.microsoft.com/fwlink/?LinkId=524506) or other tools to deploy these templates to the local RMS client folder. Then, these applications will correctly display the departmental templates:
+If you have a client application that does not natively support departmental templates, such as Office 2010, you can use a [custom RMS template download script](https://go.microsoft.com/fwlink/?LinkId=524506) or other tools to deploy these templates to the local RMS client folder. Then, these applications will correctly display the departmental templates:
 
 - For Office 2010, the client folder is %localappdata%\Microsoft\DRM\Templates.
 - From a client computer that has downloaded all the templates, you can copy and then paste the template files to other computers.

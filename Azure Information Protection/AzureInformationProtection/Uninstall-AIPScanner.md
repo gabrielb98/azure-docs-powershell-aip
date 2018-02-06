@@ -12,7 +12,7 @@ Uninstalls the Windows Server service for the Azure Information Protection scann
 ## SYNTAX
 
 ```
-Uninstall-AIPScanner
+Uninstall-AIPScanner [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -22,24 +22,23 @@ This command also does not remove the scanner reports located in %localappdata%\
 
 To run this command, you must have local Administrator rights for the Windows Server computer and you must restart the computer after running the command to complete the removal process.
 
-Note: This cmdlet is in preview and requires the current preview version of the Azure Information Protection client.
-
 ## EXAMPLES
 
 ### Example 1: Uninstall the Azure Information Protection Scanner service
 ```
 PS C:\> Uninstall-AIPScanner
-
 ```
 
 This command removes the service for the Azure Information Protection scanner.
 
 ## PARAMETERS
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### None
-
 
 ## OUTPUTS
 
@@ -62,3 +61,5 @@ This command removes the service for the Azure Information Protection scanner.
 [Set-AIPScanner](./Set-AIPScanner.md)
 
 [Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration.md)
+
+[Set-AIPScannerRepository](./Set-AIPScannerRepository.md)

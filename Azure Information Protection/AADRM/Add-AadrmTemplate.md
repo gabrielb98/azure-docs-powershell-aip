@@ -13,7 +13,7 @@ Creates a Rights Management template.
 ## SYNTAX
 
 ```
-Add-AadrmTemplate -Names <Hashtable> [-Descriptions <Hashtable>]
+Add-AadrmTemplate -Names <Hashtable> -Descriptions <Hashtable>
  [-RightsDefinitions <System.Collections.Generic.List`1[Microsoft.RightsManagementServices.Online.Admin.TemplateRightsDefinition]>]
  [-ContentExpirationOption <ContentExpirationType>] [-ContentExpirationDate <DateTime>]
  [-ContentValidityDuration <Int32>] [-LicenseValidityDuration <Int32>] [-Status <TemplateStatus>]
@@ -114,7 +114,7 @@ Accept wildcard characters: False
 ### -Descriptions
 Specifies a list of descriptions for the template.
 
-Create names and descriptions for multiple locale IDs by using the hash-table syntax in Windows PowerShell. There must be at least one name/description pair. The locale IDs for names and descriptions must match each other.
+Create names and descriptions for multiple locale IDs by using the hash-table syntax in Windows PowerShell. There must be at least one name/description pair. The locale IDs for names and descriptions must match each other. If a locale ID is specified, its value must contain a non-empty string.
 
 $descriptions = @{}
 
@@ -127,7 +127,7 @@ Type: Hashtable
 Parameter Sets: (All)
 Aliases:
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -197,7 +197,8 @@ Accept wildcard characters: False
 ### -Names
 Specifies a list of names for the template.
 
-Create names and descriptions for multiple locale IDs by using the hash-table syntax in Windows PowerShell. There must be at least one name/description pair.The locale IDs for names and descriptions must match each other.
+Create names and descriptions for multiple locale IDs by using the hash-table syntax in Windows PowerShell. There must be at least one name/description pair.The locale IDs for names and descriptions must match each other. If a locale ID is specified, its value must contain a non-empty string.
+
 
 $names = @{}
 
@@ -300,7 +301,8 @@ To specify that a license must be obtained for each use and that content is avai
 Archived templates are available to consume previously protected content but are not presented to users.
 Published templates are distributed to users and made available for protecting content.
 
-Create names and descriptions for multiple locale IDs by using the hash-table syntax in Windows PowerShell. There must be at least one name/description pair. The locale IDs for names and descriptions must match each other.
+Create names and descriptions for multiple locale IDs by using the hash-table syntax in Windows PowerShell. There must be at least one name/description pair. The locale IDs for names and descriptions must match each other. If a locale ID is specified, its value must contain a non-empty string.
+
 
 $names = @{}
 

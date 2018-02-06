@@ -17,12 +17,11 @@ Get-RMSServerAuthentication [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-RMSServerAuthentication** cmdlet gets the server mode status and details that is set by using [Set-RMSServerAuthentication](./Set-RMSServerAuthentication.md). Server mode must be set to protect or unprotect files non-interactively. For example, if you protect files by using Windows Server and File Classification Infrastructure (FCI). This status remains on for the duration of your PowerShell session.
+The **Get-RMSServerAuthentication** cmdlet gets the server mode status and details that are set by using [Set-RMSServerAuthentication](./Set-RMSServerAuthentication.md). Server mode must be set to protect or unprotect files non-interactively. For example, if you protect files by using Windows Server and File Classification Infrastructure (FCI). This status remains on for the duration of your PowerShell session.
 
 This cmdlet does not apply if you protect or unprotect files by using your user account. 
 
 To use server mode with the Azure Rights Management service, you must use a service principal account in Azure AD. To use server mode with AD RMS, the computer account must be granted permissions. For more information, see [Using PowerShell with the Azure Information Protection client](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell) from the Azure Information Protection client admin guide.
-
 
 ## EXAMPLES
 
