@@ -1,5 +1,6 @@
 ---
 external help file: AIP.dll-Help.xml
+Module Name: AzureInformationProtection
 ms.assetid: 83B4D09E-ADAE-4DF9-9924-132A9FE47DFF
 online version: https://go.microsoft.com/fwlink/?linkid=841549
 schema: 2.0.0
@@ -57,7 +58,7 @@ Applies to Azure RMS only. Specify this parameter with the *BposTenantId* parame
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -74,7 +75,7 @@ Applies to Azure RMS only. Specify this parameter with the *AppPrincipalId* para
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -91,7 +92,7 @@ Applies to Azure RMS only. Specify this parameter with the *AppPrincipalId* para
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -109,7 +110,7 @@ Applies to AD RMS only.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
