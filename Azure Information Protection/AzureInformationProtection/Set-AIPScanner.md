@@ -1,5 +1,6 @@
 ---
 external help file: AIP.dll-Help.xml
+Module Name: AzureInformationProtection
 online version: https://go.microsoft.com/fwlink/?linkid=858209
 schema: 2.0.0
 ---
@@ -46,7 +47,7 @@ This account must be an Active Directory account. For additional requirements, s
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -69,7 +70,7 @@ For SQL Server Express, specify the server name and SQLEXPRESS. For example: SQL
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2

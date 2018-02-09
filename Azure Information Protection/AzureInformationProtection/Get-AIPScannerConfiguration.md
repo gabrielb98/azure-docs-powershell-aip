@@ -1,5 +1,6 @@
 ---
 external help file: AIP.dll-Help.xml
+Module Name: AzureInformationProtection
 online version: https://go.microsoft.com/fwlink/?linkid=858206
 schema: 2.0.0
 ---
@@ -44,7 +45,6 @@ This command gets the current configuration settings for the Azure Information P
 - The scanner will run discovery on all files.
 
 - The string "Reclassified by Azure Information Protection Scanner" is supplied and logged when the scanner applies a label that requires justification.
-
 
 ## PARAMETERS
 

@@ -1,5 +1,6 @@
 ---
 external help file: AIP.dll-Help.xml
+Module Name: AzureInformationProtection
 ms.assetid: ed1080cd-ae6f-4720-bac7-e719e31c708b
 online version: https://go.microsoft.com/fwlink/?linkid=845215
 schema: 2.0.0
@@ -138,7 +139,7 @@ Replaces an existing label when the configured conditions apply.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -155,7 +156,7 @@ If setting a label triggers the justification and this reason is not supplied, t
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -190,7 +191,7 @@ Specify the email address that is written to the Owner custom property.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -210,7 +211,7 @@ For SharePoint files, the Modified date and Modified By date remains unchanged.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

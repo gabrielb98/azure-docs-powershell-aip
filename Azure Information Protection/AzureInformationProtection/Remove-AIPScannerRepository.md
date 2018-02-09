@@ -1,5 +1,6 @@
 ---
 external help file: AIP.dll-Help.xml
+Module Name: AzureInformationProtection
 online version: https://go.microsoft.com/fwlink/?linkid=858208
 schema: 2.0.0
 ---
@@ -55,7 +56,7 @@ Examples include C:\Folder\, C:\Folder\Filename, \\\Server\Folder, http://sharep
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: FullName
+Aliases: Repository
 
 Required: True
 Position: 0
