@@ -8,7 +8,7 @@ ms.product: azure
 ms.service: powershell
 ms.devlang: powershell
 ms.topic: reference
-ms.date: 03/09/2017
+ms.date: 02/12/2018
 ms.author: sewhee
 ---
 
@@ -26,12 +26,8 @@ You can use the following PowerShell modules to administer the Azure Rights Mana
 * AzureInformationProtection
 
     These cmdlets are installed with the [Azure Information Protection client](/information-protection/rms-client/aip-client).
-    This module replaces the RMS Protection Tool and the AD RMS Bulk Protection Tool. These cmdlets
-    can be used with the Azure Information Protection service, the Azure Rights Management service
-    (Azure RMS), and Active Directory Rights Management Services (AD RMS). For more information, see [Using PowerShell with the Azure Information Protection client](/information-protection/rms-client/client-admin-guide-powershell).
+    These cmdlets can be used with the Azure Information Protection service, the Azure Rights
+    Management service (Azure RMS), and Active Directory Rights Management Services (AD RMS).
+    For more information, see [Using PowerShell with the Azure Information Protection client](/information-protection/rms-client/client-admin-guide-powershell).
 
-* RMSProtection Module
 
-    These cmdlets are installed with the RMS
-    Protection Tool. The RMS Protection tool is now replaced by the Azure Information Protection
-    client, which includes a new PowerShell module, AzureInformationProtection.

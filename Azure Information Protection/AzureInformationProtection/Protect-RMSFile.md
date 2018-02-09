@@ -1,5 +1,6 @@
 ---
 external help file: AIP.dll-Help.xml
+Module Name: AzureInformationProtection
 ms.assetid: 0F28BB73-D550-416D-BA5D-9ECE1E92E5D9
 online version: https://go.microsoft.com/fwlink/?linkid=841548
 schema: 2.0.0
@@ -150,7 +151,7 @@ The acceptable values for this parameter:
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: all, disk, license
 
 Required: False
@@ -166,7 +167,7 @@ Specifies the path and file name to be protected. For the path, you can use a dr
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -183,7 +184,7 @@ All the files currently in the specified folder will be protected. New files add
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -200,7 +201,7 @@ If neither *InPlace* nor *OutputFolder* is specified, the new file is created in
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -215,7 +216,7 @@ Specifies the variable name that stores an ad hoc rights policy that was created
 ```yaml
 Type: SafeInformationProtectionLicenseHandle
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -232,7 +233,7 @@ For the path, you can use a drive letter or UNC.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -257,7 +258,7 @@ Important: Although this parameter is optional, if you do not specify it when yo
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -272,7 +273,7 @@ When used with the *Folder* parameter, indicates that all the current files in t
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -287,7 +288,7 @@ Specifies the ID of the template to use to protect the specified file or files i
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

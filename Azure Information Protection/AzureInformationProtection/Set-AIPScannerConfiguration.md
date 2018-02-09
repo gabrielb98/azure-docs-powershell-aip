@@ -1,5 +1,6 @@
 ---
 external help file: AIP.dll-Help.xml
+Module Name: AzureInformationProtection
 online version: https://go.microsoft.com/fwlink/?linkid=858205
 schema: 2.0.0
 ---
@@ -45,7 +46,6 @@ This command configures the scanner to continuously discover files in the specif
 
 For these files, they are classified and protected (or have protection removed), according to the label configuration.  
 
-
 ### Example 3: Configure the Azure Information Protection scanner to scan and label all files one time, and log all files
 ```
 PS C:\> Set-AIPScannerConfiguration -ScanMode Enforce -Schedule OneTime -ReportLevel Debug -Type Full
@@ -59,7 +59,6 @@ For these files, they are classified and protected (or have protection removed),
 
 Every discovered file and the resulting action is logged in the reports. 
 
-
 ## PARAMETERS
 
 ### -JustificationMessage
@@ -70,7 +69,7 @@ If setting a label triggers the justification and this reason is not supplied, t
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -100,7 +99,7 @@ The local Windows **Applications and Services** event log, **Azure Information P
 ```yaml
 Type: ReportLevel
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Off, Debug, Info, Error
 
 Required: False
@@ -120,7 +119,7 @@ Specifies whether the scanner only logs the files that meet the conditions in th
 ```yaml
 Type: ScanMode
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Enforce, Discover
 
 Required: False
@@ -147,7 +146,7 @@ Specifies how often the scanner runs on the specified data repositories:
 ```yaml
 Type: Schedule
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: OneTime, Continuous, Never
 
 Required: False
@@ -170,7 +169,7 @@ If this list is not maintained, all files in the specified data repositories are
 ```yaml
 Type: ScanType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Incremental, Full
 
 Required: False

@@ -1,5 +1,6 @@
 ---
 external help file: AIP.dll-Help.xml
+Module Name: AzureInformationProtection
 ms.assetid: 835E47FE-7E1F-418D-843C-3B2FB2F7FF96
 online version: https://go.microsoft.com/fwlink/?linkid=841546
 schema: 2.0.0
@@ -97,7 +98,7 @@ To load templates for a different locale, specify it as a value with this parame
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -112,7 +113,7 @@ Indicates that this cmdlet downloads the templates directly from the Azure RMS s
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -132,7 +133,7 @@ If you don't specify a server, the cmdlet gets the list of templates from your c
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

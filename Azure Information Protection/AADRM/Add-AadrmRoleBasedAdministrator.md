@@ -40,6 +40,7 @@ For more information about the user and group requirements, see [Preparing users
 
 After delegating control to other administrators, they might find it useful to reference a list of the cmdlets they can run, grouped by administrative task. For this information, see [Administering the Azure Rights Management service by using Windows PowerShell](/information-protection/deploy-use/administer-powershell).
 
+Note that these administrative roles are separate from the Azure Active Directory admin roles or Office 365 admin roles.
 
 ## EXAMPLES
 
