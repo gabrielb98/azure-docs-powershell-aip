@@ -2,7 +2,7 @@
 Module Name: AADRM
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 Download Help Link: N/A
-Help Version: 2.10.0.0
+Help Version: 2.12.0.0
 Locale: en-US
 ms.assetid: 0B91D740-D2BD-4D57-9E21-C582C9BE2CCA
 ---
