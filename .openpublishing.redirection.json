@@ -67,7 +67,7 @@
         },
 
         {
-            "source_path": "Azure Information Protection/RMSProtection/Unprotect-RMSFile.md,
+            "source_path": "Azure Information Protection/RMSProtection/Unprotect-RMSFile.md",
             "redirect_url": "/powershell/module/azureinformationprotection/unprotect-rmsfile",
             "redirect_document_id": false
         },
