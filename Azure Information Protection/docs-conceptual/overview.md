@@ -28,7 +28,7 @@ You can use the following PowerShell modules with Azure Information Protection:
     
     These cmdlets let you protect and unprotect files, label files, and get information about files that are protected and labeled. 
     
-    These cmdlets are installed with the [Azure Information Protection client](/information-protection/rms-client/aip-client) and can be used with Azure Information Protection, the protection service (Azure Rights Management) for Azure Information Protection), and Active Directory Rights Management Services (AD RMS).
+    These cmdlets are installed with the [Azure Information Protection client](/information-protection/rms-client/aip-client) and can be used with Azure Information Protection, the protection service (Azure Rights Management) for Azure Information Protection, and Active Directory Rights Management Services (AD RMS).
     
     For information about when and how to use these PowerShell cmdlets, see [Using PowerShell with the Azure Information Protection client](/information-protection/rms-client/client-admin-guide-powershell).
     
