@@ -169,7 +169,7 @@ Specifies whether the scanner sets a default label on unlabeled files for this d
 
 - Off: For unlabeled files, do not apply a default label.
 
-- On: For unlabeled files, apply the label that is specified by its label ID.
+- On: For unlabeled files, apply the label that is specified by its label ID. To use this option, the default label setting must be configured in the Azure Information Protection policy.
 
 ```yaml
 Type: DefaultLabel
