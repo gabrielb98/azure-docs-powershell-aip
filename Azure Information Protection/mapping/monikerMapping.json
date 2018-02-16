@@ -1,19 +1,13 @@
 {
     "azureipps": {
-        "azure-docs-powershell-aip/Azure Information Protection": {
-            "AADRM": {
-                "_displayName": "AADRM",
-                "_version": "latest"
-            },
-            "AzureInformationProtection": {
-                "_displayName": "Azure Information Protection",
-                "_version": "latest"
-            },
-            "RMSProtection": {
-                "_displayName": "RMS Protection",
-                "_version": "latest"
-            }
+        "conceptualToc": "Azure Information Protection/docs-conceptual/toc.yml",
+        "conceptualTocUrl": "/powershell/azure/aip/toc.json",
+        "referenceTocUrl": "/powershell/module/aip/toc.json",
+        "packageRoot": "Azure Information Protection",
+        "modules": {
+            "AADRM": {},
+            "AzureInformationProtection": {},
+            "RMSProtection": {}
         }
     }
-      
 }
