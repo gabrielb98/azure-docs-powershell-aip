@@ -1,5 +1,6 @@
 ---
 external help file: AIP.dll-Help.xml
+Module Name: AzureInformationProtection
 online version: https://go.microsoft.com/fwlink/?linkid=858202
 schema: 2.0.0
 ---
@@ -56,7 +57,6 @@ This command adds the file share named HR on the network-attached storage device
 
 - Set the Owner custom property and Rights Management owner to the administrator's account.
 
-
 ### Example 3: Configure a SharePoint "Shared Documents" library to be scanned with settings that do not apply a default label
 ```
 PS C:\> Add-AIPScannerRepository -Path "http://sp2013/Shared Documents" -SetDefaultLabel Off
@@ -66,7 +66,7 @@ The repository was added successfully.
 
 This command adds a SharePoint data repository to be scanned for all documents and folders from the "Shared Documents" library. For unlabeled files, do not apply a default label.
 
-### Example 4: Configure a specific folder in the SharePoint Server "Shared Documents" library to be scanned 
+### Example 4: Configure a specific folder in the SharePoint Server "Shared Documents" library to be scanned
 ```
 PS C:\> Add-AIPScannerRepository -Path http://sp2016.res.local/Documents/HR
 
@@ -110,7 +110,7 @@ The label ID value is displayed in the Azure portal, on the Label blade, when yo
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -135,7 +135,7 @@ To remove the currently set Owner custom property and Rights Management owner, s
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -152,7 +152,7 @@ If set to On, the scanner replaces an existing label when the configured conditi
 ```yaml
 Type: OverrideLabel
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Off, On
 
 Required: False
@@ -172,7 +172,7 @@ For SharePoint files, the Modified date and Modified By date remains unchanged.
 ```yaml
 Type: PreserveFileDetails
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Off, On
 
 Required: False
@@ -194,7 +194,7 @@ Specifies whether the scanner sets a default label on unlabeled files for this d
 ```yaml
 Type: DefaultLabel
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: UsePolicyDefault, Off, On
 
 Required: False

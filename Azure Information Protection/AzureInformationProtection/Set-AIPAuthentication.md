@@ -1,6 +1,7 @@
 ---
 assetid: ED096DBB-1B3B-43DA-B0DE-C7BACC54D18B
 external help file: AIP.dll-Help.xml
+Module Name: AzureInformationProtection
 online version: https://go.microsoft.com/fwlink/?linkid=851286
 schema: 2.0.0
 ---
@@ -27,7 +28,6 @@ To control when the access token expires, run this cmdlet with parameters. This 
 This cmdlet includes a *Token* parameter that you cannot specify the first time you run this cmdlet, but can specify subsequently. The first time that you run this cmdlet, it generates an access token that you can copy to the clipboard and then specify when you run the cmdlet again. By specifying the access token with this cmdlet, you are not prompted to sign in. Use this method for service accounts that cannot be granted the right to log on locally. For full instructions, see [Specify and use the Token parameter for Set-AIPAuthentication](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell#specify-and-use-the-token-parameter-for-set-aipauthentication) from the admin guide.
 
 When the access token expires, you must rerun the cmdlet to acquire a new token.
-
 
 ## EXAMPLES
 
@@ -57,7 +57,6 @@ This command prompts you for your Azure AD credentials that are used to acquire 
 
 The access token is copied to the clipboard so that you can run this cmdlet again in a new PowerShell session that runs in the security context of a service account. In this new PowerShell session, you can now run this cmdlet with the *Token* parameter by pasting the value from the clipboard.
 
-
 ### Example 4: Step 2 of 2 to set the authentication credentials for a service account that can't interactively sign in
 ```
 PS C:\> Set-AIPAuthentication -webAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f" -Token AwAAAAEAAACDAWh0dHBzOi8vbG9naW4u...
@@ -78,7 +77,7 @@ Specifies the application ID of the "Web app / API" application in Azure AD.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -93,7 +92,7 @@ Specifies the key value generated in the "Web app / API" application in Azure AD
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -108,7 +107,7 @@ Specifies the application ID of the "Native" application in Azure AD.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -125,7 +124,7 @@ Run the cmdlet first without this parameter to generate the token and copy the t
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

@@ -1,5 +1,6 @@
 ---
 external help file: AIP.dll-Help.xml
+Module Name: AzureInformationProtection
 ms.assetid: 566E595C-D574-4DED-AE38-CBCD75694B45
 online version: https://go.microsoft.com/fwlink/?linkid=838766
 schema: 2.0.0
@@ -106,7 +107,7 @@ The justification reason for lowering the classification label, removing a label
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -124,7 +125,7 @@ The label ID value is displayed in the Azure portal, on the Label blade, when yo
 ```yaml
 Type: Guid
 Parameter Sets: Set
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -158,7 +159,7 @@ Removes any label that has been applied to a file.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Clear
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -174,7 +175,7 @@ Specify the email address that is written to the Owner custom property.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -194,7 +195,7 @@ For SharePoint files, the Modified date and Modified By date remains unchanged.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
