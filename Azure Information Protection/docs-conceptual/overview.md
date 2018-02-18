@@ -22,7 +22,7 @@ You can use the following PowerShell modules with Azure Information Protection:
     
     For more information about when to use these PowerShell cmdlets and to see groupings of cmdlets by administration tasks, see [Administering Azure Rights Management by Using Windows PowerShell](/information-protection/deploy-use/administer-powershell).
     
-    For installation instructions, see [Installing Windows PowerShell for Azure Rights Management](/information-protection/deploy-use/install-powershell)
+    For installation instructions, see [Installing the AADRM PowerShell module](/information-protection/deploy-use/install-powershell)
 
 - **AzureInformationProtection**
     

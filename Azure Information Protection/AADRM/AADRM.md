@@ -22,8 +22,6 @@ For more information about when you must use these PowerShell cmdlets and to see
 >The current version is **2.12.0.0**. To check the version you have installed, run: `(Get-Module aadrm -ListAvailable).Version` If this command or any cmdlet from this module fails to run, first run **Import-Module AADRM**.
 
 
-
-
 The .dll file for this module is *Microsoft.RightsManagementServices.Online.Admin.PowerShell.dll*.
 
 ## Azure Rights Management cmdlets
