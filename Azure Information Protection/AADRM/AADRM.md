@@ -19,7 +19,7 @@ For more information about when you must use these PowerShell cmdlets and to see
 >
 >If you do not see the cmdlet or options that are documented, make sure that you have [installed the latest version of the module](/information-protection/deploy-use/install-powershell).
 >
->The current version is **2.12.0.0**, with a minor increment version (2.12.0.1) available that supports the PowerShell Gallery. To check the version you have installed, run: `(Get-Module aadrm -ListAvailable).Version` If this command or any cmdlet from this module fails to run, first run **Import-Module AADRM**.
+>The current version is **2.12.0.0**, with a minor increment version (2.12.1.0) available that supports the PowerShell Gallery. To check the version you have installed, run: `(Get-Module aadrm -ListAvailable).Version` If this command or any cmdlet from this module fails to run, first run **Import-Module AADRM**.
 
 
 The .dll file for this module is *Microsoft.RightsManagementServices.Online.Admin.PowerShell.dll*.
