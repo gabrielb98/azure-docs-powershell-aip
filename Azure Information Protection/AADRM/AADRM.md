@@ -126,6 +126,10 @@ Gets the device platforms in your organization that support Rights Management.
 Indicates whether document tracking is enabled or disabled for Rights Management.
 
 
+### [Get-AadrmDocumentLog](./Get-AadrmDocumentLog.md)
+Generates content information logs for all documents associated with a specific user.
+
+
 ### [Get-AadrmDoNotTrackUserGroup](./Get-AadrmDoNotTrackUserGroup.md)
 Gets the group for the users who must not be tracked by Rights Management.
 
@@ -172,6 +176,10 @@ Gets the properties of a Rights Management template.
 
 ### [Get-AadrmTemplate](./Get-AadrmTemplate.md)
 Gets a list of Rights Management templates.
+
+
+### [Get-AadrmTrackingLog](./Get-AadrmTrackingLog.md)
+Generates tracking information logs for all documents associated with a specific user.
 
 
 ### [Get-AadrmUsageLogFeature](./Get-AadrmUsageLogFeature.md)

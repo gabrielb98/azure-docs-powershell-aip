@@ -42,7 +42,7 @@ PS C:\>$documentLogs = Get-AadrmDocumentLog -UserEmail "test@microsoft.com"
 PS C:\>($documentLogs | ConvertFrom-Json).SyncRoot | Export-Csv 'C:\Temp\DocumentLog.csv' -NoTypeInformation
 ```
 
-This command uses [ConvertFrom-Json](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/convertfrom-json?view=powershell-4.0) cmdlet to convert from json to powershell object and the [Export-Csv] (https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/export-csv?view=powershell-4.0) cmdlet to convert the document logs to a .csv format and saves them to the C:\Temp\DocumentLog.csv file.
+This command uses [ConvertFrom-Json](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/convertfrom-json?view=powershell-4.0) cmdlet to convert from json to powershell object and the [Export-Csv](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/export-csv?view=powershell-4.0) cmdlet to convert the document logs to a .csv format and saves them to the C:\Temp\DocumentLog.csv file.
 
 ## PARAMETERS
 
@@ -91,7 +91,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ## INPUTS
 
 ## OUTPUTS
@@ -100,6 +99,8 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
+[Get-AadrmDocumentLog](./Get-AadrmDocumentLog.md)
+
 [Get-Date](http://go.microsoft.com/fwlink/?LinkID=293966)
-[ConvertFrom-Json] (https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/convertfrom-json?view=powershell-4.0)
-[Export-Csv] (https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/export-csv?view=powershell-4.0)
+[ConvertFrom-Json](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/convertfrom-json?view=powershell-4.0)
+[Export-Csv](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/export-csv?view=powershell-4.0)

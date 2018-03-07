@@ -42,8 +42,7 @@ PS C:\>$trackingLogs = Get-AadrmTrackingLog -UserEmail "test@microsoft.com"
 PS C:\>($trackingLogs | ConvertFrom-Json).SyncRoot | Export-Csv 'C:\Temp\TrackingLog.csv' -NoTypeInformation
 ```
 
-This command uses [ConvertFrom-Json](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/convertfrom-json?view=powershell-4.0) cmdlet to convert from json to powershell object and the [Export-Csv] (https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/export-csv?view=powershell-4.0) cmdlet to convert the tracking logs to a .csv format and saves them to the C:\Temp\TrackingLog.csv file.
-For more information, type 'Get-Help Export-Csv'
+This command uses [ConvertFrom-Json](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/convertfrom-json?view=powershell-4.0) cmdlet to convert from json to powershell object and the [Export-Csv](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/export-csv?view=powershell-4.0) cmdlet to convert the tracking logs to a .csv format and saves them to the C:\Temp\TrackingLog.csv file.
 
 ## PARAMETERS
 
@@ -92,9 +91,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
-
 ## INPUTS
 
 ## OUTPUTS
@@ -103,6 +99,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-AadrmTrackingLog](./Get-AadrmTrackingLog.md)
+
 [Get-Date](http://go.microsoft.com/fwlink/?LinkID=293966)
-[ConvertFrom-Json] (https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/convertfrom-json?view=powershell-4.0)
-[Export-Csv] (https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/export-csv?view=powershell-4.0)
+[ConvertFrom-Json](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/convertfrom-json?view=powershell-4.0)
+[Export-Csv](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/export-csv?view=powershell-4.0)
