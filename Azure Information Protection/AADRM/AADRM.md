@@ -11,22 +11,20 @@ ms.assetid: 0B91D740-D2BD-4D57-9E21-C582C9BE2CCA
 ## Description
 This topic displays help topics for the cmdlets that administer the Azure Rights Management (Azure RMS) service for Azure Information Protection.
 
-These PowerShell cmdlets for Azure RMS let you administer the Azure Rights Management service from the command line. Although this enables automation, it also supports reliable and repeated processes to help reduce administrative overheads. In addition, advanced configurations and some operations require PowerShell.
+These PowerShell cmdlets let you administer the Azure Rights Management service from the command line. Although this enables automation, it also supports reliable and repeated processes to help reduce administrative overheads. In addition, advanced configurations and some operations require this PowerShell module.
 
 For more information about when you must use these PowerShell cmdlets and to see groupings of cmdlets by administration tasks, see [Administering the Azure Rights Management service by Using Windows PowerShell](/information-protection/deploy-use/administer-powershell).
 
 >**Tip**
 >
->If you do not see the cmdlet or options that are documented, make sure that you have [downloaded the latest version of the module](/information-protection/deploy-use/install-powershell).
+>If you do not see the cmdlet or options that are documented, make sure that you have [installed the latest version of the module](/information-protection/deploy-use/install-powershell).
 >
->The current version is **2.12.0.0**. To check the version you have installed, run: `(Get-Module aadrm -ListAvailable).Version` If this command or any cmdlet from this module fails to run, first run **Import-Module AADRM**.
-
-
+>The current version is **2.12.0.0**, with a minor increment version (2.12.1.0) available that supports the PowerShell Gallery. To check the version you have installed, run: `(Get-Module aadrm -ListAvailable).Version` If this command or any cmdlet from this module fails to run, first run **Import-Module AADRM**.
 
 
 The .dll file for this module is *Microsoft.RightsManagementServices.Online.Admin.PowerShell.dll*.
 
-## Azure Rights Management cmdlets
+## AADRM cmdlets
 
 ### [Add-AadrmRoleBasedAdministrator](./Add-AadrmRoleBasedAdministrator.md)
 Grants administrative rights to Rights Management.
@@ -128,6 +126,10 @@ Gets the device platforms in your organization that support Rights Management.
 Indicates whether document tracking is enabled or disabled for Rights Management.
 
 
+### [Get-AadrmDocumentLog](./Get-AadrmDocumentLog.md)
+Generates content information logs for all documents associated with a specific user.
+
+
 ### [Get-AadrmDoNotTrackUserGroup](./Get-AadrmDoNotTrackUserGroup.md)
 Gets the group for the users who must not be tracked by Rights Management.
 
@@ -174,6 +176,10 @@ Gets the properties of a Rights Management template.
 
 ### [Get-AadrmTemplate](./Get-AadrmTemplate.md)
 Gets a list of Rights Management templates.
+
+
+### [Get-AadrmTrackingLog](./Get-AadrmTrackingLog.md)
+Generates tracking information logs for all documents associated with a specific user.
 
 
 ### [Get-AadrmUsageLogFeature](./Get-AadrmUsageLogFeature.md)
