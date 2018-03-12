@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.RightsManagementServices.Online.Admin.PowerShell.dll-Help.xml
-online version: http://go.microsoft.com/fwlink/?LinkId=400612
+online version: https://go.microsoft.com/fwlink/?LinkId=400612
 schema: 2.0.0
 ms.assetid: 46D00FBB-EB69-463B-BFE2-CC754BF71FA4
 ---
