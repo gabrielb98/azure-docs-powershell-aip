@@ -127,7 +127,7 @@ Indicates whether document tracking is enabled or disabled for Rights Management
 
 
 ### [Get-AadrmDocumentLog](./Get-AadrmDocumentLog.md)
-Generates content information logs for all documents associated with a specific user.
+Gets protection information about documents that are tracked.
 
 
 ### [Get-AadrmDoNotTrackUserGroup](./Get-AadrmDoNotTrackUserGroup.md)
@@ -179,7 +179,7 @@ Gets a list of Rights Management templates.
 
 
 ### [Get-AadrmTrackingLog](./Get-AadrmTrackingLog.md)
-Generates tracking information logs for all documents associated with a specific user.
+Gets tracking information for protected documents.
 
 
 ### [Get-AadrmUsageLogFeature](./Get-AadrmUsageLogFeature.md)
