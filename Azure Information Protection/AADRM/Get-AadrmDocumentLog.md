@@ -17,7 +17,7 @@ Get-AadrmDocumentLog -UserEmail <String> [-FromTime <DateTime>] [-ToTime <DateTi
 ```
 
 ## DESCRIPTION
-The **Get-AadrmDocumentLog** cmdlet returns protection information about the tracked documents for a specified user if that user protected documents (the Rights Management issuer) or was the Rights Management owner for documents, or protected documents were configured to grant access to the user. This cmdlet helps to answer the question "How are documents protected for a specified user?" The Information returned includes:
+The **Get-AadrmDocumentLog** cmdlet returns protection information about the tracked documents for a specified user if that user protected documents (the Rights Management issuer) or was the Rights Management owner for documents, or protected documents were configured to grant access directly to the user. This cmdlet helps to answer the question "How are documents protected for a specified user?" The Information returned includes:
 
 - The document content ID, with the document name if available
 - The Rights Management owner and Rights Management issuer
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserEmail
-Specifies the email address of the user. The cmdlet gets the protection information for documents if that user protected documents (the Rights Management issuer) or was the Rights Management owner for documents, or protected documents were configured to grant access to the user. 
+Specifies the email address of the user. The cmdlet gets the protection information for documents if that user protected documents (the Rights Management issuer) or was the Rights Management owner for documents, or protected documents were configured to grant access directly to the user. Group addresses are not supported with this cmdlet. 
 
 ```yaml
 Type: String
