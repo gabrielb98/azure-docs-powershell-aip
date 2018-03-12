@@ -1,13 +1,14 @@
 ---
 external help file: Microsoft.RightsManagementServices.Online.Admin.PowerShell.dll-Help.xml
-online version: http://go.microsoft.com/fwlink/?LinkId=400607
+online version: http://go.microsoft.com/fwlink/?LinkId=869787
 schema: 2.0.0
+ms.assetid: B497A721-7EA4-4876-B2B9-874299BB3C33
 ---
 
 # Get-AadrmDocumentLog
 
 ## SYNOPSIS
-Generates document tracking content information logs associated with a user email.
+Gets protection information about documents that are tracked.
 
 ## SYNTAX
 
@@ -16,33 +17,45 @@ Get-AadrmDocumentLog -UserEmail <String> [-FromTime <DateTime>] [-ToTime <DateTi
 ```
 
 ## DESCRIPTION
-The **Get-AadrmDocumentLog** cmdlet returns all the content information logs whose owner, issuer or recipients match the given email. You can specify a start time and stop time of entries to include. The logs will be output in json format to the powershell console.
+The **Get-AadrmDocumentLog** cmdlet returns protection information about the tracked documents for a specified user if that user protected documents (the Rights Management issuer) or was the Rights Management owner for documents, or protected documents were configured to grant access directly to the user. This cmdlet helps to answer the question "How are documents protected for a specified user?" The Information returned includes:
 
-You must use PowerShell to get these content information logs; you cannot do this action by using a management portal.
+- The document content ID, with the document name if available
+- The Rights Management owner and Rights Management issuer
+- The users and groups that were granted access
+- The protection template ID or specific usage rights that protects the document
+- Any expiry, offline access, or revocation setting
+
+More information about the [Rights Management owner and Rights Management issuer](/information-protection/deploy-use/configure-usage-rights#rights-management-issuer-and-rights-management-owner).
+
+You can specify a start time and stop time of entries to include. The output is returned in json format in the PowerShell console.
+
+You can alternatively use the document tracking site to get the protection information about the tracked documents. For more information, see the [Tracking and revoling documents for users](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-document-tracking#tracking-and-revoking-documents-for-users) section in the admin guide.
 
 ## EXAMPLES
 
-### Example 1: Get all document logs. 
+### Example 1: Get protection information about all tracked documents for a user 
 ```
-PS C:\>Get-AadrmDocumentLog -UserEmail "test@microsoft.com" 
-```
-
-This command generates a log of all the document information owned, issued or received by the user associated with email "test@microsoft.com."
-
-### Example 2: Generate a log of commands for a specified time period.
-```
-PS C:\>Get-AadrmDocumentLog -UserEmail "test@microsoft.com" -FromTime "01/01/2018 00:00:00" -ToTime "01/31/2018 23:59:59"
+PS C:\>Get-AadrmDocumentLog -UserEmail "test@contoso.com" 
 ```
 
-This command generates a log of document information entries associated with given email, limited to items that fall within the specific time period by using the *FromTime* and *ToTime* parameters. In this example, the time period is all days in January 2018, using the US date format.
+This command gets protection information about the tracked documents for a user who has the email address of "test@contoso.com" and that user is the Rights Management issuer or Rights Management owner for the document, or the document was configured to grant access to that user.
 
-### Example 3: Get all logs and pipe into a .csv file.  
+### Example 2: Get protection information about tracked documents for a user, for a specific time period
+```
+PS C:\>Get-AadrmDocumentLog -UserEmail "test@contoso.com" -FromTime "01/01/2018 00:00:00" -ToTime "01/31/2018 23:59:59"
+```
+
+This command is the same as the previous example except that results are limited to documents that were protected within a specific time period by using the *FromTime* and *ToTime* parameters. In this example, the time period is all days in January 2018, using the US date format.
+
+### Example 3: Get protection information about all tracked documents for a user and save the results to a .csv file  
 ```
 PS C:\>$documentLogs = Get-AadrmDocumentLog -UserEmail "test@microsoft.com"
 PS C:\>($documentLogs | ConvertFrom-Json).SyncRoot | Export-Csv 'C:\Temp\DocumentLog.csv' -NoTypeInformation
 ```
 
-This command uses [ConvertFrom-Json](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/convertfrom-json?view=powershell-4.0) cmdlet to convert from json to powershell object and the [Export-Csv](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/export-csv?view=powershell-4.0) cmdlet to convert the document logs to a .csv format and saves them to the C:\Temp\DocumentLog.csv file.
+The first command gets the protection information about the tracked documents for a user who has the email address of "test@contoso.com" and that user is the Rights Management issuer or Rights Management owner for the document, or the document was configured to grant access to that user. The information is saved in a variable.
+
+The second command then uses the [ConvertFrom-Json](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertfrom-json?view=powershell-4.0) cmdlet to convert the saved protection information from json format to a PowerShell object. The [Export-Csv](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/export-csv?view=powershell-4.0) cmdlet can then convert the protection information into .csv format, and saves it to the C:\Temp\TrackingLog.csv file.
 
 ## PARAMETERS
 
@@ -77,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserEmail
-Specifies an email address. The cmdlet gets the document log files for documents owned, issued, or received by the user associated with this email address. 
+Specifies the email address of the user. The cmdlet gets the protection information for documents if that user protected documents (the Rights Management issuer) or was the Rights Management owner for documents, or protected documents were configured to grant access directly to the user. Group addresses are not supported with this cmdlet. 
 
 ```yaml
 Type: String
@@ -103,4 +116,4 @@ Accept wildcard characters: False
 
 [Get-Date](http://go.microsoft.com/fwlink/?LinkID=293966)
 [ConvertFrom-Json](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/convertfrom-json?view=powershell-4.0)
-[Export-Csv](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/export-csv?view=powershell-4.0)
+[Export-Csv](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/export-csv?view=powershell-4.0)
