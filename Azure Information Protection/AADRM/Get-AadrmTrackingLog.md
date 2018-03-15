@@ -24,7 +24,7 @@ The **Get-AadrmTrackingLog** cmdlet returns tracking information about protected
 - The users who accessed the document, when, and from what location 
 - What protection template ID or specific usage rights were used to protect the document and whether access was granted or denied
 
-You can specify a start time and stop time of entries to include. The output is returned in json format in the PowerShell console.
+You can specify a start time and stop time of entries to include. The output is returned as a list of Powershell objects in the PowerShell console.
 
 You can alternatively use the document tracking site to get the protection information about the tracked documents. For more information, see the [Tracking and revoling documents for users](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-document-tracking#tracking-and-revoking-documents-for-users) section in the admin guide.
 
@@ -47,12 +47,12 @@ This command is the same as the previous example except that the results are lim
 ### Example 3: Get all tracking information for a user and save the results to a .csv file  
 ```
 PS C:\>$trackingLogs = Get-AadrmTrackingLog -UserEmail "test@contoso.com"
-PS C:\>($trackingLogs | ConvertFrom-Json).SyncRoot | Export-Csv 'C:\Temp\TrackingLog.csv' -NoTypeInformation
+PS C:\>$trackingLogs | Export-Csv 'C:\Temp\TrackingLog.csv' -NoTypeInformation
 ```
 
 The first command generates a log of all the tracking information for documents that were protected by or accessed by the user with the email address "test@contoso.com", and saves the result in a variable.
 
-The second command then uses the [ConvertFrom-Json](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertfrom-json?view=powershell-4.0) cmdlet to convert the saved tracking information from json format to a PowerShell object. The [Export-Csv](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/export-csv?view=powershell-4.0) cmdlet can then convert the tracking information into .csv format, and saves it to the C:\Temp\TrackingLog.csv file.
+The second command then uses the [Export-Csv](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/export-csv?view=powershell-4.0) cmdlet to convert the tracking information into .csv format, and saves it to the C:\Temp\TrackingLog.csv file.
 
 ## PARAMETERS
 
@@ -112,5 +112,4 @@ Accept wildcard characters: False
 [Get-AadrmTrackingLog](./Get-AadrmTrackingLog.md)
 
 [Get-Date](http://go.microsoft.com/fwlink/?LinkID=293966)
-[ConvertFrom-Json](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/convertfrom-json?view=powershell-4.0)
 [Export-Csv](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/export-csv?view=powershell-4.0)
