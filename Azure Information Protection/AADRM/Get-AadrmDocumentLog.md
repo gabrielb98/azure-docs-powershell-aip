@@ -27,7 +27,7 @@ The **Get-AadrmDocumentLog** cmdlet returns protection information about the tra
 
 More information about the [Rights Management owner and Rights Management issuer](/information-protection/deploy-use/configure-usage-rights#rights-management-issuer-and-rights-management-owner).
 
-You can specify a start time and stop time of entries to include. The output is returned in json format in the PowerShell console.
+You can specify a start time and stop time of entries to include. The output is returned as a list of Powershell objects in the PowerShell console.
 
 You can alternatively use the document tracking site to get the protection information about the tracked documents. For more information, see the [Tracking and revoling documents for users](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-document-tracking#tracking-and-revoking-documents-for-users) section in the admin guide.
 
@@ -50,12 +50,12 @@ This command is the same as the previous example except that results are limited
 ### Example 3: Get protection information about all tracked documents for a user and save the results to a .csv file  
 ```
 PS C:\>$documentLogs = Get-AadrmDocumentLog -UserEmail "test@microsoft.com"
-PS C:\>($documentLogs | ConvertFrom-Json).SyncRoot | Export-Csv 'C:\Temp\DocumentLog.csv' -NoTypeInformation
+PS C:\>$documentLogs | Export-Csv 'C:\Temp\DocumentLog.csv' -NoTypeInformation
 ```
 
 The first command gets the protection information about the tracked documents for a user who has the email address of "test@contoso.com" and that user is the Rights Management issuer or Rights Management owner for the document, or the document was configured to grant access to that user. The information is saved in a variable.
 
-The second command then uses the [ConvertFrom-Json](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertfrom-json?view=powershell-4.0) cmdlet to convert the saved protection information from json format to a PowerShell object. The [Export-Csv](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/export-csv?view=powershell-4.0) cmdlet can then convert the protection information into .csv format, and saves it to the C:\Temp\TrackingLog.csv file.
+The second command then uses the [Export-Csv](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/export-csv?view=powershell-4.0) cmdlet to convert the protection information into .csv format, and saves it to the C:\Temp\DocumentLog.csv file.
 
 ## PARAMETERS
 
@@ -115,5 +115,4 @@ Accept wildcard characters: False
 [Get-AadrmDocumentLog](./Get-AadrmDocumentLog.md)
 
 [Get-Date](http://go.microsoft.com/fwlink/?LinkID=293966)
-[ConvertFrom-Json](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/convertfrom-json?view=powershell-4.0)
 [Export-Csv](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/export-csv?view=powershell-4.0)
