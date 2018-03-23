@@ -209,6 +209,8 @@ Accept wildcard characters: False
 ### -Names
 Specifies a list of names for the template.
 
+Do not include any of the following characters in the name because not all services and applications that use Azure Information Protection can support these characters: `< > % & / ? ; + \ : #`
+
 Create names and descriptions for multiple locale IDs by using the hash-table syntax in Windows PowerShell. There must be at least one name/description pair. The locale IDs for names and descriptions must match each other.
 
 $names = @{}
