@@ -6,8 +6,7 @@
         "packageRoot": "Azure Information Protection",
         "modules": {
             "AADRM": {},
-            "AzureInformationProtection": {},
-            "RMSProtection": {}
+            "AzureInformationProtection": {}
         }
     }
 }
