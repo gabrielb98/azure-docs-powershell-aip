@@ -8,7 +8,7 @@ ms.assetid: ECE82C74-2902-475D-9DCE-6E9F3842024D
 # Set-AadrmMigrationUrl
 
 ## SYNOPSIS
-Sets the migration URL for Rights Management.
+Sets a migration URL for Rights Management.
 
 ## SYNTAX
 
@@ -17,13 +17,11 @@ Set-AadrmMigrationUrl -Domain <String> [-Force] [-WhatIf] [-Confirm] [<CommonPar
 ```
 
 ## DESCRIPTION
-The **Set-AadrmMigrationUrl** cmdlet sets the migration URL for Azure Rights Management.
+The **Set-AadrmMigrationUrl** cmdlet sets a migration URL for Azure Rights Management.
 
 You must use PowerShell to set the migration URL; you cannot do this action by using a management portal.
 
-Migration URLs let you migrate from Azure Rights Management to a supported on-premises Rights Management server. Use this migration technique if you need indefinite access to content that has been previously protected by using Azure Rights Management and you have decided to no longer use Azure Rights Management.
-
-In addition to setting this migration URL for clients, you must export your keys and policies from the cloud service in the form of a trusted publishing domain (TPD file) and import them into an on-premises Rights Management server. For more information, see the instructions for exporting your tenant key in [Microsoft-managed: Tenant key lifecycle operations](https://docs.microsoft.com/information-protection/deploy-use/operations-microsoft-managed-tenant-key).
+Setting a migration URL for newly protected content can help you to migrate from Azure Rights Management to a supported on-premises Rights Management server. Do not use this cmdlet in isolation but in conjunction with the instructions from [Decommissioning and deactivating protection for Azure Information Protection](https://docs.microsoft.com/information-protection/deploy-use/decommission-deactivate). 
 
 ## EXAMPLES
 
