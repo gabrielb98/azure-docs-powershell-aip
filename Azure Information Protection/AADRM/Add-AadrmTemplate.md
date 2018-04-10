@@ -143,7 +143,7 @@ If set to False, no users see and therefore cannot select the template in applic
 
 This setting has no effect on templates that are not departmental templates and also has no effect on applications that natively support departmental templates.
 
-Note: This parameter is functionally the equivalent of the **Show this template to all users when the applications do not support user identity** check box when you configure **APPLICATION COMPATIBILITY** in the Azure classic portal.
+Note: This parameter is functionally the equivalent of the **Show this template to all users when the applications do not support user identity** check box if you configured **APPLICATION COMPATIBILITY** in the Azure classic portal. The classic portal is now retired and there is no equivalent setting in the Azure portal.
 
 The Azure Information Protection client and the Rights Management sharing application support departmental templates whereas Exchange Outlook Web Access and Exchange ActiveSync are examples of applications that do not currently support departmental templates. For these Exchange applications (and all other applications that cannot support departmental templates), you must decide whether all users can select a departmental template from the list of available templates, or no users can select a departmental template from the list.
 
@@ -196,6 +196,8 @@ Accept wildcard characters: False
 
 ### -Names
 Specifies a list of names for the template.
+
+Do not include any of the following characters in the name because not all services and applications that use Azure Information Protection can support these characters: `< > % & / ? ; + \ : #`
 
 Create names and descriptions for multiple locale IDs by using the hash-table syntax in Windows PowerShell. There must be at least one name/description pair.The locale IDs for names and descriptions must match each other. If a locale ID is specified, its value must contain a non-empty string.
 
