@@ -19,7 +19,7 @@ For more information about when you must use these PowerShell cmdlets and to see
 >
 >If you do not see the cmdlet or options that are documented, make sure that you have [installed the latest version of the module](/information-protection/deploy-use/install-powershell).
 >
->The current version is **2.12.0.0**, with a minor increment version (2.12.1.0) available that supports the PowerShell Gallery. To check the version you have installed, run: `(Get-Module aadrm -ListAvailable).Version` If this command or any cmdlet from this module fails to run, first run **Import-Module AADRM**.
+>The current version is **2.13.0.0**, with a minor increment version (2.12.1.0) available that supports the PowerShell Gallery. To check the version you have installed, run: `(Get-Module aadrm -ListAvailable).Version` If this command or any cmdlet from this module fails to run, first run **Import-Module AADRM**.
 
 
 The .dll file for this module is *Microsoft.RightsManagementServices.Online.Admin.PowerShell.dll*.
@@ -126,6 +126,10 @@ Gets the device platforms in your organization that support Rights Management.
 Indicates whether document tracking is enabled or disabled for Rights Management.
 
 
+### [Get-AadrmDocumentLog](./Get-AadrmDocumentLog.md)
+Gets protection information about documents that are tracked.
+
+
 ### [Get-AadrmDoNotTrackUserGroup](./Get-AadrmDoNotTrackUserGroup.md)
 Gets the group for the users who must not be tracked by Rights Management.
 
@@ -172,6 +176,10 @@ Gets the properties of a Rights Management template.
 
 ### [Get-AadrmTemplate](./Get-AadrmTemplate.md)
 Gets a list of Rights Management templates.
+
+
+### [Get-AadrmTrackingLog](./Get-AadrmTrackingLog.md)
+Gets tracking information for protected documents.
 
 
 ### [Get-AadrmUsageLogFeature](./Get-AadrmUsageLogFeature.md)
