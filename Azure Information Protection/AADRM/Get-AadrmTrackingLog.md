@@ -24,9 +24,9 @@ The **Get-AadrmTrackingLog** cmdlet returns tracking information about protected
 - The users who accessed the document, when, and from what location 
 - What protection template ID or specific usage rights were used to protect the document and whether access was granted or denied
 
-You can specify a start time and stop time of entries to include. The output is returned as a list of Powershell objects in the PowerShell console.
+You can specify a start time and stop time of entries to include. The output is returned as a list of PowerShell objects in the PowerShell console.
 
-You can alternatively use the document tracking site to get the protection information about the tracked documents. For more information, see the [Tracking and revoling documents for users](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-document-tracking#tracking-and-revoking-documents-for-users) section in the admin guide.
+You can alternatively use the document tracking site to get the protection information about the tracked documents. For more information, see the [Tracking and revoking documents for users](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-document-tracking#tracking-and-revoking-documents-for-users) section in the admin guide.
 
 ## EXAMPLES
 
@@ -57,7 +57,7 @@ The second command then uses the [Export-Csv](https://docs.microsoft.com/en-us/p
 ## PARAMETERS
 
 ### -FromTime
-Specifies the start time (inclusive) for the log file as a **DateTime** object. To obtain a **DateTime** object, use the [Get-Date](http://go.microsoft.com/fwlink/?LinkID=293966) cmdlet. Specify the date and time according to your system locale settings. For more information, type `Get-Help Get-Date`.
+Specifies the start time (inclusive) for the log file as a **DateTime** object. To obtain a **DateTime** object, use the [Get-Date](https://go.microsoft.com/fwlink/?LinkID=293966) cmdlet. Specify the date and time according to your system locale settings. For more information, type `Get-Help Get-Date`.
 
 ```yaml
 Type: DateTime
@@ -109,7 +109,6 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[Get-AadrmTrackingLog](./Get-AadrmTrackingLog.md)
+[Get-AadrmDocumentLog](./Get-AadrmDocumentLog.md)
 
-[Get-Date](http://go.microsoft.com/fwlink/?LinkID=293966)
-[Export-Csv](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/export-csv?view=powershell-4.0)
+
