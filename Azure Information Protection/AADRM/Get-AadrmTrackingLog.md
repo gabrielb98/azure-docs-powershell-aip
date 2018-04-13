@@ -19,10 +19,10 @@ Get-AadrmTrackingLog -UserEmail <String> [-FromTime <DateTime>] [-ToTime <DateTi
 ## DESCRIPTION
 The **Get-AadrmTrackingLog** cmdlet returns tracking information about protected documents for a specified user who protected documents (the Rights Management issuer) or who accessed protected documents. This cmdlet helps to answer the question "Which protected documents did a specified user track or access?" Information returned includes:
 
-- The document content ID, with the document name if available
-- The Rights Management issuer
-- The users who accessed the document, when, and from what location 
-- What protection template ID or specific usage rights were used to protect the document and whether access was granted or denied
+- The document content ID, with the document name if available.
+- The Rights Management issuer.
+- The users who accessed the document, when, and from what location. 
+- What protection template ID or specific usage rights were used to protect the document and whether access was granted or denied.
 
 You can specify a start time and stop time of entries to include. The output is returned as a list of PowerShell objects in the PowerShell console.
 

@@ -19,17 +19,17 @@ Get-AadrmDocumentLog -UserEmail <String> [-FromTime <DateTime>] [-ToTime <DateTi
 ## DESCRIPTION
 The **Get-AadrmDocumentLog** cmdlet returns protection information about the tracked documents for a specified user if that user protected documents (the Rights Management issuer) or was the Rights Management owner for documents, or protected documents were configured to grant access directly to the user. This cmdlet helps to answer the question "How are documents protected for a specified user?" The information returned includes:
 
-- The document content ID, with the document name if available
-- The Rights Management owner and Rights Management issuer
-- The users and groups that were granted access
-- The protection template ID or specific usage rights that protects the document
-- Any expiry, offline access, or revocation setting
+- The document content ID, with the document name if available.
+- The Rights Management owner and Rights Management issuer.
+- The users and groups that were granted access.
+- The protection template ID or specific usage rights that protects the document.
+- Any expiry, offline access, or revocation setting.
 
-More information about the [Rights Management owner and Rights Management issuer](https://docs.microsoft.com/information-protection/deploy-use/configure-usage-rights#rights-management-issuer-and-rights-management-owner).
+For more information about the [Rights Management owner and Rights Management issuer](https://docs.microsoft.com/information-protection/deploy-use/configure-usage-rights#rights-management-issuer-and-rights-management-owner).
 
 You can specify a start time and stop time of entries to include. The output is returned as a list of PowerShell objects in the PowerShell console.
 
-You can alternatively use the document tracking site to get the protection information about the tracked documents. For more information, see the [Tracking and revoking documents for users](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-document-tracking#tracking-and-revoking-documents-for-users) section in the admin guide.
+You can alternatively use the document tracking site to get the protection information about the tracked documents. For more information, see the [Tracking and revoking documents for users](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-document-tracking#tracking-and-revoking-documents-for-users) section in the Azure Information Protection client admin guide.
 
 ## EXAMPLES
 
