@@ -17,7 +17,7 @@ Get-AadrmDocumentLog -UserEmail <String> [-FromTime <DateTime>] [-ToTime <DateTi
 ```
 
 ## DESCRIPTION
-The **Get-AadrmDocumentLog** cmdlet returns protection information about the tracked documents for a specified user if that user protected documents (the Rights Management issuer) or was the Rights Management owner for documents, or protected documents were configured to grant access directly to the user. This cmdlet helps to answer the question "How are documents protected for a specified user?" The Information returned includes:
+The **Get-AadrmDocumentLog** cmdlet returns protection information about the tracked documents for a specified user if that user protected documents (the Rights Management issuer) or was the Rights Management owner for documents, or protected documents were configured to grant access directly to the user. This cmdlet helps to answer the question "How are documents protected for a specified user?" The information returned includes:
 
 - The document content ID, with the document name if available
 - The Rights Management owner and Rights Management issuer
@@ -27,7 +27,7 @@ The **Get-AadrmDocumentLog** cmdlet returns protection information about the tra
 
 More information about the [Rights Management owner and Rights Management issuer](https://docs.microsoft.com/information-protection/deploy-use/configure-usage-rights#rights-management-issuer-and-rights-management-owner).
 
-You can specify a start time and stop time of entries to include. The output is returned as a list of Powershell objects in the PowerShell console.
+You can specify a start time and stop time of entries to include. The output is returned as a list of PowerShell objects in the PowerShell console.
 
 You can alternatively use the document tracking site to get the protection information about the tracked documents. For more information, see the [Tracking and revoking documents for users](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-document-tracking#tracking-and-revoking-documents-for-users) section in the admin guide.
 
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -ToTime
-Specifies the stop time (inclusive) for the log file as a **DateTime** object. To obtain a **DateTime** object, use the **Get-Date** cmdlet. Specify the date and time according to your system locale settings. For more information, type `Get-Help Get-Date`.
+Specifies the stop time (inclusive) for the log file as a **DateTime** object. To obtain a **DateTime** object, use the [Get-Date](https://go.microsoft.com/fwlink/?LinkID=293966) cmdlet. Specify the date and time according to your system locale settings. For more information, type `Get-Help Get-Date`.
 
 ```yaml
 Type: DateTime

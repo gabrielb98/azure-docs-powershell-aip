@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -ToTime
-Specifies the stop time (inclusive) for the log file as a **DateTime** object. To obtain a **DateTime** object, use the **Get-Date** cmdlet. Specify the date and time according to your system locale settings. For more information, type `Get-Help Get-Date`.
+Specifies the stop time (inclusive) for the log file as a **DateTime** object. To obtain a **DateTime** object, use the [Get-Date](https://go.microsoft.com/fwlink/?LinkID=293966) cmdlet. Specify the date and time according to your system locale settings. For more information, type `Get-Help Get-Date`.
 
 ```yaml
 Type: DateTime
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserEmail
-Specifies the email address of the user. The cmdlet gets the tracking information for documents that were protected by or accessed by the user who has this email address. 
+Specifies the email address of the user. The cmdlet gets the tracking information for documents that were protected by, or accessed by the user who has this email address. 
 
 ```yaml
 Type: String
