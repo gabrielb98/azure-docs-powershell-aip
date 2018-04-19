@@ -17,11 +17,9 @@ Set-AIPScanner [[-SqlServerInstance] <String>] [-ServiceUserCredentials] <PSCred
 ```
 
 ## DESCRIPTION
-The Set-AIPScanner cmdlet updates the service account and SQL Server database instance for the Azure Information Protection scanner.
-Use this command when you want to change the account or database details that was previously specified, for example, when you installed the scanner by running the Install-AIPScanner cmdlet.
+The Set-AIPScanner cmdlet updates the service account and SQL Server database instance for the Azure Information Protection scanner. Use this command when you want to change the account or database details that was previously specified, for example, when you installed the scanner by running the [Install-AIPScanner](./Install-AIPScanner.md) cmdlet.
 
-The new configuration takes effects when the Azure Information Protection Scanner service is next started.
-This cmdlet does not automatically restart this service.
+The new configuration takes effects when the Azure Information Protection Scanner service is next started. This cmdlet does not automatically restart this service.
 
 ## EXAMPLES
 
@@ -37,17 +35,13 @@ This command configures the Azure Information Protection scanner to start using 
 ## PARAMETERS
 
 ### -ServiceUserCredentials
-Specifies a PSCredential object for the new service account to run the Azure Information Protection Scanner service.
-For the user name, use the following format: Domain\Username.
-You are prompted for a password.
+Specifies a PSCredential object for the new service account to run the Azure Information Protection Scanner service. For the user name, use the following format: Domain\Username. You are prompted for a password.
 
-To obtain a PSCredential object, use the Get-Credential (https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/get-credential)cmdlet.
-For more information, type \`Get-Help Get-Cmdlet\`.
+To obtain a PSCredential object, use the [Get-Credential](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/get-credential) cmdlet. For more information, type `Get-Help Get-Cmdlet`.
 
 If you do not specify this parameter, you are prompted for the user name and password.
 
-This account must be an Active Directory account.
-For additional requirements, see Prerequisites for the Azure Information Protection scanner (https://docs.microsoft.com/information-protection/deploy-use/deploy-aip-scannerpPrerequisites-for-the-azure-information-protection-scanner).
+This account must be an Active Directory account. For additional requirements, see [Prerequisites for the Azure Information Protection scanner](https://docs.microsoft.com/information-protection/deploy-use/deploy-aip-scannerpPrerequisites-for-the-azure-information-protection-scanner). 
 
 ```yaml
 Type: PSCredential
@@ -64,16 +58,13 @@ Accept wildcard characters: False
 ### -SqlServerInstance
 Specifies the new SQL Server instance on which to create a database for the Azure Information Protection scanner.
 
-For information about the SQL Server requirements, see Prerequisites for the Azure Information Protection scanner (https://docs.microsoft.com/information-protection/deploy-use/deploy-aip-scannerpPrerequisites-for-the-azure-information-protection-canner).
+For information about the SQL Server requirements, see [Prerequisites for the Azure Information Protection scanner](https://docs.microsoft.com/information-protection/deploy-use/deploy-aip-scannerpPrerequisites-for-the-azure-information-protection-canner).
 
-For the default instance, specify the server name.
-For example: SQLSERVER1.
+For the default instance, specify the server name. For example: SQLSERVER1.
 
-For a named instance, specify the server name and instance name.
-For example: SQLSERVER1\AIPSCANNER.
+For a named instance, specify the server name and instance name. For example: SQLSERVER1\AIPSCANNER.
 
-For SQL Server Express, specify the server name and SQLEXPRESS.
-For example: SQLSERVER1\SQLEXPRESS.
+For SQL Server Express, specify the server name and SQLEXPRESS. For example: SQLSERVER1\SQLEXPRESS.
 
 ```yaml
 Type: String
@@ -103,17 +94,17 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ## RELATED LINKS
 
-[Add-AIPScannerRepository]()
+[Add-AIPScannerRepository](./Add-AIPScannerRepository.md) 
 
-[Get-AIPScannerConfiguration]()
+[Get-AIPScannerConfiguration](./Get-AIPScannerConfiguration.md) 
 
-[Get-AIPScannerRepository]()
+[Get-AIPScannerRepository](./Get-AIPScannerRepository.md) 
 
-[Install-AIPScanner]()
+[Install-AIPScanner](./Install-AIPScanner.md)
 
-[Remove-AIPScannerRepository]()
+[Remove-AIPScannerRepository](./Remove-AIPScannerRepository.md)
 
 [Set-AIPScannerConfiguration]()
 
-[Uninstall-AIPScanner]()
+[Uninstall-AIPScanner](./Uninstall-AIPScanner.md)
 

@@ -19,10 +19,7 @@ Set-AIPScannerConfiguration [-Enforce <On|Off>] [-ReportLevel <ReportLevel>] [-S
 ```
 
 ## DESCRIPTION
-The Set-AIPScannerConfiguration cmdlet sets optional configuration settings for the Azure Information Protection scanner.
-When you install the scanner, these settings are configured for you with their default installation values.
-Use this cmdlet to change the settings, which will be used the next time the scanner runs.
-If you need the changes to take effect immediately, restart the Azure Information Protection Scanner service on the Windows server computer.
+The Set-AIPScannerConfiguration cmdlet sets optional configuration settings for the Azure Information Protection scanner. When you install the scanner, these settings are configured for you with their default installation values. Use this cmdlet to change the settings, which will be used the next time the scanner runs. If you need the changes to take effect immediately, restart the Azure Information Protection Scanner service on the Windows server computer.
 
 The configuration settings include whether the scanner is in discovery mode only or applies labels, whether a file will be relabeled, whether file attributes are changed, what is logged in the reports, whether the scanner runs once or continuously, what justification message to use when required, and the Rights Management owner for protected files.
 
@@ -79,8 +76,7 @@ Every file with discovered informaiton type or custom condition is logged in the
 ### -JustificationMessage
 Specify the justification reason for lowering the classification label or removing protection, if the Azure Information Protection policy requires users to supply this information.
 
-If setting a label triggers the justification and this reason is not supplied, the label is not applied.
-In this case, the status displayed in the error log and debug log is "Skipped" with the comment "Justification required".
+If setting a label triggers the justification and this reason is not supplied, the label is not applied. In this case, the status displayed in the error log and debug log is "Skipped" with the comment "Justification required".
 
 ```yaml
 Type: String
@@ -98,19 +94,14 @@ Accept wildcard characters: False
 Define the level of logging for the scanner reports.
 When the scanner is first installed, by default, only files that are successfully labeled by the scanner are included in the log file.
 
-Log files are stored in %localappdata%\Microsoft\MSIP\Scanner\Reports and have a .csv file format.
-They include the time taken to scan, the number of scanned files, and statistics of how many files were classified and protected.
-This folder stores up to 60 reports for each scanning cycle and all but the latest report is compressed to help minimize the required disk space.
+Log files are stored in %localappdata%\Microsoft\MSIP\Scanner\Reports and have a .csv file format. They include the time taken to scan, the number of scanned files, and statistics of how many files were classified and protected. This folder stores up to 60 reports for each scanning cycle and all but the latest report is compressed to help minimize the required disk space.
 
-- Debug: Logs every file that was discovered and the resulting action. This level of logging is useful for troubleshooting but slows down the Azure Information Protection scanner.
-This category includes files that don't meet any of the conditions and files that are skipped because of an unsupported file type. For example, trying to label a file for classification-only when the file type doesn't support this action, and trying to label files that are automatically excluded. For more information about the last two scenarios, see File types supported by the Azure Information Protection client (https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-file-types)from the admin guide.
+- Debug: Logs every file that was discovered and the resulting action. This level of logging is useful for troubleshooting but slows down the Azure Information Protection scanner. This category includes files that don't meet any of the conditions and files that are skipped because of an unsupported file type. For example, trying to label a file for classification-only when the file type doesn't support this action, and trying to label files that are automatically excluded. [File types supported by the Azure Information Protection client](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-file-types) from the admin guide.
 - Info: Logs only the files that were successfully labeled by the scanner, or would be labeled when the scanner is in discovery mode.
 - Error: Logs only the files that the scanner attempted to label but could not. For example, a justification reason was required but not specified. Or, a file was in use, or the scanner service did not have write access to the file.
 - Off: Disables reporting, which results in the best performance for the scanner.
 
-The local Windows Applications and Services event log, Azure Information Protection contains additional logging information.
-The events include the start and end times for each scanning cycle, when a scanned file has a label applied, and when protection is applied or removed.
-For more information, see Event log IDs and descriptions (https://docs.microsoft.com/information-protection/deploy-use/deploy-aip-scanner#event-log-ids-and-descriptions).
+The local Windows Applications and Services event log, Azure Information Protection contains additional logging information. The events include the start and end times for each scanning cycle, when a scanned file has a label applied, and when protection is applied or removed. For more information, see [Event log IDs and descriptions](https://docs.microsoft.com/information-protection/deploy-use/deploy-aip-scanner#event-log-ids-and-descriptions).
 
 ```yaml
 Type: ReportLevel
@@ -128,10 +119,8 @@ Accept wildcard characters: False
 ### -Schedule
 Specifies how often the scanner runs on the specified data repositories:
 
-- OneTime: A single scan, after which the Azure Information Protection Scanner service is stopped and the schedule is then automatically set to Never. To run a new scan, you must change the schedule back to OneTime, or Continuous.
-This option is useful when the ScanMode is set to Discover, so that the scanner runs one time and you can check the results in the report.
-- Continuous: The specified data repositories are repeatedly scanned in sequence and the Azure Information Protection Scanner service is not stopped. Use this option to scan for files that are modified or added to the data repositories. This option is most useful when the ScanMode is set to Enforce because it ensures all files will be scanned.
-Every hour, the policy is checked for changes and if necessary, downloaded. The new policy is used for the next scan cycle. You can also download the latest changes by restarting the service.
+- OneTime: A single scan, after which the Azure Information Protection Scanner service is stopped and the schedule is then automatically set to Never. To run a new scan, you must change the schedule back to OneTime, or Continuous. This option is useful when the ScanMode is set to Discover, so that the scanner runs one time and you can check the results in the report.
+- Continuous: The specified data repositories are repeatedly scanned in sequence and the Azure Information Protection Scanner service is not stopped. Use this option to scan for files that are modified or added to the data repositories. This option is most useful when the ScanMode is set to Enforce because it ensures all files will be scanned.Every hour, the policy is checked for changes and if necessary, downloaded. The new policy is used for the next scan cycle. You can also download the latest changes by restarting the service.
 - Never: The service is stopped and does not scan, even if you try to manually start the Azure Information Protection Scanner service. This value is automatically set after a single scan is complete. To run a new scan, you must set the schedule to OneTime or Continuous.
 
 ```yaml
@@ -148,8 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-Specifies whether the scanner maintains a list of previously scanned files so it can scan only new or modified files since the service started.
-This is the default installation behavior and offers the best performance.
+Specifies whether the scanner maintains a list of previously scanned files so it can scan only new or modified files since the service started. This is the default installation behavior and offers the best performance.
 
 If this list is not maintained, all files in the specified data repositories are scanned with each scanning cycle.
 
@@ -199,8 +187,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -214,17 +201,19 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ## RELATED LINKS
 
-[Add-AIPScannerRepository]()
+[Add-AIPScannerRepository](./Add-AIPScannerRepository.md) 
 
-[Get-AIPScannerConfiguration]()
+[Get-AIPScannerConfiguration](./Get-AIPScannerConfiguration.md)
 
-[Get-AIPScannerRepository]()
+[Get-AIPScannerRepository](./Get-AIPScannerRepository.md)
 
-[Install-AIPScanner]()
+[Install-AIPScanner](./Install-AIPScanner.md) 
 
-[Remove-AIPScannerRepository]()
+[Remove-AIPScannerRepository](./Remove-AIPScannerRepository.md) 
 
-[Set-AIPScanner]()
+[Set-AIPScannerRepository](./Set-AIPScannerRepository.md) 
 
-[Uninstall-AIPScanner]()
+[Set-AIPScanner](./Set-AIPScanner.md) 
+
+[Uninstall-AIPScanner](./Uninstall-AIPScanner.md) 
 
