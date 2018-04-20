@@ -149,12 +149,12 @@ If this list is not maintained, all files in the specified data repositories are
 
 ### -DiscoverInformationTypes
 Specifies what patterns are detected by the scanner: 
-- PolicyOnly: Only patterns and custom conditions defined in the policy
-- All: All know information types and custom conditions
+- PolicyOnly: The scanner uses the conditions (predefined information types and custom) that you have specified for labels in the Azure Information Protection policy. 
+- All: The scanner uses the list of information types that are available to specify for labels in the Azure Information Protection policy. When you use this option, labels do not need to be configured for any conditions.
 
-Use PolicyOnly for better performance and you known what patterns to detect and they are defined as automatic classification in the Azure Information Protection policy.
+Use PolicyOnly for better performance and you known what patterns to detect. For this option, you must define conditions for your Azure Information Protection labels that apply for automatic classification.
 
-Use All if you want to detect all know patterns. However, this setting can result in slower performance and longer scanning times for the scanner.
+Use All if you want to detect all known patterns. However, this setting can result in slower performance and longer scanning times for the scanner.
 
 ```yaml
 Type: DiscoverInformationTypes
