@@ -1,14 +1,14 @@
 ---
 external help file: AIP.dll-Help.xml
 Module Name: AzureInformationProtection
-online version: https://go.microsoft.com/fwlink/?linkid=858208
+online version: https://go.microsoft.com/fwlink/?linkid=872605
 schema: 2.0.0
 ---
 
 # Remove-AIPScannerScannedFileType
 
 ## SYNOPSIS
-Removes file type(s) to the white list or black list of file types scanned by AIP scanner
+Removes file types from a configured list of file types to scan or exclude from scanning by the Azure Information Protection scanner
 
 ## SYNTAX
 
@@ -17,41 +17,49 @@ Remove-AIPScannerScannedFileType [[-Repository] <String>] -ScannedFileType <Stri
 ```
 
 ## DESCRIPTION
-The Remove-AIPScannerScannedFileType cmdlet removes existing file type from being included or excluded from the scan by AIP scanner. 
+The Remove-AIPScannerScannedFileType cmdlet removes file types from a list that you have already configured by using [Set-AIPScannerScannedFileTypes](./Set-AIPScannerScannedFileTypes.md). The list specifies which file types to scan or exclude from scanning by the Azure Information Protection scanner. 
 
-The cmdlet can specify setting on the service level or specific setting per repository. Setting defined on the repository takes precedence over service level setting.
+To remove a new file type to scan, specify `*.<file name extension>`. To remove a new file type from being excluded from being scanned, specify `-*.<file name extension>`. 
 
 ## EXAMPLES
 
 
-### Example 1: Removes *.docx files from the the explicit list of files to be scanned
+### Example 1: Remove .docx files from the list of file types to be scanned
+
 ```powershell
 PS C:\> Remove-AIPScannerScannedFileType  -ScannedFileType *.docx
+
 The operation was completed successfully
 ```
 
-Removes *.docx files to be scanned by AIP Scanner for all repositories that do not have repository specific list.
+This command removes *.docx file types from the configured list of file types to be scanned for all data repositories that do not have their own file types list.
 
-### Example 2: Removes *.docx, *.txt and *.csv files from the the explicit list of files to be scanned on \\server\share1 repository
+### Example 2: Remove .docx, .txt and .csv files from the list of file types to be excluded for a file share
+
 ```powershell
 PS C:\> Remove-AIPScannerScannedFileType -Repository \\server\share1 -ScannedFileType @("*.docx","*.txt","*.csv")
+
 The operation was completed successfully
 ```
 
-Removes docx, txt and csv files from the the explicit list of files to be scanned on \\server\share1 repository
+This command removes the file name extensions of .docx, .txt, and .csv from the configured list of files to be excluded from scanning for the file share named \\\server\\share1.
 
-### Example 3: Remove *.dll and *.lnk from exclusion list
+### Example 3: Remove .dll and *.lnk from the list of file types to be excluded from scanning
+
 ```powershell
 PS C:\> Remove-AIPScannerScannedFileType  -ScannedFileType @("-*.dll","-*.lnk")
+
 The operation was completed successfully
 ```
 
-Removes the exclusion for dll and lnk files from the black list of file types not scanned by the scanner
+This command removes the file name extensions of .dll and .lnk from the configured list of files to be excluded from scanning for all data repositories that do not have their own list.
 
 ## PARAMETERS
 
 ### -Repository
-{{Fill Repository Description}}
+Specifies a data repository that you have configured for the scanner by using [Add-AIPScannerRepository](./Add-AIPScannerRepository.md). This parameter identifies a local path, network path, or SharePoint Server URL for the data repository to apply the file types list. Wildcards are not supported.
+
+If no data repository is specified, the command removes file types from the list that applies to all data repositories that do not have their own file types list.
 
 ```yaml
 Type: String
@@ -66,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScannedFileType
-File type or array of file types to be removed from white list or black list scanned by AIP scanner
+Specifies the file type or array of file types to be removed from the configured list of file types.
 
 ```yaml
 Type: <String[]>
@@ -82,7 +90,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+For more information, see [about_CommonParameters[(https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -96,3 +104,25 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Add-AIPScannerRepository](./Add-AIPScannerRepository.md)
+
+[Add-AIPScannerScannedFileType](Add-AIPScannerScannedFileType.md)
+
+[Get-AIPScannerConfiguration](./Get-AIPScannerConfiguration.md)
+
+[Get-AIPScannerRepository](./Get-AIPScannerRepository.md)
+
+[Install-AIPScanner](./Install-AIPScanner.md)
+
+[Remove-AIPScannerRepository](Remove-AIPScannerRepository.md)
+
+[Set-AIPScanner](./Set-AIPScanner.md)
+
+[Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration.md)
+
+[Set-AIPScannerRepository](./Set-AIPScannerRepository.md)
+
+[Set-AIPScannerScannedFileTypes](./Set-AIPScannerScannedFileTypes.md)
+
+[Uninstall-AIPScanner](./Uninstall-AIPScanner.md)

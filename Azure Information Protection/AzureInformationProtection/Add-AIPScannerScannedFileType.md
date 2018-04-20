@@ -1,14 +1,14 @@
 ---
 external help file: AIP.dll-Help.xml
 Module Name: AzureInformationProtection
-online version: https://go.microsoft.com/fwlink/?linkid=858202
+online version: https://go.microsoft.com/fwlink/?linkid=872604
 schema: 2.0.0
 ---
 
 # Add-AIPScannerScannedFileType
 
 ## SYNOPSIS
-Adds new file type(s) to the white list or black list of file types scanned by AIP scanner
+Adds new file types to a configured list of file types to scan or exclude from scanning by the Azure Information Protection scanner
 
 ## SYNTAX
 
@@ -17,40 +17,49 @@ Add-AIPScannerScannedFileType [[-Repository] <String>] -ScannedFileType <String[
 ```
 
 ## DESCRIPTION
-The Add-AIPScannerScannedFileType cmdlet add new file type to be included or excluded from the scan by AIP scanner. In order to scan all file types add "*" to the list. In case the scanner is not set to scan all file types, you can use this command to add specific file type(s) to be scanned by specifying the file extension. If the scanner is set to scan all file types, you can use this command to exclude specific file types by specifying the extension with "-" character before it.
+The Add-AIPScannerScannedFileType cmdlet adds new file types to a list that you have already configured by using [Set-AIPScannerScannedFileTypes](./Set-AIPScannerScannedFileTypes.md). The list specifies which file types to scan or exclude from scanning by the Azure Information Protection scanner. 
 
-The cmdlet can specify setting on the service level or specific setting per repository. Setting defined on the repository takes precedence over service level setting.
+To add a new file type to scan, specify `*.<file name extension>`. To exclude a new file type from being scanned, specify `-*.<file name extension>`.
+
 
 ## EXAMPLES
 
-### Example 1: Adds *.docx files to be scanned AIP scanner
+### Example 1: Add *.docx files to the list of file types to be scanned
+
 ```powershell
 PS C:\> Add-AIPScannerScannedFileType  -ScannedFileType *.docx
+
 The operation was completed successfully
 ```
 
-Adds *.docx files to be scanned by AIP Scanner for all repositories that do not have repository specific list.
+This command adds the *.docx file type to the configured list of file types to be scanned for all data repositories that do not have their own file types list.
 
-### Example 2: Adds *.docx, *.txt and *.csv files to be scanned AIP scanner on \\server\share1 repository
+### Example 2: Add *.docx, *.txt and *.csv files to the list of file types to be scanned for a file share
+
 ```powershell
 PS C:\> Add-AIPScannerScannedFileType -Repository \\server\share1 -ScannedFileType @("*.docx","*.txt","*.csv")
+
 The operation was completed successfully
 ```
 
-Adds doc, txt and csv files to be scanned by AIP Scanner on \\server\share1 repository
+This command adds the file name extensions of .docx, .txt, and .csv to the configured list of files to be scanned for the file share named \\\server\\share1.
 
-### Example 3: Exclude *.dll and *.lnk from being scanned by AIP scanner
+### Example 3: Add .dll and .lnk files to the list of file types to be excluded from being scanned
+
 ```powershell
 PS C:\> Add-AIPScannerScannedFileType  -ScannedFileType @("-*.dll","-*.lnk")
 The operation was completed successfully
 ```
 
-Excludes dll and lnk files from being scanned by AIP scanner for all repositories that do not have repository specific list.
+This command adds the .dll and .lnk file types to the configured list of file types to be excluded from scanning for all data repositories that do not have their own file types list.
+
 
 ## PARAMETERS
 
 ### -Repository
-Repository name addaed by Add-AIPScannerRepository cmdlet. The repository should be added before you can set this setting.
+Specifies a data repository that you have configured for the scanner by using [Add-AIPScannerRepository](./Add-AIPScannerRepository.md). This parameter identifies a local path, network path, or SharePoint Server URL for the data repository to apply the file types list to include or exclude. Wildcards are not supported.
+
+If no data repository is specified, the command adds file types to the list that applies to all data repositories that do not have their own file types list.
 
 ```yaml
 Type: String
@@ -65,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScannedFileType
-File type or array of file types to be added white list or black list scanned by AIP scanner
+Specifies the file type or array of file types to be added to the configured list of file types.
 
 ```yaml
 Type: <String[]>
@@ -80,8 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameter](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -95,3 +103,26 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Add-AIPScannerRepository](./Add-AIPScannerRepository.md)
+
+[Get-AIPScannerConfiguration](./Get-AIPScannerConfiguration.md)
+
+[Get-AIPScannerRepository](./Get-AIPScannerRepository.md)
+
+[Install-AIPScanner](./Install-AIPScanner.md)
+
+[Remove-AIPScannerRepository](Remove-AIPScannerRepository.md)
+
+[Remove-AIPScannerScannedFileType](Remove-AIPScannerScannedFileType.md)
+
+[Set-AIPScanner](./Set-AIPScanner.md)
+
+[Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration.md)
+
+[Set-AIPScannerRepository](./Set-AIPScannerRepository.md)
+
+[Set-AIPScannerScannedFileTypes](./Set-AIPScannerScannedFileTypes.md)
+
+[Uninstall-AIPScanner](./Uninstall-AIPScanner.md)
+
