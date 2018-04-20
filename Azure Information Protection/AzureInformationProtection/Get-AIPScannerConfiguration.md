@@ -17,9 +17,7 @@ Get-AIPScannerConfiguration [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Get-AIPScannerConfiguration cmdlet gets the configuration settings for the Azure Information Protection scanner.
-Most of the settings install with a default value, so you need to specify them only if you want to use another value, or you have previously set them and now need to reconfigure them.
-To do so, use the Set-AIPScannerConfiguration cmdlet.
+The Get-AIPScannerConfiguration cmdlet gets the configuration settings for the Azure Information Protection scanner. Most of the settings install with a default value, so you need to specify them only if you want to use another value, or you have previously set them and now need to reconfigure them. To do so, use the Set-AIPScannerConfiguration cmdlet.
 
 The configuration settings include whether the scanner is in discovery mode only or applies labels, whether a file will be relabeled, whether file attributes are changed, what is logged in the reports, whether the scanner runs once or continuously, whether all files are scanned or only new and changed files, what justification message to use when required, and the Rights Management owner for protected files.
 
@@ -52,7 +50,7 @@ The one exception is the justification message, which has been specified.
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -66,17 +64,17 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ## RELATED LINKS
 
-[Add-AIPScannerRepository]()
+[Add-AIPScannerRepository](./Add-AIPScannerRepository.md) 
 
-[Get-AIPScannerRepository]()
+[Get-AIPScannerRepository](./Get-AIPScannerRepository.md) 
 
-[Install-AIPScanner]()
+[Install-AIPScanner](./Install-AIPScanner.md) 
 
-[Remove-AIPScannerRepository]()
+[Remove-AIPScannerRepository](./Remove-AIPScannerRepository.md) 
 
-[Set-AIPScanner]()
+[Set-AIPScanner](./Set-AIPScanner.md) 
 
-[Set-AIPScannerConfiguration]()
+[Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration.md) 
 
-[Uninstall-AIPScanner]()
+[Uninstall-AIPScanner](./Uninstall-AIPScanner.md) 
 
