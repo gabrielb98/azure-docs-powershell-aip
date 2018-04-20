@@ -35,7 +35,7 @@ This command configures the Azure Information Protection scanner to start using 
 ## PARAMETERS
 
 ### -ServiceUserCredentials
-Specifies a PSCredential object for the new service account to run the Azure Information Protection Scanner service. For the user name, use the following format: Domain\Username. You are prompted for a password.
+Specifies a **PSCredential** object for the new service account to run the Azure Information Protection Scanner service. For the user name, use the following format: Domain\Username. You are prompted for a password.
 
 To obtain a PSCredential object, use the [Get-Credential](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/get-credential) cmdlet. For more information, type `Get-Help Get-Cmdlet`.
 
