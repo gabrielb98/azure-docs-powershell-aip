@@ -60,16 +60,16 @@ For these files, they are classified and protected (or have protection removed),
 
 Every discovered file and the resulting action is logged in the reports.
 
-### Example 4: Configure the Azure Information Protection scanner to scan all files one time and discover all know sensitive information types an custom conditions
+### Example 4: Configure the Azure Information Protection scanner to scan all files one time and discover all know sensitive information types and custom conditions
 ```
 PS C:\> Set-AIPScannerConfiguration -Enforce Off -Schedule OneTime  -Type Full -DiscoverInformationTypes All
 
 Configuration was set successfully.
 ```
 
-This command configures the scanner to do a one-time discovery of all files in the specified data repositories and detect all known sensitive information types recognized by the AIP scanner and custom conditions defined the Azure Information Protection policy.
+This command configures the scanner to do a one-time discovery of all files in the specified data repositories and detect all known sensitive information types that are recognized by the scanner as a result of custom conditions that you configure in the Azure Information Protection policy.
 
-Every file with discovered informaiton type or custom condition is logged in the reports.
+Every file with discovered information type or a matching custom condition is logged in the reports.
 
 ## PARAMETERS
 
@@ -101,7 +101,7 @@ Log files are stored in %localappdata%\Microsoft\MSIP\Scanner\Reports and have a
 - Error: Logs only the files that the scanner attempted to label but could not. For example, a justification reason was required but not specified. Or, a file was in use, or the scanner service did not have write access to the file.
 - Off: Disables reporting, which results in the best performance for the scanner.
 
-The local Windows Applications and Services event log, Azure Information Protection contains additional logging information. The events include the start and end times for each scanning cycle, when a scanned file has a label applied, and when protection is applied or removed. For more information, see [Event log IDs and descriptions](https://docs.microsoft.com/information-protection/deploy-use/deploy-aip-scanner#event-log-ids-and-descriptions).
+The local Windows **Applications and Services** event log, **Azure Information Protection** contains additional logging information. The events include the start and end times for each scanning cycle, when a scanned file has a label applied, and when protection is applied or removed. For more information, see [Event log IDs and descriptions](https://docs.microsoft.com/information-protection/deploy-use/deploy-aip-scanner#event-log-ids-and-descriptions).
 
 ```yaml
 Type: ReportLevel
@@ -148,12 +148,13 @@ If this list is not maintained, all files in the specified data repositories are
 ```
 
 ### -DiscoverInformationTypes
-Specifies what is patterns are detected by the scanner: 
-- PolicyOnly: only patterns and custom conditions defined in the policy
-- All: all know information types and custom conditions
+Specifies what patterns are detected by the scanner: 
+- PolicyOnly: Only patterns and custom conditions defined in the policy
+- All: All know information types and custom conditions
 
-Use PolicyOnly for better performance if it's known what patterns are needed to be detected and if they are defined as an automatic condition for one of defined AIP labels in AIP policy.
-Use All if you want to detect all know patterns. Note that this setting can impact scanner performance and scanning times.
+Use PolicyOnly for better performance and you known what patterns to detect and they are defined as automatic classification in the Azure Information Protection policy.
+
+Use All if you want to detect all know patterns. However, this setting can result in slower performance and longer scanning times for the scanner.
 
 ```yaml
 Type: DiscoverInformationTypes
