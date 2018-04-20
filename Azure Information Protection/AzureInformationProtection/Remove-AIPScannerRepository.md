@@ -88,6 +88,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Install-AIPScanner](./Install-AIPScanner.md)
 
+[Remove-AIPScannerRepository](Remove-AIPScannerRepository.md)
+
 [Set-AIPScanner](./Set-AIPScanner.md)
 
 [Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration.md)
