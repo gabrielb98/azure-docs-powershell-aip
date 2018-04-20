@@ -211,9 +211,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Remove-AIPScannerRepository](./Remove-AIPScannerRepository.md) 
 
-[Set-AIPScannerRepository](./Set-AIPScannerRepository.md) 
-
 [Set-AIPScanner](./Set-AIPScanner.md) 
+
+[Set-AIPScannerRepository](./Set-AIPScannerRepository.md) 
 
 [Uninstall-AIPScanner](./Uninstall-AIPScanner.md) 
 
