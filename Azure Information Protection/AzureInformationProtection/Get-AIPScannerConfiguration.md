@@ -17,7 +17,7 @@ Get-AIPScannerConfiguration [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Get-AIPScannerConfiguration cmdlet gets the configuration settings for the Azure Information Protection scanner. Most of the settings install with a default value, so you need to specify them only if you want to use another value, or you have previously set them and now need to reconfigure them. To do so, use the Set-AIPScannerConfiguration cmdlet.
+The Get-AIPScannerConfiguration cmdlet gets the configuration settings for the Azure Information Protection scanner. Most of the settings install with a default value, so you need to specify them only if you want to use another value, or you have previously set them and now need to reconfigure them. To do so, use the [Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration.md) cmdlet.
 
 The configuration settings include whether the scanner is in discovery mode only or applies labels, whether a file will be relabeled, whether file attributes are changed, what is logged in the reports, whether the scanner runs once or continuously, whether all files are scanned or only new and changed files, what justification message to use when required, and the Rights Management owner for protected files.
 
@@ -45,6 +45,8 @@ The one exception is the justification message, which has been specified.
 - The scanner will run one time and then stop the service, rather than run continuously.
 - The scanner will run discovery on all files.
 - The string "Reclassified by Azure Information Protection Scanner" is supplied and logged when the scanner applies a label that requires justification.
+- The scanner looks for conditions and patterns that are defined in your Azure Information Protection policy
+- The scanner includes all file types to scan, except for the default file types that the Azure Information Protection client excludes by default.
 
 ## PARAMETERS
 
