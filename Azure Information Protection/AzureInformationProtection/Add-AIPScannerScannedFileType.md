@@ -24,7 +24,7 @@ To add a new file type to scan, specify `*.<file name extension>`. To exclude a 
 
 ## EXAMPLES
 
-### Example 1: Add *.docx files to the list of file types to be scanned
+### Example 1: Add .docx files to the list of file types to be scanned
 
 ```powershell
 PS C:\> Add-AIPScannerScannedFileType  -ScannedFileType *.docx
@@ -32,9 +32,9 @@ PS C:\> Add-AIPScannerScannedFileType  -ScannedFileType *.docx
 The operation was completed successfully
 ```
 
-This command adds the *.docx file type to the configured list of file types to be scanned for all data repositories that do not have their own file types list.
+This command adds the file name extension of .docx to the configured list of file types to be scanned for all data repositories that do not have their own file types list.
 
-### Example 2: Add *.docx, *.txt and *.csv files to the list of file types to be scanned for a file share
+### Example 2: Add .docx, .txt, and .csv files to the list of file types to be scanned for a file share
 
 ```powershell
 PS C:\> Add-AIPScannerScannedFileType -Repository \\server\share1 -ScannedFileType @("*.docx","*.txt","*.csv")
