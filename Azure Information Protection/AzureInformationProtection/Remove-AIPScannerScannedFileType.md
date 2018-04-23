@@ -32,9 +32,9 @@ PS C:\> Remove-AIPScannerScannedFileType  -ScannedFileType *.docx
 The operation was completed successfully
 ```
 
-This command removes *.docx file types from the configured list of file types to be scanned for all data repositories that do not have their own file types list.
+This command removes the file name extension of .docx from the configured list of file types to be scanned for all data repositories that do not have their own file types list.
 
-### Example 2: Remove .docx, .txt and .csv files from the list of file types to be excluded for a file share
+### Example 2: Remove .docx, .txt, and .csv files from the list of file types to be excluded for a file share
 
 ```powershell
 PS C:\> Remove-AIPScannerScannedFileType -Repository \\server\share1 -ScannedFileType @("*.docx","*.txt","*.csv")
@@ -44,7 +44,7 @@ The operation was completed successfully
 
 This command removes the file name extensions of .docx, .txt, and .csv from the configured list of files to be excluded from scanning for the file share named \\\server\\share1.
 
-### Example 3: Remove .dll and *.lnk from the list of file types to be excluded from scanning
+### Example 3: Remove .dll and .lnk from the list of file types to be excluded from scanning
 
 ```powershell
 PS C:\> Remove-AIPScannerScannedFileType  -ScannedFileType @("-*.dll","-*.lnk")

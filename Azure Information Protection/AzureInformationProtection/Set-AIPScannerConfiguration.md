@@ -60,7 +60,7 @@ For these files, they are classified and protected (or have protection removed),
 
 Every discovered file and the resulting action is logged in the reports.
 
-### Example 4: Configure the Azure Information Protection scanner to scan all files one time and discover all know sensitive information types and custom conditions
+### Example 4: Configure the Azure Information Protection scanner to scan all files one time and discover all known sensitive information types and custom conditions
 ```
 PS C:\> Set-AIPScannerConfiguration -Enforce Off -Schedule OneTime  -Type Full -DiscoverInformationTypes All
 
