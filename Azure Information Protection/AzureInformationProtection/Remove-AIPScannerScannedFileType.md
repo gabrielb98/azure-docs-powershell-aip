@@ -32,7 +32,7 @@ PS C:\> Remove-AIPScannerScannedFileType  -ScannedFileType *.docx
 The operation was completed successfully
 ```
 
-This command removes the file name extension of .docx from the configured list of file types to be scanned for all data repositories that do not have their own file types list.
+This command removes the file name extension of .docx from the configured list of file types to be scanned for all data repositories that do not have their own file types list. Only the remaining file types in the list will be scanned.
 
 ### Example 2: Remove .docx, .txt, and .csv files from the list of file types to be excluded for a file share
 
@@ -42,7 +42,7 @@ PS C:\> Remove-AIPScannerScannedFileType -Repository \\server\share1 -ScannedFil
 The operation was completed successfully
 ```
 
-This command removes the file name extensions of .docx, .txt, and .csv from the configured list of files to be excluded from scanning for the file share named \\\server\\share1.
+This command removes the file name extensions of .docx, .txt, and .csv from the configured list of files to be excluded from scanning for the file share named \\\server\\share1. These file types will now be scanned.
 
 ### Example 3: Remove .dll and .lnk from the list of file types to be excluded from scanning
 
@@ -52,7 +52,7 @@ PS C:\> Remove-AIPScannerScannedFileType  -ScannedFileType @("-*.dll","-*.lnk")
 The operation was completed successfully
 ```
 
-This command removes the file name extensions of .dll and .lnk from the configured list of files to be excluded from scanning for all data repositories that do not have their own list.
+This command removes the file name extensions of .dll and .lnk from the configured list of files to be excluded from scanning for all data repositories that do not have their own list. These file types will now be scanned.
 
 ## PARAMETERS
 
@@ -75,6 +75,9 @@ Accept wildcard characters: False
 
 ### -ScannedFileType
 Specifies the file type or array of file types to be removed from the configured list of file types.
+
+- If your file types list specifies file types to scan, specify `*.<file name extension>` to remove a file type from the list. For example, \*.docx.
+- If your file types list specifies file types to exclude from scanning, specify `-*.<file name extension>` to remove a file type from the list. For example, \-*.docx.
 
 ```yaml
 Type: <String[]>
