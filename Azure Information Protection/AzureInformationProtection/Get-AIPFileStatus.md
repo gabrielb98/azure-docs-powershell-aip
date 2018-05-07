@@ -44,6 +44,9 @@ LabelDate       : 12/12/2016 12:24:36 PM
 IsRMSProtected  : True
 RMSTemplateId   : e6ee2481-1234-1234-1234-f744eacd53b0
 RMSTemplateName : Contoso - Confidential Finance
+RMSIssuedTime   : 5/6/2018 9:15:03 AM
+RMSOwner        : John@Contoso.com
+RMSIssuer       : John@Contoso.com
 ```
 
 This command provides information about a file that is labeled as Confidential \ Finance Group. This file was labeled manually by John and it is also protected by using the Rights Management template, "Contoso - Confidential Finance". 
