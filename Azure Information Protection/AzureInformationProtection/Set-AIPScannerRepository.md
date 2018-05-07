@@ -36,7 +36,7 @@ This command updates the profile for the D:\Data\Finance repository, which speci
 
 ### Example 2: For files in a network-attached storage (NAS) file share repository, change the default label to a specific label, change the override behavior to always relabel files, and set the Owner custom property and Rights Management owner
 ```
-PS C:\> Set-AIPScannerRepository -Path \\NAS\HR -SetDefaultLabel On -DefaultLabelId -SetDefaultLabel f018e9e7-0cfc-4c69-b27a-ac3cb7df43cc -OverrideLabel On -DefaultOwner "admin@contoso.com"
+PS C:\> Set-AIPScannerRepository -Path \\NAS\HR -SetDefaultLabel On -DefaultLabelId f018e9e7-0cfc-4c69-b27a-ac3cb7df43cc -OverrideLabel On -DefaultOwner "admin@contoso.com"
 
 The settings were updated successfully.
 ```
