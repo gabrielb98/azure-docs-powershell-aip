@@ -15,7 +15,7 @@ Updates a profile of configuration settings for a data repository to be scanned 
 ```
 Set-AIPScannerRepository [-Path] <String> [-OverrideLabel <OverrideLabel>]
  [-PreserveFileDetails <PreserveFileDetails>] [-DefaultOwner <String>] [-SetDefaultLabel <DefaultLabel>]
- [-DefaultLabelId <Guid>] [<CommonParameters>]
+ [-DefaultLabelId <Guid>] [-MatchPolicy <MatchPolicy>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -57,6 +57,19 @@ The settings were updated successfully.
 ```
 
 This command updates the default label behavior so that unlabeled files in the specified data repository remain unlabeled.
+
+
+### Example 4: For files in a network-attached storage (NAS) file share repository, apply a specific label on a;; unlabeled file without matching the content against the AIP policy.
+```
+PS C:\> Set-AIPScannerRepository -Path \\NAS\HR -SetDefaultLabel On -DefaultLabelId f018e9e7-0cfc-4c69-b27a-ac3cb7df43cc  -MatchPolicy Off
+
+The settings were updated successfully.
+```
+
+This command sets the following configuration for the \NAS\HR data repository:
+
+- For unlabeled files, apply the label that has an ID of f018e9e7-0cfc-4c69-b27a-ac3cb7df43cc.
+- Disable content matching
 
 ## PARAMETERS
 
@@ -180,6 +193,22 @@ Accepted values: UsePolicyDefault, Off, On
 Required: False
 Position: Named
 Default value: UsePolicyDefault
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MatchPolicy
+Set this parameter to On to match content of files against conditions defined in AIP policy. 
+Set this parameter to Off in order to disable content matching. Default label set on the repository will be applied on all files in this repository. If default label is not set for the repository the default label defined in the AIP policy will be used
+
+```yaml
+Type: MatchPolicy
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

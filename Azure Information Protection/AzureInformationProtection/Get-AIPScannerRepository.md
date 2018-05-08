@@ -32,24 +32,28 @@ OverrideLabel       : On
 PreserveFileDetails : On
 DefaultOwner        : "admin@contoso.msft"  
 DefaultLabel        : PolicyDefaultLabel
+MatchPolicy      :Off
 
 Repository          : http://sp2013/Documents
 OverrideLabel       : Off
 PreserveFileDetails : On
 DefaultOwner        :
 DefaultLabel        : f018e9e7-0cfc-4c69-b27a-ac3cb7df43cc
+MatchPolicy      :Off
 
 Repository          : \\server1\HR
 OverrideLabel       : Off
 PreserveFileDetails : On
 DefaultOwner        :
 DefaultLabel        : None
+MatchPolicy      :Off
 
 Repository          : d:\Data\Finance
 OverrideLabel       : Off
 PreserveFileDetails : On
 DefaultOwner        :
 DefaultLabel        : None
+MatchPolicy      :Off
 ScannedFileTypes    :"*.docx"
 ```
 

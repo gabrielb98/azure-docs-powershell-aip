@@ -13,7 +13,7 @@ Sets a list of file types to scan or exclude from scanning by the Azure Informat
 ## SYNTAX
 
 ```
-Set-AIPScannerScannedFileTypes [[-Repository] <String>] -ScannedFileType <String[]> [<CommonParameters>]
+Set-AIPScannerScannedFileTypes [-Repository <String>] -ScannedFileTypes <String[]> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -49,7 +49,6 @@ The operation was completed successfully
 
 This command configures the scanner to scan only files that have a file name extension of .docx, .txt or .csv on the server share named \\\server\\share1.
 
-
 ### Example 3: Configure the scanner to scan all files except those that have a .dll or .lnk file name extension
 
 ```powershell
@@ -60,7 +59,7 @@ The operation was completed successfully
 
 This command configures the scanner to scan all files except those that have a .dll or .lnk file name extension, and the data repository doesn't have its own file types list.
 
-### Example 4: Remove the file types list that was set for a data repository 
+### Example 4: Remove the file types list that was set for a data repository
 
 ```powershell
 PS C:\> Add-AIPScannerScannedFileType -Repository \\server\share1 -ScannedFileType @()
@@ -69,7 +68,6 @@ The operation was completed successfully
 ```
 
 This command removes any previously included or excluded file types for the server share named \\\server\\share1. If the scanner has a list of included or excluded file types that applies to all data repositories, those settings apply instead. 
-
 
 ## PARAMETERS
 
@@ -84,7 +82,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 0
+Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
@@ -99,7 +97,7 @@ Specifies the file type or array of file types to be included or excluded from s
 - To reset the list back to defaults, specify `@()`.
 
 ```yaml
-Type: <String[]>
+Type: String[]
 Parameter Sets: (All)
 Aliases:
 
@@ -116,7 +114,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### System.String
-
 
 ## OUTPUTS
 
