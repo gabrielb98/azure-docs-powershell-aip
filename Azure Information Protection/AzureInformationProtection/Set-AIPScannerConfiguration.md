@@ -145,10 +145,9 @@ If this list is not maintained, all files in the specified data repositories are
 - Full: All files in the specified data repositories are scanned, after which this parameter is automatically set to Incremental. To scan all files again, you must change this parameter to Full. This setting is most useful when you want all files to be listed in the reports.
 
 
-
-
 ### -DiscoverInformationTypes
-Specifies what patterns are detected by the scanner: 
+Specifies what patterns are detected by the scanner:
+ 
 - PolicyOnly: The scanner uses the conditions (predefined information types and custom) that you have specified for labels in the Azure Information Protection policy. 
 - All: The scanner uses any custom conditions that you have specified for labels in the Azure Information Protection policy, and the list of information types that are available to specify for labels in the Azure Information Protection policy. When you use this option, labels do not need to be configured for any conditions.
 
@@ -171,9 +170,9 @@ Accept wildcard characters: False
 ### -Enforce
 Specifies whether the scanner only logs the files that meet the conditions in the Azure Information Protection policy without applying the corresponding label (the installation default setting), or applies the label:
 
-Off: Scans the data repositories in the "what if" mode, to log results only, without setting the classification or protection that the corresponding label would apply.
+- Off: Scans the data repositories in the "what if" mode, to log results only, without setting the classification or protection that the corresponding label would apply.
 
-On: Scans the data repositories, and for files that meet the conditions, apply the corresponding label to set the classification and optionally, protection.
+- On: Scans the data repositories, and for files that meet the conditions, apply the corresponding label to set the classification and optionally, protection.
 
 yaml
 Type: EnforceMode
@@ -199,7 +198,14 @@ Accept wildcard characters: False
 ```
 
 ### -DiscoverInformationTypes
-{{Fill DiscoverInformationTypes Description}}
+Specifies what patterns are detected by the scanner: 
+
+- PolicyOnly: The scanner uses the conditions (predefined information types and custom) that you have specified for labels in the Azure Information Protection policy. 
+- All: The scanner uses any custom conditions that you have specified for labels in the Azure Information Protection policy, and the list of information types that are available to specify for labels in the Azure Information Protection policy. When you use this option, labels do not need to be configured for any conditions.
+
+Use PolicyOnly for better performance and you known what patterns to detect. For this option, you must define conditions for your Azure Information Protection labels that apply for automatic classification.
+
+Use All if you want to detect all known patterns. However, this setting can result in slower performance and longer scanning times for the scanner. 
 
 ```yaml
 Type: DiscoverInformationTypes
@@ -214,7 +220,12 @@ Accept wildcard characters: False
 ```
 
 ### -Enforce
-{{Fill Enforce Description}}
+Specifies whether the scanner only logs the files that meet the conditions in the Azure Information Protection policy without applying the corresponding label (the installation default setting), or applies the label: 
+
+- Off: Scans the data repositories in the "what if" mode, to log results only, without setting the classification or protection that the corresponding label would apply.
+
+- On: Scans the data repositories, and for files that meet the conditions, apply the corresponding label to set the classification and optionally, protection.
+
 
 ```yaml
 Type: EnforceMode

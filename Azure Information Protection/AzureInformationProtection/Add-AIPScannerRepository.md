@@ -120,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultOwner
-Specifies the email address for the Owner custom property when a file is classified, and for the Rights Management owner when a file is protected. For more information about the Rights Management owner, see Rights Management issuer and Rights Management owner
+Specifies the email address for the Owner custom property when a file is classified, and for the Rights Management owner when a file is protected. For more information about the Rights Management owner, see [Rights Management issuer and Rights Management owner]
 (https://docs.microsoft.com/information-protection/deploy-use/configure-usage-rights#rights-management-issuer-and-rights-management-owner).
 
 If you do not specify this parameter, default values are used for the Owner custom property and the Rights Management owner:
@@ -205,8 +205,9 @@ Accept wildcard characters: False
 ```
 
 ### -MatchPolicy
-Set this parameter to On to match content of files against conditions defined in AIP policy. 
-Set this parameter to Off in order to disable content matching. Default label set on the repository will be applied on all files in this repository. If default label is not set for the repository the default label defined in the AIP policy will be used.
+Set this parameter to On to inspect and the files for the conditions defined in the Azure Information Protection policy. 
+ 
+Set this parameter to Off to apply a default label to all files in the data repository, without inspecting the files for any conditions in the Azure Information Protection policy. If you have set the *DefaultLabelId* to set a default label for this data repository, that label will be applied. If no default label is configured for the data repository, the default label configured in the Azure Information Protection policy is used.
 
 
 ```yaml
