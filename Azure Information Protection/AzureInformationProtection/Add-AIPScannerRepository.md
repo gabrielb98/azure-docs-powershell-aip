@@ -15,7 +15,7 @@ Adds a data repository to be scanned by the Azure Information Protection scanner
 ```
 Add-AIPScannerRepository [-Path] <String> [-OverrideLabel <OverrideLabel>]
  [-PreserveFileDetails <PreserveFileDetails>] [-DefaultOwner <String>] [-SetDefaultLabel <DefaultLabel>]
- [-DefaultLabelId <Guid>] [<CommonParameters>]
+ [-DefaultLabelId <Guid>] [-MatchPolicy <MatchPolicy>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -200,6 +200,23 @@ Accepted values: UsePolicyDefault, Off, On
 Required: False
 Position: Named
 Default value: UsePolicyDefault
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MatchPolicy
+Set this parameter to On to match content of files against conditions defined in AIP policy. 
+Set this parameter to Off in order to disable content matching. Default label set on the repository will be applied on all files in this repository. If default label is not set for the repository the default label defined in the AIP policy will be used.
+
+
+```yaml
+Type: MatchPolicy
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
