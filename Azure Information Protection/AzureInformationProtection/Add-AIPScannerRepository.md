@@ -15,7 +15,7 @@ Adds a data repository to be scanned by the Azure Information Protection scanner
 ```
 Add-AIPScannerRepository [-Path] <String> [-OverrideLabel <OverrideLabel>]
  [-PreserveFileDetails <PreserveFileDetails>] [-DefaultOwner <String>] [-SetDefaultLabel <DefaultLabel>]
- [-DefaultLabelId <Guid>] [<CommonParameters>]
+ [-DefaultLabelId <Guid>] [-MatchPolicy <MatchPolicy>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -120,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultOwner
-Specifies the email address for the Owner custom property when a file is classified, and for the Rights Management owner when a file is protected. For more information about the Rights Management owner, see Rights Management issuer and Rights Management owner
+Specifies the email address for the Owner custom property when a file is classified, and for the Rights Management owner when a file is protected. For more information about the Rights Management owner, see [Rights Management issuer and Rights Management owner]
 (https://docs.microsoft.com/information-protection/deploy-use/configure-usage-rights#rights-management-issuer-and-rights-management-owner).
 
 If you do not specify this parameter, default values are used for the Owner custom property and the Rights Management owner:
@@ -200,6 +200,27 @@ Accepted values: UsePolicyDefault, Off, On
 Required: False
 Position: Named
 Default value: UsePolicyDefault
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MatchPolicy
+
+Note: This parameter is available only with the current preview version of the scanner.
+
+Set this parameter to On to inspect and the files for the conditions defined in the Azure Information Protection policy. 
+ 
+Set this parameter to Off to apply a default label to all files in the data repository, without inspecting the files for any conditions in the Azure Information Protection policy. If you have set the *DefaultLabelId* to set a default label for this data repository, that label will be applied. If no default label is configured for the data repository, the default label configured in the Azure Information Protection policy is used.
+
+
+```yaml
+Type: MatchPolicy
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
