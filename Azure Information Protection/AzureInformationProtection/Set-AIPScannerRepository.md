@@ -59,17 +59,17 @@ The settings were updated successfully.
 This command updates the default label behavior so that unlabeled files in the specified data repository remain unlabeled.
 
 
-### Example 4: For files in a network-attached storage (NAS) file share repository, apply a specific label on a;; unlabeled file without matching the content against the AIP policy.
+### Example 4: Apply the same label to all unlabeled files in a data repository, without inspecting the file contents
 ```
 PS C:\> Set-AIPScannerRepository -Path \\NAS\HR -SetDefaultLabel On -DefaultLabelId f018e9e7-0cfc-4c69-b27a-ac3cb7df43cc  -MatchPolicy Off
 
 The settings were updated successfully.
 ```
 
-This command sets the following configuration for the \NAS\HR data repository:
+This command sets the following configuration for the network-attached storage (NAS) file share repository named \NAS\HR:
 
 - For unlabeled files, apply the label that has an ID of f018e9e7-0cfc-4c69-b27a-ac3cb7df43cc.
-- Disable content matching
+- Do not inspect the files for any conditions in the Azure Information Protection policy.
 
 ## PARAMETERS
 
@@ -198,8 +198,9 @@ Accept wildcard characters: False
 ```
 
 ### -MatchPolicy
-Set this parameter to On to match content of files against conditions defined in AIP policy. 
-Set this parameter to Off in order to disable content matching. Default label set on the repository will be applied on all files in this repository. If default label is not set for the repository the default label defined in the AIP policy will be used
+Set this parameter to On to inspect and the files for the conditions defined in the Azure Information Protection policy. 
+ 
+Set this parameter to Off to apply a default label to all files in the data repository, without inspecting the files for any conditions in the Azure Information Protection policy. If you have set the *DefaultLabelId* to set a default label for this data repository, that label will be applied. If no default label is configured for the data repository, the default label configured in the Azure Information Protection policy is used.
 
 ```yaml
 Type: MatchPolicy
