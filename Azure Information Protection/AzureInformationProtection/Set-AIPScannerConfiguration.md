@@ -66,6 +66,7 @@ PS C:\> Set-AIPScannerConfiguration -Enforce Off -Schedule OneTime  -Type Full -
 
 Configuration was set successfully.
 ```
+Note: This example is for the current preview version of the scanner, because it includes the new *DiscoverInformationTypes* parameter.
 
 This command configures the scanner to do a one-time discovery of all files in the specified data repositories and detect all known sensitive information types that are recognized by the scanner as a result of custom conditions that you configure in the Azure Information Protection policy.
 
@@ -146,6 +147,9 @@ If this list is not maintained, all files in the specified data repositories are
 
 
 ### -DiscoverInformationTypes
+
+Note: This parameter is available only with the current preview version of the scanner.
+
 Specifies what patterns are detected by the scanner: 
 
 - PolicyOnly: The scanner uses the conditions (predefined information types and custom) that you have specified for labels in the Azure Information Protection policy. 
@@ -168,6 +172,9 @@ Accept wildcard characters: False
 ```
 
 ### -Enforce
+
+Note: This parameter is available only with the current preview version of the scanner and replaces the previous *Type* parameter.
+
 Specifies whether the scanner only logs the files that meet the conditions in the Azure Information Protection policy without applying the corresponding label (the installation default setting), or applies the label: 
 
 - Off: Scans the data repositories in the "what if" mode, to log results only, without setting the classification or protection that the corresponding label would apply.

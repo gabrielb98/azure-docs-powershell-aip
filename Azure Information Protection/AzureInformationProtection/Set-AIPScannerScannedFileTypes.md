@@ -27,6 +27,8 @@ After you have specified your file types list, you can verify the contents by ru
 
 - To remove a file type from the list, use [Remove-AIPScannerScannedFileType](Remove-AIPScannerScannedFileType.md).
 
+Note: This cmdlet is available only with the current preview version of the scanner.
+
 ## EXAMPLES
 
 ### Example 1: Configure the scanner to scan only .docx files

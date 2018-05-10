@@ -66,6 +66,8 @@ PS C:\> Set-AIPScannerRepository -Path \\NAS\HR -SetDefaultLabel On -DefaultLabe
 The settings were updated successfully.
 ```
 
+Note: This example is available only with the current preview version of the scanner because it uses the new parameter, *MatchPolicy*.
+
 This command sets the following configuration for the network-attached storage (NAS) file share repository named \NAS\HR:
 
 - For unlabeled files, apply the label that has an ID of f018e9e7-0cfc-4c69-b27a-ac3cb7df43cc.
@@ -198,6 +200,9 @@ Accept wildcard characters: False
 ```
 
 ### -MatchPolicy
+
+Note: This parameter is available only with the current preview version of the scanner.
+
 Set this parameter to On to inspect and the files for the conditions defined in the Azure Information Protection policy. 
  
 Set this parameter to Off to apply a default label to all files in the data repository, without inspecting the files for any conditions in the Azure Information Protection policy. If you have set the *DefaultLabelId* to set a default label for this data repository, that label will be applied. If no default label is configured for the data repository, the default label configured in the Azure Information Protection policy is used.
