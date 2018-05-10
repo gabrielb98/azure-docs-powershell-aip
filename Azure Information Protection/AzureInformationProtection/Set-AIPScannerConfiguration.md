@@ -13,11 +13,6 @@ Sets optional configuration for the Azure Information Protection scanner.
 ## SYNTAX
 
 ```
-Set-AIPScannerConfiguration [-ScanMode <ScanMode>] [-ReportLevel <ReportLevel>] [-Schedule <Schedule>]
- [-JustificationMessage <String>] [-Type <ScanType>] [<CommonParameters>]
-```
-
-```
 Set-AIPScannerConfiguration [-Enforce <EnforceMode>] [-ReportLevel <ReportLevel>] [-Schedule <Schedule>]
  [-JustificationMessage <String>] [-Type <ScanType>] [-DiscoverInformationTypes <DiscoverInformationTypes>]
  [<CommonParameters>]
