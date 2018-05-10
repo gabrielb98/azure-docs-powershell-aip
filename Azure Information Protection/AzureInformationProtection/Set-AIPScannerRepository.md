@@ -59,14 +59,14 @@ The settings were updated successfully.
 This command updates the default label behavior so that unlabeled files in the specified data repository remain unlabeled.
 
 
-### Example 4: Apply the same label to all unlabeled files in a data repository
+### Example 4: Apply the same label to all unlabeled files in a data repository, without inspecting the file contents
 ```
 PS C:\> Set-AIPScannerRepository -Path \\NAS\HR -SetDefaultLabel On -DefaultLabelId f018e9e7-0cfc-4c69-b27a-ac3cb7df43cc  -MatchPolicy Off
 
 The settings were updated successfully.
 ```
 
-This command sets the following configuration for the \NAS\HR data repository:
+This command sets the following configuration for the network-attached storage (NAS) file share repository named \NAS\HR:
 
 - For unlabeled files, apply the label that has an ID of f018e9e7-0cfc-4c69-b27a-ac3cb7df43cc.
 - Do not inspect the files for any conditions in the Azure Information Protection policy.
