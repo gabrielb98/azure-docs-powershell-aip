@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-AIPScannerScannedFileTypes
 
 ## SYNOPSIS
-Sets a list of file types to scan or exclude from scanning by the Azure Information Protection scanner
+Sets a list of file types to scan or exclude from scanning by the Azure Information Protection scanner.
 
 ## SYNTAX
 
@@ -21,7 +21,7 @@ The Set-AIPScannerScannedFileType cmdlet sets a list of file types to scan or ex
 
 When you specify this list and do not specify a data repository, the list applies to all data repositories that do not have their own list specified. 
 
-After you have specified your file types list, you can verify the contents by running [Get-AIPScannerConfiguration](./Get-AIPScannerConfiguration.md)and [Get-AIPScannerRepository](./Get-AIPScannerRepository.md). To change your list of file types:
+After you have specified your file types list, you can verify the contents by running [Get-AIPScannerConfiguration](./Get-AIPScannerConfiguration.md) and [Get-AIPScannerRepository](./Get-AIPScannerRepository.md). To change your list of file types:
 
 - To add a new file type to the list, use [Add-AIPScannerScannedFileType](Add-AIPScannerScannedFileType.md).
 
