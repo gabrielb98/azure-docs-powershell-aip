@@ -159,9 +159,12 @@ Accept wildcard characters: False
 ```
 
 ### -UserEmail
-Specifies users who will have rights to use the file or files that is protected by this ad-hoc policy. Use this parameter and the *Permission* parameter to grant rights to specified users.
+Specifies users who will have rights to use the file or files that is protected by this ad-hoc policy. Use this parameter and the *Permission* parameter to grant rights to specified users or groups. 
 
-You can specify single users, or specify a group of users from your organization by using an emailed-enabled security group or a distribution group. You can also specify users (but not groups) from another organization.
+These users or groups can be internal to your organization, or external. For Azure AD authentication to be successful, the user must have an account in Azure Active Directory. Office 365 users automatically have an account in Azure Active Directory.
+
+Some applications also support personal email addresses with a Microsoft account. For more information about using Microsoft accounts for authentication, see the [supported scenarios table](https://docs.microsoft.com/azure/information-protection/get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents).
+
 
 ```yaml
 Type: String[]
