@@ -71,9 +71,9 @@ Accept wildcard characters: False
 ```
 
 ### -EmailAddress
-Specifies the email address of a user or group. The user or group can be internal to your organization, or external. However, for Azure AD authentication to be successful, the user must have an account in Azure Active Directory. Office 365 users automatically have an account in Azure Active Directory.
+Specifies the email address of a user or group. The user or group can be internal to your organization, or external. For Azure AD authentication to be successful, the user must have an account in Azure Active Directory. Office 365 users automatically have an account in Azure Active Directory.
 
-You can specify an email address from a social provider (for example, a Gmail account) but authentication for accounts that are not in Azure AD are supported for email only, and when Exchange Online is configured for the new capabilities for Office 365 Message Encryption.
+Other authentication methods include email address from a social provider (for example, a Gmail account) when Exchange Online is configured for the new capabilities for Office 365 Message Encryption. Some applications also support personal email addresses with a Microsoft account. For more information about using Microsoft accounts for authentication, see the [supported scenarios table](https://docs.microsoft.com/azure/information-protection/get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents). 
 
 The cmdlet associates the rights that the *Rights* parameter specifies to the user or group that the address specifies.
 
