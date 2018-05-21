@@ -48,7 +48,7 @@ This command first gets all the data repositories that are currently specified f
 ### -Path
 Specifies a local path, network path, or SharePoint Server URL for the data repository that you no longer want to scan. Wildcards are not supported.
 
-For SharePoint paths: SharePoint Server 2013 and SharePoint Server 2016 are supported.
+For SharePoint paths: SharePoint Server 2016 and SharePoint Server 2013 are supported.
 
 Examples include C:\Folder\, C:\Folder\Filename, \\\Server\Folder, http://sharepoint.contoso.com/Shared%20Documents/Folder. Paths can include spaces when you enclose the path value with quotes.
  
@@ -87,6 +87,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AIPScannerRepository](./Get-AIPScannerRepository.md)
 
 [Install-AIPScanner](./Install-AIPScanner.md)
+
+[Remove-AIPScannerRepository](Remove-AIPScannerRepository.md)
 
 [Set-AIPScanner](./Set-AIPScanner.md)
 
