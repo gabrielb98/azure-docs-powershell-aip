@@ -17,7 +17,7 @@ Set-AIPScannerScannedFileTypes [-Repository <String>] -ScannedFileTypes <String[
 ```
 
 ## DESCRIPTION
-The Set-AIPScannerScannedFileType cmdlet sets a list of file types to scan or exclude from scanning by the Azure Information Protection scanner. To scan all file types, use `*`. To scan only specific file types, specify `*.<file name extension>`. To exclude specific file types from being scanned, specify `-*.<file name extension>`.To reset the list back to defaults, specify `@()`.
+The Set-AIPScannerScannedFileTypes cmdlet sets a list of file types to scan or exclude from scanning by the Azure Information Protection scanner. To scan all file types, use `*`. To scan only specific file types, specify `*.<file name extension>`. To exclude specific file types from being scanned, specify `-*.<file name extension>`.To reset the list back to defaults, specify `@()`.
 
 When you specify this list and do not specify a data repository, the list applies to all data repositories that do not have their own list specified. 
 
@@ -34,7 +34,7 @@ Note: This cmdlet is available only with the current preview version of the scan
 ### Example 1: Configure the scanner to scan only .docx files
 
 ```powershell
-PS C:\> Set-AIPScannerScannedFileType  -ScannedFileType *.docx
+PS C:\> Set-AIPScannerScannedFileTypes -ScannedFileType *.docx
 
 The operation was completed successfully
 ```
@@ -44,7 +44,7 @@ This command configures the scanner to scan only files that have a file name ext
 ### Example 2: Configure the scanner to scan only .docx, .txt and .csv files on a server share
 
 ```powershell
-PS C:\> Add-AIPScannerScannedFileType -Repository \\server\share1 -ScannedFileType @("*.docx","*.txt","*.csv")
+PS C:\> Add-AIPScannerScannedFileTypes -Repository \\server\share1 -ScannedFileType @("*.docx","*.txt","*.csv")
 
 The operation was completed successfully
 ```
@@ -54,7 +54,7 @@ This command configures the scanner to scan only files that have a file name ext
 ### Example 3: Configure the scanner to scan all files except those that have a .dll or .lnk file name extension
 
 ```powershell
-PS C:\> Add-AIPScannerScannedFileType  -ScannedFileType @("*","-*.dll","-*.lnk")
+PS C:\> Add-AIPScannerScannedFileTypes -ScannedFileType @("*","-*.dll","-*.lnk")
 
 The operation was completed successfully
 ```
@@ -64,7 +64,7 @@ This command configures the scanner to scan all files except those that have a .
 ### Example 4: Remove the file types list that was set for a data repository
 
 ```powershell
-PS C:\> Add-AIPScannerScannedFileType -Repository \\server\share1 -ScannedFileType @()
+PS C:\> Add-AIPScannerScannedFileTypes -Repository \\server\share1 -ScannedFileType @()
 
 The operation was completed successfully
 ```
