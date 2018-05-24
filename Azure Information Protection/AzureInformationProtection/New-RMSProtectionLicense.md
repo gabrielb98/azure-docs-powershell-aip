@@ -163,7 +163,7 @@ Specifies users who will have rights to use the file or files that is protected 
 
 These users or groups can be internal to your organization, or external. For Azure AD authentication to be successful, the user must have an account in Azure Active Directory. Office 365 users automatically have an account in Azure Active Directory.
 
-Some applications also support personal email addresses with a Microsoft account. For more information about using Microsoft accounts for authentication, see the [supported scenarios table](https://docs.microsoft.com/azure/information-protection/get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents).
+Some applications also support personal email addresses with a Microsoft account. For more information about using Microsoft accounts for authentication, see the [supported scenarios table](https://docs.microsoft.com/azure/information-protection/get-started/secure-collaboration-documents#supported-scenarios-for-opening-protected-documents).
 
 
 ```yaml
