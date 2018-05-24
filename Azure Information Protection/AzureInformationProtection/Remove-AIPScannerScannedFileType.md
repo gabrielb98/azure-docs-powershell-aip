@@ -21,8 +21,6 @@ The Remove-AIPScannerScannedFileType cmdlet removes file types from a list that 
 
 To remove a new file type to scan, specify `*.<file name extension>`. To remove a new file type from being excluded from being scanned, specify `-*.<file name extension>`. 
 
-Note: This cmdlet is available only with the current preview version of the scanner.
-
 ## EXAMPLES
 
 

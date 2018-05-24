@@ -21,8 +21,6 @@ The Add-AIPScannerScannedFileType cmdlet adds new file types to a list that you 
 
 To add a new file type to scan, specify `*.<file name extension>`. To exclude a new file type from being scanned, specify `-*.<file name extension>`.
 
-Note: This cmdlet is available only with the current preview version of the scanner.
-
 
 ## EXAMPLES
 
