@@ -8,7 +8,7 @@ schema: 2.0.0
 # Remove-AIPScannerScannedFileType
 
 ## SYNOPSIS
-Removes file types from a configured list of file types to scan or exclude from scanning by the Azure Information Protection scanner
+Removes file types from a configured list of file types to scan or exclude from scanning by the Azure Information Protection scanner.
 
 ## SYNTAX
 

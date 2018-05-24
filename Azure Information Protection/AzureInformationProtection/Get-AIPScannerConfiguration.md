@@ -36,9 +36,7 @@ DiscoverInformationTypes: PolicyOnly
 ScannedFileTypes		: *,"-*.lnk","-*.exe","-*.com","-*.cmd","-*.bat","-*.dll","-*.ini","-*.pst","-*.sca","-*.drm","-*.sys","-*.cpl","-*.inf","-*.drv","-*.dat","-*.tmp","-*.msp","-*.msi","-*.pdb","-*.jar"
 ```
 
-This command gets the current configuration settings for the Azure Information Protection scanner.
-In this example, the output shows that the scanner is using the installation default values.
-The one exception is the justification message, which has been specified.
+This command gets the current configuration settings for the Azure Information Protection scanner. In this example, the output shows that the scanner is using the installation default values. The one exception is the justification message, which has been specified.
 
 - The scanner is in discovery mode for reporting purposes only. Labels are not applied to files.
 - The reports contains details of files that were successfully labeled.

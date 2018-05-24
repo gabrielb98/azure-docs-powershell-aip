@@ -198,6 +198,7 @@ Accept wildcard characters: False
 ```
 
 ### -MatchPolicy
+
 Set this parameter to On to inspect and the files for the conditions defined in the Azure Information Protection policy. 
  
 Set this parameter to Off to apply a default label to all files in the data repository, without inspecting the files for any conditions in the Azure Information Protection policy. If you have set the *DefaultLabelId* to set a default label for this data repository, that label will be applied. If no default label is configured for the data repository, the default label configured in the Azure Information Protection policy is used.
@@ -215,7 +216,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

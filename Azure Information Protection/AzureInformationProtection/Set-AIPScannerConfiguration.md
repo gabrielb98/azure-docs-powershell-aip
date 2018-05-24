@@ -23,6 +23,7 @@ The Set-AIPScannerConfiguration cmdlet sets optional configuration settings for 
 
 The configuration settings include whether the scanner is in discovery mode only or applies labels, whether a file will be relabeled, whether file attributes are changed, what is logged in the reports, whether the scanner runs once or continuously, what justification message to use when required, and the Rights Management owner for protected files.
 
+
 ## EXAMPLES
 
 ### Example 1: Configure the Azure Information Protection scanner to run a one-time discovery and create a report for files that would be labeled
@@ -34,7 +35,7 @@ Configuration was set successfully.
 
 This command configures the scanner to run a one-time discovery for files in the specified data repositories, and then create a report that lists the files that meet the conditions to be labeled.
 
-Note that because these parameters specify the values that are set by the scanner installation, you need to specify them only if you previously specified other values.
+Because these parameters specify the values that are set by the scanner installation, you need to specify them only if you previously specified other values.
 
 ### Example 2: Configure the Azure Information Protection scanner to continuously discover and label files
 ```
@@ -42,6 +43,7 @@ PS C:\> Set-AIPScannerConfiguration -Enforce On -Schedule Continuous
 
 Configuration was set successfully.
 ```
+
 
 This command configures the scanner to continuously discover files in the specified data repositories and label the files that meet the conditions in the Azure Information Protection policy.
 
@@ -146,6 +148,7 @@ If this list is not maintained, all files in the specified data repositories are
 
 
 ### -DiscoverInformationTypes
+
 Specifies what patterns are detected by the scanner: 
 
 - PolicyOnly: The scanner uses the conditions (predefined information types and custom) that you have specified for labels in the Azure Information Protection policy. 
@@ -167,7 +170,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+
 ### -Enforce
+
 Specifies whether the scanner only logs the files that meet the conditions in the Azure Information Protection policy without applying the corresponding label (the installation default setting), or applies the label: 
 
 - Off: Scans the data repositories in the "what if" mode, to log results only, without setting the classification or protection that the corresponding label would apply.
