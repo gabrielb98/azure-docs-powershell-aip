@@ -13,7 +13,7 @@ Adds new file types to a configured list of file types to scan or exclude from s
 ## SYNTAX
 
 ```
-Add-AIPScannerScannedFileTypes [[-Repository] <String>] -ScannedFileType <String[]>
+Add-AIPScannerScannedFileTypes [-Repository <String>] -ScannedFileTypes <String[]> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -21,13 +21,12 @@ The Add-AIPScannerScannedFileTypes cmdlet adds new file types to a list that you
 
 To add a new file type to scan, specify `*.<file name extension>`. To exclude a new file type from being scanned, specify `-*.<file name extension>`.
 
-
 ## EXAMPLES
 
 ### Example 1: Add .docx files to the list of file types to be scanned
 
 ```powershell
-PS C:\> Add-AIPScannerScannedFileTypes  -ScannedFileType *.docx
+PS C:\> Add-AIPScannerScannedFileTypes  -ScannedFileTypes *.docx
 
 The operation was completed successfully
 ```
@@ -37,7 +36,7 @@ This command adds the file name extension of .docx to the configured list of fil
 ### Example 2: Add .docx, .txt, and .csv files to the list of file types to be scanned for a file share
 
 ```powershell
-PS C:\> Add-AIPScannerScannedFileTypes -Repository \\server\share1 -ScannedFileType @("*.docx","*.txt","*.csv")
+PS C:\> Add-AIPScannerScannedFileTypes -Repository \\server\share1 -ScannedFileTypes @("*.docx","*.txt","*.csv")
 
 The operation was completed successfully
 ```
@@ -47,12 +46,11 @@ This command adds the file name extensions of .docx, .txt, and .csv to the confi
 ### Example 3: Add .dll and .lnk files to the list of file types to be excluded from being scanned
 
 ```powershell
-PS C:\> Add-AIPScannerScannedFileType  -ScannedFileType @("-*.dll","-*.lnk")
+PS C:\> Add-AIPScannerScannedFileType  -ScannedFileTypes @("-*.dll","-*.lnk")
 The operation was completed successfully
 ```
 
 This command adds the .dll and .lnk file types to the configured list of file types to be excluded from scanning for all data repositories that do not have their own file types list.
-
 
 ## PARAMETERS
 
@@ -67,13 +65,13 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 0
+Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-### -ScannedFileType
+### -ScannedFileTypes
 Specifies the file type or array of file types to be added to the configured list of file types.
 
 - If your file types list specifies file types to scan, specify `*.<file name extension>` to add a new file type to the list. For example, \*.docx.
@@ -81,7 +79,7 @@ Specifies the file type or array of file types to be added to the configured lis
 
 
 ```yaml
-Type: <String[]>
+Type: String[]
 Parameter Sets: (All)
 Aliases:
 

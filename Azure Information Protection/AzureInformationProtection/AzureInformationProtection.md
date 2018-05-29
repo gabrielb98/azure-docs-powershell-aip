@@ -24,6 +24,9 @@ The .dll file for this module is *AIP.dll*.
 ### [Add-AIPScannerRepository](Add-AIPScannerRepository.md)
 Adds a data repository to be scanned by the Azure Information Protection scanner. 
 
+### [Add-AIPScannerScannedFileTypes](Add-AIPScannerScannedFileTypes.md)
+Adds new file types to a configured list of file types to scan or exclude from scanning by the Azure Information Protection scanner
+
 ### [Clear-AIPAuthentication](Clear-AIPAuthentication.md)
 Clears the user settings and RMS templates for the current user.
 
@@ -63,6 +66,9 @@ Protects a specified file or the files in a specified folder by using RMS.
 ### [Remove-AIPScannerRepository](Remove-AIPScannerRepository.md)
 Removes a data repository for the Azure Information Protection scanner. 
 
+### [Remove-AIPScannerScannedFileTypes](Remove-AIPScannerScannedFileTypes.md)
+Removes file types from a configured list of file types to scan or exclude from scanning by the Azure Information Protection scanner.
+
 ### [Set-AIPAuthentication](Set-AIPAuthentication.md)
 Sets the authentication credentials for the Azure Information Protection client.
 
@@ -80,6 +86,9 @@ Sets optional configuration for the Azure Information Protection scanner.
 
 ### [Set-AIPScannerRepository](Set-AIPScannerRepository.md)
 Updates a profile of configuration settings for a data repository to be scanned by the Azure Information Protection scanner. 
+
+### [Set-AIPScannerScannedFileTypes](Set-AIPScannerScannedFileTypes.md)
+Sets a list of file types to scan or exclude from scanning by the Azure Information Protection scanner.
 
 ### [Set-RMSServerAuthentication](Set-RMSServerAuthentication.md)
 Sets the server mode, which is required for non-interactive sessions.
