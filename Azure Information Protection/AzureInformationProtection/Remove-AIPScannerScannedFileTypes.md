@@ -5,7 +5,7 @@ online version: https://go.microsoft.com/fwlink/?linkid=872605
 schema: 2.0.0
 ---
 
-# Remove-AIPScannerScannedFileType
+# Remove-AIPScannerScannedFileTypes
 
 ## SYNOPSIS
 Removes file types from a configured list of file types to scan or exclude from scanning by the Azure Information Protection scanner.
@@ -13,11 +13,11 @@ Removes file types from a configured list of file types to scan or exclude from 
 ## SYNTAX
 
 ```
-Remove-AIPScannerScannedFileType [[-Repository] <String>] -ScannedFileType <String> [<CommonParameters>]
+Remove-AIPScannerScannedFileTypes [[-Repository] <String>] -ScannedFileType <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Remove-AIPScannerScannedFileType cmdlet removes file types from a list that you have already configured by using [Set-AIPScannerScannedFileTypes](./Set-AIPScannerScannedFileTypes.md). The list specifies which file types to scan or exclude from scanning by the Azure Information Protection scanner. 
+The Remove-AIPScannerScannedFileTypes cmdlet removes file types from a list that you have already configured by using [Set-AIPScannerScannedFileTypes](./Set-AIPScannerScannedFileTypes.md). The list specifies which file types to scan or exclude from scanning by the Azure Information Protection scanner. 
 
 To remove a new file type to scan, specify `*.<file name extension>`. To remove a new file type from being excluded from being scanned, specify `-*.<file name extension>`. 
 
@@ -27,7 +27,7 @@ To remove a new file type to scan, specify `*.<file name extension>`. To remove 
 ### Example 1: Remove .docx files from the list of file types to be scanned
 
 ```powershell
-PS C:\> Remove-AIPScannerScannedFileType  -ScannedFileType *.docx
+PS C:\> Remove-AIPScannerScannedFileTypes  -ScannedFileType *.docx
 
 The operation was completed successfully
 ```
@@ -37,7 +37,7 @@ This command removes the file name extension of .docx from the configured list o
 ### Example 2: Remove .docx, .txt, and .csv files from the list of file types to be excluded for a file share
 
 ```powershell
-PS C:\> Remove-AIPScannerScannedFileType -Repository \\server\share1 -ScannedFileType @("*.docx","*.txt","*.csv")
+PS C:\> Remove-AIPScannerScannedFileTypes -Repository \\server\share1 -ScannedFileType @("*.docx","*.txt","*.csv")
 
 The operation was completed successfully
 ```
@@ -47,7 +47,7 @@ This command removes the file name extensions of .docx, .txt, and .csv from the 
 ### Example 3: Remove .dll and .lnk from the list of file types to be excluded from scanning
 
 ```powershell
-PS C:\> Remove-AIPScannerScannedFileType  -ScannedFileType @("-*.dll","-*.lnk")
+PS C:\> Remove-AIPScannerScannedFileTypes  -ScannedFileType @("-*.dll","-*.lnk")
 
 The operation was completed successfully
 ```
@@ -110,7 +110,7 @@ For more information, see [about_CommonParameters](https://go.microsoft.com/fwli
 
 [Add-AIPScannerRepository](./Add-AIPScannerRepository.md)
 
-[Add-AIPScannerScannedFileType](Add-AIPScannerScannedFileType.md)
+[Add-AIPScannerScannedFileTypes](Add-AIPScannerScannedFileTypes.md)
 
 [Get-AIPScannerConfiguration](./Get-AIPScannerConfiguration.md)
 
