@@ -145,7 +145,17 @@ If this list is not maintained, all files in the specified data repositories are
 
 - Incremental: The scanner maintains a list of previously scanned files so it can scan only new or modified files.
 - Full: All files in the specified data repositories are scanned, after which this parameter is automatically set to Incremental. To scan all files again, you must change this parameter to Full. This setting is most useful when you want all files to be listed in the reports.
+```yaml
+Type: ScanType
+Parameter Sets: (All)
+Aliases:
 
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DiscoverInformationTypes
 
