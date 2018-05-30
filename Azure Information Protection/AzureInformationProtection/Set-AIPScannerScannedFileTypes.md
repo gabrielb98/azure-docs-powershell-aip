@@ -23,11 +23,10 @@ When you specify this list and do not specify a data repository, the list applie
 
 After you have specified your file types list, you can verify the contents by running [Get-AIPScannerConfiguration](./Get-AIPScannerConfiguration.md) and [Get-AIPScannerRepository](./Get-AIPScannerRepository.md). To change your list of file types:
 
-- To add a new file type to the list, use [Add-AIPScannerScannedFileType](Add-AIPScannerScannedFileType.md).
+- To add a new file type to the list, use [Add-AIPScannerScannedFileTypes](Add-AIPScannerScannedFileTypes.md).
 
-- To remove a file type from the list, use [Remove-AIPScannerScannedFileType](Remove-AIPScannerScannedFileType.md).
+- To remove a file type from the list, use [Remove-AIPScannerScannedFileTypes](Remove-AIPScannerScannedFileTypes.md).
 
-Note: This cmdlet is available only with the current preview version of the scanner.
 
 ## EXAMPLES
 
@@ -127,7 +126,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Add-AIPScannerRepository](./Add-AIPScannerRepository.md)
 
-[Add-AIPScannerScannedFileType](Add-AIPScannerScannedFileType.md)
+[Add-AIPScannerScannedFileTypes](Add-AIPScannerScannedFileTypes.md)
 
 [Get-AIPScannerConfiguration](./Get-AIPScannerConfiguration.md)
 
@@ -137,7 +136,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Remove-AIPScannerRepository](Remove-AIPScannerRepository.md)
 
-[Remove-AIPScannerScannedFileType](Remove-AIPScannerScannedFileType.md)
+[Remove-AIPScannerScannedFileTypes](Remove-AIPScannerScannedFileTypes.md)
 
 [Set-AIPScanner](./Set-AIPScanner.md)
 
