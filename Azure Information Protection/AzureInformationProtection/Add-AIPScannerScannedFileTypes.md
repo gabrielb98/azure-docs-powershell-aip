@@ -26,7 +26,7 @@ To add a new file type to scan, specify `.<file name extension>`. To exclude a n
 ### Example 1: Add .docx files to the list of file types to be scanned
 
 ```powershell
-PS C:\>  Add-AIPScannerScannedFileTypes -ScannedFileTypes ".docx"
+PS C:\> Add-AIPScannerScannedFileTypes -ScannedFileTypes ".docx"
 
 The operation was completed successfully
 ```
@@ -42,7 +42,7 @@ PS C:\> Add-AIPScannerScannedFileTypes -ScannedFileTypes "-.lnk"
 The operation was completed successfully
 ```
 
-This command adds extension of .lnk to the exclusion list of files to be scanned. 
+This command adds the file name extension of .lnk to the exclusion list of files to be scanned. 
 
 ## PARAMETERS
 
@@ -66,8 +66,7 @@ Accept wildcard characters: False
 ### -ScannedFileTypes
 Specifies the file type or array of file types to be added to the configured list of file types.
 
-- If your file types list specifies file types to scan, specify `.<file name extension>` to add a new file type to the list. For example, .docx.
-- If your file types list specifies file types to exclude from scanning, specify `-.<file name extension>` to remove a file type from the list. For example, -.docx.
+- If your file types list specifies file types to scan, specify `.<file name extension>` to add a new file type to the list. For example, .docx. If your file types list specifies file types to exclude from scanning, specify `-.<file name extension>` to remove a file type from the list. For example, -.docx.
 
 
 ```yaml
