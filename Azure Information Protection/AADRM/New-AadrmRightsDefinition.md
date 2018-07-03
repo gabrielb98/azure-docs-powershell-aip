@@ -20,9 +20,9 @@ New-AadrmRightsDefinition [-EmailAddress <String>] [-DomainName <String>]
 ## DESCRIPTION
 The **New-AadrmRightsDefinition** cmdlet creates a **rights definition** object that you store as a variable and then use to create or update a custom Rights Management template when you use the [Add-AadrmTemplate](./Add-AadrmTemplate.md) or [Set-AadrmTemplateProperty](./Set-AadrmTemplateProperty.md) cmdlet.
 
-A rights definition object expresses the rights that users have to content that Azure Rights Management protects. You can specify a user, a group, or all users in an organization.
+A rights definition object expresses the rights that users have to content that Azure Rights Management protects. You can specify a user, a group, or all users in an organization. 
 
-Similar configuration can also be done when you create or configure a custom template in the Azure portal, but this cmdlet offers more fine-grained control.
+Similar configuration can also be done when you create or configure a custom template in the Azure portal, but this cmdlet offers more fine-grained control. However, this cmdlet does not support the [any authenticated users option](https://docs.microsoft.com/azure/information-protection/deploy-use/configure-policy-protection#more-information-about-add-any-authenticated-users) that you can select in the Azure portal.
 
 Tip: You can this cmdlet to enable secure collaboration with other organizations when they have user accounts in Azure Active Directory and Office 365. For example, provide an external group VIEW and DOCEDIT rights to collaborate on a joint project. Or, provide VIEW rights to all users in a partner organization.
 
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 ### -EmailAddress
 Specifies the email address of a user or group. The user or group can be internal to your organization, or external. For Azure AD authentication to be successful, the user must have an account in Azure Active Directory. Office 365 users automatically have an account in Azure Active Directory.
 
-Other authentication methods include email address from a social provider (for example, a Gmail account) when Exchange Online is configured for the new capabilities for Office 365 Message Encryption. Some applications also support personal email addresses with a Microsoft account. For more information about using Microsoft accounts for authentication, see the [supported scenarios table](https://docs.microsoft.com/azure/information-protection/get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents). 
+Other authentication methods include email address from a social provider (for example, a Gmail account) when Exchange Online is configured for the new capabilities for Office 365 Message Encryption. Some applications also support personal email addresses with a Microsoft account. For more information about using Microsoft accounts for authentication, see the [supported scenarios table](https://docs.microsoft.com/azure/information-protection/get-started/secure-collaboration-documents#supported-scenarios-for-opening-protected-documents). 
 
 The cmdlet associates the rights that the *Rights* parameter specifies to the user or group that the address specifies.
 

@@ -26,7 +26,7 @@ To add a new file type to scan, specify `*.<file name extension>`. To exclude a 
 ### Example 1: Add .docx files to the list of file types to be scanned
 
 ```powershell
-PS C:\> Add-AIPScannerScannedFileTypes  -ScannedFileTypes *.docx
+PS C:\> Add-AIPScannerScannedFileTypes -ScannedFileTypes *.docx
 
 The operation was completed successfully
 ```
@@ -46,7 +46,7 @@ This command adds the file name extensions of .docx, .txt, and .csv to the confi
 ### Example 3: Add .dll and .lnk files to the list of file types to be excluded from being scanned
 
 ```powershell
-PS C:\> Add-AIPScannerScannedFileType  -ScannedFileTypes @("-*.dll","-*.lnk")
+PS C:\> Add-AIPScannerScannedFileTypes -ScannedFileTypes @("-*.dll","-*.lnk")
 The operation was completed successfully
 ```
 
