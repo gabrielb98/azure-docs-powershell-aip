@@ -1,14 +1,14 @@
 ---
 external help file: AIP.dll-Help.xml
 Module Name: AzureInformationProtection
-online version: https://go.microsoft.com/fwlink/?linkid=841549
+online version: https://go.microsoft.com/fwlink/?linkid=2004364
 schema: 2.0.0
 ---
 
 # Start-AIPScan
 
 ## SYNOPSIS
-Instructs AIP scanner to start one time scan 
+Instructs the Azure Information Protection scanner to start a one time scan cycle. 
 
 ## SYNTAX
 
@@ -17,33 +17,32 @@ Start-AIPScan [-Reset] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Start-AIPScan instructs a running AIPscanner service set to Manual schedule to start a one time scan. The scan is started immediately. First scan evaluates all discovered files in the defined repositories. Any consequent scan scans only new or changed files unless the AIP policy was changed. 
-If the policy was changed the scanner will initiate full rescan of file in next scan cycle. 
+The Start-AIPScan instructs the Azure Information Protection scanner to immediately start a one time scan cycle. The scanner service must be started already and the scanner schedule must be configured for a manual schedule. You configure the schedule by using the *Schedule* parameter with [Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration.md).
 
-If you want to force full rescan of files without change of policy use -Reset switch to instruct the scanner to reset the scanner cache.
-
-If the scanner schedule is set to Always, the command is ignored.
+By default, all files are scanned the first time the scanner runs and then, unless the Azure Information Protection policy is changed, only new or changed files are scanned. However, you can change this behavior when you use the *-Reset* parameter with this cmdlet, which forces the scanner to scan all files.
+  
+If the scanner schedule is set to Always, this cmdlet is ignored.
 
 ## EXAMPLES
 
-### Example 1: Initiate immediate one time scan
+### Example 1: Initiate immediate one time scan for new and changed files
 ```powershell
 PS C:\> Start-AIPScan
 ```
 
-The scanner initiates incremental scan of all new or changed files since the last scan. If the policy was changed since last scan full rescan will be done.
+Because this is not the first time that the scanner has run and the Azure Information Protection policy has not changed since the last scanning cycle, the scanner initiates an incremental scan for all new or changed files since the last scanning cycle.
 
-### Example 2: Force scanner to immediate one time rescan of all files in the defined repositories
+### Example 2: Initiate immediate one time scan for all files
 ```powershell
 PS C:\> Start-AIPScan -Reset
 ```
 
-The scanner initiates full rescan of all files since in the defined repositories.
+The scanner initiates a full scan of all the files, even if they have been scanned before and the Azure Information Protection policy has not changed.
 
 ## PARAMETERS
 
 ### -Reset
-Resets scanner cache that enables scanner to scan only newly created or modified files since the last scan.
+Resets the scanner cache so that the scanner initiates a full scan of all the files, even if they have been scanned before and the Azure Information Protection policy has not changed.
 
 ```yaml
 Type: SwitchParameter
@@ -59,7 +58,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -73,3 +72,31 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Add-AIPScannerRepository](./Add-AIPScannerRepository.md)
+
+[Add-AIPScannerScannedFileTypes](Add-AIPScannerScannedFileTypes.md)
+
+[Get-AIPScannerConfiguration](./Get-AIPScannerConfiguration.md)
+
+[Get-AIPScannerRepository](./Get-AIPScannerRepository.md)
+
+[Get-AIPScannerStatus](./Get-AIPScannerStatus.md)
+
+[Install-AIPScanner](./Install-AIPScanner.md)
+
+[Remove-AIPScannerRepository](./Remove-AIPScannerRepository.md)
+
+[Remove-AIPScannerScannedFileTypes](./Remove-AIPScannerScannedFileTypes )
+
+[Set-AIPScanner](./Set-AIPScanner.md)
+
+[Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration)
+
+[Set-AIPScannerRepository](./Set-AIPScannerRepository.md)
+
+[Set-AIPScannerScannedFileTypes](./Set-AIPScannerRepository.md)
+
+[Uninstall-AIPScanner](./Uninstall-AIPScanner.md)
+
+[Update-AIPScanner](./Update-AIPScanner)

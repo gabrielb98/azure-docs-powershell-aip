@@ -1,14 +1,14 @@
 ---
 external help file: AIP.dll-Help.xml
 Module Name: AzureInformationProtection
-online version: https://go.microsoft.com/fwlink/?linkid=841550
+online version: https://go.microsoft.com/fwlink/?linkid=2004271
 schema: 2.0.0
 ---
 
 # Update-AIPScanner
 
 ## SYNOPSIS
-Updates the scanner to the latest DB schema
+Updates the database schema for the Azure Information Protection scanner.
 
 ## SYNTAX
 
@@ -17,22 +17,24 @@ Update-AIPScanner [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Update-AIPScanner updates the scanner's DB schema after the package upgrade. This command must be executed once after the package upgrade in order to enable the scanner to run. The command must be executed using an account with dbowner rights on the AzInfoProtectionScanner DB.
+The Update-AIPScanner cmdlet updates the database schema for the Azure Information Protection scanner. You must run this cmdlet one time after you have upgraded the Azure Information Protection client. If you do not, the scanner service does not run.
+
+Run this cmdlet with an account that has the database-level role of db_owner for the database that the scanner is using (named AzInfoProtectionScanner). 
 
 ## EXAMPLES
 
-### Example 1: Update AIPscanner after the package upgrade
+### Example 1: Update the database schema for the scanner after an upgrade for the Azure Information Protection client
 ```powershell
 PS C:\> Update-AIPScanner
 ```
 
-AzInfoProtectionScanner is updated with the new schema.
+The AzInfoProtectionScanner database for the scanner is updated for the new schema.
 
 ## PARAMETERS
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -46,3 +48,31 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 ## NOTES
 
 ## RELATED LINKS
+
+[Add-AIPScannerRepository](./Add-AIPScannerRepository.md)
+
+[Add-AIPScannerScannedFileTypes](Add-AIPScannerScannedFileTypes.md)
+
+[Get-AIPScannerConfiguration](./Get-AIPScannerConfiguration.md)
+
+[Get-AIPScannerRepository](./Get-AIPScannerRepository.md)
+
+[Get-AIPScannerStatus](./Get-AIPScannerStatus.md)
+
+[Install-AIPScanner](./Install-AIPScanner.md)
+
+[Remove-AIPScannerRepository](./Remove-AIPScannerRepository.md)
+
+[Remove-AIPScannerScannedFileTypes](./Remove-AIPScannerScannedFileTypes )
+
+[Set-AIPScanner](./Set-AIPScanner.md)
+
+[Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration)
+
+[Set-AIPScannerRepository](./Set-AIPScannerRepository.md)
+
+[Set-AIPScannerScannedFileTypes](./Set-AIPScannerRepository.md)
+
+[Start-AIPScan](./Start-AIPScan.md)
+
+[Uninstall-AIPScanner](./Uninstall-AIPScanner.md)

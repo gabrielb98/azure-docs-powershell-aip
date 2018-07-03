@@ -18,10 +18,7 @@ Set-AIPScannerConfiguration [-Enforce <EnforceMode>] [-ReportLevel <ReportLevel>
 ```
 
 ## DESCRIPTION
-The Set-AIPScannerConfiguration cmdlet sets optional configuration settings for the Azure Information Protection scanner.
-When you install the scanner, these settings are configured for you with their default installation values.
-Use this cmdlet to change the settings, which will be used the next time the scanner runs.
-If you need the changes to take effect immediately, restart the Azure Information Protection Scanner service on the Windows server computer.
+The Set-AIPScannerConfiguration cmdlet sets optional configuration settings for the Azure Information Protection scanner. When you install the scanner, these settings are configured for you with their default installation values. Use this cmdlet to change the settings, which will be used the next time the scanner runs. If you need the changes to take effect immediately, restart the Azure Information Protection Scanner service on the Windows server computer.
 
 The configuration settings include whether the scanner is in discovery mode only or applies labels, whether a file will be relabeled, whether file attributes are changed, what is logged in the reports, whether the scanner runs once or continuously, what justification message to use when required, and the Rights Management owner for protected files.
 
@@ -185,7 +182,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -199,19 +196,27 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ## RELATED LINKS
 
-[Add-AIPScannerRepository]()
+[Add-AIPScannerRepository](./Add-AIPScannerRepository.md)
 
-[Get-AIPScannerConfiguration]()
+[Add-AIPScannerScannedFileTypes](Add-AIPScannerScannedFileTypes.md)
 
-[Get-AIPScannerRepository]()
+[Get-AIPScannerConfiguration](./Get-AIPScannerConfiguration.md)
 
-[Install-AIPScanner]()
+[Get-AIPScannerRepository](./Get-AIPScannerRepository.md)
 
-[Remove-AIPScannerRepository]()
+[Install-AIPScanner](./Install-AIPScanner.md)
 
-[Set-AIPScanner]()
+[Remove-AIPScannerRepository](./Remove-AIPScannerRepository.md)
 
-[Set-AIPScannerRepository]()
+[Remove-AIPScannerScannedFileTypes](./Remove-AIPScannerScannedFileTypes )
 
-[Uninstall-AIPScanner]()
+[Set-AIPScanner](./Set-AIPScanner.md)
+
+[Set-AIPScannerRepository](./Set-AIPScannerRepository.md)
+
+[Set-AIPScannerScannedFileTypes](./Set-AIPScannerRepository.md)
+
+[Uninstall-AIPScanner](./Uninstall-AIPScanner.md)
+
+[Update-AIPScanner](./Update-AIPScanner)
 
