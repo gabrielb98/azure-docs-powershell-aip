@@ -24,14 +24,14 @@ The configuration settings include whether the scanner is in discovery mode only
 
 ## EXAMPLES
 
-### Example 1: Configure the Azure Information Protection scanner to manually scheduled discovery and create a report for files that would be labeled
+### Example 1: Configure the Azure Information Protection scanner for a manual schedule and create a report for files that would be labeled
 ```
 PS C:\> Set-AIPScannerConfiguration -Enforce Off -Schedule Manual -ReportLevel Info
 
 Configuration was set successfully.
 ```
 
-This command configures the scanner to run upon manual instruction, for example using Start-AIPScan cmdlet, for files in the specified data repositories, and then create a report that lists the files that meet the conditions to be labeled.
+This command configures the scanner to run a one-time discovery for files in the specified data repositories, and then create a report that lists the files that meet the conditions to be labeled. The schedule is set to manual, so that you must manually start the service. For example, by running [Start-AIPScan](./Start-AIPScan.md).
 
 Note that because these parameters specify the values that are set by the scanner installation, you need to specify them only if you previously specified other values.
 
@@ -46,29 +46,29 @@ This command configures the scanner to continuously discover files in the specif
 
 For these files, they are classified and protected (or have protection removed), according to the label configuration.
 
-### Example 3: Configure the Azure Information Protection scanner to scan and label all files upon manual schedule, and log all files
+### Example 3: Configure the Azure Information Protection scanner to scan and label all files by using a manual schedule, and log all files
 ```
 PS C:\> Set-AIPScannerConfiguration -Enforce On -Schedule Manual -ReportLevel Debug -Type Full
 
 Configuration was set successfully.
 ```
 
-This command configures the scanner to do a one-time discovery of all files in the specified data repositories and label the files that meet the conditions in the Azure Information Protection policy.
+This command configures the scanner to do a one-time discovery of all files in the specified data repositories and label the files that meet the conditions in the Azure Information Protection policy. The schedule is set to manual, so that you must manually start the service. For example, by running [Start-AIPScan](./Start-AIPScan.md).
 
-For these files, they are classified and protected (or have protection removed), according to the label configuration.
+For the files that are discovered, they are classified and protected (or have protection removed), according to the label configuration.
 
 Every discovered file and the resulting action is logged in the reports.
 
-### Example 4: Configure the Azure Information Protection scanner to scan all files and discover all known sensitive information types and custom conditions upon manual trigger, for example using Start-AIPScan cmdlet
+### Example 4: Configure the Azure Information Protection scanner to scan all files and discover all known sensitive information types and custom conditions
 ```
-PS C:\> Set-AIPScannerConfiguration -Enforce Off -Schedule Manual  -Type Full -DiscoverInformationTypes All
+PS C:\> Set-AIPScannerConfiguration -Enforce Off -Schedule Manual -Type Full -DiscoverInformationTypes All
 
 Configuration was set successfully.
 ```
 
-This command configures the scanner to do a one-time discovery of all files in the specified data repositories and detect all known sensitive information types that are recognized by the scanner as a result of custom conditions that you configure in the Azure Information Protection policy.
+This command configures the scanner to do a one-time discovery of all files in the specified data repositories and detect all known sensitive information types that are recognized by the scanner as a result of custom conditions that you configure in the Azure Information Protection policy. The schedule is set to manual, so that you must manually start the service. For example, by running [Start-AIPScan](./Start-AIPScan.md).
 
-Every file with discovered information type or a matching custom condition is logged in the reports.
+Every file with a discovered information type or a matching custom condition is logged in the reports.
 
 ## PARAMETERS
 
@@ -91,20 +91,16 @@ Accept wildcard characters: False
 ```
 
 ### -ReportLevel
-Define the level of logging for the scanner reports.
-When the scanner is first installed, by default, only files that are successfully labeled by the scanner are included in the log file.
+Define the level of logging for the scanner reports. When the scanner is first installed, by default, only files that are successfully labeled by the scanner are included in the log file.
 
-Log files are stored in %localappdata%\Microsoft\MSIP\Scanner\Reports and have a .csv file format.
-They include the time taken to scan, the number of scanned files, and statistics of how many files were classified and protected.
-This folder stores up to 60 reports for each scanning cycle and all but the latest report is compressed to help minimize the required disk space.
+Log files are stored in %localappdata%\Microsoft\MSIP\Scanner\Reports and have a .csv file format. They include the time taken to scan, the number of scanned files, and statistics of how many files were classified and protected. This folder stores up to 60 reports for each scanning cycle and all but the latest report is compressed to help minimize the required disk space.
 
-- Debug: Logs every file that was discovered and the resulting action. This level of logging is useful for troubleshooting but slows down the Azure Information Protection scanner. This category includes files that don't meet any of the conditions and files that are skipped because of an unsupported file type. For example, trying to label a file for classification-only when the file type doesn't support this action, and trying to label files that are automatically excluded. File types supported by the Azure Information Protection client (https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-file-types)from the admin guide. - Info: Logs only the files that were successfully labeled by the scanner, or would be labeled when the scanner is in discovery mode.
+- Debug: Logs every file that was discovered and the resulting action. This level of logging is useful for troubleshooting but slows down the Azure Information Protection scanner. This category includes files that don't meet any of the conditions and files that are skipped because of an unsupported file type. For example, trying to label a file for classification-only when the file type doesn't support this action, and trying to label files that are automatically excluded. For more information, see [File types supported by the Azure Information Protection client](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-file-types)from the admin guide.
+- Info: Logs only the files that were successfully labeled by the scanner, or would be labeled when the scanner is in discovery mode.
 - Error: Logs only the files that the scanner attempted to label but could not. For example, a justification reason was required but not specified. Or, a file was in use, or the scanner service did not have write access to the file.
 - Off: Disables reporting, which results in the best performance for the scanner.
 
-The local Windows Applications and Services event log, Azure Information Protection contains additional logging information.
-The events include the start and end times for each scanning cycle, when a scanned file has a label applied, and when protection is applied or removed.
-For more information, see Event log IDs and descriptions (https://docs.microsoft.com/information-protection/deploy-use/deploy-aip-scanner#event-log-ids-and-descriptions).
+The local Windows **Applications and Services** event log, **Azure Information Protection** contains additional logging information. The events include the start and end times for each scanning cycle, when a scanned file has a label applied, and when protection is applied or removed. For more information, see [Event log IDs and descriptions](https://docs.microsoft.com/information-protection/deploy-use/deploy-aip-scanner#event-log-ids-and-descriptions).
 
 ```yaml
 Type: ReportLevel
@@ -122,8 +118,8 @@ Accept wildcard characters: False
 ### -Schedule
 Specifies how often the scanner runs on the specified data repositories:
 
-- Manual: A single scan, started using manual trigger, for example Start-AIPScan command. To run a new scan, you must rerun Start-AIPScan command. This option is useful when the ScanMode is set to Discover, so that the scanner runs one time and you can check the results in the report.
-- Continuous: The specified data repositories are repeatedly scanned in sequence and the Azure Information Protection Scanner service is not stopped. Use this option to scan for files that are modified or added to the data repositories. This option is most useful when the ScanMode is set to Enforce because it ensures all files will be scanned.Every hour, the policy is checked for changes and if necessary, downloaded. The new policy is used for the next scan cycle. You can also download the latest changes by restarting the service.
+- Manual: A single scan, started manually. For example, by running [Start-AIPScan](./Start-AIPScan.md). When the schedule is set to manual and you want to run a new scan, you must rerun the Start-AIPScan cmdlet. This manual schedule option is useful when the *Enforce* parameter is set to Off, so that the scanner runs one time and you can check the results in the report.
+- Continuous: The specified data repositories are repeatedly scanned in sequence and the Azure Information Protection Scanner service is not stopped. Use this option to scan for files that are modified or added to the data repositories. This option is most useful when the *Enforce* parameter is set to On because it ensures all files will be scanned. Every hour, the policy is checked for changes and if necessary, downloaded. The new policy is used for the next scan cycle. You can also download the latest changes by restarting the service.
 
 ```yaml
 Type: Schedule
@@ -144,11 +140,9 @@ Specifies what patterns are detected by the scanner:
 - PolicyOnly: The scanner uses the conditions (predefined information types and custom) that you have specified for labels in the Azure Information Protection policy.
 - All: The scanner uses any custom conditions that you have specified for labels in the Azure Information Protection policy, and the list of information types that are available to specify for labels in the Azure Information Protection policy. When you use this option, labels do not need to be configured for any conditions.
 
-Use PolicyOnly for better performance and you known what patterns to detect.
-For this option, you must define conditions for your Azure Information Protection labels that apply for automatic classification.
+Use PolicyOnly for better performance and you known what patterns to detect. For this option, you must define conditions for your Azure Information Protection labels that apply for automatic classification.
 
-Use All if you want to detect all known patterns.
-However, this setting can result in slower performance and longer scanning times for the scanner.
+Use All if you want to detect all known patterns. However, this setting can result in slower performance and longer scanning times for the scanner.
 
 ```yaml
 Type: DiscoverInformationTypes
