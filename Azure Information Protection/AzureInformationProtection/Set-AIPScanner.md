@@ -93,17 +93,31 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AIPScannerRepository](./Add-AIPScannerRepository.md) 
+[Add-AIPScannerRepository](./Add-AIPScannerRepository.md)
 
-[Get-AIPScannerConfiguration](./Get-AIPScannerConfiguration.md) 
+[Add-AIPScannerScannedFileTypes](Add-AIPScannerScannedFileTypes.md)
 
-[Get-AIPScannerRepository](./Get-AIPScannerRepository.md) 
+[Get-AIPScannerConfiguration](./Get-AIPScannerConfiguration.md)
+
+[Get-AIPScannerRepository](./Get-AIPScannerRepository.md)
+
+[Get-AIPScannerStatus](./Get-AIPScannerStatus.md)
 
 [Install-AIPScanner](./Install-AIPScanner.md)
 
 [Remove-AIPScannerRepository](./Remove-AIPScannerRepository.md)
 
-[Set-AIPScannerConfiguration]()
+[Remove-AIPScannerScannedFileTypes](./Remove-AIPScannerScannedFileTypes.md)
+
+[Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration.md)
+
+[Set-AIPScannerRepository](./Set-AIPScannerRepository.md)
+
+[Set-AIPScannerScannedFileTypes](./Set-AIPScannerRepository.md)
+
+[Start-AIPScan](./Start-AIPScan.md)
 
 [Uninstall-AIPScanner](./Uninstall-AIPScanner.md)
+
+[Update-AIPScanner](./Update-AIPScanner.md)
 
