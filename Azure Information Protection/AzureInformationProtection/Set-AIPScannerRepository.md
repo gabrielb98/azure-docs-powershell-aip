@@ -244,11 +244,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Remove-AIPScannerRepository](./Remove-AIPScannerRepository.md)
 
-[Remove-AIPScannerScannedFileTypes](./Remove-AIPScannerScannedFileTypes )
+[Remove-AIPScannerScannedFileTypes](./Remove-AIPScannerScannedFileTypes.md)
 
 [Set-AIPScanner](./Set-AIPScanner.md)
 
-[Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration)
+[Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration.md)
 
 [Set-AIPScannerScannedFileTypes](./Set-AIPScannerRepository.md)
 
@@ -256,4 +256,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Uninstall-AIPScanner](./Uninstall-AIPScanner.md)
 
-[Update-AIPScanner](./Update-AIPScanner)
+[Update-AIPScanner](./Update-AIPScanner.md)
