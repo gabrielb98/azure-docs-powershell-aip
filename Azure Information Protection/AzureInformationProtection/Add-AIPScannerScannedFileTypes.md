@@ -66,7 +66,8 @@ Accept wildcard characters: False
 ### -ScannedFileTypes
 Specifies the file type or array of file types to be added to the configured list of file types.
 
-- If your file types list specifies file types to scan, specify `.<file name extension>` to add a new file type to the list. For example, .docx. If your file types list specifies file types to exclude from scanning, specify `-.<file name extension>` to remove a file type from the list. For example, -.docx.
+- If your file types list specifies file types to scan, specify `.<file name extension>` to add a new file type to the list. For example, .docx. 
+- If your file types list specifies file types to exclude from scanning, specify `-.<file name extension>` to remove a file type from the list. For example, -.docx.
 
 
 ```yaml
