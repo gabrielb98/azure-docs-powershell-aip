@@ -73,10 +73,9 @@ Accept wildcard characters: False
 ### -ScannedFileTypes
 Specifies the file type or array of file types to be included or excluded from scanning.
 
-- To scan all file types, specify `*`.
-- To scan only specific file types, specify `.<file name extension>`. For example, .docx. 
-- To exclude specific file types from being scanned, specify `- .<file name extension>`.For example, - .docx. 
-- To reset the list back to defaults, specify `@()`.
+- If your file types list specifies file types to scan, specify `.<file name extension>` to remove a file type from the list. For example, .docx.
+- If your file types list specifies file types to exclude from scanning, specify `-.<file name extension>` to remove a file type from the list. For example, -.docx.
+
 
 
 ```yaml
