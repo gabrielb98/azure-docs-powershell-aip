@@ -75,8 +75,7 @@ Every file with a discovered information type or a matching custom condition is 
 ### -JustificationMessage
 Specify the justification reason for lowering the classification label or removing protection, if the Azure Information Protection policy requires users to supply this information.
 
-If setting a label triggers the justification and this reason is not supplied, the label is not applied.
-In this case, the status displayed in the error log and debug log is "Skipped" with the comment "Justification required".
+If setting a label triggers the justification and this reason is not supplied, the label is not applied. In this case, the status displayed in the error log and debug log is "Skipped" with the comment "Justification required".
 
 ```yaml
 Type: String
