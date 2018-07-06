@@ -17,7 +17,7 @@ Update-AIPScanner [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Update-AIPScanner cmdlet updates the database schema for the Azure Information Protection scanner. You must run this cmdlet one time after you have upgraded the Azure Information Protection client. If you do not, the scanner service does not run.
+The Update-AIPScanner cmdlet updates the database schema for the Azure Information Protection scanner. You must run this cmdlet one time after you have upgraded the Azure Information Protection client. 
 
 Run this cmdlet with an account that has the database-level role of db_owner for the database that the scanner is using (named AzInfoProtectionScanner). 
 
@@ -63,11 +63,11 @@ For more information, see [about_CommonParameters](https://go.microsoft.com/fwli
 
 [Remove-AIPScannerRepository](./Remove-AIPScannerRepository.md)
 
-[Remove-AIPScannerScannedFileTypes](./Remove-AIPScannerScannedFileTypes.md)
+[Remove-AIPScannerScannedFileTypes](./Remove-AIPScannerScannedFileTypes )
 
 [Set-AIPScanner](./Set-AIPScanner.md)
 
-[Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration.md)
+[Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration)
 
 [Set-AIPScannerRepository](./Set-AIPScannerRepository.md)
 
