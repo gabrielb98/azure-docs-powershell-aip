@@ -17,11 +17,11 @@ Get-AIPScannerStatus [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Get-AIPScannerStatus returns current status of the scanner service for Azure Information Protection. Possible values:
+The Get-AIPScannerStatus returns the current status of the scanner service for Azure Information Protection. Possible values:
 - Offline: The service is not started.
 - Idle: The service is running but not currently scanning. 
 - Running: The service is running and currently scanning files.
-- Finished: The service is running and a scanning cycle has just finished. In the next service status check the service will pass to Idle (for Manual schedule) or Running (for Always schedule).
+- Finished: The service is running and a scanning cycle has just finished. For the next service status, the service will change to Idle (when the schedule is set to Manual) or Running (when the schedule is set to Always).
 - Error: The scanner service is running but it has encountered an error that prevents it from scanning files. For example, the service cannot access the database for the scanner configuration.
 
 
@@ -67,11 +67,11 @@ For more information, see [about_CommonParameters](https://go.microsoft.com/fwli
 
 [Remove-AIPScannerRepository](./Remove-AIPScannerRepository.md)
 
-[Remove-AIPScannerScannedFileTypes](./Remove-AIPScannerScannedFileTypes )
+[Remove-AIPScannerScannedFileTypes](./Remove-AIPScannerScannedFileTypes.md)
 
 [Set-AIPScanner](./Set-AIPScanner.md)
 
-[Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration)
+[Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration.md)
 
 [Set-AIPScannerRepository](./Set-AIPScannerRepository.md)
 
@@ -81,4 +81,4 @@ For more information, see [about_CommonParameters](https://go.microsoft.com/fwli
 
 [Uninstall-AIPScanner](./Uninstall-AIPScanner.md)
 
-[Update-AIPScanner](./Update-AIPScanner)
+[Update-AIPScanner](./Update-AIPScanner.md)
