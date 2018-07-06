@@ -19,38 +19,30 @@ Add-AIPScannerScannedFileTypes [-Repository <String>] -ScannedFileTypes <String[
 ## DESCRIPTION
 The Add-AIPScannerScannedFileTypes cmdlet adds new file types to a list that you have already configured by using [Set-AIPScannerScannedFileTypes](./Set-AIPScannerScannedFileTypes.md). The list specifies which file types to scan or exclude from scanning by the Azure Information Protection scanner. 
 
-To add a new file type to scan, specify `*.<file name extension>`. To exclude a new file type from being scanned, specify `-*.<file name extension>`.
+To add a new file type to scan, specify `.<file name extension>`. To exclude a new file type from being scanned, specify `-.<file name extension>`.
 
 ## EXAMPLES
 
 ### Example 1: Add .docx files to the list of file types to be scanned
 
 ```powershell
-PS C:\> Add-AIPScannerScannedFileTypes  -ScannedFileTypes *.docx
+PS C:\> Add-AIPScannerScannedFileTypes -ScannedFileTypes ".docx"
 
 The operation was completed successfully
 ```
 
 This command adds the file name extension of .docx to the configured list of file types to be scanned for all data repositories that do not have their own file types list.
 
-### Example 2: Add .docx, .txt, and .csv files to the list of file types to be scanned for a file share
 
+
+### Example 2: Add .lnk files to the exclusion list of files to scan
 ```powershell
-PS C:\> Add-AIPScannerScannedFileTypes -Repository \\server\share1 -ScannedFileTypes @("*.docx","*.txt","*.csv")
+PS C:\> Add-AIPScannerScannedFileTypes -ScannedFileTypes "-.lnk"
 
 The operation was completed successfully
 ```
 
-This command adds the file name extensions of .docx, .txt, and .csv to the configured list of files to be scanned for the file share named \\\server\\share1.
-
-### Example 3: Add .dll and .lnk files to the list of file types to be excluded from being scanned
-
-```powershell
-PS C:\> Add-AIPScannerScannedFileType  -ScannedFileTypes @("-*.dll","-*.lnk")
-The operation was completed successfully
-```
-
-This command adds the .dll and .lnk file types to the configured list of file types to be excluded from scanning for all data repositories that do not have their own file types list.
+This command adds the file name extension of .lnk to the exclusion list of files to be scanned. 
 
 ## PARAMETERS
 
@@ -74,8 +66,8 @@ Accept wildcard characters: False
 ### -ScannedFileTypes
 Specifies the file type or array of file types to be added to the configured list of file types.
 
-- If your file types list specifies file types to scan, specify `*.<file name extension>` to add a new file type to the list. For example, \*.docx.
-- If your file types list specifies file types to exclude from scanning, specify `-*.<file name extension>` to remove a file type from the list. For example, \-*.docx.
+- If your file types list specifies file types to scan, specify `.<file name extension>` to add a new file type to the list. For example, .docx. 
+- If your file types list specifies file types to exclude from scanning, specify `-.<file name extension>` to remove a file type from the list. For example, -.docx.
 
 
 ```yaml
