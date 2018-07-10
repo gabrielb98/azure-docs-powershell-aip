@@ -54,7 +54,7 @@
         "Azure Information Protection/**/*.md": "rights-management"
       },
       "feedback_system": {
-        "*": "None"
+        "Azure Information Protection/**/*": "None"
       }      
     },
     "globalMetadata": {
