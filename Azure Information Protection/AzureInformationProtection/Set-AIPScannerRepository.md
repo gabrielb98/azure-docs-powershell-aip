@@ -118,10 +118,9 @@ Specifies the email address for the Owner custom property when a file is classif
 
 If you do not specify this parameter, default values are used for the Owner custom property and the Rights Management owner:
 
-- For files on SharePoint Server, the SharePoint author is used.
+- For files on SharePoint Server, the SharePoint editor is used.
 
-- For files on SharePoint Server that do not have the author property set and for files that are stored on file shares or local folders, the scanner's account is
-used.
+- For files on SharePoint Server that do not have the editor property set and for files that are stored on file shares or local folders, the scanner's account is used.
 
 To remove the currently set Owner custom property and Rights Management owner, specify "".
 
