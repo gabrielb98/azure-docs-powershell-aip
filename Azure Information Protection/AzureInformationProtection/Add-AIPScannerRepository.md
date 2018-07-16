@@ -82,7 +82,7 @@ Note that the path syntax for this scenario uses "Documents" rather than "Shared
 ### -Path
 Specifies a local path, network path, or SharePoint Server URL for the data repository that you want to scan. Wildcards are not supported.
 
-For SharePoint paths: SharePoint Server 2016 and SharePoint Server 2013 are supported. SharePoint 2010 is also supported for customers who have extended support for this version of SharePoint.
+For SharePoint paths: SharePoint Server 2016 and SharePoint Server 2013 are supported. SharePoint Server 2010 is also supported for customers who have extended support for this version of SharePoint.
 
 Examples include C:\Folder\, C:\Folder\Filename, \\\Server\Folder, http://sharepoint.contoso.com/Shared%20Documents/Folder. Paths can include spaces when you enclose the path value with quotes.
 
