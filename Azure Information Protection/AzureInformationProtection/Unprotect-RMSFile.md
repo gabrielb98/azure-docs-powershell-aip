@@ -23,6 +23,8 @@ The **Unprotect-RMSFile** cmdlet removes Rights Management (RMS) protection from
 
 If you are unprotecting a container file, each child is recursively extracted, unprotected, and repackaged. Supported container file types are .zip, .rar, .7z, .msg, and .pst.
 
+For .pst files, 5 GB is the maximum file size supported with this cmdlet.
+
 When you run this cmdlet, you have the following options:
 
 - The file is unprotected in the same folder so that the original protected file and the new unprotected file co-exist.
