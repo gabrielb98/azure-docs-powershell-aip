@@ -33,10 +33,8 @@ Schedule             	: OneTime
 Type                 	: Full
 JustificationMessage 	: Reclassified by Azure Information Protection Scanner
 DiscoverInformationTypes: PolicyOnly
-ScannedFileTypes		: *,"-*.lnk","-*.exe","-*.com","-*.cmd","-*.bat","-*.dll","-*.ini","-*.pst","-*.sca","-*.drm","-*.sys","-*.cpl","-*.inf","-*.drv","-*.dat","-*.tmp","-*.msp","-*.msi","-*.pdb","-*.jar"
+ScannedFileTypes        :*,"-.lnk","-.exe","-.com","-.cmd","-.bat","-.dll","-.ini","-.pst","-.sca","-.drm","-.sys","-.cpl","-.inf","-.drv","-.dat","-.tmp","-.msp","-.msi","-.pdb","-.jar"
 ```
-
-Note: In this example output, the parameters *DiscoverInformationTypes* and *ScannedFileTypes* are available only with the current preview version of the scanner.
 
 This command gets the current configuration settings for the Azure Information Protection scanner. In this example, the output shows that the scanner is using the installation default values. The one exception is the justification message, which has been specified.
 

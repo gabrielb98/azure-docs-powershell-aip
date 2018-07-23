@@ -57,8 +57,6 @@ MatchPolicy         : Off
 ScannedFileTypes    :"*.docx"
 ```
 
-Note: In this example output, the parameters *MatchPolicy* and *ScannedFileTypes* are available only with the current preview version.
-
 This command gets the list of the data repositories that the Azure Information Protection scanner is currently configured to scan. The list displays two paths from SharePoint Server, a file server share, and a local disk and folder.
 
 In the example, the last repository is configured to scan only files that have a file name extension of .docx, by using the [Set-AIPScannerScannedFileTypes](./Set-AIPScannerScannedFileTypes.md) cmdlet. If a repository has not been configured for a file types list, this parameter is not included in the output.
