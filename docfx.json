@@ -52,7 +52,10 @@
       },
       "ms.service": {
         "Azure Information Protection/**/*.md": "rights-management"
-      }
+      },
+      "feedback_system": {
+        "Azure Information Protection/**/*": "None"
+      }      
     },
     "globalMetadata": {
       "showPowerShellPicker": "true",
