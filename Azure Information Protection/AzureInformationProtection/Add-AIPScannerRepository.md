@@ -82,7 +82,7 @@ Note that the path syntax for this scenario uses "Documents" rather than "Shared
 ### -Path
 Specifies a local path, network path, or SharePoint Server URL for the data repository that you want to scan. Wildcards are not supported.
 
-For SharePoint paths: SharePoint Server 2016 and SharePoint Server 2013 are supported.
+For SharePoint paths: SharePoint Server 2016 and SharePoint Server 2013 are supported. For the current preview version of the Azure Information Protection scanner, SharePoint Server 2010 is also supported for customers who have extended support for this version of SharePoint.
 
 Examples include C:\Folder\, C:\Folder\Filename, \\\Server\Folder, http://sharepoint.contoso.com/Shared%20Documents/Folder. Paths can include spaces when you enclose the path value with quotes.
 
@@ -124,10 +124,17 @@ Specifies the email address for the Owner custom property when a file is classif
 
 If you do not specify this parameter, default values are used for the Owner custom property and the Rights Management owner:
 
-- For files on SharePoint Server, the SharePoint author is used.
+For the current GA version of the Azure Information Protection client:
 
-- For files on SharePoint Server that do not have the author property set and for files that are stored on file shares or local folders, the scanner's account is
-used.
+- For files on SharePoint Server, the SharePoint author is used.  
+
+- For files on SharePoint Server, the SharePoint Editor value is used.  
+
+For the current preview version of the Azure Information Protection scanner:
+
+- For files on SharePoint Server, the SharePoint Editor value is used.
+
+- For files on SharePoint Server that do not have the Editor (Last Modified By) property set or if this property is set to a deleted user account, and for files that are stored on file shares or local folders, the scanner's account is used.
 
 To remove the currently set Owner custom property and Rights Management owner, specify "".
 
@@ -237,13 +244,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Add-AIPScannerScannedFileTypes](Add-AIPScannerScannedFileTypes.md)
+
 [Get-AIPScannerConfiguration](./Get-AIPScannerConfiguration.md)
 
 [Get-AIPScannerRepository](./Get-AIPScannerRepository.md)
 
+[Get-AIPScannerStatus](./Get-AIPScannerStatus.md)
+
 [Install-AIPScanner](./Install-AIPScanner.md)
 
 [Remove-AIPScannerRepository](./Remove-AIPScannerRepository.md)
+
+[Remove-AIPScannerScannedFileTypes](./Remove-AIPScannerScannedFileTypes.md)
 
 [Set-AIPScanner](./Set-AIPScanner.md)
 
@@ -251,5 +264,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-AIPScannerRepository](./Set-AIPScannerRepository.md)
 
+[Set-AIPScannerScannedFileTypes](./Set-AIPScannerRepository.md)
+
+[Start-AIPScan](./Start-AIPScan.md)
+
 [Uninstall-AIPScanner](./Uninstall-AIPScanner.md)
+
+[Update-AIPScanner](./Update-AIPScanner.md)
 
