@@ -23,7 +23,7 @@ The configuration settings include whether the scanner is in discovery mode only
 
 ## EXAMPLES
 
-### Example 1: Gets the configuration for the Azure Information Protection scanner for the current GA version
+### Example 1a: Gets the configuration for the Azure Information Protection scanner - GA version
 ```
 PS C:\> Get-AIPScannerConfiguration
 
@@ -47,7 +47,7 @@ This command gets the current configuration settings for the Azure Information P
 - The scanner includes all file types to scan, except for the default file types that the Azure Information Protection client excludes by default.
 
 
-### Example 2: Gets the configuration for the Azure Information Protection scanner for the current preview version
+### Example 1b: Gets the configuration for the Azure Information Protection scanner - preview version
 ```
 PS C:\> Get-AIPScannerConfiguration
 

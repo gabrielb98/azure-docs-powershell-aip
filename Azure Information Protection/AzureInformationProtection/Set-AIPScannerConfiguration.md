@@ -26,7 +26,19 @@ Note: The syntax for this cmdlet in the current preview version from the Azure I
 
 ## EXAMPLES
 
-### Example 1: Configure the Azure Information Protection scanner for a manual schedule and create a report for files that would be labeled
+### Example 1a: Configure the Azure Information Protection scanner to run a one-time discovery and create a report for files that would be labeled - GA version
+```
+PS C:\> Set-AIPScannerConfiguration -Enforce Off -Schedule OneTime -ReportLevel Info
+
+Configuration was set successfully.
+```
+
+This command configures the scanner to run a one-time discovery for files in the specified data repositories, and then create a report that lists the files that meet the conditions to be labeled.
+
+Because these parameters specify the values that are set by the scanner installation, you need to specify them only if you previously specified other values.
+
+
+### Example 1b: Configure the Azure Information Protection scanner for a manual schedule and create a report for files that would be labeled - preview version
 ```
 PS C:\> Set-AIPScannerConfiguration -Enforce Off -Schedule Manual -ReportLevel Info
 
@@ -37,7 +49,19 @@ This command configures the scanner to run a one-time discovery for files in the
 
 Note that because these parameters specify the values that are set by the scanner installation, you need to specify them only if you previously specified other values.
 
-### Example 2: Configure the Azure Information Protection scanner to continuously discover and label files
+### Example 2a: Configure the Azure Information Protection scanner to continuously discover and label files - GA version
+```
+PS C:\> Set-AIPScannerConfiguration -Enforce On -Schedule Continuous
+
+Configuration was set successfully.
+```
+
+
+This command configures the scanner to continuously discover files in the specified data repositories and label the files that meet the conditions in the Azure Information Protection policy.
+
+For these files, they are classified and protected (or have protection removed), according to the label configuration.
+
+### Example 2b: Configure the Azure Information Protection scanner to continuously discover and label files - preview version
 ```
 PS C:\> Set-AIPScannerConfiguration -Enforce On -Schedule Always
 
@@ -48,7 +72,20 @@ This command configures the scanner to continuously discover files in the specif
 
 For these files, they are classified and protected (or have protection removed), according to the label configuration.
 
-### Example 3: Configure the Azure Information Protection scanner to scan and label all files by using a manual schedule, and log all files
+### Example 3a: Configure the Azure Information Protection scanner to scan and label all files one time, and log all files - GA version
+```
+PS C:\> Set-AIPScannerConfiguration -Enforce On -Schedule OneTime -ReportLevel Debug -Type Full
+
+Configuration was set successfully.
+```
+
+This command configures the scanner to do a one-time discovery of all files in the specified data repositories and label the files that meet the conditions in the Azure Information Protection policy.
+
+For these files, they are classified and protected (or have protection removed), according to the label configuration.
+
+Every discovered file and the resulting action is logged in the reports.
+
+### Example 3b: Configure the Azure Information Protection scanner to scan and label all files by using a manual schedule, and log all files - preview version
 ```
 PS C:\> Set-AIPScannerConfiguration -Enforce On -Schedule Manual -ReportLevel Debug -Type Full
 
@@ -61,7 +98,19 @@ For the files that are discovered, they are classified and protected (or have pr
 
 Every discovered file and the resulting action is logged in the reports.
 
-### Example 4: Configure the Azure Information Protection scanner to scan all files and discover all known sensitive information types and custom conditions
+### Example 4a: Configure the Azure Information Protection scanner to scan all files one time and discover all known sensitive information types and custom conditions - GA version
+```
+PS C:\> Set-AIPScannerConfiguration -Enforce Off -Schedule OneTime  -Type Full -DiscoverInformationTypes All
+
+Configuration was set successfully.
+```
+
+This command configures the scanner to do a one-time discovery of all files in the specified data repositories and detect all known sensitive information types that are recognized by the scanner as a result of custom conditions that you configure in the Azure Information Protection policy.
+
+Every file with discovered information type or a matching custom condition is logged in the reports.
+
+
+### Example 4b: Configure the Azure Information Protection scanner to scan all files and discover all known sensitive information types and custom conditions - preview version
 ```
 PS C:\> Set-AIPScannerConfiguration -Enforce Off -Schedule Manual -Type Full -DiscoverInformationTypes All
 
@@ -155,6 +204,17 @@ If this list is not maintained, all files in the specified data repositories are
 
 - Incremental: The scanner maintains a list of previously scanned files so it can scan only new or modified files.
 - Full: All files in the specified data repositories are scanned, after which this parameter is automatically set to Incremental. To scan all files again, you must change this parameter to Full. This setting is most useful when you want all files to be listed in the reports.
+```yaml
+Type: ScanType
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DiscoverInformationTypes
 Specifies what patterns are detected by the scanner:
