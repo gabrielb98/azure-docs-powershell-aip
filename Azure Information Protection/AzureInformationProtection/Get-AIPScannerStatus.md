@@ -29,13 +29,15 @@ Note: This cmdlet requires the preview version of the scanner that is included w
 ## EXAMPLES
 
 ### Example 1: Get the current status of the scanner service
-```powershell
+```
 PS C:\> Get-AIPScannerStatus
-NodeName       ScannerStatus 	LastTimeStamp
---------       ------------- 	-------------
-AIPSCANNODE1            Idle 	7/2/2018 10:04:07 AM
+
+NodeName       ScannerStatus    LastTimeStamp
+--------       -------------    -------------
+AIPSCANNODE1            Idle    7/2/2018 10:04:07 AM
 
 The service is running but not currently scanning. This status was reported 7/2/2018 at 10:04:07 AM.
+```
 
 ## PARAMETERS
 

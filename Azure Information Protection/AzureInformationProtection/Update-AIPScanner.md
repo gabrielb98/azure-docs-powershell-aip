@@ -29,7 +29,7 @@ Note: This cmdlet requires the preview version of the scanner that is included w
 ## EXAMPLES
 
 ### Example 1: Update the database schema for the scanner after an upgrade for the Azure Information Protection client
-```powershell
+```
 PS C:\> Update-AIPScanner
 ```
 

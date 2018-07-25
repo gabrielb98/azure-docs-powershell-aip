@@ -35,7 +35,7 @@ For step-by-step instructions to install, configure, and use the scanner, see [D
 
 ## EXAMPLES
 
-### Example 1:Install the Azure Information Protection Scanner service by using a SQL Server instance
+### Example 1: Install the Azure Information Protection Scanner service by using a SQL Server instance
 ```
 PS C:\> Install-AIPScanner -SqlServerInstance SQLSERVER1\AIPSCANNER
 ```
