@@ -22,7 +22,7 @@ The Set-AIPScannerConfiguration cmdlet sets optional configuration settings for 
 
 The configuration settings include whether the scanner is in discovery mode only or applies labels, whether a file will be relabeled, whether file attributes are changed, what is logged in the reports, whether the scanner runs once or continuously, what justification message to use when required, and the Rights Management owner for protected files.
 
-Note: The syntax for this cmdlet in the current preview version from the Azure Information Protection client has changed, and so has some of the parameters and values. For the current preview, the -Type parameter is removed.
+Note: The syntax for this cmdlet in the preview version of the scanner has changed, and so have some of the parameters and values. For the current preview version of the scanner, the -Type parameter is removed.
 
 ## EXAMPLES
 

@@ -23,7 +23,7 @@ For more information about upgrading the scanner, see [Upgrading the Azure Infor
 
 Run this cmdlet with an account that has the database-level role of db_owner for the database that the scanner is using (named AzInfoProtectionScanner).
 
-Note: This cmdlet is in preview and requires the current preview version of the Azure Information Protection client.
+Note: This cmdlet requires the preview version of the scanner that is included with the current preview version of the Azure Information Protection client.
 
 
 ## EXAMPLES
