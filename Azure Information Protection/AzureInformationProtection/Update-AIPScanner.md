@@ -21,7 +21,10 @@ The Update-AIPScanner cmdlet updates the database schema for the Azure Informati
 
 For more information about upgrading the scanner, see [Upgrading the Azure Information Protection scanner](https://docs.microsoft.com/azure/information-protection/rms-client/client-admin-guide#upgrading-the-azure-information-protection-scanner) from the admin guide.
 
-Run this cmdlet with an account that has the database-level role of db_owner for the database that the scanner is using (named AzInfoProtectionScanner). 
+Run this cmdlet with an account that has the database-level role of db_owner for the database that the scanner is using (named AzInfoProtectionScanner).
+
+Note: This cmdlet is in preview and requires the current preview version of the Azure Information Protection client.
+
 
 ## EXAMPLES
 

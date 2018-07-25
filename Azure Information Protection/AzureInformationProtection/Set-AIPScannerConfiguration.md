@@ -14,13 +14,15 @@ Sets optional configuration for the Azure Information Protection scanner.
 
 ```
 Set-AIPScannerConfiguration [-Enforce <EnforceMode>] [-ReportLevel <ReportLevel>] [-Schedule <Schedule>]
- [-JustificationMessage <String>] [-DiscoverInformationTypes <DiscoverInformationTypes>] [<CommonParameters>]
+ [-JustificationMessage <String>] [-Type <ScanType>] [-DiscoverInformationTypes <DiscoverInformationTypes>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The Set-AIPScannerConfiguration cmdlet sets optional configuration settings for the Azure Information Protection scanner. When you install the scanner, these settings are configured for you with their default installation values. Use this cmdlet to change the settings, which will be used the next time the scanner runs. If you need the changes to take effect immediately, restart the Azure Information Protection Scanner service on the Windows server computer.
 
 The configuration settings include whether the scanner is in discovery mode only or applies labels, whether a file will be relabeled, whether file attributes are changed, what is logged in the reports, whether the scanner runs once or continuously, what justification message to use when required, and the Rights Management owner for protected files.
+
+Note: The syntax for this cmdlet in the current preview version from the Azure Information Protection client has changed, and so has some of the parameters and values. For the current preview, the -Type parameter is removed.
 
 ## EXAMPLES
 
@@ -117,6 +119,15 @@ Accept wildcard characters: False
 ### -Schedule
 Specifies how often the scanner runs on the specified data repositories:
 
+For the current GA version:
+
+- OneTime: A single scan, after which the Azure Information Protection Scanner service is stopped and the schedule is then automatically set to Never. To run a new scan, you must change the schedule back to OneTime, or Continuous. This option is useful when the *Enforce* parameter is set to Off, so that the scanner runs one time and you can check the results in the report.
+- Continuous: The specified data repositories are repeatedly scanned in sequence and the Azure Information Protection Scanner service is not stopped. Use this option to scan for files that are modified or added to the data repositories. This option is most useful when the *Enforce* parameter is set to On because it ensures all files will be scanned.Every hour, the policy is checked for changes and if necessary, downloaded. The new policy is used for the next scan cycle. You can also download the latest changes by restarting the service.
+- Never: The service is stopped and does not scan, even if you try to manually start the Azure Information Protection Scanner service. This value is automatically set after a single scan is complete. To run a new scan, you must set the schedule to OneTime or Continuous.
+
+
+For the current preview version:
+
 - Manual: A single scan, started manually. For example, by running [Start-AIPScan](./Start-AIPScan.md). When the schedule is set to manual and you want to run a new scan, you must rerun the Start-AIPScan cmdlet. This manual schedule option is useful when the *Enforce* parameter is set to Off, so that the scanner runs one time and you can check the results in the report.
 - Continuous: The specified data repositories are repeatedly scanned in sequence and the Azure Information Protection Scanner service is not stopped. Use this option to scan for files that are modified or added to the data repositories. This option is most useful when the *Enforce* parameter is set to On because it ensures all files will be scanned. Every hour, the policy is checked for changes and if necessary, downloaded. The new policy is used for the next scan cycle. You can also download the latest changes by restarting the service.
 
@@ -133,6 +144,17 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -Type
+
+Note: This parameter is not present in the current preview version of the scanner.
+
+Specifies whether the scanner maintains a list of previously scanned files so it can scan only new or modified files since the service started. This is the default installation behavior and offers the best performance.
+
+If this list is not maintained, all files in the specified data repositories are scanned with each scanning cycle.
+
+- Incremental: The scanner maintains a list of previously scanned files so it can scan only new or modified files.
+- Full: All files in the specified data repositories are scanned, after which this parameter is automatically set to Incremental. To scan all files again, you must change this parameter to Full. This setting is most useful when you want all files to be listed in the reports.
 
 ### -DiscoverInformationTypes
 Specifies what patterns are detected by the scanner:
