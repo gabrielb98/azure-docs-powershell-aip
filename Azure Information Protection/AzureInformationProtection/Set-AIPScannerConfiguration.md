@@ -22,7 +22,7 @@ The Set-AIPScannerConfiguration cmdlet sets optional configuration settings for 
 
 The configuration settings include whether the scanner is in discovery mode only or applies labels, whether a file will be relabeled, whether file attributes are changed, what is logged in the reports, whether the scanner runs once or continuously, what justification message to use when required, and the Rights Management owner for protected files.
 
-Note: The syntax for this cmdlet in the preview version of the scanner has changed, and so have some of the parameters and values. For the current preview version of the scanner, the -Type parameter is removed.
+Note: The syntax for this cmdlet in the preview version of the scanner has changed, and so have some of the parameters and values. For the current preview version of the scanner, the *-Type* parameter is removed.
 
 ## EXAMPLES
 
@@ -196,7 +196,7 @@ Accept wildcard characters: False
 
 ### -Type
 
-Note: This parameter is not present in the current preview version of the scanner.
+Note: This parameter is not present in the preview version of the scanner.
 
 Specifies whether the scanner maintains a list of previously scanned files so it can scan only new or modified files since the service started. This is the default installation behavior and offers the best performance.
 

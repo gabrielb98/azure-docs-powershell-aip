@@ -29,8 +29,10 @@ To run this cmdlet non-interactively, see [How to label files non-interactively 
 ## EXAMPLES
 
 ### Example 1: Get the label and protection status of a single file
+
 ```
 PS C:\> Get-AIPFileStatus -Path \\Finance\Projects\Project.docx
+
 FileName        : \\Finance\Projects\Project.docx
 IsLabeled       : True
 MainLabelId     : 074e257c-1234-1234-1234-34a182080e71
@@ -68,6 +70,7 @@ This command gets the label and protection information for just the files that a
 ### Example 4: Count of files with a "Confidential" label
 ```
 PS C:\> (Get-AIPFileStatus -Path C:\Projects\ | Where-Object {$_.MainLabelName -eq 'Confidential'}).Count
+
 5
 ```
 
