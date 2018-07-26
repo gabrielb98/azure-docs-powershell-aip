@@ -112,7 +112,7 @@ Every file with discovered information type or a matching custom condition is lo
 
 ### Example 4b: Configure the Azure Information Protection scanner to scan all files and discover all known sensitive information types and custom conditions - preview version
 ```
-PS C:\> Set-AIPScannerConfiguration -Enforce Off -Schedule Manual -Type Full -DiscoverInformationTypes All
+PS C:\> Set-AIPScannerConfiguration -Enforce Off -Schedule Manual -DiscoverInformationTypes All
 
 Configuration was set successfully.
 ```
