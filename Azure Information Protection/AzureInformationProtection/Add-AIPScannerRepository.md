@@ -128,7 +128,7 @@ For the current GA version of the Azure Information Protection client:
 
 - For files on SharePoint Server, the SharePoint author is used.  
 
-- For files on SharePoint Server, the SharePoint Editor value is used.  
+- For files on SharePoint Server that do not have the author property set and for files that are stored on file shares or local folders, the scanner's account is used..  
 
 For the current preview version of the Azure Information Protection scanner:
 
