@@ -87,7 +87,7 @@ Every discovered file and the resulting action is logged in the reports.
 
 ### Example 3b: Configure the Azure Information Protection scanner to scan and label all files by using a manual schedule, and log all files - preview version
 ```
-PS C:\> Set-AIPScannerConfiguration -Enforce On -Schedule Manual -ReportLevel Debug -Type Full
+PS C:\> Set-AIPScannerConfiguration -Enforce On -Schedule Manual -ReportLevel Debug
 
 Configuration was set successfully.
 ```
