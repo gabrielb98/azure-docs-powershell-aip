@@ -17,7 +17,7 @@ Update-AIPScanner [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Update-AIPScanner cmdlet updates the database schema for the Azure Information Protection scanner and if required, the scanner service account is also granted delete permissions for the scanner database. You must run this cmdlet one time after you have upgraded the Azure Information Protection client version 1.26.6.0 or earlier.
+The Update-AIPScanner cmdlet updates the database schema for the Azure Information Protection scanner and if required, the scanner service account is also granted delete permissions for the scanner database. You must run this cmdlet one time after you have upgraded the Azure Information Protection client from all previous versions.
 
 For more information about upgrading the scanner, see [Upgrading the Azure Information Protection scanner](https://docs.microsoft.com/azure/information-protection/rms-client/client-admin-guide#upgrading-the-azure-information-protection-scanner) from the admin guide.
 
