@@ -74,7 +74,9 @@ This command sets the following configuration for the network-attached storage (
 ## PARAMETERS
 
 ### -Path
-Specifies a local path, network path, or SharePoint Server URL for the data repository that you want to scan. Wildcards are not supported.
+Specifies a local path, network path, or SharePoint Server URL for the data repository that you want to scan. 
+
+Wildcards are not supported and WebDav locations are not supported.
 
 For SharePoint paths: SharePoint Server 2016 and SharePoint Server 2013 are supported.
 
@@ -117,14 +119,6 @@ Accept wildcard characters: False
 Specifies the email address for the Owner custom property when a file is classified, and for the Rights Management owner when a file is protected. For more information about the Rights Management owner, see [Rights Management issuer and Rights Management owner](https://docs.microsoft.com/information-protection/deploy-use/configure-usage-rights#rights-management-issuer-and-rights-management-owner).
 
 If you do not specify this parameter, default values are used for the Owner custom property and the Rights Management owner:
-
-For the current GA version:
-
-- For files on SharePoint Server, the SharePoint author is used.
-
-- For files on SharePoint Server that do not have the author property set and for files that are stored on file shares or local folders, the scanner's account is used.
-
-For the current preview version:
 
 - For files on SharePoint Server, the SharePoint Editor (Last Modified By) value is used.
 

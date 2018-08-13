@@ -166,7 +166,9 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-Specifies a local path, network path, or SharePoint Server URL to the files for which you want to get the label and protection information. Wildcards are not supported.
+Specifies a local path, network path, or SharePoint Server URL to the files for which you want to get the label and protection information.
+
+Wildcards are not supported and WebDav locations are not supported.
 
 For SharePoint paths: SharePoint Server 2013 and SharePoint Server 2016 are supported.
 
