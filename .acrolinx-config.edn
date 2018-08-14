@@ -1,2 +1,2 @@
 {:allowed-branchname-matches ["master" "release-.*" "sandbox-.*"]
- :allowed-filename-matches ["Azure Information Protection"]}
+ :allowed-filename-matches ["Azure-Information-Protection"]}
