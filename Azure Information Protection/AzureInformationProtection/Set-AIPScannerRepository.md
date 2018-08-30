@@ -118,11 +118,36 @@ Accept wildcard characters: False
 ### -DefaultOwner
 Specifies the email address for the Owner custom property when a file is classified, and for the Rights Management owner when a file is protected. For more information about the Rights Management owner, see [Rights Management issuer and Rights Management owner](https://docs.microsoft.com/information-protection/deploy-use/configure-usage-rights#rights-management-issuer-and-rights-management-owner).
 
-If you do not specify this parameter, default values are used for the Owner custom property and the Rights Management owner:
+For the current GA version of the Azure Information Protection client:
 
-- For files on SharePoint Server, the SharePoint Editor (Last Modified By) value is used.
+For files on SharePoint Server, the SharePoint Author value is always used.
 
-- For files on SharePoint Server that do not have the Editor (Last Modified By) property set or if this property is set to a deleted user account, and for files that are stored on file shares or local folders, the scanner's account is used.
+For other files, the user that you specify with this parameter is set as the Owner custom property and Rights Management owner for the following scenarios:
+
+- Files on SharePoint Server that do not have the Author property set.
+
+- Files on SharePoint Server if this property is set to a deleted user account.
+
+- Files that are stored on file shares or local folders.
+
+If you do not specify this parameter for other files, the scanner's account is set as the owner.
+
+To remove the currently set Owner custom property and Rights Management owner, specify "".
+
+
+For the current preview version of the Azure Information Protection scanner:
+
+For files on SharePoint Server, the SharePoint Editor (Last Modified By) value is always used.  
+
+For other files, the user that you specify with this parameter is set as the Owner custom property and Rights Management owner for the following scenarios:
+
+- Files on SharePoint Server that do not have the Editor (Last Modified By) property set. 
+
+- Files on SharePoint Server if this property is set to a deleted user account.
+
+- Files that are stored on file shares or local folders.
+
+If you do not specify this parameter for other files, the scanner's account is set as the owner.
 
 To remove the currently set Owner custom property and Rights Management owner, specify "".
 
