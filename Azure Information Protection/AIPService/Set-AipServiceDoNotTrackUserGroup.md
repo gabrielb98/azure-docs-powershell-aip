@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.RightsManagementServices.Online.Admin.PowerShell.dll-Help.xml
+external help file: AIPService.dll-Help.xml
 online version: http://go.microsoft.com/fwlink/?LinkId=846352
 schema: 2.0.0
 ms.assetid: a168cc5e-4e90-4a6d-8241-2f6d9dc27d7e
