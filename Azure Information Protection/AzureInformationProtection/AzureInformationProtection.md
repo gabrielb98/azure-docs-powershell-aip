@@ -12,7 +12,7 @@ The following list contains links to the help topics for the Microsoft Azure Inf
 
 These cmdlets can be used with the Azure Information Protection service, the Azure Rights Management service (Azure RMS), and Active Directory Rights Management Services (AD RMS). 
 
-The current general availability version of the AzureInformationProtection module is **1.29.5.0**. You might have a later version if you have installed a preview version. For release details, see the [client version release history](/information-protection/rms-client/client-version-release-history). To check the version that you have installed, run the following command: `(Get-Module AzureInformationProtection -ListAvailable).Version`.
+The current general availability version of the AzureInformationProtection module is **1.37.19.0**. You might have a later version if you have installed a preview version. For release details, see the [client version release history](/information-protection/rms-client/client-version-release-history). To check the version that you have installed, run the following command: `(Get-Module AzureInformationProtection -ListAvailable).Version`.
 
 For instructions to use these cmdlets, any current limitations, prerequisites, and scenario examples, see the following documentation from the Azure Information Protection client administrator guide:
 
@@ -41,6 +41,9 @@ Gets the configuration settings for the Azure Information Protection scanner.
 
 ### [Get-AIPScannerRepository](Get-AIPScannerRepository.md)
 Gets a list of data repositories that the Azure Information Protection scanner is configured to scan.
+
+### [Get-AIPScannerStatus](Get-AIPScannerStatus.md)
+Gets the current status of the service for the Azure Information Protection scanner.
 
 ### [Get-RMSFileStatus](Get-RMSFileStatus.md)
 Gets the RMS protection status of a specified file.
@@ -93,9 +96,14 @@ Sets a list of file types to scan or exclude from scanning by the Azure Informat
 ### [Set-RMSServerAuthentication](Set-RMSServerAuthentication.md)
 Sets the server mode, which is required for non-interactive sessions.
 
+### [Start-AIPScan](Start-AIPScan.md)
+Instructs the Azure Information Protection scanner to start a one time scan cycle. 
+
 ### [Uninstall-AIPScanner](Uninstall-AIPScanner.md)
 Uninstalls the Windows Server service for the Azure Information Protection scanner.
 
 ### [Unprotect-RMSFile](Unprotect-RMSFile.md)
 Unprotects a file that is currently protected by RMS.
 
+### [Update-AIPScanner](Update-AIPScanner.md)
+Updates the database schema for the Azure Information Protection scanner.
