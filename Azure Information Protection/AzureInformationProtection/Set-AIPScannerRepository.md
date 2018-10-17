@@ -147,7 +147,9 @@ Accept wildcard characters: False
 ### -OverrideLabel
 Specify whether to apply a different label to a file that's already labeled. By default, the scanner doesn't relabel the files, unless the new label has higher sensitivity than current label, and the initial label was not manually applied by an end user.
 
-If set to On, the scanner replaces an existing label when the configured conditions apply.
+If set to On, the scanner replaces an existing label when the configured conditions apply and the *MatchPolicy* parameter is set to On. 
+
+The setting that you specify for this parameter is not used when the *MatchPolicy* parameter is set to Off.
 
 ```yaml
 Type: OverrideLabel
