@@ -22,7 +22,6 @@ The Get-AIPScannerStatus returns the current status of the scanner service for A
 - Offline: The service is not started.
 - Idle: The service is running but not currently scanning. 
 - Scanning: The service is running and currently scanning files.
-- Finished: The service is running and a scanning cycle has just finished. For the next service status, the service will change to Idle (when the schedule is set to Manual) or Scanning (when the schedule is set to Always).
 - Error: The scanner service is running but it has encountered an error that prevents it from scanning files. For example, the service cannot access the database for the scanner configuration.
 
 ## EXAMPLES
