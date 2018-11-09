@@ -17,7 +17,7 @@ Uninstall-AIPScanner [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Uninstall-AIPScanner cmdlet uninstalls the Windows Server service, Azure Information Protection Scanner. This command does not remove the SQL Server database that was created by running the [Install-AIPScanner](./Install-AIPScanner.md) cmdlet when the Azure Information Protection scanner was installed. If this database is no longer required, you must manually remove it.
+The Uninstall-AIPScanner cmdlet uninstalls the Windows Server service, Azure Information Protection Scanner. This command does not remove the SQL Server database that was created by running the [Install-AIPScanner](./Install-AIPScanner.md) cmdlet when the Azure Information Protection scanner was installed. The name of this database is AzInfoProtection. If this database is no longer required, you must manually remove it.
 
 This command also does not remove the scanner reports located in %localappdata%\Microsoft\MSIP\Scanner\Reports.
 
