@@ -174,7 +174,7 @@ Specify this parameter to leave the date unchanged for documents that you label.
 
 For local or network files, the Last Modified date remains unchanged.
 
-For SharePoint files, the Modified date and Modified By date remains unchanged.
+For SharePoint files, the Modified date and Modified By date remain unchanged.
 
 ```yaml
 Type: PreserveFileDetails
