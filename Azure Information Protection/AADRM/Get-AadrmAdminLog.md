@@ -79,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-Specifies an existing path and file name for the log.
+Specifies an existing path and a file name for the log.
 
 ```yaml
 Type: String
