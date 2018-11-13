@@ -40,7 +40,8 @@ This command generates a log of administrative commands for your Azure RMS tenan
 
 ### Example 3: Generate a log of commands for the last 45 days
 ```
-PS C:\>$days = (Get-Date).AddDays(-45) PS C:\>Get-AadrmAdminLog -Path "C:\Temp\AdminLog.log" -FromTime $days
+PS C:\>$days = (Get-Date).AddDays(-45) 
+PS C:\>Get-AadrmAdminLog -Path "C:\Temp\AdminLog.log" -FromTime $days
 ```
 
 This command generates a log of administrative commands for your Azure RMS tenant, limited to items within the last 45 days (inclusive). The first command sets the variable for the *FromTime* parameter to be today's date minus 45 days. Then the second command gets the entries from the log for this time period, by using this variable.
@@ -78,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-Specifies an existing path for the log.
+Specifies an existing path and a file name for the log.
 
 ```yaml
 Type: String
