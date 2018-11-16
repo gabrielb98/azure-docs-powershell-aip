@@ -19,7 +19,9 @@ Unprotect-RMSFile [-File <String>] [-Folder <String>] [-InPlace] [-Recurse] [-Ou
 ```
 
 ## DESCRIPTION
-The **Unprotect-RMSFile** cmdlet removes Rights Management (RMS) protection from one or more files in a specified folder if those files were previously protected by AD RMS or Azure RMS.
+The **Unprotect-RMSFile** cmdlet removes Rights Management (RMS) protection from one or more files in a specified folder if those files were previously protected by AD RMS or Azure RMS. 
+
+You must have sufficient usage rights (Export or Full Control) or be a super user for your organization to unprotect files. For more information, see [Configuring super users for Azure Rights Management and discovery services or data recovery](https://docs.microsoft.com/azure/information-protection/configure-super-users).
 
 If you are unprotecting a container file, each child is recursively extracted, unprotected, and repackaged. Supported container file types are .zip, .rar, .7z, .msg, and .pst.
 
