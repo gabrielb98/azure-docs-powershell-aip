@@ -8,7 +8,7 @@ ms.assetid: 5B7E7380-C8F4-4113-84D9-B9825F9F2240
 # Add-AipServiceSuperUser
 
 ## SYNOPSIS
-Adds a super user to Information Protection service.
+Adds a super user to Azure Information Protection.
 
 ## SYNTAX
 
@@ -23,9 +23,9 @@ Add-AipServiceSuperUser -ServicePrincipalId <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Add-AipServiceSuperUser** cmdlet adds an individual account to the super user list for your organization. This operation makes the account an Information Protection service owner for all content that is protected by your organization. This means that these super users can decrypt this rights-protected content and remove rights-protection from it, even if an expiration date has been set and expired. Typically, this level of access is required for legal eDiscovery and by auditing teams.
+The **Add-AipServiceSuperUser** cmdlet adds an individual account to the super user list for your organization. This operation makes the account an owner for all content that is protected by your organization. This means that these super users can decrypt this rights-protected content and remove rights-protection from it, even if an expiration date has been set and expired. Typically, this level of access is required for legal eDiscovery and by auditing teams.
 
-However, before a super user can do these operations, the super user feature for Azure Information Protection service must be enabled by using the [Enable-AipServiceSuperUserFeature](./Enable-AipServiceSuperUserFeature.md) cmdlet. By default, the super user feature is not enabled.
+However, before a super user can do these operations, the super user feature for Azure Information Protection must be enabled by using the [Enable-AipServiceSuperUserFeature](./Enable-AipServiceSuperUserFeature.md) cmdlet. By default, the super user feature is not enabled.
 
 Specify the account by email address or service principal ID. To specify a user who does not have an email address, specify their User Principal Name instead. For more information, see [Preparing users and groups for Azure Information Protection](https://docs.microsoft.com/information-protection/plan-design/prepare). 
 
@@ -40,14 +40,14 @@ You must use PowerShell to configure super users; you cannot do this configurati
 PS C:\>Add-AipServiceSuperUser -EmailAddress "EvanNarvaez@Contoso.com"
 ```
 
-This command adds an individual user to your organization's super user list for the Azure Information Protection service, by specifying the user's email address.
+This command adds an individual user to your organization's super user list for Azure Information Protection, by specifying the user's email address.
 
 ### Example 2: Add a service principal as a super user
 ```
 PS C:\>Add-AipServiceSuperUser -ServicePrincipalId "3C367900-44D1-4865-9379-9A3227042C25"
 ```
 
-This command adds a service principal to your organization's super user list for the Azure Information Protection service, by specifying the service principal's AppPrincipalId.
+This command adds a service principal to your organization's super user list for Azure Information Protection, by specifying the service principal's AppPrincipalId.
 
 ## PARAMETERS
 
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

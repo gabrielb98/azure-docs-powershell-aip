@@ -8,7 +8,7 @@ ms.assetid: 5b4a72f5-2df1-4ae1-b020-a3d30f759a8b
 # Clear-AipServiceDoNotTrackUserGroup
 
 ## SYNOPSIS
-Clears the group for the users who must not be tracked by Information Protection service.
+Clears the group for the users who must not be tracked by Azure Information Protection.
 
 ## SYNTAX
 
@@ -17,7 +17,7 @@ Clear-AipServiceDoNotTrackUserGroup
 ```
 
 ## DESCRIPTION
-The Clear-AipServiceDoNotTrackUserGroup cmdlet removes the currently configured group for the users who must not be tracked by the Azure Information Protection service document tracking feature. This configuration might be needed for privacy requirements. For more information, see [Privacy controls for your document tracking site](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-document-tracking#privacy-controls-for-your-document-tracking-site).
+The Clear-AipServiceDoNotTrackUserGroup cmdlet removes the currently configured group for the users who must not be tracked by the Azure Information Protection document tracking feature. This configuration might be needed for privacy requirements. For more information, see [Privacy controls for your document tracking site](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-document-tracking#privacy-controls-for-your-document-tracking-site).
 
 This cmdlet does not delete the specified group from Azure Active Directory. Instead, a group will no longer be used to exempt users from tracking. As a result, all users in your organization will now be tracked when you use the document tracking feature. 
 
