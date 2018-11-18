@@ -8,7 +8,7 @@ ms.assetid: DF116EAD-6AC1-44CF-89E6-5E63D72FF58C
 # Get-AipService
 
 ## SYNOPSIS
-Gets the activation status of Information Protection service for your organization.
+Gets the activation status of the protection service from Azure Information Protection.
 
 ## SYNTAX
 
@@ -17,23 +17,23 @@ Get-AipService [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-AipService** cmdlet gets the activation status of Azure Information Protection service for your organization. The status of Information Protection service is enabled (activated) or disabled (deactivated).
+The **Get-AipService** cmdlet gets the activation status of the protection service from Azure Information Protection for your tenant. The status of the protection service is enabled (activated) or disabled (deactivated).
 
-You can also view this information in a management portal. For more information, see [Activating Azure Information Protection service](https://docs.microsoft.com/information-protection/deploy-use/decommission-deactivate).
+You can also view this information in a management portal. For more information, see [Activating Azure Rights Management](https://docs.microsoft.com/information-protection/deploy-use/activate-service).
 
 ## EXAMPLES
 
-### Example 1: Get the status of Information Protection service
+### Example 1: Get the status of the protection service
 ```
 PS C:\>Get-AipService
 ```
 
-This command gets the activation status of your Information Protection service for your organization.
+This command gets your tenant's activation status of the protection service from Azure Information Protection.
 
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

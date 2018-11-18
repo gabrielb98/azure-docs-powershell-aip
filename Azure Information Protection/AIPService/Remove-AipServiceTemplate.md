@@ -8,7 +8,7 @@ ms.assetid: EAC26502-ECB3-43A0-B468-D166C1E4A9C4
 # Remove-AipServiceTemplate
 
 ## SYNOPSIS
-Deletes an Information Protection service rights policy template.
+Deletes a protection template for Azure Information Protection.
 
 ## SYNTAX
 
@@ -17,13 +17,13 @@ Remove-AipServiceTemplate -TemplateId <Guid> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Remove-AipServiceTemplate** cmdlet deletes an Azure Information Protection service rights policy template.
+The **Remove-AipServiceTemplate** cmdlet deletes a protection template for Azure Information Protection.
 
-You can delete only custom templates. You can set default templates to an archived state but you cannot delete them.
+You can delete only templates that you have created for your organization. You can set default templates to an archived state but you cannot delete them.
 
-Although you can configure Information Protection service templates in the Azure portal, you must use PowerShell to remove these templates.
+Although you can configure protection templates in the Azure portal, you must use PowerShell to remove these templates.
 
-After a template is deleted, content protected with that template might become inaccessible. Users who are super users can continue to access content that was previously protected with a template that is now deleted. For more information about super users, see [Configuring super users for Azure Information Protection service and discovery services or data recovery](https://docs.microsoft.com/information-protection/deploy-use/configure-super-users).
+After a template is deleted, content protected with that template might become inaccessible. Users who are super users can continue to access content that was previously protected with a template that is now deleted. For more information about super users, see [Configuring super users for Azure Information Protection and discovery services or data recovery](https://docs.microsoft.com/information-protection/deploy-use/configure-super-users).
 
 This cmdlet requires the template ID, which you can get with the [Get-AipServiceTemplate](./Get-AipServiceTemplate.md) cmdlet.
 
@@ -37,7 +37,7 @@ This cmdlet performs the following operations:
 
 - Calls the service to remove the template with the specified GUID.
 
-For more information about custom templates, including how to configure them in the Azure portal, see [Configuring and managing templates for Azure Information Protection](https://docs.microsoft.com/information-protection/deploy-use/configure-policy-templates).
+For more information about protection templates, including how to configure them in the Azure portal, see [Configuring and managing templates for Azure Information Protection](https://docs.microsoft.com/information-protection/deploy-use/configure-policy-templates).
 
 ## EXAMPLES
 
@@ -51,7 +51,7 @@ This command deletes the specified template.
 ## PARAMETERS
 
 ### -TemplateId
-Specifies the GUID of the Information Protection service template.
+Specifies the GUID of the protection template.
 
 ```yaml
 Type: Guid
@@ -66,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

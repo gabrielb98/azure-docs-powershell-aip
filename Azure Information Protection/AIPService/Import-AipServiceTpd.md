@@ -8,7 +8,7 @@ ms.assetid: CA482DE6-8575-4161-AD19-97F8A6C87605
 # Import-AipServiceTpd
 
 ## SYNOPSIS
-Imports a TPD from AIP Service for Information Protection service.
+Imports a TPD from AD RMS for Azure Information Protection.
 
 ## SYNTAX
 
@@ -18,17 +18,17 @@ Import-AipServiceTpd [-Force] -TpdFile <String> -ProtectionPassword <SecureStrin
 ```
 
 ## DESCRIPTION
-The **Import-AipServiceTpd** cmdlet imports an Active Directory Information Protection services (AIP Service) trusted publishing domain (TPD) over the Internet into your tenant for the Azure Information Protection service so that you can migrate Information Protection service from on-premises to the cloud. The TPD contains your private key and AIP Service templates.
+The **Import-AipServiceTpd** cmdlet imports an Active Directory Rights Management Services (AD RMS) trusted publishing domain (TPD) over the Internet into your tenant for Azure Information Protection, so that you can migrate your protection service from on-premises to the cloud. The TPD contains your private key and protection templates from AD RMS.
 
 You must use PowerShell to configure your tenant key; you cannot do this configuration by using a management portal.
 
-This cmdlet always sets the key from the imported TPD to an archived state. After you run this command, the key in the imported TPD becomes available to Azure Information Protection service to consume content that AIP Service protected by using this key. Use the [Set-AipServiceKeyProperties](./Set-AipServiceKeyProperties.md) cmdlet to change the state of the imported TPD to Active.
+This cmdlet always sets the key from the imported TPD to an archived state. After you run this command, the key in the imported TPD becomes available to Azure Information Protection to consume content that AD RMS protected by using this key. Use the [Set-AipServiceKeyProperties](./Set-AipServiceKeyProperties.md) cmdlet to change the state of the imported TPD to Active.
 
-Warning: Do not run this cmdlet unless you have read and understood the requirements, restrictions, instructions, and implications of migrating from AIP Service. For more information, see [Migrating from AIP Service to Azure Information Protection](https://docs.microsoft.com/information-protection/plan-design/migrate-from-ad-aipservice-to-azure-rms).
+Warning: Do not run this cmdlet unless you have read and understood the requirements, restrictions, instructions, and implications of migrating from AD RMS. For more information, see [Migrating from AD RMS to Azure Information Protection](https://docs.microsoft.com/information-protection/plan-design/migrate-from-ad-rms-to-azure-rms).
 
-If you migrate templates from your AIP Service as active, you can edit these templates in the Azure portal, or by using PowerShell. You can publish these templates so that users can select them from applications. If the migrated templates are not activated, they can only be used to open documents that they previously protected.
+If you migrate templates from AD RMS as active, you can edit these templates in the Azure portal, or by using PowerShell. You can publish these templates so that users can select them from applications. If the migrated templates are not activated, they can only be used to open documents that they previously protected.
 
-You must use the AIP Service management console to export the TPD. If you use a hardware security module (HSM) for your keys, you must first repackage the TPD keys by using the Azure Key Vault BYOK tools. You can download these tools from the [Microsoft Download Site](http://www.microsoft.com/download/details.aspx?id=45345). For more information, see [How to generate and transfer HSM-protected keys for Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-hsm-protected-keys).
+You must use the AD RMS management console to export the TPD. If you use a hardware security module (HSM) for your keys, you must first repackage the TPD keys by using the Azure Key Vault BYOK tools. You can download these tools from the [Microsoft Download Site](https://www.microsoft.com/download/details.aspx?id=45345). For more information, see [How to generate and transfer HSM-protected keys for Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-hsm-protected-keys).
 
 ## EXAMPLES
 
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -FriendlyName
-Specifies the friendly name of a trusted publishing domain (TPD) and the SLC key that you imported from AIP Service. If users run Office 2016 or Office 2013, specify the same **Friendly name** value that is set for the AIP Service cluster properties on the **Server Certificate** tab.
+Specifies the friendly name of a trusted publishing domain (TPD) and the SLC key that you imported from AD RMS. If users run Office 2016 or Office 2013, specify the same **Friendly name** value that is set for the AD RMS cluster properties on the **Server Certificate** tab.
 
 This parameter is optional. If you don't use it, the key identifier is used instead.
 
@@ -89,9 +89,9 @@ Accept wildcard characters: False
 ```
 
 ### -HsmKeyFile
-Specifies the packaged legacy HSM file that was prepared by using the AIP Service BYOK tools to upload to your tenant key over the Internet.
+Specifies the packaged legacy HSM file that was prepared by using the BYOK tools to upload to your tenant key over the Internet.
 
-This parameter is deprecated now that the Azure Information Protection service supports Azure Key Vault, and this parameter is replaced with *KeyVaultKeyUrl*.
+This parameter is deprecated now that Azure Information Protection supports Azure Key Vault, and this parameter is replaced with *KeyVaultKeyUrl*.
 
 If this parameter and the *KeyVaultKeyUrl* parameter are both supplied, this parameter is ignored.
 
@@ -108,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -KeyVaultKeyUrl
-Specifies the URL of the key in Azure Key Vault that you want to use for your tenant key. This key will be used by the Azure Information Protection service as the root key for all cryptographic operations for your tenant.
+Specifies the URL of the key in Azure Key Vault that you want to use for your tenant key. This key will be used by Azure Information Protection as the root key for all cryptographic operations for your tenant.
 
 ```yaml
 Type: String
@@ -132,8 +132,7 @@ When you use **ConvertTo-SecureString** and the password has special characters,
 **VERBOSE: Trusted Publishing Domain data is corrupted.**
 **VERBOSE: The remote server returned an unexpected response: (400) Bad Request.**
 
-For example, if your password is **Pa$$word**, enter **'Pa$$word'** or **Pa\`$\`$word** so that Windows PowerShell can correctly parse the special characters.
-As a full example, you might type **$pwd = ConvertTo-SecureString 'Pa$$w0rd' -AsPlainText -Force** and then to check that the stored value is correct, type **$pwd** to confirm that **Pa$$word** is displayed.
+For example, if your password is **Pa$$word**, enter **'Pa$$word'** or **Pa\`$\`$word** so that Windows PowerShell can correctly parse the special characters. As a full example, you might type **$pwd = ConvertTo-SecureString 'Pa$$w0rd' -AsPlainText -Force** and then to check that the stored value is correct, type **$pwd** to confirm that **Pa$$word** is displayed.
 
 ```yaml
 Type: SecureString
@@ -148,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### -TpdFile
-Specifies the TPD file exported from your AIP Service server to import to your tenant to use for the Azure Information Protection service.
+Specifies the TPD file exported from your AD RMS clu sterto import to your tenant to use for Azure Information Protection.
 
 ```yaml
 Type: String
@@ -193,7 +192,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -205,6 +204,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-AipServiceKeyProperties](./Set-AipServiceKeyProperties.md)
 
-[Migrating from AIP Service to Azure Information Protection](https://docs.microsoft.com/information-protection/plan-design/migrate-from-ad-aipservice-to-azure-rms)
+[Migrating from AD RMS to Azure Information Protection](https://docs.microsoft.com/information-protection/plan-design/migrate-from-ad-rms-to-azure-rms)
 
 [How to generate and transfer HSM-protected keys for Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-hsm-protected-keys)

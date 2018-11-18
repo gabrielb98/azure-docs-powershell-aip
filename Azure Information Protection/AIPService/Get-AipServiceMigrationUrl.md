@@ -8,7 +8,7 @@ ms.assetid: 46D00FBB-EB69-463B-BFE2-CC754BF71FA4
 # Get-AipServiceMigrationUrl
 
 ## SYNOPSIS
-Gets the migration URL for Information Protection service.
+Gets the migration URL for Azure Information Protection.
 
 ## SYNTAX
 
@@ -17,7 +17,7 @@ Get-AipServiceMigrationUrl [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-AipServiceMigrationUrl** cmdlet gets the migration URL for Azure Information Protection service.
+The **Get-AipServiceMigrationUrl** cmdlet gets the migration URL for Azure Information Protection.
 
 You must use PowerShell to get this information; you cannot get the migration URL by using a management portal.
 
@@ -28,12 +28,12 @@ You must use PowerShell to get this information; you cannot get the migration UR
 PS C:\>Get-AipServiceMigrationUrl
 ```
 
-This command gets the migration URL for Information Protection service.
+This command gets the migration URL for Azure Information Protection.
 
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

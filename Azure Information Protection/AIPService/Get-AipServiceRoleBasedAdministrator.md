@@ -8,7 +8,7 @@ ms.assetid: 528FCC5D-F653-4B40-8D82-F036BAB66E5C
 # Get-AipServiceRoleBasedAdministrator
 
 ## SYNOPSIS
-Gets the role-based administrators for Information Protection service.
+Gets the role-based administrators for Azure Information Protection.
 
 ## SYNTAX
 
@@ -17,9 +17,9 @@ Get-AipServiceRoleBasedAdministrator [-Role <Role>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-AipServiceRoleBasedAdministrator** cmdlet gets the role-based administrators for Azure Information Protection service. You can get the administrators for a specified role.
+The **Get-AipServiceRoleBasedAdministrator** cmdlet gets the role-based administrators for the protection service from Azure Information Protection. You can get the administrators for a specified role.
 
-You must use PowerShell to configure delegated administrative control for the Azure Information Protection service; you cannot do this configuration by using a management portal.
+You must use PowerShell to configure delegated administrative control for the protection service; you cannot do this configuration by using a management portal.
 
 ## EXAMPLES
 
@@ -28,7 +28,7 @@ You must use PowerShell to configure delegated administrative control for the Az
 PS C:\>Get-AipServiceRoleBasedAdministrator
 ```
 
-This command lists the role-based administrators for Information Protection service.
+This command lists the role-based administrators for Azure Information Protection.
 
 ## PARAMETERS
 
@@ -54,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

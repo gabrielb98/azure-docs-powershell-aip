@@ -8,7 +8,7 @@ ms.assetid: B0B5958B-F190-469F-8528-EDB9926792CF
 # Disable-AipService
 
 ## SYNOPSIS
-Deactivates Information Protection service.
+Deactivates the protection service from Azure Information Protection.
 
 ## SYNTAX
 
@@ -17,27 +17,27 @@ Disable-AipService [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Disable-AipService** cmdlet disables the capabilities of Azure Information Protection service for your organization.
+The **Disable-AipService** cmdlet deactivates the protection service from Azure Information Protection for your tenant.
 
 You can also do this action in a management portal. For more information, see [Decommissioning and deactivating Azure Information Protection service](https://docs.microsoft.com/rights-management/deploy-use/decommission-deactivate) on the Microsoft documentation site. 
 
-Deactivate Information Protection service only if you no longer want to protect documents and emails by using Azure Information Protection service  and you no longer need access to content that was previously protected by using Information Protection service.
+Deactivate the protection service only if you no longer want to protect documents and emails by using Azure Information Protection and you no longer need access to content that was previously protected by using Azure Information Protection.
 
-If you accidentally deactivate Azure Information Protection service or change your mind, you can simply activate it again by using the [Enable-AipService](./Enable-AipService.md) cmdlet to resume using the service. However, if you are deactivating Azure Information Protection service because you no longer want to use the service, you might need to take additional steps. For more information, see [Decommissioning and deactivating Azure Information Protection service](https://docs.microsoft.com/rights-management/deploy-use/decommission-deactivate).
+If you accidentally deactivate the protection service or change your mind, you can simply activate it again by using the [Enable-AipService](./Enable-AipService.md) cmdlet to resume using the service. However, if you are deactivating the service because you no longer want to use protection from Azure Informtion Protection, you might need to take additional steps. For more information, see [Decommissioning and deactivating Azure Rights Management](https://docs.microsoft.com/rights-management/deploy-use/decommission-deactivate).
 
 ## EXAMPLES
 
-### Example 1: Disable Information Protection service
+### Example 1: Disable the protection service
 ```
 PS C:\>Disable-AipService
 ```
 
-This command deactivates Information Protection service for your organization.
+This command deactivates the protection service from Azure Information Protection.
 
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -51,4 +51,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-AipService](./Get-AipService.md)
 
-[Azure Information Protection service](https://docs.microsoft.com/rights-management/deploy-use/decommission-deactivate)

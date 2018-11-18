@@ -8,7 +8,7 @@ ms.assetid: D4615C3C-F6B3-42EF-BE69-C4CD4B6BD5A2
 # Set-AipServiceUsageLogStorageAccount
 
 ## SYNOPSIS
-Sets the location for Information Protection service usage logs.
+Sets the location for protection usage logs for Azure Information Protection.
 
 ## SYNTAX
 
@@ -17,13 +17,13 @@ Set-AipServiceUsageLogStorageAccount -StorageAccount <String> -AccessKey <Secure
 ```
 
 ## DESCRIPTION
-The **Set-AipServiceUsageLogStorageAccount** cmdlet sets the Azure storage location for usage logs for Azure Information Protection service.
+The **Set-AipServiceUsageLogStorageAccount** cmdlet sets the location for protection usage logs for Azure Information Protection.
 
 You must use PowerShell to set this information; you cannot do this action by using a management portal.
 
-This cmdlet should be used only if you have usage logs prior to the usage logging change in February 2016. After this date, the only Windows PowerShell cmdlet that you need for AIP Service usage logging is Get-AipServiceUserLog.
+This cmdlet should be used only if you have usage logs prior to the usage logging change in February 2016. After this date, the only PowerShell cmdlet that you need for protection usage logging is [Get-AipServiceUserLog](./Get-AipServiceUserLog.md).
 
-For more information about usage logging, see [Logging and analyzing usage of the Azure Information Protection service](https://docs.microsoft.com/information-protection/deploy-use/log-analyze-usage).
+For more information about usage logging, see [Logging and analyzing usage of the protection service from Azure Information Protection](https://docs.microsoft.com/information-protection/deploy-use/log-analyze-usage).
 
 ## EXAMPLES
 
@@ -33,8 +33,7 @@ PS C:\>$AccessKey = ConvertTo-SecureString "aeDpsMswiYNGNwOaCkOrfPiDtIpjRREosiXN
 PS C:\> Set-AipServiceUsageLogStorageAccount -AccessKey $AccessKey -StorageAccount "AIPServiceStorageAccount"
 ```
 
-The first command uses the [ConvertTo-SecureString](http://go.microsoft.com/fwlink/?LinkID=113291) cmdlet to convert your access key to a secure string, and then stores it in the **$AccessKey** variable.
-For more information, type `Get-Help ConvertTo-SecureString`.
+The first command uses the [ConvertTo-SecureString](http://go.microsoft.com/fwlink/?LinkID=113291) cmdlet to convert your access key to a secure string, and then stores it in the **$AccessKey** variable. For more information, type `Get-Help ConvertTo-SecureString`.
 
 The second command specifies the location for your usage logs.
 
@@ -75,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -89,4 +88,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [ConvertTo-SecureString](http://go.microsoft.com/fwlink/?LinkID=113291)
 
-[Logging and analyzing usage of the Azure Information Protection service](https://docs.microsoft.com/information-protection/deploy-use/log-analyze-usage)
+[Logging and analyzing usage of the protection service from Azure Information Protection](https://docs.microsoft.com/information-protection/deploy-use/log-analyze-usage)

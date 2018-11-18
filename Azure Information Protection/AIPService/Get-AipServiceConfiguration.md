@@ -8,7 +8,7 @@ ms.assetid: 57CD3929-8922-43C2-9056-B5543F1FD0BB
 # Get-AipServiceConfiguration
 
 ## SYNOPSIS
-Gets the Information Protection service configuration of your tenant.
+Gets the Azure Information Protection configuration of your tenant.
 
 ## SYNTAX
 
@@ -17,13 +17,13 @@ Get-AipServiceConfiguration [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-AipServiceConfiguration** cmdlet gets the current Information Protection service configuration of your tenant.
+The **Get-AipServiceConfiguration** cmdlet gets the current Azure Information Protection configuration of your tenant for the protection service.
 
-You must use PowerShell to see a full list of configuration values for your tenant; you cannot get this configuration by using a management portal.
+You must use PowerShell to see a full list of protection configuration values for your tenant; you cannot get this configuration by using a management portal.
 
 ## EXAMPLES
 
-### Example 1: Display Information Protection service configuration
+### Example 1: Display Azure Information Protection configuration for the protection service
 ```
 PS C:\>Get-AipServiceConfiguration
 BPOSId                                    : 9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a
@@ -76,12 +76,12 @@ DocumentTrackingFeatureState              : Enabled
 
 ```
 
-This command displays the current Information Protection service configuration for your organization.
+This command displays the current protection configuration for your tenant.
 
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

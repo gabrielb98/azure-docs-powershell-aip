@@ -8,7 +8,7 @@ ms.assetid: 23E946A0-E6FC-4F8C-8F3B-352AD48CE426
 # Set-AipServiceSuperUserGroup
 
 ## SYNOPSIS
-Sets the super user group for Information Protection service.
+Sets the super user group for Azure Information Protection.
 
 ## SYNTAX
 
@@ -17,7 +17,7 @@ Set-AipServiceSuperUserGroup -GroupEmailAddress <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Set-AipServiceSuperUserGroup** cmdlet specifies a group to use as the super user group for your Azure Information Protection service. Members of this group are then super users, which means they become an Information Protection service owner for all content that is protected by your organization. These super users can decrypt this protected content and remove protection from it, even if an expiration date has been set and expired. Typically, this level of access is required for legal eDiscovery and by auditing teams.
+The **Set-AipServiceSuperUserGroup** cmdlet specifies a group to use as the super user group for Azure Information Protection. Members of this group are then super users, which means they become an owner for all content that is protected by your organization. These super users can decrypt this protected content and remove protection from it, even if an expiration date has been set and expired. Typically, this level of access is required for legal eDiscovery and by auditing teams.
 
 You can specify any group that has an email address, but be aware that for performance reasons, group membership is cached. For information about group requirements, see [Preparing users and groups for Azure Information Protection](https://docs.microsoft.com/information-protection/plan-design/prepare).
 
@@ -27,7 +27,7 @@ An organization can have only one super user group in addition to multiple users
 
 You must use PowerShell to configure super users; you cannot do this configuration by using a management portal.
 
-For more information about super users, see [Configuring super users for Azure Information Protection service and discovery services or data recovery](https://docs.microsoft.com/information-protection/deploy-use/configure-super-users).
+For more information about super users, see [Configuring super users for Azure Information Protection and discovery services or data recovery](https://docs.microsoft.com/information-protection/deploy-use/configure-super-users).
 
 ## EXAMPLES
 
@@ -59,7 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -8,7 +8,7 @@ ms.assetid: 176a6f8e-258b-4bb9-8690-dd1bae05530c
 # Get-AipServiceDoNotTrackUserGroup
 
 ## SYNOPSIS
-Gets the group for the users who must not be tracked by Information Protection service.
+Gets the group for the users who must not be tracked by Azure Information Protection.
 
 ## SYNTAX
 
@@ -17,7 +17,7 @@ Get-AipServiceDoNotTrackUserGroup
 ```
 
 ## DESCRIPTION
-The Get-AipServiceDoNotTrackUserGroup cmdlet gets the email address of the currently configured group for the users who must not be tracked by the Azure Information Protection service document tracking feature. 
+The Get-AipServiceDoNotTrackUserGroup cmdlet gets the email address of the currently configured group for the users who must not be tracked by the Azure Information Protection document tracking feature. 
 
 This configuration might be needed for privacy requirements. For more information, see [Privacy controls for your document tracking site](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-document-tracking#privacy-controls-for-your-document-tracking-site).
 

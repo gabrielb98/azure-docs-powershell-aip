@@ -8,7 +8,7 @@ ms.assetid: 34D77711-B96A-43E8-B5FD-8CF5013EB7E3
 # Enable-AipServiceSuperUserFeature
 
 ## SYNOPSIS
-Enables the super user feature for Information Protection service.
+Enables the super user feature for Azure Information Protection.
 
 ## SYNTAX
 
@@ -17,7 +17,7 @@ Enable-AipServiceSuperUserFeature [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Enable-AipServiceSuperUserFeature** cmdlet enables the super user feature for your organization's Azure Information Protection service. When this feature is enabled, any users that are defined as super users for your organization (individually or by the super user group) can decrypt content that your organization protected, and can remove protection from this content, even if an expiration date has been set and expired. Typically, this level of access is required for legal eDiscovery and by auditing teams. 
+The **Enable-AipServiceSuperUserFeature** cmdlet enables the super user feature for your tenant's protection service from Azure Information Protection. When this feature is enabled, any users that are defined as super users for your organization (individually or by the super user group) can decrypt content that your tenant protected, and can remove protection from this content, even if an expiration date has been set and expired. Typically, this level of access is required for legal eDiscovery and by auditing teams. 
 
 You must use PowerShell to configure super users; you cannot do this configuration by using a management portal.
 
@@ -32,12 +32,12 @@ Caution: We recommend that you enable the super user feature on an as-needed bas
 PS C:\>Enable-AipServiceSuperUserFeature
 ```
 
-This command enables the super user feature for your organization.
+This command enables the super user feature for your tenant.
 
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

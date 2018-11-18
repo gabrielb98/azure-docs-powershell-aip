@@ -8,7 +8,7 @@ ms.assetid: B497A721-7EA4-4876-B2B9-874299BB3C33
 # Get-AipServiceDocumentLog
 
 ## SYNOPSIS
-Gets protection information about documents that are tracked.
+Gets protection information about documents that are tracked by Azure Information Protection.
 
 ## SYNTAX
 
@@ -17,15 +17,15 @@ Get-AipServiceDocumentLog -UserEmail <String> [-FromTime <DateTime>] [-ToTime <D
 ```
 
 ## DESCRIPTION
-The **Get-AipServiceDocumentLog** cmdlet returns protection information about the tracked documents for a specified user if that user protected documents (the Information Protection service issuer) or was the Information Protection service owner for documents, or protected documents were configured to grant access directly to the user. This cmdlet helps to answer the question "How are documents protected for a specified user?" The information returned includes:
+The **Get-AipServiceDocumentLog** cmdlet returns protection information about the tracked documents for a specified user if that user protected documents (the Rights Management issuer) or was the Rights Management owner for documents, or protected documents were configured to grant access directly to the user. This cmdlet helps to answer the question "How are documents protected for a specified user?" The information returned includes:
 
 - The document content ID, with the document name if available.
-- The Information Protection service owner and Information Protection service issuer.
+- The Rights Management owner and Rights Management issuer.
 - The users and groups that were granted access.
 - The protection template ID or specific usage rights that protects the document.
 - Any expiry, offline access, or revocation setting.
 
-For more information about the [Information Protection service owner and Information Protection service issuer](https://docs.microsoft.com/information-protection/deploy-use/configure-usage-rights#rights-management-issuer-and-rights-management-owner).
+For more information about the [Rights Management owner and IRights Management issuer](https://docs.microsoft.com/information-protection/deploy-use/configure-usage-rights#rights-management-issuer-and-rights-management-owner).
 
 You can specify a start time and stop time of entries to include. The output is returned as a list of PowerShell objects in the PowerShell console.
 
@@ -38,7 +38,7 @@ You can alternatively use the document tracking site to get the protection infor
 PS C:\>Get-AipServiceDocumentLog -UserEmail "test@contoso.com" 
 ```
 
-This command gets protection information about the tracked documents for a user who has the email address of "test@contoso.com" and that user is the Information Protection service issuer or Information Protection service owner for the document, or the document was configured to grant access to that user.
+This command gets protection information about the tracked documents for a user who has the email address of "test@contoso.com" and that user is the Rights Management issuer or Rights Management owner for the document, or the document was configured to grant access to that user.
 
 ### Example 2: Get protection information about tracked documents for a user, for a specific time period
 ```
@@ -53,7 +53,7 @@ PS C:\>$documentLogs = Get-AipServiceDocumentLog -UserEmail "test@microsoft.com"
 PS C:\>$documentLogs | Export-Csv 'C:\Temp\DocumentLog.csv' -NoTypeInformation
 ```
 
-The first command gets the protection information about the tracked documents for a user who has the email address of "test@contoso.com" and that user is the Information Protection service issuer or Information Protection service owner for the document, or the document was configured to grant access to that user. The information is saved in a variable.
+The first command gets the protection information about the tracked documents for a user who has the email address of "test@contoso.com" and that user is the Rights Management issuer or Rights Management owner for the document, or the document was configured to grant access to that user. The information is saved in a variable.
 
 The second command then uses the [Export-Csv](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/export-csv?view=powershell-4.0) cmdlet to convert the protection information into .csv format, and saves it to the C:\Temp\DocumentLog.csv file.
 
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserEmail
-Specifies the email address of the user. The cmdlet gets the protection information for documents if that user protected documents (the Information Protection service issuer) or was the Information Protection service owner for documents, or protected documents were configured to grant access directly to the user. Group addresses are not supported with this cmdlet. 
+Specifies the email address of the user. The cmdlet gets the protection information for documents if that user protected documents (the Rights Management issuer) or was the Rights Management owner for documents, or protected documents were configured to grant access directly to the user. Group addresses are not supported with this cmdlet. 
 
 ```yaml
 Type: String

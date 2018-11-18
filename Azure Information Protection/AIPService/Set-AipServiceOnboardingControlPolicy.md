@@ -8,7 +8,7 @@ ms.assetid: AC10D692-604D-40A3-94BE-AAA5008BF9D8
 # Set-AipServiceOnboardingControlPolicy
 
 ## SYNOPSIS
-Sets the user on-boarding control policy for Information Protection service.
+Sets the user on-boarding control policy for Azure Information Protection.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Set-AipServiceOnboardingControlPolicy [-Force] -UseAIPServiceUserLicense <Boolea
 ```
 
 ## DESCRIPTION
-The **Set-AipServiceOnboardingControlPolicy** cmdlet sets the policy that controls user on-boarding for Azure Information Protection service. This cmdlet supports a gradual deployment by controlling which users in your organization can protect content by using Azure Information Protection service.
+The **Set-AipServiceOnboardingControlPolicy** cmdlet sets the policy that controls user on-boarding for Azure Information Protection. This cmdlet supports a gradual deployment by controlling which users in your organization can protect content by using Azure Information Protection.
 
 You must use PowerShell to set this configuration; you cannot do this configuration by using a management portal.
 
@@ -30,37 +30,37 @@ If you use the group membership option, you must specify a security group, which
 
 For more information about the Azure AD PowerShell cmdlets, see [Azure Active Directory PowerShell](https://docs.microsoft.com/powershell/azure/overview?view=azureadps-2.0).
 
-Note: This cmdlet does not stop users from consuming protected content or prevent administrators from configuring services for Azure Information Protection service (for example, Exchange Online transport rules, SharePoint protected libraries, Windows Server FCI). Instead, it is designed for user applications such as Office, so that users do not see the options or templates to use Azure Information Protection service.
+Note: This cmdlet does not stop users from consuming protected content or prevent administrators from configuring services for Azure Information Protection (for example, Exchange Online mail flow rules or SharePoint protected libraries). Instead, it is designed for user applications such as Office, so that users do not see the options or templates to use Azure Information Protection.
 
 ## EXAMPLES
 
-### Example 1: Restrict Azure Information Protection service to users who have a license and are members of a specified group
+### Example 1: Restrict Azure Information Protection to users who have a license and are members of a specified group
 ```
 PS C:\> Set-AipServiceOnboardingControlPolicy -UseAIPServiceUserLicense $True -SecurityGroupObjectId "fba99fed-32a0-44e0-b032-37b419009501" -Scope All
 ```
 
-This command configures the Azure Information Protection service to allow only users who have a license to use Azure Information Protection service to protect content. Further, the command requires users to be members of the security group with the specified object ID. The restriction applies to Windows clients and mobile devices.
+This command configures Azure Information Protection to allow only users who have an Azure Rights Management license to use Azure Information Protection to protect content. Further, the command requires users to be members of the security group with the specified object ID. The restriction applies to Windows clients and mobile devices.
 
-### Example 2: Restrict Azure Information Protection service to users who are members of a specified group
+### Example 2: Restrict Azure Information Protection to users who are members of a specified group
 ```
 PS C:\> Set-AipServiceOnboardingControlPolicy -UseAIPServiceUserLicense $False -SecurityGroupObjectId "fba99fed-32a0-44e0-b032-37b419009501" -Scope All
 ```
 
-This command allows only users that are members of the security group with the specified object ID to protect content by using Azure Information Protection service. The command applies to Windows clients and mobile devices.
+This command allows only users that are members of the security group with the specified object ID to protect content by using Azure Information Protection. The command applies to Windows clients and mobile devices.
 
-### Example 3: Restrict Azure Information Protection service to users who have a license
+### Example 3: Restrict Azure Information Protection to users who have an Azure Rights Management license
 ```
 PS C:\> Set-AipServiceOnboardingControlPolicy -UseAIPServiceUserLicense $True -Scope All
 ```
 
-This command allows only users who have a license assigned to protect content by using Azure Information Protection service. The command applies to Windows clients and mobile devices.
+This command allows only users who have an Azure Rights Management license assigned to protect content by using Azure Information Protection. The command applies to Windows clients and mobile devices.
 
-### Example 4: Do not restrict Azure Information Protection service for users
+### Example 4: Do not restrict Azure Information Protection for users
 ```
 PS C:\> Set-AipServiceOnboardingControlPolicy -UseAIPServiceUserLicense $False -Scope All
 ```
 
-This command allows all users to protect content by using Azure Information Protection service. The command applies to Windows clients and mobile devices.
+This command allows all users to protect content by using Azure Information Protection. The command applies to Windows clients and mobile devices.
 
 ## PARAMETERS
 
@@ -104,9 +104,9 @@ Accept wildcard characters: False
 ### -SecurityGroupObjectId
 Specifies the object ID of a security group in Azure AD. If you try to specify the object ID of a distribution group, you will see an error.
 
-The specified group restricts which users can protect content by using Information Protection service. If you also enable license enforcement, only users that have a license assigned and are members of this specified group can protect content by using Azure Information Protection service.
+The specified group restricts which users can protect content by using Azure Information Protection. If you also enable license enforcement, only users that have an Azure Rights Management license assigned and are members of this specified group can protect content by using Azure Information Protection.
 
-You can use this parameter to implement a phased deployment of Azure Information Protection service even if all users have a license assigned to them.
+You can use this parameter to implement a phased deployment of Azure Information Protection even if all users have an Azure Rights Management license assigned to them.
 
 ```yaml
 Type: Guid
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseAIPServiceUserLicense
-Specifies whether users without a license assigned to them can use Azure Information Protection service to protect content. Users can always use Azure Information Protection service to consume protected content regardless of this setting and their license assignment.
+Specifies whether users without an Azure Rights Management license assigned to them can use Azure Information Protection to protect content. Users can always use Azure Information Protection to consume protected content regardless of this setting and their license assignment.
 
 ```yaml
 Type: Boolean
@@ -168,7 +168,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

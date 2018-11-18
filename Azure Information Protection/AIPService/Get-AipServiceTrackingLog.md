@@ -8,7 +8,7 @@ ms.assetid: B81D7053-016A-44C2-896A-040F6510C7ED
 # Get-AipServiceTrackingLog
 
 ## SYNOPSIS
-Gets tracking information for protected documents.
+Gets tracking information for documents protected by Azure Information Protection.
 
 ## SYNTAX
 
@@ -17,10 +17,10 @@ Get-AipServiceTrackingLog -UserEmail <String> [-FromTime <DateTime>] [-ToTime <D
 ```
 
 ## DESCRIPTION
-The **Get-AipServiceTrackingLog** cmdlet returns tracking information about protected documents for a specified user who protected documents (the Information Protection service issuer) or who accessed protected documents. This cmdlet helps to answer the question "Which protected documents did a specified user track or access?" Information returned includes:
+The **Get-AipServiceTrackingLog** cmdlet returns tracking information about protected documents for a specified user who protected documents (the Rights Management issuer) or who accessed protected documents. This cmdlet helps to answer the question "Which protected documents did a specified user track or access?" Information returned includes:
 
 - The document content ID, with the document name if available.
-- The Information Protection service issuer.
+- The Rights Management issuer.
 - The users who accessed the document, when, and from what location. 
 - What protection template ID or specific usage rights were used to protect the document and whether access was granted or denied.
 

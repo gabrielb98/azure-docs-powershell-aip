@@ -8,7 +8,7 @@ ms.assetid: 7A85A84D-9022-452D-A428-FD0C9400C71A
 # Set-AipServiceTemplateProperty
 
 ## SYNOPSIS
-Updates a property or properties of an Information Protection service template.
+Updates a property or properties of a protection template for Azure Information Protection.
 
 ## SYNTAX
 
@@ -22,19 +22,19 @@ Set-AipServiceTemplateProperty -TemplateId <Guid> [-Names <Hashtable>] [-Descrip
 ```
 
 ## DESCRIPTION
-The **Set-AipServiceTemplateProperty** cmdlet updates a property or properties of a custom Azure Information Protection service template.
+The **Set-AipServiceTemplateProperty** cmdlet updates a property or properties of a protection template for Azure Information Protection.
 
 You can update most of these properties in the Azure portal.
 
-When you use this cmdlet, the template is identified by its GUID, which must refer to an existing custom Information Protection service template. You cannot use this cmdlet to update the default templates.
+When you use this cmdlet, the template is identified by its GUID, which must refer to an existing protection template. You cannot use this cmdlet to update the default templates.
 
 You can use the [Get-AipServiceTemplate](./Get-AipServiceTemplate.md) cmdlet to get the template ID.
 
-Important: When you update properties of a custom template, the existing settings for those properties will be overwritten (not supplemented) without warning, so be sure to specify all the settings that you need for the properties that you are updating.
+Important: When you update properties of a protection template, the existing settings for those properties will be overwritten (not supplemented) without warning, so be sure to specify all the settings that you need for the properties that you are updating.
 
 As a best practice, back up the existing template before you run this cmdlet, by using the [Export-AipServiceTemplate](./Export-AipServiceTemplate.md) cmdlet. Then, if you need to revert to the original configuration, you can use the [Import-AipServiceTemplate](./Import-AipServiceTemplate.md) cmdlet to restore the template.
 
-For more information about custom templates, including how to configure them in the Azure portal, see [Configuring and managing templates for Azure Information Protection](https://docs.microsoft.com/information-protection/deploy-use/configure-policy-templates).
+For more information about protection templates, including how to configure them in the Azure portal, see [Configuring and managing templates for Azure Information Protection](https://docs.microsoft.com/information-protection/deploy-use/configure-policy-templates).
 
 ## EXAMPLES
 
@@ -45,18 +45,18 @@ PS C:\>Set-AipServiceTemplateProperty -TemplateID 28168524-29c3-44f1-9e11-ea6c60
 
 This command sets a template status to Published.
 
-### Example 2: Specify users and rights for a custom template
+### Example 2: Specify users and rights for a protection template
 ```
 PS C:\> $r1 = New-AipServiceRightsDefinition -EmailAddress marketing@contoso.com -Rights "VIEW","EXPORT"
 PS C:\> $r2 = New-AipServiceRightsDefinition -EmailAddress engineering@contoso.com -Rights "VIEW"
 PS C:\>Set-AipServiceTemplateProperty -TemplateID 28168524-29c3-44f1-9e11-ea6c60bb6522 -RightsDefinitions ($r1, $r2)
 ```
 
-This example updates the existing custom template **New Launch - Confidential Content** for new users and rights. Whereas the existing template granted View and Export rights to the marketing department (which should not change), the engineering department must now also have View rights.
+This example updates the existing protection template **New Launch - Confidential Content** for new users and rights. Whereas the existing template granted View and Export rights to the marketing department (which should not change), the engineering department must now also have View rights.
 
 Because specifying the RightsDefinitions parameter overwrites the existing settings, the first rights definition object keeps the existing settings for marketing, and another rights definition object creates the new engineering department rights.
 
-### Example 3: Add new users and rights to a custom template
+### Example 3: Add new users and rights to a protection template
 ```
 PS C:\> $templateid = "7b1db17a-cb1a-41cf-bad7-b452f9d384c1"
 PS C:\> [array]$r = New-AipServiceRightsDefinition -EmailAddress pattiful@contoso.com -Rights "DOCEDIT", "EXTRACT"
@@ -162,7 +162,7 @@ This setting has no effect on templates that are not departmental templates and 
 
 Note that this setting does not affect whether a user can access content that is protected by a departmental template; it only affects the ability for a user to see and therefore select the template itself.
 
-If you have a client application that does not natively support departmental templates, such as Office 2010, you can use a [custom AIP Service template download script](https://go.microsoft.com/fwlink/?LinkId=524506) or other tools to deploy these templates to the local AIP Service client folder. Then, these applications will correctly display the departmental templates:
+If you have a client application that does not natively support departmental templates, such as Office 2010, you can use a custom script other tools to deploy these templates to the local RMS client folder. Then, these applications will correctly display the departmental templates:
 
 - For Office 2010, the client folder is %localappdata%\Microsoft\DRM\Templates.
 - From a client computer that has downloaded all the templates, you can copy and then paste the template files to other computers.
@@ -192,7 +192,7 @@ To specify that a use license must be obtained each time the protected content i
 
 Each organization has a maximum use license validity time, which is 30 days by default and can be configured by using the [Set-AipServiceMaxUseLicenseValidityTime](./Set-AipServiceMaxUseLicenseValidityTime.md). The value that you specify for the *LicenseValidityDuration* parameter must be lower than that value.
 
-This setting can also be overridden by a user for a document when they use the AIP Service sharing application, and select the **Allow me to instantly revoke access to these documents** option, which effectively sets the use license validity time to 0. When there are different values like this, the Azure Information Protection service uses the most restrictive value.
+This setting can also be overridden by a user for a document when they use the Rights Management sharing application, and select the **Allow me to instantly revoke access to these documents** option, which effectively sets the use license validity time to 0. When there are different values like this, Azure Information Protection uses the most restrictive value.
 
 ```yaml
 Type: Int32
@@ -284,7 +284,7 @@ Accept wildcard characters: False
 ```
 
 ### -TemplateId
-Specifies the GUID of an Information Protection service template.
+Specifies the GUID of a protection template.
 
 ```yaml
 Type: Guid
@@ -299,7 +299,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

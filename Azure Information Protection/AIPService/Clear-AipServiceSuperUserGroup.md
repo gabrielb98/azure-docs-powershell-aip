@@ -8,7 +8,7 @@ ms.assetid: F4A1DD4B-C8B9-4FA8-A809-388F01C0A0F0
 # Clear-AipServiceSuperUserGroup
 
 ## SYNOPSIS
-Removes the super user group for your organization.
+Removes the super user group for Azure Information Protection.
 
 ## SYNTAX
 
@@ -17,7 +17,7 @@ Clear-AipServiceSuperUserGroup [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Clear-AipServiceSuperUserGroup** cmdlet removes the super user group for your organization.
+The **Clear-AipServiceSuperUserGroup** cmdlet removes the super user group for Azure Information Protection.
 
 This cmdlet does not affect users that are individually assigned the super user privilege with the [Add-AipServiceSuperUser](./Add-AipServiceSuperUser.md) cmdlet.
 
@@ -30,12 +30,12 @@ You must use PowerShell to configure super users; you cannot do this configurati
 PS C:\>Clear-AipServiceSuperUserGroup
 ```
 
-This command removes the super user group, if one exists, for the organization.
+This command removes the super user group, if one exists, for your tenant.
 
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
