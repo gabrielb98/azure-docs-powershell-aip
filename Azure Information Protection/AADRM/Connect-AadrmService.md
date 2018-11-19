@@ -70,7 +70,7 @@ PS C:\> $authority = "https://login.microsoftonline.com/common";
 PS C:\> $authContext = New-Object Microsoft.IdentityModel.Clients.ActiveDirectory.AuthenticationContext($authority);
 PS C:\> $userCreds = New-Object Microsoft.IdentityModel.Clients.ActiveDirectory.UserCredential($userName, $password);
 PS C:\> $authenticationResult = $authContext.AcquireToken($resourceId,$clientId,$userCreds);
-PS C:\> Import-module aadrm
+PS C:\> Import-Module AIPService
 PS C:\> Connect-Aadrmservice -AccessToken $authenticationResult.AccessToken
 ```
 
