@@ -19,23 +19,25 @@ Unprotect-RMSFile [-File <String>] [-Folder <String>] [-InPlace] [-Recurse] [-Ou
 ```
 
 ## DESCRIPTION
-The **Unprotect-RMSFile** cmdlet removes Rights Management (RMS) protection from one or more files in a specified folder if those files were previously protected by AD RMS or Azure RMS.
+The **Unprotect-RMSFile** cmdlet removes Rights Management (RMS) protection from one or more files in a specified folder if those files were previously protected by AD RMS or Azure RMS. 
 
-If you are unprotecting a container file, each child is recursively extracted, unprotected, and repackaged. Supported container file types are .zip, .rar, .7z, .msg, and .pst.
+You must have sufficient usage rights (Export or Full Control) or be a super user for your organization to unprotect files. For more information, see [Configuring super users for Azure Rights Management and discovery services or data recovery](https://docs.microsoft.com/azure/information-protection/configure-super-users).
+
+If you're unprotecting a container file, each child is recursively extracted, unprotected, and repackaged. Supported container file types are .zip, .rar, .7z, .msg, and .pst.
 
 For .pst files, 5 GB is the maximum file size supported with this cmdlet.
 
 When you run this cmdlet, you have the following options:
 
-- The file is unprotected in the same folder so that the original protected file and the new unprotected file co-exist.
+- The file is unprotected in the same folder so that the original protected file and the new unprotected file coexist.
 
 - The original file remains protected and an unprotected version of the file is created in another location.
 
 - All files in the specified folder are unprotected in the current location, replacing the original files that were protected.
 
-- All files in the specified folder remains protected and an unprotected version of each file is created in another location.
+- All files in the specified folder remain protected and an unprotected version of each file is created in another location.
 
-You can run this command concurrently when you specify a different path for the *LogFile* parameter for each command that runs in parallel. If you do not specify a different log file path and the previous command has not finished, the new command will fail.
+You can run this command concurrently when you specify a different path for the *LogFile* parameter for each command that runs in parallel. If you don't specify a different log file path and the previous command hasn't finished, the new command will fail.
 
 ## EXAMPLES
 
@@ -79,7 +81,7 @@ InputFile     DecryptedFile
 C:\Test.pst   C:\Temp\Test.pst
 ```
 
-This command unprotects a .pst (Personal Storage Table) file. The .pst files are container files that can hold Microsoft Outlook .msg files. In turn, these .msg files can be containers that hold attachments. Because the .pst file is a container, every child file and nested container is also unprotected by this operation.
+This command unprotects a .pst (Personal Storage Table) file. The .pst files are container files that can hold Microsoft Outlook .msg files. In turn, these .msg files can be containers that hold attachments. Because the .pst file is a container, every child file and nested container are also unprotected by this operation.
 
 ### Example 5: Unprotect a .RAR file
 ```
@@ -89,7 +91,7 @@ InputFile     DecryptedFile
 C:\Test.rar   C:\Temp\Test.zip
 ```
 
-This command unprotects a .rar archive file. Because .rar files are container files that hold nested files, these nested files can also be archives. Every child file and nested container is also unprotected by this operation. 
+This command unprotects a .rar archive file. Because .rar files are container files that hold nested files, these nested files can also be archives. Every child file and nested container are also unprotected by this operation. 
 
 Notice that for a .rar input file, the unprotected file is a .zip file.
 
