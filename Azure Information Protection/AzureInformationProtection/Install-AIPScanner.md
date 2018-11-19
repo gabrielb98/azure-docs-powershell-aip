@@ -19,7 +19,7 @@ Install-AIPScanner [-ServiceUserCredentials] <PSCredential> [-SqlServerInstance]
 ## DESCRIPTION
 The Install-AIPScanner cmdlet installs and configures the Azure Information Protection Scanner service on a computer running Windows Server 2016 or Windows Server 2012 R2. The Azure Information Protection scanner uses this service to scan files on data stores that use the Common Internet File System (CIFS) protocol, and on SharePoint Server 2016 and SharePoint Server 2013. By using the conditions that you configure for automatic classification in the Azure Information Protection policy, files that this scanner discovers can then be labeled. Labels apply classification, and optionally, apply protection or remove protection.
 
-For more information about how to configure the Azure Information Protection policy, see [Configuring the Azure Information Protection policy](https://docs.microsoft.com/information-protection/deploy-use/configure-policy).
+For more information about how to configure the Azure Information Protection policy, see [Configuring the Azure Information Protection policy](https://docs.microsoft.com/information-protection/configure-policy).
 
 You must run this cmdlet before you run any other cmdlet for the Azure Information Protection scanner.
 
@@ -31,7 +31,7 @@ Note: If you later need to change the account and database that you specified wh
 
 After you have run this command, specify the data repositories to scan by using the [Add-AIPScannerRepository](./Add-AIPScannerRepository.md) cmdlet. Then check whether you need to change any of the default configuration options that can be set by using the [Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration.md) cmdlet. Before you run the scanner, you must run the [Set-AIPAuthentication](./Set-AIPAuthentication.md) cmdlet one time to sign in to Azure AD for authentication and authorization. 
 
-For step-by-step instructions to install, configure, and use the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](https://docs.microsoft.com/information-protection/deploy-use/deploy-aip-scanner).
+For step-by-step instructions to install, configure, and use the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](https://docs.microsoft.com/information-protection/deploy-aip-scanner).
 
 ## EXAMPLES
 
@@ -66,7 +66,7 @@ Specifies a **PSCredential** object for the service account to run the Azure Inf
 To obtain a PSCredential object, use the [Get-Credential](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/get-credential) cmdlet. For more information, type `Get-Help Get-Cmdlet`. 
 If you do not specify this parameter, you are prompted for the user name and password.
 
-This account must be an Active Directory account. For additional requirements, see [Prerequisites for the Azure Information Protection scanner](https://docs.microsoft.com/information-protection/deploy-use/deploy-aip-scanner#prerequisites-for-the-azure-information-protection-scanner).
+This account must be an Active Directory account. For additional requirements, see [Prerequisites for the Azure Information Protection scanner](https://docs.microsoft.com/information-protection/deploy-aip-scanner#prerequisites-for-the-azure-information-protection-scanner).
 
 ```yaml
 Type: PSCredential
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 ### -SqlServerInstance
 Specifies the SQL Server instance on which to create a database for the Azure Information Protection scanner. 
 
-For information about the SQL Server requirements, see [Prerequisites for the Azure Information Protection scanner](https://docs.microsoft.com/information-protection/deploy-use/deploy-aip-scanner#prerequisites-for-the-azure-information-protection-scanner).
+For information about the SQL Server requirements, see [Prerequisites for the Azure Information Protection scanner](https://docs.microsoft.com/information-protection/deploy-aip-scanner#prerequisites-for-the-azure-information-protection-scanner).
 
 For the default instance, specify the server name. For example: SQLSERVER1. 
 

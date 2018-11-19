@@ -23,8 +23,6 @@ By default, all files are scanned the first time the scanner runs and then, unle
   
 If the scanner schedule is set to Always, this cmdlet is ignored.
 
-Note: This cmdlet requires the preview version of the scanner that is included with the current preview version of the Azure Information Protection client.
-
 ## EXAMPLES
 
 ### Example 1: Initiate immediate one time scan for new and changed files

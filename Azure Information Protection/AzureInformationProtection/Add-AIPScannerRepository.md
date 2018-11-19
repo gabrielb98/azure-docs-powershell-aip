@@ -82,7 +82,7 @@ Note that the path syntax for this scenario uses "Documents" rather than "Shared
 ### -Path
 Specifies a local path, network path, or SharePoint Server URL for the data repository that you want to scan. Wildcards are not supported.
 
-For SharePoint paths: SharePoint Server 2016 and SharePoint Server 2013 are supported. For the current preview version of the Azure Information Protection scanner, SharePoint Server 2010 is also supported for customers who have extended support for this version of SharePoint.
+For SharePoint paths: SharePoint Server 2016 and SharePoint Server 2013 are supported. SharePoint Server 2010 is also supported for customers who have extended support for this version of SharePoint.
 
 Examples include C:\Folder\, C:\Folder\Filename, \\\Server\Folder, http://sharepoint.contoso.com/Shared%20Documents/Folder. Paths can include spaces when you enclose the path value with quotes.
 
@@ -120,26 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultOwner
-Specifies the email address for the Owner custom property when a file is classified, and for the Rights Management owner when a file is protected. For more information about the Rights Management owner, see [Rights Management issuer and Rights Management owner](https://docs.microsoft.com/information-protection/deploy-use/configure-usage-rights#rights-management-issuer-and-rights-management-owner).
-
-For the current GA version of the Azure Information Protection client:
-
-For files on SharePoint Server, the SharePoint Author value is always used.
-
-For other files, the user that you specify with this parameter is set as the Owner custom property and Rights Management owner for the following scenarios:
-
-- Files on SharePoint Server that do not have the Author property set.
-
-- Files on SharePoint Server if this property is set to a deleted user account.
-
-- Files that are stored on file shares or local folders.
-
-If you do not specify this parameter for other files, the scanner's account is set as the owner.
-
-To remove the currently set Owner custom property and Rights Management owner, specify "".
-
-
-For the current preview version of the Azure Information Protection scanner:
+Specifies the email address for the Owner custom property when a file is classified, and for the Rights Management owner when a file is protected. For more information about the Rights Management owner, see [Rights Management issuer and Rights Management owner](https://docs.microsoft.com/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner).
 
 For files on SharePoint Server, the SharePoint Editor (Last Modified By) value is always used.  
 
@@ -171,7 +152,9 @@ Accept wildcard characters: False
 ### -OverrideLabel
 Specify whether to apply a different label to a file that's already labeled. By default, the scanner doesn't relabel the files, unless the new label has higher sensitivity than current label, and the initial label was not manually applied by an end user.
 
-If set to On, the scanner replaces an existing label when the configured conditions apply.
+If set to On, the scanner replaces an existing label when the configured conditions apply and the *MatchPolicy* parameter is set to On. 
+
+The setting that you specify for this parameter is not used when the *MatchPolicy* parameter is set to Off.
 
 ```yaml
 Type: OverrideLabel
@@ -191,7 +174,7 @@ Specify this parameter to leave the date unchanged for documents that you label.
 
 For local or network files, the Last Modified date remains unchanged.
 
-For SharePoint files, the Modified date and Modified By date remains unchanged.
+For SharePoint files, the Modified date and Modified By date remain unchanged.
 
 ```yaml
 Type: PreserveFileDetails
@@ -230,7 +213,7 @@ Accept wildcard characters: False
 
 ### -MatchPolicy
 
-Set this parameter to On to inspect and the files for the conditions defined in the Azure Information Protection policy. 
+Set this parameter to On to inspect the files for the conditions defined in the Azure Information Protection policy. 
  
 Set this parameter to Off to apply a default label to all files in the data repository, without inspecting the files for any conditions in the Azure Information Protection policy. If you have set the *DefaultLabelId* to set a default label for this data repository, that label will be applied. If no default label is configured for the data repository, the default label configured in the Azure Information Protection policy is used.
 

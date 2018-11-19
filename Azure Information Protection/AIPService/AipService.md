@@ -1,5 +1,5 @@
 ---
-Module Name: AADRM
+Module Name: AIPService
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 Download Help Link: N/A
 Help Version: 2.13.0.0
@@ -7,239 +7,239 @@ Locale: en-US
 ms.assetid: 0B91D740-D2BD-4D57-9E21-C582C9BE2CCA
 ---
 
-# AADRM Module
+# AIPService Module
 ## Description
-This topic displays help topics for the cmdlets that administer the Azure Information Protection service (AIP Service) service for Azure Information Protection.
+This page displays help links for the cmdlets that administer the protection service from Azure Information Protection.
 
-These PowerShell cmdlets let you administer the Azure Information Protection service from the command line. Although this enables automation, it also supports reliable and repeated processes to help reduce administrative overheads. In addition, advanced configurations and some operations require this PowerShell module.
+These PowerShell cmdlets let you administer Azure Information Protection from the command line. Although this enables automation, it also supports reliable and repeated processes to help reduce administrative overheads. In addition, advanced configurations and some operations require this PowerShell module.
 
-For more information about when you must use these PowerShell cmdlets and to see groupings of cmdlets by administration tasks, see [Administering the Azure Information Protection service by Using Windows PowerShell](/information-protection/deploy-use/administer-powershell).
+For more information about when you must use these PowerShell cmdlets and to see groupings of cmdlets by administration tasks, see [Administering the protection service from Azure Information Protection by using PowerShell](/information-protection/deploy-use/administer-powershell).
 
 >**Tip**
 >
 >If you do not see the cmdlet or options that are documented, make sure that you have [installed the latest version of the module](/information-protection/deploy-use/install-powershell).
 >
->The current version is **2.13.1.0**. To check the version you have installed, run: `(Get-Module aadrm -ListAvailable).Version` If this command or any cmdlet from this module fails to run, first run **Import-Module AADRM**.
+>The current version is **1.0.0.0**. To check the version you have installed, run: `(Get-Module aadrm -ListAvailable).Version` If this command or any cmdlet from this module fails to run, first run **Import-Module AIPService**.
 
 
 The .dll file for this module is *AIPService.dll*.
 
-## AADRM cmdlets
+## AIPService cmdlets
 
 ### [Add-AipServiceRoleBasedAdministrator](./Add-AipServiceRoleBasedAdministrator.md)
-Grants administrative rights to Information Protection service.
+Grants administrative rights to Azure Information Protection.
 
 
 ### [Add-AipServiceSuperUser](./Add-AipServiceSuperUser.md)
-Adds a super user to Information Protection service.
+Adds a super user to Azure Information Protection.
 
 
 ### [Add-AipServiceTemplate](./Add-AipServiceTemplate.md)
-Creates an Information Protection service template.
+Creates a protection template for Azure Information Protection.
 
 
 ### [Clear-AipServiceDoNotTrackUserGroup](./Clear-AipServiceDoNotTrackUserGroup.md)
-Clears the group for the users who must not be tracked by Information Protection service.
+Clears the group for the users who must not be tracked by Azure Information Protection.
 
 
 ### [Clear-AipServiceSuperUserGroup](./Clear-AipServiceSuperUserGroup.md)
-Removes the super user group for your organization.
+Removes the super user group for Azure Information Protection.
 
 
 ### [Connect-AipService](./Connect-AipService.md)
-Connects to Information Protection service.
+Connects to Azure Information Protection.
 
 
 ### [Convert-AipServiceKeyToKeyVault](./Convert-AipServiceKeyToKeyVault.md)
-Changes the location of a legacy customer-managed key in Azure Information Protection service with the location of a customer-managed key in Azure Key Vault.
+Changes the location of a legacy customer-managed key in Azure Information Protection with the location of a customer-managed key in Azure Key Vault.
 
 
 ### [Disable-AipServiceDevicePlatform](./Disable-AipServiceDevicePlatform.md)
-Disables Information Protection service support for device platforms.
+Disables protection support from Azure Information Protection for device platforms.
 
 
 ### [Disable-AipServiceDocumentTrackingFeature](./Disable-AipServiceDocumentTrackingFeature.md)
-Disables document tracking for Information Protection service.
+Disables document tracking for Azure Information Protection.
 
 
 ### [Disable-AipServiceIPCv3](./Disable-AipServiceIPCv3.md)
-Disables the MSIPC v3 platform for Information Protection service.
+Disables the MSIPC v3 platform for Azure Information Protection.
 
 
 ### [Disable-AipServiceSuperUserFeature](./Disable-AipServiceSuperUserFeature.md)
-Disables the super user feature.
+Disables the super user feature for Azure Information Protection.
 
 
 ### [Disable-AipServiceUsageLogFeature](./Disable-AipServiceUsageLogFeature.md)
-Disables the usage log for Information Protection service.
+Disables the protection usage log for Azure Information Protection.
 
 
 ### [Disable-AipService](./Disable-AipService.md)
-Deactivates Information Protection service.
+Deactivates the protection service from Azure Information Protection.
 
 
 ### [Disconnect-AipService](./Disconnect-AipService.md)
-Disconnects from Information Protection service.
+Disconnects from Azure Information Protection.
 
 
 ### [Enable-AipServiceDevicePlatform](./Enable-AipServiceDevicePlatform.md)
-Enables Information Protection service support for device platforms.
+Enables protection support from Azure Information Protection for device platforms.
 
 
 ### [Enable-AipServiceDocumentTrackingFeature](./Enable-AipServiceDocumentTrackingFeature.md)
-Enables document tracking for Information Protection service.
+Enables document tracking for Azure Information Protection.
 
 
 ### [Enable-AipServiceIPCv3](./Enable-AipServiceIPCv3.md)
-Enables the MSIPC v3 platform for Information Protection service.
+Enables the MSIPC v3 platform for Azure Information Protection.
 
 
 ### [Enable-AipServiceSuperUserFeature](./Enable-AipServiceSuperUserFeature.md)
-Enables the super user feature for Information Protection service.
+Enables the super user feature for Azure Information Protection.
 
 
 ### [Enable-AipServiceUsageLogFeature](./Enable-AipServiceUsageLogFeature.md)
-Enables usage logging for Information Protection service.
+Enables protection usage logging for Azure Information Protection.
 
 
 ### [Enable-AipService](./Enable-AipService.md)
-Activates Information Protection service for your organization.
+Activates the protection service for Azure Information Protection.
 
 
 ### [Export-AipServiceTemplate](./Export-AipServiceTemplate.md)
-Exports the properties of a rights policy template to a file.
+Exports the properties of a protection template from Azure Information Protection to a file.
 
 
 ### [Get-AipServiceAdminLog](./Get-AipServiceAdminLog.md)
-Generates logs for all Information Protection service administrative commands.
+Generates logs for all protection commands for Azure Information Protection.
 
 
 ### [Get-AipServiceConfiguration](./Get-AipServiceConfiguration.md)
-Gets the Information Protection service configuration of your tenant.
+Gets the Azure Information Protection configuration of your tenant.
 
 
 ### [Get-AipServiceDevicePlatform](./Get-AipServiceDevicePlatform.md)
-Gets the device platforms in your organization that support Information Protection service.
+Gets the device platforms in your organization that support the protection service from Azure Information Protection.
 
 
 ### [Get-AipServiceDocumentTrackingFeature](./Get-AipServiceDocumentTrackingFeature.md)
-Indicates whether document tracking is enabled or disabled for Information Protection service.
+Indicates whether document tracking is enabled or disabled for Azure Information Protection.
 
 
 ### [Get-AipServiceDocumentLog](./Get-AipServiceDocumentLog.md)
-Gets protection information about documents that are tracked.
+Gets protection information about documents that are tracked by Azure Information Protection.
 
 
 ### [Get-AipServiceDoNotTrackUserGroup](./Get-AipServiceDoNotTrackUserGroup.md)
-Gets the group for the users who must not be tracked by Information Protection service.
+Gets the group for the users who must not be tracked by Azure Information Protection.
 
 
 ### [Get-AipServiceIPCv3](./Get-AipServiceIPCv3.md)
-Displays whether the MSIPC v3 service is enabled or disabled for Information Protection service.
+Displays whether the MSIPC v3 service is enabled or disabled for Azure Information Protection.
 
 
 ### [Get-AipServiceKeys](./Get-AipServiceKeys.md)
-Lists all tenant keys associated with your Information Protection service tenant.
+Lists all Azure Information Protection tenant keys associated with your tenant.
 
 
 ### [Get-AipServiceMaxUseLicenseValidityTime](./Get-AipServiceMaxUseLicenseValidityTime.md)
-Gets the maximum validity time for Information Protection service use licenses.
+Gets the maximum validity time for Rights Management use licenses for Azure Information Protection.
 
 
 ### [Get-AipServiceMigrationUrl](./Get-AipServiceMigrationUrl.md)
-Gets the migration URL for Information Protection service.
+Gets the migration URL for Azure Information Protection.
 
 
 ### [Get-AipServiceOnboardingControlPolicy](./Get-AipServiceOnboardingControlPolicy.md)
-Gets user on-boarding control policy for Information Protection service.
+Gets the user on-boarding control policy for Azure Information Protection.
 
 
 ### [Get-AipServiceRoleBasedAdministrator](./Get-AipServiceRoleBasedAdministrator.md)
-Gets the role-based administrators for Information Protection service.
+Gets the role-based administrators for Azure Information Protection.
 
 
 ### [Get-AipServiceSuperUserFeature](./Get-AipServiceSuperUserFeature.md)
-Gets the status of the super user feature for Information Protection service.
+Gets the status of the super user feature for Azure Information Protection.
 
 
 ### [Get-AipServiceSuperUserGroup](./Get-AipServiceSuperUserGroup.md)
-Gets the super user group for Information Protection service.
+Gets the super user group for Azure Information Protection.
 
 
 ### [Get-AipServiceSuperUser](./Get-AipServiceSuperUser.md)
-Gets the super users for Information Protection service.
+Gets the super users for Azure Information Protection.
 
 
 ### [Get-AipServiceTemplateProperty](./Get-AipServiceTemplateProperty.md)
-Gets the properties of an Information Protection service template.
+Gets the properties of a protection template for Azure Information Protection.
 
 
 ### [Get-AipServiceTemplate](./Get-AipServiceTemplate.md)
-Gets a list of Information Protection service templates.
+Gets a list of protection templates for Azure Information Protection.
 
 
 ### [Get-AipServiceTrackingLog](./Get-AipServiceTrackingLog.md)
-Gets tracking information for protected documents.
+Gets tracking information for documents protected by Azure Information Protection.
 
 
 ### [Get-AipServiceUsageLogFeature](./Get-AipServiceUsageLogFeature.md)
-Deprecated: Gets the status of legacy usage logging for Information Protection service.
+Deprecated: Gets the status of legacy protection usage logging for Azure Information Protection.
 
 
 ### [Get-AipServiceUsageLogLastCounterValue](./Get-AipServiceUsageLogLastCounterValue.md)
-Gets the last counter value for the usage log.
+Gets the last counter value for the protection usage log for Azure Information Protection.
 
 
 ### [Get-AipServiceUsageLogStorageAccount](./Get-AipServiceUsageLogStorageAccount.md)
-Gets the location for usage logs.
+Gets the location for protection usage logs for Azure Information Protection.
 
 
 ### [Get-AipServiceUsageLog](./Get-AipServiceUsageLog.md)
-Downloads Information Protection service logs to local storage.
+Downloads protection logs from Azure Information Protection to local storage.
 
 
 ### [Get-AipServiceUserLog](./Get-AipServiceUserLog.md)
-Downloads Information Protection service user logs to local storage.
+Downloads protection user logs from Azure Information Protection to local storage.
 
 
 ### [Get-AipService](./Get-AipService.md)
-Gets the activation status of Information Protection service for your organization.
+Gets the activation status of the protection service from Azure Information Protection.
 
 
 ### [Import-AipServiceTemplate](./Import-AipServiceTemplate.md)
-Creates a custom Information Protection service policy template.
+Creates a custom protection template for Azure Information Protection.
 
 
 ### [Import-AipServiceTpd](./Import-AipServiceTpd.md)
-Imports a TPD from AIP Service for Information Protection service.
+Imports a TPD from AD RMS for Azure Information Protection.
 
 
 ### [New-AipServiceRightsDefinition](./New-AipServiceRightsDefinition.md)
-Creates a Rights Definition object for Information Protection service.
+Creates a rights definition object for a protection template for Azure Information Protection.
 
 
 ### [Remove-AipServiceRoleBasedAdministrator](./Remove-AipServiceRoleBasedAdministrator.md)
-Removes administrative rights from Information Protection service.
+Removes administrative rights from Azure Information Protection.
 
 
 ### [Remove-AipServiceSuperUser](./Remove-AipServiceSuperUser.md)
-Removes a super user from Information Protection service.
+Removes a super user from Azure Information Protection.
 
 
 ### [Remove-AipServiceTemplate](./Remove-AipServiceTemplate.md)
-Deletes an Information Protection service rights policy template.
+Deletes a protection template for Azure Information Protection.
 
 
 ### [Set-AipServiceDoNotTrackUserGroup](./Set-AipServiceDoNotTrackUserGroup.md)
-Sets a group for the users who must not be tracked by Information Protection service.
+Sets a group for the users who must not be tracked by Azure Information Protection.
 
 
 ### [Set-AipServiceKeyProperties](./Set-AipServiceKeyProperties.md)
-Updates the properties of a tenant key object for Information Protection service.
+Updates the properties of a tenant key object for Azure Information Protection.
 
 
 ### [Set-AipServiceMaxUseLicenseValidityTime](./Set-AipServiceMaxUseLicenseValidityTime.md)
-Sets the maximum validity time for Information Protection service use licenses.
+Sets the maximum validity time for Rights Management use licenses for Azure Information Protection.
 
 
 ### [Set-AipServiceMigrationUrl](./Set-AipServiceMigrationUrl.md)
@@ -247,23 +247,21 @@ Sets the migration URL for Information Protection service.
 
 
 ### [Set-AipServiceOnboardingControlPolicy](./Set-AipServiceOnboardingControlPolicy.md)
-Sets the user on-boarding control policy for Information Protection service.
+Sets the user on-boarding control policy for Azure Information Protection.
 
 
 ### [Set-AipServiceSuperUserGroup](./Set-AipServiceSuperUserGroup.md)
-Sets the super user group for Information Protection service.
+Sets the super user group for Azure Information Protection.
 
 
 ### [Set-AipServiceTemplateProperty](./Set-AipServiceTemplateProperty.md)
-Updates a property or properties of an Information Protection service template.
+Updates a property or properties of a protection template for Azure Information Protection.
 
 
 ### [Set-AipServiceUsageLogStorageAccount](./Set-AipServiceUsageLogStorageAccount.md)
-Sets the location for Information Protection service usage logs.
+Sets the location for protection usage logs for Azure Information Protection.
 
 
 ### [Use-AipServiceKeyVaultKey](./Use-AipServiceKeyVaultKey.md)
-Tells Information Protection service to use a customer-managed tenant key in Azure Key Vault.
-
-
+Tells Azure Information Protection to use a customer-managed tenant key in Azure Key Vault.
 

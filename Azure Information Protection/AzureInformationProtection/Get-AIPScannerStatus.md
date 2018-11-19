@@ -18,13 +18,11 @@ Get-AIPScannerStatus [<CommonParameters>]
 
 ## DESCRIPTION
 The Get-AIPScannerStatus returns the current status of the scanner service for Azure Information Protection. Possible values:
+
 - Offline: The service is not started.
 - Idle: The service is running but not currently scanning. 
-- Running: The service is running and currently scanning files.
-- Finished: The service is running and a scanning cycle has just finished. For the next service status, the service will change to Idle (when the schedule is set to Manual) or Running (when the schedule is set to Always).
+- Scanning: The service is running and currently scanning files.
 - Error: The scanner service is running but it has encountered an error that prevents it from scanning files. For example, the service cannot access the database for the scanner configuration.
-
-Note: This cmdlet requires the preview version of the scanner that is included with the current preview version of the Azure Information Protection client.
 
 ## EXAMPLES
 

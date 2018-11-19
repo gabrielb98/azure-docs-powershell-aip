@@ -23,31 +23,7 @@ The configuration settings include whether the scanner is in discovery mode only
 
 ## EXAMPLES
 
-### Example 1a: Gets the configuration for the Azure Information Protection scanner - GA version
-```
-PS C:\> Get-AIPScannerConfiguration
-
-Enforce	                 : Off
-ReportLevel              : Info
-Schedule                 : OneTime
-Type                     : Full
-JustificationMessage     : Reclassified by Azure Information Protection Scanner
-DiscoverInformationTypes : PolicyOnly
-ScannedFileTypes         : *,"-.lnk","-.exe","-.com","-.cmd","-.bat","-.dll","-.ini","-.pst","-.sca","-.drm","-.sys","-.cpl","-.inf","-.drv","-.dat","-.tmp","-.msp","-.msi","-.pdb","-.jar"
-```
-
-This command gets the current configuration settings for the Azure Information Protection scanner. In this example, the output shows that the scanner is using the installation default values. The one exception is the justification message, which has been specified.
-
-- The scanner is in discovery mode for reporting purposes only. Labels are not applied to files.
-- The reports contains details of files that were successfully labeled.
-- The scanner will run one time and then stop the service, rather than run continuously.
-- The scanner will run discovery on all files
-- The string "Reclassified by Azure Information Protection Scanner" is supplied and logged when the scanner applies a label that requires justification.
-- The scanner looks for conditions and patterns that are defined in your Azure Information Protection policy
-- The scanner includes all file types to scan, except for the default file types that the Azure Information Protection client excludes by default.
-
-
-### Example 1b: Gets the configuration for the Azure Information Protection scanner - preview version
+### Example 1: Gets the configuration for the Azure Information Protection scanner
 ```
 PS C:\> Get-AIPScannerConfiguration
 
