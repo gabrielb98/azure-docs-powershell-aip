@@ -8,7 +8,7 @@ ms.assetid: 48A3F450-B87B-43DB-8723-8917FD5E0B7B
 # Remove-AipServiceSuperUser
 
 ## SYNOPSIS
-Removes a super user from Information Protection service.
+Removes a super user from Azure Information Protection.
 
 ## SYNTAX
 
@@ -32,7 +32,7 @@ You must use PowerShell to configure super users; you cannot do this configurati
 PS C:\>Remove-AipServiceSuperUser -EmailAddress "EvanNarvaez@Contoso.com"
 ```
 
-This command removes an individually specified super user from Information Protection service by specifying that user's email address.
+This command removes an individually specified super user from Azure Information Protection by specifying that user's email address.
 
 ## PARAMETERS
 
@@ -54,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

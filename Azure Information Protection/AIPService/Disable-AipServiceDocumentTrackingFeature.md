@@ -8,7 +8,7 @@ ms.assetid: 5C8ED12E-4A84-446E-962F-5E886CB40DF9
 # Disable-AipServiceDocumentTrackingFeature
 
 ## SYNOPSIS
-Disables document tracking for Information Protection service.
+Disables document tracking for Azure Information Protection.
 
 ## SYNTAX
 
@@ -21,14 +21,14 @@ The **Disable-AipServiceDocumentTrackingFeature** cmdlet disables the document t
 
 You must use PowerShell to disable document tracking; you cannot do this configuration by using a management portal.
 
-Document tracking is enabled by default for an organization using the Azure Information Protection service from Azure Information Protection, but you might need to disable this feature for privacy requirements that are specific to your organization or region. This setting is organization-wide; you cannot disable document tracking for some users in your organization and not for others.
+Document tracking is enabled by default for an organization using the protection service from Azure Information Protection, but you might need to disable this feature for privacy requirements that are specific to your organization or region. This setting is organization-wide; you cannot disable document tracking for some users in your organization and not for others.
 
 When document tracking is disabled, users still see options that refer to tracking and revocation in applications such as Word and File Explorer, and the Azure Information Protection client. However, when users access the document tracking site, they see the following message:
 
 **Your administrator has disabled document tracking for your organization.**
 **Contact your administrator for details.**
 
-You can disable document tracking either before you activate the Azure Information Protection service, or after. After you have disabled document tracking, you can re-enable it at any time.
+You can disable document tracking either before you activate the protection service for Azure Information Protection, or after. After you have disabled document tracking, you can re-enable it at any time.
 
 For additional information about the document tracking site, see [Configuring and using document tracking for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-document-tracking) from the Azure Information Protection client administrator guide.
 
@@ -89,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

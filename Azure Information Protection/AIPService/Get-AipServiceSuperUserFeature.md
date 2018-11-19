@@ -8,7 +8,7 @@ ms.assetid: 4897E667-E8EE-47A0-9F43-2FA3A76D9D38
 # Get-AipServiceSuperUserFeature
 
 ## SYNOPSIS
-Gets the status of the super user feature for Information Protection service.
+Gets the status of the super user feature for Azure Information Protection.
 
 ## SYNTAX
 
@@ -17,11 +17,11 @@ Get-AipServiceSuperUserFeature [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-AipServiceSuperUserFeature** cmdlet gets the status of the super user feature for Azure Information Protection service in your organization. The super user feature can be enabled or disabled. By default, it is disabled.
+The **Get-AipServiceSuperUserFeature** cmdlet gets the status of the super user feature for Azure Information Protection for your organization. The super user feature can be enabled or disabled. By default, it is disabled.
 
 You must use PowerShell to configure super users; you cannot do this configuration by using a management portal.
 
-For more information about super users, see [Configuring super users for Azure Information Protection service and discovery services or data recovery](https://docs.microsoft.com/information-protection/deploy-use/configure-super-users) on the Microsoft documentation site.
+For more information about super users, see [Configuring super users for Azure Information Protection and discovery services or data recovery](https://docs.microsoft.com/information-protection/deploy-use/configure-super-users) on the Microsoft documentation site.
 
 ## EXAMPLES
 
@@ -36,7 +36,7 @@ This command gets the status (Enabled or Disabled) of the super user feature in 
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -50,4 +50,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Enable-AipServiceSuperUserFeature](./Enable-AipServiceSuperUserFeature.md)
 
-[Azure Information Protection service and discovery services or data recovery](https://docs.microsoft.com/information-protection/deploy-use/configure-super-users)
+[Azure Information Protection and discovery services or data recovery](https://docs.microsoft.com/information-protection/deploy-use/configure-super-users)

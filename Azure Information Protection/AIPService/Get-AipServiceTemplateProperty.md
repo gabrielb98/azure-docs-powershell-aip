@@ -8,7 +8,7 @@ ms.assetid: E7942746-0F62-4D15-AD46-5DB8235FAF62
 # Get-AipServiceTemplateProperty
 
 ## SYNOPSIS
-Gets the properties of an Information Protection service template.
+Gets the properties of a protection template for Azure Information Protection.
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ Get-AipServiceTemplateProperty -TemplateId <Guid> [-Names] [-Descriptions] [-Rig
 ```
 
 ## DESCRIPTION
-The **Get-AipServiceTemplateProperty** cmdlet gets specified properties of an Azure Information Protection service template, by using the *TemplateId* parameter.
+The **Get-AipServiceTemplateProperty** cmdlet gets specified properties of a protection template for Azure Information Protection, by using the *TemplateId* parameter.
 
 Similar configuration information can also be viewed in the Azure portal, but this cmdlet also includes the template GUID.
 
@@ -32,7 +32,7 @@ You can query properties of a default template, or a custom template. For more i
 PS C:\>Get-AipServiceTemplateProperty -TemplateId 28168524-29c3-44f1-9e11-ea6c60bb6428 -Descriptions -RightsDefinitions
 ```
 
-This command gets the description and the usage rights for all users or groups that are configured for the specified Information Protection service template.
+This command gets the description and the usage rights for all users or groups that are configured for the specified protection template.
 
 ### Example 2: For all templates, get the name, the usage rights, whether a default template, and whether published or archived
 ```
@@ -124,7 +124,7 @@ If set to False, no users see and therefore cannot select the template in applic
 
 This setting has no effect on templates that are not departmental templates and also has no effect on applications that natively support departmental templates.
 
-This parameter is functionally the equivalent of the **Show this template to all users when the applications do not support user identity** check box when you configure **APPLICATION COMPATIBILITY** in the Azure classic portal.
+This parameter is functionally the equivalent of the **Show this template to all users when the applications do not support user identity** check box when you configure **APPLICATION COMPATIBILITY** in the Azure classic portal (now retired). There is no equivalent setting in the Azure portal.
 
 ```yaml
 Type: SwitchParameter
@@ -239,7 +239,7 @@ Accept wildcard characters: False
 ```
 
 ### -TemplateId
-Specifies the GUID of an Information Protection service template.
+Specifies the GUID of a protection template.
 
 You can use the [Get-AipServiceTemplate](./Get-AipServiceTemplate.md) cmdlet to obtain the template ID of all templates.
 
@@ -256,7 +256,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

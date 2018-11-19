@@ -8,7 +8,7 @@ ms.assetid: 60B3F42C-4FEF-435B-AE28-771932FA6251
 # Enable-AipService
 
 ## SYNOPSIS
-Activates Information Protection service for your organization.
+Activates the protection service for Azure Information Protection.
 
 ## SYNTAX
 
@@ -17,31 +17,27 @@ Enable-AipService [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Enable-AipService** cmdlet enables your organization to use Azure Information Protection service when you have a subscription that includes this service. 
+The **Enable-AipService** cmdlet activates the protection service from Azure Information Protection so that all users in your tenant can protect documents and emails. 
 
-You can also do this action in a management portal. For more information, see [Activating Azure Information Protection service](https://docs.microsoft.com/information-protection/deploy-use/decommission-deactivate). 
+You can also do this action in a management portal. For more information, see [Activating the protection service from Azure Information Protection](https://docs.microsoft.com/information-protection/deploy-use/activate-service). 
 
-The Azure Information Protection service must be activated before you can begin to use information rights management(IRM) features in Office applications and before you can protect documents and emails by using other applications that use Azure Information Protection service.
+When you activate the protection service, you turn on this service for all rights-enabled applications and services for your tenant, but some applications and services and might need further configuration before they can use the protection cpabilities from Azure Information Protection.
 
-When you activate the Information Protection service, you turn on this service for all rights-enabled applications and services, but some applications and services and might need further configuration before they can use Azure Information Protection service.
-
-For more information about activating the Information Protection service and a link to information about the service plans that include Azure Information Protection service, see [Activating Azure Information Protection service](https://docs.microsoft.com/information-protection/deploy-use/activate-service).
-
-For more information about other deployment steps that might be needed, see the [deployment roadmap](https://docs.microsoft.com/information-protection/plan-design/deployment-roadmap).
+For information about other deployment steps that might be needed, see the [deployment roadmap](https://docs.microsoft.com/information-protection/plan-design/deployment-roadmap).
 
 ## EXAMPLES
 
-### Example 1: Enable Information Protection service
+### Example 1: Enable the protection service
 ```
 PS C:\>Enable-AipService
 ```
 
-This command activates Information Protection service for your organization.
+This command activates the protection service for Azure Information Protection.
 
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -55,5 +51,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-AipService](./Get-AipService.md)
 
-[Activating Azure Information Protection service](https://docs.microsoft.com/information-protection/deploy-use/activate-service)
+[Activating the protection service from Azure Information Protection](https://docs.microsoft.com/information-protection/deploy-use/activate-service)
 

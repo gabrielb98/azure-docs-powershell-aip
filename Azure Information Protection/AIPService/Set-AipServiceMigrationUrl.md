@@ -8,7 +8,7 @@ ms.assetid: ECE82C74-2902-475D-9DCE-6E9F3842024D
 # Set-AipServiceMigrationUrl
 
 ## SYNOPSIS
-Sets a migration URL for Information Protection service.
+Sets a migration URL for Azure Information Protection.
 
 ## SYNTAX
 
@@ -17,11 +17,11 @@ Set-AipServiceMigrationUrl -Domain <String> [-Force] [-WhatIf] [-Confirm] [<Comm
 ```
 
 ## DESCRIPTION
-The **Set-AipServiceMigrationUrl** cmdlet sets a migration URL for Azure Information Protection service.
+The **Set-AipServiceMigrationUrl** cmdlet sets a migration URL for Azure Information Protection.
 
 You must use PowerShell to set the migration URL; you cannot do this action by using a management portal.
 
-Setting a migration URL for newly protected content can help you to migrate from Azure Information Protection service to a supported on-premises Information Protection service server. Do not use this cmdlet in isolation but in conjunction with the instructions from [Decommissioning and deactivating protection for Azure Information Protection](https://docs.microsoft.com/information-protection/deploy-use/decommission-deactivate). 
+Setting a migration URL for newly protected content can help you to migrate from Azure Information Protection to a supported on-premises server. Do not use this cmdlet in isolation but in conjunction with the instructions from [Decommissioning and deactivating protection for Azure Information Protection](https://docs.microsoft.com/information-protection/deploy-use/decommission-deactivate). 
 
 ## EXAMPLES
 
@@ -30,7 +30,7 @@ Setting a migration URL for newly protected content can help you to migrate from
 PS C:\>Set-AipServiceMigrationUrl -Domain "aadrm.online.contoso.com"
 ```
 
-This command sets a migration URL for Information Protection service.
+This command sets a migration URL for Azure Information Protection.
 
 ## PARAMETERS
 
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -107,4 +107,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-AipServiceMigrationUrl](./Get-AipServiceMigrationUrl.md)
 
-[Microsoft-managed: Tenant key lifecycle operations](https://docs.microsoft.com/information-protection/deploy-use/operations-microsoft-managed-tenant-key)

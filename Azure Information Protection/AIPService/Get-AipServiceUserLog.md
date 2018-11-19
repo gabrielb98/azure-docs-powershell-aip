@@ -8,7 +8,7 @@ ms.assetid: 7C339803-9C45-4B06-B741-DB8CD43EF886
 # Get-AipServiceUserLog
 
 ## SYNOPSIS
-Downloads Information Protection service user logs to local storage.
+Downloads protection user logs from Azure Information Protection to local storage.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Get-AipServiceUserLog -Path <String> [-FromDate <DateTime>] [-ToDate <DateTime>]
 ```
 
 ## DESCRIPTION
-The **Get-AipServiceUserLog** cmdlet downloads Azure Information Protection service user logs to local storage. You must specify either a specific date or a date range to download the log entries.
+The **Get-AipServiceUserLog** cmdlet downloads protection user logs to local storage. You must specify either a specific date or a date range to download the log entries.
 
 You must use PowerShell to get these user logs; you cannot do this action by using a management portal.
 
@@ -28,7 +28,7 @@ When you specify a time with a date (for example, -ForDate "2/1/2016 15:00:00"),
 
 See the examples for how you might need to change your **DateTime** values, to accommodate the conversion needed for your local time.
 
-For more information about usage logging and a step-by-step example, see [Logging and analyzing usage of the Azure Information Protection service](https://docs.microsoft.com/information-protection/deploy-use/log-analyze-usage).
+For more information about protection usage logging and a step-by-step example, see [Logging and analyzing protection usage from Azure In formation Protection](https://docs.microsoft.com/information-protection/deploy-use/log-analyze-usage).
 
 ## EXAMPLES
 
@@ -90,7 +90,7 @@ Specifies a date (and optionally, a time) for the log file as a **DateTime** obj
 
 Use this parameter when you do not use the *FromDate* parameter. 
 
-To obtain a **DateTime** object, use the [Get-Date](http://go.microsoft.com/fwlink/?LinkID=293966) cmdlet.
+To obtain a **DateTime** object, use the [Get-Date](https://go.microsoft.com/fwlink/?LinkID=293966) cmdlet.
 
 ```yaml
 Type: DateTime
@@ -175,7 +175,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -187,4 +187,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-Date](http://go.microsoft.com/fwlink/?LinkID=293966)
 
-[Logging and analyzing usage of the Azure Information Protection service](https://docs.microsoft.com/information-protection/deploy-use/log-analyze-usage)
+[Logging and analyzing protection usage by Azure Information Protection](https://docs.microsoft.com/information-protection/deploy-use/log-analyze-usage)

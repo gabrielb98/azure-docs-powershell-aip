@@ -8,7 +8,7 @@ ms.assetid: 2EEF1510-4A63-4D3D-A707-541FC294DA33
 # Get-AipServiceUsageLog
 
 ## SYNOPSIS
-Downloads Information Protection service logs to local storage.
+Deprecated: Gets the status of legacy protection usage logging for Azure Information Protection.
 
 ## SYNTAX
 
@@ -17,13 +17,13 @@ Get-AipServiceUsageLog -Path <String> [-FromCounter <Int32>] [-ToCounter <Int32>
 ```
 
 ## DESCRIPTION
-The **Get-AipServiceUsageLog** cmdlet downloads Azure Information Protection service usage logs to local storage.
+The **Get-AipServiceUsageLog** cmdlet downloads protection usage logging for Azure Information Protection to local storage.
 
 You must use PowerShell to get these logs; you cannot do this action by using a management portal.
 
-Note: This cmdlet should be used only if you have usage logs prior to the usage logging change in February 2016. After this date, the only Windows PowerShell cmdlet that you need for AIP Service usage logging is [Get-AipServiceUserLog](./Get-AipServiceUserLog.md).
+Note: This cmdlet should be used only if you have usage logs prior to the usage logging change in February 2016. After this date, the only PowerShell cmdlet that you need for protection usage logging is [Get-AipServiceUserLog](./Get-AipServiceUserLog.md).
 
-For more information about usage logging, see [Logging and analyzing usage of the Azure Information Protection service](https://docs.microsoft.com/information-protection/deploy-use/log-analyze-usage).
+For more information about usage logging, see [Logging and analyzing usage of the protection service from Azure Information Protection](https://docs.microsoft.com/information-protection/deploy-use/log-analyze-usage).
 
 ## EXAMPLES
 
@@ -32,14 +32,14 @@ For more information about usage logging, see [Logging and analyzing usage of th
 PS C:\>Get-AipServiceUsageLog -Path "E:\Logs\UsageLog.log"
 ```
 
-This command saves all usage logs to the E:\Logs\UsageLog.log file.
+This command saves all protection usage logs to the E:\Logs\UsageLog.log file.
 
 ### Example 2: Get a range of logs
 ```
 PS C:\>Get-AipServiceUsageLog -Path "E:\Logs\UsageLogRange.log " -FromCounter 1024 -ToCounter 2047
 ```
 
-This command saves the specified range of usage logs to the E:\Logs\UsageLogRange.log file.
+This command saves the specified range of protection usage logs to the E:\Logs\UsageLogRange.log file.
 
 ## PARAMETERS
 
@@ -93,7 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -105,4 +105,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-AipServiceUsageLogLastCounterValue](./Get-AipServiceUsageLogLastCounterValue.md)
 
-[Logging and analyzing usage of the Azure Information Protection service](https://docs.microsoft.com/information-protection/deploy-use/log-analyze-usage)
+[Logging and analyzing usage of the protection service from Azure Information Protection](https://docs.microsoft.com/information-protection/deploy-use/log-analyze-usage)

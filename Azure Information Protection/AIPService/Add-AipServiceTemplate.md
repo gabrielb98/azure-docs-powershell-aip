@@ -8,7 +8,7 @@ ms.assetid: 1CBB5251-7084-4545-B71A-670AC19DC5E4
 # Add-AipServiceTemplate
 
 ## SYNOPSIS
-Creates an Information Protection service template.
+Creates a protection template for Azure Information Protection.
 
 ## SYNTAX
 
@@ -22,7 +22,7 @@ Add-AipServiceTemplate -Names <Hashtable> -Descriptions <Hashtable>
 ```
 
 ## DESCRIPTION
-The **Add-AipServiceTemplate** cmdlet creates an Azure Information Protection service custom template with the specified name, description, and policy, and sets the status of the template to archived or published.
+The **Add-AipServiceTemplate** cmdlet creates a protection template for Azure Information Protection with the specified name, description, and policy, and sets the status of the template to archived or published.
 
 The same configuration actions can also be done in the Azure portal. 
 
@@ -30,7 +30,7 @@ Important: Before you use this cmdlet, you must first create a rights definition
 
 You can store a maximum of 500 custom templates (published or archived) in Azure. If you can't add new templates because you have reached this limit as a result of keeping many archived templates, consider exporting them to save the information locally and then removing these templates in Azure.
 
-For more information about custom templates, including how to configure them in the Azure portal, see [Configuring and managing templates for Azure Information Protection](https://docs.microsoft.com/information-protection/deploy-use/configure-policy-templates) on the Microsoft documentation site.
+For more information about protection templates, including how to configure them in the Azure portal, see [Configuring and managing templates for Azure Information Protection](https://docs.microsoft.com/information-protection/deploy-use/configure-policy-templates).
 
 ## EXAMPLES
 
@@ -145,11 +145,11 @@ This setting has no effect on templates that are not departmental templates and 
 
 Note: This parameter is functionally the equivalent of the **Show this template to all users when the applications do not support user identity** check box if you configured **APPLICATION COMPATIBILITY** in the Azure classic portal. The classic portal is now retired and there is no equivalent setting in the Azure portal.
 
-The Azure Information Protection client and the Information Protection service sharing application support departmental templates whereas Exchange Outlook Web Access and Exchange ActiveSync are examples of applications that do not currently support departmental templates. For these Exchange applications (and all other applications that cannot support departmental templates), you must decide whether all users can select a departmental template from the list of available templates, or no users can select a departmental template from the list.
+The Azure Information Protection client and the Rights Management sharing application support departmental templates whereas Outlook on the web and Exchange ActiveSync are examples of applications that do not currently support departmental templates. For these Exchange applications (and all other applications that cannot support departmental templates), you must decide whether all users can select a departmental template from the list of available templates, or no users can select a departmental template from the list.
 
 This setting does not affect whether a user can access content that is protected by a departmental template; it only affects the ability for a user to select the template itself.
 
-If you have applications that do not yet natively support departmental templates, you can use a [custom AIP Service template download script](https://go.microsoft.com/fwlink/?LinkId=524506) or other tools to deploy these templates to the local AIP Service client folder. Then, these applications will correctly display the departmental templates:
+If you have applications that do not yet natively support departmental templates, you can use a template download scriptor other tools to deploy these templates to the local RMS client folder. Then, these applications will correctly display the departmental templates:
 
 - For Office 2010, the client folder is %localappdata%\Microsoft\DRM\Templates.
 
@@ -180,7 +180,7 @@ To specify unlimited access, use -1. To specify that a use license must be obtai
 
 Each organization has a maximum use license validity time, which is 30 days by default and can be configured by using the [Set-AipServiceMaxUseLicenseValidityTime](./Set-AipServiceMaxUseLicenseValidityTime.md). The value that you specify for the *LicenseValidityDuration* parameter must be lower than that value.
 
-This setting can also be overridden by a user for a document when they use the AIP Service sharing application, and select the **Allow me to instantly revoke access to these documents** option, which effectively sets the use license validity time to 0. When there are different values like this, AIP Service uses the most restrictive value.
+This setting can also be overridden by a user for a document when they use the Rights Management sharing application, and select the **Allow me to instantly revoke access to these documents** option, which effectively sets the use license validity time to 0. When there are different values like this, Azure Information Protection uses the most restrictive value.
 
 ```yaml
 Type: Int32
@@ -278,7 +278,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -296,12 +296,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 \[-ContentValidityDuration int\] ; The number of days for which content is available after it is protected if *ContentExpirationOption* is set to AfterDays.
 
 \[-LicenseValidityDuration int\] ; The number of days for which content is available online until it expires (0-9999).
-To specify unlimited access, use -1.
-To specify that a license must be obtained for each use and that content is available only online, use 0.
+To specify unlimited access, use -1. To specify that a license must be obtained for each use and that content is available only online, use 0.
 
-\[-Status TemplateStatus.Archived|Published\] ; The status of the template.
-Archived templates are available to consume previously protected content but are not presented to users.
-Published templates are distributed to users and made available for protecting content.
+\[-Status TemplateStatus.Archived|Published\] ; The status of the template. Archived templates are available to consume previously protected content but are not presented to users. Published templates are distributed to users and made available for protecting content.
 
 Create names and descriptions for multiple locale IDs by using the hash-table syntax in Windows PowerShell. There must be at least one name/description pair. The locale IDs for names and descriptions must match each other. If a locale ID is specified, its value must contain a non-empty string.
 
@@ -318,7 +315,7 @@ $descriptions\[1033\] = "This content is confidential and should not be shared e
 
 $descriptions\[1034\] = "Este contenido es confidencial y no debe ser compartido fuera de la organización"
 
-The rights are specified as a list of **Rights Definition** objects that contain the email address for the identity and the rights to assign to it.
+The rights are specified as a list of **rights definition** objects that contain the email address for the identity and the rights to assign to it.
 
 ## OUTPUTS
 

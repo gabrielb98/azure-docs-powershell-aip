@@ -8,7 +8,7 @@ ms.assetid: A5384868-65D1-46A8-A1E0-7050F607131C
 # Get-AipServiceOnboardingControlPolicy
 
 ## SYNOPSIS
-Gets user on-boarding control policy for Information Protection service.
+Gets the user on-boarding control policy for Azure Information Protection.
 
 ## SYNTAX
 
@@ -17,12 +17,11 @@ Get-AipServiceOnboardingControlPolicy [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-AipServiceOnboardingControlPolicy** cmdlet obtains your Azure Information Protection service user on-boarding control policy to support a gradual deployment by controlling which users in your organization can protect content by using Azure Information Protection service.
+The **Get-AipServiceOnboardingControlPolicy** cmdlet obtains your Azure Information Protection user on-boarding control policy to support a gradual deployment by controlling which users in your organization can protect content by using Azure Information Protection.
 
 You must use PowerShell to view this configuration; you cannot view this configuration by using a management portal.
 
-This control can be based on assigned user licenses for the service or membership in a designated security group.
-You can also define whether the policy applies to just mobile devices, just Windows clients, or mobile devices and Windows clients. For more information, see [Set-AipServiceOnboardingControlPolicy](./Set-AipServiceOnboardingControlPolicy.md).
+This control can be based on assigned user licenses for the Azure Rights Management service or membership in a designated security group. You can also define whether the policy applies to just mobile devices, just Windows clients, or mobile devices and Windows clients. For more information, see [Set-AipServiceOnboardingControlPolicy](./Set-AipServiceOnboardingControlPolicy.md).
 
 ## EXAMPLES
 
@@ -31,12 +30,12 @@ You can also define whether the policy applies to just mobile devices, just Wind
 PS C:\> Get-AipServiceOnboardingControlPolicy
 ```
 
-This command displays the user on-boarding control policy for Azure Information Protection service for your organization.
+This command displays the user on-boarding control policy for Azure Information Protection for your organization.
 
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

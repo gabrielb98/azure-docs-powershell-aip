@@ -8,7 +8,7 @@ ms.assetid: 91DD14FF-0033-4A7F-9738-87BD2A989FED
 # Disconnect-AipService
 
 ## SYNOPSIS
-Disconnects from Information Protection service.
+Disconnects from Azure Information Protection.
 
 ## SYNTAX
 
@@ -17,21 +17,21 @@ Disconnect-AipService [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Disconnect-AipService** cmdlet disconnects you from the Azure Information Protection service. Use this cmdlet to end a connection that you previously established by using the [Connect-AipService](./Connect-AipService.md) cmdlet.
+The **Disconnect-AipService** cmdlet disconnects you from the protection service from Azure Information Protection. Use this cmdlet to end a connection that you previously established by using the [Connect-AipService](./Connect-AipService.md) cmdlet.
 
 ## EXAMPLES
 
-### Example 1: Disconnect from Information Protection service
+### Example 1: Disconnect from Azure Information Protection
 ```
 PS C:\>Disconnect-AipService
 ```
 
-This command disconnects from the Information Protection service.
+This command disconnects you from the protection service from Azure Information Protection.
 
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

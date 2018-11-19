@@ -8,7 +8,7 @@ ms.assetid: 2EC79F48-DC64-42D0-B317-89397A72243D
 # Use-AipServiceKeyVaultKey
 
 ## SYNOPSIS
-Tells Information Protection service to use a customer-managed tenant key in Azure Key Vault.
+Tells Azure Information Protection to use a customer-managed tenant key in Azure Key Vault.
 
 ## SYNTAX
 
@@ -17,37 +17,37 @@ Use-AipServiceKeyVaultKey -KeyVaultKeyUrl <String> [-FriendlyName <String>] [-Fo
 ```
 
 ## DESCRIPTION
-The **Use-AipServiceKeyVaultKey** cmdlet tells the Azure Information Protection service to use a customer-managed key (BYOK) in Azure Key Vault.
+The **Use-AipServiceKeyVaultKey** cmdlet tells Azure Information Protection to use a customer-managed key (BYOK) in Azure Key Vault.
 
 You must use PowerShell to configure your tenant key; you cannot do this configuration by using a management portal.
 
-You can run this cmdlet before or after the Azure Information Protection service is activated. 
+You can run this cmdlet before or after the protection service (Azure Rights Management) is activated. 
 
-Before you run this cmdlet, make sure that the Azure Information Protection service principal has been granted permissions to the key vault that contains the key you want to use for Azure Information Protection. These permissions are granted by running the Azure Key Vault cmdlet, [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy).  
+Before you run this cmdlet, make sure that the Azure Rights Management service principal has been granted permissions to the key vault that contains the key you want to use for Azure Information Protection. These permissions are granted by running the Azure Key Vault cmdlet, [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy).  
 
-For security reasons, the Use-AipServiceKeyVaultKey cmdlet does not let you set or change the access control for the key in Azure Key Vault. After that access is granted by running Set-AzureRmKeyVaultAccessPolicy, run Use-AipServiceKeyVaultKey to tell the Azure Information Protection service to use the key and version that you specify with the *KeyVaultKeyUrl* parameter.
+For security reasons, the Use-AipServiceKeyVaultKey cmdlet does not let you set or change the access control for the key in Azure Key Vault. After that access is granted by running Set-AzureRmKeyVaultAccessPolicy, run Use-AipServiceKeyVaultKey to tell Azure Information Protection to use the key and version that you specify with the *KeyVaultKeyUrl* parameter.
 
-Note: If you run this cmdlet before the permissions are granted to the key vault, you will see an error that displays **The Information Protection service failed to add the key**. To see more detailed information, run the command again, with -*Verbose*. If the permissions are not granted, you see **VERBOSE: Failure to access Azure KeyVault**.
+Note: If you run this cmdlet before the permissions are granted to the key vault, you will see an error that displays **The Rights Management service failed to add the key**. To see more detailed information, run the command again, with -*Verbose*. If the permissions are not granted, you see **VERBOSE: Failure to access Azure KeyVault**.
 
-When your command successfully runs, the key is added as an archived customer-managed tenant key for the Azure Information Protection service in your organization. To make it the active tenant key for Azure Information Protection, you must then run the [Set-AipServiceKeyProperties](./Set-AipServiceKeyProperties.md) cmdlet.
+When your command successfully runs, the key is added as an archived customer-managed tenant key for Azure Information Protection for your organization. To make it the active tenant key for Azure Information Protection, you must then run the [Set-AipServiceKeyProperties](./Set-AipServiceKeyProperties.md) cmdlet.
 
 Use Azure Key Vault to centrally manage and monitor use of the key that you specified. All calls to your tenant key will be made to the key vault that your organization owns. You can confirm which key you are using in Key Vault by using the [Get-AipServiceKeys](./Get-AipServiceKeys.md) cmdlet.
 
-For more information about the types of tenant keys that the Azure Information Protection service supports, see [Planning and implementing your Azure Information Protection tenant key](https://docs.microsoft.com/information-protection/plan-design/plan-implement-tenant-key).
+For more information about the types of tenant keys that Azure Information Protection supports, see [Planning and implementing your Azure Information Protection tenant key](https://docs.microsoft.com/information-protection/plan-design/plan-implement-tenant-key).
 
 For more information about Azure Key Vault, see [What is Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-whatis).
 
 
 ## EXAMPLES
 
-### Example 1: Configure the Azure Information Protection service to use a customer-managed key in Azure Key Vault
+### Example 1: Configure Azure Information Protection to use a customer-managed key in Azure Key Vault
 ```
 PS C:\>Use-AipServiceKeyVaultKey -KeyVaultKeyUrl "https://contoso.vault.azure.net/keys/contoso-aipservice-key/aaaabbbbcccc111122223333"
 ```
 
-This command tells the Azure Information Protection service to use the key named contoso-aipservice-key, version aaaabbbbcccc111122223333, in the key vault named contoso.
+This command tells Azure Information Protection to use the key named contoso-aipservice-key, version aaaabbbbcccc111122223333, in the key vault named contoso.
 
-This key and version in Azure Key Vault then becomes the customer-managed tenant key for the Azure Information Protection service.
+This key and version in Azure Key Vault then becomes the customer-managed tenant key for Azure Information Protection.
 
 ## PARAMETERS
 
@@ -69,7 +69,7 @@ Accept wildcard characters: False
 ### -KeyVaultKeyUrl
 Specifies the URL of the key and version in Azure Key Vault that you want to use for your tenant key.
 
-This key will be used by the Azure Information Protection service as the root key for all cryptographic operations for your tenant.
+This key will be used by Azure Information Protection as the root key for all cryptographic operations for your tenant.
 
 ```yaml
 Type: String
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -FriendlyName
-Specifies the friendly name of a trusted publishing domain (TPD) and the SLC key that you imported from AIP Service. If users run Office 2016 or Office 2013, specify the same **Friendly name** value that is set for the AIP Service cluster properties on the **Server Certificate** tab. 
+Specifies the friendly name of a trusted publishing domain (TPD) and the SLC key that you imported from AD RMS. If users run Office 2016 or Office 2013, specify the same **Friendly name** value that is set for the AD RMS cluster properties on the **Server Certificate** tab. 
 
 This parameter is optional. If you don't use it, the key identifier is used instead.
 
@@ -131,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

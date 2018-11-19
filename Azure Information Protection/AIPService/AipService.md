@@ -2,7 +2,7 @@
 Module Name: AIPService
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 Download Help Link: N/A
-Help Version: 2.13.0.0
+Help Version: 1.0.0.0
 Locale: en-US
 ms.assetid: 0B91D740-D2BD-4D57-9E21-C582C9BE2CCA
 ---
@@ -19,7 +19,7 @@ For more information about when you must use these PowerShell cmdlets and to see
 >
 >If you do not see the cmdlet or options that are documented, make sure that you have [installed the latest version of the module](/information-protection/deploy-use/install-powershell).
 >
->The current version is **1.0.0.0**. To check the version you have installed, run: `(Get-Module aadrm -ListAvailable).Version` If this command or any cmdlet from this module fails to run, first run **Import-Module AIPService**.
+>The current version is **1.0.0.0**. To check the version you have installed, run: `(Get-Module AIPService -ListAvailable).Version` If this command or any cmdlet from this module fails to run, first run **Import-Module AIPService**.
 
 
 The .dll file for this module is *AIPService.dll*.

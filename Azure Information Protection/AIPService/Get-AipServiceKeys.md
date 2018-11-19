@@ -8,7 +8,7 @@ ms.assetid: 9B4056B1-7BEB-4DD2-A0C7-2F9400EDB3E5
 # Get-AipServiceKeys
 
 ## SYNOPSIS
-Lists all tenant keys associated with your Information Protection service tenant.
+Lists all Azure Information Protection tenant keys associated with your tenant.
 
 ## SYNTAX
 
@@ -17,7 +17,7 @@ Get-AipServiceKeys [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-AipServiceKeys** cmdlet lists all tenant keys associated with your tenant for the Azure Information Protection service. The tenant keys include the initial tenant key that Microsoft generates for you, and any tenant keys that are stored in Azure Key Vault. For more information, see [Planning and implementing your Azure Information Protection tenant key](https://docs.microsoft.com/information-protection/plan-design/plan-implement-tenant-key).
+The **Get-AipServiceKeys** cmdlet lists all Azure Information Protection tenant keys associated with your tenant. The tenant keys include the initial tenant key that Microsoft generates for you, and any tenant keys that are stored in Azure Key Vault. For more information, see [Planning and implementing your Azure Information Protection tenant key](https://docs.microsoft.com/information-protection/plan-design/plan-implement-tenant-key).
 
 You must use PowerShell to configure your tenant key; you cannot do this configuration by using a management portal.
 
@@ -38,12 +38,12 @@ For security reasons, the cmdlet does not display the value of the Microsoft-man
 PS C:\>Get-AipServiceKeys
 ```
 
-This command lists all tenant keys associated with your tenant for the Azure Information Protection service.
+This command lists all Azure Information Protection tenant keys associated with your tenant.
 
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

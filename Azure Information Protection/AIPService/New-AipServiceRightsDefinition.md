@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-AipServiceRightsDefinition
 
 ## SYNOPSIS
-Creates a rights definition object for Information Protection service.
+Creates a rights definition object for a protection template for Azure Information Protection.
 
 ## SYNTAX
 
@@ -18,15 +18,15 @@ New-AipServiceRightsDefinition [-EmailAddress <String>] [-DomainName <String>]
 ```
 
 ## DESCRIPTION
-The **New-AipServiceRightsDefinition** cmdlet creates a **rights definition** object that you store as a variable and then use to create or update a custom Information Protection service template when you use the [Add-AipServiceTemplate](./Add-AipServiceTemplate.md) or [Set-AipServiceTemplateProperty](./Set-AipServiceTemplateProperty.md) cmdlet.
+The **New-AipServiceRightsDefinition** cmdlet creates a **rights definition** object that you store as a variable and then use to create or update a protection template for Azure Information Protection when you use the [Add-AipServiceTemplate](./Add-AipServiceTemplate.md) or [Set-AipServiceTemplateProperty](./Set-AipServiceTemplateProperty.md) cmdlet.
 
-A rights definition object expresses the rights that users have to content that Azure Information Protection service protects. You can specify a user, a group, or all users in an organization. 
+A rights definition object expresses the usage rights that users have to content that Azure Information Protection protects. You can specify a user, a group, or all users in an organization. 
 
-Similar configuration can also be done when you create or configure a custom template in the Azure portal, but this cmdlet offers more fine-grained control. However, this cmdlet does not support the [any authenticated users option](https://docs.microsoft.com/azure/information-protection/deploy-use/configure-policy-protection#more-information-about-add-any-authenticated-users) that you can select in the Azure portal.
+Similar configuration can also be done when you create or configure a protection template in the Azure portal, but this cmdlet offers more fine-grained control. However, this cmdlet does not support the [any authenticated users option](https://docs.microsoft.com/azure/information-protection/deploy-use/configure-policy-protection#more-information-about-add-any-authenticated-users) that you can select in the Azure portal.
 
 Tip: You can this cmdlet to enable secure collaboration with other organizations when they have user accounts in Azure Active Directory and Office 365. For example, provide an external group VIEW and DOCEDIT rights to collaborate on a joint project. Or, provide VIEW rights to all users in a partner organization.
 
-For more information about custom templates, including how to configure them in the Azure portal, see [Configuring and managing templates for Azure Information Protection](https://docs.microsoft.com/information-protection/deploy-use/configure-policy-templates).
+For more information about protection templates, including how to configure them in the Azure portal, see [Configuring and managing templates for Azure Information Protection](https://docs.microsoft.com/information-protection/deploy-use/configure-policy-templates).
 
 ## EXAMPLES
 
@@ -35,7 +35,7 @@ For more information about custom templates, including how to configure them in 
 PS C:\>$R1 = New-AipServiceRightsDefinition -EmailAddress "ElisaDaugherty@Contoso.com" -Rights "VIEW","DOCEDIT"
 ```
 
-This command creates a rights definition object for the specified user and stores this policy in a variable named R1, which can then be used to create or update a custom template. 
+This command creates a rights definition object for the specified user and stores this policy in a variable named R1, which can then be used to create or update a protection template. 
 
 The command includes the rights VIEW and DOCEDIT for a user in the Contoso organization.
 
@@ -44,14 +44,14 @@ The command includes the rights VIEW and DOCEDIT for a user in the Contoso organ
 PS C:\>$R2 = New-AipServiceRightsDefinition -DomainName "Contoso.com" -Rights "VIEW"
 ```
 
-This command creates a rights definition object for the Contoso organization and stores this policy in a variable named R2, which can then be used to create or update a custom template. The command includes the VIEW right for all users in the Contoso organization.
+This command creates a rights definition object for the Contoso organization and stores this policy in a variable named R2, which can then be used to create or update a protection template. The command includes the VIEW right for all users in the Contoso organization.
 
 ## PARAMETERS
 
 ### -DomainName
-Specifies a domain name for your organization or another organization, to be used for granting rights when you create or update a custom template. When an organization has more than one domain, it does not matter which domain name you specify; users from all verified domains for that organization are automatically included. 
+Specifies a domain name for your organization or another organization, to be used for granting rights when you create or update a protection template. When an organization has more than one domain, it does not matter which domain name you specify; users from all verified domains for that organization are automatically included. 
 
-Specify one domain name only for all users in an organization; to grant rights to more than one organization, create another Rights Definition object.
+Specify one domain name only for all users in an organization; to grant rights to more than one organization, create another rights definition object.
 
 Note that for authentication to be successful for Azure AD, the user must have an account in Azure Active Directory. Office 365 users automatically have an account in Azure Active Directory. 
 
@@ -118,7 +118,7 @@ Specifies a list of rights. The list contains one or more of the following:
 
 Note: For clarity, the documentation and display text from the module shows these rights as all upper-case letters. However, the values are not case-sensitive and you can specify them in lower or upper case.
 
-For more information about the usage rights, see [Configuring usage rights for Azure Information Protection service](https://docs.microsoft.com/information-protection/deploy-use/configure-usage-rights).
+For more information about the usage rights, see [Configuring usage rights for Azure Information Protection](https://docs.microsoft.com/information-protection/deploy-use/configure-usage-rights).
 
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
@@ -133,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
