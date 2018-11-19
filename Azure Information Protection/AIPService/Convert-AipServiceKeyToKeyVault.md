@@ -78,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -KeyVaultKeyUrl
-Specifies the URL of the key in Azure Key Vault that you want to use for the your tenant key. This key will be used by Azure Information Protection as the root key for all cryptographic operations for your tenant.
+Specifies the URL of the key in Azure Key Vault that you want to use for your tenant key. This key will be used by Azure Information Protection as the root key for all cryptographic operations for your tenant.
 
 ```yaml
 Type: String
