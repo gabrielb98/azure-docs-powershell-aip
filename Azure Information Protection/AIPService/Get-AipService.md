@@ -19,7 +19,7 @@ Get-AipService [<CommonParameters>]
 ## DESCRIPTION
 The **Get-AipService** cmdlet gets the activation status of the protection service from Azure Information Protection for your tenant. The status of the protection service is enabled (activated) or disabled (deactivated).
 
-You can also view this information in a management portal. For more information, see [Activating Azure Rights Management](https://docs.microsoft.com/information-protection/deploy-use/activate-service).
+You can also view this information in a management portal. For more information, see [Activating the protection service from Azure Information Protection](https://docs.microsoft.com/information-protection/deploy-use/activate-service).
 
 ## EXAMPLES
 
