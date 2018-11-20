@@ -37,7 +37,7 @@ For more information about protection usage logging and a step-by-step example, 
 PS C:\>Get-AipServiceUserLog -Path 'C:\Logs' -FromDate 12/12/2015 -ToDate 12/15/2015 -NumberOfThreads 10
 ```
 
-This command downloads user logs created between 12/12/2015 and 12/15/2015 (in UTC tme) to the folder C:\Logs. 
+This command downloads user logs created between 12/12/2015 and 12/15/2015 (in UTC time) to the folder C:\Logs. 
 
 The command uses 10 threads to download the logs.
 
