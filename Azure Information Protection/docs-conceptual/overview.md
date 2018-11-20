@@ -18,7 +18,7 @@ You can use the following PowerShell modules with Azure Information Protection:
 
 - **AADRM**
     
-    This module is now deprecated and replaced with the AIPService module, which provides the same functionality with renamed cmdlets. The renmed cmdlets in the replacement module have aliases to the old cmdlets.
+    This module is now deprecated and replaced with the AIPService module, which provides the same functionality with renamed cmdlets. The renamed cmdlets in the current module have aliases to the old cmdlets.
     
     Support for this older module ends **December 31, 2019**.
     
@@ -28,9 +28,9 @@ You can use the following PowerShell modules with Azure Information Protection:
 
 - **AIPService**
     
-    These cmdlets let you administer the protection service (Azure Rights Management) for Azure Information Protection. The module replaces the older, AADRM, module.
+    These cmdlets let you administer the protection service (Azure Rights Management) for Azure Information Protection. The module replaces the older module, AADRM.
     
-    For more information about when to use these PowerShell cmdlets and to see groupings of cmdlets by administration tasks, see [Administering Azure Rights Management by Using Windows PowerShell](/information-protection/deploy-use/administer-powershell).
+    For more information about when to use these PowerShell cmdlets and to see groupings of cmdlets by administration tasks, see [Administering protection from Azure Information Protection by using PowerShell](/information-protection/deploy-use/administer-powershell).
     
     For installation instructions, see [Installing the AIPService PowerShell module](/information-protection/deploy-use/install-powershell)
 
@@ -38,7 +38,7 @@ You can use the following PowerShell modules with Azure Information Protection:
     
     These cmdlets let you protect and unprotect files, label files, and get information about files that are protected and labeled. 
     
-    These cmdlets are installed with the [Azure Information Protection client](/information-protection/rms-client/aip-client) and can be used with Azure Information Protection, the protection service (Azure Rights Management) for Azure Information Protection, and Active Directory Rights Management Services (AD RMS).
+    These cmdlets are installed with the [Azure Information Protection client](/information-protection/rms-client/aip-client) and can be used with Azure Information Protection and Active Directory Rights Management Services (AD RMS).
     
     For information about when and how to use these PowerShell cmdlets, see [Using PowerShell with the Azure Information Protection client](/information-protection/rms-client/client-admin-guide-powershell).
     
