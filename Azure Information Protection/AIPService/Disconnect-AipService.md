@@ -1,6 +1,6 @@
 ---
 external help file: AIPService.dll-Help.xml
-online version: http://go.microsoft.com/fwlink/?LinkId=400601
+online version: https://go.microsoft.com/fwlink/?linkid=2044860
 schema: 2.0.0
 ms.assetid: 91DD14FF-0033-4A7F-9738-87BD2A989FED
 ---
