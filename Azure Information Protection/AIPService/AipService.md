@@ -70,10 +70,6 @@ Disables the MSIPC v3 platform for Azure Information Protection.
 Disables the super user feature for Azure Information Protection.
 
 
-### [Disable-AipServiceUsageLogFeature](./Disable-AipServiceUsageLogFeature.md)
-Disables the protection usage log for Azure Information Protection.
-
-
 ### [Disable-AipService](./Disable-AipService.md)
 Deactivates the protection service from Azure Information Protection.
 
@@ -96,10 +92,6 @@ Enables the MSIPC v3 platform for Azure Information Protection.
 
 ### [Enable-AipServiceSuperUserFeature](./Enable-AipServiceSuperUserFeature.md)
 Enables the super user feature for Azure Information Protection.
-
-
-### [Enable-AipServiceUsageLogFeature](./Enable-AipServiceUsageLogFeature.md)
-Enables protection usage logging for Azure Information Protection.
 
 
 ### [Enable-AipService](./Enable-AipService.md)
@@ -146,10 +138,6 @@ Lists all Azure Information Protection tenant keys associated with your tenant.
 Gets the maximum validity time for Rights Management use licenses for Azure Information Protection.
 
 
-### [Get-AipServiceMigrationUrl](./Get-AipServiceMigrationUrl.md)
-Gets the migration URL for Azure Information Protection.
-
-
 ### [Get-AipServiceOnboardingControlPolicy](./Get-AipServiceOnboardingControlPolicy.md)
 Gets the user on-boarding control policy for Azure Information Protection.
 
@@ -180,22 +168,6 @@ Gets a list of protection templates for Azure Information Protection.
 
 ### [Get-AipServiceTrackingLog](./Get-AipServiceTrackingLog.md)
 Gets tracking information for documents protected by Azure Information Protection.
-
-
-### [Get-AipServiceUsageLogFeature](./Get-AipServiceUsageLogFeature.md)
-Deprecated: Gets the status of legacy protection usage logging for Azure Information Protection.
-
-
-### [Get-AipServiceUsageLogLastCounterValue](./Get-AipServiceUsageLogLastCounterValue.md)
-Gets the last counter value for the protection usage log for Azure Information Protection.
-
-
-### [Get-AipServiceUsageLogStorageAccount](./Get-AipServiceUsageLogStorageAccount.md)
-Gets the location for protection usage logs for Azure Information Protection.
-
-
-### [Get-AipServiceUsageLog](./Get-AipServiceUsageLog.md)
-Downloads protection logs from Azure Information Protection to local storage.
 
 
 ### [Get-AipServiceUserLog](./Get-AipServiceUserLog.md)
@@ -242,10 +214,6 @@ Updates the properties of a tenant key object for Azure Information Protection.
 Sets the maximum validity time for Rights Management use licenses for Azure Information Protection.
 
 
-### [Set-AipServiceMigrationUrl](./Set-AipServiceMigrationUrl.md)
-Sets the migration URL for Information Protection service.
-
-
 ### [Set-AipServiceOnboardingControlPolicy](./Set-AipServiceOnboardingControlPolicy.md)
 Sets the user on-boarding control policy for Azure Information Protection.
 
@@ -256,10 +224,6 @@ Sets the super user group for Azure Information Protection.
 
 ### [Set-AipServiceTemplateProperty](./Set-AipServiceTemplateProperty.md)
 Updates a property or properties of a protection template for Azure Information Protection.
-
-
-### [Set-AipServiceUsageLogStorageAccount](./Set-AipServiceUsageLogStorageAccount.md)
-Sets the location for protection usage logs for Azure Information Protection.
 
 
 ### [Use-AipServiceKeyVaultKey](./Use-AipServiceKeyVaultKey.md)
