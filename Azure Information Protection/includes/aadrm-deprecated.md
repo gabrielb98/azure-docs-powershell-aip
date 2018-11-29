@@ -1,5 +1,5 @@
 ---
-title: include file
+title: AADRM is deprecated
 description: include file
 services: azure
 author: cabailey
