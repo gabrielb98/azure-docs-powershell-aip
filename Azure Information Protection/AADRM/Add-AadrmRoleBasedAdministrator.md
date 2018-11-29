@@ -28,6 +28,8 @@ Add-AadrmRoleBasedAdministrator [-EmailAddress <String>] [-Role <Role>] [<Common
 ```
 
 ## DESCRIPTION
+[!INCLUDE [AADRM is deprecated](../includes/aadrm-deprecated.md)]
+
 The **Add-AadrmRoleBasedAdministrator** cmdlet grants administrative rights to your organization's Azure Rights Management service, so that administrators you delegate to configure this service can do so by using PowerShell commands. 
 
 You must use PowerShell to configure delegated administrative control for the Azure Rights Management service; you cannot do this configuration by using a management portal.
@@ -38,7 +40,7 @@ If you specify a group, it can be any group in Azure AD and does not need to be 
 
 For more information about the user and group requirements, see [Preparing users and groups for Azure Information Protection](https://docs.microsoft.com/information-protection/plan-design/prepare). This information includes how to identify the different group types and how to find the values to specify them when you run this cmdlet. 
 
-After delegating control to other administrators, they might find it useful to reference a list of the cmdlets they can run, grouped by administrative task. For this information, see [Administering the Azure Rights Management service by using Windows PowerShell](/information-protection/deploy-use/administer-powershell).
+After delegating control to other administrators, they might find it useful to reference a list of the cmdlets they can run, grouped by administrative task. For this information, see [Administering protection from Azure Information Protection by using PowerShell](/information-protection/deploy-use/administer-powershell).
 
 Note that these administrative roles are separate from the Azure Active Directory admin roles or Office 365 admin roles.
 

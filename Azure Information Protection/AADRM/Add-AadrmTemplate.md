@@ -22,6 +22,8 @@ Add-AadrmTemplate -Names <Hashtable> -Descriptions <Hashtable>
 ```
 
 ## DESCRIPTION
+[!INCLUDE [AADRM is deprecated](../includes/aadrm-deprecated.md)]
+
 The **Add-AadrmTemplate** cmdlet creates an Azure Rights Management custom template with the specified name, description, and policy, and sets the status of the template to archived or published.
 
 The same configuration actions can also be done in the Azure portal. 

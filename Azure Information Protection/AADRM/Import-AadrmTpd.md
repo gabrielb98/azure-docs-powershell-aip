@@ -18,6 +18,8 @@ Import-AadrmTpd [-Force] -TpdFile <String> -ProtectionPassword <SecureString> [-
 ```
 
 ## DESCRIPTION
+[!INCLUDE [AADRM is deprecated](../includes/aadrm-deprecated.md)]
+
 The **Import-AadrmTpd** cmdlet imports an Active Directory Rights Management Services (AD RMS) trusted publishing domain (TPD) over the Internet into your tenant for the Azure Rights Management service so that you can migrate Rights Management from on-premises to the cloud. The TPD contains your private key and RMS templates.
 
 You must use PowerShell to configure your tenant key; you cannot do this configuration by using a management portal.

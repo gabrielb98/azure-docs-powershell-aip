@@ -20,19 +20,20 @@ You can use the following PowerShell modules with Azure Information Protection:
     
     This module is now deprecated and replaced with the AIPService module, which provides the same functionality with renamed cmdlets. The renamed cmdlets in the current module have aliases to the old cmdlets.
     
-    Support for this older module ends **December 31, 2019**.
+    Support for this older module ends **January 31, 2020**.
     
     The cmdlets in this module let you administer the protection service (Azure Rights Management) for Azure Information Protection. 
     
 
-
 - **AIPService**
     
     These cmdlets let you administer the protection service (Azure Rights Management) for Azure Information Protection. The module replaces the older module, AADRM.
-    
+
     For more information about when to use these PowerShell cmdlets and to see groupings of cmdlets by administration tasks, see [Administering protection from Azure Information Protection by using PowerShell](/information-protection/deploy-use/administer-powershell).
     
-    For installation instructions, see [Installing the AIPService PowerShell module](/information-protection/deploy-use/install-powershell)
+    For installation instructions, see [Installing the AIPService PowerShell module](/information-protection/deploy-use/install-powershell).
+    
+    Note: Some cmdlets from the AADRM module were not carried forward to this new module, because they were already deprecated and no longer used.
 
 - **AzureInformationProtection**
     
@@ -43,5 +44,4 @@ You can use the following PowerShell modules with Azure Information Protection:
     For information about when and how to use these PowerShell cmdlets, see [Using PowerShell with the Azure Information Protection client](/information-protection/rms-client/client-admin-guide-powershell).
     
     For installation instructions, see [Install the Azure Information Protection client for users](/information-protection/rms-client/client-admin-guide-install). Note that this module requires Windows PowerShell 4.0 and that this prerequisite is not checked by the installation. The module installs automatically when you install the full version of the Azure Information Protection client but you can also install just the module by using the `PowerShellOnly=true` parameter.
-
 

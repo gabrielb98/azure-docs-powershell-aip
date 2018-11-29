@@ -17,6 +17,8 @@ Enable-AadrmUsageLogFeature [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+[!INCLUDE [AADRM is deprecated](../includes/aadrm-deprecated.md)]
+
 The **Enable-AadrmUsageLogFeature** cmdlet enables usage logging for Azure Rights Management. After you enable this feature, Rights Management logs all requests served on behalf of your tenant to your storage account.
 
 You must use PowerShell to set this configuration; you cannot do this configuration by using a management portal.

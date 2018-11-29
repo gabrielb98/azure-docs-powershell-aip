@@ -17,6 +17,8 @@ Get-AadrmSuperUserFeature [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+[!INCLUDE [AADRM is deprecated](../includes/aadrm-deprecated.md)]
+
 The **Get-AadrmSuperUserFeature** cmdlet gets the status of the super user feature for Azure Rights Management in your organization. The super user feature can be enabled or disabled. By default, it is disabled.
 
 You must use PowerShell to configure super users; you cannot do this configuration by using a management portal.

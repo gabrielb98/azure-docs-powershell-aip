@@ -17,6 +17,8 @@ Get-AadrmOnboardingControlPolicy [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+[!INCLUDE [AADRM is deprecated](../includes/aadrm-deprecated.md)]
+
 The **Get-AadrmOnboardingControlPolicy** cmdlet obtains your Azure Rights Management user on-boarding control policy to support a gradual deployment by controlling which users in your organization can protect content by using Azure Rights Management.
 
 You must use PowerShell to view this configuration; you cannot view this configuration by using a management portal.

@@ -17,6 +17,8 @@ Import-AadrmTemplate -Path <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+[!INCLUDE [AADRM is deprecated](../includes/aadrm-deprecated.md)]
+
 The **Import-AadrmTemplate** cmdlet creates a custom Rights Management template for Azure Rights Management and sets its properties according to data contained in a template file.
 
 Although you can configure Rights Management templates in the Azure portal, you must use PowerShell to export and import these templates.

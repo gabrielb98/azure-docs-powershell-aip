@@ -17,6 +17,8 @@ Use-AadrmKeyVaultKey -KeyVaultKeyUrl <String> [-FriendlyName <String>] [-Force] 
 ```
 
 ## DESCRIPTION
+[!INCLUDE [AADRM is deprecated](../includes/aadrm-deprecated.md)]
+
 The **Use-AadrmKeyVaultKey** cmdlet tells the Azure Rights Management service from Azure Information Protection to use a customer-managed key (BYOK) in Azure Key Vault.
 
 You must use PowerShell to configure your tenant key; you cannot do this configuration by using a management portal.

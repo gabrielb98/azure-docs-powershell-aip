@@ -18,6 +18,8 @@ New-AadrmRightsDefinition [-EmailAddress <String>] [-DomainName <String>]
 ```
 
 ## DESCRIPTION
+[!INCLUDE [AADRM is deprecated](../includes/aadrm-deprecated.md)]
+
 The **New-AadrmRightsDefinition** cmdlet creates a **rights definition** object that you store as a variable and then use to create or update a custom Rights Management template when you use the [Add-AadrmTemplate](./Add-AadrmTemplate.md) or [Set-AadrmTemplateProperty](./Set-AadrmTemplateProperty.md) cmdlet.
 
 A rights definition object expresses the rights that users have to content that Azure Rights Management protects. You can specify a user, a group, or all users in an organization. 
@@ -118,7 +120,7 @@ Specifies a list of rights. The list contains one or more of the following:
 
 Note: For clarity, the documentation and display text from the module shows these rights as all upper-case letters. However, the values are not case-sensitive and you can specify them in lower or upper case.
 
-For more information about the usage rights, see [Configuring usage rights for Azure Rights Management](https://docs.microsoft.com/information-protection/deploy-use/configure-usage-rights).
+For more information about the usage rights, see [Configuring usage rights for Azure Information Protection](https://docs.microsoft.com/information-protection/deploy-use/configure-usage-rights).
 
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
