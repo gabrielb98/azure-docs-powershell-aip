@@ -19,6 +19,8 @@ Get-AadrmTemplateProperty -TemplateId <Guid> [-Names] [-Descriptions] [-RightsDe
 ```
 
 ## DESCRIPTION
+[!INCLUDE [AADRM is deprecated](../includes/aadrm-deprecated.md)]
+
 The **Get-AadrmTemplateProperty** cmdlet gets specified properties of an Azure Rights Management template, by using the *TemplateId* parameter.
 
 Similar configuration information can also be viewed in the Azure portal, but this cmdlet also includes the template GUID.

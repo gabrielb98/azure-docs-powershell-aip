@@ -17,6 +17,8 @@ Enable-Aadrm [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+[!INCLUDE [AADRM is deprecated](../includes/aadrm-deprecated.md)]
+
 The **Enable-Aadrm** cmdlet enables your organization to use Azure Rights Management when you have a subscription that includes this service. 
 
 You can also do this action in a management portal. For more information, see [Activating the protection service from Azure Information Protection](https://docs.microsoft.com/information-protection/deploy-use/decommission-deactivate). 

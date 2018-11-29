@@ -17,6 +17,8 @@ Set-AadrmKeyProperties [-Force] -KeyIdentifier <string> -Active <Bool> [-WhatIf]
 ```
 
 ## DESCRIPTION
+[!INCLUDE [AADRM is deprecated](../includes/aadrm-deprecated.md)]
+
 The **Set-AadrmKeyProperties** cmdlet changes an Archived status for a specified key object for the tenant to be Active. Because there can be only one active tenant key at any one time, the previously active tenant key is automatically set to Archived.
 
 New users of the Azure Rights Management service immediately use the identified tenant key to protect content. Existing users of the service gradually transition from the previously active tenant key to the newly active tenant key, and this staggered transition can take a few weeks to complete. You can force the update on clients by re-initializing the user environment (also known as bootstrapping). Documents and files that were protected with the previously active tenant key remain accessible to authorized users by using the tenant key that is now archived.

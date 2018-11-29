@@ -23,6 +23,8 @@ Connect-AadrmService [-AccessToken <String>] [-TenantId <Guid>] [<CommonParamete
 ```
 
 ## DESCRIPTION
+[!INCLUDE [AADRM is deprecated](../includes/aadrm-deprecated.md)]
+
 The **Connect-AadrmService** cmdlet connects you to the Azure Rights Management service for your tenant so that you can then run administrative commands for this service. This cmdlet can also be used by a partner company that manages your tenant.
 
 You must run this cmdlet before you can run the other Rights Management cmdlets in this module.

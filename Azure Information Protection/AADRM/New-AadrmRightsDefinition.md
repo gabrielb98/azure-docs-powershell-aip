@@ -18,6 +18,8 @@ New-AadrmRightsDefinition [-EmailAddress <String>] [-DomainName <String>]
 ```
 
 ## DESCRIPTION
+[!INCLUDE [AADRM is deprecated](../includes/aadrm-deprecated.md)]
+
 The **New-AadrmRightsDefinition** cmdlet creates a **rights definition** object that you store as a variable and then use to create or update a custom Rights Management template when you use the [Add-AadrmTemplate](./Add-AadrmTemplate.md) or [Set-AadrmTemplateProperty](./Set-AadrmTemplateProperty.md) cmdlet.
 
 A rights definition object expresses the rights that users have to content that Azure Rights Management protects. You can specify a user, a group, or all users in an organization. 
