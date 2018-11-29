@@ -17,7 +17,7 @@ Disable-AadrmUsageLogFeature [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-[!INCLUDE [AADRM is deprecated](./includes/aadrm-deprecated.md)]
+[!INCLUDE [AADRM is deprecated](../includes/aadrm-deprecated.md)]
 
 The **Disable-AadrmUsageLogFeature** cmdlet disables usage logging for the Azure Rights Management service. If you disable this logging, the cmdlet does not delete existing logs. If you enable usage logging again, logging begins at the point in the log where logging previously stopped.
 

@@ -17,7 +17,7 @@ Disable-AadrmSuperUserFeature [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-[!INCLUDE [AADRM is deprecated](./includes/aadrm-deprecated.md)]
+[!INCLUDE [AADRM is deprecated](../includes/aadrm-deprecated.md)]
 
 The **Disable-AadrmSuperUserFeature** cmdlet disables the super user feature. This action does not automatically remove the previously added users or group from the super user list, and they continue to be displayed when you run the [Get-AadrmSuperUser](./Get-AadrmSuperUser.md) or [Get-AadrmSuperUserGroup](./Get-AadrmSuperUserGroup.md) cmdlets. Therefore, if you enable the super user feature again, these users are automatically super users again, until you manually remove them.
 

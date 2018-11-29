@@ -17,7 +17,7 @@ Clear-AadrmDoNotTrackUserGroup
 ```
 
 ## DESCRIPTION
-[!INCLUDE [AADRM is deprecated](./includes/aadrm-deprecated.md)]
+[!INCLUDE [AADRM is deprecated](../includes/aadrm-deprecated.md)]
 
 The Clear-AadrmDoNotTrackUserGroup cmdlet removes the currently configured group for the users who must not be tracked by the Azure Rights Management document tracking feature. This configuration might be needed for privacy requirements. For more information, see [Privacy controls for your document tracking site](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-document-tracking#privacy-controls-for-your-document-tracking-site).
 

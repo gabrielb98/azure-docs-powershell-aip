@@ -18,7 +18,7 @@ Convert-AadrmKeyToKeyVault -KeyVaultKeyUrl <String> -KeyIdentifier <String> [-Fo
 ```
 
 ## DESCRIPTION
-[!INCLUDE [AADRM is deprecated](./includes/aadrm-deprecated.md)]
+[!INCLUDE [AADRM is deprecated](../includes/aadrm-deprecated.md)]
 
 The **Convert-AadrmKeyToKeyVault** cmdlet is only for customers who have previously created a customer-managed key for the Azure Rights Management service and have received an invitation from Microsoft to migrate their Azure Rights Management tenant key to Azure Key Vault.
 

@@ -17,7 +17,7 @@ Clear-AadrmSuperUserGroup [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-[!INCLUDE [AADRM is deprecated](./includes/aadrm-deprecated.md)]
+[!INCLUDE [AADRM is deprecated](../includes/aadrm-deprecated.md)]
 
 The **Clear-AadrmSuperUserGroup** cmdlet removes the super user group for your organization.
 

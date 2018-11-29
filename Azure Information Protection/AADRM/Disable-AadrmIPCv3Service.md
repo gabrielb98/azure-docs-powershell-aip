@@ -17,7 +17,7 @@ Disable-AadrmIPCv3Service [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-[!INCLUDE [AADRM is deprecated](./includes/aadrm-deprecated.md)]
+[!INCLUDE [AADRM is deprecated](../includes/aadrm-deprecated.md)]
 
 The **Disable-AadrmIPCv3Service** cmdlets disables the MSIPC v3 platform on mobile devices such as iOS and Android. This platform must be enabled to support Rights Management.
 
