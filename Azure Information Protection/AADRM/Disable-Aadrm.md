@@ -17,6 +17,8 @@ Disable-Aadrm [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+[!INCLUDE [AADRM is deprecated](./includes/aadrm-deprecated.md)]
+
 The **Disable-Aadrm** cmdlet disables the capabilities of Azure Rights Management for your organization.
 
 You can also do this action in a management portal. For more information, see [Decommissioning and deactivating Azure Rights Management](https://docs.microsoft.com/rights-management/deploy-use/decommission-deactivate) on the Microsoft documentation site. 

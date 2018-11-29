@@ -17,6 +17,8 @@ Disconnect-AadrmService [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+[!INCLUDE [AADRM is deprecated](./includes/aadrm-deprecated.md)]
+
 The **Disconnect-AadrmService** cmdlet disconnects you from the Azure Rights Management service. Use this cmdlet to end a connection that you previously established by using the [Connect-AadrmService](./Connect-AadrmService.md) cmdlet.
 
 ## EXAMPLES

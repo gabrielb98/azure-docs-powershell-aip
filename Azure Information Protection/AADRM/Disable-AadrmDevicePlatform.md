@@ -24,6 +24,8 @@ Disable-AadrmDevicePlatform [-Windows] [-WindowsStore] [-WindowsPhone] [-Mac] [-
 ```
 
 ## DESCRIPTION
+[!INCLUDE [AADRM is deprecated](./includes/aadrm-deprecated.md)]
+
 The **Disable-AadrmDevicePlatform** cmdlet disables Azure Rights Management support for device platforms. For information about supported device platforms, see the [Enable-AadrmDevicePlatform](./Enable-AadrmDevicePlatform.md) cmdlet.
 
 You must use PowerShell to do this configuration; you cannot do this configuration by using a management portal.
