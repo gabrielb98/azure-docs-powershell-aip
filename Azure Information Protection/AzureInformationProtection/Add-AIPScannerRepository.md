@@ -132,7 +132,7 @@ For other files, the user that you specify with this parameter is set as the Own
 
 - Files that are stored on file shares or local folders.
 
-If you do not specify this parameter for other files, the scanner's account is set as the owner.
+If you do not specify this parameter for other files, the scanner's account is set as the owner unless the file was initially protected and then relabeled and reprotected by the scanner. In this case, the original Rights Management owner is preserved.
 
 To remove the currently set Owner custom property and Rights Management owner, specify "".
 
