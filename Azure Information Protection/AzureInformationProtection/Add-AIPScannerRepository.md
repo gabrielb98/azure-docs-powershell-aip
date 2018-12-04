@@ -120,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultOwner
-Specifies the email address for the Owner custom property when a file is classified, and for the Rights Management owner when a file is protected. For more information about the Rights Management owner, see [Rights Management issuer and Rights Management owner](https://docs.microsoft.com/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner).
+Specifies the email address for the Owner custom property when a file is classified, and for the Rights Management owner if the file is not already protected. For more information about the Rights Management owner, see [Rights Management issuer and Rights Management owner](https://docs.microsoft.com/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner).
 
 For files on SharePoint Server, the SharePoint Editor (Last Modified By) value is always used.  
 
