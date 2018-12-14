@@ -38,7 +38,7 @@ The operation was completed successfully
 
 This command removes the file name extension of .docx from the list of files to be scanned.
  
-Note that this command doesn't add the file name extension to the exclusion list, and if the scanner is configured to scan all files (`*`), files that have a file name extension of .docx will still be scanned. If you want files that have a .docx file name extension to be explicitly excluded from the scan, use [Add-AIPScannerScannedFileTypes](.\Add-AIPScannerScannedFileTypes.md) to add `-.docx` to the exclusion list.
+Note that this command doesn't add the file name extension to the exclusion list, and if the scanner is configured to scan all files (`*`), files that have a file name extension of .docx will still be scanned. If you want files that have a .docx file name extension to be explicitly excluded from the scan, use [Add-AIPScannerScannedFileTypes](./Add-AIPScannerScannedFileTypes.md) to add `-.docx` to the exclusion list.
 
 ### Example 2: Remove .lnk files from the exclusion list of files to scan
 ```powershell
