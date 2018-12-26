@@ -170,11 +170,13 @@ Accept wildcard characters: False
 ```
 
 ### -PreserveFileDetails
-Specify this parameter to leave the date unchanged for documents that you label.
+Specify this parameter to leave the modified date unchanged for documents that you label:
 
-For local or network files, the Last Modified date remains unchanged.
+- For local or network files, the Last Modified date remains unchanged.
 
-For SharePoint files, the Modified date and Modified By date remain unchanged.
+- For SharePoint files, the Modified date and Modified By date remain unchanged.
+
+However, if your data repository displays the date the file was last accessed, this PowerShell parameter has no effect on that file attribute that the scanner will change.
 
 ```yaml
 Type: PreserveFileDetails
