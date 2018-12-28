@@ -171,7 +171,7 @@ Specify this parameter to leave the modified date unchanged for documents that y
 
 - For SharePoint files, the Modified date and Modified By date remain unchanged.
 
-However, if your data repository displays the date the file was last accessed, this PowerShell parameter has no effect on that file attribute that the scanner will change.
+However, if your data repository displays the date the file was last accessed, this PowerShell parameter has no effect on that file attribute, which will be changed when the scanner discovers or labels files.
 
 ```yaml
 Type: PreserveFileDetails
