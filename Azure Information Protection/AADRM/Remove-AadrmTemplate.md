@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.RightsManagementServices.Online.Admin.PowerShell.dll-Help.xml
-online version: http://go.microsoft.com/fwlink/?LinkID=400630
+online version: https://go.microsoft.com/fwlink/?LinkID=400630
 schema: 2.0.0
 ms.assetid: EAC26502-ECB3-43A0-B468-D166C1E4A9C4
 ---
@@ -17,13 +17,13 @@ Remove-AadrmTemplate -TemplateId <Guid> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Remove-AadrmTemplate** cmdlet deletes an Azure Rights Management rights policy template.
+The **Remove-AadrmTemplate** cmdlet deletes an Azure Rights Management protection template.
 
 You can delete only custom templates. You can set default templates to an archived state but you cannot delete them.
 
 Although you can configure Rights Management templates in the Azure portal, you must use PowerShell to remove these templates.
 
-After a template is deleted, content protected with that template might become inaccessible. Users who are super users can continue to access content that was previously protected with a template that is now deleted. For more information about super users, see [Configuring super users for Azure Rights Management and discovery services or data recovery](https://docs.microsoft.com/information-protection/deploy-use/configure-super-users).
+To ensure that previously protected content can be opened and used as intended by administrators, we usually advise against deleting templates. As a best practice, delete templates only if you are sure they were not used to protect documents or emails in production. Users who are super users can continue to access content that was previously protected with a template that is now deleted. For more information about super users, see [Configuring super users for Azure Rights Management and discovery services or data recovery](https://docs.microsoft.com/information-protection/deploy-use/configure-super-users).
 
 This cmdlet requires the template ID, which you can get with the [Get-AadrmTemplate](./Get-AadrmTemplate.md) cmdlet.
 
@@ -66,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
