@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.RightsManagementServices.Online.Admin.PowerShell.dll-Help.xml
-online version: http://go.microsoft.com/fwlink/?LinkID=400630
+online version: https://go.microsoft.com/fwlink/?LinkID=400630
 schema: 2.0.0
 ms.assetid: EAC26502-ECB3-43A0-B468-D166C1E4A9C4
 ---
@@ -66,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
