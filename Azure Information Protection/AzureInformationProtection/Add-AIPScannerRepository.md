@@ -19,7 +19,9 @@ Add-AIPScannerRepository [-Path] <String> [-OverrideLabel <OverrideLabel>]
 ```
 
 ## DESCRIPTION
-The Add-AIPScannerRepository cmdlet adds a data repository to be scanned by the Azure Information Protection scanner, and creates a profile of settings to be used for that repository. For example, you can specify a default label for unlabeled files, and whether to override an existing label.
+Note: For the preview version of the scanner, this cmdlet is deprecated. Instead, use the [Azure portal to configure the scanner](/information-protection/deploy-aip-scanner-preview).
+
+For the general availability version, the Add-AIPScannerRepository cmdlet adds a data repository to be scanned by the Azure Information Protection scanner, and creates a profile of settings to be used for that repository. For example, you can specify a default label for unlabeled files, and whether to override an existing label.
 
 For the data repository, you can specify local folders, UNC paths, and SharePoint Server URLs for SharePoint sites and libraries. 
 

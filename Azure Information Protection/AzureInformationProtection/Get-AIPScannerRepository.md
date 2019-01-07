@@ -17,7 +17,9 @@ Get-AIPScannerRepository [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Get-AIPScannerRepository cmdlet gets the list of data repositories that the Azure Information Protection scanner is configured to scan. These data repositories are specified by using the [Add-AIPScannerRepository](./Add-AIPScannerRepository.md) cmdlet. 
+Note: For the preview version of the scanner, this cmdlet is deprecated. Instead, use the [Azure portal to configure the scanner](/information-protection/deploy-aip-scanner-preview).
+
+For the general availability version, the Get-AIPScannerRepository cmdlet gets the list of data repositories that the Azure Information Protection scanner is configured to scan. These data repositories are specified by using the [Add-AIPScannerRepository](./Add-AIPScannerRepository.md) cmdlet. 
 
 Tip: You can use the output of this cmdlet with [Remove-AIPScannerRepository](./Remove-AIPScannerRepository.md) to clean up the list of the data repositories for the scanner. For example: Get-AIPScannerRepository | Remove-AIPScannerRepository
 

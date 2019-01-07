@@ -17,7 +17,9 @@ Remove-AIPScannerScannedFileTypes [-Repository <String>] -ScannedFileTypes <Stri
 ```
 
 ## DESCRIPTION
-The Remove-AIPScannerScannedFileTypes cmdlet removes file types from a list that you have already configured by using [Set-AIPScannerScannedFileTypes](./Set-AIPScannerScannedFileTypes.md). The list specifies which file types to scan or exclude from scanning by the Azure Information Protection scanner. 
+Note: For the preview version of the scanner, this cmdlet is deprecated. Instead, use the [Azure portal to configure the scanner](/information-protection/deploy-aip-scanner-preview).
+
+For the general availability version, the Remove-AIPScannerScannedFileTypes cmdlet removes file types from a list that you have already configured by using [Set-AIPScannerScannedFileTypes](./Set-AIPScannerScannedFileTypes.md). The list specifies which file types to scan or exclude from scanning by the Azure Information Protection scanner. 
 
 To remove a specific file type, specify `.<file name extension>`.
 

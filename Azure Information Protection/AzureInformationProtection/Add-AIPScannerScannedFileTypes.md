@@ -17,7 +17,9 @@ Add-AIPScannerScannedFileTypes [-Repository <String>] -ScannedFileTypes <String[
 ```
 
 ## DESCRIPTION
-The Add-AIPScannerScannedFileTypes cmdlet adds new file types to a list that you have already configured by using [Set-AIPScannerScannedFileTypes](./Set-AIPScannerScannedFileTypes.md). The list specifies which file types to scan or exclude from scanning by the Azure Information Protection scanner. 
+Note: For the preview version of the scanner, this cmdlet is deprecated. Instead, use the [Azure portal to configure the scanner](/information-protection/deploy-aip-scanner-preview).
+
+For the general availability version, the Add-AIPScannerScannedFileTypes cmdlet adds new file types to a list that you have already configured by using [Set-AIPScannerScannedFileTypes](./Set-AIPScannerScannedFileTypes.md). The list specifies which file types to scan or exclude from scanning by the Azure Information Protection scanner. 
 
 To add a new file type to scan, specify `.<file name extension>`. To exclude a new file type from being scanned, specify `-.<file name extension>`.
 

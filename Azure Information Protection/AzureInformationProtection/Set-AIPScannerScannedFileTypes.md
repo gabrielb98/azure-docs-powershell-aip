@@ -17,9 +17,9 @@ Set-AIPScannerScannedFileTypes [-Repository <String>] -ScannedFileTypes <String[
 ```
 
 ## DESCRIPTION
-Note: For the preview version of the scanner, this cmdlet is deprecated. Instead, use the Azure portal to configure the scanner.
+Note: For the preview version of the scanner, this cmdlet is deprecated. Instead, use the [Azure portal to configure the scanner](/information-protection/deploy-aip-scanner-preview).
 
-The Set-AIPScannerScannedFileTypes cmdlet sets a list of file types to scan or exclude from scanning by the Azure Information Protection scanner. To scan all file types, use `@("*")`. To scan only specific file types, specify `.<file name extension>`. To exclude specific file types from being scanned, specify `-.<file name extension>`.To reset the list back to defaults, specify `@()`.
+For the general availability version, the Set-AIPScannerScannedFileTypes cmdlet sets a list of file types to scan or exclude from scanning by the Azure Information Protection scanner. To scan all file types, use `@("*")`. To scan only specific file types, specify `.<file name extension>`. To exclude specific file types from being scanned, specify `-.<file name extension>`.To reset the list back to defaults, specify `@()`.
 
 When you specify this list and do not specify a data repository, the list applies to all data repositories that do not have their own list specified. 
 
