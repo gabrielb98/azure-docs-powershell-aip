@@ -17,7 +17,12 @@ Uninstall-AIPScanner [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Uninstall-AIPScanner cmdlet uninstalls the Windows Server service, Azure Information Protection Scanner. This command does not remove the SQL Server database that was created by running the [Install-AIPScanner](./Install-AIPScanner.md) cmdlet when the Azure Information Protection scanner was installed. The name of this database is AzInfoProtection. If this database is no longer required, you must manually remove it.
+The Uninstall-AIPScanner cmdlet uninstalls the Windows Server service, Azure Information Protection Scanner. This command does not remove the SQL Server database that was created by running the [Install-AIPScanner](./Install-AIPScanner.md) cmdlet when the Azure Information Protection scanner was installed. If this database is no longer required, you must manually remove it:
+
+- For general availability version: The name of this database is AzInfoProtection. 
+
+- For the preview version: The default database name for the scanner is AIPScanner_\<computer_name> but when you specify a profile name, the database name for the scanner changes to AIPScanner_\<profile>.
+
 
 This command also does not remove the scanner reports located in %localappdata%\Microsoft\MSIP\Scanner\Reports.
 
@@ -35,7 +40,7 @@ This command removes the service for the Azure Information Protection scanner.
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

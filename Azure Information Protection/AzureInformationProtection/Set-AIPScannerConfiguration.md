@@ -18,13 +18,25 @@ Set-AIPScannerConfiguration [-Enforce <EnforceMode>] [-ReportLevel <ReportLevel>
 ```
 
 ## DESCRIPTION
-The Set-AIPScannerConfiguration cmdlet sets optional configuration settings for the Azure Information Protection scanner. When you install the scanner, these settings are configured for you with their default installation values. Use this cmdlet to change the settings, which will be used the next time the scanner runs. If you need the changes to take effect immediately, restart the Azure Information Protection Scanner service on the Windows server computer.
+The Set-AIPScannerConfiguration cmdlet sets optional configuration settings for the Azure Information Protection scanner. 
+
+**For the general availability version:**
+
+When you install the scanner, these settings are configured for you with their default installation values. Use this cmdlet to change the settings, which will be used the next time the scanner runs. If you need the changes to take effect immediately, restart the Azure Information Protection Scanner service on the Windows server computer.
 
 The configuration settings include whether the scanner is in discovery mode only or applies labels, whether a file will be relabeled, whether file attributes are changed, what is logged in the reports, whether the scanner runs once or continuously, what justification message to use when required, and the Rights Management owner for protected files.
 
+**For the preview version:**
+
+The Set-AIPScannerConfiguration cmdlet sets local configuration settings for the Azure Information Protection scanner. When you install the scanner, settings are configured for you with their default installation values. You can configure most of the scanner configuration settings in the Azure portal. However, you must use this cmdlet if you need to import configuration settings from a file because the scanner cannot support online configuration, and if you need to change the report level for the locally created reports.
+
+Any changes will be used the next time the scanner runs. If you need the changes to take effect immediately, restart the Azure Information Protection Scanner service on the Windows server computer
+
+
+
 ## EXAMPLES
 
-### Example 1: Configure the Azure Information Protection scanner for a manual schedule and create a report for files that would be labeled
+### Example 1: Configure the Azure Information Protection scanner for a manual schedule and create a report for files that would be labeled - general availability version
 ```
 PS C:\> Set-AIPScannerConfiguration -Enforce Off -Schedule Manual -ReportLevel Info
 
@@ -35,7 +47,7 @@ This command configures the scanner to run a one-time discovery for files in the
 
 Note that because these parameters specify the values that are set by the scanner installation, you need to specify them only if you previously specified other values.
 
-### Example 2: Configure the Azure Information Protection scanner to continuously discover and label files
+### Example 2: Configure the Azure Information Protection scanner to continuously discover and label files - general availability version
 ```
 PS C:\> Set-AIPScannerConfiguration -Enforce On -Schedule Always
 
@@ -46,7 +58,7 @@ This command configures the scanner to continuously discover files in the specif
 
 For these files, they are classified and protected (or have protection removed), according to the label configuration.
 
-### Example 3: Configure the Azure Information Protection scanner to scan and label all files by using a manual schedule, and log all files
+### Example 3: Configure the Azure Information Protection scanner to scan and label all files by using a manual schedule, and log all files - general availability version
 ```
 PS C:\> Set-AIPScannerConfiguration -Enforce On -Schedule Manual -ReportLevel Debug
 
@@ -59,7 +71,7 @@ For the files that are discovered, they are classified and protected (or have pr
 
 Every discovered file and the resulting action is logged in the reports.
 
-### Example 4: Configure the Azure Information Protection scanner to scan all files and discover all known sensitive information types and custom conditions
+### Example 4: Configure the Azure Information Protection scanner to scan all files and discover all known sensitive information types and custom conditions - general availability version
 
 ```
 PS C:\> Set-AIPScannerConfiguration -Enforce Off -Schedule Manual -DiscoverInformationTypes All
@@ -71,10 +83,23 @@ This command configures the scanner to do a one-time discovery of all files in t
 
 Every file with a discovered information type or a matching custom condition is logged in the reports.
 
+### Example 5: Set the Azure Information Protection scanner to use online configuration - preview version
+
+```
+PS C:\> Set-AIPScannerConfiguration -OnlineConfiguration On
+
+Configuration was set successfully.
+```
+
+This command sets the scanner to get its configuration directly from the Azure Information Protection service.
+
+
 ## PARAMETERS
 
 ### -JustificationMessage
-Specify the justification reason for lowering the classification label or removing protection, if the Azure Information Protection policy requires users to supply this information.
+Note: This parameter is not available in the preview version of the scanner. Instead, use the [Azure portal to configure the scanner](/information-protection/deploy-aip-scanner-preview).
+
+For the general availability version: Specify the justification reason for lowering the classification label or removing protection, if the Azure Information Protection policy requires users to supply this information.
 
 If setting a label triggers the justification and this reason is not supplied, the label is not applied. In this case, the status displayed in the error log and debug log is "Skipped" with the comment "Justification required".
 
@@ -116,7 +141,9 @@ Accept wildcard characters: False
 ```
 
 ### -Schedule
-Specifies how often the scanner runs on the specified data repositories:
+Note: This parameter is not available in the preview version of the scanner. Instead, use the [Azure portal to configure the scanner](/information-protection/deploy-aip-scanner-preview).
+
+For the general availability version: Specifies how often the scanner runs on the specified data repositories:
 
 - Manual: A single scan, started manually. For example, by running [Start-AIPScan](./Start-AIPScan.md). When the schedule is set to manual and you want to run a new scan, you must rerun the Start-AIPScan cmdlet. This manual schedule option is useful when the *Enforce* parameter is set to Off, so that the scanner runs one time and you can check the results in the report.
 - Always: The specified data repositories are repeatedly scanned in sequence and the Azure Information Protection Scanner service is not stopped. Use this option to scan for files that are modified or added to the data repositories. This option is most useful when the *Enforce* parameter is set to On because it ensures all files will be scanned. Every hour, the policy is checked for changes and if necessary, downloaded. The new policy is used for the next scan cycle. You can also download the latest changes by restarting the service.
@@ -137,7 +164,9 @@ Accept wildcard characters: False
 
 
 ### -DiscoverInformationTypes
-Specifies what patterns are detected by the scanner:
+Note: This parameter is not available in the preview version of the scanner. Instead, use the [Azure portal to configure the scanner](/information-protection/deploy-aip-scanner-preview).
+
+For the general availability version: Specifies what patterns are detected by the scanner:
 
 - PolicyOnly: The scanner uses the conditions (predefined information types and custom) that you have specified for labels in the Azure Information Protection policy.
 - All: The scanner uses any custom conditions that you have specified for labels in the Azure Information Protection policy, and the list of information types that are available to specify for labels in the Azure Information Protection policy. When you use this option, labels do not need to be configured for any conditions.
@@ -159,7 +188,9 @@ Accept wildcard characters: False
 ```
 
 ### -Enforce
-Specifies whether the scanner only logs the files that meet the conditions in the Azure Information Protection policy without applying the corresponding label (the installation default setting), or applies the label:
+Note: This parameter is not available in the preview version of the scanner. Instead, use the [Azure portal to configure the scanner](/information-protection/deploy-aip-scanner-preview).
+
+For the general availability version: Specifies whether the scanner only logs the files that meet the conditions in the Azure Information Protection policy without applying the corresponding label (the installation default setting), or applies the label:
 
 - Off: Scans the data repositories in the "what if" mode, to log results only, without setting the classification or protection that the corresponding label would apply.
 - On: Scans the data repositories, and for files that meet the conditions, apply the corresponding label to set the classification and optionally, protection.
@@ -175,6 +206,20 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -OnlineConfiguration 
+Note: This parameter is available only in the preview version of the scanner.
+
+Specifies whether the scanner gets its configuration settings directly from the Azure Information Protection service (the default), or uses an offline configuration file.
+
+If the scanner cannot support online configuration, you must still configure the scanner in the Azure portal. Then, export the scanner configuration from the portal to a .json file and import this file by using the [Import-AIPScannerConfiguration](./Import-AIPScannerConfiguration.md) cmdlet.
+
+```yaml
+Type: OnlineConfiguration
+Parameter Sets: (All)
+Aliases:
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
