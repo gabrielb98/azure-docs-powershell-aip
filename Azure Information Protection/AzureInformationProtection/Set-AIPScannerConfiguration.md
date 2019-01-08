@@ -97,7 +97,7 @@ This command sets the scanner to get its configuration directly from the Azure I
 ## PARAMETERS
 
 ### -JustificationMessage
-Note: This parameter is not available in the preview version of the scanner. Instead, use the [Azure portal to configure the scanner](/information-protection/deploy-aip-scanner-preview).
+Note: This parameter is not available in the preview version of the scanner. Instead, use the [Azure portal to configure the scanner](/information-protection/deploy-aip-scanner-preview), and set **Relabel files** to **On**.
 
 For the general availability version: Specify the justification reason for lowering the classification label or removing protection, if the Azure Information Protection policy requires users to supply this information.
 

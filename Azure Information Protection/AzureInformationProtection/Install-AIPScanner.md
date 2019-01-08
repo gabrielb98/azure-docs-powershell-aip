@@ -29,10 +29,9 @@ The command creates a Windows service named Azure Information Protection Scanner
     
     The database name for the scanner is AzInfoProtection and cannot be changed.
 
-For the preview version:
+- For the preview version:
     
     The default database name for the scanner is AIPScanner_\<computer_name>. When you specify a profile name by using the *Profile* parameter, the database name for the scanner changes to AIPScanner_\<profile_name>.
-
 
 To run this command, you must have local administrator rights for the Windows Server computer, and Sysadmin rights on the instance of SQL Server that you will use for the scanner.
 
@@ -50,8 +49,7 @@ After you have run this command:
     
     After you have run this command, use the Azure portal to configure the settings in the scanner profile and specify the data repositories to scan. Before you run the scanner, you must run the [Set-AIPAuthentication](./Set-AIPAuthentication.md) cmdlet one time to sign in to Azure AD for authentication and authorization. 
     
-    For step-by-step instructions to install, configure, and use the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](https://docs.microsoft.com/information-protection/deploy-aip-scanner-preview).
-
+    For step-by-step instructions to install, configure, and use the scanner, see [Deploying the preview version of the Azure Information Protection scanner to automatically classify and protect files](https://docs.microsoft.com/information-protection/deploy-aip-scanner-preview).
 
 ## EXAMPLES
 
