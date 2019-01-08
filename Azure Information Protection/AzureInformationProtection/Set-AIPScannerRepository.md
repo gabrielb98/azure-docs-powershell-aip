@@ -19,7 +19,9 @@ Set-AIPScannerRepository [-Path] <String> [-OverrideLabel <OverrideLabel>]
 ```
 
 ## DESCRIPTION
-The Set-AIPScannerRepository cmdlet updates a profile of configuration settings for a data repository that you have specified to be scanned by the Azure Information Protection scanner.
+Note: For the preview version of the scanner, this cmdlet is deprecated. Instead, use the [Azure portal to configure the scanner](/information-protection/deploy-aip-scanner-preview).
+
+For the general availability version, the  Set-AIPScannerRepository cmdlet updates a profile of configuration settings for a data repository that you have specified to be scanned by the Azure Information Protection scanner.
 
 For example, for each data repository that you specified by running [Add-AIPScannerRepository](./Add-AIPScannerRepository.md), you can change the default label for unlabeled files, and whether to override an existing label.
 
