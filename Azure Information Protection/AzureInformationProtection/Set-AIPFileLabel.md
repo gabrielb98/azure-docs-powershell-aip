@@ -226,7 +226,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EnableTracking 
+### -EnableTracking
 Note: This parameter is available only in the preview version of the client.
 
 Specify this parameter to register a protected document with the document tracking portal. 
