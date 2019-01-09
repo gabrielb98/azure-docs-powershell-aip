@@ -226,6 +226,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableTracking
+Note: This parameter is available only in the preview version of the client.
+
+Specify this parameter to register a protected document with the document tracking portal. 
+
+The user running this cmdlet and global administrators can then track the protected document and if necessary, revoke it. For more information about the document tracking site, see [Configuring and using document tracking for Azure Information Protection](https://docs.microsoft.com/azure/information-protection/rms-client/client-admin-guide-document-tracking) from the admin guide. 
+
+If the label does not apply protection, this parameter is ignored.
+
+```yaml 
+Type: SwitchParameter 
+```
+
+
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
