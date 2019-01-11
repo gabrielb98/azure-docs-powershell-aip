@@ -32,8 +32,6 @@ The Set-AIPScannerConfiguration cmdlet sets local configuration settings for the
 
 Any changes will be used the next time the scanner runs. If you need the changes to take effect immediately, restart the Azure Information Protection Scanner service on the Windows server computer
 
-
-
 ## EXAMPLES
 
 ### Example 1: Configure the Azure Information Protection scanner for a manual schedule and create a report for files that would be labeled - general availability version
@@ -122,7 +120,7 @@ Log files are stored in %localappdata%\Microsoft\MSIP\Scanner\Reports and have a
 
 - Debug: Logs every file that was discovered and the resulting action. This level of logging is useful for troubleshooting but slows down the Azure Information Protection scanner. This category includes files that don't meet any of the conditions and files that are skipped because of an unsupported file type. For example, trying to label a file for classification-only when the file type doesn't support this action, and trying to label files that are automatically excluded. For more information, see [File types supported by the Azure Information Protection client](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-file-types) from the admin guide.
 - Info: Logs only the files that were successfully labeled by the scanner, or would be labeled when the scanner is in discovery mode.
-- Error: Logs only the files that the scanner attempted to label but could not. For example, a justification reason was required but not specified. Or, a file was in use, or the scanner service did not have write access to the file.
+- Error: Logs only the files that the scanner attempted to label but could not. For example, a file was in use, or the scanner service did not have write access to the file.
 - Off: Disables reporting, which results in the best performance for the scanner.
 
 The local Windows **Applications and Services** event log, **Azure Information Protection** contains additional logging information. The events include the start and end times for each scanning cycle, when a scanned file has a label applied, and when protection is applied or removed. For more information, see [Event log IDs and descriptions for the scanner](https://docs.microsoft.com/information-protection/deploy-aip-scanner#event-log-ids-and-descriptions-for-the-scanner).
