@@ -27,7 +27,9 @@ The configuration settings include whether the scanner is in discovery mode only
 
 **For the preview version:**
 
-Because most of the scanner configuration settings are configured in the Azure portal, the Get-AIPScannerConfiguration cmdlet displays only the settings and values that you can configure with [Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration.md) cmdlet. These settings are whether the scanner gets its configuration online or from a file, and the report level for the locally created reports.
+Because most of the scanner configuration settings are configured in the Azure portal, the Get-AIPScannerConfiguration cmdlet displays only the settings and values that you can configure with [Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration.md) cmdlet. These settings are whether the scanner gets its configuration online or from a file that you export from the Azure portal, and the report level for the locally created reports.
+
+In addition, if you run [Import-AIPScannerConfiguration](./Import-AIPScannerConfiguration.md), this action automatically configures the scanner to get its configuration offline. As a result, when you run this Get-AIPScannerConfiguration cmdlet after importing settings from a file, **OnlineConfiguration** displays **Off**. 
 
 ## EXAMPLES
 

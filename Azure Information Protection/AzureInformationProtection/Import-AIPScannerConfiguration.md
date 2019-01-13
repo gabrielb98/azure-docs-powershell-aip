@@ -17,9 +17,13 @@ Import-AIPScannerConfiguration -FileName <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Note: This cndlet is available only in the preview version of the scanner.
+Note: This cmdlet is available only in the preview version of the scanner.
 
-The Import-AIPScannerConfiguration cmdlet imports local configuration settings for the Azure Information Protection scanner. When you install the scanner, settings are configured for you with their default installation values. You can configure most of the scanner configuration settings in the Azure portal. However, you must use this cmdlet if you need to import configuration settings from a file because the scanner cannot support online configuration.
+The Import-AIPScannerConfiguration cmdlet imports local configuration settings for the Azure Information Protection scanner, and automatically configures the scanner to use offline configuration. Use this cmdlet after you have configured a profile for the scanner in the Azure portal, and exported the settings to a file because the scanner can't connect to the Azure Information Protection service. For example, the computer running the scanner doesn't have Internet connectivity.
+
+If you need to make configuration changes to the scanner after you have run this cmdlet, make those changes in the Azure portal, export the profile again, and rerun this cmdlet.
+
+If you want to change the scanner to use online configuration after you have run this cmdlet, use the [Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration.md) and set the *OnlineConfiguration* parameter to **On**.
 
 Any changes will be used the next time the scanner runs. If you need the changes to take effect immediately, restart the Azure Information Protection Scanner service on the Windows server computer.
 
@@ -37,9 +41,9 @@ The scanner is configured to prevent getting its configuration directly from the
 ## PARAMETERS
 
 ### -FileName
-Specifies a file that contains scanner configuration settings that are exported from the Azure portal.
+Specifies a file that contains scanner configuration settings. To create this file, export your scanner profile from the Azure portal.
 
-The file is used to do a one-time import of configuration settings into the scanner configuration database. 
+The file is used to do a one-time import of configuration settings into the scanner configuration database.
 
 
 ```yaml
