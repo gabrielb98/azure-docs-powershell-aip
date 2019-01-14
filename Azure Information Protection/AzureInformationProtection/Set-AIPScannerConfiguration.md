@@ -30,7 +30,9 @@ The configuration settings include whether the scanner is in discovery mode only
 
 The Set-AIPScannerConfiguration cmdlet sets local configuration settings for the Azure Information Protection scanner. You configure most of the scanner configuration settings in the Azure portal, but must use this cmdlet if you need to import configuration settings from a file because the scanner cannot support online configuration, or if you need to change the report level for the locally created reports.
 
-Any changes will be used the next time the scanner runs. If you need the changes to take effect immediately, restart the Azure Information Protection Scanner service on the Windows server computer
+Any changes will be used the next time the scanner runs. If you need the changes to take effect immediately, restart the Azure Information Protection Scanner service on the Windows server computer.
+
+Note: The syntax at the top of this page is for the general availability version. To check the cmdlet syntax for the preview version, in a PowerShell session, type `Get-Help Set-AIPScannerConfiguration` and review the SYNTAX section.
 
 ## EXAMPLES
 

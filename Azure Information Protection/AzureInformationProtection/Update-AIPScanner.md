@@ -25,6 +25,7 @@ Run this cmdlet with an account that has the database-level role of db_owner for
 
 For preview version: After the upgrade, the scanner changes how it gets its configuration settings. Instead of using PowerShell to configure the scanner locally, the scanner is now configured from the Azure Information Protection service, by using the Azure portal.
 
+Note: The syntax at the top of this page is for the general availability version. To check the cmdlet syntax for the preview version, in a PowerShell session, type `Get-Help Update-AIPScanner` and review the SYNTAX section.
 
 ## EXAMPLES
 
