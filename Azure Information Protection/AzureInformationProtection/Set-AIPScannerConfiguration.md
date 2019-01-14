@@ -28,9 +28,11 @@ The configuration settings include whether the scanner is in discovery mode only
 
 **For the preview version:**
 
-The Set-AIPScannerConfiguration cmdlet sets local configuration settings for the Azure Information Protection scanner. When you install the scanner, settings are configured for you with their default installation values. You can configure most of the scanner configuration settings in the Azure portal. However, you must use this cmdlet if you need to import configuration settings from a file because the scanner cannot support online configuration, and if you need to change the report level for the locally created reports.
+The Set-AIPScannerConfiguration cmdlet sets local configuration settings for the Azure Information Protection scanner. You configure most of the scanner configuration settings in the Azure portal, but must use this cmdlet if you need to import configuration settings from a file because the scanner cannot support online configuration, or if you need to change the report level for the locally created reports.
 
-Any changes will be used the next time the scanner runs. If you need the changes to take effect immediately, restart the Azure Information Protection Scanner service on the Windows server computer
+Any changes will be used the next time the scanner runs. If you need the changes to take effect immediately, restart the Azure Information Protection Scanner service on the Windows server computer.
+
+Note: The syntax at the top of this page is for the general availability version. To check the cmdlet syntax for the preview version, in a PowerShell session, type `Get-Help Set-AIPScannerConfiguration` and review the SYNTAX section.
 
 ## EXAMPLES
 
@@ -116,14 +118,22 @@ Accept wildcard characters: False
 ### -ReportLevel
 Define the level of logging for the scanner reports. When the scanner is first installed, by default, only files that are successfully labeled by the scanner are included in the log file.
 
-Log files are stored in %localappdata%\Microsoft\MSIP\Scanner\Reports and have a .csv file format. They include the time taken to scan, the number of scanned files, and statistics of how many files were classified and protected. This folder stores up to 60 reports for each scanning cycle and all but the latest report is compressed to help minimize the required disk space.
+Log files are stored in the %localappdata%\Microsoft\MSIP\Scanner\Reports folder. A summary report (.txt) includes the time taken to scan, the number of scanned files, and statistics of how many files were classified and protected. Detailed reports (.csv) has details for each file. The folder stores up to 60 reports for each scanning cycle and all but the latest report is compressed to help minimize the required disk space.
 
 - Debug: Logs every file that was discovered and the resulting action. This level of logging is useful for troubleshooting but slows down the Azure Information Protection scanner. This category includes files that don't meet any of the conditions and files that are skipped because of an unsupported file type. For example, trying to label a file for classification-only when the file type doesn't support this action, and trying to label files that are automatically excluded. For more information, see [File types supported by the Azure Information Protection client](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-file-types) from the admin guide.
 - Info: Logs only the files that were successfully labeled by the scanner, or would be labeled when the scanner is in discovery mode.
 - Error: Logs only the files that the scanner attempted to label but could not. For example, a file was in use, or the scanner service did not have write access to the file.
 - Off: Disables reporting, which results in the best performance for the scanner.
 
-The local Windows **Applications and Services** event log, **Azure Information Protection** contains additional logging information. The events include the start and end times for each scanning cycle, when a scanned file has a label applied, and when protection is applied or removed. For more information, see [Event log IDs and descriptions for the scanner](https://docs.microsoft.com/information-protection/deploy-aip-scanner#event-log-ids-and-descriptions-for-the-scanner).
+The local Windows **Applications and Services** event log, **Azure Information Protection** contains additional logging information. The events include the start and end times for each scanning cycle, when a scanned file has a label applied, and when protection is applied or removed. For more information:
+
+For the general availability version:
+
+- [Event log IDs and descriptions for the scanner](https://docs.microsoft.com/information-protection/deploy-aip-scanner#event-log-ids-and-descriptions-for-the-scanner).
+
+For the preview version:
+
+- [Event log IDs and descriptions for the scanner](https://docs.microsoft.com/information-protection/deploy-aip-scanner-preview#event-log-ids-and-descriptions-for-the-scanner).
 
 ```yaml
 Type: ReportLevel
@@ -139,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -Schedule
-Note: This parameter is not available in the preview version of the scanner. Instead, use the [Azure portal to configure the scanner](/information-protection/deploy-aip-scanner-preview).
+Note: This parameter is not available in the preview version of the scanner. Instead, use the [Azure portal to configure the scanner](https://docs.microsoft.com/information-protection/deploy-aip-scanner-preview).
 
 For the general availability version: Specifies how often the scanner runs on the specified data repositories:
 
@@ -162,7 +172,7 @@ Accept wildcard characters: False
 
 
 ### -DiscoverInformationTypes
-Note: This parameter is not available in the preview version of the scanner. Instead, use the [Azure portal to configure the scanner](/information-protection/deploy-aip-scanner-preview).
+Note: This parameter is not available in the preview version of the scanner. Instead, use the [Azure portal to configure the scanner](https://docs.microsoft.com/information-protection/deploy-aip-scanner-preview).
 
 For the general availability version: Specifies what patterns are detected by the scanner:
 
@@ -209,6 +219,10 @@ Accept wildcard characters: False
 Note: This parameter is available only in the preview version of the scanner.
 
 Specifies whether the scanner gets its configuration settings directly from the Azure Information Protection service (the default), or uses an offline configuration file.
+
+- On: The default setting. The scanner gets its configuration settings directly from the Azure Information Protection service.
+
+- Off: The scanner is prevented from getting its configuration settings directly from the Azure Information Protection service. Instead, the scanner is configured by settings that you import from a file. 
 
 If the scanner cannot support online configuration, you must still configure the scanner in the Azure portal. Then, export the scanner configuration from the portal to a .json file and import this file by using the [Import-AIPScannerConfiguration](./Import-AIPScannerConfiguration.md) cmdlet.
 

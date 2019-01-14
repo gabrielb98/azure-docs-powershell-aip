@@ -51,6 +51,9 @@ After you have run this command:
     
     For step-by-step instructions to install, configure, and use the scanner, see [Deploying the preview version of the Azure Information Protection scanner to automatically classify and protect files](https://docs.microsoft.com/information-protection/deploy-aip-scanner-preview).
 
+
+Note: The syntax at the top of this page is for the general availability version. To check the cmdlet syntax for the preview version, in a PowerShell session, type `Get-Help Install-AIPScanner` and review the SYNTAX section.
+
 ## EXAMPLES
 
 ### Example 1a: Install the Azure Information Protection Scanner service by using a SQL Server instance - general availability version
