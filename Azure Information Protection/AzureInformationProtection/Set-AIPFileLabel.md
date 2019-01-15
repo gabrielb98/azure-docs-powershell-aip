@@ -28,13 +28,13 @@ Set-AIPFileLabel [-JustificationMessage <String>] [-RemoveLabel] [-Owner <String
 ## DESCRIPTION
 The **Set-AIPFileLabel** cmdlet sets or removes an Azure Information Protection label for one or more files. This action can automatically apply or remove protection when labels are configured for Rights Management protection in the Azure Information Protection policy. When the command runs successfully, any existing label or protection is replaced.
 
-Currently, you cannot create or edit labels by using PowerShell but must do this by using the Azure portal. For instructions, see [Configuring the Azure Information Protection policy](https://docs.microsoft.com/information-protection/configure-policy).
+You cannot create or edit labels by using PowerShell but must do this by using the Azure portal. For instructions, see [Configuring the Azure Information Protection policy](https://docs.microsoft.com/information-protection/configure-policy).
 
 You can run this cmdlet concurrently. To run this cmdlet non-interactively, see [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection) from the admin guide.
 
 ## EXAMPLES
 
-### Example 1: Apply the "General" sub-label to all files in a folder and any of its subfolders
+### Example 1: Apply the "General" label to all files in a folder and any of its subfolders
 ```
 PS C:\> Set-AIPFileLabel -Path C:\Projects\ -LabelId d9f23ae3-1324-1234-1234-f515f824c57b
 FileName                    Status      Comment
@@ -99,6 +99,27 @@ C:\Projects\Analysis.docx  Success
 
 This command removes the existing label from the file named C:\Projects\Analysis.docx, and specifies a justification message that is required because the Azure Information Protection policy setting is enabled that requires justification for lowering the classification label, removing a label, or removing protection. 
 
+### Example 6: Apply the "Confidential \ All Employees" label to all files in a folder and register these files with the document tracking site - preview version
+
+``` 
+PS C:\> Set-AIPFileLabel -Path C:\Projects\ -LabelId ade72bf1-4714-4714-4714-a325f824c55a -EnableTracking 
+FileName                    Status      Comment 
+--------                    ------      ------------ 
+C:\Projects\Project1.docx   Success 
+C:\Projects\Project2.docx   Success 
+C:\Projects\Project3.docx   Success 
+C:\Projects\Project4.docx   Success 
+C:\Projects\Datasheet.pdf   Success 
+C:\Projects\Image.jpg       Success 
+C:\Projects\Dashboard.xlsx  Success 
+``` 
+
+Note: This example requires the preview version of the Azure Information Protection client.
+
+This command sets a label named "Confidential \ All Employees" on all files in the Projects folder and any of its subfolders. The Label ID specified is for the sublabel "All Employees" that has a parent label of "Confidential". 
+
+If the "Confidential \ All Employees" label applies protection, the files that were successfully labeled with this command will also be protected. Because the *EnableTracking* parameter was specified, the protected documents can now be tracked and revoked in the document tracking site by the person who labeled the document, and by global administrators who use the Administrator mode.
+
 ## PARAMETERS
 
 ### -JustificationMessage
@@ -117,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -LabelId
-Specifies the identity (ID) of the label to apply. When a label has sub-labels, always specify the ID of just a sub-label and not the parent label. 
+Specifies the identity (ID) of the label to apply. When a label has sublabels, always specify the ID of just a sublabel and not the parent label. 
 
 The label ID value is displayed in the Azure portal, on the Label blade, when you view or configure the Azure Information Protection policy. For files that have labels applied, you can also run the [Get-AIPFileStatus](./Get-AIPFileStatus.md) cmdlet to identify the label ID (MainLabelId or SubLabelId).
 
@@ -187,12 +208,11 @@ Accept wildcard characters: False
 ```
 
 ### -PreserveFileDetails
-Specify this parameter to leave the date unchanged for documents that you label.
+Specify this parameter to leave the modified date (Windows and SharePoint) and modified by (SharePoint) values unchanged for documents that you label:
 
-For local or network files, the Last Modified date remains unchanged.
+- For local or network files, the **Date modified** value remains unchanged.
 
-For SharePoint files, the Modified date and Modified By date remains unchanged.
-
+- For SharePoint files, the **Modified date** and **Modified by** values remain unchanged.
 
 ```yaml
 Type: SwitchParameter
@@ -206,8 +226,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableTracking
+Note: This parameter is available only in the preview version of the client.
+
+Specify this parameter to register a protected document with the document tracking portal. 
+
+The user running this cmdlet and global administrators can then track the protected document and if necessary, revoke it. For more information about the document tracking site, see [Configuring and using document tracking for Azure Information Protection](https://docs.microsoft.com/azure/information-protection/rms-client/client-admin-guide-document-tracking) from the admin guide. 
+
+If the label does not apply protection, this parameter is ignored.
+
+```yaml 
+Type: SwitchParameter 
+```
+
+
+
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -17,13 +17,23 @@ Get-AIPScannerConfiguration [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Get-AIPScannerConfiguration cmdlet gets the configuration settings for the Azure Information Protection scanner. Most of the settings install with a default value, so you need to specify them only if you want to use another value, or you have previously set them and now need to reconfigure them. To do so, use the [Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration.md) cmdlet.
+The Get-AIPScannerConfiguration cmdlet gets the configuration settings for the Azure Information Protection scanner. 
+
+**For the general availability version:**
+
+Most of the settings install with a default value, so you need to specify them only if you want to use another value, or you have previously set them and now need to reconfigure them. To do so, use the [Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration.md) cmdlet.
 
 The configuration settings include whether the scanner is in discovery mode only or applies labels, whether a file will be relabeled, whether file attributes are changed, what is logged in the reports, whether the scanner runs once or continuously, whether all files are scanned or only new and changed files, what justification message to use when required, and the Rights Management owner for protected files.
 
+**For the preview version:**
+
+Because most of the scanner configuration settings are configured in the Azure portal, the Get-AIPScannerConfiguration cmdlet displays only the settings and values that you can configure with [Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration.md) cmdlet. These settings are whether the scanner gets its configuration online or from a file that you export from the Azure portal, and the report level for the locally created reports.
+
+In addition, if you run [Import-AIPScannerConfiguration](./Import-AIPScannerConfiguration.md), this action automatically configures the scanner to get its configuration offline. As a result, when you run this Get-AIPScannerConfiguration cmdlet after importing settings from a file, **OnlineConfiguration** displays **Off**. 
+
 ## EXAMPLES
 
-### Example 1: Gets the configuration for the Azure Information Protection scanner
+### Example 1a: Gets the configuration for the Azure Information Protection scanner - general availability version
 ```
 PS C:\> Get-AIPScannerConfiguration
 
@@ -43,6 +53,17 @@ This command gets the current configuration settings for the Azure Information P
 - The string "Reclassified by Azure Information Protection Scanner" is supplied and logged when the scanner applies a label that requires justification.
 - The scanner looks for conditions and patterns that are defined in your Azure Information Protection policy
 - The scanner includes all file types to scan, except for the default file types that the Azure Information Protection client excludes by default.
+
+### Example 1b: Gets the configuration for the Azure Information Protection scanner - preview version
+```
+PS C:\> Get-AIPScannerConfiguration
+
+OnlineConfiguration      : On
+ReportLevel              : Info
+```
+
+This command gets the current PowerShell configuration settings for the Azure Information Protection scanner. In this example, the output shows that the scanner is using the default configuration for online configuration and the report level of information.
+
 
 ## PARAMETERS
 
