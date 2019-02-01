@@ -145,7 +145,7 @@ This setting has no effect on templates that are not departmental templates and 
 
 Note: This parameter is functionally the equivalent of the **Show this template to all users when the applications do not support user identity** check box if you configured **APPLICATION COMPATIBILITY** in the Azure classic portal. The classic portal is now retired and there is no equivalent setting in the Azure portal.
 
-The Azure Information Protection client and the Rights Management sharing application support departmental templates whereas Exchange Outlook Web Access and Exchange ActiveSync are examples of applications that do not currently support departmental templates. For these Exchange applications (and all other applications that cannot support departmental templates), you must decide whether all users can select a departmental template from the list of available templates, or no users can select a departmental template from the list.
+The Azure Information Protection client supports departmental templates whereas Exchange Outlook Web Access and Exchange ActiveSync are examples of applications that do not currently support departmental templates. For these Exchange applications (and all other applications that cannot support departmental templates), you must decide whether all users can select a departmental template from the list of available templates, or no users can select a departmental template from the list.
 
 This setting does not affect whether a user can access content that is protected by a departmental template; it only affects the ability for a user to select the template itself.
 
@@ -180,7 +180,7 @@ To specify unlimited access, use -1. To specify that a use license must be obtai
 
 Each organization has a maximum use license validity time, which is 30 days by default and can be configured by using the [Set-AadrmMaxUseLicenseValidityTime](./Set-AadrmMaxUseLicenseValidityTime.md). The value that you specify for the *LicenseValidityDuration* parameter must be lower than that value.
 
-This setting can also be overridden by a user for a document when they use the RMS sharing application, and select the **Allow me to instantly revoke access to these documents** option, which effectively sets the use license validity time to 0. When there are different values like this, Azure RMS uses the most restrictive value.
+When there are different values for the use license validity time, for example, one value for the tenant and one for the template, Azure RMS uses the most restrictive value.
 
 ```yaml
 Type: Int32

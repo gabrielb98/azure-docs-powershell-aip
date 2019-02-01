@@ -36,7 +36,7 @@ For example, if a user shares a protected file by email and the protected file h
 
 This setting at the tenant level can be overridden by a more restrictive setting in a Rights Management template because of the *LicenseValidityDuration* parameter in the [Set-AadrmTemplateProperty](./Set-AadrmTemplateProperty.md) and [Add-AadrmTemplate](./Add-AadrmTemplate.md) cmdlets, which administrators can also set in the Azure portal by configuring the offline access option, Number of days the content is available without an Internet connection.
 
-This setting can also be overridden by a user for a document when they use the RMS sharing application, and select the "Allow me to instantly revoke access to these documents" option, which effectively sets the use license validity time to 0. There is no equivalent setting for Azure Information Protection client. When there are different values like this, Azure RMS uses the most restrictive value.
+When there are different values for the use license validity time, for example, one value for the tenant and one for the template, Azure RMS uses the most restrictive value.
 
 Because the use license validity time can be overridden with more restrictive values, when you change the default value by using this cmdlet, choose a maximum value that best suits your organization. 
 
