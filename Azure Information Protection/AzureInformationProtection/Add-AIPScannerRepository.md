@@ -27,9 +27,9 @@ For the data repository, you can specify local folders, UNC paths, and SharePoin
 
 When you add a SharePoint path for "Shared Documents":
 
-- Specify "Shared Documents" in the path when you want to scan all documents and all folders from Shared Documents. For example: "http://sp2013/Shared Documents"
+- Specify "Shared Documents" in the path when you want to scan all documents and all folders from Shared Documents. For example: "<http://sp2013/Shared> Documents"
 
-- Specify "Documents" in the path when you want to scan all documents and all folders from a subfolder under Shared Documents. For example: "http://sp2013/Documents/Sales Reports"
+- Specify "Documents" in the path when you want to scan all documents and all folders from a subfolder under Shared Documents. For example: "<http://sp2013/Documents/Sales> Reports"
 
 If you later need to change the settings for this data repository, use the [Set-AIPScannerRepository](./Set-AIPScannerRepository.md) cmdlet. To remove this data repository, complete with its scanning settings, use the [Remove-AIPScannerRepository](./Remove-AIPScannerRepository.md) cmdlet.
 
