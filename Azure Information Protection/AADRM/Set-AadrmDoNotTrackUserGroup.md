@@ -27,7 +27,7 @@ You must use PowerShell to set this group so that users are not tracked; you can
 
 ### Example 1
 ```
-PS C:\>Set-AadrmDoNotTrackUserGroup -GroupEmailAddress "DoNotTrackUserGroup@contoso.com"
+PS C:\>Set-AadrmDoNotTrackUserGroup -EmailAddress "DoNotTrackUserGroup@contoso.com"
 ```
 
 This command sets a group that has the email address of DoNotTrackUserGroup@contoso.com for the Contoso organization so that users in that group will not be tracked with the document tracking feature.
