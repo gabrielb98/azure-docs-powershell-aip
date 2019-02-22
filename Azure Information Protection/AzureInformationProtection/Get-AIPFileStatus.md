@@ -30,9 +30,9 @@ NOTE: If you have the current preview version of the Azure Information Protectio
 
 - This cmdlet requires an Internet connection.
 
-- This cmdlets returns label information from your own tenant only.
+- This cmdlets returns label information from your own tenant only and the *LabelingSiteId* parameter is removed from the output.
 
-- The *Owner* and *RMSIssuedTime* parameters are not supported and display **NULL**.
+- The *Owner* and *RMSIssuedTime* parameters are not supported and have been removed from the output.
 
 - The *LabelingMethod* parameter display the values of **Privileged**, **Standard**, or **Auto** instead of **Manual** or **Automatic**:
     
@@ -78,14 +78,11 @@ MainLabelId     : 074e257c-1234-1234-1234-34a182080e71
 MainLabelName   : Confidential
 SubLabelId      : d9f23ae3-1234-1234-1234-f515f824c57b
 SubLabelName    : Finance group
-LabelingSiteId  : 72f988bf-1234-1234-1234-2d7cd011db47
-Owner           : NULL
 LabelingMethod  : Privileged
 LabelDate       : 12/12/2016 12:24:36 PM
 IsRMSProtected  : True
 RMSTemplateId   : e6ee2481-1234-1234-1234-f744eacd53b0
 RMSTemplateName : Contoso - Confidential Finance
-RMSIssuedTime   : NULL
 RMSOwner        : John@Contoso.com
 RMSIssuer       : John@Contoso.com
 ```

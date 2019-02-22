@@ -29,6 +29,15 @@ Currently, you cannot create or edit labels by using PowerShell but must do this
 
 To run this cmdlet non-interactively, see [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection) from the admin guide.
 
+NOTE: You can also run this cmdlet with the current preview version of the Azure Information Protection unified labeling client when you configure auto labeling in the Office 365 Security & Compliance Center. When you run this cmdlet with the Azure Information Protection unified labeling client, there are differences from the Azure Information Protection client:
+
+- This cmdlet requires an Internet connection.
+
+- The *Owner* parameter is not supported.
+
+- When a file isn't labeled because it was manually labeled, there was no match for the conditions that you specified, or the file had a higher classification, the file is skipped with the same comment of "No label to apply".
+
+
 ## EXAMPLES
 
 ### Example 1: Scan all files in a folder and any of its subfolders, and apply labels according to the configured conditions for automatic classification
@@ -187,6 +196,8 @@ Accept wildcard characters: False
 ```
 
 ### -Owner
+NOTE: This parameter is not supported with the Azure Information Protection unified labeling client.
+
 Specify the email address that is written to the Owner custom property. 
 
 
