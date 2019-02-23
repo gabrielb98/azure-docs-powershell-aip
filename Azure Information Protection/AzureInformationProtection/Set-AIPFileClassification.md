@@ -160,7 +160,7 @@ Accept wildcard characters: False
 ### -JustificationMessage
 The justification reason for lowering the classification label, removing a label, or removing protection, if the Azure Information Protection policy requires users to supply this information.
 
-If setting a label triggers the justification and this reason is not supplied, the label is not applied, even if the *-Force* parameter is set. In this case, the status returned is "Skipped" with the comment "Justification required".
+If setting a label triggers the justification and this reason is not supplied, the label is not applied, even if the *-Force* parameter is set. In this case, the status returned is "Skipped" with the comment "Justification required" for the Azure Information Protection client, and "No label to apply" for the Azure Information Protection unified labeling client.
 
 ```yaml
 Type: String
