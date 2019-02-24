@@ -26,15 +26,27 @@ Set-AIPFileLabel [-JustificationMessage <String>] [-RemoveLabel] [-Owner <String
 ```
 
 ## DESCRIPTION
-The **Set-AIPFileLabel** cmdlet sets or removes an Azure Information Protection label for one or more files. This action can automatically apply or remove protection when labels are configured for Rights Management protection in the Azure Information Protection policy. When the command runs successfully, any existing label or protection is replaced.
+For the Azure Information Protection client, the **Set-AIPFileLabel** cmdlet sets or removes an Azure Information Protection label for one or more files. This action can automatically apply or remove protection when labels are configured for Rights Management protection in the Azure Information Protection policy. When the command runs successfully, any existing label or protection can be replaced.
 
 You cannot create or edit labels by using PowerShell but must do this by using the Azure portal. For instructions, see [Configuring the Azure Information Protection policy](https://docs.microsoft.com/information-protection/configure-policy).
 
+For the Azure Information Protection unified labeling client, currently in preview, the **Set-AIPFileLabel** cmdlet sets or removes an Office 365 sensitivity label for one or more files. This action can automatically apply protection when labels are configured to apply encryption. When the command runs successfully, any existing label or protection can be replaced.
+
 You can run this cmdlet concurrently. To run this cmdlet non-interactively, see [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection) from the admin guide.
+
+NOTE: When you run this cmdlet with the Azure Information Protection unified labeling client, there are differences from the Azure Information Protection client:
+
+- This cmdlet requires an Internet connection.
+
+- The *Owner* parameter is not supported.
+
+- SharePoint Server paths are not supported.
+
+- When a file isn't labeled because it was manually labeled, there was no match for the conditions that you specified, or the file had a higher classification, the file is skipped with the single comment of "No label to apply".
 
 ## EXAMPLES
 
-### Example 1: Apply the "General" label to all files in a folder and any of its subfolders
+### Example 1a: Apply the "General" label to all files in a folder and any of its subfolders - Azure Information Protection client only
 ```
 PS C:\> Set-AIPFileLabel -Path C:\Projects\ -LabelId d9f23ae3-1324-1234-1234-f515f824c57b
 FileName                    Status      Comment
@@ -52,7 +64,25 @@ If the General label is configured in the Azure Information Protection policy to
 
 In this example, one file was not labeled (skipped) with the comment that justification is required. This might be the intended outcome to ensure that a file with a higher classification label or protection isn't accidentally overwritten with a lower classification label or has protection removed. To enable this safeguard, the Azure Information Protection policy must be configured to require justification for lowering the classification label, removing a label, or removing protection. When you then run this command without the **JustificationMessage** parameter and the label triggers justification, the file is skipped. 
 
-### Example 2: Apply the "General" label to a single file, which requires justification
+### Example 1b: Apply the "General" label to all files in a folder and any of its subfolders - Azure Information Protection unified labeling client only
+```
+PS C:\> Set-AIPFileLabel -Path C:\Projects\ -LabelId d9f23ae3-1324-1234-1234-f515f824c57b
+FileName                    Status      Comment
+--------                    ------      ------------
+C:\Projects\Project1.docx   Success
+C:\Projects\Datasheet.pdf   Success
+C:\Projects\Image.jpg       Success
+C:\Projects\Analysis.xlsx   Skipped    No label to apply
+C:\Projects\Dashboard.xlsx  Success
+```
+
+This command sets a label named "General" on all files in the Projects folder and any of its subfolders.
+
+If the General label is configured to apply encryption, the files that were successfully labeled with this command will also be encrypted. In this case, the Rights Management owner (who has the Rights Management Full Control permission) of these files is the user who ran the PowerShell command.
+
+In this example, one file was not labeled (skipped) because it required justification. This might be the intended outcome to ensure that a file with a higher classification label or protection isn't accidentally overwritten with a lower classification label or has protection removed. To enable this safeguard, the Office 365 classification label policy must be configured to require justification for removing a label or lowering the classification. When you then run this command without the **JustificationMessage** parameter and the label triggers justification, the file is skipped with the comment "No label to apply". 
+
+### Example 2: Apply the "General" label to a single file, which requires justification - Azure Information Protection client only
 ```
 PS C:\> Set-AIPFileLabel -Path \\Finance\Projects\Analysis.xlsx -LabelId d9f23ae3-1324-1234-1234-f515f824c57b -JustificationMessage 'The previous label no longer applies'
 FileName                          Status      Comment
@@ -61,6 +91,16 @@ FileName                          Status      Comment
 ```
 
 This command sets the "General" label for a file that is already labeled with a higher classification label. The Azure Information Protection policy is configured to require justification for lowering the classification label, removing a label, or removing protection. Because the command includes a justification message, the new label is successfully applied and the justification reason is logged on the local computer.
+
+### Example 2: Apply the "General" label to a single file, which requires justification - Azure Information Protection unified labeling client only
+```
+PS C:\> Set-AIPFileLabel -Path \\Finance\Projects\Analysis.xlsx -LabelId d9f23ae3-1324-1234-1234-f515f824c57b -JustificationMessage 'The previous label no longer applies'
+FileName                          Status      Comment
+--------                          ------      ------------
+\\finance\projects\analysis.xlsx  Success
+```
+
+This command sets the "General" label for a file that is already labeled with a higher classification label. The Office 365 classification label policy is configured to require justification for removing a label or lowering the classification. Because the command includes a justification message, the new label is successfully applied.
 
 ### Example 3: Apply the "General" label to all files that do not currently have a label
 ```
@@ -88,7 +128,8 @@ This command first identifies all .docx files in the C:\Projects folder (and its
 
 Note: This command makes use of the Path alias of FullName, so that Get-Child-Item can be used with Get-AIPFileStatus. 
 
-### Example 5: Remove a label from a file
+### Example 5a: Remove a label from a file - Azure Information Protection client only
+
 ```
 PS C:\> Set-AIPFileLabel C:\Projects\Analysis.docx -RemoveLabel -JustificationMessage 'The previous label no longer applies'
 
@@ -97,9 +138,21 @@ FileName                   Status Comment
 C:\Projects\Analysis.docx  Success
 ```
 
-This command removes the existing label from the file named C:\Projects\Analysis.docx, and specifies a justification message that is required because the Azure Information Protection policy setting is enabled that requires justification for lowering the classification label, removing a label, or removing protection. 
+This command removes the existing label from the file named C:\Projects\Analysis.docx, and specifies a justification message that is required because the Azure Information Protection policy setting is enabled that requires justification for lowering the classification label, removing a label, or removing protection.
 
-### Example 6: Apply the "Confidential \ All Employees" label to all files in a folder and register these files with the document tracking site - preview version
+### Example 5b: Remove a label from a file - Azure Information Protection unified labeling client only
+
+```
+PS C:\> Set-AIPFileLabel C:\Projects\Analysis.docx -RemoveLabel -JustificationMessage 'The previous label no longer applies'
+
+FileName                   Status Comment
+--------                   ------ ------------
+C:\Projects\Analysis.docx  Success
+```
+
+This command removes the existing label from the file named C:\Projects\Analysis.docx, and specifies a justification message that is required because the Office 365 classification label policy setting is enabled that requires justification for removing a label or lowering the classification. 
+
+### Example 6: Apply the "Confidential \ All Employees" label to all files in a folder and register these files with the document tracking site - Azure Information Protection client preview version only
 
 ``` 
 PS C:\> Set-AIPFileLabel -Path C:\Projects\ -LabelId ade72bf1-4714-4714-4714-a325f824c55a -EnableTracking 
@@ -156,6 +209,8 @@ Accept wildcard characters: False
 ```
 
 ### -Path
+Note: For the current preview version of the Azure Information Protection unified labeling client, SharePoint Server paths are not supported.
+
 Specifies a local path, network path, or SharePoint Server URL to the files for which you want to get the label and protection information. 
 
 Wildcards are not supported and WebDav locations are not supported.
@@ -192,6 +247,8 @@ Accept wildcard characters: False
 ```
 
 ### -Owner
+Note: This parameter is not supported with the Azure Information Protection unified labeling client.
+
 Specify the email address that is written to the Owner custom property.
 
 
@@ -227,7 +284,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableTracking
-Note: This parameter is available only in the preview version of the client.
+Note: This parameter is available only in the preview version of the Azure Information Protection client.
 
 Specify this parameter to register a protected document with the document tracking portal. 
 

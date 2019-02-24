@@ -37,6 +37,8 @@ NOTE: When you run this cmdlet with the Azure Information Protection unified lab
 
 - The *Owner* parameter is not supported.
 
+- SharePoint Server paths are not supported.
+
 - When a file isn't labeled because it was manually labeled, there was no match for the conditions that you specified, or the file had a higher classification, the file is skipped with the single comment of "No label to apply".
 
 
@@ -94,7 +96,7 @@ If the applied labels are also configured to apply Rights Management protection,
 
 Because the PreserveFileDetails parameter is specified, the Date Modified of the labeled files remains unchanged.
 
-### Example 1b: Scan all files in a folder and any of its subfolders, and apply labels according to the configured conditions for automatic classification - Azure Information Protection client unified labeling client only
+### Example 1b: Scan all files in a folder and any of its subfolders, and apply labels according to the configured conditions for automatic classification - Azure Information Protection unified labeling client only
 ```
 PS C:\> Set-AIPFileClassification -Path C:\Projects\ -PreserveFileDetails
 
@@ -245,7 +247,7 @@ SubLabelName  :
 SubLabelId    :
 ```
 
-This command is similar to the previous example in that it also scans all files in the Projects folder and any of its subfolders, and sets labels according to the configured conditions in auto labeling policy. However, this time, because the command includes the *-Force* parameter, it also replaces the existing label for Dashboard.xlsx, and Pricelist.xlsx. 
+This command is similar to the previous example in that it also scans all files in the Projects folder and any of its subfolders, and sets labels according to the configured conditions for auto labeling. However, this time, because the command includes the *-Force* parameter, it also replaces the existing label for Dashboard.xlsx, and Pricelist.xlsx. 
 
 The contents of Datasheet.pdf did not match any configured conditions and this file remains without a label.
 
@@ -284,6 +286,8 @@ Accept wildcard characters: False
 ```
 
 ### -Path
+Note: For the current preview version of the Azure Information Protection unified labeling client, SharePoint Server paths are not supported.
+
 Specifies a local path, network path, or SharePoint Server URL to the files for which you want to get the label and protection information.
 
 Wildcards are not supported and WebDav locations are not supported.
