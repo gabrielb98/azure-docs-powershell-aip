@@ -19,28 +19,30 @@ Set-AIPFileClassification [-JustificationMessage <String>] [-Force] [-Owner <Str
 ```
 
 ## DESCRIPTION
-The Set-AIPFileClassification cmdlet can automatically apply an Azure Information Protection label for one or more files when you configure labels in your Azure Information Protection policy to use conditions. Labels are applied when the conditions are configured for automatic classification. For more information about conditions, see [How to configure conditions for automatic and recommended classification for Azure Information Protection](https://docs.microsoft.com/information-protection/configure-policy-classification).
+For the Azure Information Protection client, the Set-AIPFileClassification cmdlet can automatically apply an Azure Information Protection label for one or more files when you configure labels in your Azure Information Protection policy to use conditions. Labels are applied when the conditions are configured for automatic classification. For more information about conditions, see [How to configure conditions for automatic and recommended classification for Azure Information Protection](https://docs.microsoft.com/information-protection/configure-policy-classification).
 
-When this cmdlet is run, it inspects the file contents and if the condition is met for a label, that label is applied. This action can automatically apply or remove protection when the applied label is also configured for Rights Management protection in the Azure Information Protection policy.
+You cannot create or edit labels by using PowerShell but must do this by using the Azure portal. For instructions, see [Configuring the Azure Information Protection policy](https://docs.microsoft.com/information-protection/configure-policy).
+
+For the Azure Information Protection unified labeling client, currently in preview, the Set-AIPFileClassification cmdlet can automatically apply a sensitivity label for one or more files when you configure auto labeling in the Office 365 Security & Compliance Center. Sensitivity labels are applied when the content matches the conditions and you select the option to automatically apply a label. For more information, see [Apply a sensitivity label to content automatically](https://docs.microsoft.com/Office365/SecurityCompliance/apply_sensitivity_label_automatically).
+
+When this cmdlet is run, it inspects the file contents and if the configured conditions are met for a label, that label is applied. This action will automatically apply protection if the selected label applies protection. For the Azure Information Protection client, protection can also be removed.
 
 By default, if the file already has a label, the existing label or protection is not replaced.
 
-Currently, you cannot create or edit labels by using PowerShell but must do this by using the Azure portal. For instructions, see [Configuring the Azure Information Protection policy](https://docs.microsoft.com/information-protection/configure-policy).
-
 To run this cmdlet non-interactively, see [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection) from the admin guide.
 
-NOTE: You can also run this cmdlet with the current preview version of the Azure Information Protection unified labeling client when you configure auto labeling in the Office 365 Security & Compliance Center. When you run this cmdlet with the Azure Information Protection unified labeling client, there are differences from the Azure Information Protection client:
+NOTE: When you run this cmdlet with the Azure Information Protection unified labeling client, there are differences from the Azure Information Protection client:
 
 - This cmdlet requires an Internet connection.
 
 - The *Owner* parameter is not supported.
 
-- When a file isn't labeled because it was manually labeled, there was no match for the conditions that you specified, or the file had a higher classification, the file is skipped with the same comment of "No label to apply".
+- When a file isn't labeled because it was manually labeled, there was no match for the conditions that you specified, or the file had a higher classification, the file is skipped with the single comment of "No label to apply".
 
 
 ## EXAMPLES
 
-### Example 1: Scan all files in a folder and any of its subfolders, and apply labels according to the configured conditions for automatic classification
+### Example 1a: Scan all files in a folder and any of its subfolders, and apply labels according to the configured conditions for automatic classification - Azure Information Protection client only
 ```
 PS C:\> Set-AIPFileClassification -Path C:\Projects\ -PreserveFileDetails
 
@@ -92,7 +94,61 @@ If the applied labels are also configured to apply Rights Management protection,
 
 Because the PreserveFileDetails parameter is specified, the Date Modified of the labeled files remains unchanged.
 
-### Example 2: Scan all files in a folder and any of its subfolders, and apply labels according to the configured conditions for automatic classification, overriding any existing labels
+### Example 1b: Scan all files in a folder and any of its subfolders, and apply labels according to the configured conditions for automatic classification - Azure Information Protection client unified labeling client only
+```
+PS C:\> Set-AIPFileClassification -Path C:\Projects\ -PreserveFileDetails
+
+
+FileName      : C:\Projects\Project1.docx
+Status        : Success
+Comment       :
+MainLabelName : Confidential
+MainLabelId   : 074e257c-1234-1234-1234-34a182080e71
+SubLabelName  : Finance group
+SubLabelId    : d9f23ae3-1234-1234-1234-f515f824c57b
+
+FileName      : C:\Projects\Datasheet.pdf
+Status        : Skipped
+Comment       : No label to apply
+MainLabelName : 
+MainLabelId   : 
+SubLabelName  : 
+SubLabelId    : 
+
+FileName      : C:\Projects\Analysis.xlsx
+Status        : Skipped
+Comment       : No label to apply
+MainLabelName : 
+MainLabelId   : 
+SubLabelName  : 
+SubLabelId    : 
+
+FileName      : C:\Projects\Pricelist.xlsx
+Status        : Skipped
+Comment       : No label to apply
+MainLabelName : 
+MainLabelId   : 
+SubLabelName  : 
+SubLabelId    : 
+
+FileName      : C:\Projects\Dashboard.xlsx
+Status        : Success
+Comment       : 
+MainLabelName : Public
+MainLabelId   : f018e9e7-0cfc-4c69-b27a-ac3cb7df43cc
+SubLabelName  : 
+SubLabelId    :
+```
+
+This command scans all files in the Projects folder and any of its subfolders, and sets labels according to the configured conditions in the auto labeling policy. In this example, there are five files and two files are automatically labeled. The Datasheet.pdf file is not labeled because its contents does not match the configured conditions for automatic classification Analysis.xlsx was already manually labeled, and Pricelist.xlsx has a higher label. Because the command is run without the *-Force* parameter, the existing labels for Analysis.xlsx and Pricelist.xlsx are not overwritten.
+
+If the applied labels are also configured to apply Rights Management protection, the files that are successfully labeled with this command are also protected. In this case, the Rights Management owner (who has the Rights Management Full Control permission) of these files is the user who ran the PowerShell command.
+
+Because the PreserveFileDetails parameter is specified, the Date Modified of the labeled files remains unchanged.
+
+
+### Example 2a: Scan all files in a folder and any of its subfolders, and apply labels according to the configured conditions for automatic classification, overriding any existing labels - Azure Information Protection client only
+
 ```
 PS C:\> Set-AIPFileClassification -Path C:\Projects\ -Force -PreserveFileDetails
 
@@ -138,7 +194,60 @@ SubLabelName  :
 SubLabelId    :
 ```
 
-This command is similar to the previous example in that it also scans all files in the Projects folder and any of its subfolders, and sets labels according to the configured conditions in the Azure Information Protection policy. However, this time, because the command includes the *-Force* parameter, it also replaces the existing label for Dashboard.xlsx, and Pricelist.xlsx. The contents of Datasheet.pdf did not match any configured conditions and this file remains without a label.  
+This command is similar to the previous example in that it also scans all files in the Projects folder and any of its subfolders, and sets labels according to the configured conditions in the Azure Information Protection policy. However, this time, because the command includes the *-Force* parameter, it also replaces the existing label for Dashboard.xlsx, and Pricelist.xlsx. 
+
+The contents of Datasheet.pdf did not match any configured conditions and this file remains without a label.
+
+### Example 2b: Scan all files in a folder and any of its subfolders, and apply labels according to the configured conditions for automatic classification, overriding any existing labels - Azure Information Protection unified labeling client only
+
+```
+PS C:\> Set-AIPFileClassification -Path C:\Projects\ -Force -PreserveFileDetails
+
+
+FileName      : C:\Projects\Project1.docx
+Status        : Success
+Comment       :
+MainLabelName : Confidential
+MainLabelId   : 074e257c-1234-1234-1234-34a182080e71
+SubLabelName  : Finance group
+SubLabelId    : d9f23ae3-1234-1234-1234-f515f824c57b
+
+FileName      : C:\Projects\Datasheet.pdf
+Status        : Skipped
+Comment       : No label to apply
+MainLabelName : 
+MainLabelId   : 
+SubLabelName  : 
+SubLabelId    : 
+
+FileName      : C:\Projects\Analysis.xlsx
+Status        : Success
+Comment       :
+MainLabelName : Public
+MainLabelId   : f018e9e7-0cfc-4c69-b27a-ac3cb7df43cc
+SubLabelName  : 
+SubLabelId    : 
+
+FileName      : C:\Projects\Pricelist.xlsx
+Status        : Success
+Comment       :
+MainLabelName : Public
+MainLabelId   : f018e9e7-0cfc-4c69-b27a-ac3cb7df43cc
+SubLabelName  : 
+SubLabelId    : 
+
+FileName      : C:\Projects\Dashboard.xlsx
+Status        : Success
+Comment       : 
+MainLabelName : Public
+MainLabelId   : f018e9e7-0cfc-4c69-b27a-ac3cb7df43cc
+SubLabelName  : 
+SubLabelId    :
+```
+
+This command is similar to the previous example in that it also scans all files in the Projects folder and any of its subfolders, and sets labels according to the configured conditions in auto labeling policy. However, this time, because the command includes the *-Force* parameter, it also replaces the existing label for Dashboard.xlsx, and Pricelist.xlsx. 
+
+The contents of Datasheet.pdf did not match any configured conditions and this file remains without a label.
 
 ## PARAMETERS
 
@@ -196,7 +305,7 @@ Accept wildcard characters: False
 ```
 
 ### -Owner
-NOTE: This parameter is not supported with the Azure Information Protection unified labeling client.
+Note: This parameter is not supported with the Azure Information Protection unified labeling client.
 
 Specify the email address that is written to the Owner custom property. 
 
