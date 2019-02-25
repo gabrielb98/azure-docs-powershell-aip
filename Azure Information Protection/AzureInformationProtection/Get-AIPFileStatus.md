@@ -28,8 +28,6 @@ To run this cmdlet non-interactively, see [How to label files non-interactively 
 
 NOTE: If you have the current preview version of the Azure Information Protection unified labeling client, there are differences from the Azure Information Protection client:
 
-- This cmdlet requires an Internet connection.
-
 - This cmdlets returns label information from your own tenant only and the *LabelingSiteId* parameter is removed from the output.
 
 - The *Owner* and *RMSIssuedTime* parameters are not supported and have been removed from the output.
