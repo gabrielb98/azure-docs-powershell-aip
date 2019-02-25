@@ -36,8 +36,6 @@ You can run this cmdlet concurrently. To run this cmdlet non-interactively, see 
 
 NOTE: When you run this cmdlet with the Azure Information Protection unified labeling client, there are differences from the Azure Information Protection client:
 
-- This cmdlet requires an Internet connection.
-
 - The *Owner* parameter is not supported.
 
 - SharePoint Server paths are not supported.
