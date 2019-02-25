@@ -26,9 +26,21 @@ Note that password-protected files always return the protection status of **Fals
 
 To run this cmdlet non-interactively, see [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection) from the admin guide.
 
+NOTE: If you have the current preview version of the Azure Information Protection unified labeling client, there are differences from the Azure Information Protection client:
+
+- This cmdlets returns label information from your own tenant only and the *LabelingSiteId* parameter is removed from the output.
+
+- The *Owner* and *RMSIssuedTime* parameters are not supported and have been removed from the output.
+
+- The *LabelingMethod* parameter display the values of **Privileged**, **Standard**, or **Auto** instead of **Manual** or **Automatic**:
+    
+    - **Privileged**: A label was applied by a user and is the equivalent of Manual for the Azure Information Protection client.
+    - **Standard**: A label was applied by an auto labeling policy from the Office 365 Security & Compliance center, or by a service using a rule. This value is the equivalent to Automatic for the Azure Information Protection client.
+    - **Auto**: Introduced with the Azure Information Protection unified labeling client, identifies the override of an existing label and results in a document or email being labeled as Standard.
+
 ## EXAMPLES
 
-### Example 1: Get the label and protection status of a single file
+### Example 1a: Get the label and protection status of a single file - Azure Information Protection client only
 
 ```
 PS C:\> Get-AIPFileStatus -Path \\Finance\Projects\Project.docx
@@ -51,7 +63,29 @@ RMSOwner        : John@Contoso.com
 RMSIssuer       : John@Contoso.com
 ```
 
-This command provides information about a file that is labeled as Confidential \ Finance Group. This file was labeled manually by John and it is also protected by using the Rights Management template, "Contoso - Confidential Finance". 
+This command provides information about a file that is labeled as "Confidential \ Finance group". This file was labeled manually by John and it is also protected by using the Rights Management template, "Contoso - Confidential Finance". 
+
+### Example 1b: Get the label and protection status of a single file - Azure Information Protection unified labeling client only
+
+```
+PS C:\> Get-AIPFileStatus -Path \\Finance\Projects\Project.docx
+
+FileName        : \\Finance\Projects\Project.docx
+IsLabeled       : True
+MainLabelId     : 074e257c-1234-1234-1234-34a182080e71
+MainLabelName   : Confidential
+SubLabelId      : d9f23ae3-1234-1234-1234-f515f824c57b
+SubLabelName    : Finance group
+LabelingMethod  : Privileged
+LabelDate       : 12/12/2016 12:24:36 PM
+IsRMSProtected  : True
+RMSTemplateId   : e6ee2481-1234-1234-1234-f744eacd53b0
+RMSTemplateName : Contoso - Confidential Finance
+RMSOwner        : John@Contoso.com
+RMSIssuer       : John@Contoso.com
+```
+
+This command provides information about a file that is labeled as "Confidential \ Finance group", which is a label that is configured for your tenant. This file was labeled manually by John and it is also protected by using the Rights Management template, "Contoso - Confidential Finance". 
 
 ### Example 2: Get the label and protection status for all files in a  folder and export the results to a CSV file
 ```
