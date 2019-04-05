@@ -35,8 +35,6 @@ The command creates a Windows service named Azure Information Protection Scanner
 
 To run this command, you must have local administrator rights for the Windows Server computer, and Sysadmin rights on the instance of SQL Server that you will use for the scanner.
 
-Note: If you later need to change the account and database that you specified when you ran this cmdlet, you can do so by using the [Set-AIPScanner](./Set-AIPScanner.md) cmdlet.
-
 After you have run this command:
 
 - For the general availability version:
