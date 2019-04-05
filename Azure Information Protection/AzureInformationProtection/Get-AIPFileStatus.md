@@ -24,13 +24,17 @@ The status also includes whether the file is protected by Rights Management, and
 
 Note that password-protected files always return the protection status of **False**.
 
-To run this cmdlet non-interactively, see [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection) from the admin guide.
+To run this cmdlet non-interactively, see the following instructions for the admin guides:
 
-NOTE: If you have the current preview version of the Azure Information Protection unified labeling client, there are differences from the Azure Information Protection client:
+- For the Azure Information Protection client:  [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection)
 
-- This cmdlets returns label information from your own tenant only and the *LabelingSiteId* parameter is removed from the output.
+- For the Azure Information Protection unified labeling client:  [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/clientv2-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection)
 
-- The *Owner* and *RMSIssuedTime* parameters are not supported and have been removed from the output.
+NOTE: If you have the Azure Information Protection unified labeling client, there are differences from the Azure Information Protection client:
+
+- This cmdlets returns label information from your own tenant only and the *LabelingSiteId* parameter is not displayed in the output.
+
+- The *Owner* and *RMSIssuedTime* parameters are not supported and are not displayed in the output.
 
 - The *LabelingMethod* parameter display the values of **Privileged**, **Standard**, or **Auto** instead of **Manual** or **Automatic**:
     

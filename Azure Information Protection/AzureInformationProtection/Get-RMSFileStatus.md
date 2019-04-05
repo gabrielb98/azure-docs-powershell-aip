@@ -24,6 +24,8 @@ A protected file has a status of **Protected (Native)** or **Protected (Generic)
 
 Note that a natively protected container file, such as an Outlook data file (.PST) always returns the protection status of Unprotected.
 
+This cmdlet is not supported for the Azure Information Protection unified labeling client.
+
 ## EXAMPLES
 
 ### Example 1: List the protection status for a specified file
