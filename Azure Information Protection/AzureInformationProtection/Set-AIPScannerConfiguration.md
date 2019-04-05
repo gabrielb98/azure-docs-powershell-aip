@@ -94,27 +94,13 @@ For more information, see [about_CommonParameters](https://go.microsoft.com/fwli
 
 ## RELATED LINKS
 
-[Add-AIPScannerRepository](./Add-AIPScannerRepository.md)
-
-[Add-AIPScannerScannedFileTypes](Add-AIPScannerScannedFileTypes.md)
-
 [Get-AIPScannerConfiguration](./Get-AIPScannerConfiguration.md)
-
-[Get-AIPScannerRepository](./Get-AIPScannerRepository.md)
 
 [Get-AIPScannerStatus](./Get-AIPScannerStatus.md)
 
 [Install-AIPScanner](./Install-AIPScanner.md)
 
-[Remove-AIPScannerRepository](./Remove-AIPScannerRepository.md)
-
-[Remove-AIPScannerScannedFileTypes](./Remove-AIPScannerScannedFileTypes.md)
-
 [Set-AIPScanner](./Set-AIPScanner.md)
-
-[Set-AIPScannerRepository](./Set-AIPScannerRepository.md)
-
-[Set-AIPScannerScannedFileTypes](./Set-AIPScannerRepository.md)
 
 [Start-AIPScan](./Start-AIPScan.md)
 

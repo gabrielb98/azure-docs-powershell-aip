@@ -17,7 +17,7 @@ Start-AIPScan [-Reset] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Start-AIPScan instructs the Azure Information Protection scanner to immediately start a one-time scan cycle. The scanner service must be started already and the scanner schedule must be configured for a manual schedule. To configure the schedule, use the [Azure portal to configure the scanner](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner-preview).
+The Start-AIPScan instructs the Azure Information Protection scanner to immediately start a one-time scan cycle. The scanner service must be started already and the scanner schedule must be configured for a manual schedule. To configure the schedule, use the [Azure portal to configure the scanner](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner).
 
 By default, all files are scanned the first time the scanner runs and then, unless the Azure Information Protection policy is changed, only new or changed files are scanned. However, you can change this behavior when you use the *-Reset* parameter with this cmdlet, which forces the scanner to scan all files.
   
@@ -73,29 +73,15 @@ For more information, see [about_CommonParameters](https://go.microsoft.com/fwli
 
 ## RELATED LINKS
 
-[Add-AIPScannerRepository](./Add-AIPScannerRepository.md)
-
-[Add-AIPScannerScannedFileTypes](Add-AIPScannerScannedFileTypes.md)
-
 [Get-AIPScannerConfiguration](./Get-AIPScannerConfiguration.md)
-
-[Get-AIPScannerRepository](./Get-AIPScannerRepository.md)
 
 [Get-AIPScannerStatus](./Get-AIPScannerStatus.md)
 
 [Install-AIPScanner](./Install-AIPScanner.md)
 
-[Remove-AIPScannerRepository](./Remove-AIPScannerRepository.md)
-
-[Remove-AIPScannerScannedFileTypes](./Remove-AIPScannerScannedFileTypes )
-
 [Set-AIPScanner](./Set-AIPScanner.md)
 
 [Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration)
-
-[Set-AIPScannerRepository](./Set-AIPScannerRepository.md)
-
-[Set-AIPScannerScannedFileTypes](./Set-AIPScannerRepository.md)
 
 [Uninstall-AIPScanner](./Uninstall-AIPScanner.md)
 

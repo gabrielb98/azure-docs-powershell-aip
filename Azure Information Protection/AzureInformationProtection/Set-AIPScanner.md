@@ -61,7 +61,7 @@ Accept wildcard characters: False
 ### -SqlServerInstance
 Specifies the new SQL Server instance on which to create a database for the Azure Information Protection scanner.
 
-For information about the SQL Server requirements, see [Prerequisites for the Azure Information Protection scanner](https://docs.microsoft.com/en-us/azure/information-protection/deploy-aip-scanner-preview#prerequisites-for-the-azure-information-protection-scanner).
+For information about the SQL Server requirements, see [Prerequisites for the Azure Information Protection scanner](https://docs.microsoft.com/en-us/azure/information-protection/deploy-aip-scanner#prerequisites-for-the-azure-information-protection-scanner).
 
 For the default instance, specify the server name. For example: SQLSERVER1.
 
@@ -113,27 +113,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AIPScannerRepository](./Add-AIPScannerRepository.md)
-
-[Add-AIPScannerScannedFileTypes](Add-AIPScannerScannedFileTypes.md)
-
 [Get-AIPScannerConfiguration](./Get-AIPScannerConfiguration.md)
-
-[Get-AIPScannerRepository](./Get-AIPScannerRepository.md)
 
 [Get-AIPScannerStatus](./Get-AIPScannerStatus.md)
 
 [Install-AIPScanner](./Install-AIPScanner.md)
 
-[Remove-AIPScannerRepository](./Remove-AIPScannerRepository.md)
-
-[Remove-AIPScannerScannedFileTypes](./Remove-AIPScannerScannedFileTypes.md)
-
 [Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration.md)
-
-[Set-AIPScannerRepository](./Set-AIPScannerRepository.md)
-
-[Set-AIPScannerScannedFileTypes](./Set-AIPScannerRepository.md)
 
 [Start-AIPScan](./Start-AIPScan.md)
 
