@@ -13,7 +13,7 @@ Updates the database schema for the Azure Information Protection scanner.
 ## SYNTAX
 
 ```
-Update-AIPScanner [<CommonParameters>]
+Update-AIPScanner [-Profile <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -24,8 +24,6 @@ For more information about upgrading the scanner, see [Upgrading the Azure Infor
 Run this cmdlet with an account that has the database-level role of db_owner for the database that the scanner is using (named AzInfoProtectionScanner).
 
 After the upgrade, the scanner changes how it gets its configuration settings. Instead of using PowerShell to configure the scanner locally, the scanner is now configured from the Azure Information Protection service, by using the Azure portal.
-
-Note: The syntax at the top of this page is for the general availability version. To check the cmdlet syntax for the preview version, in a PowerShell session, type `Get-Help Update-AIPScanner` and review the SYNTAX section.
 
 ## EXAMPLES
 

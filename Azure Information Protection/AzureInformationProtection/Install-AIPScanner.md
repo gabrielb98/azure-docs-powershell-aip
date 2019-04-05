@@ -13,7 +13,7 @@ Installs the Azure Information Protection scanner.
 ## SYNTAX
 
 ```
-Install-AIPScanner [-ServiceUserCredentials] <PSCredential> [-SqlServerInstance] <String> [<CommonParameters>]
+Install-AIPScanner [-ServiceUserCredentials] <PSCredential> [-SqlServerInstance] <String> [-Profile <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
