@@ -30,9 +30,14 @@ For the Azure Information Protection client, the **Set-AIPFileLabel** cmdlet set
 
 You cannot create or edit labels by using PowerShell but must do this by using the Azure portal. For instructions, see [Configuring the Azure Information Protection policy](https://docs.microsoft.com/information-protection/configure-policy).
 
-For the Azure Information Protection unified labeling client, currently in preview, the **Set-AIPFileLabel** cmdlet sets or removes an Office 365 sensitivity label for one or more files. This action can automatically apply protection when labels are configured to apply encryption. When the command runs successfully, any existing label or protection can be replaced.
+For the Azure Information Protection unified labeling client, the **Set-AIPFileLabel** cmdlet sets or removes an Office 365 sensitivity label for one or more files. This action can automatically apply protection when labels are configured to apply encryption. When the command runs successfully, any existing label or protection can be replaced.
 
-You can run this cmdlet concurrently. To run this cmdlet non-interactively, see [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection) from the admin guide.
+You can run this cmdlet concurrently. To run this cmdlet non-interactively, see the instructions from the admin guides:
+
+- For the Azure Information Protection client: [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection)
+
+- For the Azure Information Protection unified labeling client: [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/clientv2-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection)
+
 
 NOTE: When you run this cmdlet with the Azure Information Protection unified labeling client, there are differences from the Azure Information Protection client:
 
@@ -150,7 +155,7 @@ C:\Projects\Analysis.docx  Success
 
 This command removes the existing label from the file named C:\Projects\Analysis.docx, and specifies a justification message that is required because the Office 365 classification label policy setting is enabled that requires justification for removing a label or lowering the classification. 
 
-### Example 6: Apply the "Confidential \ All Employees" label to all files in a folder and register these files with the document tracking site - Azure Information Protection client preview version only
+### Example 6: Apply the "Confidential \ All Employees" label to all files in a folder and register these files with the document tracking site - Azure Information Protection client only
 
 ``` 
 PS C:\> Set-AIPFileLabel -Path C:\Projects\ -LabelId ade72bf1-4714-4714-4714-a325f824c55a -EnableTracking 
@@ -164,8 +169,6 @@ C:\Projects\Datasheet.pdf   Success
 C:\Projects\Image.jpg       Success 
 C:\Projects\Dashboard.xlsx  Success 
 ``` 
-
-Note: This example requires the preview version of the Azure Information Protection client.
 
 This command sets a label named "Confidential \ All Employees" on all files in the Projects folder and any of its subfolders. The Label ID specified is for the sublabel "All Employees" that has a parent label of "Confidential". 
 
@@ -207,7 +210,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-Note: For the current preview version of the Azure Information Protection unified labeling client, SharePoint Server paths are not supported.
+Note: For the Azure Information Protection unified labeling client, SharePoint Server paths are not supported.
 
 Specifies a local path, network path, or SharePoint Server URL to the files for which you want to get the label and protection information. 
 
@@ -282,7 +285,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableTracking
-Note: This parameter is available only in the preview version of the Azure Information Protection client.
+Note: This parameter is not supported with the Azure Information Protection unified labeling client.
 
 Specify this parameter to register a protected document with the document tracking portal. 
 
