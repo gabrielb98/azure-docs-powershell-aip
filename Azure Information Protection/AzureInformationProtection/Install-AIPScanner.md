@@ -29,7 +29,9 @@ To run this command, you must have local administrator rights for the Windows Se
 
 After you have run this command, use the Azure portal to configure the settings in the scanner profile and specify the data repositories to scan. Before you run the scanner, you must run the [Set-AIPAuthentication](./Set-AIPAuthentication.md) cmdlet one time to sign in to Azure AD for authentication and authorization. 
 
-For step-by-step instructions to install, configure, and use the scanner, see [Deploying the preview version of the Azure Information Protection scanner to automatically classify and protect files](https://docs.microsoft.com/information-protection/deploy-aip-scanner).
+For step-by-step instructions to install, configure, and use the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](https://docs.microsoft.com/information-protection/deploy-aip-scanner).
+
+The scanner is not currently supported for the Azure Information Protection unified labeling client.
 
 ## EXAMPLES
 
