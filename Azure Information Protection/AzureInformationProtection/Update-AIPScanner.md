@@ -25,6 +25,8 @@ Run this cmdlet with an account that has the database-level role of db_owner for
 
 After the upgrade, the scanner changes how it gets its configuration settings. Instead of using PowerShell to configure the scanner locally, the scanner is now configured from the Azure Information Protection service, by using the Azure portal.
 
+The scanner is not currently supported for the Azure Information Protection unified labeling client.
+
 ## EXAMPLES
 
 ### Example 1: Update the scanner after the Azure Information Protection client has been upgraded, and set a scanner profile name

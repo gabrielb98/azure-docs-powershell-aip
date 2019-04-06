@@ -19,11 +19,11 @@ Set-AIPFileClassification [-JustificationMessage <String>] [-Force] [-Owner <Str
 ```
 
 ## DESCRIPTION
-For the Azure Information Protection client, the Set-AIPFileClassification cmdlet can automatically apply an Azure Information Protection label for one or more files when you configure labels in your Azure Information Protection policy to use conditions. Labels are applied when the conditions are configured for automatic classification. For more information about conditions, see [How to configure conditions for automatic and recommended classification for Azure Information Protection](https://docs.microsoft.com/information-protection/configure-policy-classification).
+The Set-AIPFileClassification cmdlet can automatically apply a label for one or more files when you configure labels for automatic classification. For more information, see the following:
 
-You cannot create or edit labels by using PowerShell but must do this by using the Azure portal. For instructions, see [Configuring the Azure Information Protection policy](https://docs.microsoft.com/information-protection/configure-policy).
+- For the Azure Information Protection client: [How to configure conditions for automatic and recommended classification for Azure Information Protection](https://docs.microsoft.com/information-protection/configure-policy-classification).
 
-For the Azure Information Protection unified labeling client, the Set-AIPFileClassification cmdlet can automatically apply a sensitivity label for one or more files when you configure auto labeling in the Office 365 Security & Compliance Center, the Microsoft 365 security center, or the Microsoft 365 compliance center. Sensitivity labels are applied when the content matches the conditions and you select the option to automatically apply a label. For more information, see [Apply a sensitivity label to content automatically](https://docs.microsoft.com/Office365/SecurityCompliance/apply_sensitivity_label_automatically).
+- For the Azure Information Protection unified labelingclient: [Apply a sensitivity label to content automatically](https://docs.microsoft.com/Office365/SecurityCompliance/apply_sensitivity_label_automatically).
 
 When this cmdlet is run, it inspects the file contents and if the configured conditions are met for a label, that label is applied. This action will automatically apply protection if the selected label applies protection. For the Azure Information Protection client, because labels support removing protection, protection can also be removed from files when you run this cmdlet.
 
@@ -42,7 +42,6 @@ NOTE: When you run this cmdlet with the Azure Information Protection unified lab
 - SharePoint Server paths are not supported.
 
 - When a file isn't labeled because it was manually labeled, there was no match for the conditions that you specified, or the file had a higher classification, the file is skipped with the single comment of "No label to apply".
-
 
 ## EXAMPLES
 
