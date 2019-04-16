@@ -29,11 +29,7 @@ When this cmdlet is run, it inspects the file contents and if the configured con
 
 By default, if the file already has a label, the existing label or protection is not replaced.
 
-To run this cmdlet non-interactively, see the following instructions from the admin guides:
-
-- For the Azure Information Protection client: [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection)
-
-- For the Azure Information Protection unified labeling client: [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/clientv2-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection)
+For the Azure Information Protection client, but not the Azure Information Protection unified labeling client, you can run this cmdlet non-interactively. For instructions, see [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection).
 
 NOTE: When you run this cmdlet with the Azure Information Protection unified labeling client, there are differences from the Azure Information Protection client:
 
