@@ -21,6 +21,8 @@ The Set-AIPScannerConfiguration cmdlet sets local configuration settings for the
 
 Any changes will be used the next time the scanner runs. If you need the changes to take effect immediately, restart the Azure Information Protection Scanner service on the Windows server computer.
 
+The scanner is not currently supported for the Azure Information Protection unified labeling client.
+
 ## EXAMPLES
 
 ### Example 1: Set the Azure Information Protection scanner to use online configuration

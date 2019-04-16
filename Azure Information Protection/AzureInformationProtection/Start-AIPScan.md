@@ -23,6 +23,8 @@ By default, all files are scanned the first time the scanner runs and then, unle
   
 If the scanner schedule is set to Always, this cmdlet is ignored.
 
+The scanner is not currently supported for the Azure Information Protection unified labeling client.
+
 ## EXAMPLES
 
 ### Example 1: Initiate immediate one-time scan for new and changed files
