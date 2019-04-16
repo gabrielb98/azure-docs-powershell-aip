@@ -23,7 +23,7 @@ The Set-AIPFileClassification cmdlet can automatically apply a label for one or 
 
 - For the Azure Information Protection client: [How to configure conditions for automatic and recommended classification for Azure Information Protection](https://docs.microsoft.com/information-protection/configure-policy-classification).
 
-- For the Azure Information Protection unified labelingclient: [Apply a sensitivity label to content automatically](https://docs.microsoft.com/Office365/SecurityCompliance/apply_sensitivity_label_automatically).
+- For the Azure Information Protection unified labeling client: [Apply a sensitivity label to content automatically](https://docs.microsoft.com/Office365/SecurityCompliance/apply_sensitivity_label_automatically).
 
 When this cmdlet is run, it inspects the file contents and if the configured conditions are met for a label, that label is applied. This action will automatically apply protection if the selected label applies protection. For the Azure Information Protection client, because labels support removing protection, protection can also be removed from files when you run this cmdlet.
 
@@ -31,7 +31,7 @@ By default, if the file already has a label, the existing label or protection is
 
 For the Azure Information Protection client, but not the Azure Information Protection unified labeling client, you can run this cmdlet non-interactively. For instructions, see [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection).
 
-NOTE: When you run this cmdlet with the Azure Information Protection unified labeling client, there are differences from the Azure Information Protection client:
+NOTE: When you run this cmdlet with the Azure Information Protection unified labeling client, there are other differences from the Azure Information Protection client:
 
 - The *Owner* parameter is not supported.
 
