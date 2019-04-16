@@ -17,8 +17,6 @@ Import-AIPScannerConfiguration -FileName <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Note: This cmdlet is available only in the preview version of the scanner.
-
 The Import-AIPScannerConfiguration cmdlet imports local configuration settings for the Azure Information Protection scanner, and automatically configures the scanner to use offline configuration. Use this cmdlet after you have configured a profile for the scanner in the Azure portal, and exported the settings to a file because the scanner can't connect to the Azure Information Protection service. For example, the computer running the scanner doesn't have Internet connectivity.
 
 If you need to make configuration changes to the scanner after you have run this cmdlet, make those changes in the Azure portal, export the profile again, and rerun this cmdlet.
@@ -26,6 +24,8 @@ If you need to make configuration changes to the scanner after you have run this
 If you want to change the scanner to use online configuration after you have run this cmdlet, use the [Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration.md) and set the *OnlineConfiguration* parameter to **On**.
 
 Any changes will be used the next time the scanner runs. If you need the changes to take effect immediately, restart the Azure Information Protection Scanner service on the Windows server computer.
+
+The scanner is not currently supported for the Azure Information Protection unified labeling client.
 
 ## EXAMPLES
 

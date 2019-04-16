@@ -26,6 +26,8 @@ This cmdlet applies to Azure RMS only and when you authenticate as a user rather
 
 Note: If you want to clear the credentials for a service principal that you specified with [Set-RMSServerAuthentication](./Set-RMSServerAuthentication.md), close your PowerShell session and start a new session that runs **Set-RMSServerAuthentication** with the new credentials.
 
+This cmdlet is not supported for the Azure Information Protection unified labeling client.
+
 ## EXAMPLES
 
 ### Example 1: Clear authentication credentials

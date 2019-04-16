@@ -42,6 +42,8 @@ This cmdlet writes to the following log files: **Success.log**, **Failure.log**,
 
 Tip: For step-by-step instructions to use this cmdlet to protect files on a Windows Server file share, using File Resource Manager and File Classification Infrastructure, see [RMS Protection with Windows Server File Classification Infrastructure (FCI)](https://docs.microsoft.com/information-protection/rms-client/configure-fci).
 
+This cmdlet is not supported for the Azure Information Protection unified labeling client.
+
 ## EXAMPLES
 
 ### Example 1: Protect and replace a single file by using a template

@@ -13,7 +13,7 @@ Updates the database schema for the Azure Information Protection scanner.
 ## SYNTAX
 
 ```
-Update-AIPScanner [<CommonParameters>]
+Update-AIPScanner [-Profile <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -23,20 +23,13 @@ For more information about upgrading the scanner, see [Upgrading the Azure Infor
 
 Run this cmdlet with an account that has the database-level role of db_owner for the database that the scanner is using (named AzInfoProtectionScanner).
 
-For preview version: After the upgrade, the scanner changes how it gets its configuration settings. Instead of using PowerShell to configure the scanner locally, the scanner is now configured from the Azure Information Protection service, by using the Azure portal.
+After the upgrade, the scanner changes how it gets its configuration settings. Instead of using PowerShell to configure the scanner locally, the scanner is now configured from the Azure Information Protection service, by using the Azure portal.
 
-Note: The syntax at the top of this page is for the general availability version. To check the cmdlet syntax for the preview version, in a PowerShell session, type `Get-Help Update-AIPScanner` and review the SYNTAX section.
+The scanner is not currently supported for the Azure Information Protection unified labeling client.
 
 ## EXAMPLES
 
-### Example 1a: Update the database schema for the scanner after an upgrade for the Azure Information Protection client - general available version
-```
-PS C:\> Update-AIPScanner
-```
-
-The AzInfoProtectionScanner database for the scanner is updated for the new schema.
-
-### Example 1b: Update the scanner after the Azure Information Protection client has been upgraded, and set a scanner profile name - preview  version
+### Example 1: Update the scanner after the Azure Information Protection client has been upgraded, and set a scanner profile name
 ```
 PS C:\> Update-AIPScanner –profile USWEST
 ```
@@ -51,8 +44,6 @@ For reference purposes, a backup of your old configuration is stored in %localap
 ## PARAMETERS
 
 ### -Profile 
-Note: This parameter is available only in the preview version of the scanner.
-
 Specifies the scanner profile name that contains the scanner configuration from the Azure Information Protection service. The scanner configuration database is updated to reflect the profile name that you specify. If you do not specify this parameter, the computer name is used as the profile name. 
 
 ```yaml 
@@ -82,29 +73,15 @@ For more information, see [about_CommonParameters](https://go.microsoft.com/fwli
 
 ## RELATED LINKS
 
-[Add-AIPScannerRepository](./Add-AIPScannerRepository.md)
-
-[Add-AIPScannerScannedFileTypes](Add-AIPScannerScannedFileTypes.md)
-
 [Get-AIPScannerConfiguration](./Get-AIPScannerConfiguration.md)
-
-[Get-AIPScannerRepository](./Get-AIPScannerRepository.md)
 
 [Get-AIPScannerStatus](./Get-AIPScannerStatus.md)
 
 [Install-AIPScanner](./Install-AIPScanner.md)
 
-[Remove-AIPScannerRepository](./Remove-AIPScannerRepository.md)
-
-[Remove-AIPScannerScannedFileTypes](./Remove-AIPScannerScannedFileTypes.md)
-
 [Set-AIPScanner](./Set-AIPScanner.md)
 
 [Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration.md)
-
-[Set-AIPScannerRepository](./Set-AIPScannerRepository.md)
-
-[Set-AIPScannerScannedFileTypes](./Set-AIPScannerRepository.md)
 
 [Start-AIPScan](./Start-AIPScan.md)
 

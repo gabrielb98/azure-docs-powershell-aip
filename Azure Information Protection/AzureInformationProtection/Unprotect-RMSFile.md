@@ -39,6 +39,8 @@ When you run this cmdlet, you have the following options:
 
 You can run this command concurrently when you specify a different path for the *LogFile* parameter for each command that runs in parallel. If you don't specify a different log file path and the previous command hasn't finished, the new command will fail.
 
+This cmdlet is not supported for the Azure Information Protection unified labeling client.
+
 ## EXAMPLES
 
 ### Example 1: Unprotect a single file, replacing the original file
