@@ -15,14 +15,12 @@ Sets or removes an Azure Information Protection label for a file, and sets the p
 
 ### Set
 ```
-Set-AIPFileLabel [-LabelId] <Guid> [-JustificationMessage <String>] [-Owner <String>] [-PreserveFileDetails]
- [-Path] <String[]> [<CommonParameters>]
+Set-AIPFileLabel [-LabelId] <Guid> [-JustificationMessage <String>] [-Owner <String>] [-PreserveFileDetails] [-EnableTracking] [-Path] <String[]> [<CommonParameters>]
 ```
 
 ### Clear
 ```
-Set-AIPFileLabel [-JustificationMessage <String>] [-RemoveLabel] [-Owner <String>] [-PreserveFileDetails]
- [-Path] <String[]> [<CommonParameters>]
+Set-AIPFileLabel [-JustificationMessage <String>] [-RemoveLabel] [-Owner <String>] [-PreserveFileDetails] [-EnableTracking] [-Path] <String[]> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
