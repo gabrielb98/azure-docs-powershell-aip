@@ -15,14 +15,12 @@ Sets or removes an Azure Information Protection label for a file, and sets the p
 
 ### Set
 ```
-Set-AIPFileLabel [-LabelId] <Guid> [-JustificationMessage <String>] [-Owner <String>] [-PreserveFileDetails]
- [-Path] <String[]> [<CommonParameters>]
+Set-AIPFileLabel [-LabelId] <Guid> [-JustificationMessage <String>] [-Owner <String>] [-PreserveFileDetails] [-EnableTracking] [-Path] <String[]> [<CommonParameters>]
 ```
 
 ### Clear
 ```
-Set-AIPFileLabel [-JustificationMessage <String>] [-RemoveLabel] [-Owner <String>] [-PreserveFileDetails]
- [-Path] <String[]> [<CommonParameters>]
+Set-AIPFileLabel [-JustificationMessage <String>] [-RemoveLabel] [-Owner <String>] [-PreserveFileDetails] [-EnableTracking] [-Path] <String[]> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,7 +32,7 @@ For the Azure Information Protection unified labeling client, the **Set-AIPFileL
 
 For the Azure Information Protection client, but not the Azure Information Protection unified labeling client, you can run this cmdlet non-interactively. For instructions, see [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection).
 
-NOTE: When you run this cmdlet with the Azure Information Protection unified labeling client, there are differences from the Azure Information Protection client:
+NOTE: When you run this cmdlet with the Azure Information Protection unified labeling client, there are other differences from the Azure Information Protection client:
 
 - The *Owner* parameter is not supported.
 
