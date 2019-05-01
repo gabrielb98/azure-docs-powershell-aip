@@ -1,8 +1,9 @@
 ---
-external help file: AIPService.dll-Help.xml
+external help file: AipService.dll-Help.xml
+Module Name: AIPService
+ms.assetid: 57CD3929-8922-43C2-9056-B5543F1FD0BB
 online version: https://go.microsoft.com/fwlink/?linkid=2044949
 schema: 2.0.0
-ms.assetid: 57CD3929-8922-43C2-9056-B5543F1FD0BB
 ---
 
 # Get-AipServiceConfiguration
@@ -73,7 +74,6 @@ DevicePlatformState                       : {Windows -> True, WindowsStore -> Tr
 FciEnabledForConnectorAuthorization       : True
 
 DocumentTrackingFeatureState              : Enabled
-
 ```
 
 This command displays the current protection configuration for your tenant.
@@ -81,7 +81,7 @@ This command displays the current protection configuration for your tenant.
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

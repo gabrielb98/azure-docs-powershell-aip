@@ -1,8 +1,9 @@
 ---
-external help file: AIPService.dll-Help.xml
+external help file: AipService.dll-Help.xml
+Module Name: AIPService
+ms.assetid: a168cc5e-4e90-4a6d-8241-2f6d9dc27d7e
 online version: https://go.microsoft.com/fwlink/?linkid=2045407
 schema: 2.0.0
-ms.assetid: a168cc5e-4e90-4a6d-8241-2f6d9dc27d7e
 ---
 
 # Set-AipServiceDoNotTrackUserGroup
@@ -13,7 +14,7 @@ Sets a group for the users who must not be tracked by Azure Information Protecti
 ## SYNTAX
 
 ```
-Set-AipServiceDoNotTrackUserGroup -EmailAddress <String>
+Set-AipServiceDoNotTrackUserGroup -GroupEmailAddress <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,18 +35,13 @@ This command sets a group that has the email address of DoNotTrackUserGroup@cont
 
 ## PARAMETERS
 
-### -EmailAddress
-Specifies the email address of the group whose members will be exempt from being tracked with the document tracking feature.
-
-You can specify a group that contains individual users, or nested groups. The email address must be a valid group email address that already exists in the organization.
-
-Note: Global administrators can always track the activities of these members.
-
+### -GroupEmailAddress
+{{ Fill GroupEmailAddress Description }}
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -54,10 +50,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### None
-
 
 ## OUTPUTS
 

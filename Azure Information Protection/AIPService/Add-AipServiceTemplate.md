@@ -1,8 +1,9 @@
 ---
-external help file: AIPService.dll-Help.xml
+external help file: AipService.dll-Help.xml
+Module Name: AIPService
+ms.assetid: 1CBB5251-7084-4545-B71A-670AC19DC5E4
 online version: https://go.microsoft.com/fwlink/?linkid=2044916
 schema: 2.0.0
-ms.assetid: 1CBB5251-7084-4545-B71A-670AC19DC5E4
 ---
 
 # Add-AipServiceTemplate
@@ -13,7 +14,7 @@ Creates a protection template for Azure Information Protection.
 ## SYNTAX
 
 ```
-Add-AipServiceTemplate -Names <Hashtable> -Descriptions <Hashtable>
+Add-AipServiceTemplate -Descriptions <Hashtable> -Names <Hashtable>
  [-RightsDefinitions <System.Collections.Generic.List`1[Microsoft.RightsManagementServices.Online.Admin.TemplateRightsDefinition]>]
  [-ContentExpirationOption <ContentExpirationType>] [-ContentExpirationDate <DateTime>]
  [-ContentValidityDuration <Int32>] [-LicenseValidityDuration <Int32>] [-Status <TemplateStatus>]
@@ -86,6 +87,7 @@ Indicates that content is available for the indicated number of days after it is
 Type: ContentExpirationType
 Parameter Sets: (All)
 Aliases:
+Accepted values: Never, OnDate, AfterDays
 
 Required: False
 Position: Named
@@ -269,6 +271,7 @@ Allowed values are **Archived** and **Published**.
 Type: TemplateStatus
 Parameter Sets: (All)
 Aliases:
+Accepted values: Archived, Published
 
 Required: False
 Position: Named
@@ -278,7 +281,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

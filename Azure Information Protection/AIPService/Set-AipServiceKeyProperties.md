@@ -1,8 +1,9 @@
 ---
-external help file: AIPService.dll-Help.xml
+external help file: AipService.dll-Help.xml
+Module Name: AIPService
+ms.assetid: 7b1adf8c-d7a6-42f6-9010-4cc45308691c
 online version: https://go.microsoft.com/fwlink/?LinkId=2045233
 schema: 2.0.0
-ms.assetid: 7b1adf8c-d7a6-42f6-9010-4cc45308691c
 ---
 
 # Set-AipServiceKeyProperties
@@ -13,7 +14,8 @@ Updates the properties of a tenant key object for Azure Information Protection.
 ## SYNTAX
 
 ```
-Set-AipServiceKeyProperties [-Force] -KeyIdentifier <string> -Active <Bool> [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-AipServiceKeyProperties [-Force] -KeyIdentifier <String> -Active <Boolean> [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -41,6 +43,38 @@ This command changes the status of a tenant key object from Archived to Active. 
 Because the command specifies the *Force* parameter, the command does not prompt you for confirmation.
 
 ## PARAMETERS
+
+### -Active
+Sets the status of the tenant key object.
+
+This parameter can only be use with the value of $True, which sets the status to be Active. If you want to change the status of a tenant key object to Archived, you must set another tenant key object to Active.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Force
 Forces the command to run without asking for user confirmation.
@@ -72,38 +106,6 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-### -Active
-Sets the status of the tenant key object.
-
-This parameter can only be use with the value of $True, which sets the status to be Active. If you want to change the status of a tenant key object to Archived, you must set another tenant key object to Active.
-
-```yaml
-Type: Bool
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
@@ -120,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,8 +1,9 @@
 ---
-external help file: AIPService.dll-Help.xml
+external help file: AipService.dll-Help.xml
+Module Name: AIPService
+ms.assetid: 857D8EFC-9D6E-4756-A9A2-B90FF8E02A1F
 online version: https://go.microsoft.com/fwlink/?linkid=2045019
 schema: 2.0.0
-ms.assetid: 857D8EFC-9D6E-4756-A9A2-B90FF8E02A1F
 ---
 
 # Connect-AipService
@@ -20,6 +21,11 @@ Connect-AipService [-Credential <PSCredential>] [-TenantId <Guid>] [<CommonParam
 ### AccessToken
 ```
 Connect-AipService [-AccessToken <String>] [-TenantId <Guid>] [<CommonParameters>]
+```
+
+### Environment
+```
+Connect-AipService [-EnvironmentName <AzureRmEnvironment>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -120,6 +126,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnvironmentName
+{{ Fill EnvironmentName Description }}
+
+```yaml
+Type: AzureRmEnvironment
+Parameter Sets: Environment
+Aliases:
+Accepted values: AzureCloud, AzureChinaCloud, AzureUSGovernment, AzureGermanCloud
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -TenantId
 Specifies the tenant GUID. The cmdlet connects to Azure Information Protection for the tenant that you specify by GUID.
 
@@ -127,7 +149,7 @@ If you do not specify this parameter, the cmdlet connects to the tenant that you
 
 ```yaml
 Type: Guid
-Parameter Sets: (All)
+Parameter Sets: Credential, AccessToken
 Aliases:
 
 Required: False
@@ -138,7 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

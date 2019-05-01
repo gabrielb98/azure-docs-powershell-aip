@@ -1,8 +1,9 @@
 ---
-external help file: AIPService.dll-Help.xml
+external help file: AipService.dll-Help.xml
+Module Name: AIPService
+ms.assetid: 3875D0F4-EAB2-43B3-945E-46FD86810E9B
 online version: https://go.microsoft.com/fwlink/?linkid=2045170
 schema: 2.0.0
-ms.assetid: 3875D0F4-EAB2-43B3-945E-46FD86810E9B
 ---
 
 # Get-AipServiceIPCv3
@@ -33,7 +34,7 @@ This command displays whether the MSIPC v3 platform is enabled or disabled. This
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

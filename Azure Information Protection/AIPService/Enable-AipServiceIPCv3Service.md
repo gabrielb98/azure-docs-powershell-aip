@@ -1,8 +1,9 @@
 ---
-external help file: AIPService.dll-Help.xml
+external help file: AipService.dll-Help.xml
+Module Name: AIPService
+ms.assetid: 847B715B-0951-40BC-A1CA-8BD6E8AD8148
 online version: https://go.microsoft.com/fwlink/?linkid=2045030
 schema: 2.0.0
-ms.assetid: 847B715B-0951-40BC-A1CA-8BD6E8AD8148
 ---
 
 # Enable-AipServiceIPCv3
@@ -33,7 +34,7 @@ This command enables the MSIPC v3 platform so that iOS and Android mobile device
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

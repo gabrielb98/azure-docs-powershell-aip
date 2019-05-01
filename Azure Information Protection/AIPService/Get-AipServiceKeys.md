@@ -1,8 +1,9 @@
 ---
-external help file: AIPService.dll-Help.xml
+external help file: AipService.dll-Help.xml
+Module Name: AIPService
+ms.assetid: 9B4056B1-7BEB-4DD2-A0C7-2F9400EDB3E5
 online version: https://go.microsoft.com/fwlink/?linkid=2044896
 schema: 2.0.0
-ms.assetid: 9B4056B1-7BEB-4DD2-A0C7-2F9400EDB3E5
 ---
 
 # Get-AipServiceKeys
@@ -43,7 +44,7 @@ This command lists all Azure Information Protection tenant keys associated with 
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

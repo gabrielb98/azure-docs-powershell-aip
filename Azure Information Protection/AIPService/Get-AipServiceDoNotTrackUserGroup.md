@@ -1,8 +1,9 @@
 ---
-external help file: AIPService.dll-Help.xml
+external help file: AipService.dll-Help.xml
+Module Name: AIPService
+ms.assetid: 176a6f8e-258b-4bb9-8690-dd1bae05530c
 online version: https://go.microsoft.com/fwlink/?linkid=2044894
 schema: 2.0.0
-ms.assetid: 176a6f8e-258b-4bb9-8690-dd1bae05530c
 ---
 
 # Get-AipServiceDoNotTrackUserGroup
@@ -13,7 +14,7 @@ Gets the group for the users who must not be tracked by Azure Information Protec
 ## SYNTAX
 
 ```
-Get-AipServiceDoNotTrackUserGroup
+Get-AipServiceDoNotTrackUserGroup [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,10 +35,12 @@ This command gets the email address of the currently configured group for the us
 
 ## PARAMETERS
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### None
-
 
 ## OUTPUTS
 

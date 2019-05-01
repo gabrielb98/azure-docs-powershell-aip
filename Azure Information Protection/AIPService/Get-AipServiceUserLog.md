@@ -1,8 +1,9 @@
 ---
-external help file: AIPService.dll-Help.xml
+external help file: AipService.dll-Help.xml
+Module Name: AIPService
+ms.assetid: 7C339803-9C45-4B06-B741-DB8CD43EF886
 online version: https://go.microsoft.com/fwlink/?linkid=2045502
 schema: 2.0.0
-ms.assetid: 7C339803-9C45-4B06-B741-DB8CD43EF886
 ---
 
 # Get-AipServiceUserLog
@@ -70,11 +71,15 @@ If you didn't specify the previous date and time of 18:00:00, your logs would be
 
 ## PARAMETERS
 
-### -Force
-Indicates that this cmdlet overwrites, without prompting for confirmation, an existing log file for the same date or date range.
+### -ForDate
+Specifies a date (and optionally, a time) for the log file as a **DateTime** object.
+
+Use this parameter when you do not use the *FromDate* parameter. 
+
+To obtain a **DateTime** object, use the [Get-Date](https://go.microsoft.com/fwlink/?LinkID=293966) cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: DateTime
 Parameter Sets: (All)
 Aliases:
 
@@ -85,15 +90,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ForDate
-Specifies a date (and optionally, a time) for the log file as a **DateTime** object.
-
-Use this parameter when you do not use the *FromDate* parameter. 
-
-To obtain a **DateTime** object, use the [Get-Date](https://go.microsoft.com/fwlink/?LinkID=293966) cmdlet.
+### -Force
+Indicates that this cmdlet overwrites, without prompting for confirmation, an existing log file for the same date or date range.
 
 ```yaml
-Type: DateTime
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -175,7 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,8 +1,9 @@
 ---
-external help file: AIPService.dll-Help.xml
+external help file: AipService.dll-Help.xml
+Module Name: AIPService
+ms.assetid: 2EC79F48-DC64-42D0-B317-89397A72243D
 online version: https://go.microsoft.com/fwlink/?linkid=2045248
 schema: 2.0.0
-ms.assetid: 2EC79F48-DC64-42D0-B317-89397A72243D
 ---
 
 # Use-AipServiceKeyVaultKey
@@ -13,7 +14,8 @@ Tells Azure Information Protection to use a customer-managed tenant key in Azure
 ## SYNTAX
 
 ```
-Use-AipServiceKeyVaultKey -KeyVaultKeyUrl <String> [-FriendlyName <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Use-AipServiceKeyVaultKey -KeyVaultKeyUrl <String> [-FriendlyName <String>] [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -37,7 +39,6 @@ For more information about the types of tenant keys that Azure Information Prote
 
 For more information about Azure Key Vault, see [What is Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-whatis).
 
-
 ## EXAMPLES
 
 ### Example 1: Configure Azure Information Protection to use a customer-managed key in Azure Key Vault
@@ -51,6 +52,21 @@ This key and version in Azure Key Vault then becomes the customer-managed tenant
 
 ## PARAMETERS
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Force
 Forces the command to run without asking for user confirmation.
 
@@ -63,23 +79,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -KeyVaultKeyUrl
-Specifies the URL of the key and version in Azure Key Vault that you want to use for your tenant key.
-
-This key will be used by Azure Information Protection as the root key for all cryptographic operations for your tenant.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
@@ -100,18 +99,20 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
+### -KeyVaultKeyUrl
+Specifies the URL of the key and version in Azure Key Vault that you want to use for your tenant key.
+
+This key will be used by Azure Information Protection as the root key for all cryptographic operations for your tenant.
 
 ```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
-Aliases: cf
+Aliases:
 
-Required: False
+Required: True
 Position: Named
-Default value: False
-Accept pipeline input: False
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
@@ -131,7 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
