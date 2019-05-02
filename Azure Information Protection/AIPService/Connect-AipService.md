@@ -133,7 +133,7 @@ Accept wildcard characters: False
 Type: AzureRmEnvironment
 Parameter Sets: Environment
 Aliases:
-Accepted values: AzureCloud, AzureChinaCloud, AzureUSGovernment, AzureGermanCloud
+Accepted values: AzureCloud, AzureChinaCloud, AzureUSGovernment
 
 Required: False
 Position: Named
