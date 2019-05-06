@@ -24,6 +24,8 @@ The **New-RMSProtectionLicense** cmdlet creates an ad-hoc rights policy that you
 
 Create an ad-hoc rights policy (also known as a publishing license) when you cannot use a previously created rights policy template.
 
+This cmdlet is not supported for the Azure Information Protection unified labeling client.
+
 ## EXAMPLES
 
 ### Example 1: Create an ad-hoc policy that has a different owner and grants another user Edit rights

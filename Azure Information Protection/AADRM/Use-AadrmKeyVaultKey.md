@@ -25,9 +25,9 @@ You must use PowerShell to configure your tenant key; you cannot do this configu
 
 You can run this cmdlet before or after the Azure Rights Management service is activated. 
 
-Before you run this cmdlet, make sure that the Azure Rights Management service principal has been granted permissions to the key vault that contains the key you want to use for Azure Information Protection. These permissions are granted by running the Azure Key Vault cmdlet, [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy).  
+Before you run this cmdlet, make sure that the Azure Rights Management service principal has been granted permissions to the key vault that contains the key you want to use for Azure Information Protection. These permissions are granted by running the Azure Key Vault cmdlet, [Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy).
 
-For security reasons, the Use-AadrmKeyVaultKey cmdlet does not let you set or change the access control for the key in Azure Key Vault. After that access is granted by running Set-AzureRmKeyVaultAccessPolicy, run Use-AadrmKeyVaultKey to tell the Azure Rights Management service to use the key and version that you specify with the *KeyVaultKeyUrl* parameter.
+For security reasons, the Use-AadrmKeyVaultKey cmdlet does not let you set or change the access control for the key in Azure Key Vault. After that access is granted by running Set-AzKeyVaultAccessPolicy, run Use-AadrmKeyVaultKey to tell the Azure Rights Management service to use the key and version that you specify with the *KeyVaultKeyUrl* parameter.
 
 Note: If you run this cmdlet before the permissions are granted to the key vault, you will see an error that displays **The Rights Management service failed to add the key**. To see more detailed information, run the command again, with -*Verbose*. If the permissions are not granted, you see **VERBOSE: Failure to access Azure KeyVault**.
 

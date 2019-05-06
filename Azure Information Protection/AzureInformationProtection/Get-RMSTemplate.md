@@ -20,6 +20,8 @@ Get-RMSTemplate [-RmsServer <String>] [-Force] [-Culture <String>] [<CommonParam
 ## DESCRIPTION
 The **Get-RMSTemplate** cmdlet gets a list of templates from your Rights Management deployment (AD RMS or Azure RMS), which can then be used to protect files. Use this cmdlet to identify the template ID of the template that you want to use.
 
+This cmdlet is not supported for the Azure Information Protection unified labeling client.
+
 ## EXAMPLES
 
 ### Example 1: Get a list of templates

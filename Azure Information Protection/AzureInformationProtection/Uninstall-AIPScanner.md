@@ -17,11 +17,13 @@ Uninstall-AIPScanner [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Uninstall-AIPScanner cmdlet uninstalls the Windows Server service, Azure Information Protection Scanner. This command does not remove the SQL Server database that was created by running the [Install-AIPScanner](./Install-AIPScanner.md) cmdlet when the Azure Information Protection scanner was installed. The name of this database is AzInfoProtection. If this database is no longer required, you must manually remove it.
+The Uninstall-AIPScanner cmdlet uninstalls the Windows Server service, Azure Information Protection Scanner. This command does not remove the SQL Server database that was created by running the [Install-AIPScanner](./Install-AIPScanner.md) cmdlet when the Azure Information Protection scanner was installed. If this database is no longer required, you must manually remove it. The default database name for the scanner is AIPScanner_\<computer_name> but when you specify a profile name, the database name for the scanner changes to AIPScanner_\<profile>.
 
 This command also does not remove the scanner reports located in %localappdata%\Microsoft\MSIP\Scanner\Reports.
 
 To run this command, you must have local Administrator rights for the Windows Server computer and you must restart the computer after running the command to complete the removal process.
+
+The scanner is not currently supported for the Azure Information Protection unified labeling client.
 
 ## EXAMPLES
 
@@ -35,7 +37,7 @@ This command removes the service for the Azure Information Protection scanner.
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -49,29 +51,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AIPScannerRepository](./Add-AIPScannerRepository.md)
-
-[Add-AIPScannerScannedFileTypes](Add-AIPScannerScannedFileTypes.md)
-
 [Get-AIPScannerConfiguration](./Get-AIPScannerConfiguration.md)
-
-[Get-AIPScannerRepository](./Get-AIPScannerRepository.md)
 
 [Get-AIPScannerStatus](./Get-AIPScannerStatus.md)
 
 [Install-AIPScanner](./Install-AIPScanner.md)
 
-[Remove-AIPScannerRepository](./Remove-AIPScannerRepository.md)
-
-[Remove-AIPScannerScannedFileTypes](./Remove-AIPScannerScannedFileTypes.md)
-
 [Set-AIPScanner](./Set-AIPScanner.md)
 
 [Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration.md)
-
-[Set-AIPScannerRepository](./Set-AIPScannerRepository.md)
-
-[Set-AIPScannerScannedFileTypes](./Set-AIPScannerRepository.md)
 
 [Start-AIPScan](./Start-AIPScan.md)
 
