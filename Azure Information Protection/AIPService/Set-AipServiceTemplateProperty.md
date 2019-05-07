@@ -192,7 +192,7 @@ To specify that a use license must be obtained each time the protected content i
 
 Each organization has a maximum use license validity time, which is 30 days by default and can be configured by using the [Set-AipServiceMaxUseLicenseValidityTime](./Set-AipServiceMaxUseLicenseValidityTime.md). The value that you specify for the *LicenseValidityDuration* parameter must be lower than that value.
 
-This setting can also be overridden by a user for a document when they use the Rights Management sharing application, and select the **Allow me to instantly revoke access to these documents** option, which effectively sets the use license validity time to 0. When there are different values like this, Azure Information Protection uses the most restrictive value.
+When there are different values for the use license validity time, for example, one value for the tenant and one for the template, Azure Information Protection uses the most restrictive value.
 
 ```yaml
 Type: Int32
