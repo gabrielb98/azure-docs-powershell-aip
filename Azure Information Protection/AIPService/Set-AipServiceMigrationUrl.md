@@ -1,8 +1,7 @@
 ---
 external help file: AIPService.dll-Help.xml
-online version: http://go.microsoft.com/fwlink/?LinkId=400622
+online version: https://go.microsoft.com/fwlink/?LinkId=2092311
 schema: 2.0.0
-ms.assetid: ECE82C74-2902-475D-9DCE-6E9F3842024D
 ---
 
 # Set-AipServiceMigrationUrl
