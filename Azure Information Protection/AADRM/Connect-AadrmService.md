@@ -76,7 +76,7 @@ PS C:\> Import-Module AIPService
 PS C:\> Connect-Aadrmservice -AccessToken $authenticationResult.AccessToken
 ```
 
-This example shows how you could connect to Azure RMS by using the *AccessToken* parameter, which lets you authenticate without a prompt. This connection method requires you to specify the client ID '90f610bf-206d-4950-b61d-37fa6fd1b224' and the resource ID 'https://api.aadrm.com/'. After the connection is open, you can then run the Azure RMS administrative commands that you need.
+This example shows how you could connect to Azure RMS by using the *AccessToken* parameter, which lets you authenticate without a prompt. This connection method requires you to specify the client ID '90f610bf-206d-4950-b61d-37fa6fd1b224' and the resource ID '<https://api.aadrm.com/>'. After the connection is open, you can then run the Azure RMS administrative commands that you need.
 
 After you confirm that these commands result in successfully connecting to the Azure RMS service, you could run them non-interactively, for example, from a script.
 
@@ -85,7 +85,7 @@ Note that for illustration purposes, this example uses the user name of "admin@c
 ## PARAMETERS
 
 ### -AccessToken
-Use this parameter to connect to Azure RMS by using a token that you acquire from Azure Active Directory, using the client ID '90f610bf-206d-4950-b61d-37fa6fd1b224' and the resource ID 'https://api.aadrm.com/'. This connection method lets you sign in to the Azure RMS service non-interactively.
+Use this parameter to connect to Azure RMS by using a token that you acquire from Azure Active Directory, using the client ID '90f610bf-206d-4950-b61d-37fa6fd1b224' and the resource ID '<https://api.aadrm.com/>'. This connection method lets you sign in to the Azure RMS service non-interactively.
 
 To get the access token, make sure that the account that you use from your tenant is not using multi-factor authentication (MFA). See Example 3 for how you might do this.
 

@@ -24,6 +24,8 @@ This cmdlet does not apply if you protect or unprotect files by using your user 
 
 To use server mode with the Azure Rights Management service, you must use a service principal account in Azure AD. To use server mode with AD RMS, the computer account must be granted permissions. For more information, see [Using PowerShell with the Azure Information Protection client](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell) from the Azure Information Protection client admin guide.
 
+This cmdlet is not supported for the Azure Information Protection unified labeling client.
+
 ## EXAMPLES
 
 ### Example 1: Get the server mode status when you are using Azure RMS

@@ -24,6 +24,8 @@ The Get-AIPScannerStatus returns the current status of the scanner service for A
 - Scanning: The service is running and currently scanning files.
 - Error: The scanner service is running but it has encountered an error that prevents it from scanning files. For example, the service cannot access the database for the scanner configuration.
 
+The scanner is not currently supported for the Azure Information Protection unified labeling client.
+
 ## EXAMPLES
 
 ### Example 1: Get the current status of the scanner service
@@ -57,27 +59,13 @@ For more information, see [about_CommonParameters](https://go.microsoft.com/fwli
 
 ## RELATED LINKS
 
-[Add-AIPScannerRepository](./Add-AIPScannerRepository.md)
-
-[Add-AIPScannerScannedFileTypes](Add-AIPScannerScannedFileTypes.md)
-
 [Get-AIPScannerConfiguration](./Get-AIPScannerConfiguration.md)
 
-[Get-AIPScannerRepository](./Get-AIPScannerRepository.md)
-
 [Install-AIPScanner](./Install-AIPScanner.md)
-
-[Remove-AIPScannerRepository](./Remove-AIPScannerRepository.md)
-
-[Remove-AIPScannerScannedFileTypes](./Remove-AIPScannerScannedFileTypes.md)
 
 [Set-AIPScanner](./Set-AIPScanner.md)
 
 [Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration.md)
-
-[Set-AIPScannerRepository](./Set-AIPScannerRepository.md)
-
-[Set-AIPScannerScannedFileTypes](./Set-AIPScannerRepository.md)
 
 [Start-AIPScan](./Start-AIPScan.md)
 

@@ -13,7 +13,7 @@ Sets the service account and database for the Azure Information Protection scann
 ## SYNTAX
 
 ```
-Set-AIPScanner [[-SqlServerInstance] <String>] [-ServiceUserCredentials] <PSCredential> [<CommonParameters>]
+Set-AIPScanner [[-SqlServerInstance] <String>] [-ServiceUserCredentials] <PSCredential> [-Profile <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -21,16 +21,19 @@ The Set-AIPScanner cmdlet updates the service account and SQL Server database in
 
 The new configuration takes effects when the Azure Information Protection Scanner service is next started. This cmdlet does not automatically restart this service.
 
+The scanner is not currently supported for the Azure Information Protection unified labeling client.
+
 ## EXAMPLES
 
-### Example 1: Change the database for the Azure Information Protection scanner
+### Example 1: Change the database and profile for the Azure Information Protection scanner
 ```
-PS C:\> Set-AIPScanner -SqlServerInstance SERVER1\AIPSCANNER
+PS C:\> Set-AIPScanner -SqlServerInstance SERVER1\AIPSCANNER -Profile EU
 
 Azure Information Protection Scanner service configuration change completed successfully.
 ```
 
-This command configures the Azure Information Protection scanner to start using the SQL Server database instance named AIPSCANNER on the server named SERVER1.
+This command configures the Azure Information Protection scanner to use the SQL Server database instance named AIPSCANNER on the server named SERVER1, using the scanner configuration database named AIPScanner_EU.
+
 
 ## PARAMETERS
 
@@ -78,6 +81,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Profile 
+Specifies that the scanner uses a customized database name for its configuration. If this parameter is not specified, the default database name for the scanner is AIPScanner_\<computer_name>. When you specify a profile name, the database name for the scanner changes to AIPScanner_\<profile>.
+
+If the database doesn't exist when the scanner is installed, the Install-AIIPScanner command creates it. 
+
+```yaml 
+Type: String 
+Parameter Sets: (All) 
+Aliases: 
+Required: False 
+Position: Named 
+Default value: None 
+Accept pipeline input: False 
+Accept wildcard characters: False
+```
+
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -93,27 +113,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AIPScannerRepository](./Add-AIPScannerRepository.md)
-
-[Add-AIPScannerScannedFileTypes](Add-AIPScannerScannedFileTypes.md)
-
 [Get-AIPScannerConfiguration](./Get-AIPScannerConfiguration.md)
-
-[Get-AIPScannerRepository](./Get-AIPScannerRepository.md)
 
 [Get-AIPScannerStatus](./Get-AIPScannerStatus.md)
 
 [Install-AIPScanner](./Install-AIPScanner.md)
 
-[Remove-AIPScannerRepository](./Remove-AIPScannerRepository.md)
-
-[Remove-AIPScannerScannedFileTypes](./Remove-AIPScannerScannedFileTypes.md)
-
 [Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration.md)
-
-[Set-AIPScannerRepository](./Set-AIPScannerRepository.md)
-
-[Set-AIPScannerScannedFileTypes](./Set-AIPScannerRepository.md)
 
 [Start-AIPScan](./Start-AIPScan.md)
 

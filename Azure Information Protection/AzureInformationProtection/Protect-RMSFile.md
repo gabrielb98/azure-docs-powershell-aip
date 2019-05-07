@@ -42,6 +42,8 @@ This cmdlet writes to the following log files: **Success.log**, **Failure.log**,
 
 Tip: For step-by-step instructions to use this cmdlet to protect files on a Windows Server file share, using File Resource Manager and File Classification Infrastructure, see [RMS Protection with Windows Server File Classification Infrastructure (FCI)](https://docs.microsoft.com/information-protection/rms-client/configure-fci).
 
+This cmdlet is not supported for the Azure Information Protection unified labeling client.
+
 ## EXAMPLES
 
 ### Example 1: Protect and replace a single file by using a template
@@ -253,7 +255,7 @@ If you run this cmdlet for Azure RMS with a service principal account, and you o
 
 If you run this cmdlet with multiple files that belong to different users, make sure that those users are granted Full Control usage rights and consider which email address to assign for this parameter. Although you can specify a group email address and this address is displayed to request access permissions, members of the group are not made the Rights Management owner and by default, have no usage rights for the protect file. In this scenario, choose whether to assign a single user (such as an administrator) or specify a group email address that you also assign Full Control usage rights. For the group email configuration, this might be your Help Desk, for example.
 
-Important: Although this parameter is optional, if you do not specify it when you protect files by using Azure RMS and a service principal, the email address that users see from the Azure Information Protection client or the Rights Management sharing application will not be helpful. Because of this, we recommend that you always specify this parameter when you protect files by using Azure RMS and a service principal rather than your user account.
+Important: Although this parameter is optional, if you do not specify it when you protect files by using Azure RMS and a service principal, the email address that users see from the Azure Information Protection client will not be helpful. Because of this, we recommend that you always specify this parameter when you protect files by using Azure RMS and a service principal rather than your user account.
 
 ```yaml
 Type: String

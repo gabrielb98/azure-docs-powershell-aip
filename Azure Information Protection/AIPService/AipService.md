@@ -137,6 +137,8 @@ Lists all Azure Information Protection tenant keys associated with your tenant.
 ### [Get-AipServiceMaxUseLicenseValidityTime](./Get-AipServiceMaxUseLicenseValidityTime.md)
 Gets the maximum validity time for Rights Management use licenses for Azure Information Protection.
 
+### [Get-AipServiceMigrationUrl](./Get-AipServiceMigrationUrl.md)
+Gets the migration URL for Azure Information Protection.
 
 ### [Get-AipServiceOnboardingControlPolicy](./Get-AipServiceOnboardingControlPolicy.md)
 Gets the user on-boarding control policy for Azure Information Protection.
@@ -212,6 +214,10 @@ Updates the properties of a tenant key object for Azure Information Protection.
 
 ### [Set-AipServiceMaxUseLicenseValidityTime](./Set-AipServiceMaxUseLicenseValidityTime.md)
 Sets the maximum validity time for Rights Management use licenses for Azure Information Protection.
+
+
+### [Set-AipServiceMigrationUrl](./Set-AipServiceMigrationUrl.md)
+Sets the migration URL for Azure Information Protection.
 
 
 ### [Set-AipServiceOnboardingControlPolicy](./Set-AipServiceOnboardingControlPolicy.md)
