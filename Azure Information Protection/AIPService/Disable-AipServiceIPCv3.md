@@ -1,14 +1,15 @@
 ---
 external help file: AipService.dll-Help.xml
 Module Name: AIPService
-online version:
+ms.assetid: 0AB1207B-C468-4C1A-ACED-DD1B182701B2
+online version: https://go.microsoft.com/fwlink/?linkid=2044846
 schema: 2.0.0
 ---
 
 # Disable-AipServiceIPCv3
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Disables the MSIPC v3 platform for Azure Information Protection.
 
 ## SYNTAX
 
@@ -17,16 +18,18 @@ Disable-AipServiceIPCv3 [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The **Disable-AipServiceIPCv3** cmdlets disables the MSIPC v3 platform on mobile devices such as iOS and Android. This platform must be enabled to support the protection service from Azure Information Protection.
+
+You must use PowerShell to do this configuration; you cannot do this configuration by using a management portal.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### Example1: Disable the MSIPC v3 platform for iOS and Android devices
+```
+PS C:\>Disable-AipServiceIPCv3
 ```
 
-{{ Add example description here }}
+This command disables the MSIPC v3 platform so that iOS and Android mobile devices cannot use the protection service.
 
 ## PARAMETERS
 
@@ -35,11 +38,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
-
 ## OUTPUTS
 
-### System.Object
 ## NOTES
 
 ## RELATED LINKS
+
+[Enable-AipServiceIPCv3](./Enable-AipServiceIPCv3.md)
+
+[Get-AipServiceIPCv3](./Get-AipServiceIPCv3.md)
