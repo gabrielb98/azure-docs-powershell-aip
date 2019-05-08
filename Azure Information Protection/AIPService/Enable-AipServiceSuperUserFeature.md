@@ -1,8 +1,9 @@
 ---
-external help file: AIPService.dll-Help.xml
+external help file: AipService.dll-Help.xml
+Module Name: AIPService
+ms.assetid: 34D77711-B96A-43E8-B5FD-8CF5013EB7E3
 online version: https://go.microsoft.com/fwlink/?linkid=2044936
 schema: 2.0.0
-ms.assetid: 34D77711-B96A-43E8-B5FD-8CF5013EB7E3
 ---
 
 # Enable-AipServiceSuperUserFeature
@@ -37,7 +38,7 @@ This command enables the super user feature for your tenant.
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

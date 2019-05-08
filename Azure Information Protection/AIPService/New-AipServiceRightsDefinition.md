@@ -1,5 +1,6 @@
 ---
-external help file: AIPService.dll-Help.xml
+external help file: AipService.dll-Help.xml
+Module Name: AIPService
 ms.assetid: BE20B1AF-4D47-4182-A46A-2FB0AB504A93
 online version: https://go.microsoft.com/fwlink/?linkid=2045520
 schema: 2.0.0
@@ -61,7 +62,7 @@ You can specify domain names from social providers (such as gmail.com) but authe
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -82,7 +83,7 @@ Tip: If you want to specify all users in your organization or all users in anoth
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -123,7 +124,7 @@ For more information about the usage rights, see [Configuring usage rights for A
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -133,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

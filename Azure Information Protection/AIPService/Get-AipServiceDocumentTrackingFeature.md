@@ -1,8 +1,9 @@
 ---
-external help file: AIPService.dll-Help.xml
+external help file: AipService.dll-Help.xml
+Module Name: AIPService
+ms.assetid: 3F0BC472-41CC-41CA-A1B5-ACB84B1C2DA9
 online version: https://go.microsoft.com/fwlink/?linkid=2045059
 schema: 2.0.0
-ms.assetid: 3F0BC472-41CC-41CA-A1B5-ACB84B1C2DA9
 ---
 
 # Get-AipServiceDocumentTrackingFeature
@@ -35,7 +36,7 @@ This command determines whether the Azure Information Protection document tracki
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

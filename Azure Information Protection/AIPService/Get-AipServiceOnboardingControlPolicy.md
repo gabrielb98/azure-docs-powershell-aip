@@ -1,8 +1,9 @@
 ---
-external help file: AIPService.dll-Help.xml
+external help file: AipService.dll-Help.xml
+Module Name: AIPService
+ms.assetid: A5384868-65D1-46A8-A1E0-7050F607131C
 online version: https://go.microsoft.com/fwlink/?linkid=2045203
 schema: 2.0.0
-ms.assetid: A5384868-65D1-46A8-A1E0-7050F607131C
 ---
 
 # Get-AipServiceOnboardingControlPolicy
@@ -35,7 +36,7 @@ This command displays the user on-boarding control policy for Azure Information 
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,8 +1,9 @@
 ---
-external help file: AIPService.dll-Help.xml
+external help file: AipService.dll-Help.xml
+Module Name: AIPService
+ms.assetid: 9802F554-834A-4BA0-A086-C7F8B2976939
 online version: https://go.microsoft.com/fwlink/?linkid=2044795
 schema: 2.0.0
-ms.assetid: 9802F554-834A-4BA0-A086-C7F8B2976939
 ---
 
 # Add-AipServiceRoleBasedAdministrator
@@ -105,6 +106,7 @@ The default value is GlobalAdministrator.
 Type: Role
 Parameter Sets: (All)
 Aliases:
+Accepted values: GlobalAdministrator, ConnectorAdministrator
 
 Required: False
 Position: Named
@@ -129,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

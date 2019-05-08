@@ -1,8 +1,9 @@
 ---
-external help file: AIPService.dll-Help.xml
+external help file: AipService.dll-Help.xml
+Module Name: AIPService
+ms.assetid: 1D21A18B-1E3D-434C-A283-E65B810EF1B4
 online version: https://go.microsoft.com/fwlink/?linkid=2044865
 schema: 2.0.0
-ms.assetid: 1D21A18B-1E3D-434C-A283-E65B810EF1B4
 ---
 
 # Enable-AipServiceDevicePlatform
@@ -72,21 +73,6 @@ Accept wildcard characters: False
 
 ### -Android
 Indicates that the cmdlet specifies the Android device platform. The cmdlet enables protection support for the specified device platform.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Platforms
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -iOS
-Indicates that the cmdlet specifies the iOS device platform. The cmdlet enables protection support for the specified device platform.
 
 ```yaml
 Type: SwitchParameter
@@ -175,8 +161,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -iOS
+Indicates that the cmdlet specifies the iOS device platform. The cmdlet enables protection support for the specified device platform.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Platforms
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

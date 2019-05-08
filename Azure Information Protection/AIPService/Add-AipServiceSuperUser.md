@@ -1,8 +1,9 @@
 ---
-external help file: AIPService.dll-Help.xml
+external help file: AipService.dll-Help.xml
+Module Name: AIPService
+ms.assetid: 5B7E7380-C8F4-4113-84D9-B9825F9F2240
 online version: https://go.microsoft.com/fwlink/?linkid=2044912
 schema: 2.0.0
-ms.assetid: 5B7E7380-C8F4-4113-84D9-B9825F9F2240
 ---
 
 # Add-AipServiceSuperUser
@@ -83,11 +84,10 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,8 +1,9 @@
 ---
-external help file: AIPService.dll-Help.xml
+external help file: AipService.dll-Help.xml
+Module Name: AIPService
+ms.assetid: 6E60214B-4051-48B3-A59C-5E4587A0025B
 online version: https://go.microsoft.com/fwlink/?linkid=2045055
 schema: 2.0.0
-ms.assetid: 6E60214B-4051-48B3-A59C-5E4587A0025B
 ---
 
 # Get-AipServiceDevicePlatform
@@ -67,21 +68,6 @@ Accept wildcard characters: False
 
 ### -Android
 Indicates that the cmdlet specifies the Android device platform. The cmdlet gets the protection support status for the specified device platform.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Platforms
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -iOS
-Indicates that the cmdlet specifies the iOS device platform. The cmdlet gets the protection support status for the specified device platform.
 
 ```yaml
 Type: SwitchParameter
@@ -170,8 +156,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -iOS
+Indicates that the cmdlet specifies the iOS device platform. The cmdlet gets the protection support status for the specified device platform.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Platforms
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

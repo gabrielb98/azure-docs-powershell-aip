@@ -1,8 +1,9 @@
 ---
-external help file: AIPService.dll-Help.xml
+external help file: AipService.dll-Help.xml
+Module Name: AIPService
+ms.assetid: E04D855C-C9AF-42DA-A1B4-9D51FE4045D9
 online version: https://go.microsoft.com/fwlink/?linkid=2045417
 schema: 2.0.0
-ms.assetid: E04D855C-C9AF-42DA-A1B4-9D51FE4045D9
 ---
 
 # Set-AipServiceMaxUseLicenseValidityTime
@@ -57,6 +58,21 @@ This command sets the maximum validity time for use licenses to be 60 days.
 
 ## PARAMETERS
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Force
 Indicates that this cmdlet sets the value for the maximum validity time for use licenses without prompting you for confirmation.
 
@@ -81,23 +97,8 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
-Position: 1
+Position: 0
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -118,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

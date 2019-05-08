@@ -1,8 +1,9 @@
 ---
-external help file: AIPService.dll-Help.xml
+external help file: AipService.dll-Help.xml
+Module Name: AIPService
+ms.assetid: D7136388-0197-4074-AC15-BA4DA07223C7
 online version: https://go.microsoft.com/fwlink/?linkid=2045046
 schema: 2.0.0
-ms.assetid: D7136388-0197-4074-AC15-BA4DA07223C7
 ---
 
 # Get-AipServiceAdminLog
@@ -47,6 +48,21 @@ PS C:\>Get-AipServiceAdminLog -Path "C:\Temp\AdminLog.log" -FromTime $days
 This command generates a log of administrative protection commands for your tenant, limited to items within the last 45 days (inclusive). The first command sets the variable for the *FromTime* parameter to be today's date minus 45 days. Then the second command gets the entries from the log for this time period, by using this variable.
 
 ## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Force
 Indicates that the cmdlet overwrites, without prompting for confirmation, an existing log file that has the same path.
@@ -108,21 +124,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
@@ -139,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

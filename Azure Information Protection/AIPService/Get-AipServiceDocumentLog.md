@@ -1,8 +1,9 @@
 ---
-external help file: AIPService.dll-Help.xml
+external help file: AipService.dll-Help.xml
+Module Name: AIPService
+ms.assetid: B497A721-7EA4-4876-B2B9-874299BB3C33
 online version: https://go.microsoft.com/fwlink/?linkid=2044954
 schema: 2.0.0
-ms.assetid: B497A721-7EA4-4876-B2B9-874299BB3C33
 ---
 
 # Get-AipServiceDocumentLog
@@ -13,7 +14,8 @@ Gets protection information about documents that are tracked by Azure Informatio
 ## SYNTAX
 
 ```
-Get-AipServiceDocumentLog -UserEmail <String> [-FromTime <DateTime>] [-ToTime <DateTime>] 
+Get-AipServiceDocumentLog -UserEmail <String> [-FromTime <DateTime>] [-ToTime <DateTime>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -33,9 +35,9 @@ You can alternatively use the document tracking site to get the protection infor
 
 ## EXAMPLES
 
-### Example 1: Get protection information about all tracked documents for a user 
+### Example 1: Get protection information about all tracked documents for a user
 ```
-PS C:\>Get-AipServiceDocumentLog -UserEmail "test@contoso.com" 
+PS C:\>Get-AipServiceDocumentLog -UserEmail "test@contoso.com"
 ```
 
 This command gets protection information about the tracked documents for a user who has the email address of "test@contoso.com" and that user is the Rights Management issuer or Rights Management owner for the document, or the document was configured to grant access to that user.
@@ -47,7 +49,7 @@ PS C:\>Get-AipServiceDocumentLog -UserEmail "test@contoso.com" -FromTime "01/01/
 
 This command is the same as the previous example except that results are limited to documents that were protected within a specific time period by using the *FromTime* and *ToTime* parameters. In this example, the time period is all days in January 2018, using the US date format.
 
-### Example 3: Get protection information about all tracked documents for a user and save the results to a .csv file  
+### Example 3: Get protection information about all tracked documents for a user and save the results to a .csv file
 ```
 PS C:\>$documentLogs = Get-AipServiceDocumentLog -UserEmail "test@microsoft.com"
 PS C:\>$documentLogs | Export-Csv 'C:\Temp\DocumentLog.csv' -NoTypeInformation
@@ -58,6 +60,21 @@ The first command gets the protection information about the tracked documents fo
 The second command then uses the [Export-Csv](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/export-csv?view=powershell-4.0) cmdlet to convert the protection information into .csv format, and saves it to the C:\Temp\DocumentLog.csv file.
 
 ## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -FromTime
 Specifies the start time (inclusive) for the log file as a **DateTime** object. To obtain a **DateTime** object, use the [Get-Date](https://go.microsoft.com/fwlink/?LinkID=293966) cmdlet. Specify the date and time according to your system locale settings. For more information, type `Get-Help Get-Date`.
@@ -100,9 +117,27 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

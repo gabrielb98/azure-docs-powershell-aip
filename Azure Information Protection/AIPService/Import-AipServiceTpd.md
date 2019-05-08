@@ -1,8 +1,9 @@
 ---
-external help file: AIPService.dll-Help.xml
+external help file: AipService.dll-Help.xml
+Module Name: AIPService
+ms.assetid: CA482DE6-8575-4161-AD19-97F8A6C87605
 online version: https://go.microsoft.com/fwlink/?linkid=2045514
 schema: 2.0.0
-ms.assetid: CA482DE6-8575-4161-AD19-97F8A6C87605
 ---
 
 # Import-AipServiceTpd
@@ -13,8 +14,8 @@ Imports a TPD from AD RMS for Azure Information Protection.
 ## SYNTAX
 
 ```
-Import-AipServiceTpd [-Force] -TpdFile <String> -ProtectionPassword <SecureString> [-HsmKeyFile <String>]
- [-FriendlyName <String>] [-KeyVaultKeyUrl <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Import-AipServiceTpd [-Force] -TpdFile <String> -ProtectionPassword <SecureString> [-FriendlyName <String>]
+ [-KeyVaultKeyUrl <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -56,6 +57,21 @@ Our example uses the key vault name of contoso-byok-kv, the key name of contosoa
 
 ## PARAMETERS
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Force
 Forces the command to run without asking for user confirmation.
 
@@ -75,25 +91,6 @@ Accept wildcard characters: False
 Specifies the friendly name of a trusted publishing domain (TPD) and the SLC key that you imported from AD RMS. If users run Office 2016 or Office 2013, specify the same **Friendly name** value that is set for the AD RMS cluster properties on the **Server Certificate** tab.
 
 This parameter is optional. If you don't use it, the key identifier is used instead.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
-```
-
-### -HsmKeyFile
-Specifies the packaged legacy HSM file that was prepared by using the BYOK tools to upload to your tenant key over the Internet.
-
-This parameter is deprecated now that Azure Information Protection supports Azure Key Vault, and this parameter is replaced with *KeyVaultKeyUrl*.
-
-If this parameter and the *KeyVaultKeyUrl* parameter are both supplied, this parameter is ignored.
 
 ```yaml
 Type: String
@@ -161,21 +158,6 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
@@ -192,7 +174,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

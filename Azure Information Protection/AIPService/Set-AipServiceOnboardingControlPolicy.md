@@ -1,8 +1,9 @@
 ---
-external help file: AIPService.dll-Help.xml
+external help file: AipService.dll-Help.xml
+Module Name: AIPService
+ms.assetid: AC10D692-604D-40A3-94BE-AAA5008BF9D8
 online version: https://go.microsoft.com/fwlink/?linkid=2045236
 schema: 2.0.0
-ms.assetid: AC10D692-604D-40A3-94BE-AAA5008BF9D8
 ---
 
 # Set-AipServiceOnboardingControlPolicy
@@ -13,7 +14,7 @@ Sets the user on-boarding control policy for Azure Information Protection.
 ## SYNTAX
 
 ```
-Set-AipServiceOnboardingControlPolicy [-Force] -UseAIPServiceUserLicense <Boolean> [-SecurityGroupObjectId <Guid>]
+Set-AipServiceOnboardingControlPolicy [-Force] -UseRmsUserLicense <Boolean> [-SecurityGroupObjectId <Guid>]
  [-Scope <OnboardingControlPolicyScope>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -63,6 +64,21 @@ PS C:\> Set-AipServiceOnboardingControlPolicy -UseAIPServiceUserLicense $False -
 This command allows all users to protect content by using Azure Information Protection. The command applies to Windows clients and mobile devices.
 
 ## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Force
 Indicates that this cmdlet configures the on-boarding control policy even if there is already an on-boarding control policy for the organization.
@@ -120,8 +136,8 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-### -UseAIPServiceUserLicense
-Specifies whether users without an Azure Rights Management license assigned to them can use Azure Information Protection to protect content. Users can always use Azure Information Protection to consume protected content regardless of this setting and their license assignment.
+### -UseRmsUserLicense
+{{ Fill UseRmsUserLicense Description }}
 
 ```yaml
 Type: Boolean
@@ -132,21 +148,6 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -168,7 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

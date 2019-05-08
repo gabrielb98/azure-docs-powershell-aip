@@ -1,8 +1,9 @@
 ---
-external help file: AIPService.dll-Help.xml
+external help file: AipService.dll-Help.xml
+Module Name: AIPService
+ms.assetid: C019DD8B-8C2C-487C-B730-38E50A170180
 online version: https://go.microsoft.com/fwlink/?linkid=2045318
 schema: 2.0.0
-ms.assetid: C019DD8B-8C2C-487C-B730-38E50A170180
 ---
 
 # Remove-AipServiceRoleBasedAdministrator
@@ -19,7 +20,8 @@ Remove-AipServiceRoleBasedAdministrator [-ObjectId <Guid>] [-Role <Role>] [<Comm
 
 ### DisplayName
 ```
-Remove-AipServiceRoleBasedAdministrator [-SecurityGroupDisplayName <String>] [-Role <Role>] [<CommonParameters>]
+Remove-AipServiceRoleBasedAdministrator [-SecurityGroupDisplayName <String>] [-Role <Role>]
+ [<CommonParameters>]
 ```
 
 ### EmailAddress
@@ -49,7 +51,6 @@ PS C:\>Remove-AipServiceRoleBasedAdministrator -EmailAddress "EvanNarvaez@Contos
 ```
 
 This command removes administrative rights from Azure Information Protection for the user who has an email address of "EvanNarvaez@Contoso.com".
-
 
 ## PARAMETERS
 
@@ -98,6 +99,7 @@ If you do not specify a role, the cmdlet removes the administrator from the Glob
 Type: Role
 Parameter Sets: (All)
 Aliases:
+Accepted values: GlobalAdministrator, ConnectorAdministrator
 
 Required: False
 Position: Named
@@ -122,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

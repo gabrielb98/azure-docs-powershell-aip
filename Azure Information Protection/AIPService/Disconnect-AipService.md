@@ -1,8 +1,9 @@
 ---
-external help file: AIPService.dll-Help.xml
+external help file: AipService.dll-Help.xml
+Module Name: AIPService
+ms.assetid: 91DD14FF-0033-4A7F-9738-87BD2A989FED
 online version: https://go.microsoft.com/fwlink/?linkid=2044860
 schema: 2.0.0
-ms.assetid: 91DD14FF-0033-4A7F-9738-87BD2A989FED
 ---
 
 # Disconnect-AipService
@@ -31,7 +32,7 @@ This command disconnects you from the protection service from Azure Information 
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

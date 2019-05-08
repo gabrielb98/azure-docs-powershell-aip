@@ -1,8 +1,9 @@
 ---
-external help file: AIPService.dll-Help.xml
+external help file: AipService.dll-Help.xml
+Module Name: AIPService
+ms.assetid: B81D7053-016A-44C2-896A-040F6510C7ED
 online version: https://go.microsoft.com/fwlink/?linkid=2045300
 schema: 2.0.0
-ms.assetid: B81D7053-016A-44C2-896A-040F6510C7ED
 ---
 
 # Get-AipServiceTrackingLog
@@ -13,7 +14,8 @@ Gets tracking information for documents protected by Azure Information Protectio
 ## SYNTAX
 
 ```
-Get-AipServiceTrackingLog -UserEmail <String> [-FromTime <DateTime>] [-ToTime <DateTime>]
+Get-AipServiceTrackingLog -UserEmail <String> [-FromTime <DateTime>] [-ToTime <DateTime>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,9 +32,9 @@ You can alternatively use the document tracking site to get the protection infor
 
 ## EXAMPLES
 
-### Example 1: Get all tracking information for a user 
+### Example 1: Get all tracking information for a user
 ```
-PS C:\>Get-AipServiceTrackingLog -UserEmail "test@contoso.com" 
+PS C:\>Get-AipServiceTrackingLog -UserEmail "test@contoso.com"
 ```
 
 This command generates a log of all the tracking information for documents that were protected by or accessed by the user with the email address "test@contoso.com".
@@ -44,7 +46,7 @@ PS C:\>Get-AipServiceTrackingLog -UserEmail "test@contoso.com" -FromTime "01/01/
 
 This command is the same as the previous example except that the results are limited to documents that were tracked within a specific time period by using the *FromTime* and *ToTime* parameters. In this example, the time period is all days in January 2018, using the US date format.
 
-### Example 3: Get all tracking information for a user and save the results to a .csv file  
+### Example 3: Get all tracking information for a user and save the results to a .csv file
 ```
 PS C:\>$trackingLogs = Get-AipServiceTrackingLog -UserEmail "test@contoso.com"
 PS C:\>$trackingLogs | Export-Csv 'C:\Temp\TrackingLog.csv' -NoTypeInformation
@@ -55,6 +57,21 @@ The first command generates a log of all the tracking information for documents 
 The second command then uses the [Export-Csv](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/export-csv?view=powershell-4.0) cmdlet to convert the tracking information into .csv format, and saves it to the C:\Temp\TrackingLog.csv file.
 
 ## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -FromTime
 Specifies the start time (inclusive) for the log file as a **DateTime** object. To obtain a **DateTime** object, use the [Get-Date](https://go.microsoft.com/fwlink/?LinkID=293966) cmdlet. Specify the date and time according to your system locale settings. For more information, type `Get-Help Get-Date`.
@@ -97,9 +114,27 @@ Aliases:
 Required: True
 Position: Named
 Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

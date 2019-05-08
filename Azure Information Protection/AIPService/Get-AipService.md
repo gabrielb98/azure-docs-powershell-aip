@@ -1,8 +1,9 @@
 ---
-external help file: AIPService.dll-Help.xml
+external help file: AipService.dll-Help.xml
+Module Name: AIPService
+ms.assetid: DF116EAD-6AC1-44CF-89E6-5E63D72FF58C
 online version: https://go.microsoft.com/fwlink/?linkid=2044945
 schema: 2.0.0
-ms.assetid: DF116EAD-6AC1-44CF-89E6-5E63D72FF58C
 ---
 
 # Get-AipService
@@ -33,7 +34,7 @@ This command gets your tenant's activation status of the protection service from
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
