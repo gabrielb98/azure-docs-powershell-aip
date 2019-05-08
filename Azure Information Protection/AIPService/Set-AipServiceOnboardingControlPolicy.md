@@ -37,28 +37,28 @@ Note: This cmdlet does not stop users from consuming protected content or preven
 
 ### Example 1: Restrict Azure Information Protection to users who have a license and are members of a specified group
 ```
-PS C:\> Set-AipServiceOnboardingControlPolicy -UseAIPServiceUserLicense $True -SecurityGroupObjectId "fba99fed-32a0-44e0-b032-37b419009501" -Scope All
+PS C:\> Set-AipServiceOnboardingControlPolicy -UseRmsUserLicense $True -SecurityGroupObjectId "fba99fed-32a0-44e0-b032-37b419009501" -Scope All
 ```
 
 This command configures Azure Information Protection to allow only users who have an Azure Rights Management license to use Azure Information Protection to protect content. Further, the command requires users to be members of the security group with the specified object ID. The restriction applies to Windows clients and mobile devices.
 
 ### Example 2: Restrict Azure Information Protection to users who are members of a specified group
 ```
-PS C:\> Set-AipServiceOnboardingControlPolicy -UseAIPServiceUserLicense $False -SecurityGroupObjectId "fba99fed-32a0-44e0-b032-37b419009501" -Scope All
+PS C:\> Set-AipServiceOnboardingControlPolicy -UseRmsUserLicense $False -SecurityGroupObjectId "fba99fed-32a0-44e0-b032-37b419009501" -Scope All
 ```
 
 This command allows only users that are members of the security group with the specified object ID to protect content by using Azure Information Protection. The command applies to Windows clients and mobile devices.
 
 ### Example 3: Restrict Azure Information Protection to users who have an Azure Rights Management license
 ```
-PS C:\> Set-AipServiceOnboardingControlPolicy -UseAIPServiceUserLicense $True -Scope All
+PS C:\> Set-AipServiceOnboardingControlPolicy -UseRmsUserLicense $True -Scope All
 ```
 
 This command allows only users who have an Azure Rights Management license assigned to protect content by using Azure Information Protection. The command applies to Windows clients and mobile devices.
 
 ### Example 4: Do not restrict Azure Information Protection for users
 ```
-PS C:\> Set-AipServiceOnboardingControlPolicy -UseAIPServiceUserLicense $False -Scope All
+PS C:\> Set-AipServiceOnboardingControlPolicy -UseRmsUserLicense $False -Scope All
 ```
 
 This command allows all users to protect content by using Azure Information Protection. The command applies to Windows clients and mobile devices.
@@ -137,7 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseRmsUserLicense
-{{ Fill UseRmsUserLicense Description }}
+Specifies whether users without an Azure Rights Management license assigned to them can use Azure Information Protection to protect content. Users can always use Azure Information Protection to consume protected content regardless of this setting and their license assignment.
 
 ```yaml
 Type: Boolean
@@ -169,7 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

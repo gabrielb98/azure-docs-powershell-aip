@@ -2,7 +2,7 @@
 external help file: AipService.dll-Help.xml
 Module Name: AIPService
 ms.assetid: CDD8C715-6C63-40BC-AF75-F842FDFD5E62
-online version: http://go.microsoft.com/fwlink/?LinkID=529558https://go.microsoft.com/fwlink/?linkid=2045179
+online version: https://go.microsoft.com/fwlink/?LinkID=529558https://go.microsoft.com/fwlink/?linkid=2045179
 schema: 2.0.0
 ---
 
@@ -35,7 +35,7 @@ This command gets the maximum validity time for use licenses for your tenant.
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
