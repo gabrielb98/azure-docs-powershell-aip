@@ -8,11 +8,7 @@ Locale: en-US
 
 # AIPService Module
 ## Description
-This page displays help links for the cmdlets that administer the protection service from Azure Information Protection.
-These PowerShell cmdlets let you administer Azure Information Protection from the command line. Although this enables automation, it also supports reliable and repeated processes to help reduce administrative overheads. In addition, advanced configurations and some operations require this PowerShell module.
-For more information about when you must use these PowerShell cmdlets and to see groupings of cmdlets by administration tasks, see Administering the protection service from Azure Information Protection by using PowerShell .
-> Tip > >If you do not see the cmdlet or options that are documented, make sure that you have installed the latest version of the module . > >The current version is 1.0.0.0 . To check the version you have installed, run: `(Get-Module AIPService -ListAvailable).Version` If this command or any cmdlet from this module fails to run, first run Import-Module AIPService .
-
+This page displays help links for the cmdlets that administer the protection service from Azure Information Protection. These PowerShell cmdlets let you administer Azure Information Protection from the command line. Although this enables automation, it also supports reliable and repeated processes to help reduce administrative overheads. In addition, advanced configurations and some operations require this PowerShell module. For more information about when you must use these PowerShell cmdlets and to see groupings of cmdlets by administration tasks, see Administering the protection service from Azure Information Protection by using PowerShell . > Tip > >If you do not see the cmdlet or options that are documented, make sure that you have installed the latest version of the module . > >The current version is 1.0.0.0 . To check the version you have installed, run: `(Get-Module AIPService -ListAvailable).Version` If this command or any cmdlet from this module fails to run, first run Import-Module AIPService .
 The .dll file for this module is AIPService.dll .
 
 ## AIPService Cmdlets
@@ -100,13 +96,13 @@ Displays whether the MSIPC v3 service is enabled or disabled for Azure Informati
 ### [Get-AipServiceKeys](Get-AipServiceKeys.md)
 Lists all Azure Information Protection tenant keys associated with your tenant.
 
-### [Get-AipServiceMaxUseLicenseValidityTime](./Get-AipServiceMaxUseLicenseValidityTime.md)
+### [Get-AipServiceMaxUseLicenseValidityTime](Get-AipServiceMaxUseLicenseValidityTime.md)
 Gets the maximum validity time for Rights Management use licenses for Azure Information Protection.
 
-### [Get-AipServiceMigrationUrl](./Get-AipServiceMigrationUrl.md)
+### [Get-AipServiceMigrationUrl](Get-AipServiceMigrationUrl.md)
 Gets the migration URL for Azure Information Protection.
 
-### [Get-AipServiceOnboardingControlPolicy](./Get-AipServiceOnboardingControlPolicy.md)
+### [Get-AipServiceOnboardingControlPolicy](Get-AipServiceOnboardingControlPolicy.md)
 Gets the user on-boarding control policy for Azure Information Protection.
 
 ### [Get-AipServiceRoleBasedAdministrator](Get-AipServiceRoleBasedAdministrator.md)
@@ -160,12 +156,10 @@ Updates the properties of a tenant key object for Azure Information Protection.
 ### [Set-AipServiceMaxUseLicenseValidityTime](Set-AipServiceMaxUseLicenseValidityTime.md)
 Sets the maximum validity time for Rights Management use licenses for Azure Information Protection.
 
-
-### [Set-AipServiceMigrationUrl](./Set-AipServiceMigrationUrl.md)
+### [Set-AipServiceMigrationUrl](Set-AipServiceMigrationUrl.md)
 Sets the migration URL for Azure Information Protection.
 
-
-### [Set-AipServiceOnboardingControlPolicy](./Set-AipServiceOnboardingControlPolicy.md)
+### [Set-AipServiceOnboardingControlPolicy](Set-AipServiceOnboardingControlPolicy.md)
 Sets the user on-boarding control policy for Azure Information Protection.
 
 ### [Set-AipServiceSuperUserGroup](Set-AipServiceSuperUserGroup.md)
