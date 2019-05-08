@@ -127,7 +127,13 @@ Accept wildcard characters: False
 ```
 
 ### -EnvironmentName
-{{ Fill EnvironmentName Description }}
+Specifies the Azure instance for sovereign clouds. Valid values are:
+
+- AzureCloud: Commercial offering of Azure
+- AzureChinaCloud: Azure Operated by 21Vianet
+- AzureUSGovernment: Azure Government 
+
+For more information about using Azure Information Protection with Azure Government, see [Azure Information Protection Premium Government Service Description](https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-aip-premium-govt-service-description).
 
 ```yaml
 Type: AzureRmEnvironment
