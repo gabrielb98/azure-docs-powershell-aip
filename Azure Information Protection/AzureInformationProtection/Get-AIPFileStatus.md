@@ -24,23 +24,20 @@ The status also includes whether the file is protected by Rights Management, and
 
 Note that password-protected files always return the protection status of **False**.
 
-To run this cmdlet non-interactively, see the following instructions for the admin guides:
+To run this cmdlet non-interactively for the Azure Information Protection client, see [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection)
 
-- For the Azure Information Protection client:  [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection)
+The Azure Information Protection unified labeling client does not currently support running this cmdlet non-interactively.
 
-- For the Azure Information Protection unified labeling client:  [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/clientv2-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection)
-
-NOTE: If you have the Azure Information Protection unified labeling client, there are differences from the Azure Information Protection client:
+NOTE: If you have the Azure Information Protection unified labeling client, there are other differences from the Azure Information Protection client:
 
 - This cmdlets returns label information from your own tenant only and the *LabelingSiteId* parameter is not displayed in the output.
 
 - The *Owner* and *RMSIssuedTime* parameters are not supported and are not displayed in the output.
 
-- The *LabelingMethod* parameter display the values of **Privileged**, **Standard**, or **Auto** instead of **Manual** or **Automatic**:
+- The *LabelingMethod* parameter display the values of **Privileged** or **Standard**instead of **Manual** or **Automatic**:
     
     - **Privileged**: A label was applied by a user and is the equivalent of Manual for the Azure Information Protection client.
-    - **Standard**: A label was applied by an auto labeling policy from the Office 365 Security & Compliance center, or by a service using a rule. This value is the equivalent to Automatic for the Azure Information Protection client.
-    - **Auto**: Introduced with the Azure Information Protection unified labeling client, identifies the override of an existing label and results in a document or email being labeled as Standard.
+    - **Standard**: A label was applied by an auto labeling policy from one of the admin centers, such as the Office 365 Security & Compliance Center, or by a service using a rule. This value is the equivalent to Automatic for the Azure Information Protection client.
 
 ## EXAMPLES
 
