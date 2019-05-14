@@ -32,7 +32,7 @@ NOTE: If you have the Azure Information Protection unified labeling client, ther
 
 - The *Owner* and *RMSIssuedTime* parameters are not supported and are not displayed in the output.
 
-- The *LabelingMethod* parameter display the values of **Privileged** or **Standard**instead of **Manual** or **Automatic**:
+- The *LabelingMethod* parameter display the values of **Privileged** or **Standard** instead of **Manual** or **Automatic**:
     
     - **Privileged**: A label was applied by a user and is the equivalent of Manual for the Azure Information Protection client.
     - **Standard**: A label was applied by an auto labeling policy from one of the admin centers, such as the Office 365 Security & Compliance Center, or by a service using a rule. This value is the equivalent to Automatic for the Azure Information Protection client.
