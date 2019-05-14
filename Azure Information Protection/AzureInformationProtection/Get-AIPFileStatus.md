@@ -24,9 +24,7 @@ The status also includes whether the file is protected by Rights Management, and
 
 Note that password-protected files always return the protection status of **False**.
 
-To run this cmdlet non-interactively for the Azure Information Protection client, see [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection)
-
-The Azure Information Protection unified labeling client does not currently support running this cmdlet non-interactively.
+To run this cmdlet non-interactively for the Azure Information Protection client, see [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection). The Azure Information Protection unified labeling client does not currently support running this cmdlet non-interactively.
 
 NOTE: If you have the Azure Information Protection unified labeling client, there are other differences from the Azure Information Protection client:
 
