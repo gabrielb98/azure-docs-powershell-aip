@@ -32,10 +32,10 @@ NOTE: If you have the Azure Information Protection unified labeling client, ther
 
 - The *Owner* and *RMSIssuedTime* parameters are not supported and are not displayed in the output.
 
-- The *LabelingMethod* parameter display the values of **Privileged** or **Standard** instead of **Manual** or **Automatic**:
+- The *LabelingMethod* parameter displays the values of **Privileged** or **Standard** instead of **Manual** or **Automatic**:
     
-    - **Privileged**: A label was applied by a user and is the equivalent of Manual for the Azure Information Protection client.
-    - **Standard**: A label was applied by an auto labeling policy from one of the admin centers, such as the Office 365 Security & Compliance Center, or by a service using a rule. This value is the equivalent to Automatic for the Azure Information Protection client.
+    - **Privileged**: A label was applied by a user, either manually or a result of a labeling recommendation, and is the equivalent of Manual for the Azure Information Protection client.
+    - **Standard**: A label was applied automatically, and is the equivalent of Automatic for the Azure Information Protection client.
 
 ## EXAMPLES
 
@@ -98,7 +98,7 @@ This command gets the label and protection information of all files on the Finan
 PS C:\> Get-AIPFileStatus -Path \\Finance\Projects\ | Where-Object {$_.MainLabelName -eq 'Confidential'} | Export-Csv C:\Reports\AIP-status.csv
 ```
 
-This command gets the label and protection information for just the files that are labeled "Confidential" (regardless of their sub-label) on the Finance server, in the Projects folder and any of its subfolders. The results are exported to the file named AIP-status.csv so that they can be more easily searched and sorted. If a previous report exists in C:\Reports\Report.csv, it will be overwritten.
+This command gets the label and protection information for just the files that are labeled "Confidential" (regardless of their sublabel) on the Finance server, in the Projects folder and any of its subfolders. The results are exported to the file named AIP-status.csv so that they can be more easily searched and sorted. If a previous report exists in C:\Reports\Report.csv, it will be overwritten.
 
 ### Example 4: Count of files with a "Confidential" label
 ```
