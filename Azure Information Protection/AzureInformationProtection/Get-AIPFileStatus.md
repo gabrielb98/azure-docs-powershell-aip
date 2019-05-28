@@ -114,7 +114,7 @@ This command provides the number of files with the "Confidential" label that are
 ### -Path
 Specifies a local path, network path, or SharePoint Server URL to the files for which you want to get the label and protection information. Wildcards are not supported.
 
-For SharePoint paths: SharePoint Server 2016 and SharePoint Server 2013 are supported.
+For SharePoint paths: SharePoint Server 2019, SharePoint Server 2016, and SharePoint Server 2013 are supported.
 
 Examples include C:\Folder\, C:\Folder\Filename, \\\Server\Folder, http://sharepoint.contoso.com/Shared%20Documents/Folder. Paths can include spaces when you enclose the path value with quotes.
 
