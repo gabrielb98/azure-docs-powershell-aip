@@ -24,7 +24,7 @@ You must use PowerShell to configure your tenant key; you cannot do this configu
 
 This cmdlet always sets the key from the imported TPD to an archived state. After you run this command, the key in the imported TPD becomes available to Azure Rights Management to consume content that AD RMS protected by using this key. Use the [Set-AadrmKeyProperties](./Set-AadrmKeyProperties.md) cmdlet to change the state of the imported TPD to Active.
 
-As a security best practice, do not upload a 1024-bit RSA key, which is considered an inadequate level of protection. Microsoft doesn’t endorse the use of lower key lengths such as 1024-bit RSA keys and the associated use of protocols that offer inadequate levels of protection, such as SHA-1. We recommend moving to a higher key length.
+However, you might be importing a 1024-bit RSA key, which is considered an inadequate level of protection. Microsoft doesn’t endorse the use of lower key lengths such as 1024-bit RSA keys and the associated use of protocols that offer inadequate levels of protection, such as SHA-1. We recommend moving to a higher key length for your active tenant key.
 
 Warning: Do not run this cmdlet unless you have read and understood the requirements, restrictions, instructions, and implications of migrating from AD RMS. For more information, see [Migrating from AD RMS to Azure Information Protection](https://docs.microsoft.com/information-protection/plan-design/migrate-from-ad-rms-to-azure-rms).
 
