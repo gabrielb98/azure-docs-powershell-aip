@@ -19,8 +19,6 @@ Use-AadrmKeyVaultKey -KeyVaultKeyUrl <String> [-FriendlyName <String>] [-Force] 
 ## DESCRIPTION
 The **Use-AadrmKeyVaultKey** cmdlet tells the Azure Rights Management service from Azure Information Protection to use a customer-managed key (BYOK) in Azure Key Vault.
 
-As a security best practice, do not use a 1024-bit RSA key, which is considered an inadequate level of protection. Microsoft doesn’t endorse the use of lower key lengths such as 1024-bit RSA keys and the associated use of protocols that offer inadequate levels of protection, such as SHA-1. We recommend moving to a higher key length.
-
 You must use PowerShell to configure your tenant key; you cannot do this configuration by using a management portal.
 
 You can run this cmdlet before or after the Azure Rights Management service is activated.
