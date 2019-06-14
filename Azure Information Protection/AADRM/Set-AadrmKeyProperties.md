@@ -25,7 +25,7 @@ Setting the tenant key object status to Active also re-signs all templates with 
 
 To run this cmdlet, you must specify the KeyIdentifier for the tenant key object that you want to set to Active. To get this value, use the [Get-AadrmKeys](./Get-AadrmKeys.md) cmdlet. 
 
-As a security best practice, do not activate a 1024-bit RSA key, which is considered an inadequate level of protection. Microsoft doesn’t endorse the use of lower key lengths such as 1024-bit RSA keys and the associated use of protocols that offer inadequate levels of protection, such as SHA-1. We recommend moving to a higher key length.
+Unless you are in middle of a migration from AD RMS, do not activate a 1024-bit RSA key, which is considered an inadequate level of protection. Microsoft doesn’t endorse the use of lower key lengths such as 1024-bit RSA keys and the associated use of protocols that offer inadequate levels of protection, such as SHA-1. We recommend moving to a higher key length.
 
 Note that you cannot use this cmdlet to change an Active status to be Archived. To set a tenant key object to have a status of Archived, you must set another tenant key object to Active.
 
