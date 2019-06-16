@@ -9,28 +9,53 @@ schema: 2.0.0
 # Set-AIPFileLabel
 
 ## SYNOPSIS
-Sets or removes an Azure Information Protection label for a file, and sets the protection according to the label configuration.
+Sets or removes an Azure Information Protection label for a file, and sets or removes the protection according to the label configuration or custom permissions.
+
 
 ## SYNTAX
 
-### Set
+### SetLabel
 ```
-Set-AIPFileLabel [-LabelId] <Guid> [-JustificationMessage <String>] [-Owner <String>] [-PreserveFileDetails] [-EnableTracking] [-Path] <String[]> [<CommonParameters>]
+Set-AIPFileLabel -LabelId <Guid> [-JustificationMessage <String>] [-Owner <String>] [-PreserveFileDetails] [-EnableTracking] [-Path] <String[]> [<CommonParameters>]
 ```
 
-### Clear
+### SetLabelCustom
 ```
-Set-AIPFileLabel [-JustificationMessage <String>] [-RemoveLabel] [-Owner <String>] [-PreserveFileDetails] [-EnableTracking] [-Path] <String[]> [<CommonParameters>]
+Set-AIPFileLabel -LabelId <Guid> [-JustificationMessage <String>] -CustomPermissions <AIPCustomPermissions> [-Owner <String>] [-PreserveFileDetails] [-Path] <String[]> [<CommonParameters>]
+```
+
+### RemoveLabel
+```
+Set-AIPFileLabel [-JustificationMessage <String>] [-RemoveLabel] [-PreserveFileDetails] [-Path] <String[]> [<CommonParameters>]
+```
+
+### RemoveLabelProtection
+```
+Set-AIPFileLabel [-JustificationMessage <String>] [-RemoveLabel] [-RemoveProtection] [-PreserveFileDetails] [-Path] <String[]> [<CommonParameters>]
+```
+
+### RemoveProtection
+```
+Set-AIPFileLabel [-JustificationMessage <String>] [-RemoveProtection] [-PreserveFileDetails] [-Path] <String[]> [<CommonParameters>]
+```
+
+### Custom
+```
+Set-AIPFileLabel -CustomPermissions <AIPCustomPermissions> [-Owner <String>] [-PreserveFileDetails] [-Path] <String[]> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-For the Azure Information Protection client, the **Set-AIPFileLabel** cmdlet sets or removes an Azure Information Protection label for one or more files. This action can automatically apply or remove protection when labels are configured for Rights Management protection in the Azure Information Protection policy. When the command runs successfully, any existing label or protection can be replaced.
+For the Azure Information Protection client, the **Set-AIPFileLabel** cmdlet sets or removes an Azure Information Protection label for one or more files. This action can automatically apply or remove protection when labels are configured for protection in the Azure Information Protection policy. When the command runs successfully, any existing label or protection can be replaced.
 
 You cannot create or edit labels by using PowerShell but must do this by using the Azure portal. For instructions, see [Configuring the Azure Information Protection policy](https://docs.microsoft.com/information-protection/configure-policy).
 
-For the Azure Information Protection unified labeling client, the **Set-AIPFileLabel** cmdlet sets or removes an Office 365 sensitivity label for one or more files. This action can automatically apply protection when labels are configured to apply encryption. When the command runs successfully, any existing label or protection can be replaced.
+For the Azure Information Protection unified labeling client, the **Set-AIPFileLabel** cmdlet sets or removes an Office 365 sensitivity label for one or more files. This action can automatically apply protection when labels are configured to apply encryption. Additionally, you can use this cmdlet to apply custom permissions when they are created as an ad-hoc protection policy object with the [New-AIPCustomPermissions](New-AIPCustomPermissions.md) cmdlet. When the command runs successfully, any existing label or protection can be replaced. 
 
-For the Azure Information Protection client, but not the Azure Information Protection unified labeling client, you can run this cmdlet non-interactively. For instructions, see [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection).
+For both clients, you can run this cmdlet non-interactively. For instructions, see the following documentation in the admin guides:
+
+- Azure Information Protection client: [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection).
+
+- Azure Information Protection unified labeling client: [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/clientv2-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection).
 
 NOTE: When you run this cmdlet with the Azure Information Protection unified labeling client, there are other differences from the Azure Information Protection client:
 
@@ -150,7 +175,7 @@ This command removes the existing label from the file named C:\Projects\Analysis
 
 ### Example 6: Apply the "Confidential \ All Employees" label to all files in a folder and register these files with the document tracking site - Azure Information Protection client only
 
-``` 
+```
 PS C:\> Set-AIPFileLabel -Path C:\Projects\ -LabelId ade72bf1-4714-4714-4714-a325f824c55a -EnableTracking 
 FileName                    Status      Comment 
 --------                    ------      ------------ 
@@ -160,21 +185,108 @@ C:\Projects\Project3.docx   Success
 C:\Projects\Project4.docx   Success 
 C:\Projects\Datasheet.pdf   Success 
 C:\Projects\Image.jpg       Success 
-C:\Projects\Dashboard.xlsx  Success 
-``` 
+C:\Projects\Dashboard.xlsx  Success
+```
 
+ 
 This command sets a label named "Confidential \ All Employees" on all files in the Projects folder and any of its subfolders. The Label ID specified is for the sublabel "All Employees" that has a parent label of "Confidential". 
 
 If the "Confidential \ All Employees" label applies protection, the files that were successfully labeled with this command will also be protected. Because the *EnableTracking* parameter was specified, the protected documents can now be tracked and revoked in the document tracking site by the person who labeled the document, and by global administrators who use the Administrator mode.
 
+### Example 7: Protect a file with custom permissions - preview version of the Azure Information Protection unified labeling client only
+
+```
+PS C:\> $permissions = New-AIPCustomPermissions -Users user1@contoso.com, user2@vanarsdel.com -Permissions Reviewer -ExpirationDate (Get-Date -Month 1 -Day 1 -Year 2020)
+PS C:\> Set-AIPFileLabel C:\Projects\Analysis.docx -CustomPermissions $permissions
+
+FileName                   Status Comment
+--------                   ------ ------------
+C:\Projects\Analysis.docx  Success
+```
+
+The first command creates an ad-hoc protection policy object that grants users from different organizations usage rights from the Reviewer permissions, and also applies an expiration date.
+
+The second command protects a single file named Analysis.docx by using the custom permissions in the stored ad-hoc protection policy object.
+
+### Example 8: Apply a label and custom permissions to file - preview version of the Azure Information Protection unified labeling client only
+
+```
+PS C:\> $permissions = New-AIPCustomPermissions -Users a@a.com, b@b.com -Permissions Reviewer 
+PS C:\> Set-AIPFileLabel C:\Projects\Analysis.docx -LabelId d9f23ae3-1324-1234-1234-f515f824c57b -CustomPermissions $permissions
+
+FileName                   Status Comment
+--------                   ------ ------------
+C:\Projects\Analysis.docx  Success
+```
+
+The first command creates an ad-hoc protection policy object that grants users from different organizations usage rights from the Reviewer permissions, and also applies an expiration date.
+
+The second command applies a label to a single file named Analysis.docx and also protects the file by using the custom permissions in the stored ad-hoc protection policy object. If the label is configured for protection settings, they are replaced by the custom permissions.
+
+### Example 9: Remove protection from a file - preview version of the Azure Information Protection unified labeling client only
+
+```
+PS C:\> Set-AIPFileLabel C:\Projects\Analysis.docx -RemoveProtection
+
+FileName                   Status Comment
+--------                   ------ ------------
+C:\Projects\Analysis.docx  Success
+```
+
+This command removes protection from a single file named Analysis.docx. If the file has label, the label will also be removed. 
+
+### Example 10: Remove protection and a label from a file - preview version of the Azure Information Protection unified labeling client only
+
+```
+PS C:\> Set-AIPFileLabel C:\Projects\Analysis.docx -RemoveProtection -RemoveLabel -JustificationMessage 'The previous label no longer applies'
+
+FileName                   Status Comment
+--------                   ------ ------------
+C:\Projects\Analysis.docx  Success
+```
+
+This command removes the label and custom protection from a single file named Analysis.docx. Because the policy is configured to require justification to remove a label, the justification reason is also supplied so that the command can complete without prompting the user for the reason.
+
+
 ## PARAMETERS
+
+### -CustomPermissions
+Note: This parameter is supported only with the preview version of the Azure Information Protection unified labeling client.
+
+Specifies the variable name that stores the an ad-hoc protection policy that was created by using the [New-AIPCustomPermissions](./New-AIPCustomPermissions.md) cmdlet. The ad-hoc protection policy is used to protect the file or files with custom permissions.
+
+```yaml
+Type: AIPCustomPermissions
+Parameter Sets: SetLabelCustom, Custom
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableTracking
+Note: This parameter is not supported with the Azure Information Protection unified labeling client.
+
+Specify this parameter to register a protected document with the document tracking portal. 
+
+The user running this cmdlet and global administrators can then track the protected document and if necessary, revoke it. For more information about the document tracking site, see [Configuring and using document tracking for Azure Information Protection](https://docs.microsoft.com/azure/information-protection/rms-client/client-admin-guide-document-tracking) from the admin guide. 
+
+If the label does not apply protection, this parameter is ignored.
+
+```yaml 
+Type: SwitchParameter 
+```
+
 
 ### -JustificationMessage
 The justification reason for lowering the classification label, removing a label, or removing protection, if the Azure Information Protection policy requires users to supply this information. If setting a label triggers the justification and this reason is not supplied, the label is not applied. In this case, the status returned is "Skipped" with the comment "Justification required".
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: SetLabel, SetLabelCustom, RemoveLabel, RemoveLabelProtection, RemoveProtection
 Aliases:
 
 Required: False
@@ -192,11 +304,29 @@ The label ID value is displayed in the Azure portal, on the Label blade, when yo
 
 ```yaml
 Type: Guid
-Parameter Sets: Set
+Parameter Sets: SetLabel, SetLabelCustom
 Aliases:
 
 Required: True
-Position: 1
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Owner
+Note: This parameter is not supported with the Azure Information Protection unified labeling client.
+
+Specify the email address that is written to the Owner custom property.
+
+
+```yaml
+Type: String
+Parameter Sets: SetLabel, SetLabelCustom, Custom
+Aliases:
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -225,39 +355,6 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-### -RemoveLabel
-Removes any label that has been applied to a file.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Clear
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Owner
-Note: This parameter is not supported with the Azure Information Protection unified labeling client.
-
-Specify the email address that is written to the Owner custom property.
-
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -PreserveFileDetails
 Specify this parameter to leave the modified date (Windows and SharePoint) and modified by (SharePoint) values unchanged for documents that you label:
 
@@ -277,20 +374,49 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EnableTracking
-Note: This parameter is not supported with the Azure Information Protection unified labeling client.
+### -RemoveLabel
+Removes any label that has been applied to a file.
 
-Specify this parameter to register a protected document with the document tracking portal. 
+```yaml
+Type: SwitchParameter
+Parameter Sets: RemoveLabel, RemoveLabelProtection
+Aliases:
 
-The user running this cmdlet and global administrators can then track the protected document and if necessary, revoke it. For more information about the document tracking site, see [Configuring and using document tracking for Azure Information Protection](https://docs.microsoft.com/azure/information-protection/rms-client/client-admin-guide-document-tracking) from the admin guide. 
-
-If the label does not apply protection, this parameter is ignored.
-
-```yaml 
-Type: SwitchParameter 
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
+### -RemoveProtection
+Note: This parameter is supported only with the preview version of the Azure Information Protection unified labeling client.
 
+Removes protection from a file. If the file is labeled, the label is also removed.
+
+You must have sufficient usage rights or be a super user for your organization to remove protection from files. For more information, see [Configuring super users for Azure Rights Management and discovery services or data recovery](https://docs.microsoft.com/azure/information-protection/configure-super-users).
+
+Container files (zip, .rar, .7z, .msg, and .pst) are not currently supported by this cmdlet. However, for .zip and .rar files, you can use the following workaround, where "file.zip" is the container file that has been protected and contains other protected files:
+
+1. Set-AIPFileLabel file.zip -RemoveProtection
+
+2. Expand-Archive file.zip -DestinationPath .\Output
+
+3. Set-AIPFileLabel .\Output -RemoveProtection
+
+You might find other tools to extract .7z files that you can similarly use for this workaround. For more information about the Expand-Archive cmdlet, supported with a minimum version of Windows PowerShell 5.0, see [Expand-Archive](https://docs.microsoft.com/powershell/module/microsoft.powershell.archive/expand-archive).
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: RemoveLabelProtection, RemoveProtection
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
@@ -308,6 +434,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-AIPFileStatus](./Get-AIPFileStatus.md)
+
+[New-AIPCustomPermissions](./New-AIPCustomPermissions.md)
 
 [Set-AIPFileClassification](./Set-AIPFileClassification.md)
 
