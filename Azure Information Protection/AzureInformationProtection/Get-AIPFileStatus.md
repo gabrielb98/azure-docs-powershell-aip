@@ -24,23 +24,22 @@ The status also includes whether the file is protected by Rights Management, and
 
 Note that password-protected files always return the protection status of **False**.
 
-To run this cmdlet non-interactively, see the following instructions for the admin guides:
+You can run this cmdlet non-interactively. For instructions, see the following documentation in the admin guides:
 
-- For the Azure Information Protection client:  [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection)
+- Azure Information Protection client: [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection).
 
-- For the Azure Information Protection unified labeling client:  [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/clientv2-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection)
+- Azure Information Protection unified labeling client: [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/clientv2-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection).
 
-NOTE: If you have the Azure Information Protection unified labeling client, there are differences from the Azure Information Protection client:
+NOTE: If you have the Azure Information Protection unified labeling client, there are other differences from the Azure Information Protection client:
 
 - This cmdlets returns label information from your own tenant only and the *LabelingSiteId* parameter is not displayed in the output.
 
 - The *Owner* and *RMSIssuedTime* parameters are not supported and are not displayed in the output.
 
-- The *LabelingMethod* parameter display the values of **Privileged**, **Standard**, or **Auto** instead of **Manual** or **Automatic**:
+- The *LabelingMethod* parameter displays the values of **Privileged** or **Standard** instead of **Manual** or **Automatic**:
     
-    - **Privileged**: A label was applied by a user and is the equivalent of Manual for the Azure Information Protection client.
-    - **Standard**: A label was applied by an auto labeling policy from the Office 365 Security & Compliance center, or by a service using a rule. This value is the equivalent to Automatic for the Azure Information Protection client.
-    - **Auto**: Introduced with the Azure Information Protection unified labeling client, identifies the override of an existing label and results in a document or email being labeled as Standard.
+    - **Privileged**: A label was applied by a user, either manually or a result of a labeling recommendation, and is the equivalent of Manual for the Azure Information Protection client.
+    - **Standard**: A label was applied automatically, and is the equivalent of Automatic for the Azure Information Protection client.
 
 ## EXAMPLES
 
@@ -103,7 +102,7 @@ This command gets the label and protection information of all files on the Finan
 PS C:\> Get-AIPFileStatus -Path \\Finance\Projects\ | Where-Object {$_.MainLabelName -eq 'Confidential'} | Export-Csv C:\Reports\AIP-status.csv
 ```
 
-This command gets the label and protection information for just the files that are labeled "Confidential" (regardless of their sub-label) on the Finance server, in the Projects folder and any of its subfolders. The results are exported to the file named AIP-status.csv so that they can be more easily searched and sorted. If a previous report exists in C:\Reports\Report.csv, it will be overwritten.
+This command gets the label and protection information for just the files that are labeled "Confidential" (regardless of their sublabel) on the Finance server, in the Projects folder and any of its subfolders. The results are exported to the file named AIP-status.csv so that they can be more easily searched and sorted. If a previous report exists in C:\Reports\Report.csv, it will be overwritten.
 
 ### Example 4: Count of files with a "Confidential" label
 ```
@@ -119,7 +118,7 @@ This command provides the number of files with the "Confidential" label that are
 ### -Path
 Specifies a local path, network path, or SharePoint Server URL to the files for which you want to get the label and protection information. Wildcards are not supported.
 
-For SharePoint paths: SharePoint Server 2016 and SharePoint Server 2013 are supported.
+For SharePoint paths: SharePoint Server 2019, SharePoint Server 2016, and SharePoint Server 2013 are supported.
 
 Examples include C:\Folder\, C:\Folder\Filename, \\\Server\Folder, http://sharepoint.contoso.com/Shared%20Documents/Folder. Paths can include spaces when you enclose the path value with quotes.
 
@@ -136,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

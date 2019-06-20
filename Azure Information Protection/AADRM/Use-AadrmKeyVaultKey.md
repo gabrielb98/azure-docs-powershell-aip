@@ -23,7 +23,7 @@ The **Use-AadrmKeyVaultKey** cmdlet tells the Azure Rights Management service fr
 
 You must use PowerShell to configure your tenant key; you cannot do this configuration by using a management portal.
 
-You can run this cmdlet before or after the Azure Rights Management service is activated. 
+You can run this cmdlet before or after the Azure Rights Management service is activated.
 
 Before you run this cmdlet, make sure that the Azure Rights Management service principal has been granted permissions to the key vault that contains the key you want to use for Azure Information Protection. These permissions are granted by running the Azure Key Vault cmdlet, [Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy).
 
