@@ -13,8 +13,15 @@ Scans a file to automatically set an Azure Information Protection label for a fi
 
 ## SYNTAX
 
+### ApplyChanges
 ```
-Set-AIPFileClassification [-JustificationMessage <String>] [-Force] [-Owner <String>] [-PreserveFileDetails]
+Set-AIPFileClassification [-JustificationMessage <String>] [-Force] [-PreserveFileDetails] [-Path] <String[]>
+ [<CommonParameters>]
+```
+
+### WhatIf
+```
+Set-AIPFileClassification [-JustificationMessage <String>] [-Force] [-WhatIf] [-DiscoveryInfoTypes <String[]>]
  [-Path] <String[]> [<CommonParameters>]
 ```
 
@@ -29,15 +36,21 @@ When this cmdlet is run, it inspects the file contents and if the configured con
 
 By default, if the file already has a label, the existing label or protection is not replaced.
 
-For the Azure Information Protection client, but not the Azure Information Protection unified labeling client, you can run this cmdlet non-interactively. For instructions, see [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection).
+For both clients, you can run this cmdlet non-interactively. For instructions, see the following documentation in the admin guides:
 
-NOTE: When you run this cmdlet with the Azure Information Protection unified labeling client, there are other differences from the Azure Information Protection client:
+- Azure Information Protection client: [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection).
+
+- Azure Information Protection unified labeling client: [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/clientv2-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection).
+
+NOTE: When you run this cmdlet with the Azure Information Protection unified labeling client, there are differences from the Azure Information Protection client:
 
 - The *Owner* parameter is not supported.
 
 - SharePoint Server paths are not supported.
 
 - When a file isn't labeled because it was manually labeled, there was no match for the conditions that you specified, or the file had a higher classification, the file is skipped with the single comment of "No label to apply".
+
+- The *WhatIf* parameter is supported (preview version only). You can use the WhatIf mode with *DiscoveryInfoTypes* to find known sensitive information types.
 
 ## EXAMPLES
 
@@ -248,7 +261,110 @@ This command is similar to the previous example in that it also scans all files 
 
 The contents of Datasheet.pdf did not match any configured conditions and this file remains without a label.
 
+### Example 3: Scan a file in WhatIf mode for all known sensitive information types - Azure Information Protection unified labeling client only, preview version
+
+```
+PS C:\> Set-AIPFileClassification -Path C:\Projects\Project1.docx -WhatIf -DiscoveryInfoTypes All
+
+
+MainLabelName           : General
+MainLabelId             : 89a453df-5df4-4976-8191-jdn2fsf9560a
+SubLabelName            :
+SubLabelId              :
+WhatIf                  : True
+MatchedInformationTypes : {Credit Card Number, U.S. Social Security Number (SSN), International Classification of
+                          Diseases (ICD-10-CM), International Classification of Diseases (ICD-9-CM)}
+LastModifiedBy          :
+LastModifiedTime        : 8/19/2014 5:11:26 AM
+FileName                : C:\Projects\Project1.docx
+Status                  : Success
+Comment                 :
+```
+
+This command discovers all known information types in Project1.docx file without applying protection or a label.
+
+### Example 4: Scan a file in WhatIf mode for specific sensitive information types - Azure Information Protection unified labeling client only, preview version
+
+```
+PS C:\> Set-AIPFileClassification -Path C:\Projects\Project1.docx -WhatIf -DiscoveryInfoTypes "50842eb7-edc8-4019-85dd-5a5c1f2bb085","a44669fe-0d48-453d-a9b1-2cc83f2cba77"
+
+MainLabelName           : General
+MainLabelId             : 89a453df-5df4-4976-8191-jdn2fsf9560a
+SubLabelName            :
+SubLabelId              :
+WhatIf                  : True
+MatchedInformationTypes : {Credit Card Number, U.S. Social Security Number (SSN)}
+LastModifiedBy          :
+LastModifiedTime        : 8/19/2014 5:11:26 AM
+FileName                : Project1.docx
+Status                  : Success
+Comment                 :
+
+```
+
+This command discovers the specific information types of "Credit Card Number", and "Social Security Number (SSN)" in Project1.docx file without applying protection or a label.
+
+
+### Example 5: Scan a file in WhatIf mode for specific sensitive information types and display the values found - Azure Information Protection unified labeling client only, preview version
+
+```
+PS C:\> $x=Set-AIPFileClassification -Path "C:\Projects\Project1.docx" -WhatIf -DiscoveryInfoTypes "50842eb7-edc8-4019-85dd-5a5c1f2bb085","a44669fe-0d48-453d-a9b1-2cc83f2cba77"
+PS C:\> $x.MatchedInformationTypes
+
+RulePackageSetId  : 00000000-0000-0000-0000-000000000000
+RulePackageId     : 00000000-0000-0000-0000-000000000000
+RuleId            : 50842eb7-edc8-4019-85dd-5a5c1f2bb085
+Name              : Credit Card Number
+Count             : 1
+UniqueCount       : 1
+Confidence        : 85
+SensitiveContents : {Offset: 2089, Length: 19}
+ 
+RulePackageSetId  : 00000000-0000-0000-0000-000000000000
+RulePackageId     : 00000000-0000-0000-0000-000000000000
+RuleId            : a44669fe-0d48-453d-a9b1-2cc83f2cba77
+Name              : U.S. Social Security Number (SSN)
+Count             : 1
+UniqueCount       : 1
+Confidence        : 85
+SensitiveContents : {Offset: 7063, Length: 11}
+
+
+PS C:\> $x.MatchedInformationTypes[0].SensitiveContents | fl
+
+Offset  : 2089
+Length  : 19
+Value   : 4539-9572-7949-2212
+Context : OLOGICAL SCIENCES     Credit Card #
+          Expiration Date:      4539-9572-7949-2212
+          8/2009                Department:     BIOLOGICAL SCIENCES     Anticipa
+```
+
+Similar to the previous example, the first command discovers the specific information types of "Credit Card Number", and "Social Security Number (SSN)" in Project1.docx file without applying protection or a label. However, in this example, the results are stored in a variable for further processing.
+
+The second command is then used to display the contents of the matched information types, which includes the SensitiveContents parameter.
+
+The final command displays and formats for easier reading the data that's identified by the first sensitive information type, which in this example, is the credit card details.
+
 ## PARAMETERS
+
+### -DiscoveryInfoTypes
+Note: This parameter is supported only with the preview version of the Azure Information Protection unified labeling client.
+
+Specify the sensitive information types to be discovered when you use the *WhatIf* parameter.
+
+If you want to search for specific sensitive information types, specify the **Entity id** number for that information type, which you can find listed in [Sensitive information types in Exchange Server](https://docs.microsoft.com/Exchange/policy-and-compliance/data-loss-prevention/sensitive-information-types?view=exchserver-2019). For example, "50842eb7-edc8-4019-85dd-5a5c1f2bb085" is the number to specify for the Credit Card Number sensitive information type.
+
+```yaml
+Type: String[]
+Parameter Sets: WhatIf
+Accepted values: All, "rule_id_1", "rule_id_2"
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Force
 Replaces an existing label when the configured conditions apply.
@@ -289,7 +405,7 @@ Specifies a local path, network path, or SharePoint Server URL to the files for 
 
 Wildcards are not supported and WebDav locations are not supported.
 
-For SharePoint paths: SharePoint Server 2013 and SharePoint Server 2016 are supported.
+For SharePoint paths: SharePoint Server 2019, SharePoint Server 2016, and SharePoint Server 2013 are supported.
 
 Examples include C:\Folder\, C:\Folder\Filename, \\\Server\Folder, http://sharepoint.contoso.com/Shared%20Documents/Folder. Paths can include spaces when you enclose the path value with quotes.
 
@@ -343,8 +459,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -WhatIf
+Note: This parameter is supported only with the preview version of the Azure Information Protection unified labeling client.
+
+Shows what would happen if the cmdlet runs, and is the equivalent of the discovery mode for the scanner. Changes will not apply on input or output files.
+
+Use this parameter with *DiscoveryInfoTypes* to look for all sensitive information types, or specific sensitive information types.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: WhatIf
+Aliases:
+
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

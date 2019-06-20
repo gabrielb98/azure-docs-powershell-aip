@@ -43,8 +43,12 @@ Deprecated: Adds new file types to a configured list of file types to scan or ex
 ### [Clear-AIPAuthentication](Clear-AIPAuthentication.md)
 Clears the user settings and RMS templates for the current user.
 
+Not supported by the Azure Information Protection unified labeling client.
+
 ### [Clear-RMSAuthentication](Clear-RMSAuthentication.md)
 Clears credentials for a user who is authenticated to the Azure RMS service.
+
+Not supported by the Azure Information Protection unified labeling client.
 
 ### [Get-AIPFileStatus](Get-AIPFileStatus.md)
 Gets the Azure Information Protection label and protection information for a specified file or files.
@@ -61,23 +65,40 @@ Gets the current status of the service for the Azure Information Protection scan
 ### [Get-RMSFileStatus](Get-RMSFileStatus.md)
 Gets the RMS protection status of a specified file.
 
+Not supported by the Azure Information Protection unified labeling client.
+
 ### [Get-RMSServer](Get-RMSServer.md)
 Gets a list of RMS servers that can issue templates.
+
+Not supported by the Azure Information Protection unified labeling client.
 
 ### [Get-RMSServerAuthentication](Get-RMSServerAuthentication.md)
 Gets the server mode status that is used for authentication to RMS.
 
+Not supported by the Azure Information Protection unified labeling client. 
+
 ### [Get-RMSTemplate](Get-RMSTemplate.md)
 Gets a list of RMS templates.
+
+Not supported by the Azure Information Protection unified labeling client. Instead, use Get-RMSFileStatus.
 
 ### [Install-AIPScanner](Install-AIPScanner.md)
 Installs the Azure Information Protection scanner.
 
+### [New-AIPCustomPermissions](New-AIPCustomPermissions.md)
+Creates an ad-hoc protection policy for custom permissions.
+
+Supported only by the preview version of the Azure Information Protection unified labeling client.
+
 ### [New-RMSProtectionLicense](New-RMSProtectionLicense.md)
 Creates an ad-hoc rights policy for RMS protection.
 
+Not supported by the Azure Information Protection unified labeling client. Instead, use New-AIPCustomPermissions.
+
 ### [Protect-RMSFile](Protect-RMSFile.md)
 Protects a specified file or the files in a specified folder by using RMS.
+
+Not supported by the Azure Information Protection unified labeling client. Instead, use Set-AIPFileLabel.
 
 ### [Remove-AIPScannerRepository](Remove-AIPScannerRepository.md)
 Deprecated: Removes a data repository for the Azure Information Protection scanner. 
@@ -92,7 +113,7 @@ Sets the authentication credentials for the Azure Information Protection client.
 Scans a file to automatically set an Azure Information Protection label for a file, according to conditions that are configured in the policy.
 
 ### [Set-AIPFileLabel](Set-AIPFileLabel.md)
-Sets or removes an Azure Information Protection label for a file, and sets the protection according to the label configuration.
+Sets or removes an Azure Information Protection label for a file, and sets or removes the protection according to the label configuration or custom permissions.
 
 ### [Set-AIPScanner](Set-AIPScanner.md)
 Sets the service account and database for the Azure Information Protection scanner.
@@ -109,6 +130,8 @@ Deprecated: Sets a list of file types to scan or exclude from scanning by the Az
 ### [Set-RMSServerAuthentication](Set-RMSServerAuthentication.md)
 Sets the server mode, which is required for non-interactive sessions.
 
+Not supported by the Azure Information Protection unified labeling client. Instead, use Set-AIPAuthentication.
+
 ### [Start-AIPScan](Start-AIPScan.md)
 Instructs the Azure Information Protection scanner to start a one time scan cycle. 
 
@@ -117,6 +140,8 @@ Uninstalls the Windows Server service for the Azure Information Protection scann
 
 ### [Unprotect-RMSFile](Unprotect-RMSFile.md)
 Unprotects a file that is currently protected by RMS.
+
+Not supported by the Azure Information Protection unified labeling client. Instead, use Set-AIPFileLabel
 
 ### [Update-AIPScanner](Update-AIPScanner.md)
 Updates the database schema for the Azure Information Protection scanner.
