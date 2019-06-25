@@ -22,7 +22,7 @@ You can use the following PowerShell modules with Azure Information Protection:
     
     Support for this older module ends **July 15, 2020**.
     
-    The cmdlets in this module let you administer the protection service (Azure Rights Management) for Azure Information Protection. 
+    The cmdlets in this module let you administer the protection service (Azure Rights Management) for Azure Information Protection.
     
 
 - **AIPService**
