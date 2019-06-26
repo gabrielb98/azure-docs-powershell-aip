@@ -20,7 +20,7 @@ New-AIPCustomPermissions -Users <String[]> -Permissions <Permissions> [-Expirati
 ## DESCRIPTION
 The **New-AIPCustomPermissions** cmdlet creates an ad-hoc protection policy object for custom permissions that you store as a variable and then use to protect a file or files when you run the labeling cmdlet, [Set-AIPFileLabel](./Set-AIPFileLabel.md). If the label that is applied is configured for protection settings, the custom permissions from the ad-hoc protection policy replace the protection settings from the label.
 
-This cmdlet is supported only for the preview version of the Azure Information Protection unified labeling client.
+This cmdlet is supported only for the Azure Information Protection unified labeling client.
 
 ## EXAMPLES
 

@@ -50,7 +50,7 @@ NOTE: When you run this cmdlet with the Azure Information Protection unified lab
 
 - When a file isn't labeled because it was manually labeled, there was no match for the conditions that you specified, or the file had a higher classification, the file is skipped with the single comment of "No label to apply".
 
-- The *WhatIf* parameter is supported (preview version only). You can use the WhatIf mode with *DiscoveryInfoTypes* to find known sensitive information types.
+- The *WhatIf* parameter is supported. You can use the WhatIf mode with *DiscoveryInfoTypes* to find known sensitive information types.
 
 ## EXAMPLES
 
@@ -261,7 +261,7 @@ This command is similar to the previous example in that it also scans all files 
 
 The contents of Datasheet.pdf did not match any configured conditions and this file remains without a label.
 
-### Example 3: Scan a file in WhatIf mode for all known sensitive information types - Azure Information Protection unified labeling client only, preview version
+### Example 3: Scan a file in WhatIf mode for all known sensitive information types - Azure Information Protection unified labeling client only
 
 ```
 PS C:\> Set-AIPFileClassification -Path C:\Projects\Project1.docx -WhatIf -DiscoveryInfoTypes All
@@ -283,7 +283,7 @@ Comment                 :
 
 This command discovers all known information types in Project1.docx file without applying protection or a label.
 
-### Example 4: Scan a file in WhatIf mode for specific sensitive information types - Azure Information Protection unified labeling client only, preview version
+### Example 4: Scan a file in WhatIf mode for specific sensitive information types - Azure Information Protection unified labeling client only
 
 ```
 PS C:\> Set-AIPFileClassification -Path C:\Projects\Project1.docx -WhatIf -DiscoveryInfoTypes "50842eb7-edc8-4019-85dd-5a5c1f2bb085","a44669fe-0d48-453d-a9b1-2cc83f2cba77"
@@ -305,7 +305,7 @@ Comment                 :
 This command discovers the specific information types of "Credit Card Number", and "Social Security Number (SSN)" in Project1.docx file without applying protection or a label.
 
 
-### Example 5: Scan a file in WhatIf mode for specific sensitive information types and display the values found - Azure Information Protection unified labeling client only, preview version
+### Example 5: Scan a file in WhatIf mode for specific sensitive information types and display the values found - Azure Information Protection unified labeling client only
 
 ```
 PS C:\> $x=Set-AIPFileClassification -Path "C:\Projects\Project1.docx" -WhatIf -DiscoveryInfoTypes "50842eb7-edc8-4019-85dd-5a5c1f2bb085","a44669fe-0d48-453d-a9b1-2cc83f2cba77"
@@ -349,7 +349,7 @@ The final command displays and formats for easier reading the data that's identi
 ## PARAMETERS
 
 ### -DiscoveryInfoTypes
-Note: This parameter is supported only with the preview version of the Azure Information Protection unified labeling client.
+Note: This parameter is supported only with the Azure Information Protection unified labeling client.
 
 Specify the sensitive information types to be discovered when you use the *WhatIf* parameter.
 
@@ -460,7 +460,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Note: This parameter is supported only with the preview version of the Azure Information Protection unified labeling client.
+Note: This parameter is supported only with the Azure Information Protection unified labeling client.
 
 Shows what would happen if the cmdlet runs, and is the equivalent of the discovery mode for the scanner. Changes will not apply on input or output files.
 
