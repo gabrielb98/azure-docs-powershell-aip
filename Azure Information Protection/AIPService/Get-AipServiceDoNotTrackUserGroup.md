@@ -18,7 +18,7 @@ Get-AipServiceDoNotTrackUserGroup [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Get-AipServiceDoNotTrackUserGroup cmdlet gets the email address of the currently configured group for the users who must not be tracked by the Azure Information Protection document tracking feature. 
+The **Get-AipServiceDoNotTrackUserGroup** cmdlet gets the email address of the currently configured group for the users who must not be tracked by the Azure Information Protection document tracking feature. 
 
 This configuration might be needed for privacy requirements. For more information, see [Privacy controls for your document tracking site](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-document-tracking#privacy-controls-for-your-document-tracking-site).
 

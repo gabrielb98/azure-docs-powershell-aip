@@ -27,7 +27,7 @@ The **Get-AadrmDocumentLog** cmdlet returns protection information about the tra
 - The protection template ID or specific usage rights that protects the document.
 - Any expiry, offline access, or revocation setting.
 
-For more information about the [Rights Management owner and Rights Management issuer](https://docs.microsoft.com/information-protection/deploy-use/configure-usage-rights#rights-management-issuer-and-rights-management-owner).
+More information about the [Rights Management owner and Rights Management issuer](https://docs.microsoft.com/information-protection/deploy-use/configure-usage-rights#rights-management-issuer-and-rights-management-owner).
 
 You can specify a start time and stop time of entries to include. The output is returned as a list of PowerShell objects in the PowerShell console.
 
