@@ -20,7 +20,7 @@ These PowerShell cmdlets let you administer the Azure Rights Management service 
 
 For more information about when you must use PowerShell cmdlets and to see groupings of cmdlets by administration tasks, see [Administering protection from Azure Information Protection by using PowerShell](/information-protection/deploy-use/administer-powershell).
 
->**Tip**
+>[!TIP]
 >
 >The current version of this module is **2.13.1.0**. To check the version you have installed, run: `(Get-Module aadrm -ListAvailable).Version` If this command or any cmdlet from this module fails to run, first run **Import-Module AADRM**.
 

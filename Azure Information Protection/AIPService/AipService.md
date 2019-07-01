@@ -18,9 +18,9 @@ These PowerShell cmdlets let you administer Azure Information Protection from th
 
 For more information about when you must use PowerShell cmdlets and to see groupings of cmdlets by administration tasks, see [Administering the protection service from Azure Information Protection by using PowerShell](/information-protection/deploy-use/administer-powershell).
 
->**Tip**
+>[!TIP]
 >
-> If you do not see the cmdlet or options that are documented, make sure that you have installed the latest version of the module. The current version of this module is **1.0.0.0**. To check the version you have installed, run: `(Get-Module AIPService -ListAvailable).Version` If this command or any cmdlet from this module fails to run, first run **Import-Module AIPService**.
+> The current version of this module is **1.0.0.0**. To check the version you have installed, run: `(Get-Module AIPService -ListAvailable).Version` If this command or any cmdlet from this module fails to run, first run **Import-Module AIPService**.
 
 The .dll file for this module is AIPService.dll .
 
