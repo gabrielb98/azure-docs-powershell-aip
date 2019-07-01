@@ -37,6 +37,7 @@ To connect to Azure Information Protection, use an account that is one of the fo
 - A global admin for your Office 365 tenant.
 - A global administrator for your Azure AD tenant. However, this account cannot be a Microsoft account (MSA) or from another Azure tenant.
 - A user account from your tenant that has been granted administrative rights to Azure Information Protection by using the [Add-AipServiceRoleBasedAdministrator](./Add-AipServiceRoleBasedAdministrator.md) cmdlet.
+- An Azure AD admin role of Azure Information Protection administrator, Compliance administrator, or Compliance data administrator.
 
 Tip: If you are not prompted for your credentials, and you see an error message such as **Cannot use this feature without credentials**, verify that Internet Explorer is configured to use Windows integrated authentication. If this setting is not enabled, enable it, restart Internet Explorer, and then retry authentication to the Information Protection service.
 
