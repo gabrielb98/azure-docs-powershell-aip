@@ -12,7 +12,7 @@ ms.assetid: 0B91D740-D2BD-4D57-9E21-C582C9BE2CCA
 This page displays help links for the AADRM cmdlets that administer the protection service (Azure Rights Management) for Azure Information Protection.
 
 > [!NOTE]
-> This module is now deprecated and replaced with the **AIPService** module. Support for the AADRM module will end 15th July, 2020. 
+> This module is now deprecated and replaced with the **AIPService** module. Support for the AADRM module will end 15th July, 2020.
 > 
 > If you have this older version of the module installed, [install the AIPService module](/information-protection/deploy-use/install-powershell) before this end of support date. Although the new cmdlets have aliases to the old cmdlets, also update any scripts that reference the AADRM cmdlets. 
 
