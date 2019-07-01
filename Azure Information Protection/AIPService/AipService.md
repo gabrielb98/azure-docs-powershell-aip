@@ -8,7 +8,21 @@ Locale: en-US
 
 # AIPService Module
 ## Description
-This page displays help links for the cmdlets that administer the protection service from Azure Information Protection. These PowerShell cmdlets let you administer Azure Information Protection from the command line. Although this enables automation, it also supports reliable and repeated processes to help reduce administrative overheads. In addition, advanced configurations and some operations require this PowerShell module. For more information about when you must use these PowerShell cmdlets and to see groupings of cmdlets by administration tasks, see Administering the protection service from Azure Information Protection by using PowerShell . > Tip > >If you do not see the cmdlet or options that are documented, make sure that you have installed the latest version of the module . > >The current version is 1.0.0.0 . To check the version you have installed, run: `(Get-Module AIPService -ListAvailable).Version` If this command or any cmdlet from this module fails to run, first run Import-Module AIPService . The .dll file for this module is AIPService.dll .
+
+This page displays help links for the cmdlets that administer the protection service from Azure Information Protection. 
+
+> [!NOTE]
+> This module replaces the older module, **AADRM**. Support for the AADRM module will end 15 July, 2020.
+
+These PowerShell cmdlets let you administer Azure Information Protection from the command line. Although this enables automation, it also supports reliable and repeated processes to help reduce administrative overheads. In addition, advanced configurations and some operations require this PowerShell module.
+
+For more information about when you must use PowerShell cmdlets and to see groupings of cmdlets by administration tasks, see [Administering the protection service from Azure Information Protection by using PowerShell](/information-protection/deploy-use/administer-powershell).
+
+>[!TIP]
+>
+> The current version of this module is **1.0.0.0**. To check the version you have installed, run: `(Get-Module AIPService -ListAvailable).Version` If this command or any cmdlet from this module fails to run, first run **Import-Module AIPService**.
+
+The .dll file for this module is *AIPService.dll*.
 
 ## AIPService Cmdlets
 ### [Add-AipServiceRoleBasedAdministrator](Add-AipServiceRoleBasedAdministrator.md)
