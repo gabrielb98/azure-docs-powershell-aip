@@ -22,7 +22,7 @@ For more information about when you must use PowerShell cmdlets and to see group
 >
 > The current version of this module is **1.0.0.0**. To check the version you have installed, run: `(Get-Module AIPService -ListAvailable).Version` If this command or any cmdlet from this module fails to run, first run **Import-Module AIPService**.
 
-The .dll file for this module is AIPService.dll .
+The .dll file for this module is *AIPService.dll*.
 
 ## AIPService Cmdlets
 ### [Add-AipServiceRoleBasedAdministrator](Add-AipServiceRoleBasedAdministrator.md)
