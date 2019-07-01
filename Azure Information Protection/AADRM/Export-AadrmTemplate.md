@@ -17,6 +17,8 @@ Export-AadrmTemplate -TemplateId <Guid> -Path <String> [-Force] [<CommonParamete
 ```
 
 ## DESCRIPTION
+[!INCLUDE [AADRM is deprecated](../includes/aadrm-deprecated.md)]
+
 The **Export-AadrmTemplate** cmdlet exports all the properties of a Rights Management template to a file. You can then import the template to another Azure Rights Management tenant or you can edit it and import it back to the original tenant. You can use this technique to perform bulk edits of complex properties in templates, such as multilingual names and descriptions.
 
 Although you can configure Rights Management templates in the Azure portal, you must use PowerShell to export and import these templates.

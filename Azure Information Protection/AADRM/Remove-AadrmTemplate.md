@@ -17,6 +17,8 @@ Remove-AadrmTemplate -TemplateId <Guid> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+[!INCLUDE [AADRM is deprecated](../includes/aadrm-deprecated.md)]
+
 The **Remove-AadrmTemplate** cmdlet deletes an Azure Rights Management protection template.
 
 You can delete only custom templates. You can set default templates to an archived state but you cannot delete them.

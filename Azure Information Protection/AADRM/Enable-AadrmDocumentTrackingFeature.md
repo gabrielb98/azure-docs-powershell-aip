@@ -17,6 +17,8 @@ Enable-AadrmDocumentTrackingFeature [-Force] [-WhatIf] [-Confirm] [<CommonParame
 ```
 
 ## DESCRIPTION
+[!INCLUDE [AADRM is deprecated](../includes/aadrm-deprecated.md)]
+
 The **Enable-AadrmDocumentTrackingFeature** cmdlet enables the document tracking feature for Azure Information Protection. This cmdlet enables access to the document tracking site so that users can track or revoke access to documents that they have protected. This setting is organization-wide; you cannot enable document tracking for some users in your organization and not for others.
 
 You must use PowerShell to enable document tracking; you cannot do this configuration by using a management portal.

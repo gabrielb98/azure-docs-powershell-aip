@@ -17,6 +17,8 @@ Get-AadrmSuperUser [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+[!INCLUDE [AADRM is deprecated](../includes/aadrm-deprecated.md)]
+
 The **Get-AadrmSuperUser** cmdlet gets the super users for Azure Rights Management, who can unprotect or protect files for your organization when the super user feature is enabled by using the [Enable-AadrmSuperUserFeature](./Enable-AadrmSuperUserFeature.md) cmdlet.
 
 You must use PowerShell to configure super users; you cannot do this configuration by using a management portal.

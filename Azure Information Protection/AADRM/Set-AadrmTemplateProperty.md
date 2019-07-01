@@ -22,6 +22,8 @@ Set-AadrmTemplateProperty -TemplateId <Guid> [-Names <Hashtable>] [-Descriptions
 ```
 
 ## DESCRIPTION
+[!INCLUDE [AADRM is deprecated](../includes/aadrm-deprecated.md)]
+
 The **Set-AadrmTemplateProperty** cmdlet updates a property or properties of a custom Azure Rights Management template.
 
 You can update most of these properties in the Azure portal.

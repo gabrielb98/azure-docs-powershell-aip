@@ -17,6 +17,8 @@ Set-AadrmSuperUserGroup -GroupEmailAddress <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+[!INCLUDE [AADRM is deprecated](../includes/aadrm-deprecated.md)]
+
 The **Set-AadrmSuperUserGroup** cmdlet specifies a group to use as the super user group for your Azure Rights Management service. Members of this group are then super users, which means they become a Rights Management owner for all content that is protected by your organization. These super users can decrypt this protected content and remove protection from it, even if an expiration date has been set and expired. Typically, this level of access is required for legal eDiscovery and by auditing teams.
 
 You can specify any group that has an email address, but be aware that for performance reasons, group membership is cached. For information about group requirements, see [Preparing users and groups for Azure Information Protection](https://docs.microsoft.com/information-protection/plan-design/prepare).

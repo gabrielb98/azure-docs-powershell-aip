@@ -17,6 +17,8 @@ Get-AadrmConfiguration [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+[!INCLUDE [AADRM is deprecated](../includes/aadrm-deprecated.md)]
+
 The **Get-AadrmConfiguration** cmdlet gets the current Rights Management configuration of your tenant.
 
 You must use PowerShell to see a full list of configuration values for your tenant; you cannot get this configuration by using a management portal.

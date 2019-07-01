@@ -1,2 +1,2 @@
 # azure-docs-powershell-aip
-Thsi repo contains powershell cmdlets ref content for Rights management cmdlets
+This repo contains PowerShell cmdlets ref content for Azure Information Protection

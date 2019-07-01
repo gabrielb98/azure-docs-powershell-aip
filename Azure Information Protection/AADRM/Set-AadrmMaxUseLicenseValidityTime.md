@@ -18,6 +18,8 @@ Set-AadrmMaxUseLicenseValidityTime [-MaxUseLicenseValidityTime] <UInt16> [-Force
 ```
 
 ## DESCRIPTION
+[!INCLUDE [AADRM is deprecated](../includes/aadrm-deprecated.md)]
+
 The **Set-AadrmMaxUseLicenseValidityTime** cmdlet sets the maximum validity time for use licenses that Azure Rights Management grants for your organization when it protects files and email messages. The default value is 30 days.
 
 You must use PowerShell to set this configuration at the organization level; you cannot do this configuration by using a management portal.
