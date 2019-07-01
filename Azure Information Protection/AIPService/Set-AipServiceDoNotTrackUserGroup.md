@@ -18,7 +18,7 @@ Set-AipServiceDoNotTrackUserGroup -GroupEmailAddress <String> [<CommonParameters
 ```
 
 ## DESCRIPTION
-The Set-AipServiceDoNotTrackUserGroup cmdlet sets a group for Azure Information Protection when you use document tracking and you have users who must not be tracked. This configuration might be needed for privacy requirements. For more information, see [Privacy controls for your document tracking site](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-document-tracking#privacy-controls-for-your-document-tracking-site).
+The **Set-AipServiceDoNotTrackUserGroup** cmdlet sets a group for Azure Information Protection when you use document tracking and you have users who must not be tracked. This configuration might be needed for privacy requirements. For more information, see [Privacy controls for your document tracking site](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-document-tracking#privacy-controls-for-your-document-tracking-site).
 
 If this cmdlet has been run before, running it again overwrites the group that was set previously. You can set only one group, but it can contain nested groups.
 
