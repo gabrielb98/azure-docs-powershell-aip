@@ -16,7 +16,7 @@ This page displays help links for the AADRM cmdlets that administer the protecti
 > 
 > If you have this older version of the module installed, [install the AIPService module](/information-protection/deploy-use/install-powershell) before this end of support date. Although the new cmdlets have aliases to the old cmdlets, also update any scripts that reference the AADRM cmdlets. 
 
-These PowerShell cmdlets let you administer the Azure Rights Management service from the command line. Although this enables automation, it also supports reliable and repeated processes to help reduce administrative overheads. In addition, advanced configurations and some operations require this PowerShell module.
+These PowerShell cmdlets let you administer the Azure Rights Management service from the command line. Although this administration method enables automation, it also supports reliable and repeated processes to help reduce administrative overheads. In addition, advanced configurations and some operations require this PowerShell module.
 
 For more information about when you must use PowerShell cmdlets and to see groupings of cmdlets by administration tasks, see [Administering protection from Azure Information Protection by using PowerShell](/information-protection/deploy-use/administer-powershell).
 
