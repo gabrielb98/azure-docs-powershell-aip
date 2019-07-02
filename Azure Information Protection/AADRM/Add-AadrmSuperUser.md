@@ -23,6 +23,8 @@ Add-AadrmSuperUser -ServicePrincipalId <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+[!INCLUDE [AADRM is deprecated](../includes/aadrm-deprecated.md)]
+
 The **Add-AadrmSuperUser** cmdlet adds an individual account to the super user list for your organization. This operation makes the account a Rights Management owner for all content that is protected by your organization. This means that these super users can decrypt this rights-protected content and remove rights-protection from it, even if an expiration date has been set and expired. Typically, this level of access is required for legal eDiscovery and by auditing teams.
 
 However, before a super user can do these operations, the super user feature for Azure Rights Management must be enabled by using the [Enable-AadrmSuperUserFeature](./Enable-AadrmSuperUserFeature.md) cmdlet. By default, the super user feature is not enabled.

@@ -18,6 +18,8 @@ Get-AadrmAdminLog -Path <String> [-FromTime <DateTime>] [-ToTime <DateTime>] [-F
 ```
 
 ## DESCRIPTION
+[!INCLUDE [AADRM is deprecated](../includes/aadrm-deprecated.md)]
+
 The **Get-AadrmAdminLog** cmdlet generates logs for all Rights Management administrative commands. You can specify a start time and stop time of entries to include.
 
 You must use PowerShell to get these admin logs; you cannot do this action by using a management portal.

@@ -17,6 +17,8 @@ Remove-AadrmSuperUser -EmailAddress <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+[!INCLUDE [AADRM is deprecated](../includes/aadrm-deprecated.md)]
+
 The **Remove-AadrmSuperUser** cmdlet removes a user from the list of users who are individually granted super user privileges for your organization.
 
 This cmdlet does not remove a group or a user from that a group that is assigned super user privileges by using the [Set-AadrmSuperUserGroup](./Set-AadrmSuperUserGroup.md) cmdlet.

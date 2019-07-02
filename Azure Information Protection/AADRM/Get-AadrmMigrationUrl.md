@@ -17,6 +17,8 @@ Get-AadrmMigrationUrl [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+Note: This cmdlet is not needed and is no longer supported.
+
 The **Get-AadrmMigrationUrl** cmdlet gets the migration URL for Azure Rights Management.
 
 You must use PowerShell to get this information; you cannot get the migration URL by using a management portal.

@@ -17,6 +17,8 @@ Get-AadrmDocumentTrackingFeature [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+[!INCLUDE [AADRM is deprecated](../includes/aadrm-deprecated.md)]
+
 The **Get-AadrmDocumentTrackingFeature** cmdlet indicates whether the Azure Information Protection document tracking feature is enabled or disabled.
 
 You must use PowerShell to get this information about document tracking; you cannot get this information by using a management portal.
