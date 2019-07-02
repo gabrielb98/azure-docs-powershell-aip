@@ -27,11 +27,11 @@ You can use the following PowerShell modules with Azure Information Protection:
 
 - **AIPService**
     
-    These cmdlets let you administer the protection service (Azure Rights Management) for Azure Information Protection. The module replaces the older module, AADRM.
+    These cmdlets let you administer the protection service (Azure Rights Management) for Azure Information Protection. The AIPService module replaces the older module, AADRM.
 
     For more information about when to use these PowerShell cmdlets and to see groupings of cmdlets by administration tasks, see [Administering protection from Azure Information Protection by using PowerShell](/information-protection/deploy-use/administer-powershell).
     
-    For installation instructions, see [Installing the AIPService PowerShell module](/information-protection/deploy-use/install-powershell).
+    For upgrading and installation instructions, see [Installing the AIPService PowerShell module](/information-protection/deploy-use/install-powershell).
     
     Note: Some cmdlets from the AADRM module were not carried forward to this new module, because they were already deprecated and no longer used.
 
