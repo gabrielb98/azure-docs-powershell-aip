@@ -32,9 +32,11 @@ You can run this cmdlet non-interactively. For instructions, see the following d
 
 NOTE: If you have the Azure Information Protection unified labeling client, there are other differences from the Azure Information Protection client:
 
-- This cmdlets returns label information from your own tenant only and the *LabelingSiteId* parameter is not displayed in the output.
+- This cmdlet returns label information from your own tenant only and the *LabelingSiteId* parameter is not displayed in the output.
 
 - The *Owner* and *RMSIssuedTime* parameters are not supported and are not displayed in the output.
+
+- SharePoint Server paths are not supported.
 
 - The *LabelingMethod* parameter displays the values of **Privileged** or **Standard** instead of **Manual** or **Automatic**:
     
@@ -116,6 +118,8 @@ This command provides the number of files with the "Confidential" label that are
 ## PARAMETERS
 
 ### -Path
+Note: For the Azure Information Protection unified labeling client, SharePoint Server paths are not supported.
+
 Specifies a local path, network path, or SharePoint Server URL to the files for which you want to get the label and protection information. Wildcards are not supported.
 
 For SharePoint paths: SharePoint Server 2019, SharePoint Server 2016, and SharePoint Server 2013 are supported.
