@@ -74,7 +74,7 @@ Disables the super user feature.
 
 
 ### [Disable-AadrmUsageLogFeature](./Disable-AadrmUsageLogFeature.md)
-Disables the usage log for Rights Management.
+Deprecated - do not use: Disables the usage log for Rights Management.
 
 
 ### [Disable-Aadrm](./Disable-Aadrm.md)
@@ -102,7 +102,7 @@ Enables the super user feature for Rights Management.
 
 
 ### [Enable-AadrmUsageLogFeature](./Enable-AadrmUsageLogFeature.md)
-Enables usage logging for Rights Management.
+Deprecated - do not use: Enables usage logging for Rights Management.
 
 
 ### [Enable-Aadrm](./Enable-Aadrm.md)
@@ -114,7 +114,7 @@ Exports the properties of a rights policy template to a file.
 
 
 ### [Get-AadrmAdminLog](./Get-AadrmAdminLog.md)
-Generates logs for all Rights Management  administrative commands.
+Generates logs for all Rights Management administrative commands.
 
 
 ### [Get-AadrmConfiguration](./Get-AadrmConfiguration.md)
@@ -186,19 +186,19 @@ Gets tracking information for protected documents.
 
 
 ### [Get-AadrmUsageLogFeature](./Get-AadrmUsageLogFeature.md)
-Deprecated: Gets the status of legacy usage logging for Rights Management.
+Deprecated - do not use: Gets the status of legacy usage logging for Rights Management.
 
 
 ### [Get-AadrmUsageLogLastCounterValue](./Get-AadrmUsageLogLastCounterValue.md)
-Gets the last counter value for the usage log.
+Deprecated - do not use: Gets the last counter value for the usage log.
 
 
 ### [Get-AadrmUsageLogStorageAccount](./Get-AadrmUsageLogStorageAccount.md)
-Gets the location for usage logs.
+Deprecated - do not use: Gets the location for usage logs.
 
 
 ### [Get-AadrmUsageLog](./Get-AadrmUsageLog.md)
-Downloads Rights Management logs to local storage.
+Deprecated - do not use: Downloads Rights Management logs to local storage.
 
 
 ### [Get-AadrmUserLog](./Get-AadrmUserLog.md)
@@ -262,7 +262,7 @@ Updates a property or properties of a Rights Management template.
 
 
 ### [Set-AadrmUsageLogStorageAccount](./Set-AadrmUsageLogStorageAccount.md)
-Sets the location for Rights Management usage logs.
+Deprecated - do not use: Sets the location for Rights Management usage logs.
 
 
 ### [Use-AadrmKeyVaultKey](./Use-AadrmKeyVaultKey.md)
