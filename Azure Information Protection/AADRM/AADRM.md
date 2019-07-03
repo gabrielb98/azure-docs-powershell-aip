@@ -114,7 +114,7 @@ Exports the properties of a rights policy template to a file.
 
 
 ### [Get-AadrmAdminLog](./Get-AadrmAdminLog.md)
-Generates logs for all Rights Management  administrative commands.
+Generates logs for all Rights Management administrative commands.
 
 
 ### [Get-AadrmConfiguration](./Get-AadrmConfiguration.md)
@@ -190,15 +190,15 @@ Deprecated: Gets the status of legacy usage logging for Rights Management.
 
 
 ### [Get-AadrmUsageLogLastCounterValue](./Get-AadrmUsageLogLastCounterValue.md)
-Gets the last counter value for the usage log.
+Deprecated: Gets the last counter value for the usage log.
 
 
 ### [Get-AadrmUsageLogStorageAccount](./Get-AadrmUsageLogStorageAccount.md)
-Gets the location for usage logs.
+Deprecated: Gets the location for usage logs.
 
 
 ### [Get-AadrmUsageLog](./Get-AadrmUsageLog.md)
-Downloads Rights Management logs to local storage.
+Deprecated: Downloads Rights Management logs to local storage.
 
 
 ### [Get-AadrmUserLog](./Get-AadrmUserLog.md)
@@ -262,7 +262,7 @@ Updates a property or properties of a Rights Management template.
 
 
 ### [Set-AadrmUsageLogStorageAccount](./Set-AadrmUsageLogStorageAccount.md)
-Sets the location for Rights Management usage logs.
+Deprecated: Sets the location for Rights Management usage logs.
 
 
 ### [Use-AadrmKeyVaultKey](./Use-AadrmKeyVaultKey.md)
