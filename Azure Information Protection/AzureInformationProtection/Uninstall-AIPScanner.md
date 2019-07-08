@@ -17,13 +17,13 @@ Uninstall-AIPScanner [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Uninstall-AIPScanner cmdlet uninstalls the Windows Server service, Azure Information Protection Scanner. This command does not remove the SQL Server database that was created by running the [Install-AIPScanner](./Install-AIPScanner.md) cmdlet when the Azure Information Protection scanner was installed. If this database is no longer required, you must manually remove it. The default database name for the scanner is AIPScanner_\<computer_name> but when you specify a profile name, the database name for the scanner changes to AIPScanner_\<profile>.
+The Uninstall-AIPScanner cmdlet uninstalls the Windows Server service, Azure Information Protection Scanner. This command does not remove the SQL Server database that was created by running the [Install-AIPScanner](./Install-AIPScanner.md) cmdlet when the Azure Information Protection scanner was installed. If this database is no longer required, you must manually remove it. For the Azure Information Protection client (classic), the default database name for the scanner is AIPScanner_\<computer_name> but when you specify a profile name, the database name for the scanner changes to AIPScanner_\<profile>.
 
 This command also does not remove the scanner reports located in %localappdata%\Microsoft\MSIP\Scanner\Reports.
 
 To run this command, you must have local Administrator rights for the Windows Server computer and you must restart the computer after running the command to complete the removal process.
 
-The scanner is not currently supported for the Azure Information Protection unified labeling client.
+The scanner is not currently supported for the Azure Information Protection unified labeling client but you can download and install a preview version for testing. For instructions, see [Installing the Azure Information Protection scanner](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide#installing-the-azure-information-protection-scanner.md) from the admin guide for the unified labeling client.
 
 ## EXAMPLES
 

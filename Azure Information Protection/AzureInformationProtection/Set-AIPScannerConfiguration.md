@@ -21,7 +21,7 @@ The Set-AIPScannerConfiguration cmdlet sets local configuration settings for the
 
 Any changes will be used the next time the scanner runs. If you need the changes to take effect immediately, restart the Azure Information Protection Scanner service on the Windows server computer.
 
-The scanner is not currently supported for the Azure Information Protection unified labeling client.
+The scanner is not currently supported for the Azure Information Protection unified labeling client but you can download and install a preview version for testing. For instructions, see [Installing the Azure Information Protection scanner](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide#installing-the-azure-information-protection-scanner.md) from the admin guide for the unified labeling client.
 
 ## EXAMPLES
 
@@ -43,7 +43,9 @@ Define the level of logging for the scanner reports. When the scanner is first i
 
 Log files are stored in the %localappdata%\Microsoft\MSIP\Scanner\Reports folder. A summary report (.txt) includes the time taken to scan, the number of scanned files, and statistics of how many files were classified and protected. Detailed reports (.csv) has details for each file. The folder stores up to 60 reports for each scanning cycle and all but the latest report is compressed to help minimize the required disk space.
 
-- Debug: Logs every file that was discovered and the resulting action. This level of logging is useful for troubleshooting but slows down the Azure Information Protection scanner. This category includes files that don't meet any of the conditions and files that are skipped because of an unsupported file type. For example, trying to label a file for classification-only when the file type doesn't support this action, and trying to label files that are automatically excluded. For more information, see [File types supported by the Azure Information Protection client](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-file-types) from the admin guide.
+- Debug: Logs every file that was discovered and the resulting action. This level of logging is useful for troubleshooting but slows down the Azure Information Protection scanner. This category includes files that don't meet any of the conditions and files that are skipped because of an unsupported file type. For example, trying to label a file for classification-only when the file type doesn't support this action, and trying to label files that are automatically excluded. For more information, see the following information from the admin guides:
+    - Classic client: [File types supported by the Azure Information Protection client](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-file-types)
+    - Unified labeling client: [File types supported by the Azure Information Protection unified labeling client](https://docs.microsoft.com/information-protection/rms-client/clientv2-admin-guide-file-types)
 - Info: Logs only the files that were successfully labeled by the scanner, or would be labeled when the scanner is in discovery mode.
 - Error: Logs only the files that the scanner attempted to label but could not. For example, a file was in use, or the scanner service did not have write access to the file.
 - Off: Disables reporting, which results in the best performance for the scanner.
@@ -69,7 +71,7 @@ Specifies whether the scanner gets its configuration settings directly from the 
 
 - On: The default setting. The scanner gets its configuration settings directly from the Azure Information Protection service.
 
-- Off: The scanner is prevented from getting its configuration settings directly from the Azure Information Protection service. Instead, the scanner is configured by settings that you import from a file. 
+- Off: Supported by the Azure Information Protection client (classic) only: The scanner is prevented from getting its configuration settings directly from the Azure Information Protection service. Instead, the scanner is configured by settings that you import from a file. 
 
 If the scanner cannot support online configuration, you must still configure the scanner in the Azure portal. Then, export the scanner configuration from the portal to a .json file and import this file by using the [Import-AIPScannerConfiguration](./Import-AIPScannerConfiguration.md) cmdlet.
 

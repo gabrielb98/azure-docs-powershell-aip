@@ -31,7 +31,7 @@ After you have run this command, use the Azure portal to configure the settings 
 
 For step-by-step instructions to install, configure, and use the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](https://docs.microsoft.com/information-protection/deploy-aip-scanner).
 
-The scanner is not currently supported for the Azure Information Protection unified labeling client.
+The scanner is not currently supported for the Azure Information Protection unified labeling client but you can download and install a preview version for testing. For instructions, see [Installing the Azure Information Protection scanner](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide#installing-the-azure-information-protection-scanner.md) from the admin guide for the unified labeling client.
 
 ## EXAMPLES
 
@@ -90,7 +90,6 @@ Specifies the SQL Server instance on which to create a database for the Azure In
 For information about the SQL Server requirements, see [Prerequisites for the Azure Information Protection scanner](https://docs.microsoft.com/information-protection/deploy-aip-scanner#prerequisites-for-the-azure-information-protection-scanner).
 
 For the default instance, specify the server name. For example: SQLSERVER1. 
-
 For a named instance, specify the server name and instance name. For example: SQLSERVER1\AIPSCANNER. 
 
 For SQL Server Express, specify the server name and SQLEXPRESS. For example: SQLSERVER1\SQLEXPRESS.
@@ -109,7 +108,11 @@ Accept wildcard characters: False
 ```
 
 ### -Profile 
-Specifies that the scanner uses a customized database name for its configuration. If this parameter is not specified, the default database name for the scanner is AIPScanner_\<computer_name>. When you specify a profile name, the database name for the scanner changes to AIPScanner_\<profile_name>.  
+Specifies the scanner's database name for its configuration. 
+
+For the Azure Information Protection client (classic), this parameter is optional and if you don't specify it, the default database name for the scanner is AIPScanner_\<computer_name>. When you specify a profile name with this parameter, the database name for the scanner is AIPScanner_\<profile_name>.
+
+For the Azure Information Protection unified labeling client, this parameter isn't optional and you must specify a profile name. The database name for the scanner is AIPScannerUL_\<profile_name>.
 
 If the database doesn't exist when the scanner is installed, the Install-AIPScanner command creates it. 
 
