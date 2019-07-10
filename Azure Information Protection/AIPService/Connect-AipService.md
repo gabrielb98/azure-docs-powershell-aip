@@ -66,19 +66,19 @@ The second command connects to Azure Information Protection by using the credent
 
 ### Example 3: Connect to Azure Information Protection with a token
 ```
-PS C:\>[Reflection.Assembly]::LoadFile("C:\Windows\system32\WindowsPowerShell\v1.0\Modules\AADRM\Microsoft.IdentityModel.Clients.ActiveDirectory.dll")
+PS C:\>[Reflection.Assembly]::LoadFile("C:\Windows\system32\WindowsPowerShell\v1.0\Modules\AIPService\Microsoft.IdentityModel.Clients.ActiveDirectory.dll")
 PS C:\> $clientId='90f610bf-206d-4950-b61d-37fa6fd1b224';
 PS C:\> $resourceId = 'https://api.aadrm.com/';
 PS C:\> $clientId='90f610bf-206d-4950-b61d-37fa6fd1b224';
 PS C:\> $userName='admin@contoso.com';
 PS C:\> $password='Passw0rd!';
-PS C:\> $redirectUri = new-object System.Uri("https://aadrm.com/AADRMAdminPowershell");
+PS C:\> $redirectUri = new-object System.Uri("https://aadrm.com/AIPServiceAdminPowershell");
 PS C:\> $authority = "https://login.microsoftonline.com/common";
 PS C:\> $authContext = New-Object Microsoft.IdentityModel.Clients.ActiveDirectory.AuthenticationContext($authority);
 PS C:\> $userCreds = New-Object Microsoft.IdentityModel.Clients.ActiveDirectory.UserCredential($userName, $password);
 PS C:\> $authenticationResult = $authContext.AcquireToken($resourceId,$clientId,$userCreds);
-PS C:\> Import-module aadrm
-PS C:\> Connect-AipServiceservice -AccessToken $authenticationResult.AccessToken
+PS C:\> Import-Module AIPService
+PS C:\> Connect-AipService -AccessToken $authenticationResult.AccessToken
 ```
 
 This example shows how you could connect to Azure Information Protection by using the *AccessToken* parameter, which lets you authenticate without a prompt. This connection method requires you to specify the client ID '90f610bf-206d-4950-b61d-37fa6fd1b224' and the resource ID 'https://api.aadrm.com/'. After the connection is open, you can then run the administrative commands from this module that you need.
