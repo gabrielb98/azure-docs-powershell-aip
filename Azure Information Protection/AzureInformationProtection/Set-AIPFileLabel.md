@@ -193,7 +193,7 @@ This command sets a label named "Confidential \ All Employees" on all files in t
 
 If the "Confidential \ All Employees" label applies protection, the files that were successfully labeled with this command will also be protected. Because the *EnableTracking* parameter was specified, the protected documents can now be tracked and revoked in the document tracking site by the person who labeled the document, and by global administrators who use the Administrator mode.
 
-### Example 7: Protect a file with custom permissions - preview version of the Azure Information Protection unified labeling client only
+### Example 7: Protect a file with custom permissions - Azure Information Protection unified labeling client only
 
 ```
 PS C:\> $permissions = New-AIPCustomPermissions -Users user1@contoso.com, user2@vanarsdel.com -Permissions Reviewer -ExpirationDate (Get-Date -Month 1 -Day 1 -Year 2020)
@@ -208,7 +208,7 @@ The first command creates an ad-hoc protection policy object that grants users f
 
 The second command protects a single file named Analysis.docx by using the custom permissions in the stored ad-hoc protection policy object.
 
-### Example 8: Apply a label and custom permissions to file - preview version of the Azure Information Protection unified labeling client only
+### Example 8: Apply a label and custom permissions to file - Azure Information Protection unified labeling client only
 
 ```
 PS C:\> $permissions = New-AIPCustomPermissions -Users a@a.com, b@b.com -Permissions Reviewer 
@@ -223,7 +223,7 @@ The first command creates an ad-hoc protection policy object that grants users f
 
 The second command applies a label to a single file named Analysis.docx and also protects the file by using the custom permissions in the stored ad-hoc protection policy object. If the label is configured for protection settings, they are replaced by the custom permissions.
 
-### Example 9: Remove protection from a file - preview version of the Azure Information Protection unified labeling client only
+### Example 9: Remove protection from a file - Azure Information Protection unified labeling client only
 
 ```
 PS C:\> Set-AIPFileLabel C:\Projects\Analysis.docx -RemoveProtection
@@ -235,7 +235,7 @@ C:\Projects\Analysis.docx  Success
 
 This command removes protection from a single file named Analysis.docx. If the file has label, the label will also be removed. 
 
-### Example 10: Remove protection and a label from a file - preview version of the Azure Information Protection unified labeling client only
+### Example 10: Remove protection and a label from a file - Azure Information Protection unified labeling client only
 
 ```
 PS C:\> Set-AIPFileLabel C:\Projects\Analysis.docx -RemoveProtection -RemoveLabel -JustificationMessage 'The previous label no longer applies'
@@ -251,7 +251,7 @@ This command removes the label and custom protection from a single file named An
 ## PARAMETERS
 
 ### -CustomPermissions
-Note: This parameter is supported only with the preview version of the Azure Information Protection unified labeling client.
+Note: This parameter is supported only with the Azure Information Protection unified labeling client.
 
 Specifies the variable name that stores the an ad-hoc protection policy that was created by using the [New-AIPCustomPermissions](./New-AIPCustomPermissions.md) cmdlet. The ad-hoc protection policy is used to protect the file or files with custom permissions.
 
@@ -390,7 +390,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveProtection
-Note: This parameter is supported only with the preview version of the Azure Information Protection unified labeling client.
+Note: This parameter is supported only with the Azure Information Protection unified labeling client.
 
 Removes protection from a file. If the file is labeled, the label is also removed.
 
