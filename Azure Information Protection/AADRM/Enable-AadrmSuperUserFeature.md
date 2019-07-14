@@ -17,6 +17,8 @@ Enable-AadrmSuperUserFeature [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+[!INCLUDE [AADRM is deprecated](../includes/aadrm-deprecated.md)]
+
 The **Enable-AadrmSuperUserFeature** cmdlet enables the super user feature for your organization's Azure Rights Management service. When this feature is enabled, any users that are defined as super users for your organization (individually or by the super user group) can decrypt content that your organization protected, and can remove protection from this content, even if an expiration date has been set and expired. Typically, this level of access is required for legal eDiscovery and by auditing teams. 
 
 You must use PowerShell to configure super users; you cannot do this configuration by using a management portal.

@@ -24,6 +24,8 @@ Enable-AadrmDevicePlatform [-Windows] [-WindowsStore] [-WindowsPhone] [-Mac] [-i
 ```
 
 ## DESCRIPTION
+[!INCLUDE [AADRM is deprecated](../includes/aadrm-deprecated.md)]
+
 The **Enable-AadrmDevicePlatform** cmdlet enables Rights Management support for device platforms. Your organization can support any combination of the following device platforms:
 - Android
 - iOS

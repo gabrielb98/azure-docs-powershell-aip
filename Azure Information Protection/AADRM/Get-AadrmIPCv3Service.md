@@ -17,6 +17,8 @@ Get-AadrmIPCv3Service [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+[!INCLUDE [AADRM is deprecated](../includes/aadrm-deprecated.md)]
+
 The **Get-AadrmIPCv3Service** cmdlets displays the status of the MSIPC v3 platform on mobile devices such as iOS and Android. This platform must be enabled to support Rights Management.
 
 You must use PowerShell to view this configuration; you cannot view this configuration by using a management portal.

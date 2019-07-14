@@ -18,6 +18,8 @@ Import-AadrmTpd [-Force] -TpdFile <String> -ProtectionPassword <SecureString> [-
 ```
 
 ## DESCRIPTION
+[!INCLUDE [AADRM is deprecated](../includes/aadrm-deprecated.md)]
+
 The **Import-AadrmTpd** cmdlet imports an Active Directory Rights Management Services (AD RMS) trusted publishing domain (TPD) over the Internet into your tenant for the Azure Rights Management service so that you can migrate Rights Management from on-premises to the cloud. The TPD contains your private key and RMS templates.
 
 You must use PowerShell to configure your tenant key; you cannot do this configuration by using a management portal.
@@ -50,7 +52,7 @@ PS C:\> Import-AadrmTpd -TpdFile "C:\no_key_tpd.xml" -ProtectionPassword $Passwo
 
 The first command creates a password as a secure string, and then stores the secure string in the $Password variable.
 
-The second command imports a TPD to be used with a key that is stored in Azure Key Vault. Additionaly command changes friendly name of the key to Contoso BYOK key.
+The second command imports a TPD to be used with a key that is stored in Azure Key Vault. Additionally, the command changes the friendly name of the key to "Contoso BYOK key".
 
 Our example uses the key vault name of contoso-byok-kv, the key name of contosorms-byok, and the version number of aaaabbbbcccc111122223333.
 
@@ -148,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -TpdFile
-Specifies the TPD file exported from your AD RMS server to import to your tenant to use for the Azure Rights Management service.
+Specifies the TPD file exported from your AD RMS cluster to import to your tenant to use for the Azure Rights Management service.
 
 ```yaml
 Type: String

@@ -2,24 +2,27 @@
 Module Name: AADRM
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 Download Help Link: N/A
-Help Version: 2.13.0.0
+Help Version: 2.13.1.0
 Locale: en-US
 ms.assetid: 0B91D740-D2BD-4D57-9E21-C582C9BE2CCA
 ---
 
 # AADRM Module
 ## Description
-This topic displays help topics for the cmdlets that administer the Azure Rights Management (Azure RMS) service for Azure Information Protection.
+This page displays help links for the AADRM cmdlets that administer the protection service (Azure Rights Management) for Azure Information Protection.
 
-These PowerShell cmdlets let you administer the Azure Rights Management service from the command line. Although this enables automation, it also supports reliable and repeated processes to help reduce administrative overheads. In addition, advanced configurations and some operations require this PowerShell module.
+> [!NOTE]
+> This module is now deprecated and replaced with the **AIPService** module. Support for the AADRM module ends July 15, 2020.
+> 
+> If you have this older version of the module installed, [install the AIPService module](/information-protection/deploy-use/install-powershell) before this end of support date. Although the new cmdlets have aliases to the old cmdlets, also update any scripts that reference the AADRM cmdlets. 
 
-For more information about when you must use these PowerShell cmdlets and to see groupings of cmdlets by administration tasks, see [Administering the Azure Rights Management service by Using Windows PowerShell](/information-protection/deploy-use/administer-powershell).
+These PowerShell cmdlets let you administer the Azure Rights Management service from the command line. Although this administration method enables automation, it also supports reliable and repeated processes to help reduce administrative overheads. In addition, advanced configurations and some operations require this PowerShell module.
 
->**Tip**
+For more information about when you must use PowerShell cmdlets and to see groupings of cmdlets by administration tasks, see [Administering protection from Azure Information Protection by using PowerShell](/information-protection/deploy-use/administer-powershell).
+
+>[!TIP]
 >
->If you do not see the cmdlet or options that are documented, make sure that you have [installed the latest version of the module](/information-protection/deploy-use/install-powershell).
->
->The current version is **2.13.1.0**. To check the version you have installed, run: `(Get-Module aadrm -ListAvailable).Version` If this command or any cmdlet from this module fails to run, first run **Import-Module AADRM**.
+>The current version of this module is **2.13.1.0**. To check the version you have installed, run: `(Get-Module aadrm -ListAvailable).Version` If this command or any cmdlet from this module fails to run, first run **Import-Module AADRM**.
 
 
 The .dll file for this module is *Microsoft.RightsManagementServices.Online.Admin.PowerShell.dll*.
@@ -71,7 +74,7 @@ Disables the super user feature.
 
 
 ### [Disable-AadrmUsageLogFeature](./Disable-AadrmUsageLogFeature.md)
-Disables the usage log for Rights Management.
+Deprecated - do not use: Disables the usage log for Rights Management.
 
 
 ### [Disable-Aadrm](./Disable-Aadrm.md)
@@ -99,7 +102,7 @@ Enables the super user feature for Rights Management.
 
 
 ### [Enable-AadrmUsageLogFeature](./Enable-AadrmUsageLogFeature.md)
-Enables usage logging for Rights Management.
+Deprecated - do not use: Enables usage logging for Rights Management.
 
 
 ### [Enable-Aadrm](./Enable-Aadrm.md)
@@ -111,7 +114,7 @@ Exports the properties of a rights policy template to a file.
 
 
 ### [Get-AadrmAdminLog](./Get-AadrmAdminLog.md)
-Generates logs for all Rights Management  administrative commands.
+Generates logs for all Rights Management administrative commands.
 
 
 ### [Get-AadrmConfiguration](./Get-AadrmConfiguration.md)
@@ -183,19 +186,19 @@ Gets tracking information for protected documents.
 
 
 ### [Get-AadrmUsageLogFeature](./Get-AadrmUsageLogFeature.md)
-Deprecated: Gets the status of legacy usage logging for Rights Management.
+Deprecated - do not use: Gets the status of legacy usage logging for Rights Management.
 
 
 ### [Get-AadrmUsageLogLastCounterValue](./Get-AadrmUsageLogLastCounterValue.md)
-Gets the last counter value for the usage log.
+Deprecated - do not use: Gets the last counter value for the usage log.
 
 
 ### [Get-AadrmUsageLogStorageAccount](./Get-AadrmUsageLogStorageAccount.md)
-Gets the location for usage logs.
+Deprecated - do not use: Gets the location for usage logs.
 
 
 ### [Get-AadrmUsageLog](./Get-AadrmUsageLog.md)
-Downloads Rights Management logs to local storage.
+Deprecated - do not use: Downloads Rights Management logs to local storage.
 
 
 ### [Get-AadrmUserLog](./Get-AadrmUserLog.md)
@@ -259,7 +262,7 @@ Updates a property or properties of a Rights Management template.
 
 
 ### [Set-AadrmUsageLogStorageAccount](./Set-AadrmUsageLogStorageAccount.md)
-Sets the location for Rights Management usage logs.
+Deprecated - do not use: Sets the location for Rights Management usage logs.
 
 
 ### [Use-AadrmKeyVaultKey](./Use-AadrmKeyVaultKey.md)

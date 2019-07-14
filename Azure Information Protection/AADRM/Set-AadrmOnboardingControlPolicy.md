@@ -18,6 +18,8 @@ Set-AadrmOnboardingControlPolicy [-Force] -UseRmsUserLicense <Boolean> [-Securit
 ```
 
 ## DESCRIPTION
+[!INCLUDE [AADRM is deprecated](../includes/aadrm-deprecated.md)]
+
 The **Set-AadrmOnboardingControlPolicy** cmdlet sets the policy that controls user on-boarding for Azure Rights Management. This cmdlet supports a gradual deployment by controlling which users in your organization can protect content by using Azure Rights Management.
 
 You must use PowerShell to set this configuration; you cannot do this configuration by using a management portal.

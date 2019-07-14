@@ -17,6 +17,8 @@ Set-AadrmMigrationUrl -Domain <String> [-Force] [-WhatIf] [-Confirm] [<CommonPar
 ```
 
 ## DESCRIPTION
+Note: This cmdlet is not needed and is no longer supported.
+
 The **Set-AadrmMigrationUrl** cmdlet sets a migration URL for Azure Rights Management.
 
 You must use PowerShell to set the migration URL; you cannot do this action by using a management portal.

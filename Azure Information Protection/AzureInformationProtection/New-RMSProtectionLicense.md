@@ -128,7 +128,7 @@ The acceptable values for this parameter:
 
 Warning: If you later want to remove this rights policy from a file, you must have the EXTRACT or OWNER right to use the [Unprotect-RMSFile](./Unprotect-RMSFile.md) cmdlet to unprotect a file, or be a Rights Management super user for your organization.
 
-For more information about these rights, see [Configuring usage rights for Azure Rights Management](https://docs.microsoft.com/information-protection/configure-usage-rights) on the Microsoft documentation site.
+For more information about these rights, see [Configuring usage rights for Azure Information Protection](https://docs.microsoft.com/information-protection/configure-usage-rights) on the Microsoft documentation site.
 
 ```yaml
 Type: String[]

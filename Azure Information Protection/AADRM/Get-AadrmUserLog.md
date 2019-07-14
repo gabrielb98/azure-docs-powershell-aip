@@ -18,6 +18,8 @@ Get-AadrmUserLog -Path <String> [-FromDate <DateTime>] [-ToDate <DateTime>] [-Fo
 ```
 
 ## DESCRIPTION
+[!INCLUDE [AADRM is deprecated](../includes/aadrm-deprecated.md)]
+
 The **Get-AadrmUserLog** cmdlet downloads Azure Rights Management user logs to local storage. You must specify either a specific date or a date range to download the log entries.
 
 You must use PowerShell to get these user logs; you cannot do this action by using a management portal.
@@ -37,7 +39,7 @@ For more information about usage logging and a step-by-step example, see [Loggin
 PS C:\>Get-AadrmUserLog -Path 'C:\Logs' -FromDate 12/12/2015 -ToDate 12/15/2015 -NumberOfThreads 10
 ```
 
-This command downloads user logs created between 12/12/2015 and 12/15/2015 (in UTC tme) to the folder C:\Logs. 
+This command downloads user logs created between 12/12/2015 and 12/15/2015 (in UTC time) to the folder C:\Logs. 
 
 The command uses 10 threads to download the logs.
 

@@ -17,6 +17,8 @@ Get-AadrmTrackingLog -UserEmail <String> [-FromTime <DateTime>] [-ToTime <DateTi
 ```
 
 ## DESCRIPTION
+[!INCLUDE [AADRM is deprecated](../includes/aadrm-deprecated.md)]
+
 The **Get-AadrmTrackingLog** cmdlet returns tracking information about protected documents for a specified user who protected documents (the Rights Management issuer) or who accessed protected documents. This cmdlet helps to answer the question "Which protected documents did a specified user track or access?" Information returned includes:
 
 - The document content ID, with the document name if available.
