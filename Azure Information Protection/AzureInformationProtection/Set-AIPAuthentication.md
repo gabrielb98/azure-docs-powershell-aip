@@ -28,11 +28,7 @@ This cmdlet includes a *Token* parameter that you cannot specify the first time 
 
 When the Azure AD access token expires, you must rerun the cmdlet to acquire a new token.
 
-For the Azure Information Protection unified labeling client:
-
-- The general availability version of the Azure Information Protection unified labeling client supports this cmdlet without parameters only, which lets you sign in by using a different user account. This client does not support non-interactive scenarios.
-
-- The preview version of the Azure Information Protection unified labeling client supports a new parameter, *OnBehalfOf*, which accepts a stored variable that contains your specified user name and password. Use this parameter instead of the *Token* parameter.
+The Azure Information Protection unified labeling client supports a new parameter, *OnBehalfOf*, which accepts a stored variable that contains your specified user name and password. Use this parameter instead of the *Token* parameter.
 
 ## EXAMPLES
 
@@ -74,7 +70,7 @@ The token value is a very long string and to conserve space, a complete value is
 
 By running this command with a token, you are not prompted to sign in. 
 
-### Example 5: Set the authentication credentials by using applications that are registered in Azure Active Directory and when prompted, sign in - preview version of the Azure Information Protection unified labeling client only
+### Example 5: Set the authentication credentials by using applications that are registered in Azure Active Directory and when prompted, sign in - Azure Information Protection unified labeling client only
 
 ```
 PS C:\>$pscreds = Get-Credential CONTOSO\admin
@@ -92,8 +88,6 @@ The second command prompts you for your Azure AD credentials that are used to ac
 ## PARAMETERS
 
 ### -WebAppId
-Note: This parameter is not supported with the general availability release of the Azure Information Protection unified labeling client. It is supported with the preview release of this client.
-
 Specifies the application ID of the "Web app / API" application in Azure AD.
 
 ```yaml
@@ -109,8 +103,6 @@ Accept wildcard characters: False
 ```
 
 ### -WebAppKey
-Note: This parameter is not supported with the general availability release of the Azure Information Protection unified labeling client. It is supported with the preview release of this client.
-
 Specifies the secret value generated in the "Web app / API" application in Azure AD.
 
 ```yaml
@@ -126,8 +118,6 @@ Accept wildcard characters: False
 ```
 
 ### -NativeAppId
-Note: This parameter is not supported with the general availability release of the Azure Information Protection unified labeling client. It is supported with the preview release of this client.
-
 Specifies the application ID of the "Native" application in Azure AD.
 
 ```yaml
@@ -143,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -OnBehalfOf
-Note: This parameter is supported only with the preview version of the Azure Information Protection unified labeling client. Use it instead of the *Token* parameter.
+Note: This parameter is supported only with the Azure Information Protection unified labeling client. Use it instead of the *Token* parameter.
 
 To use this parameter, you must run your PowerShell session with the **Run as Administrator** option.
 

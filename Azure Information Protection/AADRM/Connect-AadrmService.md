@@ -62,7 +62,7 @@ The second command connects to the Rights Management service by using the creden
 
 ### Example 3: Connect to Azure RMS with a token
 ```
-PS C:\>[Reflection.Assembly]::LoadFile("C:\Windows\system32\WindowsPowerShell\v1.0\Modules\AADRM\Microsoft.IdentityModel.Clients.ActiveDirectory.dll")
+PS C:\>[Reflection.Assembly]::LoadFile("C:\Program Files\WindowsPowerShell\Modules\AADRM\2.13.1.0\Microsoft.IdentityModel.Clients.ActiveDirectory.dll")
 PS C:\> $clientId='90f610bf-206d-4950-b61d-37fa6fd1b224';
 PS C:\> $resourceId = 'https://api.aadrm.com/';
 PS C:\> $clientId='90f610bf-206d-4950-b61d-37fa6fd1b224';
@@ -81,7 +81,7 @@ This example shows how you could connect to Azure RMS by using the *AccessToken*
 
 After you confirm that these commands result in successfully connecting to the Azure RMS service, you could run them non-interactively, for example, from a script.
 
-Note that for illustration purposes, this example uses the user name of "admin@contoso.com" with the password of "Passw0rd!". In a production environment when you use this connection method non-interactively, use additional methods to secure the password so that it is not stored in clear text. For example, use the **ConvertTo-SecureString** command or use Key Vault to store the password as a secret.
+Note that this example uses the release number of the AADRM module in the path for the first line, so you might need to update this number for your installed version. In addition, this example contains the user name of "admin@contoso.com" with the password of "Passw0rd!", which you will need to change. In a production environment when you use this connection method non-interactively, use additional methods to secure the password so that it is not stored in clear text. For example, use the **ConvertTo-SecureString** command or use Key Vault to store the password as a secret.
 
 ## PARAMETERS
 
