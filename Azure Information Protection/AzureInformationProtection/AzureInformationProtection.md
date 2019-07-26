@@ -50,6 +50,11 @@ Clears credentials for a user who is authenticated to the Azure RMS service.
 
 Not supported by the Azure Information Protection unified labeling client.
 
+### [Export-AIPLogs](Export-AIPLogs.md)
+Gathers and exports log files to a compressed file.
+
+Supported only by the Azure Information Protection unified labeling client.
+
 ### [Get-AIPFileStatus](Get-AIPFileStatus.md)
 Gets the Azure Information Protection label and protection information for a specified file or files.
 
@@ -88,7 +93,7 @@ Installs the Azure Information Protection scanner.
 ### [New-AIPCustomPermissions](New-AIPCustomPermissions.md)
 Creates an ad-hoc protection policy for custom permissions.
 
-Supported only by the preview version of the Azure Information Protection unified labeling client.
+Supported only by the Azure Information Protection unified labeling client.
 
 ### [New-RMSProtectionLicense](New-RMSProtectionLicense.md)
 Creates an ad-hoc rights policy for RMS protection.
