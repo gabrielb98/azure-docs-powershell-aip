@@ -96,7 +96,7 @@ Creates an ad-hoc protection policy for custom permissions.
 Supported only by the Azure Information Protection unified labeling client.
 
 ### [New-RMSProtectionLicense](New-RMSProtectionLicense.md)
-Creates an ad-hoc rights policy for RMS protection.
+Creates an ad-hoc protection policy for RMS protection.
 
 Not supported by the Azure Information Protection unified labeling client. Instead, use New-AIPCustomPermissions.
 
