@@ -23,7 +23,7 @@ This command also does not remove the scanner reports located in %localappdata%\
 
 To run this command, you must have local Administrator rights for the Windows Server computer and you must restart the computer after running the command to complete the removal process.
 
-The scanner is not currently supported for the Azure Information Protection unified labeling client.
+The scanner is supported only for the preview version of the Azure Information Protection unified labeling client.
 
 ## EXAMPLES
 
