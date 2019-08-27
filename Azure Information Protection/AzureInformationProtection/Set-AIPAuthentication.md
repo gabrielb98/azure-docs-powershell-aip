@@ -28,7 +28,9 @@ This cmdlet includes a *Token* parameter that you cannot specify the first time 
 
 When the Azure AD access token expires, you must rerun the cmdlet to acquire a new token.
 
-The Azure Information Protection unified labeling client supports a new parameter, *OnBehalfOf*, which accepts a stored variable that contains your specified user name and password. Use this parameter instead of the *Token* parameter.
+The Azure Information Protection unified labeling client supports a new parameter, *OnBehalfOf*, which accepts a stored variable that contains your specified user name and password. Use this parameter instead of the *Token* parameter. In addition, for the preview version of the unified labeling client:
+- There is a new app registration procedure. For details, see [To create and configure the Azure AD applications for Set-AIPAuthentication - preview client](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-powershell#to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication---preview-client).
+- The parameters for this cmdlet have changed. New syntax: `Set-AIPAuthentication [-AppId <Guid>] [-AppSecret <String>] [-TenantId <String>] [-OnBehalfOf <PSCredential>] [<CommonParameters>]`
 
 ## EXAMPLES
 
@@ -84,6 +86,19 @@ The first command creates a **PSCredential** object and stores the specified Win
 
 The second command prompts you for your Azure AD credentials that are used to acquire an access token. This token is then combined with the web application details so that the token becomes valid for 1 year, 2 years, or never expires, according to your configuration of the web app / API in Azure AD.
 
+### Example 6: Set the authentication credentials by using an application that is registered in Azure Active Directory and when prompted, sign in - preview version of the Azure Information Protection unified labeling client only
+
+```
+PS C:\>$pscreds = Get-Credential CONTOSO\admin
+PS C:\> Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -OnBehalfOf $pscreds
+Acquired application access token on behalf of CONTOSO\admin.
+```
+
+Run the commands in this PowerShell session with the **Run as Administrator** option, which is required for the *OnBehalfOf* parameter.
+
+The first command creates a **PSCredential** object and stores the specified Windows user name and password in the **$pscreds** variable. When you run this command, you are prompted for the password for the user name that you specified.
+
+The second command prompts you for your Azure AD credentials that are used to acquire an access token. This token is then combined with the application so that the token becomes valid for 1 year, 2 years, or never expires, according to your configuration of the registered app in Azure AD.
 
 ## PARAMETERS
 
@@ -171,6 +186,62 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+
+### -AppId
+Note: This parameter is supported only for the preview version of the Azure Information Protection unified labeling client.
+
+Specifies the "Application (client) ID" for app registered in Azure AD.
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AppSecret
+Note: This parameter is supported only for the preview version of the Azure Information Protection unified labeling client.
+
+Specifies the client secret value generated at the time your app was registered in Azure AD.
+
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TenantId
+Note: This parameter is supported only for the preview version of the Azure Information Protection unified labeling client.
+
+Specifies the tenant GUID that contains your registered app in Azure AD.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters ](https://go.microsoft.com/fwlink/?LinkID=113216).
