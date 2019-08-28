@@ -82,6 +82,8 @@ Accept wildcard characters: False
 ```
 
 ### -Profile 
+Note: For the preview version of the unified labeling client, this parameter is required.
+
 Specifies that the scanner uses a named database name for its configuration. If this parameter is not specified for the scanner from the classic client, the default database name for the scanner is AIPScanner_\<computer_name>. When you specify a profile name, this database name changes to AIPScanner_\<profile_name>.
 
 For the scanner from the unified labeling client, which must be installed with a profile name, the database name created is AIPScannerUL_\<profile_name>.
