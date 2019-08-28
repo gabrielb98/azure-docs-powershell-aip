@@ -42,7 +42,7 @@ Acquired access token
 
 This command prompts you for your Azure AD credentials that are used to acquire an access token that is valid for 90 days or until your password expires.
 
-### Example 2: Set the authentication credentials by using applications that are registered in Azure Active Directory and when prompted, sign in - Azure Information Protection client only
+### Example 2: Set the authentication credentials by using applications that are registered in Azure Active Directory and when prompted, sign in - Azure Information Protection client (classic) only
 ```
 PS C:\> Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "+LBkMvddz?WrlNCK5v0e6_=meM59sSAn" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f"
 Acquired application access token on behalf of the user
@@ -50,7 +50,7 @@ Acquired application access token on behalf of the user
 
 This command prompts you for your Azure AD credentials that are used to acquire an access token. This token is then combined with the web application details so that the token becomes valid for 1 year, 2 years, or never expires, according to your configuration of the web app /API in Azure AD. 
 
-### Example 3: Step 1 of 2 to set the authentication credentials for a service account that can't interactively sign in - Azure Information Protection client only
+### Example 3: Step 1 of 2 to set the authentication credentials for a service account that can't interactively sign in - Azure Information Protection client (classic) only
 ```
 PS C:\> (Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "+LBkMvddz?WrlNCK5v0e6_=meM59sSAn" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f").token | clip
 Acquired application access token on behalf of the user
@@ -60,7 +60,7 @@ This command prompts you for your Azure AD credentials that are used to acquire 
 
 The access token is copied to the clipboard so that you can run this cmdlet again in a new PowerShell session that runs in the security context of a service account. In this new PowerShell session, you can now run this cmdlet with the *Token* parameter by pasting the value from the clipboard.
 
-### Example 4: Step 2 of 2 to set the authentication credentials for a service account that can't interactively sign in - Azure Information Protection client only
+### Example 4: Step 2 of 2 to set the authentication credentials for a service account that can't interactively sign in - Azure Information Protection client (classic) only
 ```
 PS C:\> Set-AIPAuthentication -webAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "+LBkMvddz?WrlNCK5v0e6_=meM59sSAn" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f" -Token AwAAAAEAAACDAWh0dHBzOi8vbG9naW4u...
 Acquired application access token on behalf of the user
@@ -72,7 +72,7 @@ The token value is a very long string and to conserve space, a complete value is
 
 By running this command with a token, you are not prompted to sign in. 
 
-### Example 5: Set the authentication credentials by using applications that are registered in Azure Active Directory and when prompted, sign in - Azure Information Protection unified labeling client only
+### Example 5: Set the authentication credentials by using applications that are registered in Azure Active Directory and when prompted, sign in - Azure Information Protection unified labeling client only (GA version)
 
 ```
 PS C:\>$pscreds = Get-Credential CONTOSO\admin
@@ -98,7 +98,7 @@ Run the commands in this PowerShell session with the **Run as Administrator** op
 
 The first command creates a **PSCredential** object and stores the specified Windows user name and password in the **$pscreds** variable. When you run this command, you are prompted for the password for the user name that you specified.
 
-The second command prompts you for your Azure AD credentials that are used to acquire an access token. This token is then combined with the application so that the token becomes valid for 1 year, 2 years, or never expires, according to your configuration of the registered app in Azure AD.
+The second command acquires an access token that is combined with the application so that the token becomes valid for 1 year, 2 years, or never expires, according to your configuration of the registered app in Azure AD.
 
 ## PARAMETERS
 
