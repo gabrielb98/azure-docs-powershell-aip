@@ -18,11 +18,17 @@ Clear-AIPAuthentication [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Clear-AIPAuthentication** cmdlet resets the user settings for the Azure Rights Management service. For a list of files and registry entries that are deleted, see [More information about the Reset Settings option](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide#more-information-about-the-reset-settings-option) in the admin guide.
+The **Clear-AIPAuthentication** cmdlet resets the user settings for the Azure Rights Management service. For a list of files and registry entries that are deleted, see the following sections from the admin guides:
 
-In addition, all Rights Management templates from the %LocalAppData%\Microsoft\MSIPC\msip folder are deleted for the current user. Rights Management templates are not deleted from the %LocalAppData\Microsoft\MSIPC folder that Office uses.
+- Classic client: [More information about the Reset Settings option](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide#more-information-about-the-reset-settings-option)
 
-This cmdlet is not supported for the Azure Information Protection unified labeling client.
+- Unified labeling client: [More information about the Reset Settings option](https://docs.microsoft.com/information-protection/rms-client/clientv2-admin-guide#more-information-about-the-reset-settings-option)
+    
+    Files in %LocalAppData%\Microsoft\MSIP\AppDetails are not deleted if you authenticate by using a token from Azure AD when you run Set-AIPAuthentication.
+
+In addition, for both clients, all Rights Management templates from the %LocalAppData%\Microsoft\MSIPC\msip folder are deleted for the current user. 
+
+Rights Management templates are not deleted from the %LocalAppData\Microsoft\MSIPC folder that Office uses.
 
 ## EXAMPLES
 
@@ -36,7 +42,7 @@ This command is functionally the equivalent of selecting the **Reset Settings** 
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
