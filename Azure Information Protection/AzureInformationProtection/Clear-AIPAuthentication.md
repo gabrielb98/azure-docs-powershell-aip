@@ -24,7 +24,7 @@ The **Clear-AIPAuthentication** cmdlet resets the user settings for the Azure Ri
 
 - Unified labeling client: [More information about the Reset Settings option](https://docs.microsoft.com/information-protection/rms-client/clientv2-admin-guide#more-information-about-the-reset-settings-option)
     
-    Files in %LocalAppData%\Microsoft\MSIP\AppDetails are not deleted if you authenticate by using a token from Azure AD when you run Set-AIPAuthentication.
+    For the unified labeling client, files in %LocalAppData%\Microsoft\MSIP\AppDetails are not deleted if you authenticate by using a token from Azure AD when you run Set-AIPAuthentication.
 
 In addition, for both clients, all Rights Management templates from the %LocalAppData%\Microsoft\MSIPC\msip folder are deleted for the current user. 
 
