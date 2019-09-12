@@ -3,6 +3,7 @@ external help file: AIP.dll-Help.xml
 Module Name: AzureInformationProtection
 online version: https://go.microsoft.com/fwlink/?linkid=2004363
 schema: 2.0.0
+author: cabailey
 ---
 
 # Get-AIPScannerStatus
