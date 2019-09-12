@@ -24,7 +24,6 @@ The Get-AIPScannerStatus returns the current status of the scanner service for A
 - Scanning: The service is running and currently scanning files.
 - Error: The scanner service is running but it has encountered an error that prevents it from scanning files. For example, the service cannot access the database for the scanner configuration.
 
-The scanner is not currently supported for the Azure Information Protection unified labeling client but you can download and install a preview version for testing. For instructions, see [Installing the Azure Information Protection scanner](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide#installing-the-azure-information-protection-scanner.md) from the admin guide for the unified labeling client.
 
 ## EXAMPLES
 

@@ -27,7 +27,7 @@ Run this cmdlet with an account that has the database-level role of db_owner for
 
 If you are upgrading from versions before 1.48.204.0, after the upgrade, the scanner changes how it gets its configuration settings. Instead of using PowerShell to configure the scanner locally, the scanner is now configured from the Azure Information Protection service, by using the Azure portal.
 
-The scanner is not currently supported for the Azure Information Protection unified labeling client but you can download and install a preview version for testing. For instructions, see [Installing the Azure Information Protection scanner](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide#installing-the-azure-information-protection-scanner.md) from the admin guide for the unified labeling client.
+If you have the preview version of the Azure Information Protection unified labeling client, this version includes a preview version of the scanner that you can install for testing. For more information, see [Installing the Azure Information Protection scanner](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide#installing-the-azure-information-protection-scanner.md) from the admin guide for the unified labeling client.
 
 ## EXAMPLES
 
@@ -46,6 +46,8 @@ For reference purposes, a backup of your old configuration is stored in %localap
 ## PARAMETERS
 
 ### -Profile 
+Note: This parameter is required for the scanner from the unified labeling client.
+
 Specifies the scanner profile name that contains the scanner configuration from the Azure Information Protection service. The scanner configuration database is updated to reflect the profile name that you specify. If you do not specify this parameter for the Azure Information Protection client (classic), the computer name is used as the profile name. 
 
 ```yaml 

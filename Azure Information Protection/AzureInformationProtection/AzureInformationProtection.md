@@ -13,12 +13,12 @@ The following list contains links to the help for the Microsoft Azure Informatio
 
 - **For the Azure Information Protection client**: The cmdlets let you protect and unprotect files, label files, and get information about files that are protected and labeled. These cmdlets are installed with the [Azure Information Protection client](/information-protection/rms-client/aip-client) and can be used with Azure Information Protection, the protection service (Azure Rights Management) for Azure Information Protection, and Active Directory Rights Management Services (AD RMS).
     
-    The current general availability version of the AzureInformationProtection module for this client is **1.48.204.0**. You might have a later version if you have installed a preview version. For release details, see the [client version release history](/information-protection/rms-client/client-version-release-history).
+    The current general availability version of the AzureInformationProtection module for this client is **1.53.10.0**. You might have a later version if you have installed a preview version. For release details, see the [client version release history](/information-protection/rms-client/client-version-release-history).
      
 
 - **For the Azure Information Protection unified labeling client**: The cmdlets let you label files and get information about files that are labeled. These cmdlets are installed with the [Azure Information Protection unified labeling client](/information-protection/rms-client/aip-clientv2) and can be used with Azure Information Protection only.
     
-    The current general availability version of the AzureInformationProtection module for this client is **2.0.779.0**. You might have a later version if you have installed a preview version. For release details, see the [unified client version release history](/information-protection/rms-client/unifiedlabelingclient-version-release-history). 
+    The current general availability version of the AzureInformationProtection module for this client is **2.2.21.0**. You might have a later version if you have installed a preview version. For release details, see the [unified client version release history](/information-protection/rms-client/unifiedlabelingclient-version-release-history). 
 
 To check the version that you have installed, run the following command: `(Get-Module AzureInformationProtection -ListAvailable).Version`.
 
@@ -49,6 +49,11 @@ Not supported by the Azure Information Protection unified labeling client.
 Clears credentials for a user who is authenticated to the Azure RMS service.
 
 Not supported by the Azure Information Protection unified labeling client.
+
+### [Export-AIPLogs](Export-AIPLogs.md)
+Gathers and exports log files to a compressed file.
+
+Supported only by the Azure Information Protection unified labeling client.
 
 ### [Get-AIPFileStatus](Get-AIPFileStatus.md)
 Gets the Azure Information Protection label and protection information for a specified file or files.
@@ -88,10 +93,10 @@ Installs the Azure Information Protection scanner.
 ### [New-AIPCustomPermissions](New-AIPCustomPermissions.md)
 Creates an ad-hoc protection policy for custom permissions.
 
-Supported only by the preview version of the Azure Information Protection unified labeling client.
+Supported only by the Azure Information Protection unified labeling client.
 
 ### [New-RMSProtectionLicense](New-RMSProtectionLicense.md)
-Creates an ad-hoc rights policy for RMS protection.
+Creates an ad-hoc protection policy for RMS protection.
 
 Not supported by the Azure Information Protection unified labeling client. Instead, use New-AIPCustomPermissions.
 

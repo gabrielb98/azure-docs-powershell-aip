@@ -26,7 +26,7 @@ Note that password-protected files always return the protection status of **Fals
 
 You can run this cmdlet non-interactively. For instructions, see the following documentation in the admin guides:
 
-- Azure Information Protection client: [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection).
+- Azure Information Protection client (classic): [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection).
 
 - Azure Information Protection unified labeling client: [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/clientv2-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection).
 
@@ -36,7 +36,7 @@ NOTE: If you have the Azure Information Protection unified labeling client, ther
 
 - The *Owner* and *RMSIssuedTime* parameters are not supported and are not displayed in the output.
 
-- SharePoint Server paths are not supported.
+- SharePoint Server paths are not supported unless you're using the preview version of this client.
 
 - The *LabelingMethod* parameter displays the values of **Privileged** or **Standard** instead of **Manual** or **Automatic**:
     
@@ -118,7 +118,7 @@ This command provides the number of files with the "Confidential" label that are
 ## PARAMETERS
 
 ### -Path
-Note: For the Azure Information Protection unified labeling client, SharePoint Server paths are not supported.
+Note: For the Azure Information Protection unified labeling client, SharePoint Server paths are not supported unless you're using the preview version of this client.
 
 Specifies a local path, network path, or SharePoint Server URL to the files for which you want to get the label and protection information. Wildcards are not supported.
 
