@@ -23,7 +23,7 @@ With the current version of the scanner, configuration settings are configured i
 
 In addition, if you run [Import-AIPScannerConfiguration](./Import-AIPScannerConfiguration.md), this action automatically configures the scanner to get its configuration offline. As a result, when you run this Get-AIPScannerConfiguration cmdlet after importing settings from a file, **OnlineConfiguration** displays **Off**. 
 
-The scanner is not currently supported for the Azure Information Protection unified labeling client.
+The scanner is supported only for the preview version of the Azure Information Protection unified labeling client.
 
 ## EXAMPLES
 

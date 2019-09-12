@@ -31,33 +31,32 @@ After you have run this command, use the Azure portal to configure the settings 
 
 For step-by-step instructions to install, configure, and use the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](https://docs.microsoft.com/information-protection/deploy-aip-scanner).
 
-The scanner is not currently supported for the Azure Information Protection unified labeling client.
+The scanner is supported only for the preview version of the Azure Information Protection unified labeling client.
 
 ## EXAMPLES
 
-### Example 1: Install the Azure Information Protection Scanner service by using a SQL Server instance and a customized database name
+### Example 1: Install the Azure Information Protection Scanner service by using a SQL Server instance and a profile
 ```
 PS C:\> Install-AIPScanner -SqlServerInstance SQLSERVER1\AIPSCANNER -Profile EU
 ```
 
-This command installs the Azure Information Protection Scanner service by using a SQL Server instance named AIPSCANNER, which runs on the server named SQLSERVER1. In addition, the installation creates a customized database name of AIPScanner_EU.
+This command installs the Azure Information Protection Scanner service by using a SQL Server instance named AIPSCANNER, which runs on the server named SQLSERVER1. In addition, the installation creates a database name of AIPScanner_EU (for the classic client) or AIPScannerUL_\<profile_name> (for the unified labeling client) to store the scanner configuration.
 
-You are prompted to provide the Active Directory account details for the scanner service account. If an existing database named AIPScanner_EU isn't found on the specified SQL Server instance, a new database with this name is created to store the scanner configuration. The command displays the installation progress, where the install log is located, and the creation of the new Windows Application event log named Azure Information Protection Scanner
+You are prompted to provide the Active Directory account details for the scanner service account. If an existing database named AIPScanner_EU (classic client) or AIPScannerUL_EU (unified labeling client) isn't found on the specified SQL Server instance, a new database with this name is created to store the scanner configuration. The command displays the installation progress, where the install log is located, and the creation of the new Windows Application event log named Azure Information Protection Scanner
 
 At the end of the output, you see **The transacted install has completed**.
 
 
-
 ### Example 2: Install the Azure Information Protection Scanner service by using the SQL Server default instance
 ```
-PS C:\> Install-AIPScanner -SqlServerInstance SQLSERVER1
+PS C:\> Install-AIPScanner -SqlServerInstance SQLSERVER1 -Profile EU
 ```
 
 This command installs the Azure Information Protection Scanner service by using the SQL Server default instance that runs on the server named SQLSERVER1. As with the previous example, you are prompted for credentials, and then the command displays the progress, where the install log is located, and the creation of the new Windows Application event log.
 
 ### Example 3: Install the Azure Information Protection Scanner service by using SQL Server Express
 ```
-PS C:\> Install-AIPScanner -SqlServerInstance SQLSERVER1\SQLEXPRESS
+PS C:\> Install-AIPScanner -SqlServerInstance SQLSERVER1\SQLEXPRESS -Profile EU
 ```
 
 This command installs the Azure Information Protection Scanner service by using SQL Server Express that runs on the server named SQLSERVER1. As with the previous examples, you are prompted for credentials, and then the command displays the progress, where the install log is located, and the creation of the new Windows Application event log.
@@ -68,6 +67,7 @@ This command installs the Azure Information Protection Scanner service by using 
 Specifies a **PSCredential** object for the service account to run the Azure Information Protection Scanner service. For the user name, use the following format: Domain\Username. You are prompted for a password. 
 
 To obtain a PSCredential object, use the [Get-Credential](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/get-credential) cmdlet. For more information, type `Get-Help Get-Cmdlet`. 
+
 If you do not specify this parameter, you are prompted for the user name and password.
 
 This account must be an Active Directory account. For additional requirements, see [Prerequisites for the Azure Information Protection scanner](https://docs.microsoft.com/information-protection/deploy-aip-scanner#prerequisites-for-the-azure-information-protection-scanner).
@@ -109,7 +109,9 @@ Accept wildcard characters: False
 ```
 
 ### -Profile 
-Specifies that the scanner uses a customized database name for its configuration. If this parameter is not specified, the default database name for the scanner is AIPScanner_\<computer_name>. When you specify a profile name, the database name for the scanner changes to AIPScanner_\<profile_name>.  
+Note: For the preview version of the unified labeling client, this parameter is required rather than optional, and the database name created is AIPScannerUL_\<profile_name>.
+
+Specifies that the scanner uses a customized database name for its configuration. If this parameter is not specified for the classic client, the default database name for the scanner is AIPScanner_\<computer_name>. When you specify a profile name, the database name for the scanner from the classic client changes to AIPScanner_\<profile_name>. 
 
 If the database doesn't exist when the scanner is installed, the Install-AIPScanner command creates it. 
 

@@ -25,7 +25,7 @@ If you want to change the scanner to use online configuration after you have run
 
 Any changes will be used the next time the scanner runs. If you need the changes to take effect immediately, restart the Azure Information Protection Scanner service on the Windows server computer.
 
-The scanner is not currently supported for the Azure Information Protection unified labeling client.
+This cmdlet is not currently supported for the Azure Information Protection unified labeling client.
 
 ## EXAMPLES
 

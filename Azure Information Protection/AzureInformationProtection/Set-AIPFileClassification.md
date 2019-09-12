@@ -28,7 +28,7 @@ Set-AIPFileClassification [-JustificationMessage <String>] [-Force] [-WhatIf] [-
 ## DESCRIPTION
 The Set-AIPFileClassification cmdlet can automatically apply a label for one or more files when you configure labels for automatic classification. For more information, see the following:
 
-- For the Azure Information Protection client: [How to configure conditions for automatic and recommended classification for Azure Information Protection](https://docs.microsoft.com/information-protection/configure-policy-classification).
+- For the Azure Information Protection client (classic): [How to configure conditions for automatic and recommended classification for Azure Information Protection](https://docs.microsoft.com/information-protection/configure-policy-classification).
 
 - For the Azure Information Protection unified labeling client: [Apply a sensitivity label to content automatically](https://docs.microsoft.com/Office365/SecurityCompliance/apply_sensitivity_label_automatically).
 
@@ -38,15 +38,15 @@ By default, if the file already has a label, the existing label or protection is
 
 For both clients, you can run this cmdlet non-interactively. For instructions, see the following documentation in the admin guides:
 
-- Azure Information Protection client: [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection).
+- Classic client: [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection).
 
-- Azure Information Protection unified labeling client: [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/clientv2-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection).
+- Unified labeling client: [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/clientv2-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection).
 
 NOTE: When you run this cmdlet with the Azure Information Protection unified labeling client, there are differences from the Azure Information Protection client:
 
 - The *Owner* parameter is not supported.
 
-- SharePoint Server paths are not supported.
+- SharePoint Server paths are not supported unless you're using the preview version of this client.
 
 - When a file isn't labeled because it was manually labeled, there was no match for the conditions that you specified, or the file had a higher classification, the file is skipped with the single comment of "No label to apply".
 
@@ -399,7 +399,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-Note: For the Azure Information Protection unified labeling client, SharePoint Server paths are not supported.
+Note: For the Azure Information Protection unified labeling client, SharePoint Server paths are not supported unless you're using the preview version of this client.
 
 Specifies a local path, network path, or SharePoint Server URL to the files for which you want to get the label and protection information.
 

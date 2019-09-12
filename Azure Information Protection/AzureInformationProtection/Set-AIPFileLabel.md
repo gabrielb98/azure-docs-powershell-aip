@@ -45,23 +45,23 @@ Set-AIPFileLabel -CustomPermissions <AIPCustomPermissions> [-Owner <String>] [-P
 ```
 
 ## DESCRIPTION
-For the Azure Information Protection client, the **Set-AIPFileLabel** cmdlet sets or removes an Azure Information Protection label for one or more files. This action can automatically apply or remove protection when labels are configured for protection in the Azure Information Protection policy. When the command runs successfully, any existing label or protection can be replaced.
+For the Azure Information Protection client (classic), the **Set-AIPFileLabel** cmdlet sets or removes an Azure Information Protection label for one or more files. This action can automatically apply or remove protection when labels are configured for protection in the Azure Information Protection policy. When the command runs successfully, any existing label or protection can be replaced.
 
 You cannot create or edit labels by using PowerShell but must do this by using the Azure portal. For instructions, see [Configuring the Azure Information Protection policy](https://docs.microsoft.com/information-protection/configure-policy).
 
-For the Azure Information Protection unified labeling client, the **Set-AIPFileLabel** cmdlet sets or removes an Office 365 sensitivity label for one or more files. This action can automatically apply protection when labels are configured to apply encryption. Additionally, you can use this cmdlet to apply custom permissions when they are created as an ad-hoc protection policy object with the [New-AIPCustomPermissions](New-AIPCustomPermissions.md) cmdlet. When the command runs successfully, any existing label or protection can be replaced. 
+For the Azure Information Protection unified labeling client, the **Set-AIPFileLabel** cmdlet sets or removes a sensitivity label for one or more files. This action can automatically apply protection when labels are configured to apply encryption. Additionally, you can use this cmdlet to apply custom permissions when they are created as an ad-hoc protection policy object with the [New-AIPCustomPermissions](New-AIPCustomPermissions.md) cmdlet. When the command runs successfully, any existing label or protection can be replaced. 
 
 For both clients, you can run this cmdlet non-interactively. For instructions, see the following documentation in the admin guides:
 
-- Azure Information Protection client: [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection).
+- Classic client: [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection).
 
-- Azure Information Protection unified labeling client: [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/clientv2-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection).
+- Unified labeling client: [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/clientv2-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection).
 
 NOTE: When you run this cmdlet with the Azure Information Protection unified labeling client, there are other differences from the Azure Information Protection client:
 
 - The *Owner* parameter is not supported.
 
-- SharePoint Server paths are not supported.
+- SharePoint Server paths are not supported unless you're using the preview version of this client.
 
 - When a file isn't labeled because it was manually labeled, there was no match for the conditions that you specified, or the file had a higher classification, the file is skipped with the single comment of "No label to apply".
 
@@ -333,7 +333,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-Note: For the Azure Information Protection unified labeling client, SharePoint Server paths are not supported.
+Note: For the Azure Information Protection unified labeling client, SharePoint Server paths are not supported unless you're using the preview version of this client.
 
 Specifies a local path, network path, or SharePoint Server URL to the files for which you want to get the label and protection information. 
 
