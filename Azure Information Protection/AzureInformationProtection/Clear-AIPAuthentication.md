@@ -18,7 +18,7 @@ Clear-AIPAuthentication [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Clear-AIPAuthentication** cmdlet resets the user settings for the Azure Rights Management service. For a list of files and registry entries that are deleted, see the following sections from the admin guides:
+The Clear-AIPAuthentication cmdlet resets the user settings for the Azure Rights Management service. For a list of files and registry entries that are deleted, see the following sections from the admin guides:
 
 - Classic client: [More information about the Reset Settings option](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide#more-information-about-the-reset-settings-option)
 
