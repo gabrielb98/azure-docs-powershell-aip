@@ -23,7 +23,7 @@ For more information about how to configure the Azure Information Protection pol
 
 You must run this cmdlet before you run any other cmdlet for the Azure Information Protection scanner.
 
-The command creates a Windows service named Azure Information Protection Scanner. It also creates and configures a database on SQL Server to store configuration and operational information for the scanner. The service that you specify to run the scanner is automatically granted the required rights to read and write to the database that is created. The default database name for the scanner is AIPScanner_\<computer_name>. When you specify a profile name by using the *Profile* parameter, the database name for the scanner changes to AIPScanner_\<profile_name>.
+The command creates a Windows service named Azure Information Protection Scanner. It also creates and configures a database on SQL Server to store configuration and operational information for the scanner. The service that you specify to run the scanner is automatically granted the required rights to read and write to the database that is created.
 
 To run this command, you must have local administrator rights for the Windows Server computer, and Sysadmin rights on the instance of SQL Server that you will use for the scanner.
 
@@ -31,7 +31,7 @@ After you have run this command, use the Azure portal to configure the settings 
 
 For step-by-step instructions to install, configure, and use the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](https://docs.microsoft.com/information-protection/deploy-aip-scanner).
 
-If you have the preview version of the Azure Information Protection unified labeling client, this version includes a preview version of the scanner that you can install for testing. For more information, see [Installing the Azure Information Protection scanner](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide#installing-the-azure-information-protection-scanner.md) from the admin guide for the unified labeling client.
+Note: If you have the preview version of the Azure Information Protection unified labeling client, this version includes a preview version of the scanner that you can install for testing. For more information, see [Installing the Azure Information Protection scanner](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide#installing-the-azure-information-protection-scanner.md) from the admin guide for the unified labeling client.
 
 ## EXAMPLES
 
