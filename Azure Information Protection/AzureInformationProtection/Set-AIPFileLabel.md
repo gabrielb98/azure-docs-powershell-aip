@@ -45,11 +45,11 @@ Set-AIPFileLabel -CustomPermissions <AIPCustomPermissions> [-Owner <String>] [-P
 ```
 
 ## DESCRIPTION
-For the Azure Information Protection client (classic), the **Set-AIPFileLabel** cmdlet sets or removes an Azure Information Protection label for one or more files. This action can automatically apply or remove protection when labels are configured for protection in the Azure Information Protection policy. When the command runs successfully, any existing label or protection can be replaced.
+For the Azure Information Protection client (classic), the Set-AIPFileLabel cmdlet sets or removes an Azure Information Protection label for one or more files. This action can automatically apply or remove protection when labels are configured for protection in the Azure Information Protection policy. When the command runs successfully, any existing label or protection can be replaced.
 
 You cannot create or edit labels by using PowerShell but must do this by using the Azure portal. For instructions, see [Configuring the Azure Information Protection policy](https://docs.microsoft.com/information-protection/configure-policy).
 
-For the Azure Information Protection unified labeling client, the **Set-AIPFileLabel** cmdlet sets or removes a sensitivity label for one or more files. This action can automatically apply protection when labels are configured to apply encryption. Additionally, you can use this cmdlet to apply custom permissions when they are created as an ad-hoc protection policy object with the [New-AIPCustomPermissions](New-AIPCustomPermissions.md) cmdlet. When the command runs successfully, any existing label or protection can be replaced. 
+For the Azure Information Protection unified labeling client, the Set-AIPFileLabel cmdlet sets or removes a sensitivity label for one or more files. This action can automatically apply protection when labels are configured to apply encryption. Additionally, you can use this cmdlet to apply custom permissions when they are created as an ad-hoc protection policy object with the [New-AIPCustomPermissions](New-AIPCustomPermissions.md) cmdlet. When the command runs successfully, any existing label or protection can be replaced. 
 
 For both clients, you can run this cmdlet non-interactively. For instructions, see the following documentation in the admin guides:
 
