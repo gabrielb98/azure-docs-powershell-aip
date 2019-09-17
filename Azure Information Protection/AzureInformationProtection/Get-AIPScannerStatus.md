@@ -3,6 +3,7 @@ external help file: AIP.dll-Help.xml
 Module Name: AzureInformationProtection
 online version: https://go.microsoft.com/fwlink/?linkid=2004363
 schema: 2.0.0
+author: cabailey
 ---
 
 # Get-AIPScannerStatus
@@ -24,7 +25,6 @@ The Get-AIPScannerStatus returns the current status of the scanner service for A
 - Scanning: The service is running and currently scanning files.
 - Error: The scanner service is running but it has encountered an error that prevents it from scanning files. For example, the service cannot access the database for the scanner configuration.
 
-The scanner is not currently supported for the Azure Information Protection unified labeling client.
 
 ## EXAMPLES
 

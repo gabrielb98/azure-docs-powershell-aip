@@ -21,8 +21,6 @@ The Set-AIPScanner cmdlet updates the service account and SQL Server database in
 
 The new configuration takes effects when the Azure Information Protection Scanner service is next started. This cmdlet does not automatically restart this service.
 
-The scanner is not currently supported for the Azure Information Protection unified labeling client.
-
 ## EXAMPLES
 
 ### Example 1: Change the database and profile for the Azure Information Protection scanner
@@ -82,7 +80,11 @@ Accept wildcard characters: False
 ```
 
 ### -Profile 
-Specifies that the scanner uses a customized database name for its configuration. If this parameter is not specified, the default database name for the scanner is AIPScanner_\<computer_name>. When you specify a profile name, the database name for the scanner changes to AIPScanner_\<profile>.
+Note: For the preview version of the scanner from the unified labeling client, this parameter is required.
+
+Specifies that the scanner uses a named database name for its configuration. If this parameter is not specified for the scanner from the classic client, the default database name for the scanner is AIPScanner_\<computer_name>. When you specify a profile name, this database name changes to AIPScanner_\<profile_name>.
+
+For the scanner from the unified labeling client, which must be installed with a profile name, the database name created is AIPScannerUL_\<profile_name>.
 
 If the database doesn't exist when the scanner is installed, the Install-AIIPScanner command creates it. 
 
