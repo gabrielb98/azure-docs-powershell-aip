@@ -9,7 +9,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Gathers and exports log files to a compressed file.
+Gathers and exports Azure Information Protection client and scanner log files to a compressed file.
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ Export-AIPLogs [-FileName] <String> [-OnBehalfOf <PSCredential>] [<CommonParamet
 
 ## DESCRIPTION
 
-The Export-AIPLogs cmdlet gathers all log files from %localappdata%\Microsoft\MSIP\Logs and saves them to a single, compressed file that has a .zip format. This file can then be sent to Microsoft Support if you are requested to send log files to help investigate a reported issue.
+The Export-AIPLogs cmdlet gathers all client and scanner log files from %localappdata%\Microsoft\MSIP\Logs and saves them to a single, compressed file that has a .zip format. This file can then be sent to Microsoft Support if you are requested to send log files to help investigate a reported issue with the Azure Information Protection unified labeling client or scanner from this client.
 
 Use the *OnBehalfOf* parameter if you need to export log files from a service account. For example, an account that has been created to run non-interactively, such as the account for the Azure Information Protection scanner.
 
