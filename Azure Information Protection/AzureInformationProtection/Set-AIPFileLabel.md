@@ -253,7 +253,7 @@ This command removes the label and custom protection from a single file named An
 ### -CustomPermissions
 Note: This parameter is supported only with the Azure Information Protection unified labeling client.
 
-Specifies the variable name that stores the an ad-hoc protection policy that was created by using the [New-AIPCustomPermissions](./New-AIPCustomPermissions.md) cmdlet. The ad-hoc protection policy is used to protect the file or files with custom permissions.
+Specifies the variable name that stores an ad-hoc protection policy, which was created by using the [New-AIPCustomPermissions](./New-AIPCustomPermissions.md) cmdlet. The ad-hoc protection policy is used to protect the file or files with custom permissions.
 
 ```yaml
 Type: AIPCustomPermissions
