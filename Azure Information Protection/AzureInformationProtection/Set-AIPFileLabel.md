@@ -299,7 +299,13 @@ Accept wildcard characters: False
 ### -LabelId
 Specifies the identity (ID) of the label to apply. When a label has sublabels, always specify the ID of just a sublabel and not the parent label. 
 
-The label ID value is displayed in the Azure portal, on the Label blade, when you view or configure the Azure Information Protection policy. For files that have labels applied, you can also run the [Get-AIPFileStatus](./Get-AIPFileStatus.md) cmdlet to identify the label ID (MainLabelId or SubLabelId).
+To find the label ID:
+
+- For the classic client: The label ID value is displayed in the Azure portal, on the Label blade, when you view or configure the Azure Information Protection policy. 
+
+- For the unified labeling client: The label ID value is not displayed in the admin center where you manage your labels. However, you can use the following Office 365 Security & Compliance Center PowerShell command to find this value: `Get-Label | Format-Table -Property DisplayName, Name, Guid`
+
+For files that have labels applied, you can also run the [Get-AIPFileStatus](./Get-AIPFileStatus.md) cmdlet to identify the label ID (MainLabelId or SubLabelId).
 
 
 ```yaml
