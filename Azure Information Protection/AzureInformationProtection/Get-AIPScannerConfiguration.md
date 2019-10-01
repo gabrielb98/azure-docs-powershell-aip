@@ -21,7 +21,7 @@ The Get-AIPScannerConfiguration cmdlet gets the configuration settings for the A
 
 With the current version of the scanner, configuration settings are configured in the Azure portal so the Get-AIPScannerConfiguration cmdlet displays only the settings and values that you can configure with [Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration.md) cmdlet. These settings are whether the scanner gets its configuration online or from a file that you export from the Azure portal, and the report level for the locally created reports.
 
-In addition, if you run [Import-AIPScannerConfiguration](./Import-AIPScannerConfiguration.md) (not supported for the preview version of the scanner from the unified labeling client), this action automatically configures the scanner to get its configuration offline. As a result, when you run this Get-AIPScannerConfiguration cmdlet after importing settings from a file, **OnlineConfiguration** displays **Off**. 
+In addition, if you run [Import-AIPScannerConfiguration](./Import-AIPScannerConfiguration.md), this action automatically configures the scanner to get its configuration offline. As a result, when you run this Get-AIPScannerConfiguration cmdlet after importing settings from a file, **OnlineConfiguration** displays **Off**. 
 
 ## EXAMPLES
 
