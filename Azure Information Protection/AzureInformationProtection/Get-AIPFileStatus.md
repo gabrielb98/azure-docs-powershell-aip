@@ -36,12 +36,10 @@ NOTE: If you have the Azure Information Protection unified labeling client, ther
 
 - The *Owner* and *RMSIssuedTime* parameters are not supported and are not displayed in the output.
 
-- SharePoint Server paths are not supported unless you're using the preview version of this client.
-
 - The *LabelingMethod* parameter displays the values of **Privileged** or **Standard** instead of **Manual** or **Automatic**:
     
     - **Privileged**: A label was applied by a user, either manually or a result of a labeling recommendation, and is the equivalent of Manual for the Azure Information Protection client.
-    - **Standard**: A label was applied automatically, and is the equivalent of Automatic for the Azure Information Protection client.
+    - **Standard**: A label was applied automatically, and is the equivalent of Automatic for the Azure Information Protection client (classic).
 
 ## EXAMPLES
 
@@ -118,7 +116,6 @@ This command provides the number of files with the "Confidential" label that are
 ## PARAMETERS
 
 ### -Path
-Note: For the Azure Information Protection unified labeling client, SharePoint Server paths are not supported unless you're using the preview version of this client.
 
 Specifies a local path, network path, or SharePoint Server URL to the files for which you want to get the label and protection information. Wildcards are not supported.
 
