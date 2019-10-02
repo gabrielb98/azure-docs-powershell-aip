@@ -86,6 +86,7 @@ RMSTemplateId   : e6ee2481-1234-1234-1234-f744eacd53b0
 RMSTemplateName : Contoso - Confidential Finance
 RMSOwner        : John@Contoso.com
 RMSIssuer       : John@Contoso.com
+ContentId       : 4ca757d2-83bf-4ec3-b93b-c7fe9433bf33
 ```
 
 This command provides information about a file that is labeled as "Confidential \ Finance group", which is a label that is configured for your tenant. This file was labeled manually by John and it is also protected by using the Rights Management template, "Contoso - Confidential Finance". 
