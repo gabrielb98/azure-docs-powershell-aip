@@ -16,7 +16,7 @@ Sets the authentication credentials for the Azure Information Protection client.
 ### Classic client
 
 ```
-Set-AIPAuthentication [[-WebAppId] <String>] [[-WebAppKey] <String>] [[-NativeAppId] <String>] [-Token <String>] [-OnBehalfOf <PSCredential>] [<CommonParameters>]
+Set-AIPAuthentication [[-WebAppId] <String>] [[-WebAppKey] <String>] [[-NativeAppId] <String>] [-Token <String>] [<CommonParameters>]
 ```
 
 ### Unified labeling client
@@ -24,7 +24,6 @@ Set-AIPAuthentication [[-WebAppId] <String>] [[-WebAppKey] <String>] [[-NativeAp
 ```
 Set-AIPAuthentication [-AppId <Guid>] [-AppSecret <String>] [-TenantId <String>] [-OnBehalfOf <PSCredential>] [<CommonParameters>]
 ```
-
 
 ## DESCRIPTION
 The Set-AIPAuthentication cmdlet sets credentials by using an access token so that you can sign in as a different user and also use the labeling cmdlets non-interactively. For example, you want to use the Azure Information Protection scanner to continually discover and automatically label and protect files in multiple data stores. Or, you want to run a scheduled PowerShell script that automatically labels and protects files on a file server by using the [Set-AIPFileClassification](./Set-AIPFileClassification.md) or [Set-AIPFileLabel](./Set-AIPFileLabel.md) cmdlets. Or, you have a data loss prevention (DLP) solution that that you want to augment by automatically labeling and protecting files that this solution identifies. 
@@ -41,8 +40,7 @@ The classic client supports a *Token* parameter that you cannot specify the firs
 
 When the Azure AD access token expires, you must rerun the cmdlet to acquire a new token.
 
-The Azure Information Protection unified labeling client supports a new parameter, *OnBehalfOf*, which accepts a stored variable that contains your specified user name and password. Use this parameter instead of the *Token* parameter. In addition:
-- The parameters for this cmdlet have changed. New syntax: `Set-AIPAuthentication [-AppId <Guid>] [-AppSecret <String>] [-TenantId <String>] [-OnBehalfOf <PSCredential>] [<CommonParameters>]`
+The Azure Information Protection unified labeling client supports a new parameter, *OnBehalfOf*, which accepts a stored variable that contains your specified user name and password. Use this parameter instead of the *Token* parameter. 
 
 ## EXAMPLES
 
