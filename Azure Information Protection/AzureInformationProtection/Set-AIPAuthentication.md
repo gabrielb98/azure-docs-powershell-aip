@@ -22,7 +22,7 @@ Set-AIPAuthentication [[-WebAppId] <String>] [[-WebAppKey] <String>] [[-NativeAp
 ### Unified labeling client
 
 ```
-Set-AIPAuthentication [-AppId <Guid>] [-AppSecret <String>] [-TenantId <String>] [-OnBehalfOf <PSCredential>] [<CommonParameters>]
+Set-AIPAuthentication [-AppId <Guid>] [-AppSecret <String>] [-TenantId <String>] [-DelegatedUser <String>] [-OnBehalfOf <PSCredential>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -148,6 +148,23 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+
+### -DelegatedUser
+Note: Applies to the unified labeling client only.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 
 ### -OnBehalfOf
 Note: Applies to the unified labeling client only. Use it instead of the *Token* parameter.
