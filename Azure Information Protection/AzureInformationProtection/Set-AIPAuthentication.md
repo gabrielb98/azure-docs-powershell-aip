@@ -86,7 +86,7 @@ By running this command with a token, you are not prompted to sign in.
 
 ```
 PS C:\>$pscreds = Get-Credential CONTOSO\admin
-PS C:\> Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -OnBehalfOf $pscreds
+PS C:\> Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -DelegatedUser scanner@contoso.com -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -OnBehalfOf $pscreds
 Acquired application access token on behalf of CONTOSO\admin.
 ```
 
@@ -94,7 +94,7 @@ Run the commands in this PowerShell session with the **Run as Administrator** op
 
 The first command creates a **PSCredential** object and stores the specified Windows user name and password in the **$pscreds** variable. When you run this command, you are prompted for the password for the user name that you specified.
 
-The second command acquires an access token that is combined with the application so that the token becomes valid for 1 year, 2 years, or never expires, according to your configuration of the registered app in Azure AD.
+The second command acquires an access token that is combined with the application so that the token becomes valid for 1 year, 2 years, or never expires, according to your configuration of the registered app in Azure AD. The user name of scanner@contoso.com sets the user context to download labels and label policies from your labeling center, such as the Office 365 Security & Compliance Center.
 
 ## PARAMETERS
 
@@ -152,6 +152,10 @@ Accept wildcard characters: False
 
 ### -DelegatedUser
 Note: Applies to the unified labeling client only.
+
+Use this parameter with the *OnBehalfOf* parameter to specify a user account in Azure AD that sets the user context for when you need to label documents non-interactively. 
+
+Make sure that you have a label policy assigned to this account that contains the labels you want to use, and if this account needs to reprotect files or remove protection from files, consider making it a [super user](https://docs.microsoft.com/azure/information-protection/configure-super-users) for Azure Information Protection.
 
 ```yaml
 Type: String
