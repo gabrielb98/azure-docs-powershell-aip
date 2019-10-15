@@ -46,8 +46,6 @@ NOTE: When you run this cmdlet with the Azure Information Protection unified lab
 
 - The *Owner* parameter is not supported.
 
-- SharePoint Server paths are not supported unless you're using the preview version of this client.
-
 - When a file isn't labeled because it was manually labeled, there was no match for the conditions that you specified, or the file had a higher classification, the file is skipped with the single comment of "No label to apply".
 
 - The *WhatIf* parameter is supported. You can use the WhatIf mode with *DiscoveryInfoTypes* to find known sensitive information types.
@@ -399,8 +397,6 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-Note: For the Azure Information Protection unified labeling client, SharePoint Server paths are not supported unless you're using the preview version of this client.
-
 Specifies a local path, network path, or SharePoint Server URL to the files for which you want to get the label and protection information.
 
 Wildcards are not supported and WebDav locations are not supported.

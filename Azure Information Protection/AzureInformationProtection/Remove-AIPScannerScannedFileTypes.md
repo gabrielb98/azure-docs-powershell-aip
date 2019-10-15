@@ -18,5 +18,3 @@ Remove-AIPScannerScannedFileTypes [-Repository <String>] -ScannedFileTypes <Stri
 
 ## DESCRIPTION
 This cmdlet is deprecated for the current version of the Azure Information Protection scanner. Instead, use the [Azure portal to configure the scanner](/information-protection/deploy-aip-scanner).
-
-The scanner is supported only for the preview version of the Azure Information Protection unified labeling client.
