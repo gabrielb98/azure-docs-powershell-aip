@@ -40,7 +40,7 @@ The classic client supports a *Token* parameter that you cannot specify the firs
 
 When the Azure AD access token expires, you must rerun the cmdlet to acquire a new token.
 
-The Azure Information Protection unified labeling client supports a new parameter, *OnBehalfOf*, which accepts a stored variable that contains your specified user name and password. Use this parameter instead of the *Token* parameter. 
+The Azure Information Protection unified labeling client supports the *OnBehalfOf* parameter, which accepts a stored variable that contains your specified Windows user name and password. Use this parameter instead of the *Token* parameter. Use the *DelegatedUser* parameter to specify a user account in Azure Active Directory that is assigned one or more label policies from your labeling management center.
 
 ## EXAMPLES
 
@@ -82,7 +82,7 @@ The token value is a very long string and to conserve space, a complete value is
 
 By running this command with a token, you are not prompted to sign in. 
 
-### Example 5: Set the authentication credentials by using an application that is registered in Azure Active Directory and when prompted, sign in - Azure Information Protection unified labeling client only
+### Example 5: Set the authentication credentials by using an application that is registered in Azure Active Directory - Azure Information Protection unified labeling client only
 
 ```
 PS C:\>$pscreds = Get-Credential CONTOSO\admin
@@ -94,7 +94,7 @@ Run the commands in this PowerShell session with the **Run as Administrator** op
 
 The first command creates a **PSCredential** object and stores the specified Windows user name and password in the **$pscreds** variable. When you run this command, you are prompted for the password for the user name that you specified.
 
-The second command acquires an access token that is combined with the application so that the token becomes valid for 1 year, 2 years, or never expires, according to your configuration of the registered app in Azure AD. The user name of scanner@contoso.com sets the user context to download labels and label policies from your labeling center, such as the Office 365 Security & Compliance Center.
+The second command acquires an access token that is combined with the application so that the token becomes valid for 1 year, 2 years, or never expires, according to your configuration of the registered app in Azure AD. The user name of scanner@contoso.com sets the user context to download labels and label policies from your labeling management center, such as the Office 365 Security & Compliance Center.
 
 ## PARAMETERS
 
@@ -155,7 +155,7 @@ Note: Applies to the unified labeling client only.
 
 Use this parameter with the *OnBehalfOf* parameter to specify a user account in Azure AD that sets the user context for when you need to label documents non-interactively. 
 
-Make sure that you have a label policy assigned to this account that contains the labels you want to use, and if this account needs to reprotect files or remove protection from files, consider making it a [super user](https://docs.microsoft.com/azure/information-protection/configure-super-users) for Azure Information Protection.
+Make sure that you have a label policy assigned to this account that contains the labels you want to use, and if this account needs to reprotect files, remove protection from files, or inspect protected files, consider making it a [super user](https://docs.microsoft.com/azure/information-protection/configure-super-users) for Azure Information Protection.
 
 ```yaml
 Type: String
