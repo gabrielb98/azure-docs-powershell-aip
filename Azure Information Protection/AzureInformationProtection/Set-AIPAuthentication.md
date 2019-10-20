@@ -171,7 +171,7 @@ Accept wildcard characters: False
 
 
 ### -OnBehalfOf
-Note: Applies to the unified labeling client only. Use it instead of the *Token* parameter.
+Note: Applies to the unified labeling client only.
 
 To use this parameter, you must run your PowerShell session with the **Run as Administrator** option.
 
@@ -262,9 +262,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
-
-
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters ](https://go.microsoft.com/fwlink/?LinkID=113216).
