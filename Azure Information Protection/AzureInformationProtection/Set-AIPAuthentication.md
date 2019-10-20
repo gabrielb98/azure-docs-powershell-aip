@@ -153,9 +153,9 @@ Accept wildcard characters: False
 ### -DelegatedUser
 Note: Applies to the unified labeling client only.
 
-Use this parameter with the *OnBehalfOf* parameter to specify a user account in Azure AD that sets the user context for when you need to label documents non-interactively. 
+Use this parameter to specify a user account in Azure AD that sets the user context to download label policies with labels from your labeling management center. 
 
-Make sure that you have a label policy assigned to this account that contains the labels you want to use, and if this account needs to reprotect files, remove protection from files, or inspect protected files, consider making it a [super user](https://docs.microsoft.com/azure/information-protection/configure-super-users) for Azure Information Protection.
+If this account needs to reprotect files, remove protection from files, or inspect protected files, consider making it a [super user](https://docs.microsoft.com/azure/information-protection/configure-super-users) for Azure Information Protection.
 
 ```yaml
 Type: String
