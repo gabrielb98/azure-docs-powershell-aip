@@ -17,17 +17,24 @@ Update-AIPScanner [-Profile <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Update-AIPScanner cmdlet updates the database schema for the Azure Information Protection scanner and if required, the scanner service account is also granted delete permissions for the scanner database.
+The Update-AIPScanner cmdlet updates the database schema for the Azure Information Protection scanner and if required, the scanner service account is also granted delete permissions for the scanner database. Run this cmdlet after upgrading your Azure Information Protection client.
 
-For more information about upgrading the scanner for the Azure Information Protection client (classic), see [Upgrading the Azure Information Protection scanner](https://docs.microsoft.com/azure/information-protection/rms-client/client-admin-guide#upgrading-the-azure-information-protection-scanner) from the admin guide.
+- To run this cmdlet for the Azure Information Protection client (classic):
+    
+    For more information about upgrading the scanner for the Azure Information Protection client (classic), see [Upgrading the Azure Information Protection scanner](https://docs.microsoft.com/azure/information-protection/rms-client/client-admin-guide#upgrading-the-azure-information-protection-scanner) from the admin guide.
+    
+    Run this cmdlet with an account that has the database-level role of db_owner for the configuration database that the scanner is using:
+    - For version 1.41.51.0: This database is named AzInfoProtectionScanner.
+    - For version 1.48.204.0: This database is named AIPScanner_\<profile_name>.
+    
+    If you are upgrading from versions before 1.48.204.0, after the upgrade, the scanner changes how it gets its configuration settings. Instead of using PowerShell to configure the scanner locally, the scanner is now configured from the Azure Information Protection service, by using the Azure portal.
 
-Run this cmdlet with an account that has the database-level role of db_owner for the configuration database that the scanner is using:
-- For version 1.41.51.0: This database is named AzInfoProtectionScanner.
-- For version 1.48.204.0: This database is named AIPScanner_\<profile_name>.
+- To run this cmdlet for the Azure Information Protection unified labeling client:
 
-If you are upgrading from versions before 1.48.204.0, after the upgrade, the scanner changes how it gets its configuration settings. Instead of using PowerShell to configure the scanner locally, the scanner is now configured from the Azure Information Protection service, by using the Azure portal.
-
-Note: If you have the preview version of the Azure Information Protection unified labeling client, this version includes a preview version of the scanner that you can install for testing. For more information, see [Installing the Azure Information Protection scanner](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide#installing-the-azure-information-protection-scanner.md) from the admin guide for the unified labeling client.
+- The current version of this client includes a preview version of the scanner that you can install for testing. For more information, see [Installing the Azure Information Protection scanner](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide#installing-the-azure-information-protection-scanner.md) from the admin guide for the unified labeling client.
+**AIPScannerUL_\<profile_name>**
+    
+    Run this cmdlet with an account that has the database-level role of db_owner for the configuration database that the scanner is using, named AIPScannerUL_\<profile_name>
 
 ## EXAMPLES
 

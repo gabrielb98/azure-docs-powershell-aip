@@ -23,7 +23,7 @@ The Export-AIPLogs cmdlet gathers all client and scanner log files from %localap
 
 Use the *OnBehalfOf* parameter if you need to export log files from a service account. For example, an account that has been created to run non-interactively, such as the account for the Azure Information Protection scanner.
 
-This cmdlet is supported only for the preview version of the Azure Information Protection unified labeling client.
+This cmdlet is supported only for the Azure Information Protection unified labeling client.
 
 ## EXAMPLES
 
