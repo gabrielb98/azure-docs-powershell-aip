@@ -85,9 +85,9 @@ By running this command with a token, you are not prompted to sign in.
 ### Example 5: Set the authentication credentials by using an application that is registered in Azure Active Directory - Azure Information Protection unified labeling client only
 
 ```
-PS C:\>$pscreds = Get-Credential CONTOSO\admin
+PS C:\>$pscreds = Get-Credential CONTOSO\scanner
 PS C:\> Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -DelegatedUser scanner@contoso.com -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -OnBehalfOf $pscreds
-Acquired application access token on behalf of CONTOSO\admin.
+Acquired application access token on behalf of CONTOSO\scanner.
 ```
 
 Run the commands in this PowerShell session with the **Run as Administrator** option, which is required for the *OnBehalfOf* parameter.
@@ -153,9 +153,9 @@ Accept wildcard characters: False
 ### -DelegatedUser
 Note: Applies to the unified labeling client only.
 
-Use this parameter to specify a user account in Azure AD that sets the user context to download label policies with labels from your labeling management center. 
+Use this parameter to specify a user account in Azure AD that sets the user context to download label policies with sensitivity labels from your labeling management center. 
 
-If this account needs to reprotect files, remove protection from files, or inspect protected files, consider making it a [super user](https://docs.microsoft.com/azure/information-protection/configure-super-users) for Azure Information Protection.
+If this account needs to reprotect files, remove protection from files, or inspect protected files, make it a [super user](https://docs.microsoft.com/azure/information-protection/configure-super-users) for Azure Information Protection.
 
 ```yaml
 Type: String
@@ -175,7 +175,7 @@ Note: Applies to the unified labeling client only.
 
 To use this parameter, you must run your PowerShell session with the **Run as Administrator** option.
 
-Specifies the variable that includes the credentials object for the Azure Information Protection unified labeling client to use when the account running the Azure Information Protection scanner or scheduled PowerShell commands cannot be granted the user right assignment to log on locally.
+Specifies the variable that includes the credentials object for the Azure Information Protection unified labeling client to use when the local Windows account running the Azure Information Protection scanner or scheduled PowerShell commands cannot be granted the user right assignment to log on locally.
 
 Use the Get-Credentials cmdlet to create the variable that stores the credentials.
 
