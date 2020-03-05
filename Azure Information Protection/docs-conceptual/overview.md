@@ -2,13 +2,13 @@
 title: Overview of PowerShell for Azure Information Protection| Microsoft Docs
 description: An introduction to the PowerShell modules that you can use with Azure Information Protection.
 services: azure
-author: cabailey
-manager: mbaldwin
+author: mlottner
+manager: rkarlin
 ms.product: information-protection
 ms.service: powershell
 ms.devlang: powershell
 ms.topic: reference
-ms.date: 22/15/2018
+ms.date: 03/04/2020
 ms.author: cabailey
 ---
 

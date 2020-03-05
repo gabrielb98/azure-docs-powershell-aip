@@ -47,6 +47,14 @@ PS C:\>$R2 = New-AipServiceRightsDefinition -DomainName "Contoso.com" -Rights "V
 
 This command creates a rights definition object for the Contoso organization and stores this policy in a variable named R2, which can then be used to create or update a protection template. The command includes the VIEW right for all users in the Contoso organization.
 
+### Example 3: Create a rights definition object for the "Just for me" configuration
+```
+PS C:\>$R3 = New-AipServiceRightsDefinition -EmailAddress "IPC_USER_ID_OWNER" -Rights "OWNER"
+```
+
+This command creates a rights definition object that applies protection such that only the person who applies the protection can open the document or email with no restrictions. This configuration is sometimes referred to as "Just for me" and might be the required outcome so that a user can save a file to any location and be assured that only they can open it. Because only the person who applies the protection can open the content, this configuration is not suitable for content that requires collaboration. 
+
+
 ## PARAMETERS
 
 ### -DomainName
