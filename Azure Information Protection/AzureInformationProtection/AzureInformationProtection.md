@@ -13,12 +13,12 @@ The following list contains links to the help for the Microsoft Azure Informatio
 
 - **For the Azure Information Protection client (classic)**: The cmdlets let you protect and unprotect files, label files, and get information about files that are protected and labeled. These cmdlets are installed with the [Azure Information Protection client](/information-protection/rms-client/aip-client) and can be used with Azure Information Protection, the protection service (Azure Rights Management) for Azure Information Protection, and Active Directory Rights Management Services (AD RMS).
     
-    The current general availability version of the AzureInformationProtection module for this client is **1.54.33.0**. You might have a later version if you have installed a preview version. For release details, see the [client version release history](/information-protection/rms-client/client-version-release-history).
+    The current general availability version of the AzureInformationProtection module for this client is **1.54.59.0**. You might have a later version if you have installed a preview version. For release details, see the [client version release history](/information-protection/rms-client/client-version-release-history).
      
 
 - **For the Azure Information Protection unified labeling client**: The cmdlets let you label files and get information about files that are labeled. These cmdlets are installed with the [Azure Information Protection unified labeling client](/information-protection/rms-client/aip-clientv2) and can be used with Azure Information Protection only.
     
-    The current general availability version of the AzureInformationProtection module for this client is **2.5.33.0**. You might have a later version if you have installed a preview version. For release details, see the [unified client version release history](/information-protection/rms-client/unifiedlabelingclient-version-release-history). 
+    The current general availability version of the AzureInformationProtection module for this client is **2.6.111.0**. You might have a later version if you have installed a preview version. For release details, see the [unified client version release history](/information-protection/rms-client/unifiedlabelingclient-version-release-history). 
 
 To check the version that you have installed, run the following command: `(Get-Module AzureInformationProtection -ListAvailable).Version`.
 
