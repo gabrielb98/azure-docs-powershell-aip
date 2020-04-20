@@ -65,6 +65,15 @@ PS C:\> Install-AIPScanner -SqlServerInstance SQLSERVER1\SQLEXPRESS -Profile EU
 
 This command installs the Azure Information Protection Scanner service by using SQL Server Express that runs on the server named SQLSERVER1. As with the previous examples, you are prompted for credentials, and then the command displays the progress, where the install log is located, and the creation of the new Windows Application event log.
 
+### Example 4: Install the Azure Information Protection Scanner service by using a SQL Server IP, port and profile
+
+```
+PS C:\> Install-AIPScanner -SqlServerInstance 10.0.0.4,1433 -Profile EU
+```
+This command installs the Azure Information Protection Scanner service by using a SQL Server instance, which runs on the server with **IP 10.0.0.4** and SQL service listening on **Port 1433**. In addition, the installation creates a database name of **AIPScanner_EU** (for the classic client) and/or **AIPScannerUL_<profile_name>** (for the unified labeling client) to store the scanner configuration.
+
+During installation, you'll be prompted to provide the Active Directory account details for the scanner service account. If an existing database named **AIPScanner_EU** (classic client) or **AIPScannerUL_EU** (unified labeling client) isn't found on the specified SQL Server instance, a new database with the relevant name  is created to store the scanner configuration. The command displays the installation progress, where the install log is located, and the creation of the new Windows Application event log named Azure Information Protection Scanner. At the end of the output, you'll see when the installation is completed. 
+
 ## PARAMETERS
 
 ### -ServiceUserCredentials
@@ -94,7 +103,7 @@ Specifies the SQL Server instance on which to create a database for the Azure In
 For information about the SQL Server requirements, see [Prerequisites for the Azure Information Protection scanner](https://docs.microsoft.com/information-protection/deploy-aip-scanner#prerequisites-for-the-azure-information-protection-scanner).
 
 For the default instance, specify the server name. For example: SQLSERVER1. 
-For a named instance, specify the server name and instance name. For example: SQLSERVER1\AIPSCANNER. 
+For a named instance, specify the server name and instance name. For example: SQLSERVER1\AIPSCANNER. You can use IP, port to use SQL instance listening on a specific IP and port.
 
 For SQL Server Express, specify the server name and SQLEXPRESS. For example: SQLSERVER1\SQLEXPRESS.
 
