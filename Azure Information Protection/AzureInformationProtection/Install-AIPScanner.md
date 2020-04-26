@@ -13,7 +13,7 @@ Installs the Azure Information Protection scanner.
 ## SYNTAX
 
 ```
-Install-AIPScanner [-ServiceUserCredentials] <PSCredential> [-SqlServerInstance] <String> [-Profile <String>] [<CommonParameters>]
+Install-AIPScanner [-ServiceUserCredentials] <PSCredential> [-SqlServerInstance] <String> [-Profile |Cluster <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -31,7 +31,7 @@ The command creates a Windows service named Azure Information Protection Scanner
 
 To run this command, you must have local administrator rights for the Windows Server computer, and Sysadmin rights on the instance of SQL Server that you will use for the scanner.
 
-After you have run this command, use the Azure portal to configure the settings in the scanner profile and specify the data repositories to scan. Before you run the scanner, you must run the [Set-AIPAuthentication](./Set-AIPAuthentication.md) cmdlet one time to sign in to Azure AD for authentication and authorization. 
+After you have run this command, use the Azure portal to configure the settings in the scanner cluster (profile) and specify the data repositories to scan. Before you run the scanner, you must run the [Set-AIPAuthentication](./Set-AIPAuthentication.md) cmdlet one time to sign in to Azure AD for authentication and authorization. 
 
 For step-by-step instructions to install, configure, and use the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](https://docs.microsoft.com/information-protection/deploy-aip-scanner).
 
@@ -44,7 +44,15 @@ Note: If you have the Azure Information Protection unified labeling client, this
 PS C:\> Install-AIPScanner -SqlServerInstance SQLSERVER1\AIPSCANNER -Profile EU
 ```
 
-This command installs the Azure Information Protection Scanner service by using a SQL Server instance named AIPSCANNER, which runs on the server named SQLSERVER1. In addition, the installation creates a database name of AIPScanner_EU (for the classic client) or AIPScannerUL_\<profile_name> (for the unified labeling client) to store the scanner configuration.
+or
+```
+PS C:\> Install-AIPScanner -SqlServerInstance SQLSERVER1\AIPSCANNER -Cluster EU
+```
+
+This command installs the Azure Information Protection Scanner service by using a SQL Server instance named AIPSCANNER, which runs on the server named SQLSERVER1. In addition, the installation creates a database name of AIPScanner_EU (for the classic client) or AIPScannerUL_\<cluster name (profile name)> (for the unified labeling client) to store the scanner configuration.
+
+> [!NOTE]
+> The cluster parameter is only supported in client version 2.7.0.0 and above.
 
 You are prompted to provide the Active Directory account details for the scanner service account. If an existing database named AIPScanner_EU (classic client) or AIPScannerUL_EU (unified labeling client) isn't found on the specified SQL Server instance, a new database with this name is created to store the scanner configuration. The command displays the installation progress, where the install log is located, and the creation of the new Windows Application event log named Azure Information Protection Scanner
 
@@ -55,15 +63,29 @@ At the end of the output, you see **The transacted install has completed**.
 ```
 PS C:\> Install-AIPScanner -SqlServerInstance SQLSERVER1 -Profile EU
 ```
+or
+```
+PS C:\> Install-AIPScanner -SqlServerInstance SQLSERVER1 -Cluster EU
+```
 
 This command installs the Azure Information Protection Scanner service by using the SQL Server default instance that runs on the server named SQLSERVER1. As with the previous example, you are prompted for credentials, and then the command displays the progress, where the install log is located, and the creation of the new Windows Application event log.
+
+> [!NOTE]
+> The cluster parameter is only supported in client version 2.7.0.0 and above.
 
 ### Example 3: Install the Azure Information Protection Scanner service by using SQL Server Express
 ```
 PS C:\> Install-AIPScanner -SqlServerInstance SQLSERVER1\SQLEXPRESS -Profile EU
 ```
+or
+```
+PS C:\> Install-AIPScanner -SqlServerInstance SQLSERVER1\SQLEXPRESS -Cluster EU
+```
 
 This command installs the Azure Information Protection Scanner service by using SQL Server Express that runs on the server named SQLSERVER1. As with the previous examples, you are prompted for credentials, and then the command displays the progress, where the install log is located, and the creation of the new Windows Application event log.
+
+> [!NOTE]
+> The cluster parameter is only supported in client version 2.7.0.0 and above.
 
 ### Example 4: Install the Azure Information Protection Scanner service by using a SQL Server IP, port and profile
 
@@ -121,7 +143,8 @@ Accept wildcard characters: False
 ```
 
 ### -Profile 
-Note: This parameter is required for the scanner from the unified labeling client.
+> [!NOTE]
+> This parameter is required for the scanner from the unified labeling client. From version 2.7.0.0, we recommend using Cluster switch instead of Profile switch.
 
 Specifies the scanner's database name for its configuration. 
 
@@ -142,6 +165,27 @@ Accept pipeline input: False
 Accept wildcard characters: False 
 ```
 
+### -Cluster
+
+> [!NOTE]
+>  This parameter is required for the scanner from the unified labeling client. From version 2.7.0.0, we recommend using Cluster switch instead of Profile switch.
+
+Specifies the scanner database name for configuration.
+
+For Azure Information Protection client (classic), this parameter is optional and if not specified, the default database name for the scanner is AIPScanner_<computer_name>. When you specify a cluster name with this parameter, the database name for the scanner is AIPScanner_<cluster_name>.
+
+For Azure Information Protection unified labeling client, this parameter is not optional and you must specify a cluster name. The database name for the scanner is AIPScannerUL_<cluster_name>.
+
+If the database doesn't exist when the scanner is installed, the **Install-AIPScanner** command creates it.
+
+```yaml 
+Type: String 
+Parameter Sets: (All) 
+Position: Named 
+Default value: None 
+Accept pipeline input: False 
+Accept wildcard characters: False 
+```
 
 
 ### CommonParameters
