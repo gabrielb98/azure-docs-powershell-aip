@@ -13,7 +13,7 @@ Sets the service account and database for the Azure Information Protection scann
 ## SYNTAX
 
 ```
-Set-AIPScanner [[-SqlServerInstance] <String>] [-ServiceUserCredentials] <PSCredential> [-Profile <String>] [<CommonParameters>]
+Set-AIPScanner [[-SqlServerInstance] <String>] [-ServiceUserCredentials] <PSCredential> [-Profile | -Cluster <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -26,9 +26,16 @@ The new configuration takes effects when the Azure Information Protection Scanne
 ### Example 1: Change the database and profile for the Azure Information Protection scanner
 ```
 PS C:\> Set-AIPScanner -SqlServerInstance SERVER1\AIPSCANNER -Profile EU
+```
+or
+
+```
+PS C:\> Set-AIPScanner -SqlServerInstance SERVER1\AIPSCANNER -Cluster EU
+```
+
 
 Azure Information Protection Scanner service configuration change completed successfully.
-```
+
 
 This command configures the Azure Information Protection scanner to use the SQL Server database instance named AIPSCANNER on the server named SERVER1, using the scanner configuration database named AIPScanner_EU.
 
@@ -80,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -Profile 
-Note: For the scanner from the unified labeling client, this parameter is required.
+Note: For the scanner from the unified labeling client, this parameter is required. From version 2.7.0.0, we recommend using Cluster switch instead of Profile switch.
 
 Specifies that the scanner uses a named database name for its configuration. If this parameter is not specified for the scanner from the classic client, the default database name for the scanner is AIPScanner_\<computer_name>. When you specify a profile name, this database name changes to AIPScanner_\<profile_name>.
 
@@ -98,7 +105,27 @@ Default value: None
 Accept pipeline input: False 
 Accept wildcard characters: False
 ```
+### -Cluster
 
+> [!NOTE]
+>  This parameter is required for the scanner from the unified labeling client. From version 2.7.0.0, we recommend using Cluster switch instead of Profile switch.
+
+Specifies the scanner database name for configuration.
+
+For Azure Information Protection client (classic), this parameter is optional and if not specified, the default database name for the scanner is AIPScanner_<computer_name>. When you specify a cluster name with this parameter, the database name for the scanner is AIPScanner_<cluster_name>.
+
+For Azure Information Protection unified labeling client, this parameter is not optional and you must specify a cluster name. The database name for the scanner is AIPScannerUL_<cluster_name>.
+
+If the database doesn't exist when the scanner is installed, the **Install-AIPScanner** command creates it.
+
+```yaml 
+Type: String 
+Parameter Sets: (All) 
+Position: Named 
+Default value: None 
+Accept pipeline input: False 
+Accept wildcard characters: False 
+```
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
