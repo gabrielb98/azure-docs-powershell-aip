@@ -17,9 +17,9 @@ Import-AIPScannerConfiguration -FileName <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Import-AIPScannerConfiguration cmdlet imports local configuration settings for the Azure Information Protection scanner, and automatically configures the scanner to use offline configuration. Use this cmdlet after you have configured a profile for the scanner in the Azure portal, and exported the settings to a file because the scanner can't connect to the Azure Information Protection service. For example, the computer running the scanner doesn't have Internet connectivity.
+The Import-AIPScannerConfiguration cmdlet imports local configuration settings for the Azure Information Protection scanner, and automatically configures the scanner to use offline configuration. Use this cmdlet after you have configured a cluster (profile) and content scan job for the scanner in the Azure portal, and exported the settings to a file because the scanner can't connect to the Azure Information Protection service. For example, the computer running the scanner doesn't have Internet connectivity.
 
-If you need to make configuration changes to the scanner after you have run this cmdlet, make those changes in the Azure portal, export the profile again, and rerun this cmdlet.
+If you need to make configuration changes to the scanner after you have run this cmdlet, make those changes in the Azure portal, export the content scan job again, and rerun this cmdlet.
 
 If you want to change the scanner to use online configuration after you have run this cmdlet, use the [Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration.md) and set the *OnlineConfiguration* parameter to **On**.
 
@@ -40,7 +40,7 @@ The scanner is configured to prevent getting its configuration directly from the
 ## PARAMETERS
 
 ### -FileName
-Specifies a file that contains scanner configuration settings. To create this file, export your scanner profile from the Azure portal.
+Specifies a file that contains scanner configuration settings. To create this file, export your content scan job from the Azure portal.
 
 The file is used to do a one-time import of configuration settings into the scanner configuration database.
 
