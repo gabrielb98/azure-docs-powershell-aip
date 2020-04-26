@@ -41,10 +41,7 @@ The Update-AIPScanner cmdlet updates the database schema for the Azure Informati
 ```
 PS C:\> Update-AIPScanner –profile USWEST
 ```
-or
-```
-PS C:\> Update-AIPScanner -Cluster USWEST
-```
+
 This command updates the database schema for the Azure Information Protection scanner, and sets the cluster (profile) name to USWEST rather than use the default name of the computer. You are prompted to continue and if you confirm, the scanner then gets is configuration from the USWEST scanner cluster (profile) that you configure by using the Azure portal.
 
 The Azure Information Protection scanner is updated successfully, the scanner database is renamed to AIPScanner_USWEST, and the scanner now gets its configuration from the Azure Information Protection service. 
