@@ -27,11 +27,6 @@ The new configuration takes effects when the Azure Information Protection Scanne
 ```
 PS C:\> Set-AIPScanner -SqlServerInstance SERVER1\AIPSCANNER -Profile EU
 ```
-or
-
-```
-PS C:\> Set-AIPScanner -SqlServerInstance SERVER1\AIPSCANNER -Cluster EU
-```
 
 
 Azure Information Protection Scanner service configuration change completed successfully.

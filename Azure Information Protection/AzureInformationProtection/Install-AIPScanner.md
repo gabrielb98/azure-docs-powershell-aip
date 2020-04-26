@@ -44,11 +44,6 @@ Note: If you have the Azure Information Protection unified labeling client, this
 PS C:\> Install-AIPScanner -SqlServerInstance SQLSERVER1\AIPSCANNER -Profile EU
 ```
 
-or
-```
-PS C:\> Install-AIPScanner -SqlServerInstance SQLSERVER1\AIPSCANNER -Cluster EU
-```
-
 This command installs the Azure Information Protection Scanner service by using a SQL Server instance named AIPSCANNER, which runs on the server named SQLSERVER1. In addition, the installation creates a database name of AIPScanner_EU (for the classic client) or AIPScannerUL_\<cluster name (profile name)> (for the unified labeling client) to store the scanner configuration.
 
 > [!NOTE]
@@ -63,10 +58,7 @@ At the end of the output, you see **The transacted install has completed**.
 ```
 PS C:\> Install-AIPScanner -SqlServerInstance SQLSERVER1 -Profile EU
 ```
-or
-```
-PS C:\> Install-AIPScanner -SqlServerInstance SQLSERVER1 -Cluster EU
-```
+
 
 This command installs the Azure Information Protection Scanner service by using the SQL Server default instance that runs on the server named SQLSERVER1. As with the previous example, you are prompted for credentials, and then the command displays the progress, where the install log is located, and the creation of the new Windows Application event log.
 
@@ -77,10 +69,7 @@ This command installs the Azure Information Protection Scanner service by using 
 ```
 PS C:\> Install-AIPScanner -SqlServerInstance SQLSERVER1\SQLEXPRESS -Profile EU
 ```
-or
-```
-PS C:\> Install-AIPScanner -SqlServerInstance SQLSERVER1\SQLEXPRESS -Cluster EU
-```
+
 
 This command installs the Azure Information Protection Scanner service by using SQL Server Express that runs on the server named SQLSERVER1. As with the previous examples, you are prompted for credentials, and then the command displays the progress, where the install log is located, and the creation of the new Windows Application event log.
 
