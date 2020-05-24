@@ -398,15 +398,12 @@ Removes protection from a file. If the file is labeled, the label is also remove
 
 You must have sufficient usage rights or be a super user for your organization to remove protection from files. For more information, see [Configuring super users for Azure Rights Management and discovery services or data recovery](https://docs.microsoft.com/azure/information-protection/configure-super-users).
 
-Container files (zip, .rar, .7z, .msg, and .pst) are not currently supported by this cmdlet. However, for .zip and .rar files, you can use the following workaround, where "file.zip" is the container file that has been protected and contains other protected files:
+Use the **Set-AIPFileLabel** PowerShell cmdlet to enable removal of protection from container files (zip, .rar, .7z, .msg, and .pst). 
 
-1. Set-AIPFileLabel file.zip -RemoveProtection
+Note: This remove protection capability is disabled by default and must first be turned on using the [Set-LabelPolicy](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#enable-removal-of-protection-from-compressed-files) cmdlet. 
 
-2. Expand-Archive file.zip -DestinationPath .\Output
+For more information about the Expand-Archive cmdlet, supported with a minimum version of Windows PowerShell 5.0, see [Expand-Archive](https://docs.microsoft.com/powershell/module/microsoft.powershell.archive/expand-archive).
 
-3. Set-AIPFileLabel .\Output -RemoveProtection
-
-You might find other tools to extract .7z files that you can similarly use for this workaround. For more information about the Expand-Archive cmdlet, supported with a minimum version of Windows PowerShell 5.0, see [Expand-Archive](https://docs.microsoft.com/powershell/module/microsoft.powershell.archive/expand-archive).
 
 ```yaml
 Type: SwitchParameter
