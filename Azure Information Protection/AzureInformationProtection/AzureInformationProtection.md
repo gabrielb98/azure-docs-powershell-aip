@@ -9,26 +9,22 @@ Locale: en-US
 # AzureInformationProtection Module
 ## Description
 
-The following list contains links to the help for the Microsoft Azure Information Protection (AIP) cmdlets, which are installed with the Azure Information Protection client (classic) and the Azure Information Protection unified labeling client. [Not sure of the differences between these two clients?](https://docs.microsoft.com/azure/information-protection/faqs#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
+The following lists links to documentation for the Microsoft Azure Information Protection (AIP) cmdlets. These cmdlets are installed with both the Azure Information Protection classic client and the Azure Information Protection unified labeling client. [Not sure of the differences between these two clients?](https://docs.microsoft.com/azure/information-protection/faqs#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
 
-- **For the Azure Information Protection client (classic)**: The cmdlets let you protect and unprotect files, label files, and get information about files that are protected and labeled. These cmdlets are installed with the [Azure Information Protection client](/information-protection/rms-client/aip-client) and can be used with Azure Information Protection, the protection service (Azure Rights Management) for Azure Information Protection, and Active Directory Rights Management Services (AD RMS).
-    
-    The current general availability version of the AzureInformationProtection module for this client is **1.54.59.0**. You might have a later version if you have installed a preview version. For release details, see the [client version release history](/information-protection/rms-client/client-version-release-history).
-     
 
-- **For the Azure Information Protection unified labeling client**: The cmdlets let you label files and get information about files that are labeled. These cmdlets are installed with the [Azure Information Protection unified labeling client](/information-protection/rms-client/aip-clientv2) and can be used with Azure Information Protection only.
-    
-    The current general availability version of the AzureInformationProtection module for this client is **2.6.111.0**. You might have a later version if you have installed a preview version. For release details, see the [unified client version release history](/information-protection/rms-client/unifiedlabelingclient-version-release-history). 
+|Client  |cmdlet descriptions  |
+|---------|---------|
+|**Classic client cmdlets**   | Classic client cmdlets enable you to protect and unprotect files, label files, and get information about files that are protected and labeled. </br></br>These cmdlets are installed with the [Azure Information Protection classic client](https://docs.microsoft.com/azure/information-protection/rms-client/aip-client) and are supported for:</br>- Azure Information Protection</br>The Azure Rights Management service for Azure Information Protection</br>- Active Directory Rights Management Services (AD RMS) </br></br>The current general availability version of the AzureInformationProtection module for this client is **1.54.59.0**. <!--You might have a later version if you have installed a preview version.--></br>For release details, see the [classic client version release history](https://docs.microsoft.com/azure/information-protection/rms-client/client-version-release-history).     |
+|**Unified labeling cmdlets**     | Unified labeling cmdlets enable you to label files and get information about files that labeled. </br>These cmdlets are installed with the [Azure Information Protection unified labeling client](https://docs.microsoft.com/azure/information-protection/rms-client/aip-clientv2) and are supported for Azure Information Protection only. </br></br>The current general availability version of the AzureInformationProtection module for this client is **2.6.111.0**. You may have a later version if you've installed a preview version. For release details, see the [unified client version release history](https://docs.microsoft.com/azure/information-protection/rms-client/unifiedlabelingclient-version-release-history). |
 
-To check the version that you have installed, run the following command: `(Get-Module AzureInformationProtection -ListAvailable).Version`.
+> [!TIP]
+> Check the version that you have installed by running the following command: `(Get-Module AzureInformationProtection -ListAvailable).Version`.
 
-For instructions to use these cmdlets, any current limitations, prerequisites, and scenario examples, see the following documentation from the administrator guides:
+For more information, see:
 
-- The Azure Information Protection client:
-    - [Using PowerShell with the Azure Information Protection client](/information-protection/rms-client/client-admin-guide-powershell)
+- [Using PowerShell with the Azure Information Protection classic client](https://docs.microsoft.com/azure/information-protection/rms-client/client-admin-guide-powershell)
 
-- The Azure Information Protection unified labeling client:
-    - [Using PowerShell with the Azure Information Protection unified labeling client](/information-protection/rms-client/clientv2-admin-guide-powershell)
+- [Using PowerShell with the Azure Information Protection unified labeling client](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-powershell)
 
 
 The .dll file for this module is *AIP.dll*.
@@ -137,8 +133,14 @@ Sets the server mode, which is required for non-interactive sessions.
 
 Not supported by the Azure Information Protection unified labeling client. Instead, use Set-AIPAuthentication.
 
+### [Start-AIPScannerDiagnostics](start-aipscannerdiagnostics.md)
+Starts a series of health checks for a locally installed AIP scanner service.
+
 ### [Start-AIPScan](Start-AIPScan.md)
 Instructs the Azure Information Protection scanner to start a one time scan cycle. 
+
+### [Stop-AIPScan](stop-aipscan.md)
+Instructs the Azure Information Protection scanner to immediately stop the currently running scan cycle.
 
 ### [Uninstall-AIPScanner](Uninstall-AIPScanner.md)
 Uninstalls the Windows Server service for the Azure Information Protection scanner.
