@@ -100,7 +100,7 @@ For more information, see [About CommonParameters](http://go.microsoft.com/fwlin
 ### System.Object
 
 ## NOTES
-- This cmdlet requires you to define a specific scanner account in the **[OnBehalfOf](#-onbehalfof)** parameter. The OnBehalfOf parameter requires you to run your PowerShell session as an Administrator.
+- This cmdlet requires you to define a specific scanner account in the **[-OnBehalfOf](#-onbehalfof)** parameter. The OnBehalfOf parameter requires you to run your PowerShell session as an Administrator.
 
 - Diagnostic checks do check for scanner deployment prerequisites. This cmdlet is supported only after you have the scanner deployed and your [profile configured](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#install-the-scanner).
 
