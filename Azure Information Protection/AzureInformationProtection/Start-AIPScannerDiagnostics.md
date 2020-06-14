@@ -8,7 +8,6 @@ schema: 2.0.0
 # Start-AIPScannerDiagnostics
 
 ## SYNOPSIS
-
 Starts a series of health checks for a locally installed AIP scanner service.
 
 ## SYNTAX
@@ -18,7 +17,6 @@ Start-AIPScannerDiagnostics [-OnBehalfOf <PSCredential>] [-ResetConfig] [<Common
 ```
 
 ## DESCRIPTION
-
 This cmdlet triggers a series of diagnostic checks to verify that the scanner deployment is healthy.
 
 Diagnostic checks include whether:
@@ -33,7 +31,6 @@ Diagnostic checks include whether:
 ## EXAMPLES
 
 ### Starts the diagnostic tool for a locally installed AIP scanner
-
 ```powershell
 PS C:\> $scanner_account_creds= Get-Credential
 PS C:\> Start-AIPScannerDiagnostics -onbehalf $scanner_account_creds
@@ -44,7 +41,6 @@ This example prompts you to enter credentials for a specific account, and then P
 ## PARAMETERS
 
 ### -OnBehalfOf
-
 Specifies the variable with the credentials object to define the AIP scanner where you want to run the diagnostics checks.
 
 The checks are run on the AIP scanner that is running on the account defined by credentials object.
@@ -66,7 +62,6 @@ Accept wildcard characters: False
 ```
 
 ### -ResetConfig
-
 Resets the diagnostic cache to trigger checks on all files. When used, all files are checked even if no changes have been made since the last diagnostic run.
 
 ```yaml
@@ -82,7 +77,6 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-
 This cmdlet supports the common parameters:
 
 - Debug
@@ -103,10 +97,9 @@ For more information, see [About CommonParameters](http://go.microsoft.com/fwlin
 
 ## OUTPUTS
 
-System.Object
+### System.Object
 
 ## NOTES
-
 - This cmdlet requires you to define a specific scanner account in the **[OnBehalfOf](#-onbehalfof)** parameter. The OnBehalfOf parameter requires you to run your PowerShell session as an Administrator.
 
 - Diagnostic checks do check for scanner deployment prerequisites. This cmdlet is supported only after you have the scanner deployed and your [profile configured](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#install-the-scanner).
@@ -114,7 +107,6 @@ System.Object
     For more information, see [Deploying the Azure Information Protection scanner](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner).
 
 ## RELATED LINKS
-
 [Get-AIPScannerConfiguration](./Get-AIPScannerConfiguration.md)
 
 [Get-AIPScannerStatus](./Get-AIPScannerStatus.md)
@@ -130,4 +122,3 @@ System.Object
 [Uninstall-AIPScanner](./Uninstall-AIPScanner.md)
 
 [Update-AIPScanner](Update-AIPScanner.md)
-

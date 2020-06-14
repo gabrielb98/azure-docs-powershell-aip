@@ -8,11 +8,9 @@ schema: 2.0.0
 # Stop-AIPScan
 
 ## SYNOPSIS
-
 Instructs the Azure Information Protection scanner to immediately stop the currently running scan cycle.
 
 ## SYNTAX
-
 ```
 Stop-AIPScan
 ```
@@ -22,7 +20,6 @@ Stop-AIPScan
 ## EXAMPLES
 
 ### Example 1: Stop the currently running scan cycle
-
 ```powershell
 PS C:\> Stop-AIPScan
 ```
@@ -31,10 +28,9 @@ PS C:\> Stop-AIPScan
 
 ## OUTPUTS
 
-System.Object
+### System.Object
 
 ## NOTES
 
 ## RELATED LINKS
-
 [Start-AIPScan](Start-AIPScan.md)
