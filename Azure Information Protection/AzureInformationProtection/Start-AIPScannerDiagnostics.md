@@ -62,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResetConfig
-Resets the diagnostic cache to trigger checks on all files. When used, all files are checked even if no changes have been made since the last diagnostic run.
+Resets the policy cache. When used, the policy is refreshed even if the last refresh ocurred less than four hours ago.
 
 ```yaml
 Type: SwitchParameter
