@@ -41,14 +41,15 @@ This example prompts you to enter credentials for a specific account, and then P
 ## PARAMETERS
 
 ### -OnBehalfOf
-Specifies the variable with the credentials object to define the AIP scanner where you want to run the diagnostics checks.
+Defines the scanner where you want to run the diagnostics, when you are running the command under a user that is not the scanner user.
 
-The checks are run on the AIP scanner that is running on the account defined by credentials object.
-
-This parameter is mandatory, and in turn requires that you run your PowerShell session as an Administrator.
+The **OnBehalfOf** value defines the variable that holds a credentials object. The diagnostics checks are run on the AIP scanner for the account defined by that credentials object.
 
 Use the [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential) cmdlet to get the variable that stores your credentials.
 
+> [!NOTE]
+> If you are running the command under the scanner user, this parameter is not required. 
+> 
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
@@ -62,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResetConfig
-Resets the policy cache. When used, the policy is refreshed even if the last refresh ocurred less than four hours ago.
+Resets the policy cache. When used, the policy is refreshed even if the last refresh occurred less than four hours ago.
 
 ```yaml
 Type: SwitchParameter
