@@ -50,6 +50,7 @@ Use the [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.
 > [!NOTE]
 > If you are running the command under the scanner user, this parameter is not required. 
 > 
+
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
