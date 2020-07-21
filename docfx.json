@@ -11,7 +11,7 @@
       },
       {
         "files": [
-          "**/*.md"
+          "**/*.yml"
         ],
         "src": "Azure Information Protection",
         "version": "azureipps",
@@ -31,7 +31,7 @@
       },
       {
         "files": [
-          "azureps-cmdlets-docs/**/*.md"
+          "azureps-cmdlets-docs/**/*.yml"
         ]
       }
     ],
@@ -42,16 +42,16 @@
     },
     "filemetadata": {
       "ms.author": {
-        "Azure Information Protection/**/*.md": "cabailey"
+        "Azure Information Protection/**/*.yml": "cabailey"
       },
       "author": {
-        "Azure Information Protection/**/*.md": "cabailey"
+        "Azure Information Protection/**/*.yml": "cabailey"
       },
       "ms.manager": {
-        "Azure Information Protection/**/*.md": "mbaldwin"
+        "Azure Information Protection/**/*.yml": "mbaldwin"
       },
       "ms.service": {
-        "Azure Information Protection/**/*.md": "rights-management"
+        "Azure Information Protection/**/*.yml": "rights-management"
       },
       "feedback_system": {
         "Azure Information Protection/**/*": "None"
