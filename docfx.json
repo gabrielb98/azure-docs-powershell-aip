@@ -31,7 +31,7 @@
       },
       {
         "files": [
-          "azureps-cmdlets-docs/**/*.yml"
+          "azureps-cmdlets-docs/**/*.md"
         ]
       }
     ],
