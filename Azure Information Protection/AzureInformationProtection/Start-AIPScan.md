@@ -81,8 +81,8 @@ For more information, see [about_CommonParameters](https://go.microsoft.com/fwli
 
 [Set-AIPScanner](./Set-AIPScanner.md)
 
-[Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration)
+[Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration.md)
 
 [Uninstall-AIPScanner](./Uninstall-AIPScanner.md)
 
-[Update-AIPScanner](./Update-AIPScanner)
+[Update-AIPScanner](./Update-AIPScanner.md)
