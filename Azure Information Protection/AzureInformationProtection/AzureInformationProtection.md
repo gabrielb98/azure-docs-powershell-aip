@@ -86,6 +86,9 @@ Not supported by the Azure Information Protection unified labeling client. Inste
 ### [Install-AIPScanner](Install-AIPScanner.md)
 Installs the Azure Information Protection scanner.
 
+### [Install-AIPNetworkDiscovery](Install-AIPNetworkDiscovery.md)
+Installs the Azure Information Protection Network Discovery service.
+
 ### [New-AIPCustomPermissions](New-AIPCustomPermissions.md)
 Creates an ad-hoc protection policy for custom permissions.
 
