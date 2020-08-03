@@ -27,9 +27,33 @@ Network Discovery network scan jobs enable Azure Information Protection administ
 ### Example 1
 ```powershell
 PS C:\> Get-MIPNetworkDiscoveryJobs
+
+JobID       : 496ca93c-ba49-497b-a527-62ffd980891ea
+IpRanges    : [{"Start":"10.90.208.62", "End":"10:90:208:62"}]
+LastScanned : 8/2/2020 1:13:16 PM
+NodeName    : msanchez-7060-emea.corp.contoso.com
+StartTime   : 
+Status      : Idle
+Schedule    : Weekly
+
+JobID       : 40zaw385-o28c-398k-i482-43o2xcggsejsz
+IpRanges    : [{"Start":"88.205.56.230", "End":"88.205.56.230"}]
+LastScanned : 9/1/2020 1:13:16 PM
+NodeName    : 
+StartTime   : 
+Status      : Idle
+Schedule    : Monthly 4
+
+JobID       : v7r05qqh-eb2z-2enz-3o2n-a85w1eji3vagv
+IpRanges    : [{"Start":"183.118.20.113", "End":"183.118.20.113"}]
+LastScanned : 10/13/2020 1:13:16 PM
+NodeName    : msanchez-7060-emea.corp.contoso.com
+StartTime   : 
+Status      : Idle
+Schedule    : Weekly
 ```
 
-This command gets a list of all Azure Information Protection network discovery jobs configured in the Azure portal.
+This command gets the list of the three Azure Information Protection Network Discovery network scan jobs, as configured in the Azure portal.
 
 ## PARAMETERS
 
