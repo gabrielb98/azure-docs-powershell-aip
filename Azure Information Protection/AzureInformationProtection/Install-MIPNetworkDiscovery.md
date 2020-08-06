@@ -33,20 +33,39 @@ After you have run this command, use the Azure portal to configure the settings 
 ## EXAMPLES
 
 ### Example 1: Install the Network Discovery service by using a SQL Server instance
-```
-PS C:\> Install-MIPNetworkDiscovery -SqlServerInstance SQLSERVER1\AIPSCANNER
+
+```PS
+PS C:\> $serviceacct= Get-Credential -UserName domain\scannersvc -Message ScannerAccount
+PS C:\> $shareadminacct= Get-Credential -UserName domain\adminacct -Message ShareAdminAccount
+PS C:\> $publicaccount= Get-Credential -UserName domain\publicuser -Message PublicUser
+PS C:\> Install-MIPNetworkDiscovery -SqlServerInstance SQLSERVER1\AIPSCANNER -ServiceUserCredentials $serviceacct  -ShareAdminUserAccount $shareadminacct -StandardDomainsUserAccount $publicaccount
 ```
 
-This command installs the Azure Information Protection Network Discovery service by using a SQL Server instance named **AIPSCANNER,** which runs on the server named SQLSERVER1. 
+This command installs the Azure Information Protection Network Discovery service by using a SQL Server instance named **AIPSCANNER,** which runs on the server named **SQLSERVER1.** 
 
 - You are prompted to provide the Active Directory account details for the scanner service account. 
-- If an existing database AIPScannerUL_EU isn't found on the specified SQL Server instance, a new database with this name is created to store the scanner configuration. 
-- The command displays the installation progress, where the install log is located, and the creation of the new Windows Application event log, named Azure Information Protection Scanner.
+- If an existing database named **AIPScannerUL_EU** isn't found on the specified SQL Server instance, a new database with this name is created to store the scanner configuration. 
+- The command displays the installation progress, where the install log is located, and the creation of the new Windows Application event log, named **Azure Information Protection Scanner.**
 - At the end of the output, you see **The transacted install has completed**.
 
+#### Accounts used in this example
+
+The following table lists the accounts used in this example for activity:
+
+|Activity  |Account description  |
+|---------|---------|
+|**Running the service**     |  The service is run using the **domain\scannersvc** account.       |
+|**Checking permissions**     |  The service checks the permissions of the discovered shares using the **domain\adminacct** account. </br></br>This account should be the admin account on your shares.       |
+|**Checking public exposure**    |    The service will check the share's public exposure using the **domain\publicuser** account. </br></br>This user should be a standard Domain user, and a member of the **Domain Users** group only.     |
+
+
 ### Example 2: Install the Network Discovery service by using the SQL Server default instance
-```
-PS C:\> Install-MIPNetworkDiscovery -SqlServerInstance SQLSERVER1
+```PS
+PS C:\> $serviceacct= Get-Credential -UserName domain\scannersvc -Message ScannerAccount
+PS C:\> $shareadminacct= Get-Credential -UserName domain\adminacct -Message ShareAdminAccount
+PS C:\> $publicaccount= Get-Credential -UserName domain\publicuser -Message PublicUser
+PS C:\> Install-MIPNetworkDiscovery -SqlServerInstance SQLSERVER1 -ServiceUserCredentials $serviceacct  -ShareAdminUserAccount $shareadminacct -StandardDomainsUserAccount $publicaccount
+
 ```
 
 This command installs the Azure Information Protection Network Discovery service by using the SQL Server default instance that runs on the server, named **SQLSERVER1.** 
@@ -54,8 +73,12 @@ This command installs the Azure Information Protection Network Discovery service
 As with the previous example, you are prompted for credentials, and then the command displays the progress, where the install log is located, and the creation of the new Windows Application event log.
 
 ### Example 3: Install the Network Discovery service by using SQL Server Express
-```
-PS C:\> Install-MIPNetworkDiscovery -SqlServerInstance SQLSERVER1\SQLEXPRESS 
+```PS
+PS C:\> $serviceacct= Get-Credential -UserName domain\scannersvc -Message ScannerAccount
+PS C:\> $shareadminacct= Get-Credential -UserName domain\adminacct -Message ShareAdminAccount
+PS C:\> $publicaccount= Get-Credential -UserName domain\publicuser -Message PublicUser
+PS C:\> Install-MIPNetworkDiscovery -SqlServerInstance SQLSERVER1\SQLEXPRESS -ServiceUserCredentials $serviceacct  -ShareAdminUserAccount $shareadminacct -StandardDomainsUserAccount $publicaccount
+ 
 ```
 
 This command installs the Network Discovery service by using SQL Server Express that runs on the server named **SQLSERVER1.** 
@@ -95,11 +118,15 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceUserCredentials
-Specifies a **PSCredential** object for the service account to run the Azure Information Protection Scanner service. For the user name, use the following format: Domain\Username. You are prompted for a password. 
+Specifies a **PSCredential** object for the service account to run the Azure Information Protection Scanner service. 
 
-To obtain a PSCredential object, use the [Get-Credential](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/get-credential) cmdlet. For more information, type `Get-Help Get-Cmdlet`. 
+- Use the following syntax for the username: `Domain\Username`. 
+- When prompted, enter the password for the account.
+- If you do not specify this parameter, you are prompted for both your user name and password.
 
-If you do not specify this parameter, you are prompted for the user name and password.
+> [!TIP]
+> To obtain a PSCredential object, use the [**Get-Credential**](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential) cmdlet. For more information, type `Get-Help Get-Cmdlet`.
+> 
 
 This account must be an Active Directory account. For additional requirements, see [Prerequisites for the Azure Information Protection scanner](https://docs.microsoft.com/information-protection/deploy-aip-scanner#prerequisites-for-the-azure-information-protection-scanner).
 
