@@ -48,7 +48,7 @@ This command installs the Azure Information Protection Network Discovery service
 - The command displays the installation progress, where the install log is located, and the creation of the new Windows Application event log, named **Azure Information Protection Scanner.**
 - At the end of the output, you see **The transacted install has completed**.
 
-#### Accounts used in this example
+**Accounts used in this example**
 
 The following table lists the accounts used in this example for activity:
 
