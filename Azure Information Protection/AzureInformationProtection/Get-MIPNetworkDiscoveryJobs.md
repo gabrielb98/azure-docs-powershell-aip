@@ -29,16 +29,16 @@ Network Discovery network scan jobs enable Azure Information Protection administ
 PS C:\> Get-MIPNetworkDiscoveryJobs
 
 JobID       : 496ca93c-ba49-497b-a527-62ffd980891ea
-IpRanges    : [{"Start":"10.90.208.62", "End":"10:90:208:62"}]
+IpRanges    : [{"Start":"10.90.208.62", "End":"10.90.208.62"}]
 LastScanned : 8/2/2020 1:13:16 PM
 NodeName    : msanchez-7060-emea.corp.contoso.com
 StartTime   : 
 Status      : Idle
-Schedule    : Weekly
+Schedule    : Weekly Mon,Wed 
 
 JobID       : 40zaw385-o28c-398k-i482-43o2xcggsejsz
 IpRanges    : [{"Start":"88.205.56.230", "End":"88.205.56.230"}]
-LastScanned : 9/1/2020 1:13:16 PM
+LastScanned : 9/4/2020 1:13:16 PM
 NodeName    : 
 StartTime   : 
 Status      : Idle
@@ -50,7 +50,7 @@ LastScanned : 10/13/2020 1:13:16 PM
 NodeName    : msanchez-7060-emea.corp.contoso.com
 StartTime   : 
 Status      : Idle
-Schedule    : Weekly
+Schedule    : Weekly Sun 
 ```
 
 This command gets the list of the three Azure Information Protection Network Discovery network scan jobs, as configured in the Azure portal.

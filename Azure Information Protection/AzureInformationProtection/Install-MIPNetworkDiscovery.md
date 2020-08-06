@@ -116,9 +116,18 @@ Accept wildcard characters: False
 ```
 
 ### -ShareAdminUserAccount
-The domain administrator account used to get full access, with NTFS permissions, to the network locations you will want to scan with your network scan jobs.
 
-The Network Discovery service scans the configured network locations, impersonating this user to determine which permissions the user has on each location.
+The user impersonated by the Network Discovery service when scanning the configured network locations to understand whether admin access is available on each location.
+
+The value for this parameter is a **PSCredential** object for the admin account, usually the domain administrator account. The PSCredential object is used to get full access, with NTFS permissions, to the network locations you want to scan with your network scan jobs.
+
+- Use the following syntax for the username: `Domain\Username`. 
+- When prompted, enter the password for the account.
+- If you do not specify this parameter, you are prompted for both your user name and password.
+
+> [!TIP]
+> To obtain a PSCredential object, use the [**Get-Credential**](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential) cmdlet. For more information, type `Get-Help Get-Cmdlet`.
+> 
 
 ```yaml
 Type: PSCredential
@@ -133,14 +142,14 @@ Accept wildcard characters: False
 ```
 
 ### -SqlServerInstance
-Specifies the SQL Server instance on which to create a database for the Azure Information Protection scanner. 
+
+Specifies the SQL Server instance on which to create a database for the Azure Information Protection scanner.
 
 For information about the SQL Server requirements, see [Prerequisites for the Azure Information Protection scanner](https://docs.microsoft.com/information-protection/deploy-aip-scanner#prerequisites-for-the-azure-information-protection-scanner).
 
-For the default instance, specify the server name. For example: SQLSERVER1. 
-For a named instance, specify the server name and instance name. For example: SQLSERVER1\AIPSCANNER. 
-
-For SQL Server Express, specify the server name and SQLEXPRESS. For example: SQLSERVER1\SQLEXPRESS.
+- For the default instance, specify the server name. For example: `SQLSERVER1`. 
+- For a named instance, specify the server name and instance name. For example: `SQLSERVER1\AIPSCANNER`.
+- For SQL Server Express, specify the server name and SQLEXPRESS. For example: `SQLSERVER1\SQLEXPRESS`.
 
 ```yaml
 Type: String
@@ -155,9 +164,18 @@ Accept wildcard characters: False
 ```
 
 ### -StandardDomainsUserAccount
-The domain user or domain guest account used to get public access to the network locations you will want to scan with your network scan jobs.
 
-The Network Discovery service scans the configured network locations, impersonating this user to determine which permissions the user has on each location.
+The user impersonated by the Network Discovery service when scanning the configured network locations to understand whether public access is available on each location.
+
+The value for this parameter is a **PSCredential** object for a weak domain account, usually a domain user or a domain guest account. The PSCredential object is used to get public access to the network locations you want to scan with your network scan jobs.
+
+- Use the following syntax for the username: `Domain\Username`. 
+- When prompted, enter the password for the account.
+- If you do not specify this parameter, you are prompted for both your user name and password.
+
+> [!TIP]
+> To obtain a PSCredential object, use the [**Get-Credential**](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential) cmdlet. For more information, type `Get-Help Get-Cmdlet`.
+> 
 
 ```yaml
 Type: PSCredential
