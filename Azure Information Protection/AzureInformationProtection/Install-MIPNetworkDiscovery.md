@@ -8,7 +8,7 @@ schema: 2.0.0
 # Install-MIPNetworkDiscovery
 
 ## SYNOPSIS
-Installs the Azure Information Protection Network Discovery service.
+Installs the Network Discovery service.
 
 ## SYNTAX
 
@@ -24,7 +24,7 @@ The **Install-MIPNetworkDiscovery** cmdlet installs the Network Discovery servic
 Use network scan job results to identify additional repositories in your network to further scan using a content scan job. For more information, see [Create a network scan job](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner-configure-install#create-a-network-scan-job-public-preview).
 
 > [!IMPORTANT]
-> You must run this cmdlet before you run any other cmdlet for the Azure Information Protection Network Discovery service.
+> You must run this cmdlet before you run any other cmdlet for the Network Discovery service.
 > 
 
 After you have run this command, use the Azure portal to configure the settings in the scanner's network scan jobs. Before you run the scanner, you must run the [Set-MIPNetworkDiscoveryConfiguration](./Set-MIPNetworkDiscoveryConfiguration.md) cmdlet one time to sign in to Azure AD for authentication and authorization. 
@@ -41,7 +41,7 @@ PS C:\> $publicaccount= Get-Credential -UserName domain\publicuser -Message Publ
 PS C:\> Install-MIPNetworkDiscovery -SqlServerInstance SQLSERVER1\AIPSCANNER -ServiceUserCredentials $serviceacct  -ShareAdminUserAccount $shareadminacct -StandardDomainsUserAccount $publicaccount
 ```
 
-This command installs the Azure Information Protection Network Discovery service by using a SQL Server instance named **AIPSCANNER,** which runs on the server named **SQLSERVER1.** 
+This command installs the Network Discovery service by using a SQL Server instance named **AIPSCANNER,** which runs on the server named **SQLSERVER1.** 
 
 - You are prompted to provide the Active Directory account details for the scanner service account. 
 - If an existing database named **AIPScannerUL_EU** isn't found on the specified SQL Server instance, a new database with this name is created to store the scanner configuration. 
@@ -68,7 +68,7 @@ PS C:\> Install-MIPNetworkDiscovery -SqlServerInstance SQLSERVER1 -ServiceUserCr
 
 ```
 
-This command installs the Azure Information Protection Network Discovery service by using the SQL Server default instance that runs on the server, named **SQLSERVER1.** 
+This command installs the Network Discovery service by using the SQL Server default instance that runs on the server, named **SQLSERVER1.** 
 
 As with the previous example, you are prompted for credentials, and then the command displays the progress, where the install log is located, and the creation of the new Windows Application event log.
 

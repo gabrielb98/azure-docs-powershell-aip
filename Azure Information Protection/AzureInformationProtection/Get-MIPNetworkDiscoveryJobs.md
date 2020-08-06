@@ -18,7 +18,7 @@ Get-MIPNetworkDiscoveryJobs [<CommonParameters>]
 
 ## DESCRIPTION
 
-The **Get-MIPNetworkDiscoveryJobs** cmdlet gets a list of Azure Information Protection network scan job configured in your tenant.
+The **Get-MIPNetworkDiscoveryJobs** cmdlet gets a list of the Network Discovery network scan jobs configured in your tenant.
 
 Network Discovery network scan jobs enable Azure Information Protection administrators to scan specific IP addresses or ranges for risky repositories to add to scan further with content scan jobs.
 
@@ -53,7 +53,7 @@ Status      : Idle
 Schedule    : Weekly Sun 
 ```
 
-This command gets the list of the three Azure Information Protection Network Discovery network scan jobs, as configured in the Azure portal.
+This command gets the list of the three Network Discovery network scan jobs, as configured in the Azure portal.
 
 ## PARAMETERS
 

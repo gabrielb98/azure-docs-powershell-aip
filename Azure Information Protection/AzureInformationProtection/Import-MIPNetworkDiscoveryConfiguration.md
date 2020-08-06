@@ -8,7 +8,7 @@ schema: 2.0.0
 # Import-MIPNetworkDiscoveryConfiguration
 
 ## SYNOPSIS
-Imports a local configuration for Azure Information Protection Network Discovery network scan jobs.
+Imports a local configuration for Network Discovery network scan jobs.
 
 ## SYNTAX
 

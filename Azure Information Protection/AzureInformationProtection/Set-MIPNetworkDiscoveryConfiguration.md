@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-MIPNetworkDiscoveryConfiguration
 
 ## SYNOPSIS
-Sets optional configurations for the Azure Information Protection Network Discovery service.
+Sets optional configurations for the Network Discovery service.
 
 ## SYNTAX
 
@@ -17,17 +17,17 @@ Set-MIPNetworkDiscoveryConfiguration [-OnlineConfiguration <OnlineConfiguration>
 ```
 
 ## DESCRIPTION
-The **Set-MIPNetworkDiscoveryConfiguration** cmdlet sets local configuration settings for the Azure Information Protection Network Discovery service.
+The **Set-MIPNetworkDiscoveryConfiguration** cmdlet sets local configuration settings for the Network Discovery service.
 
 The Network Discovery service manages network scan jobs, and enables Azure Information Protection administrators to scan specific IP addresses or ranges for risky repositories. Administrators may want to add these repositories to content scan jobs and scan their content further.
 
 While most of the network scan job settings are configured in the Azure portal, you must use this cmdlet if you need to import configuration settings from a file because the scanner cannot support online configuration.
 
-Any changes will be used the next time the network scan jobs run. If you need the changes to take effect immediately, restart the Azure Information Protection Network Discovery service on the Windows server computer.
+Any changes will be used the next time the network scan jobs run. If you need the changes to take effect immediately, restart the Network Discovery service on the Windows server computer.
 
 ## EXAMPLES
 
-### Example 1: Set the Azure Information Protection Network Discovery service to use online configuration
+### Example 1: Set the Network Discovery service to use online configuration
 
 ``` powershell
 PS C:\> Set-AIPScannerConfiguration -OnlineConfiguration On

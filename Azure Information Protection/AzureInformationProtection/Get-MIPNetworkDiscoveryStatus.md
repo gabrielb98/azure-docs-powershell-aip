@@ -18,7 +18,7 @@ Get-MIPNetworkDiscoveryStatus [<CommonParameters>]
 
 ## DESCRIPTION
 
-The **Get-MIPNetworkDiscoveryStatus** cmdlet returns the current status of the Azure Information Protection Network Discovery service for each network scan job.
+The **Get-MIPNetworkDiscoveryStatus** cmdlet returns the current status of the Network Discovery service for each network scan job.
 
 Network Discovery network scan jobs enable Azure Information Protection administrators to scan specific IP addresses or ranges for risky repositories to add to scan further with content scan jobs.
 
@@ -41,7 +41,7 @@ Europe            Idle    7/2/2020 10:04:07 AM
 
 ```
 
-This command gets the current status of the Azure Information Protection Network Discovery service for each network scan job. 
+This command gets the current status of the Network Discovery service for each network scan job. 
 
 The output shows that the Network Discovery scanner service is running, but not currently scanning. This status was reported 7/2/2020 at 10:04:07 AM.
 

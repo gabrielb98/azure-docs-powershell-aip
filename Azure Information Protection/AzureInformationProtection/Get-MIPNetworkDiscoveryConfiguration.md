@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-MIPNetworkDiscoveryConfiguration
 
 ## SYNOPSIS
-Gets configuration settings for the Azure Information Protection Network Discovery service. 
+Gets configuration settings for the Network Discovery service. 
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Get-MIPNetworkDiscoveryConfiguration [<CommonParameters>]
 
 ## DESCRIPTION
 
-The **Get-MIPNetworkDiscoveryConfiguration** cmdlet gets configuration settings for the Azure Information Protection Network Discovery service.
+The **Get-MIPNetworkDiscoveryConfiguration** cmdlet gets configuration settings for the Network Discovery service.
 
 The Network Discovery service manages network scan jobs, and enable Azure Information Protection administrators to scan specific IP addresses or ranges for risky repositories. Administrators may want to add these repositories to content scan jobs to scan their content further.
 
@@ -36,7 +36,7 @@ PS C:\> Get-MIPNetworkDiscoveryConfiguration
 OnlineConfiguration      : On
 ```
 
-This command gets the current PowerShell configuration settings for the Azure Information Protection Network Discovery service. In this example, the output shows that the scanner is using the default configuration of using the online configuration from the Azure portal.
+This command gets the current PowerShell configuration settings for the Network Discovery service. In this example, the output shows that the scanner is using the default configuration of using the online configuration from the Azure portal.
 
 ## PARAMETERS
 
