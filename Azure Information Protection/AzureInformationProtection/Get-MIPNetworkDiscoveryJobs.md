@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-MIPNetworkDiscoveryJobs
 
 ## SYNOPSIS
-Gets a list of Azure Information Protection network scan job configured in your tenant.
+Gets a list of Azure Information Protection network scan jobs configured in your tenant.
 
 ## SYNTAX
 

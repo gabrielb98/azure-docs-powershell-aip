@@ -136,13 +136,13 @@ Sets the server mode, which is required for non-interactive sessions.
 
 Not supported by the Azure Information Protection unified labeling client. Instead, use Set-AIPAuthentication.
 
-### [Start-AIPScannerDiagnostics](start-aipscannerdiagnostics.md)
+### [Start-AIPScannerDiagnostics](Start-AIPScannerDiagnostics.md)
 Starts a series of health checks for a locally installed AIP scanner service.
 
 ### [Start-AIPScan](Start-AIPScan.md)
 Instructs the Azure Information Protection scanner to start a one time scan cycle. 
 
-### [Stop-AIPScan](stop-aipscan.md)
+### [Stop-AIPScan](Stop-AIPScan.md)
 Instructs the Azure Information Protection scanner to immediately stop the currently running scan cycle.
 
 ### [Uninstall-AIPScanner](Uninstall-AIPScanner.md)
@@ -151,7 +151,31 @@ Uninstalls the Windows Server service for the Azure Information Protection scann
 ### [Unprotect-RMSFile](Unprotect-RMSFile.md)
 Unprotects a file that is currently protected by RMS.
 
-Not supported by the Azure Information Protection unified labeling client. Instead, use Set-AIPFileLabel
+Not supported by the Azure Information Protection unified labeling client. Instead, use [Set-AIPFileLabel](Set-AIPFileLabel.md).
 
 ### [Update-AIPScanner](Update-AIPScanner.md)
 Updates the database schema for the Azure Information Protection scanner.
+
+### [Get-MIPNetworkDiscoveryConfiguration](Get-MIPNetworkDiscoveryConfiguration.md)
+Gets configuration settings for the Network Discovery service.
+
+### [Get-MIPNetworkDiscoveryJobs](Get-MIPNetworkDiscoveryJobs.md)
+Gets a list of Azure Information Protection network scan jobs configured in your tenant.
+
+### [Get-MIPNetworkDiscoveryStatus](Get-MIPNetworkDiscoveryStatus.md)
+Gets the current status of the Azure Information Protection network scan jobs configured in the Azure portal for your tenant.
+
+### [Import-MIPNetworkDiscoveryConfiguration](Import-MIPNetworkDiscoveryConfiguration.md)
+Imports a local configuration for Network Discovery network scan jobs.
+
+### [Install-MIPNetworkDiscovery](Install-MIPNetworkDiscovery.md)
+Installs the Network Discovery service.
+
+### [Set-MIPNetworkDiscoveryConfiguration](Set-MIPNetworkDiscoveryConfiguration.md)
+Sets optional configurations for the Network Discovery service.
+
+### [Start-MIPNetworkDiscovery](Start-MIPNetworkDiscovery.md)
+Instructs the Azure Information Protection scanner to start a network scan job.
+
+### [Uninstall-MIPNetworkDiscovery](Uninstall-MIPNetworkDiscovery.md)
+Uninstalls the Network Discovery Windows server service.
