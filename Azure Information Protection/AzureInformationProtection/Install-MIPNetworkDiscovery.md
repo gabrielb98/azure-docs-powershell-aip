@@ -244,18 +244,16 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[Get-AIPScannerConfiguration](./Get-AIPScannerConfiguration.md)
+[Get-MIPNetworkDiscoveryConfiguration](Get-MIPNetworkDiscoveryConfiguration.md)
 
-[Get-AIPScannerStatus](./Get-AIPScannerStatus.md)
+[Get-MIPNetworkDiscoveryJobs](Get-MIPNetworkDiscoveryJobs.md)
 
-[Install-AIPScanner](./Install-AIPScanner.md)
+[Get-MIPNetworkDiscoveryStatus](Get-MIPNetworkDiscoveryStatus.md)
 
-[Set-AIPScanner](./Set-AIPScanner.md)
+[Import-MIPNetworkDiscoveryConfiguration](Import-MIPNetworkDiscoveryConfiguration.md)
 
-[Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration.md)
+[Set-MIPNetworkDiscoveryConfiguration](Set-MIPNetworkDiscoveryConfiguration.md)
 
-[Start-AIPScan](./Start-AIPScan.md)
+[Start-MIPNetworkDiscovery](Start-MIPNetworkDiscovery.md)
 
-[Uninstall-AIPScanner](./Uninstall-AIPScanner.md)
-
-[Update-AIPScanner](./Update-AIPScanner.md)
+[Uninstall-MIPNetworkDiscovery](Uninstall-MIPNetworkDiscovery.md)
