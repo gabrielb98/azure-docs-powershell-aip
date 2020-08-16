@@ -55,8 +55,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AadrmKey](./Add-AadrmKey.md)
-
 [Import-AadrmTpd](./Import-AadrmTpd.md)
 
 [Planning and implementing your Azure Information Protection tenant key](https://docs.microsoft.com/information-protection/plan-design/plan-implement-tenant-key)
