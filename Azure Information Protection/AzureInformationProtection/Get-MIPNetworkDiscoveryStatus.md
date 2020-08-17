@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-MIPNetworkDiscoveryStatus
 
 ## SYNOPSIS
-Gets the current status of the Azure Information Protection network scan jobs configured in the Azure portal for your tenant.
+Gets the current status of the Network Discovery service.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Get-MIPNetworkDiscoveryStatus [<CommonParameters>]
 
 ## DESCRIPTION
 
-The **Get-MIPNetworkDiscoveryStatus** cmdlet returns the current status of the Network Discovery service for each network scan job.
+The **Get-MIPNetworkDiscoveryStatus** cmdlet returns the current status of the Network Discovery service.
 
 Network Discovery network scan jobs enable Azure Information Protection administrators to scan specific IP addresses or ranges for risky repositories to add to scan further with content scan jobs.
 
@@ -31,20 +31,33 @@ Possible statuses include:
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Service offline
 ```powershell
 PS C:\> Get-MIPNetworkDiscoveryStatus
 
-NetworkScanJobName       MIPNetworkDiscoveryStatus    LastTimeStamp
---------       -------------    -------------
-Europe            Idle    7/2/2020 10:04:07 AM
+NodeName                              Status           Jobs
+--------                              -------------    -------------
+msanchez-3384.emea.corp.contoso.com   Idle    
 
 ```
 
-This command gets the current status of the Network Discovery service for each network scan job. 
+This command gets the current status of the Network Discovery service.
 
-The output shows that the Network Discovery scanner service is running, but not currently scanning. This status was reported 7/2/2020 at 10:04:07 AM.
+The output shows that the Network Discovery scanner service is running, but not currently scanning. 
 
+### Example 1: Service scanning
+```powershell
+PS C:\> Get-MIPNetworkDiscoveryStatus
+
+NodeName                              Status           Jobs
+--------                              -------------    -------------
+msanchez-3384.emea.corp.contoso.com   Scanning         39gsneaoz-d944-4fns-9b2f-ej6g350cd74    
+
+```
+
+This command gets the current status of the Network Discovery service.
+
+The output shows that the Network Discovery scanner service is currently running, and performing job ID **39gsneaoz-d944-4fns-9b2f-ej6g350cd74.**
 
 ## PARAMETERS
 

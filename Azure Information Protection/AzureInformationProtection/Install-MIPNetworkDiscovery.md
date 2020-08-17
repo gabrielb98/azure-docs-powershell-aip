@@ -170,7 +170,7 @@ Accept wildcard characters: False
 
 ### -SqlServerInstance
 
-Specifies the SQL Server instance on which to create a database for the Azure Information Protection scanner.
+Specifies the SQL Server instance on which to create a database for the Network Discovery service.
 
 For information about the SQL Server requirements, see [Prerequisites for the Azure Information Protection scanner](https://docs.microsoft.com/information-protection/deploy-aip-scanner#prerequisites-for-the-azure-information-protection-scanner).
 

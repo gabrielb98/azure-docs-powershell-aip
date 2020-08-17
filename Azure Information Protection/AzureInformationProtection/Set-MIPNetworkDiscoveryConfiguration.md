@@ -21,7 +21,7 @@ The **Set-MIPNetworkDiscoveryConfiguration** cmdlet sets local configuration set
 
 The Network Discovery service manages network scan jobs, and enables Azure Information Protection administrators to scan specific IP addresses or ranges for risky repositories. Administrators may want to add these repositories to content scan jobs and scan their content further.
 
-While most of the network scan job settings are configured in the Azure portal, you must use this cmdlet if you need to import configuration settings from a file because the scanner cannot support online configuration.
+While most of the network scan job settings are configured in the Azure portal, you must use this cmdlet if you need to import configuration settings from a file because the Network Discovery service cannot support online configuration.
 
 Any changes will be used the next time the network scan jobs run. If you need the changes to take effect immediately, restart the Network Discovery service on the Windows server computer.
 
@@ -45,9 +45,9 @@ Specifies whether the scanner gets its configuration settings directly from the 
 
 - **On:** The default setting. The scanner gets its configuration settings directly from the Azure portal.
 
-- **Off:** The scanner is prevented from getting its configuration settings directly from the Azure portal, and gets the network scan job settings from a from an imported file. Instead, the scanner is configured by settings that you import from a file. 
+- **Off:** The Network Discovery service is prevented from getting its configuration settings directly from the Azure portal. Instead, the Network Discovery service is configured by settings that you import from a file. 
 
-If the scanner cannot support online configuration, you must still configure the scanner in the Azure portal. Then, export the scanner configuration from the portal to a .json file and import this file by using the [Import-**Import-MIPNetworkDiscoveryConfiguration**](./Import-**Import-MIPNetworkDiscoveryConfiguration**.md) cmdlet.
+If the Network Discovery service cannot support online configuration, you must still configure the network scan jobs in the Azure portal. Then, export the network scan job configuration from the portal to a **.json** file and import this file by using the [Import-**Import-MIPNetworkDiscoveryConfiguration**](./Import-**Import-MIPNetworkDiscoveryConfiguration**.md) cmdlet.
 
 ```yaml
 Type: OnlineConfiguration
