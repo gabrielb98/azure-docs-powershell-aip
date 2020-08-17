@@ -38,7 +38,7 @@ After you have run this command, use the Azure portal to configure the settings 
 PS C:\> $serviceacct= Get-Credential -UserName domain\scannersvc -Message ScannerAccount
 PS C:\> $shareadminacct= Get-Credential -UserName domain\adminacct -Message ShareAdminAccount
 PS C:\> $publicaccount= Get-Credential -UserName domain\publicuser -Message PublicUser
-PS C:\> Install-MIPNetworkDiscovery -SqlServerInstance SQLSERVER1\AIPSCANNER -ServiceUserCredentials $serviceacct  -ShareAdminUserAccount $shareadminacct -StandardDomainsUserAccount $publicaccount
+PS C:\> Install-MIPNetworkDiscovery -SqlServerInstance SQLSERVER1\AIPSCANNER -Cluster EU -ServiceUserCredentials $serviceacct  -ShareAdminUserAccount $shareadminacct -StandardDomainsUserAccount $publicaccount 
 ```
 
 This command installs the Network Discovery service by using a SQL Server instance named **AIPSCANNER,** which runs on the server named **SQLSERVER1.** 
@@ -64,7 +64,7 @@ The following table lists the accounts used in this example for activity:
 PS C:\> $serviceacct= Get-Credential -UserName domain\scannersvc -Message ScannerAccount
 PS C:\> $shareadminacct= Get-Credential -UserName domain\adminacct -Message ShareAdminAccount
 PS C:\> $publicaccount= Get-Credential -UserName domain\publicuser -Message PublicUser
-PS C:\> Install-MIPNetworkDiscovery -SqlServerInstance SQLSERVER1 -ServiceUserCredentials $serviceacct  -ShareAdminUserAccount $shareadminacct -StandardDomainsUserAccount $publicaccount
+PS C:\> Install-MIPNetworkDiscovery -SqlServerInstance SQLSERVER1 -Cluster EU -ServiceUserCredentials $serviceacct  -ShareAdminUserAccount $shareadminacct -StandardDomainsUserAccount $publicaccount
 
 ```
 
@@ -77,7 +77,7 @@ As with the previous example, you are prompted for credentials, and then the com
 PS C:\> $serviceacct= Get-Credential -UserName domain\scannersvc -Message ScannerAccount
 PS C:\> $shareadminacct= Get-Credential -UserName domain\adminacct -Message ShareAdminAccount
 PS C:\> $publicaccount= Get-Credential -UserName domain\publicuser -Message PublicUser
-PS C:\> Install-MIPNetworkDiscovery -SqlServerInstance SQLSERVER1\SQLEXPRESS -ServiceUserCredentials $serviceacct  -ShareAdminUserAccount $shareadminacct -StandardDomainsUserAccount $publicaccount
+PS C:\> Install-MIPNetworkDiscovery -SqlServerInstance SQLSERVER1\SQLEXPRESS -Cluster EU -ServiceUserCredentials $serviceacct  -ShareAdminUserAccount $shareadminacct -StandardDomainsUserAccount $publicaccount
  
 ```
 
