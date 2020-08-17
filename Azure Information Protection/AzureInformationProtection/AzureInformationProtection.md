@@ -70,7 +70,7 @@ Gets configuration settings for the Network Discovery service.
 Gets a list of Azure Information Protection network scan jobs configured in your tenant.
 
 ### [Get-MIPNetworkDiscoveryStatus](Get-MIPNetworkDiscoveryStatus.md)
-Gets the current status of the Azure Information Protection network scan jobs configured in the Azure portal for your tenant.
+Gets the current status of the Network Discovery service.
 
 ### [Get-RMSFileStatus](Get-RMSFileStatus.md)
 Gets the RMS protection status of a specified file.
