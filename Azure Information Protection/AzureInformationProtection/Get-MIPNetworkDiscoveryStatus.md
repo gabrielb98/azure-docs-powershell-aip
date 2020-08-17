@@ -31,7 +31,7 @@ Possible statuses include:
 
 ## EXAMPLES
 
-### Example 1: Service offline
+### Example 1: Service idle
 ```powershell
 PS C:\> Get-MIPNetworkDiscoveryStatus
 
