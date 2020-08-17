@@ -26,7 +26,7 @@ Possible statuses include:
 
 - **Offline:** The service is not started.
 - **Idle:** The service is running but not currently scanning. 
-- **Scanning:** The service is running and currently scanning files.
+- **Scanning:** The service is running and currently scanning the network.
 - **Error:** The service is running but it has encountered an error that prevents it from scanning files. For example, the service cannot access the database for the scanner configuration.
 
 ## EXAMPLES
