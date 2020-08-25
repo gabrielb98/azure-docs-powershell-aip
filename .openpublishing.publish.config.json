@@ -10,19 +10,22 @@
       "locale": "en-us",
       "monikers": [],
       "open_to_public_contributors": false,
+
       "type_mapping": {
         "Conceptual": "Content",
         "ManagedReference": "Content",
         "RestApi": "Content",
-        "PowershellModule": "Content",
-        "PowershellCmdlet": "Content"
+        "AzurePSModulePage": "Content"
       },
       "build_entry_point": "docs",
       "template_folder": "_themes",
       "version": 0,
+      "customized_template_paths": [
+        "_dependentPackages/azurecli.plugins/azurecli"
+      ],
       "customized_tasks": {
         "docset_prebuild": [
-          "_dependentPackages/MAML2Yaml/tools/Run.ps1"
+          "_dependentPackages/CommonPlugins/tools/PowerShellReference.ps1"
         ]
       }
     }
@@ -41,9 +44,15 @@
   ],
   "dependent_packages": [
     {
-      "id": "Microsoft.DocAsCode.MAML2Yaml",
+      "path_to_root": "_dependentPackages/azurecli.plugins",
+      "id": "opbuild.templates.azurecli",
+      "version": "latest",
+      "nuget_feed": "https://www.myget.org/F/op/api/v2"
+    },
+    {
+      "id": "Microsoft.OpenPublishing.CommonPlugins",
       "nuget_feed": "https://www.myget.org/F/op/api/v2",
-      "path_to_root": "_dependentPackages/MAML2Yaml",
+      "path_to_root": "_dependentPackages/CommonPlugins",
       "target_framework": "net45",
       "version": "latest"
     }
