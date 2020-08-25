@@ -1,7 +1,7 @@
 ---
 external help file: AIP.dll-Help.xml
 Module Name: AzureInformationProtection
-online version: https://go.microsoft.com/fwlink/?linkid=2132196
+online version: https://go.microsoft.com/fwlink/?linkid=2137317
 schema: 2.0.0
 ---
 

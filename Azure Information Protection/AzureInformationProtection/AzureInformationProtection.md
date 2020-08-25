@@ -14,8 +14,8 @@ The following lists links to documentation for the Microsoft Azure Information P
 
 |Client  |cmdlet descriptions  |
 |---------|---------|
-|**Classic client cmdlets**   | Classic client cmdlets enable you to protect and unprotect files, label files, and get information about files that are protected and labeled. </br></br>These cmdlets are installed with the [Azure Information Protection classic client](https://docs.microsoft.com/azure/information-protection/rms-client/aip-client) and are supported for:</br>- Azure Information Protection</br>The Azure Rights Management service for Azure Information Protection</br>- Active Directory Rights Management Services (AD RMS) </br></br>The current general availability version of the AzureInformationProtection module for this client is **1.54.59.0**. <!--You might have a later version if you have installed a preview version.--></br>For release details, see the [classic client version release history](https://docs.microsoft.com/azure/information-protection/rms-client/client-version-release-history).     |
-|**Unified labeling cmdlets**     | Unified labeling cmdlets enable you to label files and get information about files that labeled. </br>These cmdlets are installed with the [Azure Information Protection unified labeling client](https://docs.microsoft.com/azure/information-protection/rms-client/aip-clientv2) and are supported for Azure Information Protection only. </br></br>The current general availability version of the AzureInformationProtection module for this client is **2.6.111.0**. You may have a later version if you've installed a preview version. For release details, see the [unified client version release history](https://docs.microsoft.com/azure/information-protection/rms-client/unifiedlabelingclient-version-release-history). |
+|**Classic client cmdlets**   | Classic client cmdlets enable you to protect and unprotect files, label files, and get information about files that are protected and labeled. </br></br>These cmdlets are installed with the [Azure Information Protection classic client](https://docs.microsoft.com/azure/information-protection/rms-client/aip-client) and are supported for:</br></br>- Azure Information Protection</br>The Azure Rights Management service for Azure Information Protection</br>- Active Directory Rights Management Services (AD RMS) <!--</br></br>The current general availability version of the AzureInformationProtection module for this client is **1.54.59.0**. You might have a later version if you have installed a preview version.--></br></br>For release details, see the [classic client version release history](https://docs.microsoft.com/azure/information-protection/rms-client/client-version-release-history).     |
+|**Unified labeling cmdlets**     | Unified labeling cmdlets enable you to label files and get information about files that labeled. </br></br>These cmdlets are installed with the [Azure Information Protection unified labeling client](https://docs.microsoft.com/azure/information-protection/rms-client/aip-clientv2) and are supported for Azure Information Protection only. </br></br><!--The current general availability version of the AzureInformationProtection module for this client is **2.6.111.0**. You may have a later version if you've installed a preview version. -->For release details, see the [unified client version release history](https://docs.microsoft.com/azure/information-protection/rms-client/unifiedlabelingclient-version-release-history). |
 
 > [!TIP]
 > Check the version that you have installed by running the following command: `(Get-Module AzureInformationProtection -ListAvailable).Version`.
@@ -63,6 +63,15 @@ Deprecated: Gets a list of data repositories that the Azure Information Protecti
 ### [Get-AIPScannerStatus](Get-AIPScannerStatus.md)
 Gets the current status of the service for the Azure Information Protection scanner.
 
+### [Get-MIPNetworkDiscoveryConfiguration](Get-MIPNetworkDiscoveryConfiguration.md)
+Gets configuration settings for the Network Discovery service.
+
+### [Get-MIPNetworkDiscoveryJobs](Get-MIPNetworkDiscoveryJobs.md)
+Gets a list of Azure Information Protection network scan jobs configured in your tenant.
+
+### [Get-MIPNetworkDiscoveryStatus](Get-MIPNetworkDiscoveryStatus.md)
+Gets the current status of the Network Discovery service.
+
 ### [Get-RMSFileStatus](Get-RMSFileStatus.md)
 Gets the RMS protection status of a specified file.
 
@@ -83,8 +92,14 @@ Gets a list of RMS templates.
 
 Not supported by the Azure Information Protection unified labeling client. Instead, use Get-RMSFileStatus.
 
+### [Import-MIPNetworkDiscoveryConfiguration](Import-MIPNetworkDiscoveryConfiguration.md)
+Imports a local configuration for Network Discovery network scan jobs.
+
 ### [Install-AIPScanner](Install-AIPScanner.md)
 Installs the Azure Information Protection scanner.
+
+### [Install-MIPNetworkDiscovery](Install-AIPNetworkDiscovery.md)
+Installs the Network Discovery service.
 
 ### [New-AIPCustomPermissions](New-AIPCustomPermissions.md)
 Creates an ad-hoc protection policy for custom permissions.
@@ -128,27 +143,36 @@ Deprecated: Updates a profile of configuration settings for a data repository to
 ### [Set-AIPScannerScannedFileTypes](Set-AIPScannerScannedFileTypes.md)
 Deprecated: Sets a list of file types to scan or exclude from scanning by the Azure Information Protection scanner.
 
+### [Set-MIPNetworkDiscoveryConfiguration](Set-MIPNetworkDiscoveryConfiguration.md)
+Sets optional configurations for the Network Discovery service.
+
 ### [Set-RMSServerAuthentication](Set-RMSServerAuthentication.md)
 Sets the server mode, which is required for non-interactive sessions.
 
 Not supported by the Azure Information Protection unified labeling client. Instead, use Set-AIPAuthentication.
 
-### [Start-AIPScannerDiagnostics](start-aipscannerdiagnostics.md)
+### [Start-AIPScannerDiagnostics](Start-AIPScannerDiagnostics.md)
 Starts a series of health checks for a locally installed AIP scanner service.
 
 ### [Start-AIPScan](Start-AIPScan.md)
 Instructs the Azure Information Protection scanner to start a one time scan cycle. 
 
-### [Stop-AIPScan](stop-aipscan.md)
+### [Start-MIPNetworkDiscovery](Start-MIPNetworkDiscovery.md)
+Instructs the Azure Information Protection scanner to start a network scan job.
+
+### [Stop-AIPScan](Stop-AIPScan.md)
 Instructs the Azure Information Protection scanner to immediately stop the currently running scan cycle.
 
 ### [Uninstall-AIPScanner](Uninstall-AIPScanner.md)
 Uninstalls the Windows Server service for the Azure Information Protection scanner.
 
+### [Uninstall-MIPNetworkDiscovery](Uninstall-MIPNetworkDiscovery.md)
+Uninstalls the Network Discovery Windows server service.
+
 ### [Unprotect-RMSFile](Unprotect-RMSFile.md)
 Unprotects a file that is currently protected by RMS.
 
-Not supported by the Azure Information Protection unified labeling client. Instead, use Set-AIPFileLabel
+Not supported by the Azure Information Protection unified labeling client. Instead, use [Set-AIPFileLabel](Set-AIPFileLabel.md).
 
 ### [Update-AIPScanner](Update-AIPScanner.md)
 Updates the database schema for the Azure Information Protection scanner.
