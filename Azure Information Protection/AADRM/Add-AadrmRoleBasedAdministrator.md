@@ -30,7 +30,7 @@ Add-AadrmRoleBasedAdministrator [-EmailAddress <String>] [-Role <Role>] [<Common
 ## DESCRIPTION
 [!INCLUDE [AADRM is deprecated](../includes/aadrm-deprecated.md)]
 
-The **Add-AadrmRoleBasedAdministrator** cmdlet grants administrative rights to your organization's Azure Rights Management service, so that administrators you delegate to configure this service can do so by using PowerShell commands. 
+The **Add-AadrmRoleBasedAdministrator** cmdlet grants administrative rights to your organization's Azure Rights Management service, so that administrators you delegate to configure this service can do so by using PowerShell commands.
 
 You must use PowerShell to configure delegated administrative control for the Azure Rights Management service; you cannot do this configuration by using a management portal.
 
