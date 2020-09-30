@@ -32,7 +32,7 @@ Important: Before you use this cmdlet, you must first create a rights definition
 
 You can store a maximum of 500 custom templates (published or archived) in Azure. If you can't add new templates because you have reached this limit as a result of keeping many archived templates, consider exporting them to save the information locally and then removing these templates in Azure.
 
-For more information about custom templates, including how to configure them in the Azure portal, see [Configuring and managing templates for Azure Information Protection](https://docs.microsoft.com/information-protection/deploy-use/configure-policy-templates) on the Microsoft documentation site.
+For more information about custom templates, including how to configure them in the Azure portal, see [Configuring and managing templates for Azure Information Protection](/information-protection/deploy-use/configure-policy-templates) on the Microsoft documentation site.
 
 ## EXAMPLES
 
@@ -151,7 +151,7 @@ The Azure Information Protection client supports departmental templates whereas 
 
 This setting does not affect whether a user can access content that is protected by a departmental template; it only affects the ability for a user to select the template itself.
 
-If you have applications that do not yet natively support departmental templates, you can use a [custom RMS template download script](https://go.microsoft.com/fwlink/?LinkId=524506) or other tools to deploy these templates to the local RMS client folder. Then, these applications will correctly display the departmental templates:
+If you have applications that do not yet natively support departmental templates, you can use a [custom RMS template download script](/collaborate/connect-redirect?DownloadID=56154) or other tools to deploy these templates to the local RMS client folder. Then, these applications will correctly display the departmental templates:
 
 - For Office 2010, the client folder is %localappdata%\Microsoft\DRM\Templates.
 

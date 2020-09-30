@@ -29,7 +29,7 @@ The export process does not automatically append a file name extension, so you c
 
 You can use the [Get-AadrmTemplate](./Get-AadrmTemplate.md) cmdlet to get the GUIDs of all templates.
 
-For more information about custom templates, including how to configure them in the Azure portal, see [Configuring and managing templates for Azure Information Protection](https://docs.microsoft.com/information-protection/deploy-use/configure-policy-templates).
+For more information about custom templates, including how to configure them in the Azure portal, see [Configuring and managing templates for Azure Information Protection](/information-protection/deploy-use/configure-policy-templates).
 
 ## EXAMPLES
 
@@ -105,4 +105,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Import-AadrmTemplate](./Import-AadrmTemplate.md)
 
 [Remove-AadrmTemplate](./Remove-AadrmTemplate.md)
-
