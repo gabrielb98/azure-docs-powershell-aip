@@ -37,9 +37,9 @@ When you run this cmdlet, you can specify a user or a group in Azure AD, and you
 
 If you specify a group, it can be any group in Azure AD and does not need to be mail-enabled. To specify a group that is not mail-enabled, use either the *SecurityGroupDisplayName* parameter, or the *ObjectId* parameter. You can also use these parameters or the EmailAddress parameter for a mail-enabled group.
 
-For more information about the user and group requirements, see [Preparing users and groups for Azure Information Protection](https://docs.microsoft.com/information-protection/plan-design/prepare). This information includes how to identify the different group types and how to find the values to specify them when you run this cmdlet. 
+For more information about the user and group requirements, see [Preparing users and groups for Azure Information Protection](/information-protection/plan-design/prepare). This information includes how to identify the different group types and how to find the values to specify them when you run this cmdlet. 
 
-After delegating control to other administrators, they might find it useful to reference a list of the cmdlets they can run, grouped by administrative task. For this information, see [Administering the protection service by using PowerShell](https://docs.microsoft.com/information-protection/deploy-use/administer-powershell).
+After delegating control to other administrators, they might find it useful to reference a list of the cmdlets they can run, grouped by administrative task. For this information, see [Administering the protection service by using PowerShell](/information-protection/deploy-use/administer-powershell).
 
 Note that these administrative roles are separate from the Azure Active Directory admin roles or Office 365 admin roles.
 
@@ -131,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

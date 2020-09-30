@@ -108,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-Specifies a **PSCredential** object. To obtain a **PSCredential** object, use the [Get-Credential](https://go.microsoft.com/fwlink/?LinkID=293936) cmdlet. For more information, type `Get-Help Get-Cmdlet`.
+Specifies a **PSCredential** object. To obtain a **PSCredential** object, use the [Get-Credential](/powershell/module/Microsoft.PowerShell.Security/Get-Credential?viewFallbackFrom=powershell-4.0) cmdlet. For more information, type `Get-Help Get-Cmdlet`.
 
 The cmdlet prompts you for a password.
 
@@ -133,7 +133,7 @@ Specifies the Azure instance for sovereign clouds. Valid values are:
 - **AzureChinaCloud**: Azure Operated by 21Vianet
 - **AzureUSGovernment**: Azure Government 
 
-For more information about using Azure Information Protection with Azure Government, see [Azure Information Protection Premium Government Service Description](https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-aip-premium-govt-service-description).
+For more information about using Azure Information Protection with Azure Government, see [Azure Information Protection Premium Government Service Description](/enterprise-mobility-security/solutions/ems-aip-premium-govt-service-description).
 
 ```yaml
 Type: AzureRmEnvironment
@@ -166,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -176,6 +176,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-Credential](https://go.microsoft.com/fwlink/?LinkID=293936)
+[Get-Credential](/powershell/module/Microsoft.PowerShell.Security/Get-Credential?viewFallbackFrom=powershell-4.0)
 
 [Disconnect-AipService](./Disconnect-AipService.md)
