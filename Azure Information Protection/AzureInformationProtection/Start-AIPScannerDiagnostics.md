@@ -45,7 +45,7 @@ Defines the scanner where you want to run the diagnostics, when you are running 
 
 The **OnBehalfOf** value defines the variable that holds a credentials object. The diagnostics checks are run on the AIP scanner for the account defined by that credentials object.
 
-Use the [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential) cmdlet to get the variable that stores your credentials.
+Use the [Get-Credential](/powershell/module/microsoft.powershell.security/get-credential) cmdlet to get the variable that stores your credentials.
 
 > [!NOTE]
 > If you are running the command under the scanner user, this parameter is not required. 
@@ -93,7 +93,7 @@ This cmdlet supports the common parameters:
 - WarningAction
 - WarningVariable
 
-For more information, see [About CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+For more information, see [About CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -104,9 +104,9 @@ For more information, see [About CommonParameters](http://go.microsoft.com/fwlin
 ## NOTES
 - This cmdlet requires you to define a specific scanner account in the **-OnBehalfOf** parameter. The OnBehalfOf parameter requires you to run your PowerShell session as an Administrator.
 
-- Diagnostic checks do check for scanner deployment prerequisites. This cmdlet is supported only after you have the scanner deployed and your [profile configured](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#install-the-scanner).
+- Diagnostic checks do check for scanner deployment prerequisites. This cmdlet is supported only after you have the scanner deployed and your [profile configured](/azure/information-protection/deploy-aip-scanner#install-the-scanner).
 
-    For more information, see [Deploying the Azure Information Protection scanner](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner).
+    For more information, see [Deploying the Azure Information Protection scanner](/azure/information-protection/deploy-aip-scanner).
 
 ## RELATED LINKS
 [Get-AIPScannerConfiguration](./Get-AIPScannerConfiguration.md)

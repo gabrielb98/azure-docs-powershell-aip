@@ -32,11 +32,11 @@ If you run this cmdlet without parameters, the account acquires an Azure AD acce
 
 To control when the access token expires, run this cmdlet with parameters. This lets you configure the access token for 1 year, 2 years, or to never expire. This configuration requires you to have one or more applications registered in Azure Active Directory. For instructions, see the following sections from the admin guides:
 
-- For the classic client: [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection)
+- For the classic client: [How to label files non-interactively for Azure Information Protection](/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection)
 
-- For the unified labeling client: [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/clientv2-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection)
+- For the unified labeling client: [How to label files non-interactively for Azure Information Protection](/information-protection/rms-client/clientv2-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection)
 
-The classic client supports a *Token* parameter that you cannot specify the first time you run this cmdlet, but can specify subsequently. The first time that you run this cmdlet, it generates an access token that you can copy to the clipboard and then specify when you run the cmdlet again. By specifying the access token with this cmdlet, you are not prompted to sign in. Use this method for service accounts that cannot be granted the right to log on locally. For full instructions, see [Specify and use the Token parameter for Set-AIPAuthentication](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell#specify-and-use-the-token-parameter-for-set-aipauthentication) from the admin guide.
+The classic client supports a *Token* parameter that you cannot specify the first time you run this cmdlet, but can specify subsequently. The first time that you run this cmdlet, it generates an access token that you can copy to the clipboard and then specify when you run the cmdlet again. By specifying the access token with this cmdlet, you are not prompted to sign in. Use this method for service accounts that cannot be granted the right to log on locally. For full instructions, see [Specify and use the Token parameter for Set-AIPAuthentication](/information-protection/rms-client/client-admin-guide-powershell#specify-and-use-the-token-parameter-for-set-aipauthentication) from the admin guide.
 
 When the Azure AD access token expires, you must rerun the cmdlet to acquire a new token.
 
@@ -155,7 +155,7 @@ Note: Applies to the unified labeling client only.
 
 Use this parameter to specify a user account in Azure AD that sets the user context to download label policies with sensitivity labels from your labeling management center. 
 
-If this account needs to reprotect files, remove protection from files, or inspect protected files, make it a [super user](https://docs.microsoft.com/azure/information-protection/configure-super-users) for Azure Information Protection.
+If this account needs to reprotect files, remove protection from files, or inspect protected files, make it a [super user](/azure/information-protection/configure-super-users) for Azure Information Protection.
 
 ```yaml
 Type: String
@@ -264,7 +264,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters ](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters ](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

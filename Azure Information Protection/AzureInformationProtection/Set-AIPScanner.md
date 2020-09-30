@@ -40,11 +40,11 @@ This command configures the Azure Information Protection scanner to use the SQL 
 ### -ServiceUserCredentials
 Specifies a **PSCredential** object for the new service account to run the Azure Information Protection Scanner service. For the user name, use the following format: Domain\Username. You are prompted for a password.
 
-To obtain a PSCredential object, use the [Get-Credential](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/get-credential) cmdlet. For more information, type `Get-Help Get-Cmdlet`.
+To obtain a PSCredential object, use the [Get-Credential](/powershell/module/microsoft.powershell.security/get-credential) cmdlet. For more information, type `Get-Help Get-Cmdlet`.
 
 If you do not specify this parameter, you are prompted for the user name and password.
 
-This account must be an Active Directory account. For additional requirements, see [Prerequisites for the Azure Information Protection scanner](https://docs.microsoft.com/en-us/azure/information-protection/deploy-aip-scanner#prerequisites-for-the-azure-information-protection-scanner). 
+This account must be an Active Directory account. For additional requirements, see [Prerequisites for the Azure Information Protection scanner](/azure/information-protection/deploy-aip-scanner#prerequisites-for-the-azure-information-protection-scanner). 
 
 ```yaml
 Type: PSCredential
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 ### -SqlServerInstance
 Specifies the new SQL Server instance on which to create a database for the Azure Information Protection scanner.
 
-For information about the SQL Server requirements, see [Prerequisites for the Azure Information Protection scanner](https://docs.microsoft.com/en-us/azure/information-protection/deploy-aip-scanner#prerequisites-for-the-azure-information-protection-scanner).
+For information about the SQL Server requirements, see [Prerequisites for the Azure Information Protection scanner](/azure/information-protection/deploy-aip-scanner#prerequisites-for-the-azure-information-protection-scanner).
 
 For the default instance, specify the server name. For example: SQLSERVER1.
 
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -150,4 +150,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Uninstall-AIPScanner](./Uninstall-AIPScanner.md)
 
 [Update-AIPScanner](./Update-AIPScanner.md)
-

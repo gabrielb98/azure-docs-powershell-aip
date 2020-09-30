@@ -21,9 +21,9 @@ The Install-AIPScanner cmdlet installs and configures the Azure Information Prot
 
 For more information about how to configure the labels and policy settings, see the following information:
 
-For the scanner from the classic client: [Configuring the Azure Information Protection policy](https://docs.microsoft.com/information-protection/configure-policy)
+For the scanner from the classic client: [Configuring the Azure Information Protection policy](/information-protection/configure-policy)
 
-For the scanner from the unified labeling client: [Overview of sensitivity labels](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels)
+For the scanner from the unified labeling client: [Overview of sensitivity labels](/microsoft-365/compliance/sensitivity-labels)
 
 You must run this cmdlet before you run any other cmdlet for the Azure Information Protection scanner.
 
@@ -33,9 +33,9 @@ To run this command, you must have local administrator rights for the Windows Se
 
 After you have run this command, use the Azure portal to configure the settings in the scanner cluster (profile) and specify the data repositories to scan. Before you run the scanner, you must run the [Set-AIPAuthentication](./Set-AIPAuthentication.md) cmdlet one time to sign in to Azure AD for authentication and authorization. 
 
-For step-by-step instructions to install, configure, and use the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](https://docs.microsoft.com/information-protection/deploy-aip-scanner).
+For step-by-step instructions to install, configure, and use the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](/information-protection/deploy-aip-scanner).
 
-Note: If you have the Azure Information Protection unified labeling client, this version includes a preview version of the scanner that you can install for testing. For more information, see [Installing the Azure Information Protection scanner](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide#installing-the-azure-information-protection-scanner.md) from the admin guide for the unified labeling client.
+Note: If you have the Azure Information Protection unified labeling client, this version includes a preview version of the scanner that you can install for testing. For more information, see [Installing the Azure Information Protection scanner](/azure/information-protection/rms-client/clientv2-admin-guide#installing-the-azure-information-protection-scanner.md) from the admin guide for the unified labeling client.
 
 ## EXAMPLES
 
@@ -90,11 +90,11 @@ During installation, you'll be prompted to provide the Active Directory account 
 ### -ServiceUserCredentials
 Specifies a **PSCredential** object for the service account to run the Azure Information Protection Scanner service. For the user name, use the following format: Domain\Username. You are prompted for a password. 
 
-To obtain a PSCredential object, use the [Get-Credential](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/get-credential) cmdlet. For more information, type `Get-Help Get-Cmdlet`. 
+To obtain a PSCredential object, use the [Get-Credential](/powershell/module/microsoft.powershell.security/get-credential) cmdlet. For more information, type `Get-Help Get-Cmdlet`. 
 
 If you do not specify this parameter, you are prompted for the user name and password.
 
-This account must be an Active Directory account. For additional requirements, see [Prerequisites for the Azure Information Protection scanner](https://docs.microsoft.com/information-protection/deploy-aip-scanner#prerequisites-for-the-azure-information-protection-scanner).
+This account must be an Active Directory account. For additional requirements, see [Prerequisites for the Azure Information Protection scanner](/information-protection/deploy-aip-scanner#prerequisites-for-the-azure-information-protection-scanner).
 
 ```yaml
 Type: PSCredential
@@ -111,7 +111,7 @@ Accept wildcard characters: False
 ### -SqlServerInstance
 Specifies the SQL Server instance on which to create a database for the Azure Information Protection scanner. 
 
-For information about the SQL Server requirements, see [Prerequisites for the Azure Information Protection scanner](https://docs.microsoft.com/information-protection/deploy-aip-scanner#prerequisites-for-the-azure-information-protection-scanner).
+For information about the SQL Server requirements, see [Prerequisites for the Azure Information Protection scanner](/information-protection/deploy-aip-scanner#prerequisites-for-the-azure-information-protection-scanner).
 
 For the default instance, specify the server name. For example: SQLSERVER1. 
 For a named instance, specify the server name and instance name. For example: SQLSERVER1\AIPSCANNER. You can use IP, port to use SQL instance listening on a specific IP and port.
@@ -178,7 +178,7 @@ Accept wildcard characters: False
 
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

@@ -25,11 +25,11 @@ You must use PowerShell to set this configuration; you cannot do this configurat
 
 This control can be based on assigned user licenses for the service or membership in a designated security group. You can also define whether the policy applies to just mobile devices, just Windows clients, or mobile devices and Windows clients.
 
-If you use the assigned license option, you can assign licenses to users by using the Microsoft 365 admin center or by using Azure PowerShell and the [Set-MsolUserLicense](https://docs.microsoft.com/en-us/powershell/module/msonline/set-msoluserlicense?view=azureadps-1.0) cmdlet from the Azure AD PowerShell administration module. You can also use the [Get-MsolAccountSku](https://docs.microsoft.com/en-us/powershell/module/msonline/get-msolaccountsku?view=azureadps-1.0) cmdlet to obtain the different types of licenses that you can assign in your organization.
+If you use the assigned license option, you can assign licenses to users by using the Microsoft 365 admin center or by using Azure PowerShell and the [Set-MsolUserLicense](/powershell/module/msonline/set-msoluserlicense?view=azureadps-1.0) cmdlet from the Azure AD PowerShell administration module. You can also use the [Get-MsolAccountSku](/powershell/module/msonline/get-msolaccountsku?view=azureadps-1.0) cmdlet to obtain the different types of licenses that you can assign in your organization.
 
-If you use the group membership option, you must specify a security group, which does not have to be mail-enabled and it can contain other groups. To specify the group, use the group GUID. For more information about the user and group requirements and how to find the group GUID, see [Preparing users and groups for Azure Information Protection](https://docs.microsoft.com/information-protection/plan-design/prepare).
+If you use the group membership option, you must specify a security group, which does not have to be mail-enabled and it can contain other groups. To specify the group, use the group GUID. For more information about the user and group requirements and how to find the group GUID, see [Preparing users and groups for Azure Information Protection](/information-protection/plan-design/prepare).
 
-For more information about the Azure AD PowerShell cmdlets, see [Azure Active Directory PowerShell](https://docs.microsoft.com/powershell/azure/overview?view=azureadps-2.0).
+For more information about the Azure AD PowerShell cmdlets, see [Azure Active Directory PowerShell](/powershell/azure/overview?view=azureadps-2.0).
 
 Note: This cmdlet does not stop users from consuming protected content or prevent administrators from configuring services for Azure Information Protection (for example, Exchange Online mail flow rules or SharePoint protected libraries). Instead, it is designed for user applications such as Office, so that users do not see the options or templates to use Azure Information Protection.
 
@@ -169,7 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
