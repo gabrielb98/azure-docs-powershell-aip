@@ -23,7 +23,7 @@ The **Set-MIPNetworkDiscovery** cmdlet updates installation settings for the Net
 
 The Network Discovery service enables AIP administrators to scan a specified IP address or range for possibly risky repositories, using a network scan job.
 
-Use network scan job results to identify additional repositories in your network to further scan using a content scan job. For more information, see [Create a network scan job](azure/information-protection/deploy-aip-scanner-configure-install#create-a-network-scan-job-public-preview).
+Use network scan job results to identify additional repositories in your network to further scan using a content scan job. For more information, see [Create a network scan job](/azure/information-protection/deploy-aip-scanner-configure-install#create-a-network-scan-job-public-preview).
 
 ## EXAMPLES
 
