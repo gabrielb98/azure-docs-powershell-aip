@@ -74,6 +74,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Install-MIPNetworkDiscovery](Install-MIPNetworkDiscovery.md)
 
+[Set-MIPNetworkDiscovery](Set-MIPNetworkDiscovery.md)
+
 [Set-MIPNetworkDiscoveryConfiguration](Set-MIPNetworkDiscoveryConfiguration.md)
 
 [Uninstall-MIPNetworkDiscovery](Uninstall-MIPNetworkDiscovery.md)

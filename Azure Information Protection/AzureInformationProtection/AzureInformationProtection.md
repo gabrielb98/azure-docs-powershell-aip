@@ -107,7 +107,7 @@ Imports a local configuration for Network Discovery network scan jobs.
 ### [Install-AIPScanner](Install-AIPScanner.md)
 Installs the Azure Information Protection scanner.
 
-### [Install-MIPNetworkDiscovery](Install-AIPNetworkDiscovery.md)
+### [Install-MIPNetworkDiscovery](Install-MIPNetworkDiscovery.md)
 Installs the Network Discovery service.
 
 ### [New-AIPCustomPermissions](New-AIPCustomPermissions.md)
@@ -159,7 +159,7 @@ Deprecated: Updates a profile of configuration settings for a data repository to
 Deprecated: Sets a list of file types to scan or exclude from scanning by the Azure Information Protection scanner.
 
 ### [Set-MIPNetworkDiscovery](Set-MIPNetworkDiscovery.md)
-TBD
+Updates the installation settings for the Network Discovery service.
 
 ### [Set-MIPNetworkDiscoveryConfiguration](Set-MIPNetworkDiscoveryConfiguration.md)
 Sets optional configurations for the Network Discovery service.
