@@ -19,7 +19,7 @@ Remove-MIPScannerRepository
 ```
 
 ## DESCRIPTION
-Deletes any repositories described by the [Repositories](#repositories) parameter, or returned by a piped [Get-MIPScannerRepository](Get-MIPScannerRepository.md) cmdlet.
+Deletes any repositories described by the **Repositories** parameter, or returned by a piped [Get-MIPScannerRepository](Get-MIPScannerRepository.md) cmdlet.
 
 For more information about content scan jobs, see the [Azure Information Protection on-premises scanner documentation](/information-protection/deploy-aip-scanner-configure-install#create-a-content-scan-job).
 

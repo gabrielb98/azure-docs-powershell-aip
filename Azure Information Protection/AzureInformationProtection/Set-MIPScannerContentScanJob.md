@@ -81,7 +81,7 @@ This example defines the content scan job with a specific label used as the defa
 ### -AllowLabelDowngrade
 Determines whether the content scan job allows for labeling downgrade actions.
 
-Relevant only when the [RelabelFiles](#relabelfiles) parameter is set to **true**.
+Relevant only when the **RelabelFiles** parameter is set to **true**.
 
 ```yaml
 Type: OnOffEnum
@@ -114,7 +114,7 @@ Accept wildcard characters: False
 ### -DefaultLabelId
 Defines the ID of the default label used when automatically labeling content with a default label.
 
-Mandatory if the [DefaultLabelType](#defaultlabeltype) parameter is set to **custom**.
+Mandatory if the **DefaultLabelType** parameter is set to **custom**.
 
 ```yaml
 Type: Guid
@@ -131,7 +131,7 @@ Accept wildcard characters: False
 ### -DefaultLabelType
 Determines the type of default label used when automatically labeling content with a default label.
 
-When used, define the label ID you want to use as the default ID using the [DefaultLabelId](#defaultlabelid) parameter.
+When used, define the label ID you want to use as the default ID using the **DefaultLabelId** parameter.
 
 ```yaml
 Type: DefaultLabelType
@@ -181,7 +181,7 @@ Accept wildcard characters: False
 Determines whether the content scan job uses the Microsoft 365 built-in data loss prevention (DLP) sensitivity information types when scanning your content.
 
 > [!TIP]
-> If you configure this parameter, you may also want to configure a specific repository owner using the [RepositoryOwner](#repositoryowner) parameter.
+> If you configure this parameter, you may also want to configure a specific repository owner using the **RepositoryOwner** parameter.
 > 
 
 ```yaml
@@ -216,7 +216,7 @@ Accept wildcard characters: False
 ### -EnforceDefaultLabel
 Determines whether using a default label is always used when relabeling content.
 
-Relevant only when the [RelabelFiles](#relabelfiles) parameter is set to **true**.
+Relevant only when the **RelabelFiles** parameter is set to **true**.
 
 ```yaml
 Type: OnOffEnum
@@ -234,7 +234,7 @@ Accept wildcard characters: False
 ### -ExcludeFileTypes
 Determines any file types that are ignored during your content scan job. Define multiple file types using a comma-separated list.
 
-Define either this parameter, or the [-IncludeFileTypes](#includefiletypes) parameter, but not both.
+Define either this parameter, or the **IncludeFileTypes** parameter, but not both.
 
 ```yaml
 Type: String
@@ -251,7 +251,7 @@ Accept wildcard characters: False
 ### -IncludeFileTypes
 Explicitly determines the file types that are scanned by your content scan job. Define multiple file types using a comma-separated list.
 
-Define either this parameter, or the [-ExcludeFileTypes](#excludefiletypes) parameter, but not both.
+Define either this parameter, or the **ExcludeFileTypes** parameter, but not both.
 
 ```yaml
 Type: String
@@ -318,8 +318,8 @@ Determines whether the content scan job is allowed to relabel files.
 
 > [!TIP]
 > When using this parameter, use the following additional parameters as needed:
-> - [EnforceDefaultLabel](#enforcedefaultlabel)
-> - [AllowLabelDowngrade](#allowlabeldowngrade)
+> - **EnforceDefaultLabel**
+> - **AllowLabelDowngrade**
 > 
 
 ```yaml
@@ -338,7 +338,7 @@ Accept wildcard characters: False
 ### -RepositoryOwner
 Defines the owner of the repositories configured for the content scan job.
 
-Relevant only when the [EnableDlp](#enabledlp) parameter is set to **true**.
+Relevant only when the **EnableDlp** parameter is set to **true**.
 
 ```yaml
 Type: String

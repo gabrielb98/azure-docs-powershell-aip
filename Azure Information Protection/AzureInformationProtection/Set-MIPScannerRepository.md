@@ -50,8 +50,8 @@ Determines whether the content scan job allows for labeling downgrade actions.
 
 Relevant only when the following parameters are set to **true**:
 
-- [OverrideContentScanJob](#overridecontentscanjob)
-- [RelabelFiles](#relabelfiles)
+- **OverrideContentScanJob**
+- **RelabelFiles**
 
 ```yaml
 Type: OnOffEnum
@@ -84,9 +84,9 @@ Accept wildcard characters: False
 ### -DefaultLabelId
 Defines the ID of the default label used when automatically labeling content with a default label.
 
-- Mandatory if the [DefaultLabelType](#defaultlabeltype) parameter is set to **custom**.
+- Mandatory if the **DefaultLabelType** parameter is set to **custom**.
 
-- Relevant only when the [OverrideContentScanJob](#overridecontentscanjob) parameter is set to **true**.
+- Relevant only when the **OverrideContentScanJob** parameter is set to **true**.
 
 ```yaml
 Type: Guid
@@ -103,9 +103,9 @@ Accept wildcard characters: False
 ### -DefaultLabelType
 Determines the type of default label used when automatically labeling content with a default label.
 
-When used, define the label ID you want to use as the default ID using the [DefaultLabelId](#defaultlabelid) parameter.
+When used, define the label ID you want to use as the default ID using the **DefaultLabelId** parameter.
 
-Relevant only when the [OverrideContentScanJob](#overridecontentscanjob) parameter is set to **true**.
+Relevant only when the **OverrideContentScanJob** parameter is set to **true**.
 
 ```yaml
 Type: DefaultLabelType
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 ### -DefaultOwner
 Defines the default owner value used for the files scanned, using the account email address. By default, this is the scanner account.
 
-Relevant only when the [OverrideContentScanJob](#overridecontentscanjob) parameter is set to **true**.
+Relevant only when the **OverrideContentScanJob** parameter is set to **true**.
 
 ```yaml
 Type: String
@@ -141,10 +141,10 @@ Accept wildcard characters: False
 Determines whether the content scan job uses the Microsoft 365 built-in data loss prevention (DLP) sensitivity information types when scanning your content.
 
 > [!TIP]
-> If you configure this parameter, you may also want to configure a specific repository owner using the [RepositoryOwner](#repositoryowner) parameter.
+> If you configure this parameter, you may also want to configure a specific repository owner using the **RepositoryOwner** parameter.
 > 
 
-Relevant only when the [OverrideContentScanJob](#overridecontentscanjob) parameter is set to **true**.
+Relevant only when the **OverrideContentScanJob** parameter is set to **true**.
 
 ```yaml
 Type: OnOffEnum
@@ -162,7 +162,7 @@ Accept wildcard characters: False
 ### -Enforce
 Determines whether the content scan job enforces content scanning and labeling according to your policy.
 
-Relevant only when the [OverrideContentScanJob](#overridecontentscanjob) parameter is set to **true**.
+Relevant only when the **OverrideContentScanJob** parameter is set to **true**.
 
 ```yaml
 Type: OnOffEnum
@@ -182,8 +182,8 @@ Determines whether using a default label is always used when relabeling content.
 
 Relevant only when the following parameters are set to **true**:
 
-- [RelabelFiles](#relabelfiles)
-- [OverrideContentScanJob](#overridecontentscanjob) 
+- **RelabelFiles**
+- **OverrideContentScanJob** 
 
 ```yaml
 Type: OnOffEnum
@@ -201,9 +201,9 @@ Accept wildcard characters: False
 ### -ExcludeFileTypes
 Determines any file types that are ignored during your content scan job. Define multiple file types using a comma-separated list.
 
-Define either this parameter, or the [-IncludeFileTypes](#includefiletypes) parameter, but not both.
+Define either this parameter, or the **IncludeFileTypes** parameter, but not both.
 
-Relevant only when the [OverrideContentScanJob](#overridecontentscanjob) parameter is set to **true**.
+Relevant only when the **OverrideContentScanJob** parameter is set to **true**.
 
 ```yaml
 Type: String
@@ -220,9 +220,9 @@ Accept wildcard characters: False
 ### -IncludeFileTypes
 Explicitly determines the file types that are scanned by your content scan job. Define multiple file types using a comma-separated list.
 
-Define either this parameter, or the [-ExcludeFileTypes](#excludefiletypes) parameter, but not both.
+Define either this parameter, or the **ExcludeFileTypes** parameter, but not both.
 
-Relevant only when the [OverrideContentScanJob](#overridecontentscanjob) parameter is set to **true**.
+Relevant only when the **OverrideContentScanJob** parameter is set to **true**.
 
 ```yaml
 Type: String
@@ -239,7 +239,7 @@ Accept wildcard characters: False
 ### -LabelFilesByContent
 Determines whether the **Label files based on content** content scan job option is enabled or disabled. 
 
-Relevant only when the [OverrideContentScanJob](#overridecontentscanjob) parameter is set to **true**.
+Relevant only when the **OverrideContentScanJob** parameter is set to **true**.
 
 ```yaml
 Type: OnOffEnum
@@ -290,7 +290,7 @@ Accept wildcard characters: False
 ### -PreserveFileDetails
 Determines whether the file details, including the date modified, last modified, and modified by settings are preserved while scanning and auto-labeling.
 
-Relevant only when the [OverrideContentScanJob](#overridecontentscanjob) parameter is set to **true**.
+Relevant only when the **OverrideContentScanJob** parameter is set to **true**.
 
 ```yaml
 Type: OnOffEnum
@@ -308,7 +308,7 @@ Accept wildcard characters: False
 ### -RelabelFiles
 Determines whether the content scan job is allowed to relabel files.
 
-Relevant only when the [OverrideContentScanJob](#overridecontentscanjob) parameter is set to **true**.
+Relevant only when the **OverrideContentScanJob** parameter is set to **true**.
 
 ```yaml
 Type: OnOffEnum
@@ -328,8 +328,8 @@ Defines the owner of the repositories configured for the content scan job.
 
 Relevant only when the following parameters are set to **true**:
 
-- [OverrideContentScanJob](#overridecontentscanjob)
-- [EnableDlp](#enabledlp)
+- **OverrideContentScanJob**
+- **EnableDlp**
 
 ```yaml
 Type: String
