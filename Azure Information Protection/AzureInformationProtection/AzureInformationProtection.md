@@ -34,10 +34,7 @@ The .dll file for this module is *AIP.dll*.
 Deprecated: Adds a data repository to be scanned by the Azure Information Protection scanner. 
 
 ### [Add-AIPScannerScannedFileTypes](Add-AIPScannerScannedFileTypes.md)
-Deprecated: Adds new file types to a configured list of file types to scan or exclude from scanning by the Azure Information Protection scanner.
-
-### [Add-MIPScannerRepository](Add-MIPScannerRepository.md)
-Adds a repository to an Azure Information Protection content scan job.
+Deprecated: Adds new file types to a configured list of file types to scan or exclude from scanning by the Azure Information Protection scanner
 
 ### [Clear-AIPAuthentication](Clear-AIPAuthentication.md)
 Clears the user settings and RMS templates for the current user.
@@ -74,12 +71,6 @@ Gets a list of Azure Information Protection network scan jobs configured in your
 
 ### [Get-MIPNetworkDiscoveryStatus](Get-MIPNetworkDiscoveryStatus.md)
 Gets the current status of the Network Discovery service.
-
-### [Get-MIPScannerContentScanJob](Get-MIPScannerContentScanJob.md)
-Gets details about an Azure Information Protection content scan job.
-
-### [Get-MIPScannerRepository](Get-MIPScannerRepository.md)
-Gets repository data for an Azure Information Protection content scan job.
 
 ### [Get-RMSFileStatus](Get-RMSFileStatus.md)
 Gets the RMS protection status of a specified file.
@@ -131,12 +122,6 @@ Deprecated: Removes a data repository for the Azure Information Protection scann
 ### [Remove-AIPScannerScannedFileTypes](Remove-AIPScannerScannedFileTypes.md)
 Deprecated: Removes file types from a configured list of file types to scan or exclude from scanning by the Azure Information Protection scanner.
 
-### [Remove-MIPScannerContentScanJob](Remove-MIPScannerContentScanJob.md)
-Deletes the entire Azure Information Protection content scan job.
-
-### [Remove-MIPScannerRepository](Remove-MIPScannerRepository.md)
-Removes a repository from an Azure Information Protection content scan job.
-
 ### [Set-AIPAuthentication](Set-AIPAuthentication.md)
 Sets the authentication credentials for the Azure Information Protection client.
 
@@ -158,17 +143,8 @@ Deprecated: Updates a profile of configuration settings for a data repository to
 ### [Set-AIPScannerScannedFileTypes](Set-AIPScannerScannedFileTypes.md)
 Deprecated: Sets a list of file types to scan or exclude from scanning by the Azure Information Protection scanner.
 
-### [Set-MIPNetworkDiscovery](Set-MIPNetworkDiscovery.md)
-TBD
-
 ### [Set-MIPNetworkDiscoveryConfiguration](Set-MIPNetworkDiscoveryConfiguration.md)
 Sets optional configurations for the Network Discovery service.
-
-### [Set-MIPScannerContentScanJob](Set-MIPScannerContentScanJob.md)
-Defines settings for an Azure Information Protection content scan job.
-
-### [Set-MIPScannerRepository](Set-MIPScannerRepository.md)
-Updates an existing repository in an Azure Information Protection content scan job.
 
 ### [Set-RMSServerAuthentication](Set-RMSServerAuthentication.md)
 Sets the server mode, which is required for non-interactive sessions.
