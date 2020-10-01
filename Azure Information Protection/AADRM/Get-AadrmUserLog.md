@@ -30,7 +30,7 @@ When you specify a time with a date (for example, -ForDate "2/1/2016 15:00:00"),
 
 See the examples for how you might need to change your **DateTime** values, to accommodate the conversion needed for your local time.
 
-For more information about usage logging and a step-by-step example, see [Logging and analyzing usage of the Azure Rights Management service](https://docs.microsoft.com/information-protection/deploy-use/log-analyze-usage).
+For more information about usage logging and a step-by-step example, see [Logging and analyzing usage of the Azure Rights Management service](/information-protection/deploy-use/log-analyze-usage).
 
 ## EXAMPLES
 
@@ -92,7 +92,7 @@ Specifies a date (and optionally, a time) for the log file as a **DateTime** obj
 
 Use this parameter when you do not use the *FromDate* parameter. 
 
-To obtain a **DateTime** object, use the [Get-Date](http://go.microsoft.com/fwlink/?LinkID=293966) cmdlet.
+To obtain a **DateTime** object, use the [Get-Date](/powershell/module/Microsoft.PowerShell.Utility/Get-Date?viewFallbackFrom=powershell-4.0) cmdlet.
 
 ```yaml
 Type: DateTime
@@ -187,6 +187,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-Date](http://go.microsoft.com/fwlink/?LinkID=293966)
+[Get-Date](/powershell/module/Microsoft.PowerShell.Utility/Get-Date?viewFallbackFrom=powershell-4.0)
 
-[Logging and analyzing usage of the Azure Rights Management service](https://docs.microsoft.com/information-protection/deploy-use/log-analyze-usage)
+[Logging and analyzing usage of the Azure Rights Management service](/information-protection/deploy-use/log-analyze-usage)

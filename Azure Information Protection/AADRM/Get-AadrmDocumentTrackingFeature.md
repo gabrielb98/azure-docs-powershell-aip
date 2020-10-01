@@ -23,7 +23,7 @@ The **Get-AadrmDocumentTrackingFeature** cmdlet indicates whether the Azure Info
 
 You must use PowerShell to get this information about document tracking; you cannot get this information by using a management portal.
 
-For additional information about the document tracking site, see [Configuring and using document tracking for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-document-tracking) from the Azure Information Protection client administrator guide.
+For additional information about the document tracking site, see [Configuring and using document tracking for Azure Information Protection](/information-protection/rms-client/client-admin-guide-document-tracking) from the Azure Information Protection client administrator guide.
 
 ## EXAMPLES
 
