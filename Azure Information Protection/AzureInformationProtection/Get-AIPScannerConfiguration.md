@@ -40,7 +40,7 @@ This command gets the current PowerShell configuration settings for the Azure In
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
-For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -67,4 +67,3 @@ For more information, see [about_CommonParameters](https://go.microsoft.com/fwli
 [Uninstall-AIPScanner](./Uninstall-AIPScanner.md)
 
 [Update-AIPScanner](./Update-AIPScanner.md)
-

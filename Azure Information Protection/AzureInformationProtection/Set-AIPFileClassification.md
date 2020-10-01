@@ -28,9 +28,9 @@ Set-AIPFileClassification [-JustificationMessage <String>] [-Force] [-WhatIf] [-
 ## DESCRIPTION
 The Set-AIPFileClassification cmdlet can automatically apply a label for one or more files when you configure labels for automatic classification. For more information, see the following:
 
-- For the Azure Information Protection client (classic): [How to configure conditions for automatic and recommended classification for Azure Information Protection](https://docs.microsoft.com/information-protection/configure-policy-classification).
+- For the Azure Information Protection client (classic): [How to configure conditions for automatic and recommended classification for Azure Information Protection](/information-protection/configure-policy-classification).
 
-- For the Azure Information Protection unified labeling client: [Apply a sensitivity label to content automatically](https://docs.microsoft.com/Office365/SecurityCompliance/apply_sensitivity_label_automatically).
+- For the Azure Information Protection unified labeling client: [Apply a sensitivity label to content automatically](/Office365/SecurityCompliance/apply_sensitivity_label_automatically).
 
 When this cmdlet is run, it inspects the file contents and if the configured conditions are met for a label, that label is applied. This action will automatically apply protection if the selected label applies protection. For the Azure Information Protection client, because labels support removing protection, protection can also be removed from files when you run this cmdlet.
 
@@ -38,9 +38,9 @@ By default, if the file already has a label, the existing label or protection is
 
 For both clients, you can run this cmdlet non-interactively. For instructions, see the following documentation in the admin guides:
 
-- Classic client: [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection).
+- Classic client: [How to label files non-interactively for Azure Information Protection](/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection).
 
-- Unified labeling client: [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/clientv2-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection).
+- Unified labeling client: [How to label files non-interactively for Azure Information Protection](/information-protection/rms-client/clientv2-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection).
 
 NOTE: When you run this cmdlet with the Azure Information Protection unified labeling client, there are differences from the Azure Information Protection client:
 
@@ -351,7 +351,7 @@ Note: This parameter is supported only with the Azure Information Protection uni
 
 Specify the sensitive information types to be discovered when you use the *WhatIf* parameter.
 
-If you want to search for specific sensitive information types, specify the **Entity id** number for that information type, which you can find listed in [Sensitive information types in Exchange Server](https://docs.microsoft.com/Exchange/policy-and-compliance/data-loss-prevention/sensitive-information-types?view=exchserver-2019). For example, "50842eb7-edc8-4019-85dd-5a5c1f2bb085" is the number to specify for the Credit Card Number sensitive information type.
+If you want to search for specific sensitive information types, specify the **Entity id** number for that information type, which you can find listed in [Sensitive information types in Exchange Server](/Exchange/policy-and-compliance/data-loss-prevention/sensitive-information-types?view=exchserver-2019). For example, "50842eb7-edc8-4019-85dd-5a5c1f2bb085" is the number to specify for the Credit Card Number sensitive information type.
 
 ```yaml
 Type: String[]
@@ -493,4 +493,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-AIPAuthentication](./Set-AIPAuthentication.md)
 
 [Set-AIPFileLabel](./Set-AIPFileLabel.md)
-

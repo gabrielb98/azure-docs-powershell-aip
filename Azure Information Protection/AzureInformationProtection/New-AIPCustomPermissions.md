@@ -64,7 +64,7 @@ Accept wildcard characters: False
 ### -Permissions
 Specifies a permissions level that groups usage rights that are typically used together. Use this parameter and the *Users* parameter to grant usage rights to specified users.
 
-To see which individual usage rights are included in each of the permissions levels, see [Rights included in permission levels](https://docs.microsoft.com/azure/information-protection/configure-usage-rights#rights-included-in-permissions-levels).
+To see which individual usage rights are included in each of the permissions levels, see [Rights included in permission levels](/azure/information-protection/configure-usage-rights#rights-included-in-permissions-levels).
 
 ```yaml
 Type: Permissions
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -109,6 +109,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Set-AIPFileLabel](Set-AIPFileLabel.md)
-
-
-
