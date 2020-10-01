@@ -27,7 +27,7 @@ You must use PowerShell to configure your tenant key; you cannot do this configu
 
 Azure Information Protection now uses Azure Key Vault to manage and monitor a customer-managed tenant key. To create a customer-managed tenant key for the first time, run [Use-AipServiceKeyVaultKey](./Use-AipServiceKeyVaultKey.md) instead of this cmdlet.
 
-For more information about how to manage your Azure Information Protection tenant key, see [Planning and implementing your Azure Information Protection tenant key](https://docs.microsoft.com/information-protection/plan-design/plan-implement-tenant-key).
+For more information about how to manage your Azure Information Protection tenant key, see [Planning and implementing your Azure Information Protection tenant key](/information-protection/plan-design/plan-implement-tenant-key).
 
 Before you run this cmdlet, you will need to identify your original customer-managed tenant key. To do that, use the [Get-AipServiceKeys](./Get-AipServiceKeys.md) cmdlet. From the output and identified key, you will need the KeyIdentifier value for the *KeyIdentifier* parameter when you run this cmdlet.
 
@@ -124,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -138,4 +138,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Use-AipServiceKeyVaultKey](./Use-AipServiceKeyVaultKey.md)
 
-[Planning and implementing your Azure Information Protection tenant key](https://docs.microsoft.com/information-protection/plan-design/plan-implement-tenant-key)
+[Planning and implementing your Azure Information Protection tenant key](/information-protection/plan-design/plan-implement-tenant-key)

@@ -20,7 +20,7 @@ Get-AipService [<CommonParameters>]
 ## DESCRIPTION
 The **Get-AipService** cmdlet gets the activation status of the protection service from Azure Information Protection for your tenant. The status of the protection service is enabled (activated) or disabled (deactivated).
 
-You can also view this information in a management portal. For more information, see [Activating the protection service from Azure Information Protection](https://docs.microsoft.com/information-protection/deploy-use/activate-service).
+You can also view this information in a management portal. For more information, see [Activating the protection service from Azure Information Protection](/information-protection/deploy-use/activate-service).
 
 ## EXAMPLES
 
@@ -34,7 +34,7 @@ This command gets your tenant's activation status of the protection service from
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -47,5 +47,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Disable-AipService](./Disable-AipService.md)
 
 [Enable-AipService](./Enable-AipService.md)
-
-

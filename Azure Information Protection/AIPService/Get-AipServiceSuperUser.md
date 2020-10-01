@@ -22,7 +22,7 @@ The **Get-AipServiceSuperUser** cmdlet gets the super users for Azure Informatio
 
 You must use PowerShell to configure super users; you cannot do this configuration by using a management portal.
 
-For more information about super users, see [Configuring super users for Azure Information Protection and discovery services or data recovery](https://docs.microsoft.com/information-protection/deploy-use/configure-super-users).
+For more information about super users, see [Configuring super users for Azure Information Protection and discovery services or data recovery](/information-protection/deploy-use/configure-super-users).
 
 ## EXAMPLES
 
@@ -36,7 +36,7 @@ This command lists the super users for Information Protection.
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -52,4 +52,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Enable-AipServiceSuperUserFeature](./Enable-AipServiceSuperUserFeature.md)
 
-[Configuring super users for Azure Information Protection and discovery services or data recovery](https://docs.microsoft.com/information-protection/deploy-use/configure-super-users)
+[Configuring super users for Azure Information Protection and discovery services or data recovery](/information-protection/deploy-use/configure-super-users)
