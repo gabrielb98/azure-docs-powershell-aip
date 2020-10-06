@@ -29,7 +29,7 @@ This cmdlet does not apply if you use your user account to protect or unprotect 
     
     Server mode for AD RMS requires the current GA version of the Azure Information Protection client.
 
-For information how to get the identifiers that the service principal requires for Azure RMS, and how to grant the permissions for AD RMS, see [Using PowerShell with the Azure Information Protection client](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell) from the Azure Information Protection client admin guide.
+For information how to get the identifiers that the service principal requires for Azure RMS, and how to grant the permissions for AD RMS, see [Using PowerShell with the Azure Information Protection client](/information-protection/rms-client/client-admin-guide-powershell) from the Azure Information Protection client admin guide.
 
 This cmdlet is not supported for the Azure Information Protection unified labeling client.
 
@@ -133,4 +133,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-RMSServerAuthentication](./Get-RMSServerAuthentication.md)
-

@@ -22,7 +22,7 @@ Protect-RMSFile [-File <String>] [-Folder <String>] [-InPlace] [-Recurse] [-Temp
 ## DESCRIPTION
 The **Protect-RMSFile** cmdlet protects a file or all files in a specified folder by using Azure RMS or AD RMS. If the file was previously protected, it will be protected again, to apply any changes such as those that might be made to the template that is being used to protect the file.
 
-Multiple file types can be protected in the same way that the Azure Information Protection client can protect files when you use the "Classify and protect" right-click option from File Explorer. Different levels of protection are automatically applied (native or generic), depending on the file type. You can change the level of protection by editing the registry. In addition, some files change their file name extension after they are protected by Rights Management. For more information, see the [File types supported for protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-file-types#file-types-supported-for-protection) section from the Azure Information Protection client admin guide.
+Multiple file types can be protected in the same way that the Azure Information Protection client can protect files when you use the "Classify and protect" right-click option from File Explorer. Different levels of protection are automatically applied (native or generic), depending on the file type. You can change the level of protection by editing the registry. In addition, some files change their file name extension after they are protected by Rights Management. For more information, see the [File types supported for protection](/information-protection/rms-client/client-admin-guide-file-types#file-types-supported-for-protection) section from the Azure Information Protection client admin guide.
 
 Before you run this cmdlet, you must run [Get-RMSTemplate](./Get-RMSTemplate.md) to download the templates onto your computer. If the template that you want to use has been modified since you ran this cmdlet, run it again with the **-force** parameter to download the revised template.
 
@@ -40,7 +40,7 @@ You cannot run this command concurrently but must wait for the original command 
 
 This cmdlet writes to the following log files: **Success.log**, **Failure.log**, and **Debug.log** in %localappdata%\Microsoft\MSIPC\pscmdlet\Logs\\<GUID>.
 
-Tip: For step-by-step instructions to use this cmdlet to protect files on a Windows Server file share, using File Resource Manager and File Classification Infrastructure, see [RMS Protection with Windows Server File Classification Infrastructure (FCI)](https://docs.microsoft.com/information-protection/rms-client/configure-fci).
+Tip: For step-by-step instructions to use this cmdlet to protect files on a Windows Server file share, using File Resource Manager and File Classification Infrastructure, see [RMS Protection with Windows Server File Classification Infrastructure (FCI)](/information-protection/rms-client/configure-fci).
 
 This cmdlet is not supported for the Azure Information Protection unified labeling client.
 
@@ -138,7 +138,7 @@ Note that unless your email address is user1@contoso.com, you will not be able t
 ### -DoNotPersistEncryptionKey
 Prevents a self-granted end user license for the Rights Management issuer from being saved when a file is protected. This license lets the Rights Management issuer open the protected file without authenticating to the Rights Management service. This helps to ensure that the person who ran this cmdlet can always open their own files that they protected, even when that person is offline. It also results in minimal delays for that user to open these protected files.  
 
-The Rights Management issuer is the account that protects the files. For more information, see [Rights Management issuer and Rights Management owner](https://docs.microsoft.com/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner). 
+The Rights Management issuer is the account that protects the files. For more information, see [Rights Management issuer and Rights Management owner](/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner). 
 
 By default, this self-granted end user license is saved in both the file itself and on the computer from which the cmdlet is run. The file name starts with EUL and it is created in %localappdata%\Microsoft\MSIPC. Use this parameter to prevent this end user license from saving in the file, on the computer, or both. Specifying this parameter is appropriate if you are protecting files on behalf of others, for example, with Windows Server FCI. In this scenario, the Rights Management issuer will not be opening the protected files and therefore creating and saving the end user license decreases the protection performance and unnecessarily generates a lot of files that can fill up the available disk space.
 
@@ -247,7 +247,7 @@ Accept wildcard characters: False
 ### -OwnerEmail
 Specifies the Rights Management owner of the protected file or files by email address.
 
-By default, the account running this cmdlet is both the Rights Management issuer and the Rights Management owner of the protected file. This parameter lets you assign a different Rights Management owner to the protected file so that the specified account has all usage rights (Full Control) for the file and can always access it. The Rights Management owner is independent from the Windows file system owner. For more information, see [Rights Management issuer and Rights Management owner](https://docs.microsoft.com/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner).
+By default, the account running this cmdlet is both the Rights Management issuer and the Rights Management owner of the protected file. This parameter lets you assign a different Rights Management owner to the protected file so that the specified account has all usage rights (Full Control) for the file and can always access it. The Rights Management owner is independent from the Windows file system owner. For more information, see [Rights Management issuer and Rights Management owner](/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner).
 
 If you don't specify a value for this parameter, the cmdlet will use the email address of your authenticated session to identify the Rights Management owner of the protected file or files. If you use AD RMS, or Azure RMS with a user account to protect files, this will be your email address. If you use Azure RMS with a service principal account, this email address will be long string of numbers and letters. This email address is displayed to users who do not have permssions to view the protected document, so that they can request permissions.
 

@@ -35,9 +35,9 @@ When your command successfully runs, the key is added as an archived customer-ma
 
 Use Azure Key Vault to centrally manage and monitor use of the key that you specified. All calls to your tenant key will be made to the key vault that your organization owns. You can confirm which key you are using in Key Vault by using the [Get-AipServiceKeys](./Get-AipServiceKeys.md) cmdlet.
 
-For more information about the types of tenant keys that Azure Information Protection supports, see [Planning and implementing your Azure Information Protection tenant key](https://docs.microsoft.com/information-protection/plan-design/plan-implement-tenant-key).
+For more information about the types of tenant keys that Azure Information Protection supports, see [Planning and implementing your Azure Information Protection tenant key](/information-protection/plan-design/plan-implement-tenant-key).
 
-For more information about Azure Key Vault, see [What is Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-whatis).
+For more information about Azure Key Vault, see [What is Azure Key Vault](/azure/key-vault/key-vault-whatis).
 
 ## EXAMPLES
 
@@ -132,7 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -145,4 +145,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AipServiceKeys](./Get-AipServiceKeys.md)
 
 [Set-AipServiceKeyProperties](./Set-AipServiceKeyProperties.md)
-

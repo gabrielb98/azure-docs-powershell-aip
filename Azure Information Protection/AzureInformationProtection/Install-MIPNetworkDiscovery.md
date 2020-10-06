@@ -21,7 +21,7 @@ Install-MIPNetworkDiscovery [-ServiceUserCredentials] <PSCredential>
 ## DESCRIPTION
 The **Install-MIPNetworkDiscovery** cmdlet installs the Network Discovery service, which enables AIP administrators to scan a specified IP address or range for possibly risky repositories, using a network scan job.
 
-Use network scan job results to identify additional repositories in your network to further scan using a content scan job. For more information, see [Create a network scan job](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner-configure-install#create-a-network-scan-job-public-preview).
+Use network scan job results to identify additional repositories in your network to further scan using a content scan job. For more information, see [Create a network scan job](/azure/information-protection/deploy-aip-scanner-configure-install#create-a-network-scan-job-public-preview).
 
 > [!IMPORTANT]
 > You must run this cmdlet before you run any other cmdlet for the Network Discovery service.
@@ -125,10 +125,10 @@ Specifies a **PSCredential** object for the service account to run the Azure Inf
 - If you do not specify this parameter, you are prompted for both your user name and password.
 
 > [!TIP]
-> To obtain a PSCredential object, use the [**Get-Credential**](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential) cmdlet. For more information, type `Get-Help Get-Cmdlet`.
+> To obtain a PSCredential object, use the [**Get-Credential**](/powershell/module/microsoft.powershell.security/get-credential) cmdlet. For more information, type `Get-Help Get-Cmdlet`.
 > 
 
-This account must be an Active Directory account. For additional requirements, see [Prerequisites for the Azure Information Protection scanner](https://docs.microsoft.com/information-protection/deploy-aip-scanner#prerequisites-for-the-azure-information-protection-scanner).
+This account must be an Active Directory account. For additional requirements, see [Prerequisites for the Azure Information Protection scanner](/information-protection/deploy-aip-scanner#prerequisites-for-the-azure-information-protection-scanner).
 
 ```yaml
 Type: PSCredential
@@ -153,7 +153,7 @@ The value for this parameter is a **PSCredential** object for the admin account,
 - If you do not specify this parameter, you are prompted for both your user name and password.
 
 > [!TIP]
-> To obtain a PSCredential object, use the [**Get-Credential**](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential) cmdlet. For more information, type `Get-Help Get-Cmdlet`.
+> To obtain a PSCredential object, use the [**Get-Credential**](/powershell/module/microsoft.powershell.security/get-credential) cmdlet. For more information, type `Get-Help Get-Cmdlet`.
 > 
 
 ```yaml
@@ -172,7 +172,7 @@ Accept wildcard characters: False
 
 Specifies the SQL Server instance on which to create a database for the Network Discovery service.
 
-For information about the SQL Server requirements, see [Prerequisites for the Azure Information Protection scanner](https://docs.microsoft.com/information-protection/deploy-aip-scanner#prerequisites-for-the-azure-information-protection-scanner).
+For information about the SQL Server requirements, see [Prerequisites for the Azure Information Protection scanner](/information-protection/deploy-aip-scanner#prerequisites-for-the-azure-information-protection-scanner).
 
 - For the default instance, specify the server name. For example: `SQLSERVER1`. 
 - For a named instance, specify the server name and instance name. For example: `SQLSERVER1\AIPSCANNER`.
@@ -201,7 +201,7 @@ The value for this parameter is a **PSCredential** object for a weak domain acco
 - If you do not specify this parameter, you are prompted for both your user name and password.
 
 > [!TIP]
-> To obtain a PSCredential object, use the [**Get-Credential**](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential) cmdlet. For more information, type `Get-Help Get-Cmdlet`.
+> To obtain a PSCredential object, use the [**Get-Credential**](/powershell/module/microsoft.powershell.security/get-credential) cmdlet. For more information, type `Get-Help Get-Cmdlet`.
 > 
 
 ```yaml

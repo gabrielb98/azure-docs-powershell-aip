@@ -23,7 +23,7 @@ The **Get-AadrmSuperUserGroup** cmdlet gets the email address of the Azure Right
 
 You must use PowerShell to configure super users; you cannot do this configuration by using a management portal.
 
-For more information about super users, see [Configuring super users for Azure Rights Management and discovery services or data recovery](https://docs.microsoft.com/information-protection/deploy-use/configure-super-users).
+For more information about super users, see [Configuring super users for Azure Rights Management and discovery services or data recovery](/information-protection/deploy-use/configure-super-users).
 
 ## EXAMPLES
 
@@ -56,4 +56,4 @@ This operation returns the super user group email address as a **String**. If no
 
 [Set-AadrmSuperUserGroup](./Set-AadrmSuperUserGroup.md)
 
-[Configuring super users for Azure Rights Management and discovery services or data recovery](https://docs.microsoft.com/information-protection/deploy-use/configure-super-users)
+[Configuring super users for Azure Rights Management and discovery services or data recovery](/information-protection/deploy-use/configure-super-users)
