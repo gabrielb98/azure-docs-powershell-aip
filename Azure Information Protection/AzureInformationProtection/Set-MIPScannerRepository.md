@@ -30,7 +30,7 @@ For more information about content scan jobs, see the [Azure Information Protect
 
 ### Example 1 Update the repository details using the configured content scan job settings
 ```PowerShell
-PS C:\WINDOWS\system32> Set-MIPScannerRepository -Path 'c:\repoToScan'
+PS C:\WINDOWS\system32> Set-MIPScannerRepository -OverrideContentScanJob Off -Path 'c:\repoToScan'
 ```
 
 This example sets the **repoToScan** repository settings in your content scan job to use content scan job's current settings.
@@ -48,7 +48,7 @@ This example sets the **repoToScan** repository settings to override the current
 ### -AllowLabelDowngrade
 Determines whether the content scan job allows for labeling downgrade actions.
 
-Relevant only when the following parameters are set to **true**:
+Relevant only when the following parameters are set to **on**:
 
 - **OverrideContentScanJob**
 - **RelabelFiles**
@@ -180,7 +180,7 @@ Accept wildcard characters: False
 ### -EnforceDefaultLabel
 Determines whether using a default label is always used when relabeling content.
 
-Relevant only when the following parameters are set to **true**:
+Relevant only when the following parameters are set to **on**:
 
 - **RelabelFiles**
 - **OverrideContentScanJob** 
@@ -326,7 +326,7 @@ Accept wildcard characters: False
 ### -RepositoryOwner
 Defines the owner of the repositories configured for the content scan job.
 
-Relevant only when the following parameters are set to **true**:
+Relevant only when the following parameters are set to **on**:
 
 - **OverrideContentScanJob**
 - **EnableDlp**

@@ -48,7 +48,7 @@ This example adds the **repoToScan** repository to your content scan job, overri
 ### -AllowLabelDowngrade
 Determines whether the content scan job allows for labeling downgrade actions.
 
-Relevant only when the following parameters are set to **true**:
+Relevant only when the following parameters are set to **on**:
 
 - **OverrideContentScanJob**
 - **RelabelFiles**
@@ -183,7 +183,7 @@ Accept wildcard characters: False
 ### -EnforceDefaultLabel
 Determines whether using a default label is always used when relabeling content.
 
-Relevant only when the following parameters are set to **true**:
+Relevant only when the following parameters are set to **on**:
 
 - **RelabelFiles**
 - **OverrideContentScanJob** 
@@ -328,9 +328,10 @@ Accept wildcard characters: False
 ```
 
 ### -RepositoryOwner
-Defines the owner of the repositories configured for the content scan job.
+Specifies the SAMAccountname (domain\user), UPN (user@domain), or SID of a group that owns the repository.
+The owners are granted full control permissions on file if the permissions on the file are changed by matched DLP rule.
 
-Relevant only when the following parameters are set to **true**:
+Relevant only when the following parameters are set to **on**:
 
 - **OverrideContentScanJob**
 - **EnableDlp**

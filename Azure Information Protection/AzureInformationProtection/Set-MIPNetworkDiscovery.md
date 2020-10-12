@@ -63,7 +63,8 @@ PS C:\> Set-MIPNetworkDiscovery -SqlServerInstance SQLSERVER1 -Cluster EU -Servi
 
 ```
 
-This command updates the settings fo the the Network Discovery service by using the SQL Server default instance that runs on the server, named **SQLSERVER1.** 
+This command updates the settings for the the Network Discovery service by using the SQL Server default instance that runs on the server, named **SQLSERVER1**, as well as the settings for the ShareAdminUserAccount and the StandardDomainsUserAccount.  
+
 
 As with the previous example, you are prompted for credentials, and then the command displays the progress, where the install log is located, and the creation of the new Windows Application event log.
 
@@ -123,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -ShareAdminUserAccount
-The user impersonated by the Network Discovery service when scanning the configured network locations to understand whether admin access is available on each location.
+The user impersonated by the Network Discovery service when scanning the configured network locations to obtain full share permissions data for each location.
 
 The value for this parameter is a **PSCredential** object for the admin account, usually the domain administrator account. The PSCredential object is used to get full access, with NTFS permissions, to the network locations you want to scan with your network scan jobs.
 

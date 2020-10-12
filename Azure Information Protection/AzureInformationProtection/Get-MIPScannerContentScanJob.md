@@ -63,7 +63,7 @@ LabelFilesByContent     :
 RelabelFiles            : 
 AllowLabelDowngrade     : 
 EnforceDefaultLabel     : 
-DefaultLabelType        : PolicyDefault
+DefaultLabelType        : 
 DefaultLabelId          :
 DefaultOwner            : 
 RepositoryOwner         :
