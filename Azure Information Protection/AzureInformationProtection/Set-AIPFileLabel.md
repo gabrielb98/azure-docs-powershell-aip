@@ -394,7 +394,7 @@ Accept wildcard characters: False
 ### -RemoveProtection
 Note: This parameter is supported only with the Azure Information Protection unified labeling client.
 
-Removes protection from a file. If the file is labeled, the label is also removed.
+Removes protection from a file. If the file is labeled, the label is not removed.
 
 You must have sufficient usage rights or be a super user for your organization to remove protection from files. For more information, see [Configuring super users for Azure Rights Management and discovery services or data recovery](/azure/information-protection/configure-super-users).
 
