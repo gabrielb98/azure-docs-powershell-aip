@@ -47,7 +47,7 @@ Specifies whether the scanner gets its configuration settings directly from the 
 
 - **Off:** The Network Discovery service is prevented from getting its configuration settings directly from the Azure portal. Instead, the scanner is configured by settings that you import from a file. 
 
-If the scanner cannot support online configuration, you must still configure the network scan jobs in the Azure portal. Then, export the network scan job configuration from the portal to a **.json** file and import this file by using the [Import-**Import-MIPNetworkDiscoveryConfiguration**](./Import-**Import-MIPNetworkDiscoveryConfiguration**.md) cmdlet.
+If the scanner cannot support online configuration, you must still configure the network scan jobs in the Azure portal. Then, export the network scan job configuration from the portal to a **.json** file and import this file by using the [Import-**Import-MIPNetworkDiscoveryConfiguration**](./Import-MIPNetworkDiscoveryConfiguration.md) cmdlet.
 
 ```yaml
 Type: OnlineConfiguration
@@ -63,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

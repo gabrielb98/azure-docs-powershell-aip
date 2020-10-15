@@ -24,7 +24,7 @@ You must use PowerShell to enable document tracking; you cannot do this configur
 
 By default, document tracking is enabled, so you would run this cmdlet only if somebody had previously disabled document tracking for your tenant. When document tracking is enabled, users can access the document tracking site to see the protected documents that they have shared to date. Activity related to shared documents (who opened them, when, from which location) is shown for only when the document tracking site is enabled. For example, a user could revoke a document that they shared when document tracking was disabled but they cannot not see who opened this document when document tracking was disabled.
 
-For additional information about the document tracking site, see [Configuring and using document tracking for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-document-tracking) from the Azure Information Protection client administrator guide.
+For additional information about the document tracking site, see [Configuring and using document tracking for Azure Information Protection](/information-protection/rms-client/client-admin-guide-document-tracking) from the Azure Information Protection client administrator guide.
 
 ## EXAMPLES
 
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -96,4 +96,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Disable-AipServiceDocumentTrackingFeature](./Disable-AipServiceDocumentTrackingFeature.md)
 
 [Get-AipServiceDocumentTrackingFeature](./Get-AipServiceDocumentTrackingFeature.md)
-

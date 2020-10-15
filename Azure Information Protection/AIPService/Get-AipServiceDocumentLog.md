@@ -27,11 +27,11 @@ The **Get-AipServiceDocumentLog** cmdlet returns protection information about th
 - The protection template ID or specific usage rights that protects the document.
 - Any expiry, offline access, or revocation setting.
 
-More information about the [Rights Management owner and IRights Management issuer](https://docs.microsoft.com/information-protection/deploy-use/configure-usage-rights#rights-management-issuer-and-rights-management-owner).
+More information about the [Rights Management owner and IRights Management issuer](/information-protection/deploy-use/configure-usage-rights#rights-management-issuer-and-rights-management-owner).
 
 You can specify a start time and stop time of entries to include. The output is returned as a list of PowerShell objects in the PowerShell console.
 
-You can alternatively use the document tracking site to get the protection information about the tracked documents. For more information, see the [Tracking and revoking documents for users](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-document-tracking#tracking-and-revoking-documents-for-users) section in the Azure Information Protection client admin guide.
+You can alternatively use the document tracking site to get the protection information about the tracked documents. For more information, see the [Tracking and revoking documents for users](/information-protection/rms-client/client-admin-guide-document-tracking#tracking-and-revoking-documents-for-users) section in the Azure Information Protection client admin guide.
 
 ## EXAMPLES
 
@@ -57,7 +57,7 @@ PS C:\>$documentLogs | Export-Csv 'C:\Temp\DocumentLog.csv' -NoTypeInformation
 
 The first command gets the protection information about the tracked documents for a user who has the email address of "test@contoso.com" and that user is the Rights Management issuer or Rights Management owner for the document, or the document was configured to grant access to that user. The information is saved in a variable.
 
-The second command then uses the [Export-Csv](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/export-csv?view=powershell-4.0) cmdlet to convert the protection information into .csv format, and saves it to the C:\Temp\DocumentLog.csv file.
+The second command then uses the [Export-Csv](/powershell/module/microsoft.powershell.utility/export-csv?view=powershell-4.0) cmdlet to convert the protection information into .csv format, and saves it to the C:\Temp\DocumentLog.csv file.
 
 ## PARAMETERS
 
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -FromTime
-Specifies the start time (inclusive) for the log file as a **DateTime** object. To obtain a **DateTime** object, use the [Get-Date](https://go.microsoft.com/fwlink/?LinkID=293966) cmdlet. Specify the date and time according to your system locale settings. For more information, type `Get-Help Get-Date`.
+Specifies the start time (inclusive) for the log file as a **DateTime** object. To obtain a **DateTime** object, use the [Get-Date](/powershell/module/Microsoft.PowerShell.Utility/Get-Date?viewFallbackFrom=powershell-4.0) cmdlet. Specify the date and time according to your system locale settings. For more information, type `Get-Help Get-Date`.
 
 ```yaml
 Type: DateTime
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -ToTime
-Specifies the stop time (inclusive) for the log file as a **DateTime** object. To obtain a **DateTime** object, use the [Get-Date](https://go.microsoft.com/fwlink/?LinkID=293966) cmdlet. Specify the date and time according to your system locale settings. For more information, type `Get-Help Get-Date`.
+Specifies the stop time (inclusive) for the log file as a **DateTime** object. To obtain a **DateTime** object, use the [Get-Date](/powershell/module/Microsoft.PowerShell.Utility/Get-Date?viewFallbackFrom=powershell-4.0) cmdlet. Specify the date and time according to your system locale settings. For more information, type `Get-Help Get-Date`.
 
 ```yaml
 Type: DateTime
@@ -137,7 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -148,4 +148,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-AipServiceTrackingLog](./Get-AipServiceTrackingLog.md)
-

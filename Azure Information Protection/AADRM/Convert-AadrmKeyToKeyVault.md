@@ -28,7 +28,7 @@ You must use PowerShell to configure your tenant key; you cannot do this configu
 
 Azure RMS now uses Azure Key Vault to manage and monitor a customer-managed Azure RMS tenant key. To create a customer-managed Azure RMS tenant key for the first time, run [Use-AadrmKeyVaultKey](./Use-AadrmKeyVaultKey.md) instead of this cmdlet.
 
-For more information about how to manage your Azure RMS tenant key, see [Planning and implementing your Azure Information Protection tenant key](https://docs.microsoft.com/information-protection/plan-design/plan-implement-tenant-key).
+For more information about how to manage your Azure RMS tenant key, see [Planning and implementing your Azure Information Protection tenant key](/information-protection/plan-design/plan-implement-tenant-key).
 
 Before you run this cmdlet, you will need to identify your original customer-managed Azure RMS tenant key. To do that, use the [Get-AadrmKeys](./Get-AadrmKeys.md) cmdlet. From the output and identified key, you will need the KeyIdentifier value for the *KeyIdentifier* parameter when you run this cmdlet.
 
@@ -139,4 +139,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Use-AadrmKeyVaultKey](./Use-AadrmKeyVaultKey.md)
 
-[Planning and implementing your Azure Information Protection tenant key](https://docs.microsoft.com/information-protection/plan-design/plan-implement-tenant-key)
+[Planning and implementing your Azure Information Protection tenant key](/information-protection/plan-design/plan-implement-tenant-key)

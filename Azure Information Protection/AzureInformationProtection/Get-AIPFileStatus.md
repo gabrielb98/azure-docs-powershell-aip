@@ -20,15 +20,15 @@ Get-AIPFileStatus [-Path] <String[]> [<CommonParameters>]
 ## DESCRIPTION
 The **Get-AIPFileStatus** cmdlet returns the Azure Information Protection status of a specified file or all files in a specified path. This status includes whether the file has a label, and if it does, the label name, who applied it, how it was applied, and when. 
 
-The status also includes whether the file is protected by Rights Management, and if it is, what Rights Management template was used to apply this protection. If the file was protected with custom permissions (an ad-hoc rights policy) instead of a template, "Restricted Access" is displayed instead of the template name. In addition, the [Rights Management owner and Rights Management issuer](https://docs.microsoft.com/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) is displayed, and when the file was protected.
+The status also includes whether the file is protected by Rights Management, and if it is, what Rights Management template was used to apply this protection. If the file was protected with custom permissions (an ad-hoc rights policy) instead of a template, "Restricted Access" is displayed instead of the template name. In addition, the [Rights Management owner and Rights Management issuer](/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) is displayed, and when the file was protected.
 
 Note that password-protected files always return the protection status of **False**.
 
 You can run this cmdlet non-interactively. For instructions, see the following documentation in the admin guides:
 
-- Azure Information Protection client (classic): [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection).
+- Azure Information Protection client (classic): [How to label files non-interactively for Azure Information Protection](/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection).
 
-- Azure Information Protection unified labeling client: [How to label files non-interactively for Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/clientv2-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection).
+- Azure Information Protection unified labeling client: [How to label files non-interactively for Azure Information Protection](/information-protection/rms-client/clientv2-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection).
 
 NOTE: If you have the Azure Information Protection unified labeling client, there are other differences from the Azure Information Protection client:
 
@@ -137,7 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -158,4 +158,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-AIPFileLabel](./Set-AIPFileLabel.md)
 
 [Get-RMSTemplate](./Get-RMSTemplate.md)
-

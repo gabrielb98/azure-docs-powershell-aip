@@ -94,7 +94,7 @@ Accept wildcard characters: False
 ### -OwnerEmail
 Specifies the Rights Management owner of the rights policy by email address. You can use this parameter to set a Rights Management owner other than yourself.
 
-By default, the account running this cmdlet is both the Rights Management issuer and the Rights Management owner of the protected file. This parameter lets you assign a different Rights Management owner to the protected file so that the specified account has all usage rights (Full Control) for the file and can always access it. The Rights Management owner is independent from the Windows file system owner. For more information, see [Rights Management issuer and Rights Management owner](https://docs.microsoft.com/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner).
+By default, the account running this cmdlet is both the Rights Management issuer and the Rights Management owner of the protected file. This parameter lets you assign a different Rights Management owner to the protected file so that the specified account has all usage rights (Full Control) for the file and can always access it. The Rights Management owner is independent from the Windows file system owner. For more information, see [Rights Management issuer and Rights Management owner](/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner).
 
 If you do not specify a value, the cmdlet will use your email address to identify you as the Rights Management owner of this ad-hoc rights policy.
 
@@ -128,7 +128,7 @@ The acceptable values for this parameter:
 
 Warning: If you later want to remove this rights policy from a file, you must have the EXTRACT or OWNER right to use the [Unprotect-RMSFile](./Unprotect-RMSFile.md) cmdlet to unprotect a file, or be a Rights Management super user for your organization.
 
-For more information about these rights, see [Configuring usage rights for Azure Information Protection](https://docs.microsoft.com/information-protection/configure-usage-rights) on the Microsoft documentation site.
+For more information about these rights, see [Configuring usage rights for Azure Information Protection](/information-protection/configure-usage-rights) on the Microsoft documentation site.
 
 ```yaml
 Type: String[]
@@ -165,7 +165,7 @@ Specifies users who will have rights to use the file or files that is protected 
 
 These users or groups can be internal to your organization, or external. For Azure AD authentication to be successful, the user must have an account in Azure Active Directory. Office 365 users automatically have an account in Azure Active Directory.
 
-Some applications also support personal email addresses with a Microsoft account. For more information about using Microsoft accounts for authentication, see the [supported scenarios table](https://docs.microsoft.com/azure/information-protection/get-started/secure-collaboration-documents#supported-scenarios-for-opening-protected-documents).
+Some applications also support personal email addresses with a Microsoft account. For more information about using Microsoft accounts for authentication, see the [supported scenarios table](/azure/information-protection/get-started/secure-collaboration-documents#supported-scenarios-for-opening-protected-documents).
 
 
 ```yaml

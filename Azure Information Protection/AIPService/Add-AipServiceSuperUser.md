@@ -28,7 +28,7 @@ The **Add-AipServiceSuperUser** cmdlet adds an individual account to the super u
 
 However, before a super user can do these operations, the super user feature for Azure Information Protection must be enabled by using the [Enable-AipServiceSuperUserFeature](./Enable-AipServiceSuperUserFeature.md) cmdlet. By default, the super user feature is not enabled.
 
-Specify the account by email address or service principal ID. To specify a user who does not have an email address, specify their User Principal Name instead. For more information, see [Preparing users and groups for Azure Information Protection](https://docs.microsoft.com/information-protection/plan-design/prepare). 
+Specify the account by email address or service principal ID. To specify a user who does not have an email address, specify their User Principal Name instead. For more information, see [Preparing users and groups for Azure Information Protection](/information-protection/plan-design/prepare). 
 
 To specify a group rather than individual users, use the [Set-AipServiceSuperUserGroup](./Set-AipServiceSuperUserGroup.md) cmdlet instead of this **Add-AipServiceSuperUser** cmdlet.
 
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServicePrincipalId
-Specifies the **AppPrincipalId** of the service principal in your organization to grant this account super user privileges. Use the **Get-MsolServicePrincipal** cmdlet to get an existing service principal, or the [New-MsolServicePrincipalCredential](https://docs.microsoft.com/en-us/powershell/module/msonline/new-msolserviceprincipalcredential?view=azureadps-1.0) cmdlet to create a new service principal.
+Specifies the **AppPrincipalId** of the service principal in your organization to grant this account super user privileges. Use the **Get-MsolServicePrincipal** cmdlet to get an existing service principal, or the [New-MsolServicePrincipalCredential](/powershell/module/msonline/new-msolserviceprincipalcredential?view=azureadps-1.0) cmdlet to create a new service principal.
 
 The service principal ID is converted to a pseudo-email address and added to the super user list for the organization. For example, `Add-AipServiceSuperUser -ServicePrincipalId "3C367900-44D1-4865-9379-9A3227042C25"` adds 3C367900-44D1-4865-9379-9A3227042C25@\<AIPService tenant ID\>.aipservice.na.aadrm.com to the super user list.
 
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -101,7 +101,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-AipServiceSuperUser](./Get-AipServiceSuperUser.md)
 
-[New-MsolServicePrincipalCredential](https://docs.microsoft.com/en-us/powershell/module/msonline/new-msolserviceprincipalcredential?view=azureadps-1.0)
+[New-MsolServicePrincipalCredential](/powershell/module/msonline/new-msolserviceprincipalcredential?view=azureadps-1.0)
 
 [Remove-AipServiceSuperUser](./Remove-AipServiceSuperUser.md)
 
