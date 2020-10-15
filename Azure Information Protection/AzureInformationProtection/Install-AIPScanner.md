@@ -117,13 +117,22 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceUserCredentials
-Specifies a **PSCredential** object for the service account to run the Azure Information Protection Scanner service. For the user name, use the following format: Domain\Username. You are prompted for a password. 
+Specifies the account credentials used to run the Azure Information Protection service. 
 
-To obtain a PSCredential object, use the [Get-Credential](/powershell/module/microsoft.powershell.security/get-credential) cmdlet. For more information, type `Get-Help Get-Cmdlet`. 
+- The credentials used must be an Active Directory account. 
 
-If you do not specify this parameter, you are prompted for the user name and password.
+- Set the value of this parameter using the following syntax: `Domain\Username`. 
 
-This account must be an Active Directory account. For additional requirements, see [Prerequisites for the Azure Information Protection scanner](/information-protection/deploy-aip-scanner#prerequisites-for-the-azure-information-protection-scanner).
+    For example: `contoso\scanneraccount`
+
+- If you do not specify this parameter, you are prompted for the username and password.
+
+For more information, see [Prerequisites for the Azure Information Protection scanner](/information-protection/deploy-aip-scanner#prerequisites-for-the-azure-information-protection-scanner). 
+
+> [!TIP]
+> Use a **PSCredential** object by using the [Get-Credential](/powershell/module/microsoft.powershell.security/get-credential) cmdlet. In this case, you are prompted for the password only.
+>
+> For more information, type `Get-Help Get-Cmdlet`. 
 
 ```yaml
 Type: PSCredential
@@ -138,7 +147,21 @@ Accept wildcard characters: False
 ```
 
 ### -ShareAdminUserAccount
-{{ Fill ShareAdminUserAccount Description }}
+Specifies the credentials for a strong account in an on-premises network, used to get a full list of file share and NTFS permissions.
+
+- The credentials used must be an Active Directory account with Administrator/FC rights on your network shares. This will usually be a Server Admin or Domain Admin.
+
+- Set the value of this parameter using the following syntax: `Domain\Username`
+
+    For example: `contoso\admin`
+
+- If you do not specify this parameter, you are prompted for both the username and password.
+
+> [!TIP]
+> Use a **PSCredential** object by using the [**Get-Credential**](/powershell/module/microsoft.powershell.security/get-credential) cmdlet. In this case, you are prompted for the password only.
+> 
+>For more information, type `Get-Help Get-Cmdlet`.
+
 
 ```yaml
 Type: PSCredential
@@ -177,7 +200,20 @@ Accept wildcard characters: False
 ```
 
 ### -StandardDomainsUserAccount
-{{ Fill StandardDomainsUserAccount Description }}
+Specifies the credentials for a weak account in an on-premises network, used to check access for weak users on the network and expose discovered network shares.
+
+- The credentials used must be an Active Directory account, and a user of the **Domain Users** group only.
+
+- Set the value of this parameter using the following syntax: `Domain\Username`
+
+    For example: `contoso\stduser`
+
+- If you do not specify this parameter, you are prompted for both the username and password.
+
+> [!TIP]
+> Use a **PSCredential** object by using the [**Get-Credential**](/powershell/module/microsoft.powershell.security/get-credential) cmdlet. In this case, you are prompted for the password only.
+> 
+>For more information, type `Get-Help Get-Cmdlet`.
 
 ```yaml
 Type: PSCredential

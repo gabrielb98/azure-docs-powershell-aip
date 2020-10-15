@@ -82,7 +82,7 @@ This example defines the content scan job with a specific label used as the defa
 ### -AllowLabelDowngrade
 Determines whether the content scan job allows for labeling downgrade actions.
 
-Relevant only when the **RelabelFiles** parameter is set to **true**.
+Relevant only when the **RelabelFiles** parameter is set to **on**.
 
 ```yaml
 Type: OnOffEnum
@@ -217,7 +217,7 @@ Accept wildcard characters: False
 ### -EnforceDefaultLabel
 Determines whether using a default label is always used when relabeling content.
 
-Relevant only when the **RelabelFiles** parameter is set to **true**.
+Relevant only when the **RelabelFiles** parameter is set to **on**.
 
 ```yaml
 Type: OnOffEnum
@@ -237,6 +237,8 @@ Determines any file types that are ignored during your content scan job. Define 
 
 Define either this parameter, or the **IncludeFileTypes** parameter, but not both.
 
+Relevant only when the **OverrideContentScanJob** parameter is set to **on**.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -253,6 +255,8 @@ Accept wildcard characters: False
 Explicitly determines the file types that are scanned by your content scan job. Define multiple file types using a comma-separated list.
 
 Define either this parameter, or the **ExcludeFileTypes** parameter, but not both.
+
+Relevant only when the **OverrideContentScanJob** parameter is set to **on**.
 
 ```yaml
 Type: String
@@ -337,9 +341,12 @@ Accept wildcard characters: False
 ```
 
 ### -RepositoryOwner
-Defines the owner of the repositories configured for the content scan job.
 
-Relevant only when the **EnableDlp** parameter is set to **true**.
+Specifies the SAMAccountname (**domain\user**), UPN (**user@domain**), or SID of a group that owns the repository.
+
+The owners are granted full control permissions on the file if the permissions on the file are changed by a matched DLP rule.
+
+Relevant only when the **EnableDlp** parameter is set to **on**.
 
 ```yaml
 Type: String

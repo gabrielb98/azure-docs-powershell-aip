@@ -99,17 +99,22 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceUserCredentials
-Specifies a **PSCredential** object for the service account to run the Azure Information Protection Scanner service. 
+Specifies the account credentials used to run the Azure Information Protection service. 
 
-- Use the following syntax for the username: `Domain\Username`. 
-- When prompted, enter the password for the account.
-- If you do not specify this parameter, you are prompted for both your user name and password.
+- The credentials used must be an Active Directory account. 
+
+- Set the value of this parameter using the following syntax: `Domain\Username`. 
+
+    For example: `contoso\scanneraccount`
+
+- If you do not specify this parameter, you are prompted for the username and password.
+
+For more information, see [Prerequisites for the Azure Information Protection scanner](/information-protection/deploy-aip-scanner#prerequisites-for-the-azure-information-protection-scanner). 
 
 > [!TIP]
-> To obtain a PSCredential object, use the [**Get-Credential**](/powershell/module/microsoft.powershell.security/get-credential) cmdlet. For more information, type `Get-Help Get-Cmdlet`.
-> 
-
-This account must be an Active Directory account. For additional requirements, see [Prerequisites for the Azure Information Protection scanner](/azure/information-protection/deploy-aip-scanner#prerequisites-for-the-azure-information-protection-scanner).
+> Use a **PSCredential** object by using the [Get-Credential](/powershell/module/microsoft.powershell.security/get-credential) cmdlet. In this case, you are prompted for the password only.
+>
+> For more information, type `Get-Help Get-Cmdlet`. 
 
 ```yaml
 Type: PSCredential
@@ -124,17 +129,21 @@ Accept wildcard characters: False
 ```
 
 ### -ShareAdminUserAccount
-The user impersonated by the Network Discovery service when scanning the configured network locations to obtain full share permissions data for each location.
+Specifies the credentials for a strong account in an on-premises network, used to get a full list of file share and NTFS permissions.
 
-The value for this parameter is a **PSCredential** object for the admin account, usually the domain administrator account. The PSCredential object is used to get full access, with NTFS permissions, to the network locations you want to scan with your network scan jobs.
+- The credentials used must be an Active Directory account with Administrator/FC rights on your network shares. This will usually be a Server Admin or Domain Admin.
 
-- Use the following syntax for the username: `Domain\Username`. 
-- When prompted, enter the password for the account.
-- If you do not specify this parameter, you are prompted for both your user name and password.
+- Set the value of this parameter using the following syntax: `Domain\Username`
+
+    For example: `contoso\admin`
+
+- If you do not specify this parameter, you are prompted for both the username and password.
 
 > [!TIP]
-> To obtain a PSCredential object, use the [**Get-Credential**](/powershell/module/microsoft.powershell.security/get-credential) cmdlet. For more information, type `Get-Help Get-Cmdlet`.
+> Use a **PSCredential** object by using the [**Get-Credential**](/powershell/module/microsoft.powershell.security/get-credential) cmdlet. In this case, you are prompted for the password only.
 > 
+>For more information, type `Get-Help Get-Cmdlet`.
+
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
@@ -169,16 +178,20 @@ Accept wildcard characters: False
 ```
 
 ### -StandardDomainsUserAccount
-The user impersonated by the Network Discovery service when scanning the configured network locations to understand whether public access is available on each location.
+Specifies the credentials for a weak account in an on-premises network, used to check access for weak users on the network and expose discovered network shares.
 
-The value for this parameter is a **PSCredential** object for a weak domain account, usually a domain user or a domain guest account. The PSCredential object is used to get public access to the network locations you want to scan with your network scan jobs.
+- The credentials used must be an Active Directory account, and a user of the **Domain Users** group only.
 
-- Use the following syntax for the username: `Domain\Username`. 
-- When prompted, enter the password for the account.
-- If you do not specify this parameter, you are prompted for both your user name and password.
+- Set the value of this parameter using the following syntax: `Domain\Username`
+
+    For example: `contoso\stduser`
+
+- If you do not specify this parameter, you are prompted for both the username and password.
 
 > [!TIP]
-> To obtain a PSCredential object, use the [**Get-Credential**](/powershell/module/microsoft.powershell.security/get-credential) cmdlet. For more information, type `Get-Help Get-Cmdlet`.
+> Use a **PSCredential** object by using the [**Get-Credential**](/powershell/module/microsoft.powershell.security/get-credential) cmdlet. In this case, you are prompted for the password only.
+> 
+>For more information, type `Get-Help Get-Cmdlet`.
 
 ```yaml
 Type: PSCredential

@@ -326,6 +326,10 @@ Accept wildcard characters: False
 ### -RepositoryOwner
 Defines the owner of the repositories configured for the content scan job.
 
+Specifies the SAMAccountname (**domain\user**), UPN (**user@domain**), or SID of a group that owns the repository.
+
+The owners are granted full control permissions on the file if the permissions on the file are changed by a matched DLP rule.
+
 Relevant only when the following parameters are set to **on**:
 
 - **OverrideContentScanJob**

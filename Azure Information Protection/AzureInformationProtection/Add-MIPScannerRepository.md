@@ -328,10 +328,11 @@ Accept wildcard characters: False
 ```
 
 ### -RepositoryOwner
-Specifies the SAMAccountname (domain\user), UPN (user@domain), or SID of a group that owns the repository.
-The owners are granted full control permissions on file if the permissions on the file are changed by matched DLP rule.
+Specifies the SAMAccountname (**domain\user**), UPN (**user@domain**), or SID of a group that owns the repository.
 
-Relevant only when the following parameters are set to **on**:
+The owners are granted full control permissions on the file if the permissions on the file are changed by a matched DLP rule.
+
+Relevant only when the following parameters are set to **on**.
 
 - **OverrideContentScanJob**
 - **EnableDlp**
