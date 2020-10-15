@@ -9,25 +9,47 @@ Locale: en-US
 # AzureInformationProtection Module
 ## Description
 
-The following lists links to documentation for the Microsoft Azure Information Protection (AIP) cmdlets. These cmdlets are installed with both the Azure Information Protection classic client and the Azure Information Protection unified labeling client. [Not sure of the differences between these two clients?](/azure/information-protection/faqs#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
+The following lists links to documentation for the Microsoft Azure Information Protection (AIP) cmdlets. 
 
+- These cmdlets are installed with the AIP unified labeling client or the AIP classic client. 
 
-|Client  |cmdlet descriptions  |
-|---------|---------|
-|**Classic client cmdlets**   | Classic client cmdlets enable you to protect and unprotect files, label files, and get information about files that are protected and labeled. </br></br>These cmdlets are installed with the [Azure Information Protection classic client](/azure/information-protection/rms-client/aip-client) and are supported for:</br></br>- Azure Information Protection</br>The Azure Rights Management service for Azure Information Protection</br>- Active Directory Rights Management Services (AD RMS) <!--</br></br>The current general availability version of the AzureInformationProtection module for this client is **1.54.59.0**. You might have a later version if you have installed a preview version.--></br></br>For release details, see the [classic client version release history](/azure/information-protection/rms-client/client-version-release-history).     |
-|**Unified labeling cmdlets**     | Unified labeling cmdlets enable you to label files and get information about files that labeled. </br></br>These cmdlets are installed with the [Azure Information Protection unified labeling client](/azure/information-protection/rms-client/aip-clientv2) and are supported for Azure Information Protection only. </br></br><!--The current general availability version of the AzureInformationProtection module for this client is **2.6.111.0**. You may have a later version if you've installed a preview version. -->For release details, see the [unified client version release history](/azure/information-protection/rms-client/unifiedlabelingclient-version-release-history). |
+- The .dll file for this module is *AIP.dll*.
 
 > [!TIP]
+Not sure of the differences between these two clients? See this [FAQ](/azure/information-protection/faqs#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
+>
 > Check the version that you have installed by running the following command: `(Get-Module AzureInformationProtection -ListAvailable).Version`.
+
+### Unified labeling cmdlets
+
+Unified labeling cmdlets enable you to label files and get information about files that labeled. 
+
+These cmdlets are installed with the [AIP unified labeling client](/azure/information-protection/rms-client/aip-clientv2) and are supported for Azure Information Protection only. 
+
+For more information, see: 
+- [Unified client version release history](/azure/information-protection/rms-client/unifiedlabelingclient-version-release-history).
+- [Using PowerShell with the AIP unified labeling client](/azure/information-protection/rms-client/clientv2-admin-guide-powershell)
+
+### Classic client cmdlets
+
+Classic client cmdlets enable you to protect and unprotect files, label files, and get information about files that are protected and labeled. 
+
+These cmdlets are installed with the [AIP classic client](/azure/information-protection/rms-client/aip-client) and are supported for:
+
+- Azure Information Protection
+- The Azure Rights Management service for Azure Information Protection
+- Active Directory Rights Management Services (AD RMS)
 
 For more information, see:
 
-- [Using PowerShell with the Azure Information Protection classic client](/azure/information-protection/rms-client/client-admin-guide-powershell)
+- [Classic client version release history](/azure/information-protection/rms-client/client-version-release-history).     
+- [Using PowerShell with the AIP classic client](/azure/information-protection/rms-client/client-admin-guide-powershell)
 
-- [Using PowerShell with the Azure Information Protection unified labeling client](/azure/information-protection/rms-client/clientv2-admin-guide-powershell)
-
-
-The .dll file for this module is *AIP.dll*.
+> [!NOTE]
+> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021.** 
+> 
+> This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+>
 
 ## AzureInformationProtection Cmdlets
 ### [Add-AIPScannerRepository](Add-AIPScannerRepository.md)
