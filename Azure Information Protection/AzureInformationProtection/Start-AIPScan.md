@@ -17,12 +17,17 @@ Start-AIPScan [-Reset] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Start-AIPScan instructs the Azure Information Protection scanner to immediately start a one-time scan cycle. The scanner service must be started already and the scanner schedule must be configured for a manual schedule. To configure the schedule, use the [Azure portal to configure the scanner](/azure/information-protection/deploy-aip-scanner).
+**Relevant for:** Unified labeling client only
+
+The **Start-AIPScan** cmdlet instructs the Azure Information Protection scanner to immediately start a one-time scan cycle. The scanner service must be started already and the scanner schedule must be configured for a manual schedule. 
+
+To configure the schedule, use the [Azure portal to configure the scanner](/azure/information-protection/deploy-aip-scanner).
 
 By default, all files are scanned the first time the scanner runs and then, unless the Azure Information Protection policy is changed, only new or changed files are scanned. However, you can change this behavior when you use the *-Reset* parameter with this cmdlet, which forces the scanner to scan all files.
   
-If the scanner schedule is set to Always, this cmdlet is ignored.
-
+> [!NOTE]
+> If the scanner schedule is set to **Always,** this cmdlet is ignored.
+> 
 ## EXAMPLES
 
 ### Example 1: Initiate immediate one-time scan for new and changed files

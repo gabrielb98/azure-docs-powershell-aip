@@ -20,6 +20,8 @@ Protect-RMSFile [-File <String>] [-Folder <String>] [-InPlace] [-Recurse] [-Temp
 ```
 
 ## DESCRIPTION
+**Relevant for:** AIP classic client only
+
 The **Protect-RMSFile** cmdlet protects a file or all files in a specified folder by using Azure RMS or AD RMS. If the file was previously protected, it will be protected again, to apply any changes such as those that might be made to the template that is being used to protect the file.
 
 Multiple file types can be protected in the same way that the Azure Information Protection client can protect files when you use the "Classify and protect" right-click option from File Explorer. Different levels of protection are automatically applied (native or generic), depending on the file type. You can change the level of protection by editing the registry. In addition, some files change their file name extension after they are protected by Rights Management. For more information, see the [File types supported for protection](/information-protection/rms-client/client-admin-guide-file-types#file-types-supported-for-protection) section from the Azure Information Protection client admin guide.
@@ -40,9 +42,14 @@ You cannot run this command concurrently but must wait for the original command 
 
 This cmdlet writes to the following log files: **Success.log**, **Failure.log**, and **Debug.log** in %localappdata%\Microsoft\MSIPC\pscmdlet\Logs\\<GUID>.
 
-Tip: For step-by-step instructions to use this cmdlet to protect files on a Windows Server file share, using File Resource Manager and File Classification Infrastructure, see [RMS Protection with Windows Server File Classification Infrastructure (FCI)](/information-protection/rms-client/configure-fci).
+> [!TIP]
+> For step-by-step instructions to use this cmdlet to protect files on a Windows Server file share, using File Resource Manager and File Classification Infrastructure, see [RMS Protection with Windows Server File Classification Infrastructure (FCI)](/information-protection/rms-client/configure-fci).
+>
 
-This cmdlet is not supported for the Azure Information Protection unified labeling client.
+> [!NOTE]
+> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021.** 
+> 
+> This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
 ## EXAMPLES
 

@@ -20,8 +20,6 @@ Use the following PowerShell modules with Azure Information Protection:
 
 - **[AzureInformationProtection](#azureinformationprotection).** Used to support Azure Information Protection client functionality.
 
-
-
 ## AIPService
     
 These cmdlets let you administer the Azure Rights Management protection service for Azure Information Protection. 

@@ -26,29 +26,43 @@ Set-AIPFileClassification [-JustificationMessage <String>] [-Force] [-WhatIf] [-
 ```
 
 ## DESCRIPTION
-The Set-AIPFileClassification cmdlet can automatically apply a label for one or more files when you configure labels for automatic classification. For more information, see the following:
+**Relevant for:** AIP unified labeling and classic clients
 
-- For the Azure Information Protection client (classic): [How to configure conditions for automatic and recommended classification for Azure Information Protection](/information-protection/configure-policy-classification).
+The **Set-AIPFileClassification** cmdlet can automatically apply a label for one or more files when you configure labels for automatic classification. 
 
-- For the Azure Information Protection unified labeling client: [Apply a sensitivity label to content automatically](/Office365/SecurityCompliance/apply_sensitivity_label_automatically).
-
-When this cmdlet is run, it inspects the file contents and if the configured conditions are met for a label, that label is applied. This action will automatically apply protection if the selected label applies protection. For the Azure Information Protection client, because labels support removing protection, protection can also be removed from files when you run this cmdlet.
+When this cmdlet is run, it inspects the file contents and if the configured conditions are met for a label, that label is applied. This action will automatically apply protection if the selected label applies protection. 
 
 By default, if the file already has a label, the existing label or protection is not replaced.
 
-For both clients, you can run this cmdlet non-interactively. For instructions, see the following documentation in the admin guides:
+For more information, see:
 
-- Classic client: [How to label files non-interactively for Azure Information Protection](/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection).
+- **Unified labeling client:** [Apply a sensitivity label to content automatically](/Office365/SecurityCompliance/apply_sensitivity_label_automatically)
 
-- Unified labeling client: [How to label files non-interactively for Azure Information Protection](/information-protection/rms-client/clientv2-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection).
+- **Classic client**: [How to configure conditions for automatic and recommended classification for Azure Information Protection](/information-protection/configure-policy-classification)
 
-NOTE: When you run this cmdlet with the Azure Information Protection unified labeling client, there are differences from the Azure Information Protection client:
+    For the Azure Information Protection client, because labels support removing protection, protection can also be removed from files when you run this cmdlet.
+
+> [!NOTE]
+> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021.** 
+> 
+> This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+
+### Running the cmdlet non-interactively
+For both clients, you can run this cmdlet non-interactively. For more information, see the relevant admin guide for your client:
+
+- **[Unified labeling client](/information-protection/rms-client/clientv2-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection)**
+
+- **[Classic client](/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection)**
+
+### Unified labeling client support
+
+When you run this cmdlet with the Azure Information Protection unified labeling client, there are differences from the Azure Information Protection client:
 
 - The *Owner* parameter is not supported.
 
 - When a file isn't labeled because it was manually labeled, there was no match for the conditions that you specified, or the file had a higher classification, the file is skipped with the single comment of "No label to apply".
 
-- The *WhatIf* parameter is supported. You can use the WhatIf mode with *DiscoveryInfoTypes* to find known sensitive information types.
+- The *WhatIf* parameter is supported. You can use the **WhatIf** mode with *DiscoveryInfoTypes* to find known sensitive information types.
 
 ## EXAMPLES
 

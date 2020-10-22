@@ -17,6 +17,7 @@ Get-MIPNetworkDiscoveryJobs [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+**Relevant for:** AIP unified labeling client only
 
 The **Get-MIPNetworkDiscoveryJobs** cmdlet gets a list of the Network Discovery network scan jobs configured in your tenant.
 

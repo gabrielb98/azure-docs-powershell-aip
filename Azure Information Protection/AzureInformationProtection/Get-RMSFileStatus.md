@@ -18,13 +18,19 @@ Get-RMSFileStatus -File <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+**Relevant for:** AIP classic client only
+
 The **Get-RMSFileStatus** cmdlet returns the protection status (whether the file is protected by Rights Management or not) of a specified file.
 
 A protected file has a status of **Protected (Native)** or **Protected (Generic)**, and an unprotected file has a status of **Unprotected**.
 
 Note that a natively protected container file, such as an Outlook data file (.PST) always returns the protection status of Unprotected.
 
-This cmdlet is not supported for the Azure Information Protection unified labeling client.
+> [!NOTE]
+> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021.** 
+> 
+> This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+>
 
 ## EXAMPLES
 

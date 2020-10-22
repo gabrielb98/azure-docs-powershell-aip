@@ -19,6 +19,8 @@ Install-MIPNetworkDiscovery [-ServiceUserCredentials] <PSCredential>
 ```
 
 ## DESCRIPTION
+**Relevant for:** AIP unified labeling client only
+
 The **Install-MIPNetworkDiscovery** cmdlet installs the Network Discovery service, which enables AIP administrators to scan a specified IP address or range for possibly risky repositories, using a network scan job.
 
 Use network scan job results to identify additional repositories in your network to further scan using a content scan job. For more information, see [Create a network scan job](/azure/information-protection/deploy-aip-scanner-configure-install#create-a-network-scan-job-public-preview).

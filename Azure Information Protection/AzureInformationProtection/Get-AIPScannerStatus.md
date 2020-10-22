@@ -18,13 +18,24 @@ Get-AIPScannerStatus [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Get-AIPScannerStatus returns the current status of the scanner service for Azure Information Protection. Possible values:
+**Relevant for:** AIP unified labeling and classic clients
 
-- Offline: The service is not started.
-- Idle: The service is running but not currently scanning. 
-- Scanning: The service is running and currently scanning files.
-- Error: The scanner service is running but it has encountered an error that prevents it from scanning files. For example, the service cannot access the database for the scanner configuration.
+The **Get-AIPScannerStatus** returns the current status of the scanner service for Azure Information Protection. 
 
+Possible values:
+
+- **Offline:** The service is not started.
+- **Idle:** The service is running but not currently scanning. 
+- **Scanning:** The service is running and currently scanning files.
+- **Error:** The scanner service is running but it has encountered an error that prevents it from scanning files. 
+
+    For example, the service cannot access the database for the scanner configuration.
+
+> [!NOTE]
+> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021.** 
+> 
+> This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+>
 
 ## EXAMPLES
 

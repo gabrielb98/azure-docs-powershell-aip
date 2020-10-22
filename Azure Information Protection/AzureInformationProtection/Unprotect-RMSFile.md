@@ -19,6 +19,8 @@ Unprotect-RMSFile [-File <String>] [-Folder <String>] [-InPlace] [-Recurse] [-Ou
 ```
 
 ## DESCRIPTION
+**Relevant for:** AIP classic client only
+
 The **Unprotect-RMSFile** cmdlet removes Rights Management (RMS) protection from one or more files in a specified folder if those files were previously protected by AD RMS or Azure RMS. 
 
 You must have sufficient usage rights or be a super user for your organization to unprotect files. For more information, see [Configuring super users for Azure Information Protection and discovery services or data recovery](/azure/information-protection/configure-super-users).
@@ -39,7 +41,10 @@ When you run this cmdlet, you have the following options:
 
 You can run this command concurrently when you specify a different path for the *LogFile* parameter for each command that runs in parallel. If you don't specify a different log file path and the previous command hasn't finished, the new command will fail.
 
-This cmdlet is not supported for the Azure Information Protection unified labeling client.
+> [!NOTE]
+> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021.** 
+> 
+> This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
 ## EXAMPLES
 

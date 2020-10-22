@@ -18,15 +18,23 @@ Clear-RMSAuthentication [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
+**Relevant for:** AIP classic client only
+
 The **Clear-RMSAuthentication** cmdlet clears the credentials that are used when a user has previously entered their user name and password to authenticate to Azure Rights Management (Azure RMS).
 
 When you enter a user name and password to sign in to Azure RMS, the credentials are cached on the computer. Because these cached credentials are used across PowerShell sessions, to sign in as a different user, you must first run **Clear-RMSAuthentication**. You are then prompted for new credentials.
 
 This cmdlet applies to Azure RMS only and when you authenticate as a user rather than a service principal. It does not apply to AD RMS.
 
-Note: If you want to clear the credentials for a service principal that you specified with [Set-RMSServerAuthentication](./Set-RMSServerAuthentication.md), close your PowerShell session and start a new session that runs **Set-RMSServerAuthentication** with the new credentials.
+> [!TIP]
+> If you want to clear the credentials for a service principal that you specified with [Set-RMSServerAuthentication](./Set-RMSServerAuthentication.md), close your PowerShell session and start a new session that runs **Set-RMSServerAuthentication** with the new credentials.
 
-This cmdlet is not supported for the Azure Information Protection unified labeling client.
+> [!NOTE]
+> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021.** 
+> 
+> This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+>
 
 ## EXAMPLES
 

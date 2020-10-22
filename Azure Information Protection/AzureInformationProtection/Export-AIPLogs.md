@@ -19,11 +19,11 @@ Export-AIPLogs [-FileName] <String> [-OnBehalfOf <PSCredential>] [<CommonParamet
 
 ## DESCRIPTION
 
-The Export-AIPLogs cmdlet gathers all client and scanner log files from %localappdata%\Microsoft\MSIP\Logs and saves them to a single, compressed file that has a .zip format. This file can then be sent to Microsoft Support if you are requested to send log files to help investigate a reported issue with the Azure Information Protection unified labeling client or scanner from this client.
+**Relevant for:** AIP unified labeling client only
+
+The **Export-AIPLogs** cmdlet gathers all client and scanner log files from **%localappdata%\Microsoft\MSIP\Logs** and saves them to a single, compressed file that has a .zip format. This file can then be sent to Microsoft Support if you are requested to send log files to help investigate a reported issue with the Azure Information Protection unified labeling client or scanner from this client.
 
 Use the *OnBehalfOf* parameter if you need to export log files from a service account. For example, an account that has been created to run non-interactively, such as the account for the Azure Information Protection scanner.
-
-This cmdlet is supported only for the Azure Information Protection unified labeling client.
 
 ## EXAMPLES
 

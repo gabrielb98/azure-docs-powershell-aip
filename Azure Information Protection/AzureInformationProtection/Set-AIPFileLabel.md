@@ -45,23 +45,43 @@ Set-AIPFileLabel -CustomPermissions <AIPCustomPermissions> [-Owner <String>] [-P
 ```
 
 ## DESCRIPTION
-For the Azure Information Protection client (classic), the Set-AIPFileLabel cmdlet sets or removes an Azure Information Protection label for one or more files. This action can automatically apply or remove protection when labels are configured for protection in the Azure Information Protection policy. When the command runs successfully, any existing label or protection can be replaced.
+**Relevant for:** AIP unified labeling and classic clients
 
-You cannot create or edit labels by using PowerShell but must do this by using the Azure portal. For instructions, see [Configuring the Azure Information Protection policy](/information-protection/configure-policy).
+### Unified labeling client support
 
-For the Azure Information Protection unified labeling client, the Set-AIPFileLabel cmdlet sets or removes a sensitivity label for one or more files. This action can automatically apply protection when labels are configured to apply encryption. Additionally, you can use this cmdlet to apply custom permissions when they are created as an ad-hoc protection policy object with the [New-AIPCustomPermissions](New-AIPCustomPermissions.md) cmdlet. When the command runs successfully, any existing label or protection can be replaced. 
+For the AIP unified labeling client, the **Set-AIPFileLabel** cmdlet sets or removes a sensitivity label for one or more files. This action can automatically apply protection when labels are configured to apply encryption. 
 
-For both clients, you can run this cmdlet non-interactively. For instructions, see the following documentation in the admin guides:
+Additionally, you can use this cmdlet to apply custom permissions when they are created as an ad-hoc protection policy object with the [New-AIPCustomPermissions](New-AIPCustomPermissions.md) cmdlet. 
 
-- Classic client: [How to label files non-interactively for Azure Information Protection](/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection).
+When the command runs successfully, any existing label or protection can be replaced.
 
-- Unified labeling client: [How to label files non-interactively for Azure Information Protection](/information-protection/rms-client/clientv2-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection).
-
-NOTE: When you run this cmdlet with the Azure Information Protection unified labeling client, there are other differences from the Azure Information Protection client:
+When you run this cmdlet with the Azure Information Protection unified labeling client, there are other differences from the Azure Information Protection client:
 
 - The *Owner* parameter is not supported.
 
 - When a file isn't labeled because it was manually labeled, there was no match for the conditions that you specified, or the file had a higher classification, the file is skipped with the single comment of "No label to apply".
+
+### Classic client support
+
+For the AIP classic client, the **Set-AIPFileLabel** cmdlet sets or removes an Azure Information Protection label for one or more files. This action can automatically apply or remove protection when labels are configured for protection in the Azure Information Protection policy. When the command runs successfully, any existing label or protection can be replaced.
+
+> [!TIP]
+> When using the classic client, you must create and edit labels in the Azure portal. For instructions, see [Configuring the Azure Information Protection policy](/information-protection/configure-policy).
+> 
+
+> [!NOTE]
+> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021.** 
+> 
+> This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+
+### Running the cmdlet non-interactively
+
+For both clients, you can run this cmdlet non-interactively. For instructions, see the relevant admin guide for your client:
+
+- **[Classic client](/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection)**
+
+- **[Unified labeling client](/information-protection/rms-client/clientv2-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection)**
+
 
 ## EXAMPLES
 

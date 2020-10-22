@@ -18,28 +18,39 @@ Get-AIPFileStatus [-Path] <String[]> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+**Relevant for:** AIP unified labeling and classic clients
+
 The **Get-AIPFileStatus** cmdlet returns the Azure Information Protection status of a specified file or all files in a specified path. This status includes whether the file has a label, and if it does, the label name, who applied it, how it was applied, and when. 
 
 The status also includes whether the file is protected by Rights Management, and if it is, what Rights Management template was used to apply this protection. If the file was protected with custom permissions (an ad-hoc rights policy) instead of a template, "Restricted Access" is displayed instead of the template name. In addition, the [Rights Management owner and Rights Management issuer](/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) is displayed, and when the file was protected.
 
 Note that password-protected files always return the protection status of **False**.
 
-You can run this cmdlet non-interactively. For instructions, see the following documentation in the admin guides:
+You can run this cmdlet non-interactively. For more information, see the following client admin guides:
 
-- Azure Information Protection client (classic): [How to label files non-interactively for Azure Information Protection](/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection).
+- **[Unified labeling client](/information-protection/rms-client/clientv2-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection)**
 
-- Azure Information Protection unified labeling client: [How to label files non-interactively for Azure Information Protection](/information-protection/rms-client/clientv2-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection).
+- **[Classic client](/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection)**
 
-NOTE: If you have the Azure Information Protection unified labeling client, there are other differences from the Azure Information Protection client:
+> [!NOTE]
+> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021.** 
+> 
+> This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+>
+
+### Unified labeling client support
+
+If you have the AIP unified labeling client, functionality differs from the classic client as follows:
 
 - This cmdlet returns label information from your own tenant only and the *LabelingSiteId* parameter is not displayed in the output.
 
 - The *Owner* and *RMSIssuedTime* parameters are not supported and are not displayed in the output.
 
 - The *LabelingMethod* parameter displays the values of **Privileged** or **Standard** instead of **Manual** or **Automatic**:
-    
-    - **Privileged**: A label was applied by a user, either manually or a result of a labeling recommendation, and is the equivalent of Manual for the Azure Information Protection client.
-    - **Standard**: A label was applied automatically, and is the equivalent of Automatic for the Azure Information Protection client (classic).
+  
+    - **Privileged**: A label was applied by a user, either manually or a result of a labeling recommendation, and is the equivalent of **Manual** for the AIP classic client.
+
+    - **Standard**: A label was applied automatically, and is the equivalent of **Automatic** for the AIP classic client.
 
 ## EXAMPLES
 

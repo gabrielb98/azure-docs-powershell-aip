@@ -17,6 +17,7 @@ Import-MIPNetworkDiscoveryConfiguration -FileName <String> [-WhatIf] [-Confirm] 
 ```
 
 ## DESCRIPTION
+**Relevant for:** AIP unified labeling client only
 
 The **Import-MIPNetworkDiscoveryConfiguration** cmdlet imports local configuration settings for the Azure Information Protection network scan jobs, and automatically configures the scanner to use the offline configuration. 
 

@@ -17,6 +17,7 @@ Get-MIPNetworkDiscoveryStatus [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+**Relevant for:** AIP unified labeling client only
 
 The **Get-MIPNetworkDiscoveryStatus** cmdlet returns the current status of the Network Discovery service.
 

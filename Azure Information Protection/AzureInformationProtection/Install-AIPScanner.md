@@ -17,25 +17,32 @@ Install-AIPScanner [-ServiceUserCredentials] <PSCredential> [-SqlServerInstance]
 ```
 
 ## DESCRIPTION
-The Install-AIPScanner cmdlet installs and configures the Azure Information Protection Scanner service on a computer running Windows Server 2019, Windows Server 2016, or Windows Server 2012 R2. The Azure Information Protection scanner uses this service to scan files on data stores that use the Server Message Block (SMB) protocol, and on SharePoint on premises. Files that this scanner discovers can then be labeled to apply classification, and optionally, apply protection or remove protection.
+**Relevant for:** AIP unified labeling and classic clients
 
-For more information about how to configure the labels and policy settings, see the following information:
+The **Install-AIPScanner** cmdlet installs and configures the Azure Information Protection Scanner service on a computer running Windows Server 2019, Windows Server 2016, or Windows Server 2012 R2. 
 
-For the scanner from the classic client: [Configuring the Azure Information Protection policy](/information-protection/configure-policy)
+The Azure Information Protection scanner uses this service to scan files on data stores that use the Server Message Block (SMB) protocol, and on SharePoint on premises. Files that this scanner discovers can then be labeled to apply classification, and optionally, apply protection or remove protection.
 
-For the scanner from the unified labeling client: [Overview of sensitivity labels](/microsoft-365/compliance/sensitivity-labels)
+For more information about how to configure the labels and policy settings, see: 
 
-You must run this cmdlet before you run any other cmdlet for the Azure Information Protection scanner.
+- **Unified labeling client:** [Overview of sensitivity labels](/microsoft-365/compliance/sensitivity-labels)
 
+- **Classic client:** [Configuring the Azure Information Protection policy](/information-protection/configure-policy)
+
+> [!IMPORTANT]
+> You must run this cmdlet before you run any other cmdlet for the Azure Information Protection scanner.
+> 
 The command creates a Windows service named Azure Information Protection Scanner. It also creates and configures a database on SQL Server to store configuration and operational information for the scanner. The service that you specify to run the scanner is automatically granted the required rights to read and write to the database that is created.
 
 To run this command, you must have local administrator rights for the Windows Server computer, and Sysadmin rights on the instance of SQL Server that you will use for the scanner.
 
 After you have run this command, use the Azure portal to configure the settings in the scanner cluster (profile) and specify the data repositories to scan. Before you run the scanner, you must run the [Set-AIPAuthentication](./Set-AIPAuthentication.md) cmdlet one time to sign in to Azure AD for authentication and authorization. 
 
-For step-by-step instructions to install, configure, and use the scanner, see [Deploying the Azure Information Protection scanner to automatically classify and protect files](/information-protection/deploy-aip-scanner).
+For step-by-step instructions to install, configure, and use the scanner, see:
 
-Note: If you have the Azure Information Protection unified labeling client, this version includes a preview version of the scanner that you can install for testing. For more information, see [Installing the Azure Information Protection scanner](/azure/information-protection/rms-client/clientv2-admin-guide#installing-the-azure-information-protection-scanner.md) from the admin guide for the unified labeling client.
+- [Unified labeling client instructions for deploying the AIP scanner](/information-protection/deploy-aip-scanner)
+- [Classic client instructions for deploying the AIP scanner](/information-protection/deploy-aip-scanner).
+
 
 ## EXAMPLES
 
@@ -137,11 +144,11 @@ Accept wildcard characters: False
 
 Specifies the scanner's database name for its configuration. 
 
-For the Azure Information Protection client (classic), this parameter is optional and if you don't specify it, the default database name for the scanner is AIPScanner_\<computer_name>. When you specify a profile name with this parameter, the database name for the scanner is AIPScanner_\<profile_name>.
+- **AIP unified labeling client:** For the unified labeling client, this parameter isn't optional and you must specify a profile name. The database name for the scanner is **AIPScannerUL_\<profile_name>.**
 
-For the Azure Information Protection unified labeling client, this parameter isn't optional and you must specify a profile name. The database name for the scanner is AIPScannerUL_\<profile_name>.
+- **AIP classic client:** For the AIP classic client, this parameter is optional and if you don't specify it, the default database name for the scanner is **AIPScanner_\<computer_name>.** When you specify a profile name with this parameter, the database name for the scanner is **AIPScanner_\<profile_name>.**
 
-If the database doesn't exist when the scanner is installed, the Install-AIPScanner command creates it. 
+If the database doesn't exist when the scanner is installed, the **Install-AIPScanner command** creates it. 
 
 ```yaml 
 Type: String 
@@ -161,9 +168,9 @@ Accept wildcard characters: False
 
 Specifies the scanner database name for configuration.
 
-For Azure Information Protection client (classic), this parameter is optional and if not specified, the default database name for the scanner is AIPScanner_<computer_name>. When you specify a cluster name with this parameter, the database name for the scanner is AIPScanner_<cluster_name>.
+- **AIP unified labeling client**: For the AIP unified labeling client, this parameter is not optional and you must specify a cluster name. The database name for the scanner is **AIPScannerUL_<cluster_name>.**
 
-For Azure Information Protection unified labeling client, this parameter is not optional and you must specify a cluster name. The database name for the scanner is AIPScannerUL_<cluster_name>.
+- **AIP classic client:** For the AIP classic client, this parameter is optional and if not specified, the default database name for the scanner is **AIPScanner_<computer_name>.** When you specify a cluster name with this parameter, the database name for the scanner is **AIPScanner_<cluster_name>.**
 
 If the database doesn't exist when the scanner is installed, the **Install-AIPScanner** command creates it.
 

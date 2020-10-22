@@ -17,6 +17,7 @@ Get-MIPNetworkDiscoveryConfiguration [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+**Relevant for:** AIP unified labeling client only
 
 The **Get-MIPNetworkDiscoveryConfiguration** cmdlet gets configuration settings for the Network Discovery service.
 

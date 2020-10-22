@@ -17,7 +17,9 @@ Start-AIPScannerDiagnostics [-OnBehalfOf <PSCredential>] [-ResetConfig] [<Common
 ```
 
 ## DESCRIPTION
-This cmdlet triggers a series of diagnostic checks to verify that the scanner deployment is healthy.
+**Relevant for:** Unified labeling client only
+
+The **Start-AIPScannerDiagnostics** cmdlet triggers a series of diagnostic checks to verify that the scanner deployment is healthy.
 
 Diagnostic checks include whether:
 

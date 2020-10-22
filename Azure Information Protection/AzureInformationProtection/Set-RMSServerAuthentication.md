@@ -19,19 +19,24 @@ Set-RMSServerAuthentication [-Key <String>] [-AppPrincipalId <String>] [-BposTen
 ```
 
 ## DESCRIPTION
+**Relevant for:** AIP classic client only
+
 The **Set-RMSServerAuthentication** cmdlet sets the server mode so that commands can be run non-interactively. Use server mode when you need to protect or unprotect files without interaction. For example, if you protect files by using Windows Server and File Classification Infrastructure (FCI), or a scheduled script that automatically protects files on a computer or network share. You need run this command just one time for your PowerShell session.
 
 This cmdlet does not apply if you use your user account to protect or unprotect files. 
 
-- For Azure RMS: Server mode requires you to specify credentials for a service principal account that authenticates to the Azure Rights Management service. 
+- **For Azure RMS:** Server mode requires you to specify credentials for a service principal account that authenticates to the Azure Rights Management service. 
 
-- For AD RMS: Server mode requires you to specify Windows integrated authentication so that the computer account can be authenticated with the AD RMS service. The computer account must be granted permissions to ServerCertification.asmx.
+- **For AD RMS:** Server mode requires you to specify Windows integrated authentication so that the computer account can be authenticated with the AD RMS service. The computer account must be granted permissions to ServerCertification.asmx.
     
     Server mode for AD RMS requires the current GA version of the Azure Information Protection client.
 
-For information how to get the identifiers that the service principal requires for Azure RMS, and how to grant the permissions for AD RMS, see [Using PowerShell with the Azure Information Protection client](/information-protection/rms-client/client-admin-guide-powershell) from the Azure Information Protection client admin guide.
+For information how to get the identifiers that the service principal requires for Azure RMS, and how to grant the permissions for AD RMS, see [Using PowerShell with the AIP classic client](/information-protection/rms-client/client-admin-guide-powershell).
 
-This cmdlet is not supported for the Azure Information Protection unified labeling client.
+> [!NOTE]
+> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021.** 
+> 
+> This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
 ## EXAMPLES
 
