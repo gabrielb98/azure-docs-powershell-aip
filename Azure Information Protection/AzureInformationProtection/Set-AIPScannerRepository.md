@@ -213,7 +213,7 @@ Accept wildcard characters: False
 ### -ExcludeFileTypes
 Determines any file types that are ignored during your content scan job. Define multiple file types using a comma-separated list.
 
-If you define this parameter, define the **IncludeFileTypes** parameter as null. For example, see the sample code [above](#example-3-update-the-repository-details-excluding-msg-and-tmp-files).
+If you define this parameter, define the **IncludeFileTypes** parameter as null. For sample code, see **Example 3** above.
 
 Relevant only when the **OverrideContentScanJob** parameter is set to **on**.
 
@@ -232,7 +232,7 @@ Accept wildcard characters: False
 ### -IncludeFileTypes
 Explicitly determines the file types that are scanned by your content scan job. Define multiple file types using a comma-separated list.
 
-If you define this parameter, define the **ExcludeFileTypes** parameter as null. For example, see the sample code [above](#example-3-update-the-repository-details-excluding-msg-and-tmp-files).
+If you define this parameter, define the **ExcludeFileTypes** parameter as null. For sample code, see **Example 3** above.
 
 Relevant only when the **OverrideContentScanJob** parameter is set to **on**.
 
