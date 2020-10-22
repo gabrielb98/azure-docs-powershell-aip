@@ -5,7 +5,7 @@ online version: https://go.microsoft.com/fwlink/?linkid=2144636
 schema: 2.0.0
 ---
 
-# Remove-MIPScannerContentScanJob
+# Remove-AIPScannerContentScanJob
 
 ## SYNOPSIS
 Delete a content scan job.
@@ -13,7 +13,7 @@ Delete a content scan job.
 ## SYNTAX
 
 ```
-Remove-MIPScannerContentScanJob [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-AIPScannerContentScanJob [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -24,6 +24,10 @@ Deletes an entire Azure Information Protection content scan job.
 > 
 
 For more information about content scan jobs, see the [Azure Information Protection on-premises scanner documentation](/information-protection/deploy-aip-scanner-configure-install#create-a-content-scan-job).
+
+> [!IMPORTANT]
+> If you are using the AIP classic client, this cmdlet is deprecated. Instead, use the [Azure portal to configure the scanner](/information-protection/deploy-aip-scanner-classic).
+> 
 
 ## EXAMPLES
 
@@ -81,14 +85,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-- [Add-MIPScannerRepository](Add-MIPScannerRepository.md)
+- [Add-AIPScannerRepository](Add-AIPScannerRepository.md)
 
-- [Get-MIPScannerContentScanJob](Get-MIPScannerContentScanJob.md)
+- [Get-AIPScannerContentScanJob](Get-AIPScannerContentScanJob.md)
 
-- [Get-MIPScannerRepository](Get-MIPScannerRepository.md)
+- [Get-AIPScannerRepository](Get-AIPScannerRepository.md)
 
-- [Remove-MIPScannerRepository](Remove-MIPScannerRepository.md)
+- [Remove-AIPScannerRepository](Remove-AIPScannerRepository.md)
 
-- [Set-MIPScannerContentScanJob](Set-MIPScannerContentScanJob.md)
+- [Set-AIPScannerContentScanJob](Set-AIPScannerContentScanJob.md)
 
-- [Set-MIPScannerRepository](Set-MIPScannerRepository.md)
+- [Set-AIPScannerRepository](Set-AIPScannerRepository.md)

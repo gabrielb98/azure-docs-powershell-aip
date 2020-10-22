@@ -5,7 +5,7 @@ online version: https://go.microsoft.com/fwlink/?linkid=2144824
 schema: 2.0.0
 ---
 
-# Get-MIPScannerContentScanJob
+# Get-AIPScannerContentScanJob
 
 ## SYNOPSIS
 Gets details about an Azure Information Protection content scan job.
@@ -13,7 +13,7 @@ Gets details about an Azure Information Protection content scan job.
 ## SYNTAX
 
 ```
-Get-MIPScannerContentScanJob [<CommonParameters>]
+Get-AIPScannerContentScanJob [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -25,7 +25,7 @@ For more information about content scan jobs, see the [Azure Information Protect
 
 ### Example 1 Content scan job settings defined by PowerShell
 ```PowerShell
-PS C:\WINDOWS\system32> Get-MIPScannerContentScanJob
+PS C:\WINDOWS\system32> Get-AIPScannerContentScanJob
 
 Schedule                : Manual
 DiscoverInformationTypes: All
@@ -52,7 +52,7 @@ This example shows a sample command and response when the content scan job has b
 
 ### Example 2 Content scan job settings defined by PowerShell
 ```PowerShell
-PS C:\WINDOWS\system32> Get-MIPScannerContentScanJob
+PS C:\WINDOWS\system32> Get-AIPScannerContentScanJob
 
 Schedule                : Manual
 DiscoverInformationTypes: PolicyOnly
@@ -92,14 +92,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-- [Add-MIPScannerRepository](Add-MIPScannerRepository.md)
+- [Add-AIPScannerRepository](Add-AIPScannerRepository.md)
 
-- [Get-MIPScannerRepository](Get-MIPScannerRepository.md)
+- [Get-AIPScannerRepository](Get-AIPScannerRepository.md)
 
-- [Remove-MIPScannerContentScanJob](Remove-MIPScannerContentScanJob.md)
+- [Remove-AIPScannerContentScanJob](Remove-AIPScannerContentScanJob.md)
 
-- [Remove-MIPScannerRepository](Remove-MIPScannerRepository.md)
+- [Remove-AIPScannerRepository](Remove-AIPScannerRepository.md)
 
-- [Set-MIPScannerContentScanJob](Set-MIPScannerContentScanJob.md)
+- [Set-AIPScannerContentScanJob](Set-AIPScannerContentScanJob.md)
 
-- [Set-MIPScannerRepository](Set-MIPScannerRepository.md)
+- [Set-AIPScannerRepository](Set-AIPScannerRepository.md)

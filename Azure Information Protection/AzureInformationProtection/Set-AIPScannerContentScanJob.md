@@ -6,7 +6,7 @@ online version: https://go.microsoft.com/fwlink/?linkid=2144639
 schema: 2.0.0
 ---
 
-# Set-MIPScannerContentScanJob
+# Set-AIPScannerContentScanJob
 
 ## SYNOPSIS
 Defines settings for an Azure Information Protection content scan job.
@@ -14,7 +14,7 @@ Defines settings for an Azure Information Protection content scan job.
 ## SYNTAX
 
 ```
-Set-MIPScannerContentScanJob [-Schedule <Schedule>] [-DiscoverInformationTypes <DiscoverInformationTypes>]
+Set-AIPScannerContentScanJob [-Schedule <Schedule>] [-DiscoverInformationTypes <DiscoverInformationTypes>]
  [-RecommendedAsAutomatic <OnOffEnum>] [-EnableDlp <OnOffEnum>] [-Enforce <OnOffEnum>]
  [-LabelFilesByContent <OnOffEnum>] [-RelabelFiles <OnOffEnum>] [-AllowLabelDowngrade <OnOffEnum>]
  [-EnforceDefaultLabel <OnOffEnum>] [-DefaultLabelType <DefaultLabelType>] [-DefaultLabelId <Guid>]
@@ -31,7 +31,7 @@ For more information about content scan jobs, see the [Azure Information Protect
 ### Example 1 Define default content scan job settings
 
 ```PowerShell
-PS C:\WINDOWS\system32> Set-MIPScannerContentScanJob -Enforce Off
+PS C:\WINDOWS\system32> Set-AIPScannerContentScanJob -Enforce Off
 ```
 
 This example defines the content scan job with default settings, and sets the **Policy enforcement** option to **Off.**
@@ -39,7 +39,7 @@ This example defines the content scan job with default settings, and sets the **
 ### Example 2 Define a basic content scan job that runs continuously
 
 ```PowerShell
-PS C:\WINDOWS\system32> Set-MIPScannerContentScanJob -Enforce Off -RelabelFiles On -EnforceDefaultLabel On -Schedule Always
+PS C:\WINDOWS\system32> Set-AIPScannerContentScanJob -Enforce Off -RelabelFiles On -EnforceDefaultLabel On -Schedule Always
 ```
 
 This example defines the content scan job with without enforcing a policy, allowing files to be re-labeled, using a default label, and is scheduled to run always.
@@ -47,7 +47,7 @@ This example defines the content scan job with without enforcing a policy, allow
 ### Example 3 Define a content scan job that allows for specific re-labeling actions only
 
 ```PowerShell
-PS C:\WINDOWS\system32> Set-MIPScannerContentScanJob -RelabelFiles On -AllowLabelDowngrade On -EnforceDefaultLabel On
+PS C:\WINDOWS\system32> Set-AIPScannerContentScanJob -RelabelFiles On -AllowLabelDowngrade On -EnforceDefaultLabel On
 ```
 
 This example defines a content scan job that allows for content to be re-labeled only to downgrade a label or use a default label.
@@ -55,7 +55,7 @@ This example defines a content scan job that allows for content to be re-labeled
 ### Example 4 Define a content scan job that excludes .msg and .tmp files
 
 ```PowerShell
-PS C:\WINDOWS\system32> Set-MIPScannerContentScanJob -IncludeFileTypes '' -ExcludeFileTypes '.msg,.tmp'
+PS C:\WINDOWS\system32> Set-AIPScannerContentScanJob -IncludeFileTypes '' -ExcludeFileTypes '.msg,.tmp'
 ```
 
 This example defines a content scan job that includes all file types except for .msg and .tmp files. 
@@ -64,7 +64,7 @@ This example defines a content scan job that includes all file types except for 
 ### Example 5 Define a content scan job with DLP enabled, and a specific repository owner
 
 ```PowerShell
-PS C:\WINDOWS\system32> Set-MIPScannerContentScanJob -EnableDLP On -RepositoryOwner 'domain\user'
+PS C:\WINDOWS\system32> Set-AIPScannerContentScanJob -EnableDLP On -RepositoryOwner 'domain\user'
 ```
 
 This example defines the content scan job to use the Microsoft 365 built-in data loss prevention (DLP) sensitivity information types when scanning your content, and also defines a specific owner for the content scan job's repositories.
@@ -72,7 +72,7 @@ This example defines the content scan job to use the Microsoft 365 built-in data
 ### Example 6 Define a content scan job with a default label to use when automatically labeling content
 
 ```PowerShell
-PS C:\WINDOWS\system32> Set-MIPScannerContentScanJob -DefaultLabelType Custom -DefaultLabelId 'ff1f1c9d-2f92-4a18-3d84-4608b742424'
+PS C:\WINDOWS\system32> Set-AIPScannerContentScanJob -DefaultLabelType Custom -DefaultLabelId 'ff1f1c9d-2f92-4a18-3d84-4608b742424'
 ```
 
 This example defines the content scan job with a specific label used as the default label, specified by the label ID.
@@ -406,14 +406,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-- [Add-MIPScannerRepository](Add-MIPScannerRepository.md)
+- [Add-AIPScannerRepository](Add-AIPScannerRepository.md)
 
-- [Get-MIPScannerContentScanJob](Get-MIPScannerContentScanJob.md)
+- [Get-AIPScannerContentScanJob](Get-AIPScannerContentScanJob.md)
 
-- [Get-MIPScannerRepository](Get-MIPScannerRepository.md)
+- [Get-AIPScannerRepository](Get-AIPScannerRepository.md)
 
-- [Remove-MIPScannerContentScanJob](Remove-MIPScannerContentScanJob.md)
+- [Remove-AIPScannerContentScanJob](Remove-AIPScannerContentScanJob.md)
 
-- [Remove-MIPScannerRepository](Remove-MIPScannerRepository.md)
+- [Remove-AIPScannerRepository](Remove-AIPScannerRepository.md)
 
-- [Set-MIPScannerRepository](Set-MIPScannerRepository.md)
+- [Set-AIPScannerRepository](Set-AIPScannerRepository.md)
