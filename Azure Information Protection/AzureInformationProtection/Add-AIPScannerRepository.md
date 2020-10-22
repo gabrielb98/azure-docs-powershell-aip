@@ -47,6 +47,14 @@ PS C:\WINDOWS\system32> Add-AIPScannerRepository -Path 'c:\repoToScan' -Override
 
 This example adds the **repoToScan** repository to your content scan job, overriding the currently configured content scan job settings.
 
+### Example 3 Add a new repository, excluding .msg and .tmp files
+
+```PowerShell
+PS C:\WINDOWS\system32> Add-AIPScannerRepository -Path 'c:\repoToScan' -IncludeFileTypes '' -ExcludeFileTypes '.msg,.tmp'
+```
+
+This example defines a content scan job that includes all file types except for .msg and .tmp files.
+
 ## PARAMETERS
 
 ### -AllowLabelDowngrade
@@ -208,7 +216,7 @@ Accept wildcard characters: False
 ### -ExcludeFileTypes
 Determines any file types that are ignored during your content scan job. Define multiple file types using a comma-separated list.
 
-Define either this parameter, or the **IncludeFileTypes** parameter, but not both.
+If you define this parameter, define the **IncludeFileTypes** parameter as null. For example, see the sample code [above](#example-3-add-a-new-repository-excluding-msg-and-tmp-files).
 
 Relevant only when the **OverrideContentScanJob** parameter is set to **on**.
 
@@ -228,7 +236,7 @@ Accept wildcard characters: False
 ### -IncludeFileTypes
 Explicitly determines the file types that are scanned by your content scan job. Define multiple file types using a comma-separated list.
 
-Define either this parameter, or the **ExcludeFileTypes** parameter, but not both.
+If you define this parameter, define the **ExcludeFileTypes** parameter as null. For example, see the sample code [above](#example-3-add-a-new-repository-excluding-msg-and-tmp-files).
 
 Relevant only when the **OverrideContentScanJob** parameter is set to **on**.
 
