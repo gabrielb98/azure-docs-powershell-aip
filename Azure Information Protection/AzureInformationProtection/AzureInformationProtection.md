@@ -31,7 +31,10 @@ The .dll file for this module is *AIP.dll*.
 
 ## AzureInformationProtection Cmdlets
 ### [Add-AIPScannerRepository](Add-AIPScannerRepository.md)
-Deprecated: Adds a data repository to be scanned by the Azure Information Protection scanner. 
+Adds a repository to an Azure Information Protection content scan job.
+
+Supported only by the AIP unified labeling client.
+Deprecated for the AIP classic client.
 
 ### [Add-AIPScannerScannedFileTypes](Add-AIPScannerScannedFileTypes.md)
 Deprecated: Adds new file types to a configured list of file types to scan or exclude from scanning by the Azure Information Protection scanner.
@@ -61,7 +64,10 @@ Gets the Azure Information Protection label and protection information for a spe
 Gets the configuration settings for the Azure Information Protection scanner.
 
 ### [Get-AIPScannerRepository](Get-AIPScannerRepository.md)
-Deprecated: Gets a list of data repositories that the Azure Information Protection scanner is configured to scan.
+Gets repository data for an Azure Information Protection content scan job.
+
+Supported only by the AIP unified labeling client.
+Deprecated for the AIP classic client.
 
 ### [Get-AIPScannerStatus](Get-AIPScannerStatus.md)
 Gets the current status of the service for the Azure Information Protection scanner.
@@ -126,7 +132,10 @@ Protects a specified file or the files in a specified folder by using RMS.
 Not supported by the Azure Information Protection unified labeling client. Instead, use Set-AIPFileLabel.
 
 ### [Remove-AIPScannerRepository](Remove-AIPScannerRepository.md)
-Deprecated: Removes a data repository for the Azure Information Protection scanner. 
+Removes a repository from an Azure Information Protection content scan job.
+
+Supported only for the AIP unified labeling client.
+Deprecated for the AIP classic client.
 
 ### [Remove-AIPScannerScannedFileTypes](Remove-AIPScannerScannedFileTypes.md)
 Deprecated: Removes file types from a configured list of file types to scan or exclude from scanning by the Azure Information Protection scanner.
@@ -153,7 +162,10 @@ Sets the service account and database for the Azure Information Protection scann
 Sets optional configuration for the Azure Information Protection scanner.
 
 ### [Set-AIPScannerRepository](Set-AIPScannerRepository.md)
-Deprecated: Updates a profile of configuration settings for a data repository to be scanned by the Azure Information Protection scanner. 
+Updates an existing repository in an Azure Information Protection content scan job.
+
+Supported only for the AIP unified labeling client.
+Deprecated for the AIP classic client.
 
 ### [Set-AIPScannerScannedFileTypes](Set-AIPScannerScannedFileTypes.md)
 Deprecated: Sets a list of file types to scan or exclude from scanning by the Azure Information Protection scanner.
