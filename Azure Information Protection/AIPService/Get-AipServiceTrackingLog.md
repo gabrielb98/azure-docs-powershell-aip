@@ -14,15 +14,15 @@ Gets tracking information for documents protected by Azure Information Protectio
 This cmdlet is supported by both the Azure Information Protection classic and unified labeling clients, with different usage, as described below.
 
 ## SYNTAX
-**Unified labeling client**
 
+### Unified labeling client
 ```
 Get-AipServiceTrackingLog -ContentId <Guid> [-FromTime <DateTime>] [-ToTime <DateTime>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 
 ```
 
-**Classic client**
+### Classic client
 ```
 Get-AipServiceTrackingLog -UserEmail <String> [-FromTime <DateTime>] [-ToTime <DateTime>] [-WhatIf] [-Confirm]
  [<CommonParameters>]

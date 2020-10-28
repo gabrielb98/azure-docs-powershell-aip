@@ -15,15 +15,14 @@ This cmdlet is supported by both the Azure Information Protection classic and un
 
 ## SYNTAX
 
-**Unified labeling client**
-
+### Unified labeling client
 ```
 Get-AipServiceDocumentLog -ContentName <String> -OwnerEmail <String> [-FromTime <DateTime>] [-ToTime <DateTime>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 
 ```
 
-**Classic client**
+### Classic client
 ```
 Get-AipServiceDocumentLog -UserEmail <String> [-FromTime <DateTime>] [-ToTime <DateTime>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
