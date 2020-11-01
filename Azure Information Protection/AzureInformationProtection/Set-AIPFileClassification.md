@@ -55,7 +55,7 @@ You can run this cmdlet non-interactively using both the unified labeling and cl
 
 - **[Classic client](/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection)**
 
-### Unified labeling client support
+**Differences in support between clients**
 
 When you run this cmdlet with the Azure Information Protection unified labeling client, there are differences from the Azure Information Protection client:
 
