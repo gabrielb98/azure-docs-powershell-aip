@@ -30,7 +30,7 @@ For more information, see [Installing the Azure Information Protection scanner](
     
 Run this cmdlet with an account that has the database-level role of db_owner for the configuration database that the scanner is using, named AIPScannerUL_\<cluster_name(profile_name)>.
 
-### Classic client support
+#### Classic client support
 For more information about upgrading the scanner for the Azure Information Protection classic client, see [Upgrading the Azure Information Protection scanner](/azure/information-protection/rms-client/client-admin-guide#upgrading-the-azure-information-protection-scanner) from the admin guide.
     
 Run this cmdlet with an account that has the database-level role of db_owner for the configuration database that the scanner is using:

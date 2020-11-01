@@ -45,8 +45,9 @@ Set-AIPFileLabel [-JustificationMessage <String>] [-RemoveProtection] [-Preserve
 Set-AIPFileLabel -CustomPermissions <AIPCustomPermissions> [-Owner <String>] [-PreserveFileDetails] [-Path] <String[]> [<CommonParameters>]
 ```
 
-## DESCRIPTION - Unified labeling client
+## DESCRIPTION
 
+#### Unified labeling client support
 For the AIP unified labeling client, the **Set-AIPFileLabel** cmdlet sets or removes a sensitivity label for one or more files. This action can automatically apply protection when labels are configured to apply encryption. 
 
 Additionally, you can use this cmdlet to apply custom permissions when they are created as an ad-hoc protection policy object with the [New-AIPCustomPermissions](New-AIPCustomPermissions.md) cmdlet. 
@@ -59,8 +60,7 @@ When you run this cmdlet with the Azure Information Protection unified labeling 
 
 - When a file isn't labeled because it was manually labeled, there was no match for the conditions that you specified, or the file had a higher classification, the file is skipped with the single comment of "No label to apply".
 
-## DESCRIPTION - Classic client
-
+#### Classic client support
 For the AIP classic client, the **Set-AIPFileLabel** cmdlet sets or removes an Azure Information Protection label for one or more files. This action can automatically apply or remove protection when labels are configured for protection in the Azure Information Protection policy. When the command runs successfully, any existing label or protection can be replaced.
 
 > [!TIP]
@@ -72,7 +72,7 @@ For the AIP classic client, the **Set-AIPFileLabel** cmdlet sets or removes an A
 > 
 > This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
-### Running the cmdlet non-interactively
+#### Running the cmdlet non-interactively
 
 For both clients, you can run this cmdlet non-interactively. For instructions, see the relevant admin guide for your client:
 

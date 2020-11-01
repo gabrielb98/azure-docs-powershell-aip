@@ -38,7 +38,7 @@ You can run this cmdlet non-interactively. For more information, see the followi
 > This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 >
 
-## Unified labeling client support
+#### Unified labeling client support
 
 If you have the AIP unified labeling client, functionality differs from the classic client as follows:
 
