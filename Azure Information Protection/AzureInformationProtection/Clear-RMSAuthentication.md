@@ -11,6 +11,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Clears credentials for a user who is authenticated to the Azure RMS service.
 
+**Relevant for:** AIP classic client only
+
 ## SYNTAX
 
 ```
@@ -18,9 +20,6 @@ Clear-RMSAuthentication [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-
-**Relevant for:** AIP classic client only
-
 The **Clear-RMSAuthentication** cmdlet clears the credentials that are used when a user has previously entered their user name and password to authenticate to Azure Rights Management (Azure RMS).
 
 When you enter a user name and password to sign in to Azure RMS, the credentials are cached on the computer. Because these cached credentials are used across PowerShell sessions, to sign in as a different user, you must first run **Clear-RMSAuthentication**. You are then prompted for new credentials.

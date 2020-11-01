@@ -48,9 +48,6 @@ For more information, see:
     - [Install the AIP classic client for users](/information-protection/rms-client/client-admin-guide-install)
 
 
-> [!TIP]
-> Not sure of the differences between these two clients? See this [FAQ](/azure/information-protection/faqs#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
-
 ### Installing the AzureInformationProtection module
 
 - This module requires Windows PowerShell 4.0. This prerequisite is not checked by the installation. 
