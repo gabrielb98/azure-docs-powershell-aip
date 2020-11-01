@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Updates the database schema for the Azure Information Protection scanner.
 
+**Relevant for:** AIP unified labeling and classic clients
+
 ## SYNTAX
 
 ```
@@ -17,13 +19,11 @@ Update-AIPScanner [-Profile | -Cluster <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-**Relevant for:** AIP unified labeling and classic clients
-
 The **Update-AIPScanner** cmdlet updates the database schema for the Azure Information Protection scanner and if required, the scanner service account is also granted delete permissions for the scanner database. 
 
 Run this cmdlet after upgrading your Azure Information Protection client.
 
-### Unified labeling client support    
+#### Unified labeling client support    
 The current version of the unified labeling client includes a preview version of the scanner that you can install for testing. 
 
 For more information, see [Installing the Azure Information Protection scanner](/azure/information-protection/rms-client/clientv2-admin-guide#installing-the-azure-information-protection-scanner.md) from the admin guide for the unified labeling client.

@@ -41,7 +41,7 @@ For example:
 > 
 > This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
-### Running with or without parameters
+## Running with or without parameters
 
 If you run this cmdlet without parameters, the account acquires an Azure AD access token that is valid for 90 days or until your password expires. 
 

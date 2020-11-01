@@ -11,6 +11,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets or removes an Azure Information Protection label for a file, and sets or removes the protection according to the label configuration or custom permissions.
 
+**Relevant for:** AIP unified labeling and classic clients
 
 ## SYNTAX
 
@@ -44,10 +45,7 @@ Set-AIPFileLabel [-JustificationMessage <String>] [-RemoveProtection] [-Preserve
 Set-AIPFileLabel -CustomPermissions <AIPCustomPermissions> [-Owner <String>] [-PreserveFileDetails] [-Path] <String[]> [<CommonParameters>]
 ```
 
-## DESCRIPTION
-**Relevant for:** AIP unified labeling and classic clients
-
-### Unified labeling client support
+## DESCRIPTION - Unified labeling client
 
 For the AIP unified labeling client, the **Set-AIPFileLabel** cmdlet sets or removes a sensitivity label for one or more files. This action can automatically apply protection when labels are configured to apply encryption. 
 
@@ -61,7 +59,7 @@ When you run this cmdlet with the Azure Information Protection unified labeling 
 
 - When a file isn't labeled because it was manually labeled, there was no match for the conditions that you specified, or the file had a higher classification, the file is skipped with the single comment of "No label to apply".
 
-### Classic client support
+## DESCRIPTION - Classic client
 
 For the AIP classic client, the **Set-AIPFileLabel** cmdlet sets or removes an Azure Information Protection label for one or more files. This action can automatically apply or remove protection when labels are configured for protection in the Azure Information Protection policy. When the command runs successfully, any existing label or protection can be replaced.
 

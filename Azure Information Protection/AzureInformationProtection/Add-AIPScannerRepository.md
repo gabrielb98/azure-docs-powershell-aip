@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a data repository to be scanned by the Azure Information Protection scanner. 
 
+**Relevant for:** AIP classic client only
+
 ## SYNTAX
 
 ```
@@ -19,8 +21,6 @@ Add-AIPScannerRepository [-Path] <String> [-OverrideLabel <OverrideLabel>]
 ```
 
 ## DESCRIPTION
-**Relevant for:** AIP classic client only
-
 This cmdlet is deprecated for the current version of the Azure Information Protection scanner installed with the classic client. Instead, use the [Azure portal to configure the scanner](/information-protection/deploy-aip-scanner).
 
 > [!NOTE]
