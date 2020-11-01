@@ -47,8 +47,9 @@ For more information, see:
 > 
 > This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
-### Running the cmdlet non-interactively
-For both clients, you can run this cmdlet non-interactively. For more information, see the relevant admin guide for your client:
+**Running the cmdlet non-interactively**
+
+You can run this cmdlet non-interactively using both the unified labeling and classic client. For more information, see the relevant admin guide for your client:
 
 - **[Unified labeling client](/information-protection/rms-client/clientv2-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection)**
 
