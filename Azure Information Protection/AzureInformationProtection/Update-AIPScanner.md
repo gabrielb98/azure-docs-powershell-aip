@@ -23,14 +23,16 @@ The **Update-AIPScanner** cmdlet updates the database schema for the Azure Infor
 
 Run this cmdlet after upgrading your Azure Information Protection client.
 
-#### Unified labeling client support    
+**Unified labeling client support**
+   
 The current version of the unified labeling client includes a preview version of the scanner that you can install for testing. 
 
 For more information, see [Installing the Azure Information Protection scanner](/azure/information-protection/rms-client/clientv2-admin-guide#installing-the-azure-information-protection-scanner.md) from the admin guide for the unified labeling client.
     
 Run this cmdlet with an account that has the database-level role of db_owner for the configuration database that the scanner is using, named AIPScannerUL_\<cluster_name(profile_name)>.
 
-#### Classic client support
+**Classic client support**
+
 For more information about upgrading the scanner for the Azure Information Protection classic client, see [Upgrading the Azure Information Protection scanner](/azure/information-protection/rms-client/client-admin-guide#upgrading-the-azure-information-protection-scanner) from the admin guide.
     
 Run this cmdlet with an account that has the database-level role of db_owner for the configuration database that the scanner is using:
