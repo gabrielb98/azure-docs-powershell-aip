@@ -9,6 +9,8 @@ author: cabailey
 # Get-AIPScannerStatus
 
 ## SYNOPSIS
+**Relevant for:** AIP unified labeling and classic clients
+
 Gets the current status of the service for the Azure Information Protection scanner.
 
 ## SYNTAX
@@ -18,7 +20,6 @@ Get-AIPScannerStatus [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-**Relevant for:** AIP unified labeling and classic clients
 
 The **Get-AIPScannerStatus** returns the current status of the scanner service for Azure Information Protection. 
 

@@ -8,9 +8,9 @@ schema: 2.0.0
 # Add-AIPScannerScannedFileTypes
 
 ## SYNOPSIS
-Adds new file types to a configured list of file types to scan or exclude from scanning by the Azure Information Protection scanner.
+**Relevant for:** AIP classic client only, and deprecated.
 
-**Relevant for:** AIP classic client only
+Adds new file types to a configured list of file types to scan or exclude from scanning by the Azure Information Protection scanner.
 
 ## SYNTAX
 
@@ -19,7 +19,9 @@ Add-AIPScannerScannedFileTypes [-Repository <String>] -ScannedFileTypes <String[
 ```
 
 ## DESCRIPTION
-This cmdlet is deprecated for the current version of the Azure Information Protection scanner installed with the classic client. Instead, use the [Azure portal to configure the scanner](/information-protection/deploy-aip-scanner).
+This cmdlet is deprecated for the current version of the Azure Information Protection scanner installed with the classic client. 
+
+Instead, use the [Azure portal to configure the scanner](/information-protection/deploy-aip-scanner).
 
 > [!NOTE]
 > To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021.** 

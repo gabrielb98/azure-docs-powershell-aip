@@ -8,6 +8,8 @@ schema: 2.0.0
 # Uninstall-AIPScanner
 
 ## SYNOPSIS
+**Relevant for:** AIP unified labeling and classic clients
+
 Uninstalls the Windows Server service for the Azure Information Protection scanner.
 
 ## SYNTAX
@@ -17,8 +19,6 @@ Uninstall-AIPScanner [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-**Relevant for:** AIP unified labeling and classic clients
-
 The **Uninstall-AIPScanner** cmdlet uninstalls the Azure Information Protection Scanner Windows Server service. 
 
 To run this command, you must have local Administrator rights for the Windows Server computer and you must restart the computer after running the command to complete the removal process.

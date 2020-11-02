@@ -9,6 +9,8 @@ schema: 2.0.0
 # Set-RMSServerAuthentication
 
 ## SYNOPSIS
+**Relevant for:** AIP classic client only
+
 Sets the server mode, which is required for non-interactive sessions.
 
 ## SYNTAX
@@ -19,8 +21,6 @@ Set-RMSServerAuthentication [-Key <String>] [-AppPrincipalId <String>] [-BposTen
 ```
 
 ## DESCRIPTION
-**Relevant for:** AIP classic client only
-
 The **Set-RMSServerAuthentication** cmdlet sets the server mode so that commands can be run non-interactively. Use server mode when you need to protect or unprotect files without interaction. For example, if you protect files by using Windows Server and File Classification Infrastructure (FCI), or a scheduled script that automatically protects files on a computer or network share. You need run this command just one time for your PowerShell session.
 
 This cmdlet does not apply if you use your user account to protect or unprotect files. 

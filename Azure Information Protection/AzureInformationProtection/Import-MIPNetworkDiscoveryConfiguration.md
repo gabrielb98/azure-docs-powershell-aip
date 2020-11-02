@@ -8,6 +8,8 @@ schema: 2.0.0
 # Import-MIPNetworkDiscoveryConfiguration
 
 ## SYNOPSIS
+**Relevant for:** AIP unified labeling client only
+
 Imports a local configuration for Network Discovery network scan jobs.
 
 ## SYNTAX
@@ -17,8 +19,6 @@ Import-MIPNetworkDiscoveryConfiguration -FileName <String> [-WhatIf] [-Confirm] 
 ```
 
 ## DESCRIPTION
-**Relevant for:** AIP unified labeling client only
-
 The **Import-MIPNetworkDiscoveryConfiguration** cmdlet imports local configuration settings for the Azure Information Protection network scan jobs, and automatically configures the scanner to use the offline configuration. 
 
 Network Discovery network scan jobs enable Azure Information Protection administrators to scan specific IP addresses or ranges for risky repositories to add to scan further with content scan jobs.

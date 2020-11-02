@@ -9,6 +9,8 @@ schema: 2.0.0
 # Get-RMSFileStatus
 
 ## SYNOPSIS
+**Relevant for:** AIP classic client only
+
 Gets the RMS protection status of a specified file.
 
 ## SYNTAX
@@ -18,8 +20,6 @@ Get-RMSFileStatus -File <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-**Relevant for:** AIP classic client only
-
 The **Get-RMSFileStatus** cmdlet returns the protection status (whether the file is protected by Rights Management or not) of a specified file.
 
 A protected file has a status of **Protected (Native)** or **Protected (Generic)**, and an unprotected file has a status of **Unprotected**.
@@ -42,16 +42,16 @@ FileName             Status
 C:\Test.docx         Unprotected
 ```
 
-This command lists the Rights Management protection status for the specified file C:\Test.docx.
+This command lists the Rights Management protection status for the specified file **C:\Test.docx.**
 
-Because a file with a .docx file name extension supports native protection, the status returns "Protected (Native)" or "Unprotected".
+Because a file with a **.docx file** name extension supports native protection, the status returns "Protected (Native)" or "Unprotected".
 
 ### Example 2: List the protection status for all files in a folder and any subfolders
 ```
 PS C:\>foreach ($file in (Get-ChildItem -Path C:\Documents -Recurse -Force | where {!$_.PSIsContainer})) {Get-RMSFileStatus -f $file.PSPath}
 ```
 
-Although the **Get-RMSFileStatus** cmdlet works for one file at a time, you can use the following Windows PowerShell command to get the status of all files in a folder (in our example, named C:\Documents) and its subfolders.
+Although the **Get-RMSFileStatus** cmdlet works for one file at a time, you can use the following Windows PowerShell command to get the status of all files in a folder (in our example, named **C:\Documents)** and its subfolders.
 
 The same command can be used with a UNC path instead of a drive and path.
 
@@ -62,7 +62,7 @@ PS C:\>$(foreach ($file in (Get-ChildItem -Path C:\Documents\ -Recurse -Force | 
 
 You can further extend the previous example by outputting the results to a .CSV file, so that you can sort and order the information.
 
-In this example, the .CSV file is named ProtectedFilesList.csv and saved to the C:\Temp folder. If the file already exists, it will be overwritten.
+In this example, the **.CSV** file is named **ProtectedFilesList.csv** and saved to the **C:\Temp** folder. If the file already exists, it will be overwritten.
 
 ## PARAMETERS
 

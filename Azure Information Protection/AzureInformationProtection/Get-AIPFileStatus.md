@@ -9,6 +9,8 @@ schema: 2.0.0
 # Get-AIPFileStatus
 
 ## SYNOPSIS
+**Relevant for:** AIP unified labeling and classic clients
+
 Gets the Azure Information Protection label and protection information for a specified file or files.
 
 ## SYNTAX
@@ -18,8 +20,6 @@ Get-AIPFileStatus [-Path] <String[]> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-**Relevant for:** AIP unified labeling and classic clients
-
 The **Get-AIPFileStatus** cmdlet returns the Azure Information Protection status of a specified file or all files in a specified path. This status includes whether the file has a label, and if it does, the label name, who applied it, how it was applied, and when. 
 
 The status also includes whether the file is protected by Rights Management, and if it is, what Rights Management template was used to apply this protection. If the file was protected with custom permissions (an ad-hoc rights policy) instead of a template, "Restricted Access" is displayed instead of the template name. In addition, the [Rights Management owner and Rights Management issuer](/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) is displayed, and when the file was protected.
@@ -40,7 +40,9 @@ You can run this cmdlet non-interactively. For more information, see the followi
 
 **Differences in support between clients**
 
-If you have the AIP unified labeling client, functionality differs from the classic client as follows:
+If you have the AIP unified labeling client, functionality differs from the classic client as follows.
+
+In the unified labeling client:
 
 - This cmdlet returns label information from your own tenant only and the *LabelingSiteId* parameter is not displayed in the output.
 
@@ -54,7 +56,7 @@ If you have the AIP unified labeling client, functionality differs from the clas
 
 ## EXAMPLES
 
-### Example 1a: Get the label and protection status of a single file - Azure Information Protection client only
+### Example 1a: (Classic client) Get the label and protection status of a single file
 
 ```
 PS C:\> Get-AIPFileStatus -Path \\Finance\Projects\Project.docx
@@ -79,7 +81,7 @@ RMSIssuer       : John@Contoso.com
 
 This command provides information about a file that is labeled as "Confidential \ Finance group". This file was labeled manually by John and it is also protected by using the Rights Management template, "Contoso - Confidential Finance". 
 
-### Example 1b: Get the label and protection status of a single file - Azure Information Protection unified labeling client only
+### Example 1b: (Unified labeling client) Get the label and protection status of a single file
 
 ```
 PS C:\> Get-AIPFileStatus -Path \\Finance\Projects\Project.docx
@@ -107,14 +109,14 @@ This command provides information about a file that is labeled as "Confidential 
 PS C:\> Get-AIPFileStatus -Path \\Finance\Projects\ | Export-Csv C:\Reports\AIP-status.csv
 ```
 
-This command gets the label and protection information of all files on the Finance server, in the Projects folder and any of its subfolders. The results are exported to the file named AIP-status.csv so that they can be more easily searched and sorted. If a previous report exists in C:\Reports\Report.csv, it will be overwritten.
+This command gets the label and protection information of all files on the Finance server, in the Projects folder and any of its subfolders. The results are exported to the file named **AIP-status.csv** so that they can be more easily searched and sorted. If a previous report exists in **C:\Reports\Report.csv,** it will be overwritten.
 
 ### Example 3: List the files labeled "Confidential" and export the results to a CSV file
 ```
 PS C:\> Get-AIPFileStatus -Path \\Finance\Projects\ | Where-Object {$_.MainLabelName -eq 'Confidential'} | Export-Csv C:\Reports\AIP-status.csv
 ```
 
-This command gets the label and protection information for just the files that are labeled "Confidential" (regardless of their sublabel) on the Finance server, in the Projects folder and any of its subfolders. The results are exported to the file named AIP-status.csv so that they can be more easily searched and sorted. If a previous report exists in C:\Reports\Report.csv, it will be overwritten.
+This command gets the label and protection information for just the files that are labeled "Confidential" (regardless of their sublabel) on the Finance server, in the Projects folder and any of its subfolders. The results are exported to the file named **AIP-status.csv** so that they can be more easily searched and sorted. If a previous report exists in **C:\Reports\Report.csv,** it will be overwritten.
 
 ### Example 4: Count of files with a "Confidential" label
 ```
@@ -123,7 +125,7 @@ PS C:\> (Get-AIPFileStatus -Path C:\Projects\ | Where-Object {$_.MainLabelName -
 5
 ```
 
-This command provides the number of files with the "Confidential" label that are in the C:\Projects folder and any of its subfolders. In this example, 5 files are found.
+This command provides the number of files with the "Confidential" label that are in the **C:\Projects** folder and any of its subfolders. In this example, 5 files are found.
 
 ## PARAMETERS
 
@@ -131,9 +133,20 @@ This command provides the number of files with the "Confidential" label that are
 
 Specifies a local path, network path, or SharePoint Server URL to the files for which you want to get the label and protection information. Wildcards are not supported.
 
-For SharePoint paths: SharePoint Server 2019, SharePoint Server 2016, and SharePoint Server 2013 are supported.
+For SharePoint paths, the following are supported:
 
-Examples include C:\Folder\, C:\Folder\Filename, \\\Server\Folder, http://sharepoint.contoso.com/Shared%20Documents/Folder. Paths can include spaces when you enclose the path value with quotes.
+- SharePoint Server 2019
+- SharePoint Server 2016
+- SharePoint Server 2013
+
+For example:
+
+- C:\Folder\
+- C:\Folder\Filename
+- \\\Server\Folder
+- http://sharepoint.contoso.com/Shared%20Documents/Folder
+
+Paths can include spaces when you enclose the path value with quotes.
 
 ```yaml
 Type: String[]

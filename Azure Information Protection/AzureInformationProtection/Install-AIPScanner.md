@@ -8,6 +8,8 @@ schema: 2.0.0
 # Install-AIPScanner
 
 ## SYNOPSIS
+**Relevant for:** AIP unified labeling and classic clients
+
 Installs the Azure Information Protection scanner.
 
 ## SYNTAX
@@ -17,8 +19,6 @@ Install-AIPScanner [-ServiceUserCredentials] <PSCredential> [-SqlServerInstance]
 ```
 
 ## DESCRIPTION
-**Relevant for:** AIP unified labeling and classic clients
-
 The **Install-AIPScanner** cmdlet installs and configures the Azure Information Protection Scanner service on a computer running Windows Server 2019, Windows Server 2016, or Windows Server 2012 R2. 
 
 The Azure Information Protection scanner uses this service to scan files on data stores that use the Server Message Block (SMB) protocol, and on SharePoint on premises. Files that this scanner discovers can then be labeled to apply classification, and optionally, apply protection or remove protection.
@@ -41,8 +41,13 @@ After you have run this command, use the Azure portal to configure the settings 
 For step-by-step instructions to install, configure, and use the scanner, see:
 
 - [Unified labeling client instructions for deploying the AIP scanner](/information-protection/deploy-aip-scanner)
-- [Classic client instructions for deploying the AIP scanner](/information-protection/deploy-aip-scanner).
+- [Classic client instructions for deploying the AIP scanner](/information-protection/deploy-aip-scanner)
 
+> [!NOTE]
+> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021.** 
+> 
+> This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+>
 
 ## EXAMPLES
 

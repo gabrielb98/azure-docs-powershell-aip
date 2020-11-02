@@ -9,6 +9,8 @@ schema: 2.0.0
 # Set-AIPAuthentication
 
 ## SYNOPSIS
+**Relevant for:** AIP unified labeling and classic clients
+
 Sets the authentication credentials for the Azure Information Protection client.
 
 ## SYNTAX
@@ -26,8 +28,6 @@ Set-AIPAuthentication [[-WebAppId] <String>] [[-WebAppKey] <String>] [[-NativeAp
 ```
 
 ## DESCRIPTION
-**Relevant for:** AIP unified labeling and classic clients
-
 The **Set-AIPAuthentication** cmdlet sets credentials by using an access token so that you can sign in as a different user and also use the labeling cmdlets non-interactively. 
 
 For example:
@@ -35,11 +35,6 @@ For example:
 - You want to use the Azure Information Protection scanner to continually discover and automatically label and protect files in multiple data stores. 
 - You want to run a scheduled PowerShell script that automatically labels and protects files on a file server by using the [Set-AIPFileClassification](./Set-AIPFileClassification.md) or [Set-AIPFileLabel](./Set-AIPFileLabel.md) cmdlets. 
 - You have a data loss prevention (DLP) solution that that you want to augment by automatically labeling and protecting files that this solution identifies. 
-
-> [!NOTE]
-> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021.** 
-> 
-> This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
 **Running with or without parameters**
 
@@ -51,8 +46,13 @@ To control when the access token expires, run this cmdlet with parameters. This 
 |---------|---------|
 |**Unified labeling client**   | For more information see [labeling files non-interactively for the AIP unified labeling client](/information-protection/rms-client/clientv2-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection).   </br></br>- The unified labeling client supports the *OnBehalfOf* parameter, which accepts a stored variable that contains your specified Windows user name and password. Use this parameter instead of the *Token* parameter supported by the classic client. </br></br>- Use the *DelegatedUser* parameter to specify a user account in Azure Active Directory that is assigned one or more label policies from your labeling management center.
     |
-|**Classic client**    |  For more information see [labeling files non-interactively for the AIP classic client](/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection). </br></br>The classic client supports a *Token* parameter that you cannot specify the first time you run this cmdlet, but can specify subsequently. </br></br>The first time that you run this cmdlet, it generates an access token that you can copy to the clipboard and then specify when you run the cmdlet again. By specifying the access token with this cmdlet, you are not prompted to sign in. </br></br>**Tip**: Use this method for service accounts that cannot be granted the right to log on locally. For full instructions, see [Specify and use the Token parameter for Set-AIPAuthentication](/information-protection/rms-client/client-admin-guide-powershell#specify-and-use-the-token-parameter-for-set-aipauthentication) from the admin guide. </br></br>**Note:** When the Azure AD access token expires, you must rerun the cmdlet to acquire a new token.
-      |
+|**Classic client**    |  For more information see [labeling files non-interactively for the AIP classic client](/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection). </br></br>The classic client supports a *Token* parameter that you cannot specify the first time you run this cmdlet, but can specify subsequently. </br></br>The first time that you run this cmdlet, it generates an access token that you can copy to the clipboard and then specify when you run the cmdlet again. By specifying the access token with this cmdlet, you are not prompted to sign in. </br></br>**Tip**: Use this method for service accounts that cannot be granted the right to log on locally. For full instructions, see [Specify and use the Token parameter for Set-AIPAuthentication](/information-protection/rms-client/client-admin-guide-powershell#specify-and-use-the-token-parameter-for-set-aipauthentication) from the admin guide. </br></br>**Note:** When the Azure AD access token expires, you must rerun the cmdlet to acquire a new token.|
+| | |
+
+> [!NOTE]
+> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021.** 
+> 
+> This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
 ## EXAMPLES
 
@@ -64,7 +64,7 @@ Acquired access token
 
 This command prompts you for your Azure AD credentials that are used to acquire an access token that is valid for 90 days or until your password expires.
 
-### Example 2: AIP unified labeling client only - Set the authentication credentials by using an application that is registered in Azure Active Directory
+### Example 2: (Unified labeling client only) Set the authentication credentials by using an application that is registered in Azure Active Directory
 
 ```
 PS C:\>$pscreds = Get-Credential CONTOSO\scanner
@@ -78,7 +78,7 @@ The first command creates a **PSCredential** object and stores the specified Win
 
 The second command acquires an access token that is combined with the application so that the token becomes valid for 1 year, 2 years, or never expires, according to your configuration of the registered app in Azure AD. The user name of scanner@contoso.com sets the user context to download labels and label policies from your labeling management center, such as the Office 365 Security & Compliance Center.
 
-### Example 3: AIP classic client only - Set the authentication credentials by using applications that are registered in Azure Active Directory and when prompted, sign in
+### Example 3: (Classic client only) Set the authentication credentials by using applications that are registered in Azure Active Directory and when prompted, sign in
 ```
 PS C:\> Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "+LBkMvddz?WrlNCK5v0e6_=meM59sSAn" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f"
 Acquired application access token on behalf of the user
@@ -86,7 +86,7 @@ Acquired application access token on behalf of the user
 
 This command prompts you for your Azure AD credentials that are used to acquire an access token. This token is then combined with the web application details so that the token becomes valid for 1 year, 2 years, or never expires, according to your configuration of the web app /API in Azure AD. 
 
-### Example 4: AIP classic client only -  Step 1 of 2 to set the authentication credentials for a service account that can't interactively sign in
+### Example 4: (Classic client only) Step 1 of 2 to set the authentication credentials for a service account that can't interactively sign in
 ```
 PS C:\> (Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "+LBkMvddz?WrlNCK5v0e6_=meM59sSAn" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f").token | clip
 Acquired application access token on behalf of the user
@@ -96,7 +96,7 @@ This command prompts you for your Azure AD credentials that are used to acquire 
 
 The access token is copied to the clipboard so that you can run this cmdlet again in a new PowerShell session that runs in the security context of a service account. In this new PowerShell session, you can now run this cmdlet with the *Token* parameter by pasting the value from the clipboard.
 
-### Example 5: AIP classic client only - Step 2 of 2 to set the authentication credentials for a service account that can't interactively sign in
+### Example 5: (Classic client only) Step 2 of 2 to set the authentication credentials for a service account that can't interactively sign in
 ```
 PS C:\> Set-AIPAuthentication -webAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "+LBkMvddz?WrlNCK5v0e6_=meM59sSAn" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f" -Token AwAAAAEAAACDAWh0dHBzOi8vbG9naW4u...
 Acquired application access token on behalf of the user
@@ -189,7 +189,7 @@ To use this parameter, you must run your PowerShell session with the **Run as Ad
 
 Specifies the variable that includes the credentials object for the Azure Information Protection unified labeling client to use when the local Windows account running the Azure Information Protection scanner or scheduled PowerShell commands cannot be granted the user right assignment to log on locally.
 
-Use the Get-Credentials cmdlet to create the variable that stores the credentials.
+Use the [Get-Credential](powershell/module/microsoft.powershell.security/get-credential) cmdlet to create the variable that stores the credentials.
 
 ```yaml
 Type: PSCredential

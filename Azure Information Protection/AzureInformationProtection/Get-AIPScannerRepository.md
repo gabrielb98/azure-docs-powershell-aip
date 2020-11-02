@@ -8,6 +8,8 @@ schema: 2.0.0
 # Get-AIPScannerRepository
 
 ## SYNOPSIS
+**Relevant for:** AIP classic client only, and deprecated.
+
 Gets a list of data repositories that the Azure Information Protection scanner is configured to scan.
 
 ## SYNTAX
@@ -17,8 +19,6 @@ Get-AIPScannerRepository [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-**Relevant for:** AIP classic client only
-
 This cmdlet is deprecated for the current version of the Azure Information Protection scanner. Instead, use the [Azure portal to configure the scanner](/information-protection/deploy-aip-scanner).
 
 > [!NOTE]

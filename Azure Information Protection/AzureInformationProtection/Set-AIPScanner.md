@@ -8,6 +8,8 @@ schema: 2.0.0
 # Set-AIPScanner
 
 ## SYNOPSIS
+**Relevant for:** AIP unified labeling and classic clients
+
 Sets the service account and database for the Azure Information Protection scanner.
 
 ## SYNTAX
@@ -17,8 +19,6 @@ Set-AIPScanner [[-SqlServerInstance] <String>] [-ServiceUserCredentials] <PSCred
 ```
 
 ## DESCRIPTION
-**Relevant for:** AIP unified labeling and classic clients
-
 The **Set-AIPScanner** cmdlet updates the service account and SQL Server database instance for the Azure Information Protection scanner. 
 
 Use this command when you want to change the account or database details that was previously specified, for example, when you installed the scanner by running the [Install-AIPScanner](./Install-AIPScanner.md) cmdlet.
@@ -35,13 +35,11 @@ The new configuration takes effects when the Azure Information Protection Scanne
 ### Example 1: Change the database and profile for the Azure Information Protection scanner
 ```
 PS C:\> Set-AIPScanner -SqlServerInstance SERVER1\AIPSCANNER -Profile EU
-```
-
 
 Azure Information Protection Scanner service configuration change completed successfully.
+```
 
-
-This command configures the Azure Information Protection scanner to use the SQL Server database instance named AIPSCANNER on the server named SERVER1, using the scanner configuration database named AIPScanner_EU.
+This command configures the Azure Information Protection scanner to use the SQL Server database instance named **AIPSCANNER** on the server named **SERVER1,** using the scanner configuration database named **AIPScanner_EU.**
 
 
 ## PARAMETERS
@@ -72,11 +70,11 @@ Specifies the new SQL Server instance on which to create a database for the Azur
 
 For information about the SQL Server requirements, see [Prerequisites for the Azure Information Protection scanner](/azure/information-protection/deploy-aip-scanner#prerequisites-for-the-azure-information-protection-scanner).
 
-For the default instance, specify the server name. For example: SQLSERVER1.
+For the default instance, specify the server name. For example: **SQLSERVER1.**
 
-For a named instance, specify the server name and instance name. For example: SQLSERVER1\AIPSCANNER.
+For a named instance, specify the server name and instance name. For example: **SQLSERVER1\AIPSCANNER.**
 
-For SQL Server Express, specify the server name and SQLEXPRESS. For example: SQLSERVER1\SQLEXPRESS.
+For SQL Server Express, specify the server name and SQLEXPRESS. For example: **SQLSERVER1\SQLEXPRESS.**
 
 ```yaml
 Type: String
@@ -91,13 +89,15 @@ Accept wildcard characters: False
 ```
 
 ### -Profile 
-Note: For the scanner from the unified labeling client, this parameter is required. From version 2.7.0.0, we recommend using Cluster switch instead of Profile switch.
+Specifies that the scanner uses a named database name for its configuration. 
 
-Specifies that the scanner uses a named database name for its configuration. If this parameter is not specified for the scanner from the classic client, the default database name for the scanner is AIPScanner_\<computer_name>. When you specify a profile name, this database name changes to AIPScanner_\<profile_name>.
+- **Unified labeling client:** Using this parameter or the **Cluster** parameter is required. Starting in version 2.7.0.0, we recommend using the **Cluster** parameter instead.
 
-For the scanner from the unified labeling client, which must be installed with a profile name, the database name created is AIPScannerUL_\<profile_name>.
+    For the scanner from the unified labeling client, which must be installed with a Profile or Cluster name, the database name created is **AIPScannerUL_\<profile/cluster_name>.**
 
-If the database doesn't exist when the scanner is installed, the Install-AIIPScanner command creates it. 
+- **Classic client:** If this parameter is not specified for the scanner from the classic client, the default database name for the scanner is **AIPScanner_\<computer_name>.** When you specify a profile name, this database name changes to **AIPScanner_\<profile_name>.**
+
+If the database doesn't exist when the scanner is installed, the [Install-AIPScanner](Install-AIPScanner.md) command creates it. 
 
 ```yaml 
 Type: String 
@@ -110,17 +110,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 ### -Cluster
-
-> [!NOTE]
->  This parameter is required for the scanner from the unified labeling client. From version 2.7.0.0, we recommend using Cluster switch instead of Profile switch.
-
 Specifies the scanner database name for configuration.
 
-- **AIP unified labeling client:** For the AIP unified labeling client, this parameter is not optional and you must specify a cluster name. The database name for the scanner is **AIPScannerUL_<cluster_name>.**
+- **AIP unified labeling client:** For the AIP unified labeling client, this parameter is required, and you must specify a cluster name. The database name for the scanner is **AIPScannerUL_<cluster_name>.**
 
-- **AIP classic client:** For the AIP classic client, this parameter is optional and if not specified, the default database name for the scanner is **AIPScanner_<computer_name>.** When you specify a cluster name with this parameter, the database name for the scanner is **AIPScanner_<cluster_name>.**
+    Starting in version 2.7.0.0, we recommend using this parameter instead of the **Profile** parameter.
 
-If the database doesn't exist when the scanner is installed, the **Install-AIPScanner** command creates it.
+- **AIP classic client:** For the AIP classic client, this parameter is optional and if not specified, the default database name for the scanner is **AIPScanner_<computer_name>.** 
+
+    When you specify a cluster name with this parameter, the database name for the scanner is **AIPScanner_<cluster_name>.**
+
+If the database doesn't exist when the scanner is installed, the [Install-AIPScanner](Install-AIPScanner.md) command creates it.
 
 ```yaml 
 Type: String 

@@ -8,6 +8,8 @@ schema: 2.0.0
 # Start-AIPScan
 
 ## SYNOPSIS
+**Relevant for:** Unified labeling client only
+
 Instructs the Azure Information Protection scanner to start a one-time scan cycle. 
 
 ## SYNTAX
@@ -17,8 +19,6 @@ Start-AIPScan [-Reset] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-**Relevant for:** Unified labeling client only
-
 The **Start-AIPScan** cmdlet instructs the Azure Information Protection scanner to immediately start a one-time scan cycle. The scanner service must be started already and the scanner schedule must be configured for a manual schedule. 
 
 To configure the schedule, use the [Azure portal to configure the scanner](/azure/information-protection/deploy-aip-scanner).

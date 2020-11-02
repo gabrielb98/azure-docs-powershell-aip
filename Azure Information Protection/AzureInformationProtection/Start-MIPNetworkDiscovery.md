@@ -8,6 +8,8 @@ schema: 2.0.0
 # Start-MIPNetworkDiscovery
 
 ## SYNOPSIS
+**Relevant for:** AIP unified labeling client only
+
 Instructs the Azure Information Protection scanner to start a network scan job.
 
 ## SYNTAX
@@ -17,8 +19,6 @@ Start-MIPNetworkDiscovery -JobId <Guid> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-**Relevant for:** AIP unified labeling client only
-
 The **Start-MIPNetworkDiscovery** cmdlet instructs the Azure Information Protection scanner to immediately start a specified network scan job. 
 
 Network scan jobs enables AIP administrators to scan a specified IP address or range for possibly risky repositories. Administrators may want to add these repositories to a content scan job to further scan their contents.

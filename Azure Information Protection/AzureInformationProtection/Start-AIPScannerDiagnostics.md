@@ -8,6 +8,8 @@ schema: 2.0.0
 # Start-AIPScannerDiagnostics
 
 ## SYNOPSIS
+**Relevant for:** Unified labeling client only
+
 Starts a series of health checks for a locally installed AIP scanner service.
 
 ## SYNTAX
@@ -17,8 +19,6 @@ Start-AIPScannerDiagnostics [-OnBehalfOf <PSCredential>] [-ResetConfig] [<Common
 ```
 
 ## DESCRIPTION
-**Relevant for:** Unified labeling client only
-
 The **Start-AIPScannerDiagnostics** cmdlet triggers a series of diagnostic checks to verify that the scanner deployment is healthy.
 
 Diagnostic checks include whether:

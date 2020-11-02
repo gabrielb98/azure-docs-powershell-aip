@@ -9,6 +9,8 @@ schema: 2.0.0
 # New-RMSProtectionLicense
 
 ## SYNOPSIS
+**Relevant for:** AIP classic client only
+
 Creates an ad-hoc rights policy for RMS protection.
 
 ## SYNTAX
@@ -20,8 +22,6 @@ New-RMSProtectionLicense [-RmsServer <String>] [-OwnerEmail <String>] [-UserEmai
 ```
 
 ## DESCRIPTION
-**Relevant for:** AIP classic client only
-
 The **New-RMSProtectionLicense** cmdlet creates an ad-hoc rights policy that you store as a variable and then use to protect a file or files when you run the [Protect-RMSFile](./Protect-RMSFile.md) cmdlet.
 
 Create an ad-hoc rights policy (also known as a publishing license) when you cannot use a previously created rights policy template.
@@ -64,7 +64,7 @@ C:\Test.txt           C:\Test.ptxt
 
 The first command creates an ad-hoc rights policy that sets user1@contoso.com as the owner and grants user2@contoso.com and user3@ contoso.com VIEW and PRINT rights, and stores this policy in a variable named License.
 
-The second command then uses the created ad-hoc policy to protect the file C:\Test.txt.
+The second command then uses the created ad-hoc policy to protect the file **C:\Test.txt.**
 
 ## PARAMETERS
 

@@ -8,6 +8,8 @@ schema: 2.0.0
 # New-AIPCustomPermissions
 
 ## SYNOPSIS
+**Relevant for:** AIP unified labeling client only
+
 Creates an ad-hoc protection policy for custom permissions.
 
 ## SYNTAX
@@ -18,9 +20,9 @@ New-AIPCustomPermissions -Users <String[]> -Permissions <Permissions> [-Expirati
 ```
 
 ## DESCRIPTION
-**Relevant for:** AIP unified labeling client only
+The **New-AIPCustomPermissions** cmdlet creates an ad-hoc protection policy object for custom permissions that you store as a variable and then use to protect a file or files when you run the labeling cmdlet, [Set-AIPFileLabel](./Set-AIPFileLabel.md). 
 
-The **New-AIPCustomPermissions** cmdlet creates an ad-hoc protection policy object for custom permissions that you store as a variable and then use to protect a file or files when you run the labeling cmdlet, [Set-AIPFileLabel](./Set-AIPFileLabel.md). If the label that is applied is configured for protection settings, the custom permissions from the ad-hoc protection policy replace the protection settings from the label.
+If the label that is applied is configured for protection settings, the custom permissions from the ad-hoc protection policy replace the protection settings from the label.
 
 ## EXAMPLES
 
@@ -29,7 +31,7 @@ The **New-AIPCustomPermissions** cmdlet creates an ad-hoc protection policy obje
 PS C:\> $permissions = New-AIPCustomPermissions -Users user1@contoso.com -Permissions Viewer
 ```
 
-This command creates an ad-hoc protection policy object that grants user1 from contoso.com usage rights from the Reviewer permissions and stores this policy in a variable named permissions. This ad-hoc protection policy can then be used to apply protection to a file or files.
+This command creates an ad-hoc protection policy object that grants **user1** from **contoso.com** usage rights from the Reviewer permissions and stores this policy in a variable named permissions. This ad-hoc protection policy can then be used to apply protection to a file or files.
 
 There is no output displayed for this command.
 

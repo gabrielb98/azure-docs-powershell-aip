@@ -8,6 +8,8 @@ schema: 2.0.0
 # Import-AIPScannerConfiguration
 
 ## SYNOPSIS
+**Relevant for:** AIP unified labeling and classic clients
+
 Imports local configuration for the Azure Information Protection scanner.
 
 ## SYNTAX
@@ -17,13 +19,27 @@ Import-AIPScannerConfiguration -FileName <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Import-AIPScannerConfiguration cmdlet imports local configuration settings for the Azure Information Protection scanner, and automatically configures the scanner to use offline configuration. Use this cmdlet after you have configured a cluster (profile) and content scan job for the scanner in the Azure portal, and exported the settings to a file because the scanner can't connect to the Azure Information Protection service. For example, the computer running the scanner doesn't have Internet connectivity.
+The **Import-AIPScannerConfiguration** cmdlet imports local configuration settings for the Azure Information Protection scanner, and automatically configures the scanner to use offline configuration. 
+
+Use this cmdlet after you've configured the following in the Azure portal:
+
+- Configured a cluster (unified labeling client only) or a profile
+- Configured a content scan job for the scanner
+- Exported the settings to a file instead of having the scanner connect to the Azure Information Protection service.
+
+For example use this cmdlet when the computer running the scanner doesn't have Internet connectivity.
 
 If you need to make configuration changes to the scanner after you have run this cmdlet, make those changes in the Azure portal, export the content scan job again, and rerun this cmdlet.
 
 If you want to change the scanner to use online configuration after you have run this cmdlet, use the [Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration.md) and set the *OnlineConfiguration* parameter to **On**.
 
 Any changes will be used the next time the scanner runs. If you need the changes to take effect immediately, restart the Azure Information Protection Scanner service on the Windows server computer.
+
+> [!NOTE]
+> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021.** 
+> 
+> This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+>
 
 
 ## EXAMPLES

@@ -8,6 +8,8 @@ schema: 2.0.0
 # Get-MIPNetworkDiscoveryStatus
 
 ## SYNOPSIS
+**Relevant for:** AIP unified labeling client only
+
 Gets the current status of the Network Discovery service.
 
 ## SYNTAX
@@ -17,8 +19,6 @@ Get-MIPNetworkDiscoveryStatus [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-**Relevant for:** AIP unified labeling client only
-
 The **Get-MIPNetworkDiscoveryStatus** cmdlet returns the current status of the Network Discovery service.
 
 Network Discovery network scan jobs enable Azure Information Protection administrators to scan specific IP addresses or ranges for risky repositories to add to scan further with content scan jobs.

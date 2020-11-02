@@ -8,6 +8,8 @@ schema: 2.0.0
 # Set-AIPScannerConfiguration
 
 ## SYNOPSIS
+**Relevant for:** AIP unified labeling and classic clients
+
 Sets optional configuration for the Azure Information Protection scanner.
 
 ## SYNTAX
@@ -17,8 +19,6 @@ Set-AIPScannerConfiguration [-ReportLevel <ReportLevel>] [-OnlineConfiguration <
 ```
 
 ## DESCRIPTION
-**Relevant for:** AIP unified labeling and classic clients
-
 The **Set-AIPScannerConfiguration** cmdlet sets local configuration settings for the Azure Information Protection scanner. 
 
 You configure most of the scanner configuration settings in the Azure portal, but must use this cmdlet if you need to import configuration settings from a file because the scanner cannot support online configuration, or if you need to change the report level for the locally created reports.
@@ -49,7 +49,7 @@ This command sets the scanner to get its configuration directly from the Azure I
 ### -ReportLevel
 Define the level of logging for the scanner reports. When the scanner is first installed, by default, only files that are successfully labeled by the scanner are included in the log file.
 
-Log files are stored in the **%localappdata%\Microsoft\MSIP\Scanner\Reports** folder. A summary report (.txt) includes the time taken to scan, the number of scanned files, and statistics of how many files were classified and protected. Detailed reports (.csv) has details for each file. The folder stores up to 60 reports for each scanning cycle and all but the latest report is compressed to help minimize the required disk space.
+Log files are stored in the **%localappdata%\Microsoft\MSIP\Scanner\Reports** folder. A summary report **(.txt)** includes the time taken to scan, the number of scanned files, and statistics of how many files were classified and protected. Detailed reports **(.csv)** has details for each file. The folder stores up to 60 reports for each scanning cycle and all but the latest report is compressed to help minimize the required disk space.
 
 |Log level |Description  |
 |---------|---------|

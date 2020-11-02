@@ -9,6 +9,8 @@ schema: 2.0.0
 # Get-RMSTemplate
 
 ## SYNOPSIS
+**Relevant for:** AIP classic client only
+
 Gets a list of RMS templates.
 
 ## SYNTAX
@@ -18,8 +20,6 @@ Get-RMSTemplate [-RmsServer <String>] [-Force] [-Culture <String>] [<CommonParam
 ```
 
 ## DESCRIPTION
-**Relevant for:** AIP classic client only
-
 The **Get-RMSTemplate** cmdlet gets a list of templates from your Rights Management deployment (AD RMS or Azure RMS), which can then be used to protect files. Use this cmdlet to identify the template ID of the template that you want to use.
 
 > [!NOTE]

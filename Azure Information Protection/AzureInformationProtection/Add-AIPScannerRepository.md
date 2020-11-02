@@ -8,9 +8,9 @@ schema: 2.0.0
 # Add-AIPScannerRepository
 
 ## SYNOPSIS
-Adds a data repository to be scanned by the Azure Information Protection scanner. 
+**Relevant for:** AIP classic client only, and deprecated.
 
-**Relevant for:** AIP classic client only
+Adds a data repository to be scanned by the Azure Information Protection scanner. 
 
 ## SYNTAX
 

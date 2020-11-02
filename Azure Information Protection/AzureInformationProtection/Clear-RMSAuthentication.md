@@ -9,9 +9,9 @@ schema: 2.0.0
 # Clear-RMSAuthentication
 
 ## SYNOPSIS
-Clears credentials for a user who is authenticated to the Azure RMS service.
-
 **Relevant for:** AIP classic client only
+
+Clears credentials for a user who is authenticated to the Azure RMS service.
 
 ## SYNTAX
 

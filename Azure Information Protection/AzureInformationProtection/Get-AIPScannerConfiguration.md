@@ -8,6 +8,8 @@ schema: 2.0.0
 # Get-AIPScannerConfiguration
 
 ## SYNOPSIS
+**Relevant for:** AIP unified labeling and classic clients
+
 Gets the configuration settings for the Azure Information Protection scanner.
 
 ## SYNTAX
@@ -17,11 +19,11 @@ Get-AIPScannerConfiguration [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-**Relevant for:** AIP unified labeling and classic clients
-
 The **Get-AIPScannerConfiguration** cmdlet gets the configuration settings for the Azure Information Protection scanner. 
 
-With the current version of the scanner, configuration settings are configured in the Azure portal so the Get-AIPScannerConfiguration cmdlet displays only the settings and values that you can configure with [Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration.md) cmdlet. These settings are whether the scanner gets its configuration online or from a file that you export from the Azure portal, and the report level for the locally created reports.
+With the current version of the scanner, configuration settings are configured in the Azure portal so the Get-AIPScannerConfiguration cmdlet displays only the settings and values that you can configure with [Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration.md) cmdlet. 
+
+These settings determine whether the scanner gets its configuration online or from a file that you export from the Azure portal, and the report level for the locally created reports.
 
 In addition, if you run [Import-AIPScannerConfiguration](./Import-AIPScannerConfiguration.md), this action automatically configures the scanner to get its configuration offline. As a result, when you run this Get-AIPScannerConfiguration cmdlet after importing settings from a file, **OnlineConfiguration** displays **Off**. 
 

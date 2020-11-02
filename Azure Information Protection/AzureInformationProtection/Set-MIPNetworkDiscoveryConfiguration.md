@@ -8,6 +8,8 @@ schema: 2.0.0
 # Set-MIPNetworkDiscoveryConfiguration
 
 ## SYNOPSIS
+**Relevant for:** AIP unified labeling client only
+
 Sets optional configurations for the Network Discovery service.
 
 ## SYNTAX
@@ -17,8 +19,6 @@ Set-MIPNetworkDiscoveryConfiguration [-OnlineConfiguration <OnlineConfiguration>
 ```
 
 ## DESCRIPTION
-**Relevant for:** AIP unified labeling client only
-
 The **Set-MIPNetworkDiscoveryConfiguration** cmdlet sets local configuration settings for the Network Discovery service.
 
 The Network Discovery service manages network scan jobs, and enables Azure Information Protection administrators to scan specific IP addresses or ranges for risky repositories. Administrators may want to add these repositories to content scan jobs and scan their content further.

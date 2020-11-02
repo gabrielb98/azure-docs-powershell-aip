@@ -8,6 +8,8 @@ schema: 2.0.0
 # Stop-AIPScan
 
 ## SYNOPSIS
+**Relevant for:** Unified labeling client only
+
 Instructs the Azure Information Protection scanner to stop the currently running scan cycle.
 
 ## SYNTAX
@@ -16,8 +18,6 @@ Stop-AIPScan
 ```
 
 ## DESCRIPTION
-**Relevant for:** Unified labeling client only
-
 The **Stop-AIPScan** cmdlet stops an active scan for the current profile.
 
 Stopping an active scan does not pause the scan cycle. Instead, it completely stops and cancels the scan, and shifts all scanners to idle mode until a new scan is requested.
