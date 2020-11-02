@@ -189,7 +189,7 @@ To use this parameter, you must run your PowerShell session with the **Run as Ad
 
 Specifies the variable that includes the credentials object for the Azure Information Protection unified labeling client to use when the local Windows account running the Azure Information Protection scanner or scheduled PowerShell commands cannot be granted the user right assignment to log on locally.
 
-Use the [Get-Credential](powershell/module/microsoft.powershell.security/get-credential) cmdlet to create the variable that stores the credentials.
+Use the [Get-Credential](/powershell/module/microsoft.powershell.security/get-credential) cmdlet to create the variable that stores the credentials.
 
 ```yaml
 Type: PSCredential

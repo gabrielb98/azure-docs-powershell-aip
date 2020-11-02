@@ -106,10 +106,10 @@ C:\Projects\Analysis.docx  Success
 C:\Projects\Projects.docx  Success
 ```
 
-This command first identifies all **.docx** files in the **C:\Projects** folder (and its subfolders) by using [Get-Child-Item](powershell/module/microsoft.powershell.management/get-childitem?view=powershell-7), then finds from these files the ones that are not labeled by using the **Get-AIPFileStatus** cmdlet. The resulting files are then labeled by specifying the "General" label by its ID.
+This command first identifies all **.docx** files in the **C:\Projects** folder (and its subfolders) by using [Get-Child-Item](/powershell/module/microsoft.powershell.management/get-childitem?view=powershell-7), then finds from these files the ones that are not labeled by using the **Get-AIPFileStatus** cmdlet. The resulting files are then labeled by specifying the "General" label by its ID.
 
 > [!NOTE]
-> This command makes use of the **Path** alias of FullName, so that [Get-Child-Item](powershell/module/microsoft.powershell.management/get-childitem) can be used with **Get-AIPFileStatus.** 
+> This command makes use of the **Path** alias of FullName, so that [Get-Child-Item](/powershell/module/microsoft.powershell.management/get-childitem) can be used with **Get-AIPFileStatus.** 
 > 
 
 ### Example 3: (Unified labeling client only) Apply the "General" label to all files in a folder and any of its subfolders
