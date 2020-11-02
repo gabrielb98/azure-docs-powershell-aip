@@ -18,15 +18,15 @@ These PowerShell cmdlets let you administer Azure Information Protection from th
 
 For more information about when you must use PowerShell cmdlets and to see groupings of cmdlets by administration tasks, see [Administering the protection service from Azure Information Protection by using PowerShell](/information-protection/deploy-use/administer-powershell).
 
->[!TIP]
->
-> The current version of this module is **1.0.0.4**. To check the version you have installed, run: `(Get-Module AIPService -ListAvailable).Version` If this command or any cmdlet from this module fails to run, first run **Import-Module AIPService**.
+- **Current version:** The current version of this module is **1.0.0.4**. 
 
-The .dll file for this module is *AIPService.dll*.
+    To check the version you have installed, run: `(Get-Module AIPService -ListAvailable).Version` If this command or any cmdlet from this module fails to run, first run **Import-Module AIPService**.
 
-**Azure Information Protection client support**
+- **.dll file:** The .dll file for this module is *AIPService.dll*.
 
-Some of the cmdlets listed below support features that are available only with the Azure Information Protection classic client, and not with the unified labeling client. 
+### Azure Information Protection client support
+
+Some of the cmdlets listed below support features that are available only with the [Azure Information Protection classic client](/azure/information-protection/rms-client/aip-client), and not with the [unified labeling client](/azure/information-protection/rms-client/aip-clientv2). 
 If no client is specified, the cmdlet or parameter is supported for both clients.
 
 Not sure of the differences between these two clients? See this [FAQ](/azure/information-protection/faqs#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).

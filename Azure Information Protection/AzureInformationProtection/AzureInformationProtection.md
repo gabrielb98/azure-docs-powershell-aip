@@ -11,12 +11,14 @@ Locale: en-US
 
 The following lists links to documentation for the Microsoft Azure Information Protection (AIP) cmdlets. 
 
-- These cmdlets are installed with the AIP unified labeling client or the AIP classic client. 
+- **Installation**: The AzureInformationProtection module is installed with either the Azure Information Protection unified labeling or classic client. 
 
-- The .dll file for this module is *AIP.dll*.
+    To check the version you have installed, run: `(Get-Module AIPService -ListAvailable).Version` If this command or any cmdlet from this module fails to run, first run **Import-Module AIPService**.
 
-This docset indicates whenever information is relevant for only one of the clients. If no client is specified, the cmdlet or parameter is relevant for both clients. 
+- **.dll file:** The .dll file for this module is *AIP.dll*.
 
+For more information, see:
+    
 |Client  |References  |
 |---------|---------|
 |**Unified labeling client**     | - [AIP unified labeling client](/azure/information-protection/rms-client/aip-clientv2) </br>- [Unified client version release history](/azure/information-protection/rms-client/unifiedlabelingclient-version-release-history) </br>- [Using PowerShell with the AIP unified labeling client](/azure/information-protection/rms-client/clientv2-admin-guide-powershell)        |
@@ -24,6 +26,8 @@ This docset indicates whenever information is relevant for only one of the clien
 | | |
 
 > [!TIP]
+> This docset indicates whenever information is relevant for only one of the clients. If no client is specified, the cmdlet or parameter is relevant for both clients. 
+>
 >Not sure of the differences between these two clients? See this [FAQ](/azure/information-protection/faqs#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
 > 
 > Check the version that you have installed by running the following command: `(Get-Module AzureInformationProtection -ListAvailable).Version`.
