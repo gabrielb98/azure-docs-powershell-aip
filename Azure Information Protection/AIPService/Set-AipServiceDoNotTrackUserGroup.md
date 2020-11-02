@@ -9,6 +9,8 @@ schema: 2.0.0
 # Set-AipServiceDoNotTrackUserGroup
 
 ## SYNOPSIS
+**Relevant for:** Classic client only
+
 Sets a group for the users who must not be tracked by Azure Information Protection.
 
 ## SYNTAX
@@ -23,6 +25,12 @@ The **Set-AipServiceDoNotTrackUserGroup** cmdlet sets a group for Azure Informat
 If this cmdlet has been run before, running it again overwrites the group that was set previously. You can set only one group, but it can contain nested groups.
 
 You must use PowerShell to set this group so that users are not tracked; you cannot do this configuration by using a management portal.
+
+> [!NOTE]
+> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021.** 
+> 
+> This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+>
 
 ## EXAMPLES
 

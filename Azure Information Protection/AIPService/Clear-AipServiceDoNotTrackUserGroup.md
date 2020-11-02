@@ -9,6 +9,8 @@ schema: 2.0.0
 # Clear-AipServiceDoNotTrackUserGroup
 
 ## SYNOPSIS
+**Relevant for:** Classic client only
+
 Clears the group for the users who must not be tracked by Azure Information Protection.
 
 ## SYNTAX
@@ -23,6 +25,12 @@ The **Clear-AipServiceDoNotTrackUserGroup** cmdlet removes the currently configu
 This cmdlet does not delete the specified group from Azure Active Directory. Instead, a group will no longer be used to exempt users from tracking. As a result, all users in your organization will now be tracked when you use the document tracking feature. 
 
 You must use PowerShell to remove this group from the Azure Information Protection service; you cannot do this configuration by using a management portal.
+
+> [!NOTE]
+> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021.** 
+> 
+> This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+>
 
 ## EXAMPLES
 

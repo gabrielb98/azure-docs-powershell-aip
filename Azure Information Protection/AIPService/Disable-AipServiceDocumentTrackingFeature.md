@@ -9,6 +9,8 @@ schema: 2.0.0
 # Disable-AipServiceDocumentTrackingFeature
 
 ## SYNOPSIS
+**Relevant for:** Classic client only
+
 Disables document tracking for Azure Information Protection.
 
 ## SYNTAX
@@ -32,6 +34,12 @@ When document tracking is disabled, users still see options that refer to tracki
 You can disable document tracking either before you activate the protection service for Azure Information Protection, or after. After you have disabled document tracking, you can re-enable it at any time.
 
 For additional information about the document tracking site, see [Configuring and using document tracking for Azure Information Protection](/information-protection/rms-client/client-admin-guide-document-tracking) from the Azure Information Protection client administrator guide.
+
+> [!NOTE]
+> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021.** 
+> 
+> This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+>
 
 ## EXAMPLES
 
