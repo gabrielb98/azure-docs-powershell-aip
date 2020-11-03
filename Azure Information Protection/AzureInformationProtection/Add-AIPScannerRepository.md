@@ -50,7 +50,7 @@ This example adds the **repoToScan** repository to your content scan job, overri
 ### Example 3 Add a new repository, excluding .msg and .tmp files
 
 ```PowerShell
-PS C:\WINDOWS\system32> Add-AIPScannerRepository -Path 'c:\repoToScan' -IncludeFileTypes '' -ExcludeFileTypes '.msg,.tmp'
+PS C:\WINDOWS\system32> Add-AIPScannerRepository -Path 'c:\repoToScan' -OverrideContentScanJob On -IncludeFileTypes '' -ExcludeFileTypes '.msg,.tmp' 
 ```
 
 This example defines a content scan job that includes all file types except for .msg and .tmp files.
