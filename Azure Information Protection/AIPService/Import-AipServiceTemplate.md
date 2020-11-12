@@ -9,6 +9,8 @@ schema: 2.0.0
 # Import-AipServiceTemplate
 
 ## SYNOPSIS
+**Relevant for:** AIP classic client only
+
 Creates a custom protection template for Azure Information Protection.
 
 ## SYNTAX

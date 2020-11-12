@@ -9,7 +9,7 @@ schema: 2.0.0
 # Get-AipServiceDocumentTrackingFeature
 
 ## SYNOPSIS
-**Relevant for:** Classic client only
+**Relevant for:** AIP classic client only
 
 Indicates whether document tracking is enabled or disabled for Azure Information Protection.
 

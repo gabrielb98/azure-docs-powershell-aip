@@ -9,6 +9,8 @@ schema: 2.0.0
 # Get-AipServiceTemplateProperty
 
 ## SYNOPSIS
+**Relevant for:** AIP classic client only
+
 Gets the properties of a protection template for Azure Information Protection.
 
 ## SYNTAX
