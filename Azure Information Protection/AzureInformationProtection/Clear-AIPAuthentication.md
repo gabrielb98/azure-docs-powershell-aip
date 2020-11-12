@@ -9,7 +9,7 @@ schema: 2.0.0
 # Clear-AIPAuthentication
 
 ## SYNOPSIS
-**Relevant for:** Unified labeling and classic clients
+**Relevant for:** AIP unified labeling and classic clients
 
 Clears the user settings and RMS templates for the current user.
 
