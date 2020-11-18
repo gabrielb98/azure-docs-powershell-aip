@@ -76,7 +76,7 @@ Gets the current status of the service for the Azure Information Protection scan
 **Unified labeling client only:** Gets the current status of the Network Discovery service.
 
 ### [Get-RMSFileStatus](Get-RMSFileStatus.md)
-**Classic client only:** Gets the RMS protection status of a specified file.
+Gets the RMS protection status of a specified file.
 
 ### [Get-RMSServer](Get-RMSServer.md)
 **Classic client only:** Gets a list of RMS servers that can issue templates.
