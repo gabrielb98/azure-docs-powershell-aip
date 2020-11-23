@@ -13,7 +13,7 @@ Instructs the Azure Information Protection scanner to start a network scan job.
 ## SYNTAX
 
 ```
-Start-MIPNetworkDiscovery -JobId <Guid> [<CommonParameters>]
+Start-MIPNetworkDiscovery -JobId <Guid> [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

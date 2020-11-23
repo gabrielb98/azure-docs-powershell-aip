@@ -14,7 +14,7 @@ Updates the installation settings for the Network Discovery service.
 
 ```
 Set-MIPNetworkDiscovery [[-SqlServerInstance] <String>] [-ServiceUserCredentials] <PSCredential>
- [-StandardDomainsUserAccount <PSCredential>] [-ShareAdminUserAccount <PSCredential>] -Cluster <String>
+ [-StandardDomainsUserAccount <PSCredential>] [-ShareAdminUserAccount <PSCredential>] -Cluster <String> [-Force] 
  [<CommonParameters>]
 ```
 

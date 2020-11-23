@@ -13,7 +13,7 @@ Updates the database schema for the Azure Information Protection scanner.
 ## SYNTAX
 
 ```
-Update-AIPScanner [-Profile | -Cluster <String>] [<CommonParameters>]
+Update-AIPScanner [-Profile | -Cluster <String>] [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
