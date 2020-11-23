@@ -13,7 +13,7 @@ Instructs the Azure Information Protection scanner to start a one-time scan cycl
 ## SYNTAX
 
 ```
-Start-AIPScan [-Reset] [<CommonParameters>]
+Start-AIPScan [-Reset] [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
