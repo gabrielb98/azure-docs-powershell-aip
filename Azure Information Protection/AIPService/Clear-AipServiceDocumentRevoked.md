@@ -9,7 +9,7 @@ schema: 2.0.0
 # Clear-AipServiceDocumentRevoke
 
 ## SYNOPSIS
-Un-revokes, or grants access afresh, to a specified, protected document.
+Un-revokes a specified, protected document that currently has a revoke status.
 
 ## SYNTAX
 ```
@@ -17,7 +17,7 @@ Clear-AipServiceDocumentRevoked [-Force] -ContentId <Guid> - IssuerName <String>
 ```
 
 ## DESCRIPTION
-The **Clear-AipServiceDocumentRevoked** cmdlet clears the document status, and un-revokes a specified document, based on the document's contentID and Rights Management issuer. 
+The **Clear-AipServiceDocumentRevoked** cmdlet clears the document's revoke status, and un-revokes a specified protected document, based on the document's contentID and Rights Management issuer. 
 
 For example, use this cmdlet if you have accidentally revoked access to the specified document, and want to now grant access again.
 
