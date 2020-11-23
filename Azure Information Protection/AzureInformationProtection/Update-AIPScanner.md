@@ -51,6 +51,31 @@ For reference purposes, a backup of your old configuration is stored in %localap
 
 ## PARAMETERS
 
+### -Cluster
+
+> [!NOTE]
+>  This parameter is required for the scanner from the unified labeling client. From version 2.7.0.0, we recommend using Cluster switch instead of Profile switch.
+
+Specifies the scanner cluster (profile) name that contains the scanner configuration of the Azure Information Protection service. The scanner configuration database is updated to reflect the cluster (profile) name that you specify. 
+
+If you do not specify this parameter for the Azure Information Protection client (classic), the computer name is used as the cluster (profile) name.
+
+### -Force
+Forces the command to run without asking for user confirmation.
+
+When used, the command first verifies that all nodes under the same cluster are offline. If any nodes are found to be online, a warning is displayed with the node details.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 ### -Profile 
 Note: This parameter is required for the scanner from the unified labeling client. From version 2.7.0.0, we recommend using Cluster switch instead of Profile switch.
 
@@ -66,14 +91,6 @@ Default value: None
 Accept pipeline input: False 
 Accept wildcard characters: False
 ```
-### -Cluster
-
-> [!NOTE]
->  This parameter is required for the scanner from the unified labeling client. From version 2.7.0.0, we recommend using Cluster switch instead of Profile switch.
-
-Specifies the scanner cluster (profile) name that contains the scanner configuration of the Azure Information Protection service. The scanner configuration database is updated to reflect the cluster (profile) name that you specify. 
-
-If you do not specify this parameter for the Azure Information Protection client (classic), the computer name is used as the cluster (profile) name.
 
 ```yaml 
 Type: String 
