@@ -9,8 +9,6 @@ schema: 2.0.0
 # Export-AipServiceTemplate
 
 ## SYNOPSIS
-**Relevant for:** AIP classic client only
-
 Exports the properties of a protection template from Azure Information Protection to a file.
 
 ## SYNTAX

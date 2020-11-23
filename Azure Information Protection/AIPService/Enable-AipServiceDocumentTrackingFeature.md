@@ -9,8 +9,6 @@ schema: 2.0.0
 # Enable-AipServiceDocumentTrackingFeature
 
 ## SYNOPSIS
-**Relevant for:** Classic client only
-
 Enables document tracking for Azure Information Protection.
 
 ## SYNTAX
@@ -26,13 +24,7 @@ You must use PowerShell to enable document tracking; you cannot do this configur
 
 By default, document tracking is enabled, so you would run this cmdlet only if somebody had previously disabled document tracking for your tenant. When document tracking is enabled, users can access the document tracking site to see the protected documents that they have shared to date. Activity related to shared documents (who opened them, when, from which location) is shown for only when the document tracking site is enabled. For example, a user could revoke a document that they shared when document tracking was disabled but they cannot not see who opened this document when document tracking was disabled.
 
-For additional information about the document tracking site, see [Configuring and using document tracking for Azure Information Protection](/information-protection/rms-client/client-admin-guide-document-tracking) from the Azure Information Protection client administrator guide.
-
-> [!NOTE]
-> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021.** 
-> 
-> This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
->
+For additional information about the document tracking site, see [Configuring and using document tracking for Azure Information Protection](/information-protection/rms-client/client-admin-guide-document-tracking) from the Azure Information Protection classic client administrator guide.
 
 ## EXAMPLES
 

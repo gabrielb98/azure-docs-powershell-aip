@@ -9,8 +9,6 @@ schema: 2.0.0
 # Set-AipServiceTemplateProperty
 
 ## SYNOPSIS
-**Relevant for:** AIP classic client only
-
 Updates a property or properties of a protection template for Azure Information Protection.
 
 ## SYNTAX

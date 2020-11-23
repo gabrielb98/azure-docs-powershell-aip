@@ -24,19 +24,16 @@ For more information about when you must use PowerShell cmdlets and to see group
 
 - **.dll file:** The .dll file for this module is *AIPService.dll*.
 
-### Azure Information Protection client support
+## Protection templates and the AIP unified labeling client
 
-Some of the cmdlets listed below support features that are relevant only for the [Azure Information Protection classic client](/azure/information-protection/rms-client/aip-client), and not for the [unified labeling client](/azure/information-protection/rms-client/aip-clientv2). 
+The Azure Information Protection unified labeling client uses protection templates indirectly. If you have the unified labeling client, we recommend that you use label-based cmdlets instead of modifying your protection templates directly.
 
-If no client is specified, the cmdlet or parameter is supported for both clients.
+For more information, see:
 
-Not sure of the differences between these two clients? See this [FAQ](/azure/information-protection/faqs#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
-
-> [!NOTE]
-> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021.** 
-> 
-> This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
->
+- [AzureInformationProtection Module](../AzureInformationProtection/AzureInformationProtection.md)
+- [Policy and compliance PowerShell cmdlets](/powershell/module/exchange/?view=exchange-ps#policy-and-compliance)
+- [Custom configurations for the Azure Information Protection unified labeling client](/information-protection/rms-client/clientv2-admin-guide-customizations)
+- [Using PowerShell with the Azure Information Protection unified labeling client](/information-protection/rms-client/clientv2-admin-guide-powershell)
 
 ## AIPService Cmdlets
 ### [Add-AipServiceRoleBasedAdministrator](Add-AipServiceRoleBasedAdministrator.md)
@@ -46,10 +43,10 @@ Grants administrative rights to Azure Information Protection.
 Adds a super user to Azure Information Protection.
 
 ### [Add-AipServiceTemplate](Add-AipServiceTemplate.md)
-**Classic client only.** Creates a protection template for Azure Information Protection.
+Creates a protection template for Azure Information Protection.
 
 ### [Clear-AipServiceDoNotTrackUserGroup](Clear-AipServiceDoNotTrackUserGroup.md)
-**Classic client only.** Clears the group for the users who must not be tracked by Azure Information Protection.
+Clears the group for the users who must not be tracked by Azure Information Protection.
 
 ### [Clear-AipServiceSuperUserGroup](Clear-AipServiceSuperUserGroup.md)
 Removes the super user group for Azure Information Protection.
@@ -67,7 +64,7 @@ Deactivates the protection service from Azure Information Protection.
 Disables protection support from Azure Information Protection for device platforms.
 
 ### [Disable-AipServiceDocumentTrackingFeature](Disable-AipServiceDocumentTrackingFeature.md)
-**Classic client only.** Disables document tracking for Azure Information Protection.
+Disables document tracking for Azure Information Protection.
 
 ### [Disable-AipServiceIPCv3](Disable-AipServiceIPCv3.md)
 Disables the MSIPC v3 platform for Azure Information Protection.
@@ -85,7 +82,7 @@ Activates the protection service for Azure Information Protection.
 Enables protection support from Azure Information Protection for device platforms.
 
 ### [Enable-AipServiceDocumentTrackingFeature](Enable-AipServiceDocumentTrackingFeature.md)
-**Classic client only.** Enables document tracking for Azure Information Protection.
+Enables document tracking for Azure Information Protection.
 
 ### [Enable-AipServiceIPCv3](Enable-AipServiceIPCv3.md)
 Enables the MSIPC v3 platform for Azure Information Protection.
@@ -94,7 +91,9 @@ Enables the MSIPC v3 platform for Azure Information Protection.
 Enables the super user feature for Azure Information Protection.
 
 ### [Export-AipServiceTemplate](Export-AipServiceTemplate.md)
-**Classic client only.** Exports the properties of a protection template from Azure Information Protection to a file.
+Exports the properties of a protection template from Azure Information Protection to a file.
+
+If you have the unified labeling client, we recommend using the 
 
 ### [Get-AipService](Get-AipService.md)
 Gets the activation status of the protection service from Azure Information Protection.
@@ -109,13 +108,13 @@ Gets the Azure Information Protection configuration of your tenant.
 Gets the device platforms in your organization that support the protection service from Azure Information Protection.
 
 ### [Get-AipServiceDocumentLog](Get-AipServiceDocumentLog.md)
-**Classic client only.** Gets protection information about documents that are tracked by Azure Information Protection.
+Gets protection information about documents that are tracked by Azure Information Protection.
 
 ### [Get-AipServiceDocumentTrackingFeature](Get-AipServiceDocumentTrackingFeature.md)
-**Classic client only.** Indicates whether document tracking is enabled or disabled for Azure Information Protection.
+Indicates whether document tracking is enabled or disabled for Azure Information Protection.
 
 ### [Get-AipServiceDoNotTrackUserGroup](Get-AipServiceDoNotTrackUserGroup.md)
-**Classic client only.** Gets the group for the users who must not be tracked by Azure Information Protection.
+Gets the group for the users who must not be tracked by Azure Information Protection.
 
 ### [Get-AipServiceIPCv3](Get-AipServiceIPCv3.md)
 Displays whether the MSIPC v3 service is enabled or disabled for Azure Information Protection.
@@ -145,25 +144,25 @@ Gets the status of the super user feature for Azure Information Protection.
 Gets the super user group for Azure Information Protection.
 
 ### [Get-AipServiceTemplate](Get-AipServiceTemplate.md)
-**Classic client only.** Gets a list of protection templates for Azure Information Protection.
+Gets a list of protection templates for Azure Information Protection.
 
 ### [Get-AipServiceTemplateProperty](Get-AipServiceTemplateProperty.md)
-**Classic client only.** Gets the properties of a protection template for Azure Information Protection.
+Gets the properties of a protection template for Azure Information Protection.
 
 ### [Get-AipServiceTrackingLog](Get-AipServiceTrackingLog.md)
-**Classic client only.** Gets tracking information for documents protected by Azure Information Protection.
+Gets tracking information for documents protected by Azure Information Protection.
 
 ### [Get-AipServiceUserLog](Get-AipServiceUserLog.md)
 Downloads protection user logs from Azure Information Protection to local storage.
 
 ### [Import-AipServiceTemplate](Import-AipServiceTemplate.md)
-**Classic client only.** Creates a custom protection template for Azure Information Protection.
+Creates a custom protection template for Azure Information Protection.
 
 ### [Import-AipServiceTpd](Import-AipServiceTpd.md)
 Imports a TPD from AD RMS for Azure Information Protection.
 
 ### [New-AipServiceRightsDefinition](New-AipServiceRightsDefinition.md)
-**Classic client only.** Creates a rights definition object for a protection template for Azure Information Protection.
+Creates a rights definition object for a protection template for Azure Information Protection.
 
 ### [Remove-AipServiceRoleBasedAdministrator](Remove-AipServiceRoleBasedAdministrator.md)
 Removes administrative rights from Azure Information Protection.
@@ -172,10 +171,10 @@ Removes administrative rights from Azure Information Protection.
 Removes a super user from Azure Information Protection.
 
 ### [Remove-AipServiceTemplate](Remove-AipServiceTemplate.md)
-**Classic client only.** Deletes a protection template for Azure Information Protection.
+Deletes a protection template for Azure Information Protection.
 
 ### [Set-AipServiceDoNotTrackUserGroup](Set-AipServiceDoNotTrackUserGroup.md)
-**Classic client only.** Sets a group for the users who must not be tracked by Azure Information Protection.
+Sets a group for the users who must not be tracked by Azure Information Protection.
 
 ### [Set-AipServiceKeyProperties](Set-AipServiceKeyProperties.md)
 Updates the properties of a tenant key object for Azure Information Protection.
@@ -193,7 +192,7 @@ Sets the user on-boarding control policy for Azure Information Protection.
 Sets the super user group for Azure Information Protection.
 
 ### [Set-AipServiceTemplateProperty](Set-AipServiceTemplateProperty.md)
-**Classic client only.** Updates a property or properties of a protection template for Azure Information Protection.
+Updates a property or properties of a protection template for Azure Information Protection.
 
 ### [Use-AipServiceKeyVaultKey](Use-AipServiceKeyVaultKey.md)
 Tells Azure Information Protection to use a customer-managed tenant key in Azure Key Vault.

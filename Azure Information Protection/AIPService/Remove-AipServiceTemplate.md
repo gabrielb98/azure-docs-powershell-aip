@@ -9,8 +9,6 @@ schema: 2.0.0
 # Remove-AipServiceTemplate
 
 ## SYNOPSIS
-**Relevant for:** AIP classic client only
-
 Deletes a protection template for Azure Information Protection.
 
 ## SYNTAX

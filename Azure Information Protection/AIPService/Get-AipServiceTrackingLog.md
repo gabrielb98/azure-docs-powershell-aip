@@ -9,8 +9,6 @@ schema: 2.0.0
 # Get-AipServiceTrackingLog
 
 ## SYNOPSIS
-**Relevant for:** Classic client only
-
 Gets tracking information for documents protected by Azure Information Protection.
 
 ## SYNTAX
@@ -30,14 +28,8 @@ The **Get-AipServiceTrackingLog** cmdlet returns tracking information about prot
 
 You can specify a start time and stop time of entries to include. The output is returned as a list of PowerShell objects in the PowerShell console.
 
-You can alternatively use the document tracking site to get the protection information about the tracked documents. For more information, see the [Tracking and revoking documents for users](/information-protection/rms-client/client-admin-guide-document-tracking#tracking-and-revoking-documents-for-users) section in the admin guide.
+You can alternatively use the document tracking site to get the protection information about the tracked documents. For more information, see the [Tracking and revoking documents for users](/information-protection/rms-client/client-admin-guide-document-tracking#tracking-and-revoking-documents-for-users) section in the Azure Information Protection classic client admin guide.
 
-
-> [!NOTE]
-> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021.** 
-> 
-> This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
->
 
 ## EXAMPLES
 
