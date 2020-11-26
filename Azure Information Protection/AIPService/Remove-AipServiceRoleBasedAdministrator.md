@@ -34,7 +34,7 @@ The **Remove-AipServiceRoleBasedAdministrator** cmdlet removes administrative ri
 
 You must use PowerShell to configure delegated administrative control for the protection service from Azure Information Protection, you cannot do this configuration by using a management portal.
 
-To see the full list of delegated administrators for the protection service, use [Get-AipServiceRoleBasedAdministrator](./Get-AipServiceRoleBasedAdministrator.md). Run the Remove-AipServiceRoleBasedAdministrator cmdlet for each user or group that you want to remove from the list. 
+To see the full list of delegated administrators for the protection service, use [Get-AipServiceRoleBasedAdministrator](./Get-AipServiceRoleBasedAdministrator.md). Run the **Remove-AipServiceRoleBasedAdministrator** cmdlet for each user or group that you want to remove from the list. 
 
 ## EXAMPLES
 
@@ -124,7 +124,9 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. 
+
+For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

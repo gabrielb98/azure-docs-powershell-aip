@@ -33,7 +33,7 @@ Diagnostic checks include whether:
 ## EXAMPLES
 
 ### Starts the diagnostic tool for a locally installed AIP scanner
-```powershell
+```PowerShell
 PS C:\> $scanner_account_creds= Get-Credential
 PS C:\> Start-AIPScannerDiagnostics -onbehalf $scanner_account_creds
 ```
@@ -81,21 +81,9 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters:
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. 
 
-- Debug
-- ErrorAction
-- ErrorVariable
-- InformationAction
-- InformationVariable
-- OutVariable
-- OutBuffer
-- PipelineVariable
-- Verbose
-- WarningAction
-- WarningVariable
-
-For more information, see [About CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

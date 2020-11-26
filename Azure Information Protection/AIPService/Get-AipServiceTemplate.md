@@ -80,7 +80,7 @@ This cmdlet outputs a list comprising all protection templates for the tenant, o
 
 If no name is defined for a template in the current locale, "No name defined in language-code" is returned as the name for that template.
 
-If no description is defined for a template in the current locale, "No description defined in language-code" is returned as the description for that template.
+If no description is defined for a template in the current locale, **No description defined in language-code** is returned as the description for that template.
 
 ## NOTES
 

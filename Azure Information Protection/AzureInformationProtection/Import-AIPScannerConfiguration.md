@@ -45,7 +45,7 @@ Any changes will be used the next time the scanner runs. If you need the changes
 ## EXAMPLES
 
 ### Example 1: Import local configuration settings for the Azure Information Protection scanner
-```powershell
+```PowerShell
 PS C:\> Import-AIPScannerConfiguration -FileName "C:\Scannerconfig\Eu-set.json"
 Configuration was imported successfully.
 

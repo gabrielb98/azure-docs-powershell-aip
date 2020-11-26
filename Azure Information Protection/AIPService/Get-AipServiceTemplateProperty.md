@@ -45,14 +45,14 @@ This command gets the description and the usage rights for all users or groups t
 PS C:\>$templates = Get-AipServiceTemplate PS C:\>foreach ($template in $templates) {Get-AipServiceTemplateProperty -TemplateId $template.TemplateId -Name -RightsDefinitions -ReadOnly -Status}
 ```
 
-The first command gets all the template IDs and stores them in a variable. The second command then uses this variable to get the template name, the usage rights, whether it is read-only (True for a default template, False for a custom template), and the status (Published or Archived) for each template.
+The first command gets all the template IDs and stores them in a variable. The second command then uses this variable to get the template name, the usage rights, whether it is read-only (**True** for a default template, **False** for a custom template), and the status (**Published** or **Archived**) for each template.
 
 ## PARAMETERS
 
 ### -ContentExpirationDate
 Lists the date on which content protected with the template expires.
 
-Use this parameter only if *ContentExpirationOption* is set to OnDate.
+Use this parameter only if *ContentExpirationOption* is set to **OnDate.**
 
 ```yaml
 Type: SwitchParameter
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 ### -ContentValidityDuration
 Lists the number of days from the day of protection after which content protected with the template expires.
 
-Use this parameter only if *ContentExpirationOption* is set to AfterDays.
+Use this parameter only if *ContentExpirationOption* is set to **AfterDays.**
 
 ```yaml
 Type: SwitchParameter
@@ -147,9 +147,9 @@ Accept wildcard characters: False
 ### -LicenseValidityDuration
 Lists the number of days content is accessible offline after a license to consume it is acquired.
 
--1 indicates unlimited access.
+**-1** indicates unlimited access.
 
-0 indicates that a license must be obtained for each use and that content is only available online.
+**0** indicates that a license must be obtained for each use and that content is only available online.
 
 ```yaml
 Type: SwitchParameter
@@ -179,7 +179,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReadOnly
-Indicates whether the template is a default template (True) and therefore cannot be edited or deleted, or a custom template (False) and therefore can be edited or deleted by an administrator.
+Indicates whether the template is a default template **(True)** and therefore cannot be edited or deleted, or a custom template **(False)** and therefore can be edited or deleted by an administrator.
 
 ```yaml
 Type: SwitchParameter
@@ -211,7 +211,7 @@ Accept wildcard characters: False
 ### -ScopedIdentities
 Lists the users by email address (account or group) that can see and therefore select departmental templates from applications.
 
-For the specified users to see the templates, the application must support departmental templates or the *EnableInLegacyApps* parameter must be set to True.
+For the specified users to see the templates, the application must support departmental templates or the *EnableInLegacyApps* parameter must be set to **True.**
 
 ```yaml
 Type: SwitchParameter
@@ -230,7 +230,7 @@ The status of the template:
 
 -**Archived** templates are available to consume previously protected content but are not displayed to users.
 
---**Published** templates are available to users to protect content.
+-**Published** templates are available to users to protect content.
 
 ```yaml
 Type: SwitchParameter
@@ -262,7 +262,9 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. 
+
+For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

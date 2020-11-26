@@ -25,11 +25,16 @@ You must use PowerShell to configure your tenant key; you cannot do this configu
 
 This cmdlet always sets the key from the imported TPD to an archived state. After you run this command, the key in the imported TPD becomes available to Azure Information Protection to consume content that AD RMS protected by using this key. Use the [Set-AipServiceKeyProperties](./Set-AipServiceKeyProperties.md) cmdlet to change the state of the imported TPD to Active.
 
-Warning: Do not run this cmdlet unless you have read and understood the requirements, restrictions, instructions, and implications of migrating from AD RMS. For more information, see [Migrating from AD RMS to Azure Information Protection](/information-protection/plan-design/migrate-from-ad-rms-to-azure-rms).
-
+> [!WARNING]
+> Do not run this cmdlet unless you have read and understood the requirements, restrictions, instructions, and implications of migrating from AD RMS. 
+>
+> For more information, see [Migrating from AD RMS to Azure Information Protection](/information-protection/plan-design/migrate-from-ad-rms-to-azure-rms).
+> 
 If you migrate templates from AD RMS as active, you can edit these templates in the Azure portal, or by using PowerShell. You can publish these templates so that users can select them from applications. If the migrated templates are not activated, they can only be used to open documents that they previously protected.
 
-You must use the AD RMS management console to export the TPD. If you use a hardware security module (HSM) for your keys, you must first repackage the TPD keys by using the Azure Key Vault BYOK tools. You can download these tools from the [Microsoft Download Site](https://www.microsoft.com/download/details.aspx?id=45345). For more information, see [How to generate and transfer HSM-protected keys for Azure Key Vault](/azure/key-vault/key-vault-hsm-protected-keys).
+You must use the AD RMS management console to export the TPD. If you use a hardware security module (HSM) for your keys, you must first repackage the TPD keys by using the Azure Key Vault BYOK tools. You can download these tools from the [Microsoft Download Site](https://www.microsoft.com/download/details.aspx?id=45345). 
+
+For more information, see [How to generate and transfer HSM-protected keys for Azure Key Vault](/azure/key-vault/key-vault-hsm-protected-keys).
 
 ## EXAMPLES
 
@@ -49,11 +54,11 @@ PS C:\>$Password = Read-Host -AsSecureString -Prompt "Password: "
 PS C:\> Import-AipServiceTpd -TpdFile "C:\no_key_tpd.xml" -ProtectionPassword $Password -KeyVaultKeyUrl "https://contoso-byok-kv.vault.azure.net/keys/contosoaipservice-byok/aaaabbbbcccc111122223333" -FriendlyName "Contoso BYOK key" -Verbose
 ```
 
-The first command creates a password as a secure string, and then stores the secure string in the $Password variable.
+The first command creates a password as a secure string, and then stores the secure string in the **$Password** variable.
 
-The second command imports a TPD to be used with a key that is stored in Azure Key Vault. Additionally, the command changes the friendly name of the key to "Contoso BYOK key".
+The second command imports a TPD to be used with a key that is stored in Azure Key Vault. Additionally, the command changes the friendly name of the key to **"Contoso BYOK key".**
 
-Our example uses the key vault name of contoso-byok-kv, the key name of contosoaipservice-byok, and the version number of aaaabbbbcccc111122223333.
+Our example uses the key vault name of **contoso-byok-kv,** the key name of **contosoaipservice-byok,** and the version number of **aaaabbbbcccc111122223333.**
 
 ## PARAMETERS
 
@@ -174,7 +179,9 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. 
+
+For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

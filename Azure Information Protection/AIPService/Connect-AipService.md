@@ -39,8 +39,11 @@ To connect to Azure Information Protection, use an account that is one of the fo
 - A user account from your tenant that has been granted administrative rights to Azure Information Protection by using the [Add-AipServiceRoleBasedAdministrator](./Add-AipServiceRoleBasedAdministrator.md) cmdlet.
 - An Azure AD admin role of Azure Information Protection administrator, Compliance administrator, or Compliance data administrator.
 
-Tip: If you are not prompted for your credentials, and you see an error message such as **Cannot use this feature without credentials**, verify that Internet Explorer is configured to use Windows integrated authentication. If this setting is not enabled, enable it, restart Internet Explorer, and then retry authentication to the Information Protection service.
-
+> [!TIP]
+> If you are not prompted for your credentials, and you see an error message such as **Cannot use this feature without credentials**, verify that Internet Explorer is configured to use Windows integrated authentication. 
+>
+> If this setting is not enabled, enable it, restart Internet Explorer, and then retry authentication to the Information Protection service.
+> 
 ## EXAMPLES
 
 ### Example 1: Connect to Azure Information Protection and be prompted for your user name and other credentials
@@ -80,16 +83,16 @@ PS C:\> Connect-AipService -AccessToken $authResult.AccessToken
 
 ```
 
-This example shows how you could connect to Azure Information Protection by using the *AccessToken* parameter, which lets you authenticate without a prompt. This connection method requires you to specify the client ID '90f610bf-206d-4950-b61d-37fa6fd1b224' and the resource ID 'https://api.aadrm.com/'. After the connection is open, you can then run the administrative commands from this module that you need.
+This example shows how you could connect to Azure Information Protection by using the *AccessToken* parameter, which lets you authenticate without a prompt. This connection method requires you to specify the client ID **90f610bf-206d-4950-b61d-37fa6fd1b224** and the resource ID **https://api.aadrm.com/**. After the connection is open, you can then run the administrative commands from this module that you need.
 
 After you confirm that these commands result in successfully connecting to Azure Information Protection, you could run them non-interactively, for example, from a script.
 
-Note that for illustration purposes, this example uses the user name of "admin@contoso.com" with the password of "Passw0rd!". In a production environment when you use this connection method non-interactively, use additional methods to secure the password so that it is not stored in clear text. For example, use the **ConvertTo-SecureString** command or use Key Vault to store the password as a secret.
+Note that for illustration purposes, this example uses the user name of **admin@contoso.com** with the password of **Passw0rd!** In a production environment when you use this connection method non-interactively, use additional methods to secure the password so that it is not stored in clear text. For example, use the **ConvertTo-SecureString** command or use Key Vault to store the password as a secret.
 
 ## PARAMETERS
 
 ### -AccessToken
-Use this parameter to connect to Azure Information Protection by using a token that you acquire from Azure Active Directory, using the client ID '90f610bf-206d-4950-b61d-37fa6fd1b224' and the resource ID 'https://api.aadrm.com/'. This connection method lets you sign in to Azure Information Protection non-interactively.
+Use this parameter to connect to Azure Information Protection by using a token that you acquire from Azure Active Directory, using the client ID **90f610bf-206d-4950-b61d-37fa6fd1b224** and the resource ID **https://api.aadrm.com/**. This connection method lets you sign in to Azure Information Protection non-interactively.
 
 To get the access token, make sure that the account that you use from your tenant is not using multi-factor authentication (MFA). See Example 3 for how you might do this.
 
@@ -166,7 +169,9 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. 
+
+For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

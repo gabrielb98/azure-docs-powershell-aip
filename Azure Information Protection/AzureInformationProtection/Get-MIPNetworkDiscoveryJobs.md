@@ -26,7 +26,7 @@ Network Discovery network scan jobs enable Azure Information Protection administ
 ## EXAMPLES
 
 ### Example 1
-```powershell
+```PowerShell
 PS C:\> Get-MIPNetworkDiscoveryJobs
 
 JobID       : 496ca93c-ba49-497b-a527-62ffd980891ea
@@ -59,7 +59,9 @@ This command gets the list of the three Network Discovery network scan jobs, as 
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. 
+
+For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

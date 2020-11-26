@@ -31,8 +31,11 @@ If you use the group membership option, you must specify a security group, which
 
 For more information about the Azure AD PowerShell cmdlets, see [Azure Active Directory PowerShell](/powershell/azure/overview?view=azureadps-2.0).
 
-Note: This cmdlet does not stop users from consuming protected content or prevent administrators from configuring services for Azure Information Protection (for example, Exchange Online mail flow rules or SharePoint protected libraries). Instead, it is designed for user applications such as Office, so that users do not see the options or templates to use Azure Information Protection.
-
+> [!NOTE]
+> This cmdlet does not stop users from consuming protected content or prevent administrators from configuring services for Azure Information Protection (for example, Exchange Online mail flow rules or SharePoint protected libraries). 
+>
+> Instead, it is designed for user applications such as Office, so that users do not see the options or templates to use Azure Information Protection.
+> 
 ## EXAMPLES
 
 ### Example 1: Restrict Azure Information Protection to users who have a license and are members of a specified group
@@ -169,7 +172,9 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. 
+
+For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

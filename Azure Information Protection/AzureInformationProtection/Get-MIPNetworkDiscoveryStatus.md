@@ -33,7 +33,7 @@ Possible statuses include:
 ## EXAMPLES
 
 ### Example 1: Service idle
-```powershell
+```PowerShell
 PS C:\> Get-MIPNetworkDiscoveryStatus
 
 NodeName                              Status           Jobs
@@ -47,7 +47,7 @@ This command gets the current status of the Network Discovery service.
 The output shows that the Network Discovery scanner service is running, but not currently scanning. 
 
 ### Example 1: Service scanning
-```powershell
+```PowerShell
 PS C:\> Get-MIPNetworkDiscoveryStatus
 
 NodeName                              Status           Jobs
@@ -63,7 +63,9 @@ The output shows that the Network Discovery scanner service is currently running
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. 
+
+For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

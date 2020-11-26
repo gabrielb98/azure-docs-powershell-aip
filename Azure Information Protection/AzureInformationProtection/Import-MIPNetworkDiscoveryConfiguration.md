@@ -36,7 +36,7 @@ Any changes will be used the next time the scanner runs. If you need the changes
 
 ### Example 1: Import a locally configured Azure Information Protection network scan job
 
-```powershell
+```PowerShell
 PS C:\> Import-MIPNetworkDiscoveryConfiguration -FileName "C:/configuration.json"
 
 Configuration was imported successfully.
@@ -95,7 +95,9 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. 
+
+For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

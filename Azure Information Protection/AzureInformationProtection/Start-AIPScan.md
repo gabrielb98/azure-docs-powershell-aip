@@ -31,14 +31,14 @@ By default, all files are scanned the first time the scanner runs and then, unle
 ## EXAMPLES
 
 ### Example 1: Initiate immediate one-time scan for new and changed files
-```powershell
+```PowerShell
 PS C:\> Start-AIPScan
 ```
 
 Because this is not the first time that the scanner has run and the Azure Information Protection policy has not changed since the last scanning cycle, the scanner initiates an incremental scan for all new or changed files since the last scanning cycle.
 
 ### Example 2: Initiate immediate one time scan for all files
-```powershell
+```PowerShell
 PS C:\> Start-AIPScan -Reset
 ```
 
@@ -63,6 +63,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+
 For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
