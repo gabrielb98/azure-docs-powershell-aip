@@ -30,6 +30,7 @@ The Azure Information Protection unified labeling client uses protection templat
 
 For more information, see:
 
+- [Create and publish sensitivity labels](/microsoft-365/compliance/create-sensitivity-labels) in the Microsoft 365 documentation
 - [AzureInformationProtection Module](../AzureInformationProtection/AzureInformationProtection.md)
 - [Policy and compliance PowerShell cmdlets](/powershell/module/exchange/?view=exchange-ps#policy-and-compliance)
 - [Custom configurations for the Azure Information Protection unified labeling client](/information-protection/rms-client/clientv2-admin-guide-customizations)

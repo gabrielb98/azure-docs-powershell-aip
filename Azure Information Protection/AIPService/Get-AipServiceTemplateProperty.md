@@ -26,6 +26,11 @@ Similar configuration information can also be viewed in the Azure portal, but th
 
 You can query properties of a default template, or a custom template. For more information about custom templates, including how to configure them in the Azure portal, see [Configuring and managing templates for Azure Information Protection](/information-protection/deploy-use/configure-policy-templates).
 
+**Using the Azure Information Protection unified labeling client?**
+
+The Azure Information Protection unified labeling client uses protection templates indirectly. If you have the unified labeling client, we recommend that you use label-based cmdlets instead of modifying your protection templates directly.
+
+For more information, see [Create and publish sensitivity labels](/microsoft-365/compliance/create-sensitivity-labels) in the Microsoft 365 documentation.
 ## EXAMPLES
 
 ### Example 1: Get the description and the usage rights for a template
