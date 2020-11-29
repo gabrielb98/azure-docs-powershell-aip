@@ -164,6 +164,9 @@ Sets optional configuration for the Azure Information Protection scanner.
 ### [Set-AIPScannerContentScanJob](Set-AIPScannerContentScanJob.md)
 Defines settings for an Azure Information Protection content scan job.
 
+Supported only for the AIP unified labeling client.
+
+
 ### [Set-AIPScannerRepository](Set-AIPScannerRepository.md)
 Updates an existing repository in an Azure Information Protection content scan job.
 
