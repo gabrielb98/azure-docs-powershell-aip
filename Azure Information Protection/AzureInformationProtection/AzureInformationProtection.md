@@ -63,6 +63,11 @@ Gets the Azure Information Protection label and protection information for a spe
 ### [Get-AIPScannerConfiguration](Get-AIPScannerConfiguration.md)
 Gets the configuration settings for the Azure Information Protection scanner.
 
+### [Get-AIPScannerContentScanJob](Get-AIPScannerContentScanJob.md)
+Gets details about your content scan job.
+
+Supported only by the AIP unified labeling client.
+
 ### [Get-AIPScannerRepository](Get-AIPScannerRepository.md)
 Gets repository data for an Azure Information Protection content scan job.
 
@@ -80,12 +85,6 @@ Gets a list of Azure Information Protection network scan jobs configured in your
 
 ### [Get-MIPNetworkDiscoveryStatus](Get-MIPNetworkDiscoveryStatus.md)
 Gets the current status of the Network Discovery service.
-
-### [Get-MIPScannerContentScanJob](Get-MIPScannerContentScanJob.md)
-Gets details about an Azure Information Protection content scan job.
-
-### [Get-MIPScannerRepository](Get-MIPScannerRepository.md)
-Gets repository data for an Azure Information Protection content scan job.
 
 ### [Get-RMSFileStatus](Get-RMSFileStatus.md)
 Gets the RMS protection status of a specified file.
