@@ -110,12 +110,10 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
-
-### System.Collections.Generic.List`1[[Microsoft.InformationProtection.Powershell.AIP.Commandlets.Scanner.MoonCake.RepositoryInfo, AIP, Version=2.9.0.0, Culture=neutral, PublicKeyToken=null]]
+**System.Collections.Generic.List`1[[Microsoft.InformationProtection.Powershell.AIP.Commandlets.Scanner.MoonCake.RepositoryInfo, AIP, Version=2.9.0.0, Culture=neutral, PublicKeyToken=null]]**
 
 ## OUTPUTS
-
-### System.Object
+**System.Object**
 ## NOTES
 
 ## RELATED LINKS
