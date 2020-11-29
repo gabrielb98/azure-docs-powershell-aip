@@ -160,6 +160,10 @@ Sets the service account and database for the Azure Information Protection scann
 ### [Set-AIPScannerConfiguration](Set-AIPScannerConfiguration.md)
 Sets optional configuration for the Azure Information Protection scanner.
 
+
+### [Set-AIPScannerContentScanJob](Set-AIPScannerContentScanJob.md)
+Defines settings for an Azure Information Protection content scan job.
+
 ### [Set-AIPScannerRepository](Set-AIPScannerRepository.md)
 Updates an existing repository in an Azure Information Protection content scan job.
 
@@ -174,12 +178,6 @@ Updates the installation settings for the Network Discovery service.
 
 ### [Set-MIPNetworkDiscoveryConfiguration](Set-MIPNetworkDiscoveryConfiguration.md)
 Sets optional configurations for the Network Discovery service.
-
-### [Set-MIPScannerContentScanJob](Set-MIPScannerContentScanJob.md)
-Defines settings for an Azure Information Protection content scan job.
-
-### [Set-MIPScannerRepository](Set-MIPScannerRepository.md)
-Updates an existing repository in an Azure Information Protection content scan job.
 
 ### [Set-RMSServerAuthentication](Set-RMSServerAuthentication.md)
 Sets the server mode, which is required for non-interactive sessions.
