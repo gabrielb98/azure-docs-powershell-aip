@@ -42,6 +42,9 @@ Deprecated: Adds new file types to a configured list of file types to scan or ex
 ### [Add-MIPScannerRepository](Add-MIPScannerRepository.md)
 Adds a repository to an Azure Information Protection content scan job.
 
+Supported only for the AIP unified labeling client.
+
+
 ### [Clear-AIPAuthentication](Clear-AIPAuthentication.md)
 Clears the user settings and RMS templates for the current user.
 
@@ -80,11 +83,19 @@ Gets the current status of the service for the Azure Information Protection scan
 ### [Get-MIPNetworkDiscoveryConfiguration](Get-MIPNetworkDiscoveryConfiguration.md)
 Gets configuration settings for the Network Discovery service.
 
+Supported only for the AIP unified labeling client.
+
 ### [Get-MIPNetworkDiscoveryJobs](Get-MIPNetworkDiscoveryJobs.md)
 Gets a list of Azure Information Protection network scan jobs configured in your tenant.
 
+Supported only for the AIP unified labeling client.
+
+
 ### [Get-MIPNetworkDiscoveryStatus](Get-MIPNetworkDiscoveryStatus.md)
 Gets the current status of the Network Discovery service.
+
+Supported only for the AIP unified labeling client.
+
 
 ### [Get-RMSFileStatus](Get-RMSFileStatus.md)
 Gets the RMS protection status of a specified file.
@@ -109,11 +120,15 @@ Not supported by the Azure Information Protection unified labeling client. Inste
 ### [Import-MIPNetworkDiscoveryConfiguration](Import-MIPNetworkDiscoveryConfiguration.md)
 Imports a local configuration for Network Discovery network scan jobs.
 
+Supported only for the AIP unified labeling client.
+
 ### [Install-AIPScanner](Install-AIPScanner.md)
 Installs the Azure Information Protection scanner.
 
 ### [Install-MIPNetworkDiscovery](Install-MIPNetworkDiscovery.md)
 Installs the Network Discovery service.
+
+Supported only for the AIP unified labeling client.
 
 ### [New-AIPCustomPermissions](New-AIPCustomPermissions.md)
 Creates an ad-hoc protection policy for custom permissions.
@@ -179,8 +194,14 @@ Deprecated: Sets a list of file types to scan or exclude from scanning by the Az
 ### [Set-MIPNetworkDiscovery](Set-MIPNetworkDiscovery.md)
 Updates the installation settings for the Network Discovery service.
 
+Supported only for the AIP unified labeling client.
+
+
 ### [Set-MIPNetworkDiscoveryConfiguration](Set-MIPNetworkDiscoveryConfiguration.md)
 Sets optional configurations for the Network Discovery service.
+
+Supported only for the AIP unified labeling client.
+
 
 ### [Set-RMSServerAuthentication](Set-RMSServerAuthentication.md)
 Sets the server mode, which is required for non-interactive sessions.
@@ -196,6 +217,8 @@ Instructs the Azure Information Protection scanner to start a one time scan cycl
 ### [Start-MIPNetworkDiscovery](Start-MIPNetworkDiscovery.md)
 Instructs the Azure Information Protection scanner to start a network scan job.
 
+Supported only for the AIP unified labeling client.
+
 ### [Stop-AIPScan](Stop-AIPScan.md)
 Instructs the Azure Information Protection scanner to immediately stop the currently running scan cycle.
 
@@ -204,6 +227,8 @@ Uninstalls the Windows Server service for the Azure Information Protection scann
 
 ### [Uninstall-MIPNetworkDiscovery](Uninstall-MIPNetworkDiscovery.md)
 Uninstalls the Network Discovery Windows server service.
+
+Supported only for the AIP unified labeling client.
 
 ### [Unprotect-RMSFile](Unprotect-RMSFile.md)
 Unprotects a file that is currently protected by RMS.
