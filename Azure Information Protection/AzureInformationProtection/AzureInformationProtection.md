@@ -130,6 +130,11 @@ Protects a specified file or the files in a specified folder by using RMS.
 
 Not supported by the Azure Information Protection unified labeling client. Instead, use Set-AIPFileLabel.
 
+### [Remove-AIPScannerContentScanJob](Remove-AIPScannerContentScanJob.md)
+Deletes the entire Azure Information Protection content scan job.
+
+Supported only for the AIP unified labeling client.
+
 ### [Remove-AIPScannerRepository](Remove-AIPScannerRepository.md)
 Removes a repository from an Azure Information Protection content scan job.
 
@@ -139,11 +144,6 @@ Deprecated for the AIP classic client.
 ### [Remove-AIPScannerScannedFileTypes](Remove-AIPScannerScannedFileTypes.md)
 Deprecated: Removes file types from a configured list of file types to scan or exclude from scanning by the Azure Information Protection scanner.
 
-### [Remove-MIPScannerContentScanJob](Remove-MIPScannerContentScanJob.md)
-Deletes the entire Azure Information Protection content scan job.
-
-### [Remove-MIPScannerRepository](Remove-MIPScannerRepository.md)
-Removes a repository from an Azure Information Protection content scan job.
 
 ### [Set-AIPAuthentication](Set-AIPAuthentication.md)
 Sets the authentication credentials for the Azure Information Protection client.
