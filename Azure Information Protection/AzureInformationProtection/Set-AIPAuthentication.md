@@ -153,9 +153,15 @@ Accept wildcard characters: False
 ### -DelegatedUser
 Note: Applies to the unified labeling client only.
 
-Use this parameter to specify a user account in Azure AD that sets the user context to download label policies with sensitivity labels from your labeling management center. 
+Specifies the user account credentials to use when downloading label policies with sensitivity labels from your labeling management center.
 
-If this account needs to reprotect files, remove protection from files, or inspect protected files, make it a [super user](/azure/information-protection/configure-super-users) for Azure Information Protection.
+- The credentials used must be an Azure Active Directory account that can be used to get the policy and online configuration. 
+
+    - It can be the same account that is used for the **ServiceUserCredentials** if this account is synched to Azure Active Directory, or a different account. 
+
+    - If this account needs to reprotect files, remove protection from files, or inspect protected files, make it a [super user](/azure/information-protection/configure-super-users) for Azure Information Protection.
+
+- Set the value of this parameter using the UPN. For example: `scannerservice@contoso.com`
 
 ```yaml
 Type: String
@@ -173,11 +179,16 @@ Accept wildcard characters: False
 ### -OnBehalfOf
 Note: Applies to the unified labeling client only.
 
-To use this parameter, you must run your PowerShell session with the **Run as Administrator** option.
+Specifies the variable that includes the credentials object used by the AIP unified labeling client. 
 
-Specifies the variable that includes the credentials object for the Azure Information Protection unified labeling client to use when the local Windows account running the Azure Information Protection scanner or scheduled PowerShell commands cannot be granted the user right assignment to log on locally.
+This parameter is used when login rights cannot be granted to scheduled PowerShell commands.
 
-Use the Get-Credentials cmdlet to create the variable that stores the credentials.
+- Use the same credentials for this parameter as used to run the scanner, defined by the **ServiceUserCredentials** parameter.
+
+- To use this parameter, you must run your PowerShell session with the **Run as Administrator** option.
+
+- Use the **Get-Credentials** cmdlet to create the variable that stores the credentials. For more information, type `Get-Help Get-Cmdlet`. 
+
 
 ```yaml
 Type: PSCredential
