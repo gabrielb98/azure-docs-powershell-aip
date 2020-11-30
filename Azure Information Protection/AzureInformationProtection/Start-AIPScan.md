@@ -13,7 +13,7 @@ Instructs the Azure Information Protection scanner to start a one-time scan cycl
 ## SYNTAX
 
 ```
-Start-AIPScan [-Reset] [<CommonParameters>]
+Start-AIPScan [-Reset] [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -41,6 +41,20 @@ The scanner initiates a full scan of all the files, even if they have been scann
 
 ## PARAMETERS
 
+### -Force
+Forces the command to run without asking for user confirmation.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 ### -Reset
 Resets the scanner cache so that the scanner initiates a full scan of all the files, even if they have been scanned before and the Azure Information Protection policy has not changed.
 

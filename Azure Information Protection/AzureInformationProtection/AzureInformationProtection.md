@@ -31,10 +31,19 @@ The .dll file for this module is *AIP.dll*.
 
 ## AzureInformationProtection Cmdlets
 ### [Add-AIPScannerRepository](Add-AIPScannerRepository.md)
-Deprecated: Adds a data repository to be scanned by the Azure Information Protection scanner. 
+Adds a repository to an Azure Information Protection content scan job.
+
+Supported only by the AIP unified labeling client.
+Deprecated for the AIP classic client.
 
 ### [Add-AIPScannerScannedFileTypes](Add-AIPScannerScannedFileTypes.md)
-Deprecated: Adds new file types to a configured list of file types to scan or exclude from scanning by the Azure Information Protection scanner
+Deprecated: Adds new file types to a configured list of file types to scan or exclude from scanning by the Azure Information Protection scanner.
+
+### [Add-MIPScannerRepository](Add-MIPScannerRepository.md)
+Adds a repository to an Azure Information Protection content scan job.
+
+Supported only for the AIP unified labeling client.
+
 
 ### [Clear-AIPAuthentication](Clear-AIPAuthentication.md)
 Clears the user settings and RMS templates for the current user.
@@ -57,8 +66,16 @@ Gets the Azure Information Protection label and protection information for a spe
 ### [Get-AIPScannerConfiguration](Get-AIPScannerConfiguration.md)
 Gets the configuration settings for the Azure Information Protection scanner.
 
+### [Get-AIPScannerContentScanJob](Get-AIPScannerContentScanJob.md)
+Gets details about your content scan job.
+
+Supported only by the AIP unified labeling client.
+
 ### [Get-AIPScannerRepository](Get-AIPScannerRepository.md)
-Deprecated: Gets a list of data repositories that the Azure Information Protection scanner is configured to scan.
+Gets repository data for an Azure Information Protection content scan job.
+
+Supported only by the AIP unified labeling client.
+Deprecated for the AIP classic client.
 
 ### [Get-AIPScannerStatus](Get-AIPScannerStatus.md)
 Gets the current status of the service for the Azure Information Protection scanner.
@@ -66,11 +83,19 @@ Gets the current status of the service for the Azure Information Protection scan
 ### [Get-MIPNetworkDiscoveryConfiguration](Get-MIPNetworkDiscoveryConfiguration.md)
 Gets configuration settings for the Network Discovery service.
 
+Supported only for the AIP unified labeling client.
+
 ### [Get-MIPNetworkDiscoveryJobs](Get-MIPNetworkDiscoveryJobs.md)
 Gets a list of Azure Information Protection network scan jobs configured in your tenant.
 
+Supported only for the AIP unified labeling client.
+
+
 ### [Get-MIPNetworkDiscoveryStatus](Get-MIPNetworkDiscoveryStatus.md)
 Gets the current status of the Network Discovery service.
+
+Supported only for the AIP unified labeling client.
+
 
 ### [Get-RMSFileStatus](Get-RMSFileStatus.md)
 Gets the RMS protection status of a specified file.
@@ -95,11 +120,15 @@ Not supported by the Azure Information Protection unified labeling client. Inste
 ### [Import-MIPNetworkDiscoveryConfiguration](Import-MIPNetworkDiscoveryConfiguration.md)
 Imports a local configuration for Network Discovery network scan jobs.
 
+Supported only for the AIP unified labeling client.
+
 ### [Install-AIPScanner](Install-AIPScanner.md)
 Installs the Azure Information Protection scanner.
 
-### [Install-MIPNetworkDiscovery](Install-AIPNetworkDiscovery.md)
+### [Install-MIPNetworkDiscovery](Install-MIPNetworkDiscovery.md)
 Installs the Network Discovery service.
+
+Supported only for the AIP unified labeling client.
 
 ### [New-AIPCustomPermissions](New-AIPCustomPermissions.md)
 Creates an ad-hoc protection policy for custom permissions.
@@ -116,11 +145,20 @@ Protects a specified file or the files in a specified folder by using RMS.
 
 Not supported by the Azure Information Protection unified labeling client. Instead, use Set-AIPFileLabel.
 
+### [Remove-AIPScannerContentScanJob](Remove-AIPScannerContentScanJob.md)
+Deletes the entire Azure Information Protection content scan job.
+
+Supported only for the AIP unified labeling client.
+
 ### [Remove-AIPScannerRepository](Remove-AIPScannerRepository.md)
-Deprecated: Removes a data repository for the Azure Information Protection scanner. 
+Removes a repository from an Azure Information Protection content scan job.
+
+Supported only for the AIP unified labeling client.
+Deprecated for the AIP classic client.
 
 ### [Remove-AIPScannerScannedFileTypes](Remove-AIPScannerScannedFileTypes.md)
 Deprecated: Removes file types from a configured list of file types to scan or exclude from scanning by the Azure Information Protection scanner.
+
 
 ### [Set-AIPAuthentication](Set-AIPAuthentication.md)
 Sets the authentication credentials for the Azure Information Protection client.
@@ -137,14 +175,33 @@ Sets the service account and database for the Azure Information Protection scann
 ### [Set-AIPScannerConfiguration](Set-AIPScannerConfiguration.md)
 Sets optional configuration for the Azure Information Protection scanner.
 
+
+### [Set-AIPScannerContentScanJob](Set-AIPScannerContentScanJob.md)
+Defines settings for an Azure Information Protection content scan job.
+
+Supported only for the AIP unified labeling client.
+
+
 ### [Set-AIPScannerRepository](Set-AIPScannerRepository.md)
-Deprecated: Updates a profile of configuration settings for a data repository to be scanned by the Azure Information Protection scanner. 
+Updates an existing repository in an Azure Information Protection content scan job.
+
+Supported only for the AIP unified labeling client.
+Deprecated for the AIP classic client.
 
 ### [Set-AIPScannerScannedFileTypes](Set-AIPScannerScannedFileTypes.md)
 Deprecated: Sets a list of file types to scan or exclude from scanning by the Azure Information Protection scanner.
 
+### [Set-MIPNetworkDiscovery](Set-MIPNetworkDiscovery.md)
+Updates the installation settings for the Network Discovery service.
+
+Supported only for the AIP unified labeling client.
+
+
 ### [Set-MIPNetworkDiscoveryConfiguration](Set-MIPNetworkDiscoveryConfiguration.md)
 Sets optional configurations for the Network Discovery service.
+
+Supported only for the AIP unified labeling client.
+
 
 ### [Set-RMSServerAuthentication](Set-RMSServerAuthentication.md)
 Sets the server mode, which is required for non-interactive sessions.
@@ -160,6 +217,8 @@ Instructs the Azure Information Protection scanner to start a one time scan cycl
 ### [Start-MIPNetworkDiscovery](Start-MIPNetworkDiscovery.md)
 Instructs the Azure Information Protection scanner to start a network scan job.
 
+Supported only for the AIP unified labeling client.
+
 ### [Stop-AIPScan](Stop-AIPScan.md)
 Instructs the Azure Information Protection scanner to immediately stop the currently running scan cycle.
 
@@ -168,6 +227,8 @@ Uninstalls the Windows Server service for the Azure Information Protection scann
 
 ### [Uninstall-MIPNetworkDiscovery](Uninstall-MIPNetworkDiscovery.md)
 Uninstalls the Network Discovery Windows server service.
+
+Supported only for the AIP unified labeling client.
 
 ### [Unprotect-RMSFile](Unprotect-RMSFile.md)
 Unprotects a file that is currently protected by RMS.
