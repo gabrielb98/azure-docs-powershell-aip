@@ -1,30 +1,140 @@
 ---
 external help file: AIP.dll-Help.xml
 Module Name: AzureInformationProtection
-online version: https://go.microsoft.com/fwlink/?linkid=858208
+online version: https://go.microsoft.com/fwlink/?linkid=2144637
 schema: 2.0.0
 ---
 
 # Remove-AIPScannerRepository
 
 ## SYNOPSIS
-**Relevant for:** AIP classic client only, and deprecated.
+**Relevant for:** Unified labeling client only. Deprecated for the classic client.
 
-Removes a data repository for the Azure Information Protection scanner. 
+Removes a repository from an Azure Information Protection content scan job.
 
 ## SYNTAX
 
 ```
-Remove-AIPScannerRepository [-Path] <String> [<CommonParameters>]
+Remove-AIPScannerRepository
+ [-Repositories] <System.Collections.Generic.List`1[Microsoft.InformationProtection.Powershell.AIP.Commandlets.Scanner.MoonCake.RepositoryInfo]>
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet is deprecated for the current version of the Azure Information Protection scanner. 
+Deletes any repositories described by the **Repositories** parameter, or returned by a piped [Get-AIPScannerRepository](Get-AIPScannerRepository.md) cmdlet.
 
-Instead, use the [Azure portal to configure the scanner](/information-protection/deploy-aip-scanner).
+For more information about content scan jobs, see the [Azure Information Protection on-premises scanner documentation](/information-protection/deploy-aip-scanner-configure-install#create-a-content-scan-job).
 
 > [!NOTE]
+> If you are using the AIP classic client, this cmdlet is deprecated. Instead, use the [Azure portal to configure the scanner](/information-protection/deploy-aip-scanner-classic).
+> 
 > To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021.** 
 > 
 > This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 >
+## EXAMPLES
+
+### Example 1 Remove all repositories configured for your content scan job
+```PowerShell
+PS C:\WINDOWS\system32> Get-AIPScannerRepository | Remove-AIPScannerRepository
+```
+
+This example shows a fully piped cmdlet, where the repositories are first returned, and then deleted.
+
+### Example 2 Remove a specific repository from your content scan job
+```PowerShell
+PS C:\WINDOWS\system32> Get-AIPScannerRepository -Path 'c:\repoToScan1' | Remove-AIPScannerRepository
+```
+
+This example shows a fully piped cmdlet, where the repository is first returned, and then deleted.
+
+### Example 3 Remove any repositories that match a specific wildcard pattern from your content scan job
+```PowerShell
+PS C:\WINDOWS\system32> Get-AIPScannerRepository -Path 'c:\repo*' | Remove-AIPScannerRepository
+```
+
+This example shows a fully piped cmdlet, where the repositories are first returned, and then deleted.
+
+### Example 4 Remove a specific repository from your content scan job without piping
+```PowerShell
+PS C:\WINDOWS\system32> $repos = Get-AIPScannerRepository -Path 'c:\repoToScan1'
+PS C:\WINDOWS\system32> Remove-AIPScannerRepository $repos
+```
+
+This example shows a fully piped cmdlet, where the repositories are first returned, and then deleted.
+
+## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Repositories
+Describes the repositories you want to delete. For example, see [Example 4 Remove a specific repository from your content scan job without piping](#example-4-remove-a-specific-repository-from-your-content-scan-job-without-piping).
+
+```yaml
+Type: System.Collections.Generic.List`1[Microsoft.InformationProtection.Powershell.AIP.Commandlets.Scanner.MoonCake.RepositoryInfo]
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. 
+
+For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+### System.Collections.Generic.List`1[[Microsoft.InformationProtection.Powershell.AIP.Commandlets.Scanner.MoonCake.RepositoryInfo, AIP, Version=2.9.0.0, Culture=neutral, PublicKeyToken=null]]
+
+## OUTPUTS
+
+### System.Object
+## NOTES
+
+## RELATED LINKS
+
+- [Add-AIPScannerRepository](Add-AIPScannerRepository.md)
+
+- [Get-AIPScannerContentScanJob](Get-AIPScannerContentScanJob.md)
+
+- [Get-AIPScannerRepository](Get-AIPScannerRepository.md)
+
+- [Remove-AIPScannerContentScanJob](Remove-AIPScannerContentScanJob.md)
+
+- [Set-AIPScannerContentScanJob](Set-AIPScannerContentScanJob.md)
+
+- [Set-AIPScannerRepository](Set-AIPScannerRepository.md)

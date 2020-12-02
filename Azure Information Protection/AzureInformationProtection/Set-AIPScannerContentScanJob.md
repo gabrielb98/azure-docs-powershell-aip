@@ -1,75 +1,88 @@
 ---
 external help file: AIP.dll-Help.xml
 Module Name: AzureInformationProtection
-online version: https://go.microsoft.com/fwlink/?linkid=2144823
+online version: https://go.microsoft.com/fwlink/?linkid=2144639
+
 schema: 2.0.0
 ---
 
-# Add-AIPScannerRepository
+# Set-AIPScannerContentScanJob
 
 ## SYNOPSIS
-**Relevant for:** AIP unified labeling client. Deprecated for the classic client.
-
-Adds a repository to an Azure Information Protection content scan job.
+Defines settings for an Azure Information Protection content scan job.
 
 ## SYNTAX
 
-``` PowerShell
-Add-AIPScannerRepository -Path <String> [-OverrideContentScanJob <OnOffEnum>] [-EnableDlp <OnOffEnum>]
- [-Enforce <OnOffEnum>] [-LabelFilesByContent <OnOffEnum>] [-RelabelFiles <OnOffEnum>]
- [-AllowLabelDowngrade <OnOffEnum>] [-EnforceDefaultLabel <OnOffEnum>] [-DefaultLabelType <DefaultLabelType>]
- [-DefaultLabelId <Guid>] [-DefaultOwner <String>] [-RepositoryOwner <String>]
- [-PreserveFileDetails <OnOffEnum>] [-IncludeFileTypes <String>] [-ExcludeFileTypes <String>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+```
+Set-AIPScannerContentScanJob [-Schedule <Schedule>] [-DiscoverInformationTypes <DiscoverInformationTypes>]
+ [-RecommendedAsAutomatic <OnOffEnum>] [-EnableDlp <OnOffEnum>] [-Enforce <OnOffEnum>]
+ [-LabelFilesByContent <OnOffEnum>] [-RelabelFiles <OnOffEnum>] [-AllowLabelDowngrade <OnOffEnum>]
+ [-EnforceDefaultLabel <OnOffEnum>] [-DefaultLabelType <DefaultLabelType>] [-DefaultLabelId <Guid>]
+ [-DefaultOwner <String>] [-RepositoryOwner <String>] [-PreserveFileDetails <OnOffEnum>]
+ [-IncludeFileTypes <String>] [-ExcludeFileTypes <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Adds a repository for your content scan job to scan.
-
+Defines the configuration for your content scan job, which scans the content in the defined repositories, according to the settings defined.
 For more information about content scan jobs, see the [Azure Information Protection on-premises scanner documentation](/information-protection/deploy-aip-scanner-configure-install#create-a-content-scan-job).
-
-> [!NOTE]
-> If you are using the AIP classic client, this cmdlet is deprecated. Instead, use the [Azure portal to configure the scanner](/information-protection/deploy-aip-scanner-classic).
-> 
-> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021.** 
-> 
-> This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
->
 
 ## EXAMPLES
 
-### Example 1 Add a new repository using the configured content scan jobs settings
-```PowerShell
-PS C:\WINDOWS\system32> Add-AIPScannerRepository -Path 'c:\repoToScan'
-```
-
-This example adds the **repoToScan** repository to your content scan job, using the content scan job's current settings.
-
-### Example 2 Add a new repository, overriding the content scan job's current settings
+### Example 1 Define default content scan job settings
 
 ```PowerShell
-PS C:\WINDOWS\system32> Add-AIPScannerRepository -Path 'c:\repoToScan' -OverrideContentScanJob On -Enforce On -DefaultOwner 'ms@gmail.com'
+PS C:\WINDOWS\system32> Set-AIPScannerContentScanJob -Enforce Off
 ```
 
-This example adds the **repoToScan** repository to your content scan job, overriding the currently configured content scan job settings.
+This example defines the content scan job with default settings, and sets the **Policy enforcement** option to **Off.**
 
-### Example 3 Add a new repository, excluding .msg and .tmp files
+### Example 2 Define a basic content scan job that runs continuously
 
 ```PowerShell
-PS C:\WINDOWS\system32> Add-AIPScannerRepository -Path 'c:\repoToScan' -OverrideContentScanJob On -IncludeFileTypes '' -ExcludeFileTypes '.msg,.tmp' 
+PS C:\WINDOWS\system32> Set-AIPScannerContentScanJob -Enforce Off -RelabelFiles On -EnforceDefaultLabel On -Schedule Always
 ```
 
-This example defines a content scan job that includes all file types except for .msg and .tmp files.
+This example defines the content scan job with without enforcing a policy, allowing files to be re-labeled, using a default label, and is scheduled to run always.
+
+### Example 3 Define a content scan job that allows for specific re-labeling actions only
+
+```PowerShell
+PS C:\WINDOWS\system32> Set-AIPScannerContentScanJob -RelabelFiles On -AllowLabelDowngrade On -EnforceDefaultLabel On
+```
+
+This example defines a content scan job that allows for content to be re-labeled only to downgrade a label or use a default label.
+
+### Example 4 Define a content scan job that excludes .msg and .tmp files
+
+```PowerShell
+PS C:\WINDOWS\system32> Set-AIPScannerContentScanJob -IncludeFileTypes '' -ExcludeFileTypes '.msg,.tmp'
+```
+
+This example defines a content scan job that includes all file types except for .msg and .tmp files. 
+
+
+### Example 5 Define a content scan job with DLP enabled, and a specific repository owner
+
+```PowerShell
+PS C:\WINDOWS\system32> Set-AIPScannerContentScanJob -EnableDLP On -RepositoryOwner 'domain\user'
+```
+
+This example defines the content scan job to use the Microsoft 365 built-in data loss prevention (DLP) sensitivity information types when scanning your content, and also defines a specific owner for the content scan job's repositories.
+
+### Example 6 Define a content scan job with a default label to use when automatically labeling content
+
+```PowerShell
+PS C:\WINDOWS\system32> Set-AIPScannerContentScanJob -DefaultLabelType Custom -DefaultLabelId 'ff1f1c9d-2f92-4a18-3d84-4608b742424'
+```
+
+This example defines the content scan job with a specific label used as the default label, specified by the label ID.
 
 ## PARAMETERS
 
 ### -AllowLabelDowngrade
 Determines whether the content scan job allows for labeling downgrade actions.
 
-Relevant only when the following parameters are set to **on**:
-
-- **OverrideContentScanJob**
-- **RelabelFiles**
+Relevant only when the **RelabelFiles** parameter is set to **on**.
 
 ```yaml
 Type: OnOffEnum
@@ -102,10 +115,7 @@ Accept wildcard characters: False
 ### -DefaultLabelId
 Defines the ID of the default label used when automatically labeling content with a default label.
 
-- Mandatory if the **DefaultLabelType** parameter is set to **custom**.
-
-- Relevant only when the **OverrideContentScanJob** parameter is set to **on**.
-
+Mandatory if the **DefaultLabelType** parameter is set to **custom**.
 
 ```yaml
 Type: Guid
@@ -124,9 +134,6 @@ Determines the type of default label used when automatically labeling content wi
 
 When used, define the label ID you want to use as the default ID using the **DefaultLabelId** parameter.
 
-Relevant only when the **OverrideContentScanJob** parameter is set to **on**.
-
-
 ```yaml
 Type: DefaultLabelType
 Parameter Sets: (All)
@@ -143,13 +150,26 @@ Accept wildcard characters: False
 ### -DefaultOwner
 Defines the default owner value used for the files scanned, using the account email address. By default, this is the scanner account.
 
-Relevant only when the **OverrideContentScanJob** parameter is set to **on**.
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DiscoverInformationTypes
+Determines the types of information types discovered during the content scan job.
+
+```yaml
+Type: DiscoverInformationTypes
+Parameter Sets: (All)
+Aliases:
+Accepted values: PolicyOnly, All
 
 Required: False
 Position: Named
@@ -164,8 +184,6 @@ Determines whether the content scan job uses the Microsoft 365 built-in data los
 > [!TIP]
 > If you configure this parameter, you may also want to configure a specific repository owner using the **RepositoryOwner** parameter.
 > 
-
-Relevant only when the **OverrideContentScanJob** parameter is set to **on**.
 
 ```yaml
 Type: OnOffEnum
@@ -183,8 +201,6 @@ Accept wildcard characters: False
 ### -Enforce
 Determines whether the content scan job enforces content scanning and labeling according to your policy.
 
-Relevant only when the **OverrideContentScanJob** parameter is set to **on**.
-
 ```yaml
 Type: OnOffEnum
 Parameter Sets: (All)
@@ -201,10 +217,7 @@ Accept wildcard characters: False
 ### -EnforceDefaultLabel
 Determines whether using a default label is always used when relabeling content.
 
-Relevant only when the following parameters are set to **on**:
-
-- **RelabelFiles**
-- **OverrideContentScanJob** 
+Relevant only when the **RelabelFiles** parameter is set to **on**.
 
 ```yaml
 Type: OnOffEnum
@@ -222,10 +235,9 @@ Accept wildcard characters: False
 ### -ExcludeFileTypes
 Determines any file types that are ignored during your content scan job. Define multiple file types using a comma-separated list.
 
-If you define this parameter, define the **IncludeFileTypes** parameter as null. For example, see **Example 3** above.
+If you define this parameter, define the **IncludeFileTypes** parameter as null. For example, **Example 4** above.
 
 Relevant only when the **OverrideContentScanJob** parameter is set to **on**.
-
 
 ```yaml
 Type: String
@@ -242,7 +254,7 @@ Accept wildcard characters: False
 ### -IncludeFileTypes
 Explicitly determines the file types that are scanned by your content scan job. Define multiple file types using a comma-separated list.
 
-If you define this parameter, define the **ExcludeFileTypes** parameter as null. For example, see **Example 3** above.
+If you define this parameter, define the **ExcludeFileTypes** parameter as null. For example, **Example 4** above.
 
 Relevant only when the **OverrideContentScanJob** parameter is set to **on**.
 
@@ -261,8 +273,6 @@ Accept wildcard characters: False
 ### -LabelFilesByContent
 Determines whether the **Label files based on content** content scan job option is enabled or disabled. 
 
-Relevant only when the **OverrideContentScanJob** parameter is set to **on**.
-
 ```yaml
 Type: OnOffEnum
 Parameter Sets: (All)
@@ -270,39 +280,6 @@ Aliases:
 Accepted values: On, Off
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OverrideContentScanJob
-Determines whether the settings for this repository override the settings defined for the content scan job.
-
-If set to **On**, define any settings you want to override using additional parameters.
-
-```yaml
-Type: OnOffEnum
-Parameter Sets: (All)
-Aliases:
-Accepted values: On, Off
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Path
-Defines the path to the repository you want to add to the content scan job.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -312,7 +289,21 @@ Accept wildcard characters: False
 ### -PreserveFileDetails
 Determines whether the file details, including the date modified, last modified, and modified by settings are preserved while scanning and auto-labeling.
 
-Relevant only when the **OverrideContentScanJob** parameter is set to **on**.
+```yaml
+Type: OnOffEnum
+Parameter Sets: (All)
+Aliases:
+Accepted values: On, Off
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecommendedAsAutomatic
+Determines whether recommended labels are used to automatically label your content.
 
 ```yaml
 Type: OnOffEnum
@@ -330,7 +321,11 @@ Accept wildcard characters: False
 ### -RelabelFiles
 Determines whether the content scan job is allowed to relabel files.
 
-Relevant only when the **OverrideContentScanJob** parameter is set to **on**.
+> [!TIP]
+> When using this parameter, use the following additional parameters as needed:
+> - **EnforceDefaultLabel**
+> - **AllowLabelDowngrade**
+> 
 
 ```yaml
 Type: OnOffEnum
@@ -346,19 +341,33 @@ Accept wildcard characters: False
 ```
 
 ### -RepositoryOwner
+
 Specifies the SAMAccountname (**domain\user**), UPN (**user@domain**), or SID of a group that owns the repository.
 
 The owners are granted full control permissions on the file if the permissions on the file are changed by a matched DLP rule.
 
-Relevant only when the following parameters are set to **on**.
-
-- **OverrideContentScanJob**
-- **EnableDlp**
+Relevant only when the **EnableDlp** parameter is set to **on**.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Schedule
+Determines whether the content scan job runs according to a specific schedule, or continuously.
+
+```yaml
+Type: Schedule
+Parameter Sets: (All)
+Aliases:
+Accepted values: Manual, Always
 
 Required: False
 Position: Named
@@ -397,6 +406,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+- [Add-AIPScannerRepository](Add-AIPScannerRepository.md)
+
 - [Get-AIPScannerContentScanJob](Get-AIPScannerContentScanJob.md)
 
 - [Get-AIPScannerRepository](Get-AIPScannerRepository.md)
@@ -404,7 +415,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 - [Remove-AIPScannerContentScanJob](Remove-AIPScannerContentScanJob.md)
 
 - [Remove-AIPScannerRepository](Remove-AIPScannerRepository.md)
-
-- [Set-AIPScannerContentScanJob](Set-AIPScannerContentScanJob.md)
 
 - [Set-AIPScannerRepository](Set-AIPScannerRepository.md)

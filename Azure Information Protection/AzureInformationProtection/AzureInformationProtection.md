@@ -40,10 +40,14 @@ For more information, see:
 
 ## AzureInformationProtection Cmdlets
 ### [Add-AIPScannerRepository](Add-AIPScannerRepository.md)
-**Deprecated:** Adds a data repository to be scanned by the Azure Information Protection scanner. 
+**Unified labeling client only:** Adds a repository to an Azure Information Protection content scan job.
 
 ### [Add-AIPScannerScannedFileTypes](Add-AIPScannerScannedFileTypes.md)
-**Deprecated:** Adds new file types to a configured list of file types to scan or exclude from scanning by the Azure Information Protection scanner
+**Deprecated:** Adds new file types to a configured list of file types to scan or exclude from scanning by the Azure Information Protection scanner.
+
+### [Add-MIPScannerRepository](Add-MIPScannerRepository.md)
+**Unified labeling client only:** Adds a repository to an Azure Information Protection content scan job.
+
 
 ### [Clear-AIPAuthentication](Clear-AIPAuthentication.md)
 Clears the user settings and RMS templates for the current user.
@@ -60,14 +64,21 @@ Gets the Azure Information Protection label and protection information for a spe
 ### [Get-AIPScannerConfiguration](Get-AIPScannerConfiguration.md)
 Gets the configuration settings for the Azure Information Protection scanner.
 
+### [Get-AIPScannerContentScanJob](Get-AIPScannerContentScanJob.md)
+Gets details about your content scan job.
+
+Supported only by the AIP unified labeling client.
+
 ### [Get-AIPScannerRepository](Get-AIPScannerRepository.md)
-**Deprecated:** Gets a list of data repositories that the Azure Information Protection scanner is configured to scan.
+**Unified labeling client only:** Gets repository data for an Azure Information Protection content scan job.
 
 ### [Get-AIPScannerStatus](Get-AIPScannerStatus.md)
 Gets the current status of the service for the Azure Information Protection scanner.
 
 ### [Get-MIPNetworkDiscoveryConfiguration](Get-MIPNetworkDiscoveryConfiguration.md)
 **Unified labeling client only:** Gets configuration settings for the Network Discovery service.
+
+Supported only for the AIP unified labeling client.
 
 ### [Get-MIPNetworkDiscoveryJobs](Get-MIPNetworkDiscoveryJobs.md)
 **Unified labeling client only:** Gets a list of Azure Information Protection network scan jobs configured in your tenant.
@@ -114,8 +125,13 @@ For the unified labeling client, use **[New-AIPCustomPermissions](New-AIPCustomP
 
 For the unified labeling client, use **[Set-AIPFileLabel](Set-AIPFileLabel.md)** instead.
 
+### [Remove-AIPScannerContentScanJob](Remove-AIPScannerContentScanJob.md)
+Deletes the entire Azure Information Protection content scan job.
+
+Supported only for the AIP unified labeling client.
+
 ### [Remove-AIPScannerRepository](Remove-AIPScannerRepository.md)
-**Deprecated:** Removes a data repository for the Azure Information Protection scanner. 
+**Unified labeling client only:** Removes a repository from an Azure Information Protection content scan job.
 
 ### [Remove-AIPScannerScannedFileTypes](Remove-AIPScannerScannedFileTypes.md)
 **Deprecated:** Removes file types from a configured list of file types to scan or exclude from scanning by the Azure Information Protection scanner.
@@ -135,11 +151,17 @@ Sets the service account and database for the Azure Information Protection scann
 ### [Set-AIPScannerConfiguration](Set-AIPScannerConfiguration.md)
 Sets optional configuration for the Azure Information Protection scanner.
 
+### [Set-AIPScannerContentScanJob](Set-AIPScannerContentScanJob.md)
+**Unified labeling client only:** Defines settings for an Azure Information Protection content scan job.
+
 ### [Set-AIPScannerRepository](Set-AIPScannerRepository.md)
-**Deprecated:** Updates a profile of configuration settings for a data repository to be scanned by the Azure Information Protection scanner. 
+**Unified labeling client only:** Updates an existing repository in an Azure Information Protection content scan job.
 
 ### [Set-AIPScannerScannedFileTypes](Set-AIPScannerScannedFileTypes.md)
 **Deprecated:** Sets a list of file types to scan or exclude from scanning by the Azure Information Protection scanner.
+
+### [Set-MIPNetworkDiscovery](Set-MIPNetworkDiscovery.md)
+**Unified labeling client only:** Updates the installation settings for the Network Discovery service.
 
 ### [Set-MIPNetworkDiscoveryConfiguration](Set-MIPNetworkDiscoveryConfiguration.md)
 **Unified labeling client only:** Sets optional configurations for the Network Discovery service.

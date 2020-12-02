@@ -89,6 +89,8 @@ For more information, see [about_CommonParameters](/powershell/module/microsoft.
 
 [Install-MIPNetworkDiscovery](Install-MIPNetworkDiscovery.md)
 
+[Set-MIPNetworkDiscovery](Set-MIPNetworkDiscovery.md)
+
 [Start-MIPNetworkDiscovery](Start-MIPNetworkDiscovery.md)
 
 [Uninstall-MIPNetworkDiscovery](Uninstall-MIPNetworkDiscovery.md)

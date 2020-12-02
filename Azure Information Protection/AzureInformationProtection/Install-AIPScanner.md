@@ -15,7 +15,9 @@ Installs the Azure Information Protection scanner.
 ## SYNTAX
 
 ```
-Install-AIPScanner [-ServiceUserCredentials] <PSCredential> [-SqlServerInstance] <String> [-Profile |Cluster <String>] [<CommonParameters>]
+Install-AIPScanner [-ServiceUserCredentials] <PSCredential> [-StandardDomainsUserAccount <PSCredential>]
+ [-ShareAdminUserAccount <PSCredential>] [-SqlServerInstance] <String> -Cluster <String> [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -56,7 +58,7 @@ For step-by-step instructions to install, configure, and use the scanner, see:
 PS C:\> Install-AIPScanner -SqlServerInstance SQLSERVER1\AIPSCANNER -Profile EU
 ```
 
-This command installs the Azure Information Protection Scanner service by using a SQL Server instance named AIPSCANNER, which runs on the server named SQLSERVER1. In addition, the installation creates a database name of AIPScanner_EU (for the classic client) or AIPScannerUL_\<cluster name (profile name)> (for the unified labeling client) to store the scanner configuration.
+This command installs the Azure Information Protection Scanner service by using a SQL Server instance named AIPSCANNER, which runs on the server named SQLSERVER1. In addition, the installation creates a database name of AIPScanner_EU (for the classic client) or AIPScannerUL_\<cluster name> (for the unified labeling client) to store the scanner configuration.
 
 > [!NOTE]
 > The cluster parameter is only supported in client version 2.7.0.0 and above.
@@ -74,8 +76,6 @@ PS C:\> Install-AIPScanner -SqlServerInstance SQLSERVER1 -Profile EU
 
 This command installs the Azure Information Protection Scanner service by using the SQL Server default instance that runs on the server named SQLSERVER1. As with the previous example, you are prompted for credentials, and then the command displays the progress, where the install log is located, and the creation of the new Windows Application event log.
 
-> [!NOTE]
-> The cluster parameter is only supported in client version 2.7.0.0 and above.
 
 ### Example 3: Install the Azure Information Protection Scanner service by using SQL Server Express
 ```
@@ -85,28 +85,64 @@ PS C:\> Install-AIPScanner -SqlServerInstance SQLSERVER1\SQLEXPRESS -Profile EU
 
 This command installs the Azure Information Protection Scanner service by using SQL Server Express that runs on the server named SQLSERVER1. As with the previous examples, you are prompted for credentials, and then the command displays the progress, where the install log is located, and the creation of the new Windows Application event log.
 
-> [!NOTE]
-> The cluster parameter is only supported in client version 2.7.0.0 and above.
-
-### Example 4: Install the Azure Information Protection Scanner service by using a SQL Server IP, port and profile
-
-```
-PS C:\> Install-AIPScanner -SqlServerInstance 10.0.0.4,1433 -Profile EU
-```
-This command installs the Azure Information Protection Scanner service by using a SQL Server instance, which runs on the server with **IP 10.0.0.4** and SQL service listening on **Port 1433**. In addition, the installation creates a database name of **AIPScanner_EU** (for the classic client) and/or **AIPScannerUL_<profile_name>** (for the unified labeling client) to store the scanner configuration.
-
-During installation, you'll be prompted to provide the Active Directory account details for the scanner service account. If an existing database named **AIPScanner_EU** (classic client) or **AIPScannerUL_EU** (unified labeling client) isn't found on the specified SQL Server instance, a new database with the relevant name  is created to store the scanner configuration. The command displays the installation progress, where the install log is located, and the creation of the new Windows Application event log named Azure Information Protection Scanner. At the end of the output, you'll see when the installation is completed. 
-
 ## PARAMETERS
 
+### -Cluster
+> [!NOTE]
+>  This parameter is required for the scanner from the unified labeling client. From version 2.7.0.0, we recommend using the **Cluster** parameter instead of the **Profile** parameter.
+
+Specifies the scanner database name for configuration.
+
+- For the Azure Information Protection client (classic), this parameter is optional and if not specified, the default database name for the scanner is AIPScanner_<computer_name>. When you specify a cluster name with this parameter, the database name for the scanner is **AIPScanner_<cluster_name>.**
+
+- For the Azure Information Protection unified labeling client, this parameter is not optional and you must specify a cluster name. The database name for the scanner is **AIPScannerUL_<cluster_name>.**
+
+If the database doesn't exist when the scanner is installed, the **Install-AIPScanner** command creates it.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: Profile
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ServiceUserCredentials
-Specifies a **PSCredential** object for the service account to run the Azure Information Protection Scanner service. For the user name, use the following format: Domain\Username. You are prompted for a password. 
+Specifies the account credentials used to run the Azure Information Protection service. 
 
-To obtain a PSCredential object, use the [Get-Credential](/powershell/module/microsoft.powershell.security/get-credential) cmdlet. For more information, type `Get-Help Get-Cmdlet`. 
+- The credentials used must be an Active Directory account. 
 
-If you do not specify this parameter, you are prompted for the user name and password.
+- Set the value of this parameter using the following syntax: `Domain\Username`. 
 
-This account must be an Active Directory account. For additional requirements, see [Prerequisites for the Azure Information Protection scanner](/information-protection/deploy-aip-scanner#prerequisites-for-the-azure-information-protection-scanner).
+    For example: `contoso\scanneraccount`
+
+- If you do not specify this parameter, you are prompted for the username and password.
+
+For more information, see [Prerequisites for the Azure Information Protection scanner](/information-protection/deploy-aip-scanner#prerequisites-for-the-azure-information-protection-scanner). 
+
+> [!TIP]
+> Use a **PSCredential** object by using the [Get-Credential](/powershell/module/microsoft.powershell.security/get-credential) cmdlet. In this case, you are prompted for the password only.
+>
+> For more information, type `Get-Help Get-Cmdlet`. 
 
 ```yaml
 Type: PSCredential
@@ -120,15 +156,45 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ShareAdminUserAccount
+Specifies the credentials for a strong account in an on-premises network, used to get a full list of file share and NTFS permissions.
+
+- The credentials used must be an Active Directory account with Administrator/FC rights on your network shares. This will usually be a Server Admin or Domain Admin.
+
+- Set the value of this parameter using the following syntax: `Domain\Username`
+
+    For example: `contoso\admin`
+
+- If you do not specify this parameter, you are prompted for both the username and password.
+
+> [!TIP]
+> Use a **PSCredential** object by using the [**Get-Credential**](/powershell/module/microsoft.powershell.security/get-credential) cmdlet. In this case, you are prompted for the password only.
+> 
+>For more information, type `Get-Help Get-Cmdlet`.
+
+
+```yaml
+Type: PSCredential
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SqlServerInstance
 Specifies the SQL Server instance on which to create a database for the Azure Information Protection scanner. 
 
 For information about the SQL Server requirements, see [Prerequisites for the Azure Information Protection scanner](/information-protection/deploy-aip-scanner#prerequisites-for-the-azure-information-protection-scanner).
 
-For the default instance, specify the server name. For example: SQLSERVER1. 
-For a named instance, specify the server name and instance name. For example: SQLSERVER1\AIPSCANNER. You can use IP, port to use SQL instance listening on a specific IP and port.
+For the default instance, specify the server name. For example: **SQLSERVER1.** 
 
-For SQL Server Express, specify the server name and SQLEXPRESS. For example: SQLSERVER1\SQLEXPRESS.
+For a named instance, specify the server name and instance name. For example: **SQLSERVER1\AIPSCANNER.** 
+
+For SQL Server Express, specify the server name and SQLEXPRESS. For example: **SQLSERVER1\SQLEXPRESS.**
 
 
 ```yaml
@@ -143,51 +209,48 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Profile 
-> [!NOTE]
-> This parameter is required for the scanner from the unified labeling client. From version 2.7.0.0, we recommend using Cluster switch instead of Profile switch.
+### -StandardDomainsUserAccount
+Specifies the credentials for a weak account in an on-premises network, used to check access for weak users on the network and expose discovered network shares.
 
-Specifies the scanner's database name for its configuration. 
+- The credentials used must be an Active Directory account, and a user of the **Domain Users** group only.
 
-- **AIP unified labeling client:** For the unified labeling client, this parameter isn't optional and you must specify a profile name. The database name for the scanner is **AIPScannerUL_\<profile_name>.**
+- Set the value of this parameter using the following syntax: `Domain\Username`
 
-- **AIP classic client:** For the AIP classic client, this parameter is optional and if you don't specify it, the default database name for the scanner is **AIPScanner_\<computer_name>.** When you specify a profile name with this parameter, the database name for the scanner is **AIPScanner_\<profile_name>.**
+    For example: `contoso\stduser`
 
-If the database doesn't exist when the scanner is installed, the **Install-AIPScanner command** creates it. 
+- If you do not specify this parameter, you are prompted for both the username and password.
 
-```yaml 
-Type: String 
-Parameter Sets: (All) 
-Aliases: 
-Required: False 
-Position: Named 
-Default value: None 
-Accept pipeline input: False 
-Accept wildcard characters: False 
+> [!TIP]
+> Use a **PSCredential** object by using the [**Get-Credential**](/powershell/module/microsoft.powershell.security/get-credential) cmdlet. In this case, you are prompted for the password only.
+> 
+>For more information, type `Get-Help Get-Cmdlet`.
+
+```yaml
+Type: PSCredential
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
-### -Cluster
+### -WhatIf
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
-> [!NOTE]
->  This parameter is required for the scanner from the unified labeling client. From version 2.7.0.0, we recommend using Cluster switch instead of Profile switch.
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
 
-Specifies the scanner database name for configuration.
-
-- **AIP unified labeling client**: For the AIP unified labeling client, this parameter is not optional and you must specify a cluster name. The database name for the scanner is **AIPScannerUL_<cluster_name>.**
-
-- **AIP classic client:** For the AIP classic client, this parameter is optional and if not specified, the default database name for the scanner is **AIPScanner_<computer_name>.** When you specify a cluster name with this parameter, the database name for the scanner is **AIPScanner_<cluster_name>.**
-
-If the database doesn't exist when the scanner is installed, the **Install-AIPScanner** command creates it.
-
-```yaml 
-Type: String 
-Parameter Sets: (All) 
-Position: Named 
-Default value: None 
-Accept pipeline input: False 
-Accept wildcard characters: False 
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
-
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. 

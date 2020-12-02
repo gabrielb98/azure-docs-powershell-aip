@@ -15,7 +15,7 @@ Instructs the Azure Information Protection scanner to start a network scan job.
 ## SYNTAX
 
 ```
-Start-MIPNetworkDiscovery -JobId <Guid> [<CommonParameters>]
+Start-MIPNetworkDiscovery -JobId <Guid> [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -36,6 +36,20 @@ This example runs the network scan job with a job GUID of **f7715158-dc9e-40d5-b
 
 ## PARAMETERS
 
+### -Force
+Forces the command to run without asking for user confirmation.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 ### -JobId
 The network scan job GUID. 
 
@@ -77,6 +91,8 @@ For more information, see [about_CommonParameters](/powershell/module/microsoft.
 [Import-MIPNetworkDiscoveryConfiguration](Import-MIPNetworkDiscoveryConfiguration.md)
 
 [Install-MIPNetworkDiscovery](Install-MIPNetworkDiscovery.md)
+
+[Set-MIPNetworkDiscovery](Set-MIPNetworkDiscovery.md)
 
 [Set-MIPNetworkDiscoveryConfiguration](Set-MIPNetworkDiscoveryConfiguration.md)
 
