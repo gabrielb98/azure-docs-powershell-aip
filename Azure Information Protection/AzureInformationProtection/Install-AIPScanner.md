@@ -95,15 +95,12 @@ As with the previous examples, you are prompted for credentials, and then the co
 ### -Cluster
 **Relevant for**: Unified labeling client only.
 
-> [!NOTE]
-> For the unified labeling client, using either this parameter or the **Profile** parameter is mandatory. 
-> 
-> Starting in version 2.7.0.0 of the unified labeling client, we recommend using this parameter instead of the **Profile** parameter.
->
-
 Specifies the name of the scanner's database for the scanner configuration, using the following syntax: **AIPScannerUL_<cluster_name>.** 
 
 If the database that you name doesn't exist when the scanner is installed, this command creates it.
+
+Using either this parameter or the **Profile** parameter is mandatory. Starting in version 2.7.0.0 of the unified labeling client, we recommend using this parameter instead of the **Profile** parameter.
+
 
 ```yaml
 Type: String
@@ -133,15 +130,11 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-> [!NOTE]
-> For the unified labeling client, using either this parameter or the **Cluster** parameter is mandatory. 
-> 
-> Starting in version 2.7.0.0 of the unified labeling client, we recommend using the **Cluster** parameter instead of the this parameter.
->
-
 Specifies the name of the scanner's database for the scanner configuration.
 
-- **Unified labeling client**: The database name for the scanner is **AIPScannerUL_\<profile_name>.** 
+- **Unified labeling client**:  Using either this parameter or the **Cluster** parameter is mandatory. Starting in version 2.7.0.0 of the unified labeling client, we recommend using the **Cluster** parameter instead of the this parameter.
+
+    The database name for the scanner is **AIPScannerUL_\<profile_name>.** 
 
     If the database that you name doesn't exist when the scanner is installed, this command creates it.
 

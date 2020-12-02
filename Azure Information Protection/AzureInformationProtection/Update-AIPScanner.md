@@ -69,15 +69,12 @@ For reference purposes, a backup of your old configuration is stored in %localap
 ### -Cluster
 **Relevant for**: Unified labeling client only.
 
-> [!NOTE]
-> For the unified labeling client, using either this parameter or the **Profile** parameter is mandatory. 
-> 
-> Starting in version 2.7.0.0 of the unified labeling client, we recommend using this parameter instead of the **Profile** parameter.
->
-
 Specifies the configured name of the scanner's database, used to identify the scanner you want to update.
 
 Use the following syntax: **AIPScannerUL_<cluster_name>.** 
+
+Using either this parameter or the **Profile** parameter is mandatory. Starting in version 2.7.0.0 of the unified labeling client, we recommend using this parameter instead of the **Profile** parameter.
+
 
 ```yaml 
 Type: String 
@@ -106,15 +103,11 @@ Accept wildcard characters: False
 ```
 
 ### -Profile
-> [!NOTE]
-> For the unified labeling client, using either this parameter or the **Cluster** parameter is mandatory. 
-> 
-> Starting in version 2.7.0.0 of the unified labeling client, we recommend using the **Cluster** parameter instead of the this parameter.
->
-
 Specifies the configured name of the scanner's database, used to identify the scanner you want to update.
 
-- **Unified labeling client**: The database name for the scanner is **AIPScannerUL_\<profile_name>.** 
+- **Unified labeling client**: Using either this parameter or the **Cluster** parameter is mandatory. Starting in version 2.7.0.0 of the unified labeling client, we recommend using the **Cluster** parameter instead of the this parameter.
+
+    The database name for the scanner is **AIPScannerUL_\<profile_name>.** 
 
 - **Classic client**: This parameter is optional. 
 
