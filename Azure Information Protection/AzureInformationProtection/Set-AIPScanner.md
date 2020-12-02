@@ -34,28 +34,30 @@ The new configuration takes effects when the Azure Information Protection Scanne
 
 ## EXAMPLES
 
-### Example 1: Change the database and profile for the Azure Information Protection scanner
+### Example 1: Change the database and cluster for the Azure Information Protection scanner
 ```
-PS C:\> Set-AIPScanner -SqlServerInstance SERVER1\AIPSCANNER -Profile EU
+PS C:\> Set-AIPScanner -SqlServerInstance SERVER1\AIPSCANNER -Cluster EU
 
 Azure Information Protection Scanner service configuration change completed successfully.
 ```
 
-This command configures the Azure Information Protection scanner to use the SQL Server database instance named AIPSCANNER on the server named SERVER1, using the scanner configuration database named AIPScanner_EU.
+This command configures the Azure Information Protection scanner to use the SQL Server database instance named **AIPSCANNER** on the server named **SERVER1,** using the scanner configuration database named **AIPScanner_EU.**
 
 ## PARAMETERS
 
 ### -Cluster
+**Relevant for**: Unified labeling client only.
+
 > [!NOTE]
->  This parameter is required for the scanner from the unified labeling client. From version 2.7.0.0, we recommend using Cluster switch instead of Profile switch.
+> For the unified labeling client, using either this parameter or the **Profile** parameter is mandatory. 
+> 
+> Starting in version 2.7.0.0 of the unified labeling client, we recommend using this parameter instead of the **Profile** parameter.
+>
 
-Specifies the scanner database name for configuration.
+Specifies the configured name of the scanner's database, used to identify the scanner you want to set details for.
 
-- For the Azure Information Protection client (classic), this parameter is optional and if not specified, the default database name for the scanner is AIPScanner_<computer_name>. When you specify a cluster name with this parameter, the database name for the scanner is AIPScanner_<cluster_name>.
+Use the following syntax: **AIPScannerUL_<cluster_name>.** 
 
-- For the Azure Information Protection unified labeling client, this parameter is not optional and you must specify a cluster name. The database name for the scanner is AIPScannerUL_<cluster_name>.
-
-If the database doesn't exist when the scanner is installed, the **Install-AIPScanner** command creates it.
 
 ```yaml
 Type: String
@@ -83,6 +85,24 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -Profile
+> [!NOTE]
+> For the unified labeling client, using either this parameter or the **Cluster** parameter is mandatory. 
+> 
+> Starting in version 2.7.0.0 of the unified labeling client, we recommend using the **Cluster** parameter instead of the this parameter.
+>
+
+Specifies the configured name of the scanner's database, used to identify the scanner you want to set details for.
+
+- **Unified labeling client**: The database name for the scanner is **AIPScannerUL_\<profile_name>.** 
+
+- **Classic client**: This parameter is optional. 
+
+    - If it's not specified, the default database name is used, which is **AIPScanner_\<computer_name>.** 
+
+    - When you specify a profile name with this parameter, the database name for the scanner has the following syntax: **AIPScanner_\<profile_name>.**
+
 
 ### -ServiceUserCredentials
 Specifies the account credentials used to run the Azure Information Protection service. 

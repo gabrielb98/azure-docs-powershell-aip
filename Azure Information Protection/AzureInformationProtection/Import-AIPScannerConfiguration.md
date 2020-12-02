@@ -27,7 +27,7 @@ Use this cmdlet after you've configured the following in the Azure portal:
 - Configured a content scan job for the scanner
 - Exported the settings to a file instead of having the scanner connect to the Azure Information Protection service.
 
-For example use this cmdlet when the computer running the scanner doesn't have Internet connectivity.
+For example, use this cmdlet when the computer running the scanner doesn't have Internet connectivity.
 
 If you need to make configuration changes to the scanner after you have run this cmdlet, make those changes in the Azure portal, export the content scan job again, and rerun this cmdlet.
 
@@ -51,7 +51,7 @@ Configuration was imported successfully.
 
 ```
 
-The scanner is configured to prevent getting its configuration directly from the Azure Information Protection service, and the configuration settings are imported from a file named C:\Scannerconfig\Eu-set.json.
+The scanner is configured to prevent getting its configuration directly from the Azure Information Protection service, and the configuration settings are imported from a file named **C:\Scannerconfig\Eu-set.json.**
 
 ## PARAMETERS
 
@@ -75,6 +75,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+
 For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS

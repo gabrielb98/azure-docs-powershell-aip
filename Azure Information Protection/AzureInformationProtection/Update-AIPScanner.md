@@ -49,12 +49,14 @@ If you are upgrading from versions before 1.48.204.0, after the upgrade, the sca
 
 ## EXAMPLES
 
-### Example 1: Update the scanner after the Azure Information Protection classic client has been upgraded, and set a scanner cluster (profile) name
+### Example 1: Update the scanner after the Azure Information Protection classic client has been upgraded, and set a scanner cluster  name
 ```
-PS C:\> Update-AIPScanner –profile USWEST
+PS C:\> Update-AIPScanner –cluster USWEST
 ```
 
-This command updates the database schema for the Azure Information Protection scanner, and sets the cluster (profile) name to USWEST rather than use the default name of the computer. You are prompted to continue and if you confirm, the scanner then gets is configuration from the USWEST scanner cluster (profile) that you configure by using the Azure portal.
+This command updates the database schema for the Azure Information Protection scanner, and sets the cluster name to **USWEST** rather than use the default name of the computer. 
+
+You are prompted to continue and if you confirm, the scanner then gets is configuration from the USWEST scanner cluster that you configure by using the Azure portal.
 
 The Azure Information Protection scanner is updated successfully, the scanner database is renamed to AIPScanner_USWEST, and the scanner now gets its configuration from the Azure Information Protection service. 
 
@@ -63,14 +65,19 @@ For reference purposes, a backup of your old configuration is stored in %localap
 
 ## PARAMETERS
 
+
 ### -Cluster
+**Relevant for**: Unified labeling client only.
 
 > [!NOTE]
->  This parameter is required for the scanner from the unified labeling client. From version 2.7.0.0, we recommend using Cluster switch instead of Profile switch.
+> For the unified labeling client, using either this parameter or the **Profile** parameter is mandatory. 
+> 
+> Starting in version 2.7.0.0 of the unified labeling client, we recommend using this parameter instead of the **Profile** parameter.
+>
 
-Specifies the scanner cluster (profile) name that contains the scanner configuration of the Azure Information Protection service. The scanner configuration database is updated to reflect the cluster (profile) name that you specify. 
+Specifies the configured name of the scanner's database, used to identify the scanner you want to update.
 
-If you do not specify this parameter for the Azure Information Protection client (classic), the computer name is used as the cluster (profile) name.
+Use the following syntax: **AIPScannerUL_<cluster_name>.** 
 
 ```yaml 
 Type: String 
@@ -97,10 +104,24 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-### -Profile 
-Note: This parameter is required for the scanner from the unified labeling client. From version 2.7.0.0, we recommend using Cluster switch instead of Profile switch.
 
-Specifies the scanner profile name that contains the scanner configuration from the Azure Information Protection service. The scanner configuration database is updated to reflect the profile name that you specify. If you do not specify this parameter for the Azure Information Protection classic client, the computer name is used as the profile name. 
+### -Profile
+> [!NOTE]
+> For the unified labeling client, using either this parameter or the **Cluster** parameter is mandatory. 
+> 
+> Starting in version 2.7.0.0 of the unified labeling client, we recommend using the **Cluster** parameter instead of the this parameter.
+>
+
+Specifies the configured name of the scanner's database, used to identify the scanner you want to update.
+
+- **Unified labeling client**: The database name for the scanner is **AIPScannerUL_\<profile_name>.** 
+
+- **Classic client**: This parameter is optional. 
+
+    - If it's not specified, the default database is used, which is **AIPScanner_\<computer_name>.** 
+
+    - When you specify a profile name with this parameter, the database name for the scanner has the following syntax: **AIPScanner_\<profile_name>.**
+
 
 ```yaml 
 Type: String 
@@ -110,8 +131,9 @@ Required: False
 Position: Named 
 Default value: None 
 Accept pipeline input: False 
-Accept wildcard characters: False
+Accept wildcard characters: False 
 ```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
