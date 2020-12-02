@@ -33,8 +33,8 @@ This command does *not* remove the following:
 
     |Client  |Instructions  |
     |---------|---------|
-    |**Unified labeling client**     |  For the AIP unified labeling client, the database name for the scanner is **AIPScannerUL_\<cluster_name(profile_name)>.**       |
-    |**Classic client**     |  For the AIP classic client, the default database name for the scanner is **AIPScanner_\<computer_name>** but when you specify a cluster name, the database name for the scanner changes to **AIPScanner_\<cluster_name(profile_name)>.**       |
+    |**Unified labeling client**     |  For the AIP unified labeling client, the database name for the scanner is **AIPScannerUL_\<cluster_name>.**       |
+    |**Classic client**     |  For the AIP classic client, the default database name for the scanner is **AIPScanner_\<computer_name>** but when you specify a profile name, the database name for the scanner changes to **AIPScanner_\<profile_name)>.**       |
     | | |
 
 

@@ -16,7 +16,7 @@ Installs the Azure Information Protection scanner.
 
 ```
 Install-AIPScanner [-ServiceUserCredentials] <PSCredential> [-StandardDomainsUserAccount <PSCredential>]
- [-ShareAdminUserAccount <PSCredential>] [-SqlServerInstance] <String> -Cluster <String> [-WhatIf] [-Confirm]
+ [-ShareAdminUserAccount <PSCredential>] [-SqlServerInstance] [-Cluster | -Profile <String>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -38,7 +38,7 @@ The command creates a Windows service named Azure Information Protection Scanner
 
 To run this command, you must have local administrator rights for the Windows Server computer, and Sysadmin rights on the instance of SQL Server that you will use for the scanner.
 
-After you have run this command, use the Azure portal to configure the settings in the scanner cluster (profile) and specify the data repositories to scan. Before you run the scanner, you must run the [Set-AIPAuthentication](./Set-AIPAuthentication.md) cmdlet one time to sign in to Azure AD for authentication and authorization. 
+After you have run this command, use the Azure portal to configure the settings in the scanner cluster and specify the data repositories to scan. Before you run the scanner, you must run the [Set-AIPAuthentication](./Set-AIPAuthentication.md) cmdlet one time to sign in to Azure AD for authentication and authorization. 
 
 For step-by-step instructions to install, configure, and use the scanner, see:
 

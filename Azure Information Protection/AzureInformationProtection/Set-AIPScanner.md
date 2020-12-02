@@ -16,7 +16,7 @@ Sets the service account and database for the Azure Information Protection scann
 
 ```
 Set-AIPScanner [[-SqlServerInstance] <String>] [-ServiceUserCredentials] <PSCredential>
- [-StandardDomainsUserAccount <PSCredential>] [-ShareAdminUserAccount <PSCredential>] -Cluster <String> [-Force] 
+ [-StandardDomainsUserAccount <PSCredential>] [-ShareAdminUserAccount <PSCredential>] [-Cluster | -Profile <String>] [-Force] 
  [<CommonParameters>]
 ```
 
