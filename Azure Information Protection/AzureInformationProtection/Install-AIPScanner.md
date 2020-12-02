@@ -52,8 +52,7 @@ For step-by-step instructions to install, configure, and use the scanner, see:
 >
 
 ## EXAMPLES
-> [!NOTE]
-> The cluster parameter is only supported in the unified labeling client, version 2.7.0.0 and above. For other versions, use the **Profile** parameter instead.
+
 ### Example 1: Install the Azure Information Protection Scanner service by using a SQL Server instance and a cluster
 ```
 PS C:\> Install-AIPScanner -SqlServerInstance SQLSERVER1\AIPSCANNER -Cluster EU
@@ -72,15 +71,20 @@ The command displays the installation progress, where the install log is located
 
 At the end of the output, you see **The transacted install has completed**.
 
+> [!NOTE]
+> The cluster parameter is only supported in the unified labeling client, version 2.7.0.0 and above. For other versions, use the **Profile** parameter instead.
 
 ### Example 2: Install the Azure Information Protection Scanner service by using the SQL Server default instance
 ```
 PS C:\> Install-AIPScanner -SqlServerInstance SQLSERVER1 -Cluster EU
 ```
 
-This command installs the Azure Information Protection Scanner service by using the SQL Server default instance that runs on the server named SQLSERVER1. As with the previous example, you are prompted for credentials, and then the command displays the progress, where the install log is located, and the creation of the new Windows Application event log.
+This command installs the Azure Information Protection Scanner service by using the SQL Server default instance that runs on the server named **SQLSERVER1.** 
 
+As with the previous example, you are prompted for credentials, and then the command displays the progress, where the install log is located, and the creation of the new Windows Application event log.
 
+> [!NOTE]
+> The cluster parameter is only supported in the unified labeling client, version 2.7.0.0 and above. For other versions, use the **Profile** parameter instead.
 ### Example 3: Install the Azure Information Protection Scanner service by using SQL Server Express
 ```
 PS C:\> Install-AIPScanner -SqlServerInstance SQLSERVER1\SQLEXPRESS -Cluster EU
@@ -90,6 +94,8 @@ This command installs the Azure Information Protection Scanner service by using 
 
 As with the previous examples, you are prompted for credentials, and then the command displays the progress, where the install log is located, and the creation of the new Windows Application event log.
 
+> [!NOTE]
+> The cluster parameter is only supported in the unified labeling client, version 2.7.0.0 and above. For other versions, use the **Profile** parameter instead.
 ## PARAMETERS
 
 ### -Cluster
