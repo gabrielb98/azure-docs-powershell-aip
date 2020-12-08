@@ -103,7 +103,7 @@ PS C:\>$documentLogs | Export-Csv 'C:\Temp\DocumentLog.csv' -NoTypeInformation
 
 The first command gets the protection information about the tracked documents for a user who has the email address of "test@contoso.com" and that user is the Rights Management issuer or Rights Management owner for the document, or the document was configured to grant access to that user. The information is saved in a variable.
 
-The second command then uses the [Export-Csv](/powershell/module/microsoft.powershell.utility/export-csv?view=powershell-4.0) cmdlet to convert the protection information into .csv format, and saves it to the C:\Temp\DocumentLog.csv file.
+The second command then uses the [Export-Csv](/powershell/module/microsoft.powershell.utility/export-csv?view=powershell-4.0) cmdlet to convert the protection information into **.csv** format, and saves it to the **C:\Temp\DocumentLog.csv** file.
 
 ## PARAMETERS
 
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContentName
-Relevant for the unified labeling client only.
+**Relevant for:** Unified labeling client only
 
 Specifies the tracked document's full name, including the file extension. 
 
@@ -161,7 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### -Owner
-Relevant for the unified labeling client only.
+**Relevant for:** Unified labeling client only
 
 Specifies the email address of the user who protected the document (the Rights Management issuer or owner).
 
@@ -194,7 +194,8 @@ Accept wildcard characters: False
 ```
 
 ### -UserEmail
-Relevant for the classic client only.
+**Relevant for:** Classic client only
+
 
 Specifies the email address of the user. The cmdlet gets the protection information for documents if that user protected documents (the Rights Management issuer) or was the Rights Management owner for documents, or protected documents were configured to grant access directly to the user. Group addresses are not supported with this cmdlet. 
 
@@ -226,7 +227,9 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. 
+
+For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
