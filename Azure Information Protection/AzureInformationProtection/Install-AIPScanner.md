@@ -99,7 +99,7 @@ As with the previous examples, you are prompted for credentials, and then the co
 ## PARAMETERS
 
 ### -Cluster
-**Relevant for**: Unified labeling client only.
+**Relevant for:** Unified labeling client only.
 
 Specifies the name of the scanner's database for the scanner configuration, using the following syntax: **AIPScannerUL_<cluster_name>**. 
 
@@ -138,13 +138,13 @@ Accept wildcard characters: False
 ### -Profile
 Specifies the name of the scanner's database for the scanner configuration.
 
-- **Unified labeling client**:  Using either this parameter or the **Cluster** parameter is mandatory. Starting in version 2.7.0.0 of the unified labeling client, we recommend using the **Cluster** parameter instead of the this parameter.
+- **Unified labeling client:**  Using either this parameter or the **Cluster** parameter is mandatory. Starting in version 2.7.0.0 of the unified labeling client, we recommend using the **Cluster** parameter instead of the this parameter.
 
     The database name for the scanner is **AIPScannerUL_\<profile_name>**. 
 
     If the database that you name doesn't exist when the scanner is installed, this command creates it.
 
-- **Classic client**: This parameter is optional. 
+- **Classic client:** This parameter is optional. 
 
     - If you don't specify it, the default database name for the scanner is **AIPScanner_\<computer_name>**. 
 

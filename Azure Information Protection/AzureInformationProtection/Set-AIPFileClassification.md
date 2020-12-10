@@ -38,7 +38,7 @@ For more information, see:
 
 - **Unified labeling client:** [Apply a sensitivity label to content automatically](/Office365/SecurityCompliance/apply_sensitivity_label_automatically)
 
-- **Classic client**: [How to configure conditions for automatic and recommended classification for Azure Information Protection](/information-protection/configure-policy-classification)
+- **Classic client:** [How to configure conditions for automatic and recommended classification for Azure Information Protection](/information-protection/configure-policy-classification)
 
     For the Azure Information Protection client, because labels support removing protection, protection can also be removed from files when you run this cmdlet.
 

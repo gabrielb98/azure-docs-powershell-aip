@@ -109,27 +109,27 @@ Accept wildcard characters: False
 ### -Rights
 Specifies a list of rights. The list contains one or more of the following:
 
-- **VIEW**: Interpreted by most applications as allowed to present the data on the screen.
+- **VIEW:** Interpreted by most applications as allowed to present the data on the screen.
 
-- **EDIT**: Interpreted by most applications as allowed to modify content in the document and save it.
+- **EDIT:** Interpreted by most applications as allowed to modify content in the document and save it.
 
-- **DOCEDIT**: Interpreted by most applications as allowed to modify the content of the document.
+- **DOCEDIT:** Interpreted by most applications as allowed to modify the content of the document.
 
-- **EXTRACT**: Interpreted by most applications as allowed to copy the content to the clipboard or otherwise extract the content in unencrypted form.
+- **EXTRACT:** Interpreted by most applications as allowed to copy the content to the clipboard or otherwise extract the content in unencrypted form.
 
-- **OBJMODEL**: Interpreted by most applications as allowed to access the document programmatically; for example, by using macros.
+- **OBJMODEL:** Interpreted by most applications as allowed to access the document programmatically; for example, by using macros.
 
-- **EXPORT**: Interpreted by most applications as allowed to save the file in unencrypted form. For example, this right allows you to save in a different file format that does not support protection.
+- **EXPORT:** Interpreted by most applications as allowed to save the file in unencrypted form. For example, this right allows you to save in a different file format that does not support protection.
 
-- **PRINT**: Interpreted by most applications as allowed to print the document.
+- **PRINT:** Interpreted by most applications as allowed to print the document.
 
-- **OWNER**: User has all rights on the document, including the ability to remove protection.
+- **OWNER:** User has all rights on the document, including the ability to remove protection.
 
-- **FORWARD**: Interpreted by most applications as allowed to forward an email message, and to add recipients to the To and Cc lines.
+- **FORWARD:** Interpreted by most applications as allowed to forward an email message, and to add recipients to the To and Cc lines.
 
-- **REPLY**: Interpreted by most applications as allowed to select reply to an email message, without allowing changes in the To or Cc lines.
+- **REPLY:** Interpreted by most applications as allowed to select reply to an email message, without allowing changes in the To or Cc lines.
 
-- **REPLYALL**: Interpreted by most applications as allowed to reply to all recipients of an email message, but does not allow the user to add recipients to the To or Cc lines.
+- **REPLYALL:** Interpreted by most applications as allowed to reply to all recipients of an email message, but does not allow the user to add recipients to the To or Cc lines.
 
 Note: For clarity, the documentation and display text from the module shows these rights as all upper-case letters. However, the values are not case-sensitive and you can specify them in lower or upper case.
 

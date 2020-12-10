@@ -11,7 +11,7 @@ Locale: en-US
 
 The following lists links to documentation for the Microsoft Azure Information Protection (AIP) cmdlets. 
 
-- **Installation**: The AzureInformationProtection module is installed with either the Azure Information Protection unified labeling or classic client. 
+- **Installation:** The AzureInformationProtection module is installed with either the Azure Information Protection unified labeling or classic client. 
 
     To check the version you have installed, run: `(Get-Module AIPService -ListAvailable).Version` If this command or any cmdlet from this module fails to run, first run **Import-Module AIPService**.
 

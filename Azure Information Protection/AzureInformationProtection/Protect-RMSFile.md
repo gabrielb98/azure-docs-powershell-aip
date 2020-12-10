@@ -155,11 +155,11 @@ By default, this self-granted end user license is saved in both the file itself 
 
 The acceptable values for this parameter:
 
-- **Disk**: An end user license for the Rights Management issuer is not generated for each file in %localappdata%\Microsoft\MSIPC.
+- **Disk:** An end user license for the Rights Management issuer is not generated for each file in %localappdata%\Microsoft\MSIPC.
 
-- **License**:  An end user license for the Rights Management issuer is not inserted in the publishing license for the file.
+- **License:**  An end user license for the Rights Management issuer is not inserted in the publishing license for the file.
 
-- **All**: No end user license for the Rights Management issuer is created and saved when a file is protected.
+- **All:** No end user license for the Rights Management issuer is created and saved when a file is protected.
 
 ```yaml
 Type: String

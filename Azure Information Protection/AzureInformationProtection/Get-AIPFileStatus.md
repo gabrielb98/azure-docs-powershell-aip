@@ -48,11 +48,11 @@ In the unified labeling client:
 
 - The *Owner* and *RMSIssuedTime* parameters are not supported and are not displayed in the output.
 
-- The *LabelingMethod* parameter displays the values of **Privileged** or **Standard** instead of **Manual** or **Automatic**:
+- The *LabelingMethod* parameter displays the values of **Privileged** or **Standard** instead of **Manual** or **Automatic:**
   
-    - **Privileged**: A label was applied by a user, either manually or a result of a labeling recommendation, and is the equivalent of **Manual** for the AIP classic client.
+    - **Privileged:** A label was applied by a user, either manually or a result of a labeling recommendation, and is the equivalent of **Manual** for the AIP classic client.
 
-    - **Standard**: A label was applied automatically, and is the equivalent of **Automatic** for the AIP classic client.
+    - **Standard:** A label was applied automatically, and is the equivalent of **Automatic** for the AIP classic client.
 
 ## EXAMPLES
 

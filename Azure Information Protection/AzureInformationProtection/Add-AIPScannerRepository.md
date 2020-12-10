@@ -66,7 +66,7 @@ This example defines a content scan job that includes all file types except for 
 ### -AllowLabelDowngrade
 Determines whether the content scan job allows for labeling downgrade actions.
 
-Relevant only when the following parameters are set to **on**:
+Relevant only when the following parameters are set to **on:**
 
 - **OverrideContentScanJob**
 - **RelabelFiles**
@@ -201,7 +201,7 @@ Accept wildcard characters: False
 ### -EnforceDefaultLabel
 Determines whether using a default label is always used when relabeling content.
 
-Relevant only when the following parameters are set to **on**:
+Relevant only when the following parameters are set to **on:**
 
 - **RelabelFiles**
 - **OverrideContentScanJob** 

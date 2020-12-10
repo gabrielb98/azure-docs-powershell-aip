@@ -65,7 +65,7 @@ This example defines a content scan job that includes all file types except for 
 ### -AllowLabelDowngrade
 Determines whether the content scan job allows for labeling downgrade actions.
 
-Relevant only when the following parameters are set to **on**:
+Relevant only when the following parameters are set to **on:**
 
 - **OverrideContentScanJob**
 - **RelabelFiles**
@@ -197,7 +197,7 @@ Accept wildcard characters: False
 ### -EnforceDefaultLabel
 Determines whether using a default label is always used when relabeling content.
 
-Relevant only when the following parameters are set to **on**:
+Relevant only when the following parameters are set to **on:**
 
 - **RelabelFiles**
 - **OverrideContentScanJob** 
@@ -347,7 +347,7 @@ Specifies the SAMAccountname (**domain\user**), UPN (**user@domain**), or SID of
 
 The owners are granted full control permissions on the file if the permissions on the file are changed by a matched DLP rule.
 
-Relevant only when the following parameters are set to **on**:
+Relevant only when the following parameters are set to **on:**
 
 - **OverrideContentScanJob**
 - **EnableDlp**

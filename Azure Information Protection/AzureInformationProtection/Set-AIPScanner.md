@@ -46,7 +46,7 @@ This command configures the Azure Information Protection scanner to use the SQL 
 ## PARAMETERS
 
 ### -Cluster
-**Relevant for**: Unified labeling client only.
+**Relevant for:** Unified labeling client only.
 
 Specifies the configured name of the scanner's database, used to identify the scanner you want to set details for.
 
@@ -85,11 +85,11 @@ Accept wildcard characters: False
 ### -Profile
 Specifies the configured name of the scanner's database, used to identify the scanner you want to set details for.
 
-- **Unified labeling client**: Using either this parameter or the **Cluster** parameter is mandatory. Starting in version 2.7.0.0 of the unified labeling client, we recommend using the **Cluster** parameter instead of the this parameter.
+- **Unified labeling client:** Using either this parameter or the **Cluster** parameter is mandatory. Starting in version 2.7.0.0 of the unified labeling client, we recommend using the **Cluster** parameter instead of the this parameter.
 
     The database name for the scanner is **AIPScannerUL_\<profile_name>**. 
 
-- **Classic client**: This parameter is optional. 
+- **Classic client:** This parameter is optional. 
 
     - If it's not specified, the default database name is used, which is **AIPScanner_\<computer_name>**. 
 

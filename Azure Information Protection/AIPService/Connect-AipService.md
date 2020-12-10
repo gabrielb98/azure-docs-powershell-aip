@@ -83,7 +83,7 @@ PS C:\> Connect-AipService -AccessToken $authResult.AccessToken
 
 ```
 
-This example shows how you could connect to Azure Information Protection by using the *AccessToken* parameter, which lets you authenticate without a prompt. This connection method requires you to specify the client ID **90f610bf-206d-4950-b61d-37fa6fd1b224** and the resource ID **https://api.aadrm.com/**. After the connection is open, you can then run the administrative commands from this module that you need.
+This example shows how you could connect to Azure Information Protection by using the *AccessToken* parameter, which lets you authenticate without a prompt. This connection method requires you to specify the client ID *90f610bf-206d-4950-b61d-37fa6fd1b224* and the resource ID `*https://api.aadrm.com/*`. After the connection is open, you can then run the administrative commands from this module that you need.
 
 After you confirm that these commands result in successfully connecting to Azure Information Protection, you could run them non-interactively, for example, from a script.
 
@@ -132,9 +132,9 @@ Accept wildcard characters: False
 ### -EnvironmentName
 Specifies the Azure instance for sovereign clouds. Valid values are:
 
-- **AzureCloud**: Commercial offering of Azure
-- **AzureChinaCloud**: Azure Operated by 21Vianet
-- **AzureUSGovernment**: Azure Government 
+- **AzureCloud:** Commercial offering of Azure
+- **AzureChinaCloud:** Azure Operated by 21Vianet
+- **AzureUSGovernment:** Azure Government 
 
 For more information about using Azure Information Protection with Azure Government, see [Azure Information Protection Premium Government Service Description](/enterprise-mobility-security/solutions/ems-aip-premium-govt-service-description).
 

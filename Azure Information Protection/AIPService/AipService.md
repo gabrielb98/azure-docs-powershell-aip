@@ -94,8 +94,6 @@ Enables the super user feature for Azure Information Protection.
 ### [Export-AipServiceTemplate](Export-AipServiceTemplate.md)
 Exports the properties of a protection template from Azure Information Protection to a file.
 
-If you have the unified labeling client, we recommend using the 
-
 ### [Get-AipService](Get-AipService.md)
 Gets the activation status of the protection service from Azure Information Protection.
 
