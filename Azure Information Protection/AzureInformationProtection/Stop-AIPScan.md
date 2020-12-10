@@ -33,7 +33,7 @@ When the new scan starts, it does not continue from the previous scan state, alt
 ## EXAMPLES
 
 ### Example 1: Stop the currently running scan cycle
-```PowerShell
+```powershell
 PS C:\> Stop-AIPScan
 ```
 

@@ -27,7 +27,7 @@ The **New-RMSProtectionLicense** cmdlet creates an ad-hoc rights policy that you
 Create an ad-hoc rights policy (also known as a publishing license) when you cannot use a previously created rights policy template.
 
 > [!NOTE]
-> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021.** 
+> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. 
 > 
 > This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
@@ -62,7 +62,7 @@ C:\Test.txt           C:\Test.ptxt
 
 The first command creates an ad-hoc rights policy that sets user1@contoso.com as the owner and grants user2@contoso.com and user3@contoso.com VIEW and PRINT rights, and stores this policy in a variable named License.
 
-The second command then uses the created ad-hoc policy to protect the file **C:\Test.txt.**
+The second command then uses the created ad-hoc policy to protect the file **C:\Test.txt**.
 
 ## PARAMETERS
 

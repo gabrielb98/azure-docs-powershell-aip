@@ -28,11 +28,11 @@ The scanner's Network Discovery service must be started before you can run this 
 ## EXAMPLES
 
 ### Example 1
-```PowerShell
+```powershell
 PS C:\> 
 Start-MIPNetworkDiscovery -JobId f7715158-dc9e-40d5-b78e-9c93a8c30577
 ```
-This example runs the network scan job with a job GUID of **f7715158-dc9e-40d5-b78e-9c93a8c30577.** 
+This example runs the network scan job with a job GUID of **f7715158-dc9e-40d5-b78e-9c93a8c30577**. 
 
 ## PARAMETERS
 

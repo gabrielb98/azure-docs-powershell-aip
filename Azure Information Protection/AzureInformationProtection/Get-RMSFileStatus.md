@@ -36,7 +36,7 @@ FileName             Status
 C:\Test.docx         Unprotected
 ```
 
-This command lists the Rights Management protection status for the specified file **C:\Test.docx.**
+This command lists the Rights Management protection status for the specified file **C:\Test.docx**.
 
 Because a file with a **.docx file** name extension supports native protection, the status returns "Protected (Native)" or "Unprotected".
 

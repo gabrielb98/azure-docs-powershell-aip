@@ -26,7 +26,7 @@ Use the *OnBehalfOf* parameter if you need to export log files from a service ac
 ## EXAMPLES
 
 ### Example 1
-```PowerShell
+```powershell
 PS C:\> Export-AIPLogs -FileName C:\Logs\AIPLogs.zip
 ```
 

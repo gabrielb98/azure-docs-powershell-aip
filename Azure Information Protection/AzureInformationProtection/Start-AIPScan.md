@@ -26,19 +26,19 @@ To configure the schedule, use the [Azure portal to configure the scanner](/azur
 By default, all files are scanned the first time the scanner runs and then, unless the Azure Information Protection policy is changed, only new or changed files are scanned. However, you can change this behavior when you use the *-Reset* parameter with this cmdlet, which forces the scanner to scan all files.
   
 > [!NOTE]
-> If the scanner schedule is set to **Always,** this cmdlet is ignored.
+> If the scanner schedule is set to **Always**, this cmdlet is ignored.
 > 
 ## EXAMPLES
 
 ### Example 1: Initiate immediate one-time scan for new and changed files
-```PowerShell
+```powershell
 PS C:\> Start-AIPScan
 ```
 
 Because this is not the first time that the scanner has run and the Azure Information Protection policy has not changed since the last scanning cycle, the scanner initiates an incremental scan for all new or changed files since the last scanning cycle.
 
 ### Example 2: Initiate immediate one time scan for all files
-```PowerShell
+```powershell
 PS C:\> Start-AIPScan -Reset
 ```
 

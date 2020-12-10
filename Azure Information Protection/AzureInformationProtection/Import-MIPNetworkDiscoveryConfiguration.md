@@ -36,7 +36,7 @@ Any changes will be used the next time the scanner runs. If you need the changes
 
 ### Example 1: Import a locally configured Azure Information Protection network scan job
 
-```PowerShell
+```powershell
 PS C:\> Import-MIPNetworkDiscoveryConfiguration -FileName "C:/configuration.json"
 
 Configuration was imported successfully.

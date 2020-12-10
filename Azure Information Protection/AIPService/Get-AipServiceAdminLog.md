@@ -37,7 +37,7 @@ This command generates a log that contains all the administrative protection com
 PS C:\>Get-AipServiceAdminLog -Path "C:\Temp\AdminLog.log" -FromTime "05/01/2015 00:00:00" -ToTime "05/31/2015 23:59:59"
 ```
 
-This command generates a log of administrative protection commands that have been run for your tenant, limited to items that fall within the specific time period by using the *FromTime* and *ToTime* parameters. In this example, the time period is all days in **May 2015,** using the US date format.
+This command generates a log of administrative protection commands that have been run for your tenant, limited to items that fall within the specific time period by using the *FromTime* and *ToTime* parameters. In this example, the time period is all days in **May 2015**, using the US date format.
 
 ### Example 3: Generate a log of commands for the last 45 days
 ```

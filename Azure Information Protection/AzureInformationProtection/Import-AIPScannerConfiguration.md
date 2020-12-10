@@ -36,7 +36,7 @@ If you want to change the scanner to use online configuration after you have run
 Any changes will be used the next time the scanner runs. If you need the changes to take effect immediately, restart the Azure Information Protection Scanner service on the Windows server computer.
 
 > [!NOTE]
-> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021.** 
+> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. 
 > 
 > This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 >
@@ -45,13 +45,13 @@ Any changes will be used the next time the scanner runs. If you need the changes
 ## EXAMPLES
 
 ### Example 1: Import local configuration settings for the Azure Information Protection scanner
-```PowerShell
+```powershell
 PS C:\> Import-AIPScannerConfiguration -FileName "C:\Scannerconfig\Eu-set.json"
 Configuration was imported successfully.
 
 ```
 
-The scanner is configured to prevent getting its configuration directly from the Azure Information Protection service, and the configuration settings are imported from a file named **C:\Scannerconfig\Eu-set.json.**
+The scanner is configured to prevent getting its configuration directly from the Azure Information Protection service, and the configuration settings are imported from a file named **C:\Scannerconfig\Eu-set.json**.
 
 ## PARAMETERS
 

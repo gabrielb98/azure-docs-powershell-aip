@@ -19,7 +19,7 @@ Set-AipServiceMaxUseLicenseValidityTime [-MaxUseLicenseValidityTime] <UInt16> [-
 ```
 
 ## DESCRIPTION
-The **Set-AipServiceMaxUseLicenseValidityTime** cmdlet sets the maximum validity time for use licenses that Azure Information Protection grants for your organization when it protects files and email messages. The default value is **30 days.**
+The **Set-AipServiceMaxUseLicenseValidityTime** cmdlet sets the maximum validity time for use licenses that Azure Information Protection grants for your organization when it protects files and email messages. The default value is **30 days**.
 
 You must use PowerShell to set this configuration at the organization level; you cannot do this configuration by using a management portal.
 

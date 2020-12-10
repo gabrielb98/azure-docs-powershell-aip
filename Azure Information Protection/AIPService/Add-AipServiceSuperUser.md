@@ -48,7 +48,7 @@ This command adds an individual user to your organization's super user list for 
 PS C:\>Add-AipServiceSuperUser -ServicePrincipalId "3C367900-44D1-4865-9379-9A3227042C25"
 ```
 
-This command adds a service principal to your organization's super user list for Azure Information Protection, by specifying the service principal's **AppPrincipalId.**
+This command adds a service principal to your organization's super user list for Azure Information Protection, by specifying the service principal's **AppPrincipalId**.
 
 ## PARAMETERS
 

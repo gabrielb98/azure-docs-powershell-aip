@@ -33,7 +33,7 @@ Diagnostic checks include whether:
 ## EXAMPLES
 
 ### Starts the diagnostic tool for a locally installed AIP scanner
-```PowerShell
+```powershell
 PS C:\> $scanner_account_creds= Get-Credential
 PS C:\> Start-AIPScannerDiagnostics -onbehalf $scanner_account_creds
 ```

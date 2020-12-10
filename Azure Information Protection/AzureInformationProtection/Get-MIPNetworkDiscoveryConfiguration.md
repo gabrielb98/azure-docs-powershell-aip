@@ -31,7 +31,7 @@ The **Get-MIPNetworkDiscoveryConfiguration** cmdlet displays only the settings a
 ## EXAMPLES
 
 ### Example 1
-```PowerShell
+```powershell
 PS C:\> Get-MIPNetworkDiscoveryConfiguration
 
 OnlineConfiguration      : On

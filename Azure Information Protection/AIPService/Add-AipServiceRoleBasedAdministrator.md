@@ -50,7 +50,7 @@ Note that these administrative roles are separate from the Azure Active Director
 PS C:\>Add-AipServiceRoleBasedAdministrator -SecurityGroupDisplayName "Finance Employees"
 ```
 
-This command grants administrative rights to the protection service for the group that has a display name of **Finance Employees.**
+This command grants administrative rights to the protection service for the group that has a display name of **Finance Employees**.
 
 ### Example 2: Grant administrative rights by using a GUID
 ```
@@ -100,7 +100,7 @@ To specify these roles, use the following values:
 
 - **ConnectorAdministrator**
 
-The default value is **GlobalAdministrator.**
+The default value is **GlobalAdministrator**.
 
 ```yaml
 Type: Role

@@ -56,9 +56,9 @@ PS C:\> Import-AipServiceTpd -TpdFile "C:\no_key_tpd.xml" -ProtectionPassword $P
 
 The first command creates a password as a secure string, and then stores the secure string in the **$Password** variable.
 
-The second command imports a TPD to be used with a key that is stored in Azure Key Vault. Additionally, the command changes the friendly name of the key to **"Contoso BYOK key".**
+The second command imports a TPD to be used with a key that is stored in Azure Key Vault. Additionally, the command changes the friendly name of the key to **"Contoso BYOK key"**.
 
-Our example uses the key vault name of **contoso-byok-kv,** the key name of **contosoaipservice-byok,** and the version number of **aaaabbbbcccc111122223333.**
+Our example uses the key vault name of **contoso-byok-kv**, the key name of **contosoaipservice-byok**, and the version number of **aaaabbbbcccc111122223333**.
 
 ## PARAMETERS
 

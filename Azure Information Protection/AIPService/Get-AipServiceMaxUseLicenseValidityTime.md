@@ -18,7 +18,7 @@ Get-AipServiceMaxUseLicenseValidityTime [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-AipServiceMaxUseLicenseValidityTime** cmdlet gets the maximum validity time for your tenant, in days, for Azure Rights Management use licenses from Azure Information Protection. The default value is **30 days.**
+The **Get-AipServiceMaxUseLicenseValidityTime** cmdlet gets the maximum validity time for your tenant, in days, for Azure Rights Management use licenses from Azure Information Protection. The default value is **30 days**.
 
 You must use PowerShell to view this configuration at the organization level; you cannot view this configuration by using a management portal.
 

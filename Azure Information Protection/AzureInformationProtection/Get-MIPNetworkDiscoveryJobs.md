@@ -26,7 +26,7 @@ Network Discovery network scan jobs enable Azure Information Protection administ
 ## EXAMPLES
 
 ### Example 1
-```PowerShell
+```powershell
 PS C:\> Get-MIPNetworkDiscoveryJobs
 
 JobID       : 496ca93c-ba49-497b-a527-62ffd980891ea

@@ -33,7 +33,7 @@ Possible statuses include:
 ## EXAMPLES
 
 ### Example 1: Service idle
-```PowerShell
+```powershell
 PS C:\> Get-MIPNetworkDiscoveryStatus
 
 NodeName                              Status           Jobs
@@ -47,7 +47,7 @@ This command gets the current status of the Network Discovery service.
 The output shows that the Network Discovery scanner service is running, but not currently scanning. 
 
 ### Example 1: Service scanning
-```PowerShell
+```powershell
 PS C:\> Get-MIPNetworkDiscoveryStatus
 
 NodeName                              Status           Jobs
@@ -58,7 +58,7 @@ msanchez-3384.emea.corp.contoso.com   Scanning         39gsneaoz-d944-4fns-9b2f-
 
 This command gets the current status of the Network Discovery service.
 
-The output shows that the Network Discovery scanner service is currently running, and performing job ID **39gsneaoz-d944-4fns-9b2f-ej6g350cd74.**
+The output shows that the Network Discovery scanner service is currently running, and performing job ID **39gsneaoz-d944-4fns-9b2f-ej6g350cd74**.
 
 ## PARAMETERS
 

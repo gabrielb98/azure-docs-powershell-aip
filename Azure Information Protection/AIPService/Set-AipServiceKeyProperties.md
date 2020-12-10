@@ -41,7 +41,7 @@ For more information about the tenant key, see [Planning and implementing your A
 PS C:\> Set-AipServiceKeyProperties -Force -KeyIdentifier "c0f102b3-02cc-4816-b732-fcee73edd0e6" -Active $True
 ```
 
-This command changes the status of a tenant key object from **Archived** to **Active.** The *KeyIdentifier* parameter identifies the tenant key object to change, and this value can be found by running [Get-AipServiceKeys](./Get-AipServiceKeys.md). The tenant key object that previously had a status of **Active** is automatically set to **Archived.**
+This command changes the status of a tenant key object from **Archived** to **Active.** The *KeyIdentifier* parameter identifies the tenant key object to change, and this value can be found by running [Get-AipServiceKeys](./Get-AipServiceKeys.md). The tenant key object that previously had a status of **Active** is automatically set to **Archived**.
 
 Because the command specifies the *Force* parameter, the command does not prompt you for confirmation.
 
@@ -50,7 +50,7 @@ Because the command specifies the *Force* parameter, the command does not prompt
 ### -Active
 Sets the status of the tenant key object.
 
-This parameter can only be use with the value of **$True,** which sets the status to be **Active.** If you want to change the status of a tenant key object to **Archived,** you must set another tenant key object to **Active.**
+This parameter can only be use with the value of **$True**, which sets the status to be **Active**. If you want to change the status of a tenant key object to **Archived**, you must set another tenant key object to **Active**.
 
 ```yaml
 Type: Boolean

@@ -46,7 +46,7 @@ For step-by-step instructions to install, configure, and use the scanner, see:
 - [Classic client instructions for deploying the AIP scanner](/information-protection/deploy-aip-scanner)
 
 > [!NOTE]
-> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021.** 
+> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. 
 > 
 > This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 >
@@ -58,7 +58,7 @@ For step-by-step instructions to install, configure, and use the scanner, see:
 PS C:\> Install-AIPScanner -SqlServerInstance SQLSERVER1\AIPSCANNER -Cluster EU
 ```
 
-This command installs the Azure Information Protection Scanner service by using a SQL Server instance named **AIPSCANNER,** which runs on the server named **SQLSERVER1.** 
+This command installs the Azure Information Protection Scanner service by using a SQL Server instance named **AIPSCANNER**, which runs on the server named **SQLSERVER1**. 
 
 In addition, the installation creates one of the following database names to store the scanner configuration, unless an existing database with the same name is already found.
 
@@ -79,7 +79,7 @@ At the end of the output, you see **The transacted install has completed**.
 PS C:\> Install-AIPScanner -SqlServerInstance SQLSERVER1 -Cluster EU
 ```
 
-This command installs the Azure Information Protection Scanner service by using the SQL Server default instance that runs on the server named **SQLSERVER1.** 
+This command installs the Azure Information Protection Scanner service by using the SQL Server default instance that runs on the server named **SQLSERVER1**. 
 
 As with the previous example, you are prompted for credentials, and then the command displays the progress, where the install log is located, and the creation of the new Windows Application event log.
 
@@ -90,7 +90,7 @@ As with the previous example, you are prompted for credentials, and then the com
 PS C:\> Install-AIPScanner -SqlServerInstance SQLSERVER1\SQLEXPRESS -Cluster EU
 ```
 
-This command installs the Azure Information Protection Scanner service by using SQL Server Express that runs on the server named **SQLSERVER1.** 
+This command installs the Azure Information Protection Scanner service by using SQL Server Express that runs on the server named **SQLSERVER1**. 
 
 As with the previous examples, you are prompted for credentials, and then the command displays the progress, where the install log is located, and the creation of the new Windows Application event log.
 
@@ -101,7 +101,7 @@ As with the previous examples, you are prompted for credentials, and then the co
 ### -Cluster
 **Relevant for**: Unified labeling client only.
 
-Specifies the name of the scanner's database for the scanner configuration, using the following syntax: **AIPScannerUL_<cluster_name>.** 
+Specifies the name of the scanner's database for the scanner configuration, using the following syntax: **AIPScannerUL_<cluster_name>**. 
 
 If the database that you name doesn't exist when the scanner is installed, this command creates it.
 
@@ -140,15 +140,15 @@ Specifies the name of the scanner's database for the scanner configuration.
 
 - **Unified labeling client**:  Using either this parameter or the **Cluster** parameter is mandatory. Starting in version 2.7.0.0 of the unified labeling client, we recommend using the **Cluster** parameter instead of the this parameter.
 
-    The database name for the scanner is **AIPScannerUL_\<profile_name>.** 
+    The database name for the scanner is **AIPScannerUL_\<profile_name>**. 
 
     If the database that you name doesn't exist when the scanner is installed, this command creates it.
 
 - **Classic client**: This parameter is optional. 
 
-    - If you don't specify it, the default database name for the scanner is **AIPScanner_\<computer_name>.** 
+    - If you don't specify it, the default database name for the scanner is **AIPScanner_\<computer_name>**. 
 
-    - If you do specify it, the database name for the scanner is **AIPScanner_\<profile_name>.**
+    - If you do specify it, the database name for the scanner is **AIPScanner_\<profile_name>**.
 
 
 ```yaml 
@@ -226,11 +226,11 @@ Specifies the SQL Server instance on which to create a database for the Azure In
 
 For information about the SQL Server requirements, see [Prerequisites for the Azure Information Protection scanner](/information-protection/deploy-aip-scanner#prerequisites-for-the-azure-information-protection-scanner).
 
-- **For the default instance,** specify the server name. For example: **SQLSERVER1.** 
+- **For the default instance**, specify the server name. For example: **SQLSERVER1**. 
 
-- **For a named instance,** specify the server name and instance name. For example: **SQLSERVER1\AIPSCANNER.** 
+- **For a named instance**, specify the server name and instance name. For example: **SQLSERVER1\AIPSCANNER**. 
 
-- **For SQL Server Express,** specify the server name and **SQLEXPRESS.** For example: **SQLSERVER1\SQLEXPRESS.**
+- **For SQL Server Express**, specify the server name and **SQLEXPRESS**. For example: **SQLSERVER1\SQLEXPRESS**.
 
 
 ```yaml

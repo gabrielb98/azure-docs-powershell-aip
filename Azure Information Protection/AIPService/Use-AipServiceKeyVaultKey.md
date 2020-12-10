@@ -27,7 +27,7 @@ You can run this cmdlet before or after the protection service (Azure Rights Man
 
 Before you run this cmdlet, make sure that the Azure Rights Management service principal has been granted permissions to the key vault that contains the key you want to use for Azure Information Protection. These permissions are granted by running the Azure Key Vault cmdlet, [Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy).
 
-For security reasons, the **Use-AipServiceKeyVaultKey** cmdlet does not let you set or change the access control for the key in Azure Key Vault. After that access is granted by running **Set-AzKeyVaultAccessPolicy,** run **Use-AipServiceKeyVaultKey** to tell Azure Information Protection to use the key and version that you specify with the *KeyVaultKeyUrl* parameter.
+For security reasons, the **Use-AipServiceKeyVaultKey** cmdlet does not let you set or change the access control for the key in Azure Key Vault. After that access is granted by running **Set-AzKeyVaultAccessPolicy**, run **Use-AipServiceKeyVaultKey** to tell Azure Information Protection to use the key and version that you specify with the *KeyVaultKeyUrl* parameter.
 
 > [!NOTE]
 > If you run this cmdlet before the permissions are granted to the key vault, you will see an error that displays **The Rights Management service failed to add the key**. 
@@ -49,7 +49,7 @@ For more information about Azure Key Vault, see [What is Azure Key Vault](/azure
 PS C:\>Use-AipServiceKeyVaultKey -KeyVaultKeyUrl "https://contoso.vault.azure.net/keys/contoso-aipservice-key/aaaabbbbcccc111122223333"
 ```
 
-This command tells Azure Information Protection to use the key named **contoso-aipservice-key,** version **aaaabbbbcccc111122223333,** in the key vault named **contoso.**
+This command tells Azure Information Protection to use the key named **contoso-aipservice-key**, version **aaaabbbbcccc111122223333**, in the key vault named **contoso**.
 
 This key and version in Azure Key Vault then becomes the customer-managed tenant key for Azure Information Protection.
 

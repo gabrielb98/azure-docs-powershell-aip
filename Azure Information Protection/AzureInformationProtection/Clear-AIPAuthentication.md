@@ -22,9 +22,9 @@ Clear-AIPAuthentication [<CommonParameters>]
 ## DESCRIPTION
 The Clear-AIPAuthentication cmdlet resets the user settings for the Azure Rights Management service. 
 
-- **For the unified labeling client,** files in **%LocalAppData%\Microsoft\MSIP\AppDetails** are not deleted if you authenticate by using a token from Azure AD when you run Set-AIPAuthentication.
+- **For the unified labeling client**, files in **%LocalAppData%\Microsoft\MSIP\AppDetails** are not deleted if you authenticate by using a token from Azure AD when you run Set-AIPAuthentication.
 
-- **For both clients,** all Rights Management templates from the **%LocalAppData%\Microsoft\MSIPC\msip** folder are deleted for the current user. 
+- **For both clients**, all Rights Management templates from the **%LocalAppData%\Microsoft\MSIPC\msip** folder are deleted for the current user. 
 
 - Rights Management templates are not deleted from the **%LocalAppData\Microsoft\MSIPC** folder that Office uses.
 
@@ -35,7 +35,7 @@ For a list of files and registry entries that are deleted, see the the details a
 - **[Classic client](/information-protection/rms-client/client-admin-guide#more-information-about-the-reset-settings-option)**
 
 > [!NOTE]
-> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021.** 
+> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. 
 > 
 > This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 >

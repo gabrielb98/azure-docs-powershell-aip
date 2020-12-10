@@ -43,11 +43,11 @@ PS C:\> $publicaccount= Get-Credential -UserName domain\publicuser -Message Publ
 PS C:\> Install-MIPNetworkDiscovery -SqlServerInstance SQLSERVER1\AIPSCANNER -Cluster EU -ServiceUserCredentials $serviceacct  -ShareAdminUserAccount $shareadminacct -StandardDomainsUserAccount $publicaccount 
 ```
 
-This command installs the Network Discovery service by using a SQL Server instance named **AIPSCANNER,** which runs on the server named **SQLSERVER1.** 
+This command installs the Network Discovery service by using a SQL Server instance named **AIPSCANNER**, which runs on the server named **SQLSERVER1**. 
 
 - You are prompted to provide the Active Directory account details for the scanner service account. 
 - If an existing database named **AIPScannerUL_EU** isn't found on the specified SQL Server instance, a new database with this name is created to store the scanner configuration. 
-- The command displays the installation progress, where the install log is located, and the creation of the new Windows Application event log, named **Azure Information Protection Scanner.**
+- The command displays the installation progress, where the install log is located, and the creation of the new Windows Application event log, named **Azure Information Protection Scanner**.
 - At the end of the output, you see **The transacted install has completed**.
 
 **Accounts used in this example**
@@ -70,7 +70,7 @@ PS C:\> Install-MIPNetworkDiscovery -SqlServerInstance SQLSERVER1 -Cluster EU -S
 
 ```
 
-This command installs the Network Discovery service by using the SQL Server default instance that runs on the server, named **SQLSERVER1.** 
+This command installs the Network Discovery service by using the SQL Server default instance that runs on the server, named **SQLSERVER1**. 
 
 As with the previous example, you are prompted for credentials, and then the command displays the progress, where the install log is located, and the creation of the new Windows Application event log.
 
@@ -83,7 +83,7 @@ PS C:\> Install-MIPNetworkDiscovery -SqlServerInstance SQLSERVER1\SQLEXPRESS -Cl
  
 ```
 
-This command installs the Network Discovery service by using SQL Server Express that runs on the server named **SQLSERVER1.** 
+This command installs the Network Discovery service by using SQL Server Express that runs on the server named **SQLSERVER1**. 
 
 As with the previous examples, you are prompted for credentials, and then the command displays the progress, where the install log is located, and the creation of the new Windows Application event log.
 

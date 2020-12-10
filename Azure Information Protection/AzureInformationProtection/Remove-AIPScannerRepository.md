@@ -28,35 +28,35 @@ For more information about content scan jobs, see the [Azure Information Protect
 > [!NOTE]
 > If you are using the AIP classic client, this cmdlet is deprecated. Instead, use the [Azure portal to configure the scanner](/information-protection/deploy-aip-scanner-classic).
 > 
-> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021.** 
+> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. 
 > 
 > This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 >
 ## EXAMPLES
 
 ### Example 1 Remove all repositories configured for your content scan job
-```PowerShell
+```powershell
 PS C:\WINDOWS\system32> Get-AIPScannerRepository | Remove-AIPScannerRepository
 ```
 
 This example shows a fully piped cmdlet, where the repositories are first returned, and then deleted.
 
 ### Example 2 Remove a specific repository from your content scan job
-```PowerShell
+```powershell
 PS C:\WINDOWS\system32> Get-AIPScannerRepository -Path 'c:\repoToScan1' | Remove-AIPScannerRepository
 ```
 
 This example shows a fully piped cmdlet, where the repository is first returned, and then deleted.
 
 ### Example 3 Remove any repositories that match a specific wildcard pattern from your content scan job
-```PowerShell
+```powershell
 PS C:\WINDOWS\system32> Get-AIPScannerRepository -Path 'c:\repo*' | Remove-AIPScannerRepository
 ```
 
 This example shows a fully piped cmdlet, where the repositories are first returned, and then deleted.
 
 ### Example 4 Remove a specific repository from your content scan job without piping
-```PowerShell
+```powershell
 PS C:\WINDOWS\system32> $repos = Get-AIPScannerRepository -Path 'c:\repoToScan1'
 PS C:\WINDOWS\system32> Remove-AIPScannerRepository $repos
 ```

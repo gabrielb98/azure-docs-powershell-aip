@@ -31,14 +31,14 @@ For more information about content scan jobs, see the [Azure Information Protect
 > [!NOTE]
 > If you are using the AIP classic client, this cmdlet is deprecated. Instead, use the [Azure portal to configure the scanner](/information-protection/deploy-aip-scanner-classic).
 > 
-> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021.** 
+> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. 
 > 
 > This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 >
 ## EXAMPLES
 
 ### Example 1 Update the repository details using the configured content scan job settings
-```PowerShell
+```powershell
 PS C:\WINDOWS\system32> Set-AIPScannerRepository -OverrideContentScanJob Off -Path 'c:\repoToScan'
 ```
 
@@ -46,7 +46,7 @@ This example sets the **repoToScan** repository settings in your content scan jo
 
 ### Example 2 Update the repository details, overriding the content scan job's current settings
 
-```PowerShell
+```powershell
 PS C:\WINDOWS\system32> Set-AIPScannerRepository -Path 'c:\repoToScan' -OverrideContentScanJob On -Enforce On -DefaultOwner 'ms@gmail.com'
 ```
 
@@ -54,7 +54,7 @@ This example sets the **repoToScan** repository settings to override the current
 
 ### Example 3 Update the repository details, excluding .msg and .tmp files
 
-```PowerShell
+```powershell
 PS C:\WINDOWS\system32> Set-AIPScannerRepository -OverrideContentScanJob On -Path 'c:\repoToScan' -IncludeFileTypes '' -ExcludeFileTypes '.msg,.tmp' 
 ```
 

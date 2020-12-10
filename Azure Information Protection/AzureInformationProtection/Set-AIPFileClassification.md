@@ -61,7 +61,7 @@ When you run this cmdlet with the Azure Information Protection unified labeling 
 - The *WhatIf* parameter is supported. You can use the **WhatIf** mode with *DiscoveryInfoTypes* to find known sensitive information types.
 
 > [!NOTE]
-> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021.** 
+> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. 
 > 
 > This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
@@ -168,7 +168,7 @@ SubLabelName  :
 SubLabelId    :
 ```
 
-This command is similar to the previous example in that it also scans all files in the Projects folder and any of its subfolders, and sets labels according to the configured conditions for auto labeling. However, this time, because the command includes the *-Force* parameter, it also replaces the existing label for **Dashboard.xlsx,** and **Pricelist.xlsx.** 
+This command is similar to the previous example in that it also scans all files in the Projects folder and any of its subfolders, and sets labels according to the configured conditions for auto labeling. However, this time, because the command includes the *-Force* parameter, it also replaces the existing label for **Dashboard.xlsx**, and **Pricelist.xlsx**. 
 
 The contents of **Datasheet.pdf** did not match any configured conditions and this file remains without a label.
 
@@ -358,7 +358,7 @@ SubLabelName  :
 SubLabelId    :
 ```
 
-This command is similar to the previous example in that it also scans all files in the Projects folder and any of its subfolders, and sets labels according to the configured conditions in the Azure Information Protection policy. However, this time, because the command includes the *-Force* parameter, it also replaces the existing label for **Dashboard.xlsx,** and **Pricelist.xlsx.** 
+This command is similar to the previous example in that it also scans all files in the Projects folder and any of its subfolders, and sets labels according to the configured conditions in the Azure Information Protection policy. However, this time, because the command includes the *-Force* parameter, it also replaces the existing label for **Dashboard.xlsx**, and **Pricelist.xlsx**. 
 
 The contents of **Datasheet.pdf** did not match any configured conditions and this file remains without a label.
 

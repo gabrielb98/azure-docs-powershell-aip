@@ -49,7 +49,7 @@ For more information, see [Create and publish sensitivity labels](/microsoft-365
 PS C:\>Set-AipServiceTemplateProperty -TemplateID 28168524-29c3-44f1-9e11-ea6c60bb6428 -Status Published
 ```
 
-This command sets a template status to **Published.**
+This command sets a template status to **Published**.
 
 ### Example 2: Specify users and rights for a protection template
 ```
@@ -81,7 +81,7 @@ The new users and their rights are **pattiful.contoso.com** (a user within the o
 ### -ContentExpirationDate
 Specifies the date on which content protected with the template expires. 
 
-Use this parameter only if *ContentExpirationOption* is set to **OnDate.**
+Use this parameter only if *ContentExpirationOption* is set to **OnDate**.
 
 ```yaml
 Type: DateTime
@@ -119,7 +119,7 @@ Accept wildcard characters: False
 ### -ContentValidityDuration
 Specifies the number of days from the first day of protection after which content protected with the template expires.
 
-Use this parameter only if the *ContentExpirationOption* parameter is set to **AfterDays.**
+Use this parameter only if the *ContentExpirationOption* parameter is set to **AfterDays**.
 
 ```yaml
 Type: Int32
@@ -163,7 +163,7 @@ Departmental templates can be created by using the *ScopedIdentities* parameter,
 
 - If set to **True** and the template is a departmental template, all users will see the template and therefore be able to select it, regardless of whether the users are members of the template's scope or not.
 
-- If set to **False,** no users see and therefore cannot select the template, even if the users are members of the template's target scope.
+- If set to **False**, no users see and therefore cannot select the template, even if the users are members of the template's target scope.
 
 This setting has no effect on templates that are not departmental templates and also has no effect on client applications that natively support departmental templates. This setting also has no effect for Outlook on the web that uses Exchange Online rather than Exchange on-premises and for this scenario, departmental templates are never displayed to users.
 
@@ -171,7 +171,7 @@ Note that this setting does not affect whether a user can access content that is
 
 If you have a client application that does not natively support departmental templates, such as Office 2010, you can use a custom script other tools to deploy these templates to the local RMS client folder. Then, these applications will correctly display the departmental templates:
 
-- For Office 2010, the client folder is **%localappdata%\Microsoft\DRM\Templates.**
+- For Office 2010, the client folder is **%localappdata%\Microsoft\DRM\Templates**.
 - From a client computer that has downloaded all the templates, you can copy and then paste the template files to other computers.
 
 ```yaml
@@ -187,15 +187,15 @@ Accept wildcard characters: False
 ```
 
 ### -LicenseValidityDuration
-Specifies the validity period of use licenses for content that is protected with this template. The value is specified as the number of days that content is available offline after a use license is acquired **(0-9999).** During this period users can re-open content they previously accessed without requiring an Internet network connection.
+Specifies the validity period of use licenses for content that is protected with this template. The value is specified as the number of days that content is available offline after a use license is acquired **(0-9999)**. During this period users can re-open content they previously accessed without requiring an Internet network connection.
 
 Reducing this value gives more control to document owners by helping ensure that content that has been revoked or for which the policy has changed cannot be accessed for too long after these changes.
 
 Increasing this value gives more freedom to users to access the content without requiring an Internet network connection.
 
-To specify unlimited access, use **-1.**
+To specify unlimited access, use **-1**.
 
-To specify that a use license must be obtained each time the protected content is accessed and that content is available only with an Internet connection, specify **0.**
+To specify that a use license must be obtained each time the protected content is accessed and that content is available only with an Internet connection, specify **0**.
 
 Each organization has a maximum use license validity time, which is **30 days** by default and can be configured by using the [Set-AipServiceMaxUseLicenseValidityTime](./Set-AipServiceMaxUseLicenseValidityTime.md). The value that you specify for the *LicenseValidityDuration* parameter must be lower than that value.
 
@@ -258,7 +258,7 @@ Accept wildcard characters: False
 ### -ScopedIdentities
 Lists the users by email address (account or group) that can see and therefore select departmental templates from applications.
 
-For the specified users to see the templates, the application must support departmental templates or the *EnableInLegacyApps* parameter must be set to **True.**
+For the specified users to see the templates, the application must support departmental templates or the *EnableInLegacyApps* parameter must be set to **True**.
 
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]

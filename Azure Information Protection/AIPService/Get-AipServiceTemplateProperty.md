@@ -52,7 +52,7 @@ The first command gets all the template IDs and stores them in a variable. The s
 ### -ContentExpirationDate
 Lists the date on which content protected with the template expires.
 
-Use this parameter only if *ContentExpirationOption* is set to **OnDate.**
+Use this parameter only if *ContentExpirationOption* is set to **OnDate**.
 
 ```yaml
 Type: SwitchParameter
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 ### -ContentValidityDuration
 Lists the number of days from the day of protection after which content protected with the template expires.
 
-Use this parameter only if *ContentExpirationOption* is set to **AfterDays.**
+Use this parameter only if *ContentExpirationOption* is set to **AfterDays**.
 
 ```yaml
 Type: SwitchParameter
@@ -211,7 +211,7 @@ Accept wildcard characters: False
 ### -ScopedIdentities
 Lists the users by email address (account or group) that can see and therefore select departmental templates from applications.
 
-For the specified users to see the templates, the application must support departmental templates or the *EnableInLegacyApps* parameter must be set to **True.**
+For the specified users to see the templates, the application must support departmental templates or the *EnableInLegacyApps* parameter must be set to **True**.
 
 ```yaml
 Type: SwitchParameter

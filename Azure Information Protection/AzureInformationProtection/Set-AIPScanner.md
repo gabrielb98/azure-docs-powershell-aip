@@ -28,7 +28,7 @@ Use this command when you want to change the account or database details that wa
 The new configuration takes effects when the Azure Information Protection Scanner service is next started. This cmdlet does not automatically restart this service.
 
 > [!NOTE]
-> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021.** 
+> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. 
 > 
 > This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
@@ -41,7 +41,7 @@ PS C:\> Set-AIPScanner -SqlServerInstance SERVER1\AIPSCANNER -Cluster EU
 Azure Information Protection Scanner service configuration change completed successfully.
 ```
 
-This command configures the Azure Information Protection scanner to use the SQL Server database instance named **AIPSCANNER** on the server named **SERVER1,** using the scanner configuration database named **AIPScanner_EU.**
+This command configures the Azure Information Protection scanner to use the SQL Server database instance named **AIPSCANNER** on the server named **SERVER1**, using the scanner configuration database named **AIPScanner_EU**.
 
 ## PARAMETERS
 
@@ -50,7 +50,7 @@ This command configures the Azure Information Protection scanner to use the SQL 
 
 Specifies the configured name of the scanner's database, used to identify the scanner you want to set details for.
 
-Use the following syntax: **AIPScannerUL_<cluster_name>.** 
+Use the following syntax: **AIPScannerUL_<cluster_name>**. 
 
 Using either this parameter or the **Profile** parameter is mandatory. Starting in version 2.7.0.0 of the unified labeling client, we recommend using this parameter instead of the **Profile** parameter.
 
@@ -87,13 +87,13 @@ Specifies the configured name of the scanner's database, used to identify the sc
 
 - **Unified labeling client**: Using either this parameter or the **Cluster** parameter is mandatory. Starting in version 2.7.0.0 of the unified labeling client, we recommend using the **Cluster** parameter instead of the this parameter.
 
-    The database name for the scanner is **AIPScannerUL_\<profile_name>.** 
+    The database name for the scanner is **AIPScannerUL_\<profile_name>**. 
 
 - **Classic client**: This parameter is optional. 
 
-    - If it's not specified, the default database name is used, which is **AIPScanner_\<computer_name>.** 
+    - If it's not specified, the default database name is used, which is **AIPScanner_\<computer_name>**. 
 
-    - When you specify a profile name with this parameter, the database name for the scanner has the following syntax: **AIPScanner_\<profile_name>.**
+    - When you specify a profile name with this parameter, the database name for the scanner has the following syntax: **AIPScanner_\<profile_name>**.
 
 
 ### -ServiceUserCredentials
@@ -159,11 +159,11 @@ Specifies the new SQL Server instance on which to create a database for the Azur
 
 For information about the SQL Server requirements, see [Prerequisites for the Azure Information Protection scanner](https://docs.microsoft.com/en-us/azure/information-protection/deploy-aip-scanner#prerequisites-for-the-azure-information-protection-scanner).
 
-For the default instance, specify the server name. For example: **SQLSERVER1.**
+For the default instance, specify the server name. For example: **SQLSERVER1**.
 
-For a named instance, specify the server name and instance name. For example: **SQLSERVER1\AIPSCANNER.**
+For a named instance, specify the server name and instance name. For example: **SQLSERVER1\AIPSCANNER**.
 
-For SQL Server Express, specify the server name and SQLEXPRESS. For example: **SQLSERVER1\SQLEXPRESS.**
+For SQL Server Express, specify the server name and SQLEXPRESS. For example: **SQLSERVER1\SQLEXPRESS**.
 
 ```yaml
 Type: String

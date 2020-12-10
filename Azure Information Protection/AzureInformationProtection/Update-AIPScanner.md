@@ -29,7 +29,7 @@ The current version of the unified labeling client includes a preview version of
 
 For more information, see [Installing the Azure Information Protection scanner](/azure/information-protection/rms-client/clientv2-admin-guide#installing-the-azure-information-protection-scanner.md) from the admin guide for the unified labeling client.
     
-Run this cmdlet with an account that has the database-level role of **db_owner** for the configuration database that the scanner is using, named **AIPScannerUL_\<cluster_name>.**
+Run this cmdlet with an account that has the database-level role of **db_owner** for the configuration database that the scanner is using, named **AIPScannerUL_\<cluster_name>**.
 
 **Classic client support**
 
@@ -37,13 +37,13 @@ For more information about upgrading the scanner for the Azure Information Prote
     
 Run this cmdlet with an account that has the database-level role of **db_owner** for the configuration database that the scanner is using:
 
-- **For version 1.41.51.0:** This database is named **AzInfoProtectionScanner.**
-- **For version 1.48.204.0:** This database is named **AIPScanner_\<profile_name>.**
+- **For version 1.41.51.0:** This database is named **AzInfoProtectionScanner**.
+- **For version 1.48.204.0:** This database is named **AIPScanner_\<profile_name>**.
     
 If you are upgrading from versions before 1.48.204.0, after the upgrade, the scanner changes how it gets its configuration settings. Instead of using PowerShell to configure the scanner locally, the scanner is now configured from the Azure Information Protection service, by using the Azure portal.
 
 > [!NOTE]
-> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021.** 
+> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. 
 > 
 > This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
@@ -58,9 +58,9 @@ This command updates the database schema for the Azure Information Protection sc
 
 You are prompted to continue and if you confirm, the scanner then gets is configuration from the **USWEST** scanner cluster that you configure by using the Azure portal.
 
-The Azure Information Protection scanner is updated successfully, the scanner database is renamed to **AIPScanner_USWEST,** and the scanner now gets its configuration from the Azure Information Protection service. 
+The Azure Information Protection scanner is updated successfully, the scanner database is renamed to **AIPScanner_USWEST**, and the scanner now gets its configuration from the Azure Information Protection service. 
 
-For reference purposes, a backup of your old configuration is stored in **%localappdata%\Microsoft\MSIP\ScannerConfiguration.bak.** 
+For reference purposes, a backup of your old configuration is stored in **%localappdata%\Microsoft\MSIP\ScannerConfiguration.bak**. 
 
 
 ## PARAMETERS
@@ -71,7 +71,7 @@ For reference purposes, a backup of your old configuration is stored in **%local
 
 Specifies the configured name of the scanner's database, used to identify the scanner you want to update.
 
-Use the following syntax: **AIPScannerUL_<cluster_name>.** 
+Use the following syntax: **AIPScannerUL_<cluster_name>**. 
 
 Using either this parameter or the **Profile** parameter is mandatory. Starting in version 2.7.0.0 of the unified labeling client, we recommend using this parameter instead of the **Profile** parameter.
 
@@ -107,13 +107,13 @@ Specifies the configured name of the scanner's database, used to identify the sc
 
 - **Unified labeling client**: Using either this parameter or the **Cluster** parameter is mandatory. Starting in version 2.7.0.0 of the unified labeling client, we recommend using the **Cluster** parameter instead of the this parameter.
 
-    The database name for the scanner is **AIPScannerUL_\<profile_name>.** 
+    The database name for the scanner is **AIPScannerUL_\<profile_name>**. 
 
 - **Classic client**: This parameter is optional. 
 
-    - If it's not specified, the default database is used, which is **AIPScanner_\<computer_name>.** 
+    - If it's not specified, the default database is used, which is **AIPScanner_\<computer_name>**. 
 
-    - When you specify a profile name with this parameter, the database name for the scanner has the following syntax: **AIPScanner_\<profile_name>.**
+    - When you specify a profile name with this parameter, the database name for the scanner has the following syntax: **AIPScanner_\<profile_name>**.
 
 
 ```yaml 

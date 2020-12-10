@@ -25,7 +25,7 @@ To run this command, you must have local Administrator rights for the Windows Se
 
 This command does *not* remove the following:
 
-- **Scanner reports**, located in **%localappdata%\Microsoft\MSIP\Scanner\Reports.**
+- **Scanner reports**, located in **%localappdata%\Microsoft\MSIP\Scanner\Reports**.
 
 - **The SQL Server database** that was created by running the [Install-AIPScanner](./Install-AIPScanner.md) cmdlet when the Azure Information Protection scanner was installed. If this database is no longer required, you must manually remove it. 
 
@@ -33,13 +33,13 @@ This command does *not* remove the following:
 
     |Client  |Instructions  |
     |---------|---------|
-    |**Unified labeling client**     |  For the AIP unified labeling client, the database name for the scanner is **AIPScannerUL_\<cluster_name>.**       |
-    |**Classic client**     |  For the AIP classic client, the default database name for the scanner is **AIPScanner_\<computer_name>** but when you specify a profile name, the database name for the scanner changes to **AIPScanner_\<profile_name)>.**       |
+    |**Unified labeling client**     |  For the AIP unified labeling client, the database name for the scanner is **AIPScannerUL_\<cluster_name>**.       |
+    |**Classic client**     |  For the AIP classic client, the default database name for the scanner is **AIPScanner_\<computer_name>** but when you specify a profile name, the database name for the scanner changes to **AIPScanner_\<profile_name)>**.       |
     | | |
 
 
 > [!NOTE]
-> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021.** 
+> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. 
 > 
 > This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 

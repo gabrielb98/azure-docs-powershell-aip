@@ -33,7 +33,7 @@ You can run this cmdlet non-interactively. For more information, see the followi
 - **[Classic client](/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection)**
 
 > [!NOTE]
-> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021.** 
+> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. 
 > 
 > This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 >
@@ -109,14 +109,14 @@ This command provides information about a file that is labeled as "Confidential 
 PS C:\> Get-AIPFileStatus -Path \\Finance\Projects\ | Export-Csv C:\Reports\AIP-status.csv
 ```
 
-This command gets the label and protection information of all files on the Finance server, in the Projects folder and any of its subfolders. The results are exported to the file named **AIP-status.csv** so that they can be more easily searched and sorted. If a previous report exists in **C:\Reports\Report.csv,** it will be overwritten.
+This command gets the label and protection information of all files on the Finance server, in the Projects folder and any of its subfolders. The results are exported to the file named **AIP-status.csv** so that they can be more easily searched and sorted. If a previous report exists in **C:\Reports\Report.csv**, it will be overwritten.
 
 ### Example 3: List the files labeled "Confidential" and export the results to a CSV file
 ```
 PS C:\> Get-AIPFileStatus -Path \\Finance\Projects\ | Where-Object {$_.MainLabelName -eq 'Confidential'} | Export-Csv C:\Reports\AIP-status.csv
 ```
 
-This command gets the label and protection information for just the files that are labeled "Confidential" (regardless of their sublabel) on the Finance server, in the Projects folder and any of its subfolders. The results are exported to the file named **AIP-status.csv** so that they can be more easily searched and sorted. If a previous report exists in **C:\Reports\Report.csv,** it will be overwritten.
+This command gets the label and protection information for just the files that are labeled "Confidential" (regardless of their sublabel) on the Finance server, in the Projects folder and any of its subfolders. The results are exported to the file named **AIP-status.csv** so that they can be more easily searched and sorted. If a previous report exists in **C:\Reports\Report.csv**, it will be overwritten.
 
 ### Example 4: Count of files with a "Confidential" label
 ```

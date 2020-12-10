@@ -16,9 +16,9 @@ ms.author: bagol
 
 Use the following PowerShell modules with Azure Information Protection: 
 
-- **[AIPService](#aipservice).** Used to administer Azure Information Protection's Azure Rights Management protection service, and replaces the deprecated [AADRM](#aadrm) module.
+- **[AIPService](#aipservice)**. Used to administer Azure Information Protection's Azure Rights Management protection service, and replaces the deprecated [AADRM](#aadrm) module.
 
-- **[AzureInformationProtection](#azureinformationprotection).** Used to support Azure Information Protection client functionality.
+- **[AzureInformationProtection](#azureinformationprotection)**. Used to support Azure Information Protection client functionality.
 
 ## AIPService
     
@@ -48,7 +48,7 @@ For more information, see:
     - [Install the AIP classic client for users](/information-protection/rms-client/client-admin-guide-install)
 
     > [!NOTE]
-    > To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021.** 
+    > To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. 
     > 
     > This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 

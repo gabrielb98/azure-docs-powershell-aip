@@ -69,7 +69,7 @@ For the AIP classic client, the **Set-AIPFileLabel** cmdlet sets or removes an A
 > 
 
 > [!NOTE]
-> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021.** 
+> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. 
 > 
 > This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
@@ -109,7 +109,7 @@ C:\Projects\Projects.docx  Success
 This command first identifies all **.docx** files in the **C:\Projects** folder (and its subfolders) by using [Get-Child-Item](/powershell/module/microsoft.powershell.management/get-childitem?view=powershell-7), then finds from these files the ones that are not labeled by using the **Get-AIPFileStatus** cmdlet. The resulting files are then labeled by specifying the "General" label by its ID.
 
 > [!NOTE]
-> This command makes use of the **Path** alias of FullName, so that [Get-Child-Item](/powershell/module/microsoft.powershell.management/get-childitem) can be used with **Get-AIPFileStatus.** 
+> This command makes use of the **Path** alias of FullName, so that [Get-Child-Item](/powershell/module/microsoft.powershell.management/get-childitem) can be used with **Get-AIPFileStatus**. 
 > 
 
 ### Example 3: (Unified labeling client only) Apply the "General" label to all files in a folder and any of its subfolders
@@ -152,7 +152,7 @@ FileName                   Status Comment
 C:\Projects\Analysis.docx  Success
 ```
 
-This command removes the existing label from the file named **C:\Projects\Analysis.docx,** and specifies a justification message that is required because the Office 365 classification label policy setting is enabled that requires justification for removing a label or lowering the classification. 
+This command removes the existing label from the file named **C:\Projects\Analysis.docx**, and specifies a justification message that is required because the Office 365 classification label policy setting is enabled that requires justification for removing a label or lowering the classification. 
 
 ### Example 6: (Unified labeling client only) Protect a file with custom permissions
 
@@ -194,7 +194,7 @@ FileName                   Status Comment
 C:\Projects\Analysis.docx  Success
 ```
 
-This command removes protection from a single file named **Analysis.docx.** If the file has label, the label will also be removed. 
+This command removes protection from a single file named **Analysis.docx**. If the file has label, the label will also be removed. 
 
 ### Example 9: (Unified labeling client only) Remove protection and a label from a file
 
@@ -206,7 +206,7 @@ FileName                   Status Comment
 C:\Projects\Analysis.docx  Success
 ```
 
-This command removes the label and custom protection from a single file named **Analysis.docx.** Because the policy is configured to require justification to remove a label, the justification reason is also supplied so that the command can complete without prompting the user for the reason.
+This command removes the label and custom protection from a single file named **Analysis.docx**. Because the policy is configured to require justification to remove a label, the justification reason is also supplied so that the command can complete without prompting the user for the reason.
 
 
 ### Example 10: (Classic client only) Apply the "General" label to all files in a folder and any of its subfolders
@@ -249,7 +249,7 @@ FileName                   Status Comment
 C:\Projects\Analysis.docx  Success
 ```
 
-This command removes the existing label from the file named **C:\Projects\Analysis.docx,** and specifies a justification message that is required because the Azure Information Protection policy setting is enabled that requires justification for lowering the classification label, removing a label, or removing protection.
+This command removes the existing label from the file named **C:\Projects\Analysis.docx**, and specifies a justification message that is required because the Azure Information Protection policy setting is enabled that requires justification for lowering the classification label, removing a label, or removing protection.
 
 
 ### Example 13: (Classic client only) Apply the "Confidential \ All Employees" label to all files in a folder and register these files with the document tracking site
