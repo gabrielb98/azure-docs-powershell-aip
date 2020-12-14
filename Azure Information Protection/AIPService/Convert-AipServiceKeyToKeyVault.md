@@ -21,8 +21,9 @@ Convert-AipServiceKeyToKeyVault -KeyVaultKeyUrl <String> -KeyIdentifier <String>
 ## DESCRIPTION
 The **Convert-AipServiceKeyToKeyVault** cmdlet is only for customers who have previously created a customer-managed key for Azure Rights Management and have received an invitation from Microsoft to migrate their Azure Information Protection tenant key to Azure Key Vault.
 
-Important: Do not run this cmdlet if you have not received this invitation from Microsoft and do not run this cmdlet without assistance from Microsoft.
-
+> [!IMPORTANT]
+> Do not run this cmdlet if you have not received this invitation from Microsoft and do not run this cmdlet without assistance from Microsoft.
+> 
 You must use PowerShell to configure your tenant key; you cannot do this configuration by using a management portal.
 
 Azure Information Protection now uses Azure Key Vault to manage and monitor a customer-managed tenant key. To create a customer-managed tenant key for the first time, run [Use-AipServiceKeyVaultKey](./Use-AipServiceKeyVaultKey.md) instead of this cmdlet.
@@ -42,7 +43,7 @@ For security reasons, this cmdlet does not let you change the access control for
 PS C:\>Convert-AipServiceKeyToKeyVault -KeyIdentifier aaaaaaaa-1111-2222-3333-bbbbbbbbbbbb -KeyVaultKeyUrl "https://contoso.vault.azure.net/keys/contoso-aipservice-key/aaaabbbbcccc111122223333"
 ```
 
-Changes the location of the original customer-managed key that has the key identifier of aaaaaaaa-1111-2222-3333-bbbbbbbbbbbb with the location of a customer-managed key in Azure Key Vault, which is named contoso-aipservice-key and has the version number aaaabbbbcccc111122223333 in the Contoso key vault.
+Changes the location of the original customer-managed key that has the key identifier of **aaaaaaaa-1111-2222-3333-bbbbbbbbbbbb** with the location of a customer-managed key in Azure Key Vault, which is named **contoso-aipservice-key** and has the version number **aaaabbbbcccc111122223333** in the Contoso key vault.
 
 ## PARAMETERS
 
@@ -124,7 +125,9 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. 
+
+For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

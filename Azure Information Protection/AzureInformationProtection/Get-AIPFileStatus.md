@@ -9,6 +9,8 @@ schema: 2.0.0
 # Get-AIPFileStatus
 
 ## SYNOPSIS
+**Relevant for:** AIP unified labeling and classic clients
+
 Gets the Azure Information Protection label and protection information for a specified file or files.
 
 ## SYNTAX
@@ -24,26 +26,37 @@ The status also includes whether the file is protected by Rights Management, and
 
 Note that password-protected files always return the protection status of **False**.
 
-You can run this cmdlet non-interactively. For instructions, see the following documentation in the admin guides:
+You can run this cmdlet non-interactively. For more information, see the following client admin guides:
 
-- Azure Information Protection client (classic): [How to label files non-interactively for Azure Information Protection](/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection).
+- **[Unified labeling client](/information-protection/rms-client/clientv2-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection)**
 
-- Azure Information Protection unified labeling client: [How to label files non-interactively for Azure Information Protection](/information-protection/rms-client/clientv2-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection).
+- **[Classic client](/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection)**
 
-NOTE: If you have the Azure Information Protection unified labeling client, there are other differences from the Azure Information Protection client:
+> [!NOTE]
+> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. 
+> 
+> This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+>
+
+**Differences in support between clients**
+
+If you have the AIP unified labeling client, functionality differs from the classic client as follows.
+
+In the unified labeling client:
 
 - This cmdlet returns label information from your own tenant only and the *LabelingSiteId* parameter is not displayed in the output.
 
 - The *Owner* and *RMSIssuedTime* parameters are not supported and are not displayed in the output.
 
-- The *LabelingMethod* parameter displays the values of **Privileged** or **Standard** instead of **Manual** or **Automatic**:
-    
-    - **Privileged**: A label was applied by a user, either manually or a result of a labeling recommendation, and is the equivalent of Manual for the Azure Information Protection client.
-    - **Standard**: A label was applied automatically, and is the equivalent of Automatic for the Azure Information Protection client (classic).
+- The *LabelingMethod* parameter displays the values of **Privileged** or **Standard** instead of **Manual** or **Automatic:**
+  
+    - **Privileged:** A label was applied by a user, either manually or a result of a labeling recommendation, and is the equivalent of **Manual** for the AIP classic client.
+
+    - **Standard:** A label was applied automatically, and is the equivalent of **Automatic** for the AIP classic client.
 
 ## EXAMPLES
 
-### Example 1a: Get the label and protection status of a single file - Azure Information Protection client only
+### Example 1a: (Classic client) Get the label and protection status of a single file
 
 ```
 PS C:\> Get-AIPFileStatus -Path \\Finance\Projects\Project.docx
@@ -68,7 +81,7 @@ RMSIssuer       : John@Contoso.com
 
 This command provides information about a file that is labeled as "Confidential \ Finance group". This file was labeled manually by John and it is also protected by using the Rights Management template, "Contoso - Confidential Finance". 
 
-### Example 1b: Get the label and protection status of a single file - Azure Information Protection unified labeling client only
+### Example 1b: (Unified labeling client) Get the label and protection status of a single file
 
 ```
 PS C:\> Get-AIPFileStatus -Path \\Finance\Projects\Project.docx
@@ -96,14 +109,14 @@ This command provides information about a file that is labeled as "Confidential 
 PS C:\> Get-AIPFileStatus -Path \\Finance\Projects\ | Export-Csv C:\Reports\AIP-status.csv
 ```
 
-This command gets the label and protection information of all files on the Finance server, in the Projects folder and any of its subfolders. The results are exported to the file named AIP-status.csv so that they can be more easily searched and sorted. If a previous report exists in C:\Reports\Report.csv, it will be overwritten.
+This command gets the label and protection information of all files on the Finance server, in the Projects folder and any of its subfolders. The results are exported to the file named **AIP-status.csv** so that they can be more easily searched and sorted. If a previous report exists in **C:\Reports\Report.csv**, it will be overwritten.
 
 ### Example 3: List the files labeled "Confidential" and export the results to a CSV file
 ```
 PS C:\> Get-AIPFileStatus -Path \\Finance\Projects\ | Where-Object {$_.MainLabelName -eq 'Confidential'} | Export-Csv C:\Reports\AIP-status.csv
 ```
 
-This command gets the label and protection information for just the files that are labeled "Confidential" (regardless of their sublabel) on the Finance server, in the Projects folder and any of its subfolders. The results are exported to the file named AIP-status.csv so that they can be more easily searched and sorted. If a previous report exists in C:\Reports\Report.csv, it will be overwritten.
+This command gets the label and protection information for just the files that are labeled "Confidential" (regardless of their sublabel) on the Finance server, in the Projects folder and any of its subfolders. The results are exported to the file named **AIP-status.csv** so that they can be more easily searched and sorted. If a previous report exists in **C:\Reports\Report.csv**, it will be overwritten.
 
 ### Example 4: Count of files with a "Confidential" label
 ```
@@ -112,7 +125,7 @@ PS C:\> (Get-AIPFileStatus -Path C:\Projects\ | Where-Object {$_.MainLabelName -
 5
 ```
 
-This command provides the number of files with the "Confidential" label that are in the C:\Projects folder and any of its subfolders. In this example, 5 files are found.
+This command provides the number of files with the "Confidential" label that are in the **C:\Projects** folder and any of its subfolders. In this example, 5 files are found.
 
 ## PARAMETERS
 
@@ -120,9 +133,20 @@ This command provides the number of files with the "Confidential" label that are
 
 Specifies a local path, network path, or SharePoint Server URL to the files for which you want to get the label and protection information. Wildcards are not supported.
 
-For SharePoint paths: SharePoint Server 2019, SharePoint Server 2016, and SharePoint Server 2013 are supported.
+For SharePoint paths, the following are supported:
 
-Examples include C:\Folder\, C:\Folder\Filename, \\\Server\Folder, http://sharepoint.contoso.com/Shared%20Documents/Folder. Paths can include spaces when you enclose the path value with quotes.
+- SharePoint Server 2019
+- SharePoint Server 2016
+- SharePoint Server 2013
+
+For example:
+
+- C:\Folder\
+- C:\Folder\Filename
+- \\\Server\Folder
+- http://sharepoint.contoso.com/Shared%20Documents/Folder
+
+Paths can include spaces when you enclose the path value with quotes.
 
 ```yaml
 Type: String[]
@@ -137,7 +161,9 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. 
+
+For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

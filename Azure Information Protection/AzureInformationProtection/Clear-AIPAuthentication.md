@@ -9,6 +9,8 @@ schema: 2.0.0
 # Clear-AIPAuthentication
 
 ## SYNOPSIS
+**Relevant for:** AIP unified labeling and classic clients
+
 Clears the user settings and RMS templates for the current user.
 
 ## SYNTAX
@@ -18,17 +20,25 @@ Clear-AIPAuthentication [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Clear-AIPAuthentication cmdlet resets the user settings for the Azure Rights Management service. For a list of files and registry entries that are deleted, see the following sections from the admin guides:
+The Clear-AIPAuthentication cmdlet resets the user settings for the Azure Rights Management service. 
 
-- Classic client: [More information about the Reset Settings option](/information-protection/rms-client/client-admin-guide#more-information-about-the-reset-settings-option)
+- **For the unified labeling client**, files in **%LocalAppData%\Microsoft\MSIP\AppDetails** are not deleted if you authenticate by using a token from Azure AD when you run Set-AIPAuthentication.
 
-- Unified labeling client: [More information about the Reset Settings option](/information-protection/rms-client/clientv2-admin-guide#more-information-about-the-reset-settings-option)
-    
-    For the unified labeling client, files in %LocalAppData%\Microsoft\MSIP\AppDetails are not deleted if you authenticate by using a token from Azure AD when you run Set-AIPAuthentication.
+- **For both clients**, all Rights Management templates from the **%LocalAppData%\Microsoft\MSIPC\msip** folder are deleted for the current user. 
 
-In addition, for both clients, all Rights Management templates from the %LocalAppData%\Microsoft\MSIPC\msip folder are deleted for the current user. 
+- Rights Management templates are not deleted from the **%LocalAppData\Microsoft\MSIPC** folder that Office uses.
 
-Rights Management templates are not deleted from the %LocalAppData\Microsoft\MSIPC folder that Office uses.
+For a list of files and registry entries that are deleted, see the the details about the **Reset Settings** option in the following admin guides:
+
+- **[Unified labeling client](/information-protection/rms-client/clientv2-admin-guide#more-information-about-the-reset-settings-option)**
+
+- **[Classic client](/information-protection/rms-client/client-admin-guide#more-information-about-the-reset-settings-option)**
+
+> [!NOTE]
+> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. 
+> 
+> This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+>
 
 ## EXAMPLES
 
@@ -42,7 +52,9 @@ This command is functionally the equivalent of selecting the **Reset Settings** 
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. 
+
+For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -30,15 +30,15 @@ For more information about content scan jobs, see the [Azure Information Protect
 
 ### Example 1 Define default content scan job settings
 
-```PowerShell
+```powershell
 PS C:\WINDOWS\system32> Set-AIPScannerContentScanJob -Enforce Off
 ```
 
-This example defines the content scan job with default settings, and sets the **Policy enforcement** option to **Off.**
+This example defines the content scan job with default settings, and sets the **Policy enforcement** option to **Off**.
 
 ### Example 2 Define a basic content scan job that runs continuously
 
-```PowerShell
+```powershell
 PS C:\WINDOWS\system32> Set-AIPScannerContentScanJob -Enforce Off -RelabelFiles On -EnforceDefaultLabel On -Schedule Always
 ```
 
@@ -46,7 +46,7 @@ This example defines the content scan job with without enforcing a policy, allow
 
 ### Example 3 Define a content scan job that allows for specific re-labeling actions only
 
-```PowerShell
+```powershell
 PS C:\WINDOWS\system32> Set-AIPScannerContentScanJob -RelabelFiles On -AllowLabelDowngrade On -EnforceDefaultLabel On
 ```
 
@@ -54,7 +54,7 @@ This example defines a content scan job that allows for content to be re-labeled
 
 ### Example 4 Define a content scan job that excludes .msg and .tmp files
 
-```PowerShell
+```powershell
 PS C:\WINDOWS\system32> Set-AIPScannerContentScanJob -IncludeFileTypes '' -ExcludeFileTypes '.msg,.tmp'
 ```
 
@@ -63,7 +63,7 @@ This example defines a content scan job that includes all file types except for 
 
 ### Example 5 Define a content scan job with DLP enabled, and a specific repository owner
 
-```PowerShell
+```powershell
 PS C:\WINDOWS\system32> Set-AIPScannerContentScanJob -EnableDLP On -RepositoryOwner 'domain\user'
 ```
 
@@ -71,7 +71,7 @@ This example defines the content scan job to use the Microsoft 365 built-in data
 
 ### Example 6 Define a content scan job with a default label to use when automatically labeling content
 
-```PowerShell
+```powershell
 PS C:\WINDOWS\system32> Set-AIPScannerContentScanJob -DefaultLabelType Custom -DefaultLabelId 'ff1f1c9d-2f92-4a18-3d84-4608b742424'
 ```
 

@@ -12,9 +12,9 @@ ms.assetid: 0B91D740-D2BD-4D57-9E21-C582C9BE2CCA
 This page displays help links for the AADRM cmdlets that administer the protection service (Azure Rights Management) for Azure Information Protection.
 
 > [!NOTE]
-> This module is now deprecated and replaced with the **AIPService** module. Support for the AADRM module ends July 15, 2020.
+> This module is now deprecated and replaced with the **[AIPService](../AIPService/AipService.md)** module. Support for the AADRM module ended July 15, 2020.
 > 
-> If you have this older version of the module installed, [install the AIPService module](/information-protection/deploy-use/install-powershell) before this end of support date. Although the new cmdlets have aliases to the old cmdlets, also update any scripts that reference the AADRM cmdlets. 
+> If you have this older version of the module installed, [install the AIPService module](/information-protection/deploy-use/install-powershell). Although the new cmdlets have aliases to the old cmdlets, also update any scripts that reference the AADRM cmdlets. 
 
 These PowerShell cmdlets let you administer the Azure Rights Management service from the command line. Although this administration method enables automation, it also supports reliable and repeated processes to help reduce administrative overheads. In addition, advanced configurations and some operations require this PowerShell module.
 

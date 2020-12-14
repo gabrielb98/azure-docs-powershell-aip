@@ -27,9 +27,12 @@ You can run this cmdlet before or after the protection service (Azure Rights Man
 
 Before you run this cmdlet, make sure that the Azure Rights Management service principal has been granted permissions to the key vault that contains the key you want to use for Azure Information Protection. These permissions are granted by running the Azure Key Vault cmdlet, [Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy).
 
-For security reasons, the Use-AipServiceKeyVaultKey cmdlet does not let you set or change the access control for the key in Azure Key Vault. After that access is granted by running Set-AzKeyVaultAccessPolicy, run Use-AipServiceKeyVaultKey to tell Azure Information Protection to use the key and version that you specify with the *KeyVaultKeyUrl* parameter.
+For security reasons, the **Use-AipServiceKeyVaultKey** cmdlet does not let you set or change the access control for the key in Azure Key Vault. After that access is granted by running **Set-AzKeyVaultAccessPolicy**, run **Use-AipServiceKeyVaultKey** to tell Azure Information Protection to use the key and version that you specify with the *KeyVaultKeyUrl* parameter.
 
-Note: If you run this cmdlet before the permissions are granted to the key vault, you will see an error that displays **The Rights Management service failed to add the key**. To see more detailed information, run the command again, with -*Verbose*. If the permissions are not granted, you see **VERBOSE: Failure to access Azure KeyVault**.
+> [!NOTE]
+> If you run this cmdlet before the permissions are granted to the key vault, you will see an error that displays **The Rights Management service failed to add the key**. 
+>
+> To see more detailed information, run the command again, with -*Verbose*. If the permissions are not granted, you see **VERBOSE: Failure to access Azure KeyVault**.
 
 When your command successfully runs, the key is added as an archived customer-managed tenant key for Azure Information Protection for your organization. To make it the active tenant key for Azure Information Protection, you must then run the [Set-AipServiceKeyProperties](./Set-AipServiceKeyProperties.md) cmdlet.
 
@@ -46,7 +49,7 @@ For more information about Azure Key Vault, see [What is Azure Key Vault](/azure
 PS C:\>Use-AipServiceKeyVaultKey -KeyVaultKeyUrl "https://contoso.vault.azure.net/keys/contoso-aipservice-key/aaaabbbbcccc111122223333"
 ```
 
-This command tells Azure Information Protection to use the key named contoso-aipservice-key, version aaaabbbbcccc111122223333, in the key vault named contoso.
+This command tells Azure Information Protection to use the key named **contoso-aipservice-key**, version **aaaabbbbcccc111122223333**, in the key vault named **contoso**.
 
 This key and version in Azure Key Vault then becomes the customer-managed tenant key for Azure Information Protection.
 
@@ -83,7 +86,9 @@ Accept wildcard characters: False
 ```
 
 ### -FriendlyName
-Specifies the friendly name of a trusted publishing domain (TPD) and the SLC key that you imported from AD RMS. If users run Office 2016 or Office 2013, specify the same **Friendly name** value that is set for the AD RMS cluster properties on the **Server Certificate** tab. 
+Specifies the friendly name of a trusted publishing domain (TPD) and the SLC key that you imported from AD RMS. 
+
+If users run Office 2016 or Office 2013, specify the same **Friendly name** value that is set for the AD RMS cluster properties on the **Server Certificate** tab. 
 
 This parameter is optional. If you don't use it, the key identifier is used instead.
 
@@ -132,7 +137,9 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. 
+
+For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

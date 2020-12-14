@@ -25,7 +25,7 @@ You must use PowerShell to configure your tenant key; you cannot do this configu
 
 For security reasons, the cmdlet does not display the value of the tenant keys.
 
-When you run this cmdlet, you will see **Status** and **KeyType**:
+When you run this cmdlet, you will see **Status** and **KeyType:**
 
 - The **Status** value shows **Archived** or **Active**. Archived identifies a tenant key that can be used to open previously protected content. Active identities the tenant key is currently in use to protect content.
 

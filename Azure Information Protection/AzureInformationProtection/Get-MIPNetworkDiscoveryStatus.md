@@ -8,6 +8,8 @@ schema: 2.0.0
 # Get-MIPNetworkDiscoveryStatus
 
 ## SYNOPSIS
+**Relevant for:** AIP unified labeling client only
+
 Gets the current status of the Network Discovery service.
 
 ## SYNTAX
@@ -17,7 +19,6 @@ Get-MIPNetworkDiscoveryStatus [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-
 The **Get-MIPNetworkDiscoveryStatus** cmdlet returns the current status of the Network Discovery service.
 
 Network Discovery network scan jobs enable Azure Information Protection administrators to scan specific IP addresses or ranges for risky repositories to add to scan further with content scan jobs.
@@ -57,12 +58,14 @@ msanchez-3384.emea.corp.contoso.com   Scanning         39gsneaoz-d944-4fns-9b2f-
 
 This command gets the current status of the Network Discovery service.
 
-The output shows that the Network Discovery scanner service is currently running, and performing job ID **39gsneaoz-d944-4fns-9b2f-ej6g350cd74.**
+The output shows that the Network Discovery scanner service is currently running, and performing job ID **39gsneaoz-d944-4fns-9b2f-ej6g350cd74**.
 
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. 
+
+For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

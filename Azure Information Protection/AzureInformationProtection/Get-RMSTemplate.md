@@ -9,6 +9,8 @@ schema: 2.0.0
 # Get-RMSTemplate
 
 ## SYNOPSIS
+**Relevant for:** AIP classic client only
+
 Gets a list of RMS templates.
 
 ## SYNTAX
@@ -20,7 +22,10 @@ Get-RMSTemplate [-RmsServer <String>] [-Force] [-Culture <String>] [<CommonParam
 ## DESCRIPTION
 The **Get-RMSTemplate** cmdlet gets a list of templates from your Rights Management deployment (AD RMS or Azure RMS), which can then be used to protect files. Use this cmdlet to identify the template ID of the template that you want to use.
 
-This cmdlet is not supported for the Azure Information Protection unified labeling client.
+> [!NOTE]
+> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. 
+> 
+> This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
 ## EXAMPLES
 
@@ -145,7 +150,9 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. 
+
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

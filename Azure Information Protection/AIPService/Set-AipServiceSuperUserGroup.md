@@ -18,7 +18,9 @@ Set-AipServiceSuperUserGroup -GroupEmailAddress <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Set-AipServiceSuperUserGroup** cmdlet specifies a group to use as the super user group for Azure Information Protection. Members of this group are then super users, which means they become an owner for all content that is protected by your organization. These super users can decrypt this protected content and remove protection from it, even if an expiration date has been set and expired. Typically, this level of access is required for legal eDiscovery and by auditing teams.
+The **Set-AipServiceSuperUserGroup** cmdlet specifies a group to use as the super user group for Azure Information Protection. Members of this group are then super users, which means they become an owner for all content that is protected by your organization. 
+
+These super users can decrypt this protected content and remove protection from it, even if an expiration date has been set and expired. Typically, this level of access is required for legal eDiscovery and by auditing teams.
 
 You can specify any group that has an email address, but be aware that for performance reasons, group membership is cached. For information about group requirements, see [Preparing users and groups for Azure Information Protection](/information-protection/plan-design/prepare).
 
@@ -60,7 +62,9 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. 
+
+For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

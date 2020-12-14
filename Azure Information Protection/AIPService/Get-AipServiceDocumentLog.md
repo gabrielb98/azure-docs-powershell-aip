@@ -146,7 +146,9 @@ Accept wildcard characters: False
 ```
 
 ### -FromTime
-Specifies the start time (inclusive) for the log file as a **DateTime** object. To obtain a **DateTime** object, use the [Get-Date](/powershell/module/Microsoft.PowerShell.Utility/Get-Date?viewFallbackFrom=powershell-4.0) cmdlet. Specify the date and time according to your system locale settings. For more information, type `Get-Help Get-Date`.
+Specifies the start time (inclusive) for the log file as a **DateTime** object. To obtain a **DateTime** object, use the [Get-Date](/powershell/module/Microsoft.PowerShell.Utility/Get-Date?viewFallbackFrom=powershell-4.0) cmdlet. Specify the date and time according to your system locale settings. 
+
+For more information, type `Get-Help Get-Date`.
 
 ```yaml
 Type: DateTime
@@ -178,8 +180,9 @@ Accept wildcard characters: False
 ```
 
 ### -ToTime
+Specifies the stop time (inclusive) for the log file as a **DateTime** object. To obtain a **DateTime** object, use the [Get-Date](/powershell/module/Microsoft.PowerShell.Utility/Get-Date?viewFallbackFrom=powershell-4.0) cmdlet. Specify the date and time according to your system locale settings. 
 
-Specifies the stop time (inclusive) for the log file as a **DateTime** object. To obtain a **DateTime** object, use the [Get-Date](/powershell/module/Microsoft.PowerShell.Utility/Get-Date?viewFallbackFrom=powershell-4.0) cmdlet. Specify the date and time according to your system locale settings. For more information, type `Get-Help Get-Date`.
+For more information, type `Get-Help Get-Date`.
 
 ```yaml
 Type: DateTime
@@ -197,7 +200,9 @@ Accept wildcard characters: False
 **Relevant for:** Classic client only
 
 
-Specifies the email address of the user. The cmdlet gets the protection information for documents if that user protected documents (the Rights Management issuer) or was the Rights Management owner for documents, or protected documents were configured to grant access directly to the user. Group addresses are not supported with this cmdlet. 
+Specifies the email address of the user. The cmdlet gets the protection information for documents if that user protected documents (the Rights Management issuer) or was the Rights Management owner for documents, or protected documents were configured to grant access directly to the user. 
+
+Group addresses are not supported with this cmdlet. 
 
 ```yaml
 Type: String

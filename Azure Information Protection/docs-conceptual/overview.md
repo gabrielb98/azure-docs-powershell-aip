@@ -8,42 +8,61 @@ ms.product: information-protection
 ms.service: information-protection
 ms.devlang: powershell
 ms.topic: reference
-ms.date: 03/04/2020
+ms.date: 10/14/2020
 ms.author: bagol
 ---
 
 # Azure Information Protection
 
-You can use the following PowerShell modules with Azure Information Protection: 
+Use the following PowerShell modules with Azure Information Protection: 
 
-- **AADRM**
+- **[AIPService](#aipservice)**. Used to administer Azure Information Protection's Azure Rights Management protection service, and replaces the deprecated [AADRM](#aadrm) module.
+
+- **[AzureInformationProtection](#azureinformationprotection)**. Used to support Azure Information Protection client functionality.
+
+## AIPService
     
-    This module is now deprecated and replaced with the AIPService module, which provides the same functionality with renamed cmdlets. The renamed cmdlets in the current module have aliases to the old cmdlets.
+These cmdlets let you administer the Azure Rights Management protection service for Azure Information Protection. 
+
+The AIPService module replaces the older module, [AADRM](#aadrm).
+
+For more information about when to use these PowerShell cmdlets and to see groupings of cmdlets by administration tasks, see [Administering protection from Azure Information Protection by using PowerShell](/information-protection/deploy-use/administer-powershell).
     
-    Support for this older module ends **July 15, 2020**.
-    
-    The cmdlets in this module let you administer the protection service (Azure Rights Management) for Azure Information Protection.
+For upgrading and installation instructions, see [Installing the AIPService PowerShell module](/information-protection/deploy-use/install-powershell).
     
 
-- **AIPService**
-    
-    These cmdlets let you administer the protection service (Azure Rights Management) for Azure Information Protection. The AIPService module replaces the older module, AADRM.
+## AzureInformationProtection
 
-    For more information about when to use these PowerShell cmdlets and to see groupings of cmdlets by administration tasks, see [Administering protection from Azure Information Protection by using PowerShell](/information-protection/deploy-use/administer-powershell).
-    
-    For upgrading and installation instructions, see [Installing the AIPService PowerShell module](/information-protection/deploy-use/install-powershell).
-    
-    Note: Some cmdlets from the AADRM module were not carried forward to this new module, because they were already deprecated and no longer used.
+This module has cmdlets for the Azure Information Protection client, including both the unified labeling and classic clients. The cmdlets are installed together with the client. 
 
-- **AzureInformationProtection**
-    
-    This module has cmdlets for the Azure Information Protection unified labeling client, and the Azure Information Protection client (classic).
-    
-    For the Azure Information Protection unified labeling client: The cmdlets let you label files and get information about files that are labeled. These cmdlets are installed with the [Azure Information Protection unified labeling client](/information-protection/rms-client/aip-clientv2) and can be used with Azure Information Protection only.
-    
-    For the Azure Information Protection client (classic): The cmdlets let you protect and unprotect files, label files, and get information about files that are protected and labeled. These cmdlets are installed with the [Azure Information Protection client](/information-protection/rms-client/aip-client) and can be used with Azure Information Protection, the protection service (Azure Rights Management) for Azure Information Protection, and Active Directory Rights Management Services (AD RMS)
-    
-    For information about when and how to use these PowerShell cmdlets, see [Using PowerShell with the Azure Information Protection unified labeling client](/information-protection/rms-client/clientv2-admin-guide-powershell) and [Using PowerShell with the Azure Information Protection client](/information-protection/rms-client/client-admin-guide-powershell).
-    
-    For installation instructions, see [Install the Azure Information Protection unified labeling client for users](/information-protection/rms-client/clientv2-admin-guide-install) and [Install the Azure Information Protection client for users](/information-protection/rms-client/client-admin-guide-install). Note that this module requires Windows PowerShell 4.0 and that this prerequisite is not checked by the installation. The module installs automatically when you install the full version of the Azure Information Protection clients but you can also install just the module by using the `PowerShellOnly=true` parameter.
+For more information, see:
 
+- **Unified labeling client:**
+    - [About the AIP unified labeling client](/information-protection/rms-client/aip-clientv2)
+    - [Using PowerShell with the AIP unified labeling client](/information-protection/rms-client/clientv2-admin-guide-powershell)
+    - [Install the AIP unified labeling client for users](/information-protection/rms-client/clientv2-admin-guide-install)
+
+- **Classic client:**
+    - [About the AIP classic client](/information-protection/rms-client/aip-client)
+    - [Using PowerShell with the AIP classic client](/information-protection/rms-client/client-admin-guide-powershell)
+    - [Install the AIP classic client for users](/information-protection/rms-client/client-admin-guide-install)
+
+    > [!NOTE]
+    > To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. 
+    > 
+    > This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+
+### Installing the AzureInformationProtection module
+
+- This module requires Windows PowerShell 4.0. This prerequisite is not checked by the installation. 
+- The module installs automatically when you install the full version of the Azure Information Protection clients. Alternately, you can install the module only by using the `PowerShellOnly=true` parameter.
+
+## AADRM
+    
+The cmdlets in this module let you administer the Azure Rights Management protection service for Azure Information Protection.
+
+This module is now deprecated and replaced with the [AIPService](#aipservice) module, which provides the same functionality with renamed cmdlets. 
+
+The renamed cmdlets in the current module have aliases to the old cmdlets. Cmdlets from the AADRM module that were already deprecated and no longer used were not carried forward to the newer AIPService module.
+
+Support for this older module ended **July 15, 2020**.  

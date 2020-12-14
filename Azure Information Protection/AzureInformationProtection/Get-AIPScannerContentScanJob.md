@@ -24,7 +24,7 @@ For more information about content scan jobs, see the [Azure Information Protect
 ## EXAMPLES
 
 ### Example 1 Content scan job settings defined by PowerShell
-```PowerShell
+```powershell
 PS C:\WINDOWS\system32> Get-AIPScannerContentScanJob
 
 Schedule                : Manual
@@ -51,7 +51,7 @@ c:\repoToScan2
 This example shows a sample command and response when the content scan job has been configured via PowerShell.
 
 ### Example 2 Content scan job settings defined by PowerShell
-```PowerShell
+```powershell
 PS C:\WINDOWS\system32> Get-AIPScannerContentScanJob
 
 Schedule                : Manual

@@ -50,7 +50,7 @@ Note that these administrative roles are separate from the Azure Active Director
 PS C:\>Add-AipServiceRoleBasedAdministrator -SecurityGroupDisplayName "Finance Employees"
 ```
 
-This command grants administrative rights to the protection service for the group that has a display name of "Finance Employees".
+This command grants administrative rights to the protection service for the group that has a display name of **Finance Employees**.
 
 ### Example 2: Grant administrative rights by using a GUID
 ```
@@ -96,11 +96,11 @@ Specifies a role of either **Azure Information Protection service global adminis
 
 To specify these roles, use the following values:  
 
-- GlobalAdministrator
+- **GlobalAdministrator**
 
-- ConnectorAdministrator
+- **ConnectorAdministrator**
 
-The default value is GlobalAdministrator.
+The default value is **GlobalAdministrator**.
 
 ```yaml
 Type: Role
@@ -131,7 +131,9 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. 
+
+For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
