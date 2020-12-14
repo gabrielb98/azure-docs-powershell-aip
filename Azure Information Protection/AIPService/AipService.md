@@ -2,7 +2,7 @@
 Module Name: AIPService
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 Download Help Link: N/A
-Help Version: 1.0.0.1
+Help Version: 1.0.0.2
 Locale: en-US
 ---
 
