@@ -8,6 +8,8 @@ schema: 2.0.0
 # Get-MIPNetworkDiscoveryJobs
 
 ## SYNOPSIS
+**Relevant for:** AIP unified labeling client only
+
 Gets a list of Azure Information Protection network scan jobs configured in your tenant.
 
 ## SYNTAX
@@ -17,7 +19,6 @@ Get-MIPNetworkDiscoveryJobs [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-
 The **Get-MIPNetworkDiscoveryJobs** cmdlet gets a list of the Network Discovery network scan jobs configured in your tenant.
 
 Network Discovery network scan jobs enable Azure Information Protection administrators to scan specific IP addresses or ranges for risky repositories to add to scan further with content scan jobs.
@@ -58,7 +59,9 @@ This command gets the list of the three Network Discovery network scan jobs, as 
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. 
+
+For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

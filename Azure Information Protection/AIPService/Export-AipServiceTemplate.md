@@ -22,13 +22,20 @@ The **Export-AipServiceTemplate** cmdlet exports all the properties of a protect
 
 Although you can configure protection templates in the Azure portal, you must use PowerShell to export and import these templates.
 
-Tip: Consider using this cmdlet as a way to back up your protection templates, so that you can revert to a known-good version if required.
-
+> [!TIP]
+> Consider using this cmdlet as a way to back up your protection templates, so that you can revert to a known-good version if required.
+> 
 The export process does not automatically append a file name extension, so you can specify a file name extension to match the application that you will use to view and edit the resulting data.
 
 You can use the [Get-AipServiceTemplate](./Get-AipServiceTemplate.md) cmdlet to get the GUIDs of all templates.
 
 For more information about protection templates, including how to configure them in the Azure portal, see [Configuring and managing templates for Azure Information Protection](/information-protection/deploy-use/configure-policy-templates).
+
+**Using the Azure Information Protection unified labeling client?**
+
+The Azure Information Protection unified labeling client uses protection templates indirectly. If you have the unified labeling client, we recommend that you use label-based cmdlets instead of modifying your protection templates directly.
+
+For more information, see [Create and publish sensitivity labels](/microsoft-365/compliance/create-sensitivity-labels) in the Microsoft 365 documentation.
 
 ## EXAMPLES
 
@@ -87,7 +94,9 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. 
+
+For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

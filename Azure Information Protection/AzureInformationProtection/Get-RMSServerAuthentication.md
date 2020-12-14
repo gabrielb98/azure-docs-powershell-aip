@@ -9,6 +9,8 @@ schema: 2.0.0
 # Get-RMSServerAuthentication
 
 ## SYNOPSIS
+**Relevant for:** AIP classic client only
+
 Gets the server mode status that is used for authentication to RMS.
 
 ## SYNTAX
@@ -24,7 +26,10 @@ This cmdlet does not apply if you protect or unprotect files by using your user 
 
 To use server mode with the Azure Rights Management service, you must use a service principal account in Azure AD. To use server mode with AD RMS, the computer account must be granted permissions. For more information, see [Using PowerShell with the Azure Information Protection client](/information-protection/rms-client/client-admin-guide-powershell) from the Azure Information Protection client admin guide.
 
-This cmdlet is not supported for the Azure Information Protection unified labeling client.
+> [!NOTE]
+> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021.** 
+> 
+> This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
 ## EXAMPLES
 
@@ -51,7 +56,9 @@ This command gets the server mode status and because there are no identifiers, t
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. 
+
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

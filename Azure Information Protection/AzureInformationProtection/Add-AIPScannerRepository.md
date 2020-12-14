@@ -8,6 +8,8 @@ schema: 2.0.0
 # Add-AIPScannerRepository
 
 ## SYNOPSIS
+**Relevant for:** AIP unified labeling client. Deprecated for the classic client.
+
 Adds a repository to an Azure Information Protection content scan job.
 
 ## SYNTAX
@@ -26,14 +28,18 @@ Adds a repository for your content scan job to scan.
 
 For more information about content scan jobs, see the [Azure Information Protection on-premises scanner documentation](/information-protection/deploy-aip-scanner-configure-install#create-a-content-scan-job).
 
-> [!IMPORTANT]
+> [!NOTE]
 > If you are using the AIP classic client, this cmdlet is deprecated. Instead, use the [Azure portal to configure the scanner](/information-protection/deploy-aip-scanner-classic).
 > 
+> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. 
+> 
+> This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+>
 
 ## EXAMPLES
 
 ### Example 1 Add a new repository using the configured content scan jobs settings
-```PowerShell
+```powershell
 PS C:\WINDOWS\system32> Add-AIPScannerRepository -Path 'c:\repoToScan'
 ```
 
@@ -41,7 +47,7 @@ This example adds the **repoToScan** repository to your content scan job, using 
 
 ### Example 2 Add a new repository, overriding the content scan job's current settings
 
-```PowerShell
+```powershell
 PS C:\WINDOWS\system32> Add-AIPScannerRepository -Path 'c:\repoToScan' -OverrideContentScanJob On -Enforce On -DefaultOwner 'ms@gmail.com'
 ```
 
@@ -49,7 +55,7 @@ This example adds the **repoToScan** repository to your content scan job, overri
 
 ### Example 3 Add a new repository, excluding .msg and .tmp files
 
-```PowerShell
+```powershell
 PS C:\WINDOWS\system32> Add-AIPScannerRepository -Path 'c:\repoToScan' -OverrideContentScanJob On -IncludeFileTypes '' -ExcludeFileTypes '.msg,.tmp' 
 ```
 
@@ -60,7 +66,7 @@ This example defines a content scan job that includes all file types except for 
 ### -AllowLabelDowngrade
 Determines whether the content scan job allows for labeling downgrade actions.
 
-Relevant only when the following parameters are set to **on**:
+Relevant only when the following parameters are set to **on:**
 
 - **OverrideContentScanJob**
 - **RelabelFiles**
@@ -195,7 +201,7 @@ Accept wildcard characters: False
 ### -EnforceDefaultLabel
 Determines whether using a default label is always used when relabeling content.
 
-Relevant only when the following parameters are set to **on**:
+Relevant only when the following parameters are set to **on:**
 
 - **RelabelFiles**
 - **OverrideContentScanJob** 

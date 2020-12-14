@@ -9,6 +9,8 @@ schema: 2.0.0
 # New-RMSProtectionLicense
 
 ## SYNOPSIS
+**Relevant for:** AIP classic client only
+
 Creates an ad-hoc rights policy for RMS protection.
 
 ## SYNTAX
@@ -24,7 +26,10 @@ The **New-RMSProtectionLicense** cmdlet creates an ad-hoc rights policy that you
 
 Create an ad-hoc rights policy (also known as a publishing license) when you cannot use a previously created rights policy template.
 
-This cmdlet is not supported for the Azure Information Protection unified labeling client.
+> [!NOTE]
+> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. 
+> 
+> This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
 ## EXAMPLES
 
@@ -55,9 +60,9 @@ InputFile             EncryptedFile
 C:\Test.txt           C:\Test.ptxt
 ```
 
-The first command creates an ad-hoc rights policy that sets user1@contoso.com as the owner and grants user2@contoso.com and user3@ contoso.com VIEW and PRINT rights, and stores this policy in a variable named License.
+The first command creates an ad-hoc rights policy that sets user1@contoso.com as the owner and grants user2@contoso.com and user3@contoso.com VIEW and PRINT rights, and stores this policy in a variable named License.
 
-The second command then uses the created ad-hoc policy to protect the file C:\Test.txt.
+The second command then uses the created ad-hoc policy to protect the file **C:\Test.txt**.
 
 ## PARAMETERS
 
@@ -198,7 +203,9 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. 
+
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

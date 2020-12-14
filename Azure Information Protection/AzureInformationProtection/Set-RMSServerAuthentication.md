@@ -9,6 +9,8 @@ schema: 2.0.0
 # Set-RMSServerAuthentication
 
 ## SYNOPSIS
+**Relevant for:** AIP classic client only
+
 Sets the server mode, which is required for non-interactive sessions.
 
 ## SYNTAX
@@ -23,15 +25,18 @@ The **Set-RMSServerAuthentication** cmdlet sets the server mode so that commands
 
 This cmdlet does not apply if you use your user account to protect or unprotect files. 
 
-- For Azure RMS: Server mode requires you to specify credentials for a service principal account that authenticates to the Azure Rights Management service. 
+- **For Azure RMS:** Server mode requires you to specify credentials for a service principal account that authenticates to the Azure Rights Management service. 
 
-- For AD RMS: Server mode requires you to specify Windows integrated authentication so that the computer account can be authenticated with the AD RMS service. The computer account must be granted permissions to ServerCertification.asmx.
+- **For AD RMS:** Server mode requires you to specify Windows integrated authentication so that the computer account can be authenticated with the AD RMS service. The computer account must be granted permissions to ServerCertification.asmx.
     
     Server mode for AD RMS requires the current GA version of the Azure Information Protection client.
 
-For information how to get the identifiers that the service principal requires for Azure RMS, and how to grant the permissions for AD RMS, see [Using PowerShell with the Azure Information Protection client](/information-protection/rms-client/client-admin-guide-powershell) from the Azure Information Protection client admin guide.
+For information how to get the identifiers that the service principal requires for Azure RMS, and how to grant the permissions for AD RMS, see [Using PowerShell with the AIP classic client](/information-protection/rms-client/client-admin-guide-powershell).
 
-This cmdlet is not supported for the Azure Information Protection unified labeling client.
+> [!NOTE]
+> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. 
+> 
+> This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
 ## EXAMPLES
 
@@ -122,7 +127,9 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. 
+
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

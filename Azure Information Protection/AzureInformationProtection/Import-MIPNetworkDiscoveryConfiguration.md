@@ -8,6 +8,8 @@ schema: 2.0.0
 # Import-MIPNetworkDiscoveryConfiguration
 
 ## SYNOPSIS
+**Relevant for:** AIP unified labeling client only
+
 Imports a local configuration for Network Discovery network scan jobs.
 
 ## SYNTAX
@@ -17,7 +19,6 @@ Import-MIPNetworkDiscoveryConfiguration -FileName <String> [-WhatIf] [-Confirm] 
 ```
 
 ## DESCRIPTION
-
 The **Import-MIPNetworkDiscoveryConfiguration** cmdlet imports local configuration settings for the Azure Information Protection network scan jobs, and automatically configures the scanner to use the offline configuration. 
 
 Network Discovery network scan jobs enable Azure Information Protection administrators to scan specific IP addresses or ranges for risky repositories to add to scan further with content scan jobs.
@@ -94,7 +95,9 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. 
+
+For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

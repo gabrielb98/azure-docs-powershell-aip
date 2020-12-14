@@ -48,7 +48,7 @@ This command adds an individual user to your organization's super user list for 
 PS C:\>Add-AipServiceSuperUser -ServicePrincipalId "3C367900-44D1-4865-9379-9A3227042C25"
 ```
 
-This command adds a service principal to your organization's super user list for Azure Information Protection, by specifying the service principal's AppPrincipalId.
+This command adds a service principal to your organization's super user list for Azure Information Protection, by specifying the service principal's **AppPrincipalId**.
 
 ## PARAMETERS
 
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ### -ServicePrincipalId
 Specifies the **AppPrincipalId** of the service principal in your organization to grant this account super user privileges. Use the **Get-MsolServicePrincipal** cmdlet to get an existing service principal, or the [New-MsolServicePrincipalCredential](/powershell/module/msonline/new-msolserviceprincipalcredential?view=azureadps-1.0) cmdlet to create a new service principal.
 
-The service principal ID is converted to a pseudo-email address and added to the super user list for the organization. For example, `Add-AipServiceSuperUser -ServicePrincipalId "3C367900-44D1-4865-9379-9A3227042C25"` adds 3C367900-44D1-4865-9379-9A3227042C25@\<AIPService tenant ID\>.aipservice.na.aadrm.com to the super user list.
+The service principal ID is converted to a pseudo-email address and added to the super user list for the organization. For example, `Add-AipServiceSuperUser -ServicePrincipalId "3C367900-44D1-4865-9379-9A3227042C25"` adds *3C367900-44D1-4865-9379-9A3227042C25@\<AIPService tenant ID\>.aipservice.na.aadrm.com* to the super user list.
 
 You can remove the service principal from the super user list by using the [Remove-AipServiceSuperUser](./Remove-AipServiceSuperUser.md) cmdlet and this pseudo-email address. You can use the [Get-AipServiceSuperUser](./Get-AipServiceSuperUser.md) cmdlet to verify the email address.
 
@@ -87,7 +87,9 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. 
+
+For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

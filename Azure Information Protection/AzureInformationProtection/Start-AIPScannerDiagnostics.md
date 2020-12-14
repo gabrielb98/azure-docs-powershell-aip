@@ -8,6 +8,8 @@ schema: 2.0.0
 # Start-AIPScannerDiagnostics
 
 ## SYNOPSIS
+**Relevant for:** Unified labeling client only
+
 Starts a series of health checks for a locally installed AIP scanner service.
 
 ## SYNTAX
@@ -17,7 +19,7 @@ Start-AIPScannerDiagnostics [-OnBehalfOf <PSCredential>] [-ResetConfig] [<Common
 ```
 
 ## DESCRIPTION
-This cmdlet triggers a series of diagnostic checks to verify that the scanner deployment is healthy.
+The **Start-AIPScannerDiagnostics** cmdlet triggers a series of diagnostic checks to verify that the scanner deployment is healthy.
 
 Diagnostic checks include whether:
 
@@ -79,21 +81,9 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters:
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. 
 
-- Debug
-- ErrorAction
-- ErrorVariable
-- InformationAction
-- InformationVariable
-- OutVariable
-- OutBuffer
-- PipelineVariable
-- Verbose
-- WarningAction
-- WarningVariable
-
-For more information, see [About CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

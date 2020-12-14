@@ -8,6 +8,8 @@ schema: 2.0.0
 # Start-MIPNetworkDiscovery
 
 ## SYNOPSIS
+**Relevant for:** AIP unified labeling client only
+
 Instructs the Azure Information Protection scanner to start a network scan job.
 
 ## SYNTAX
@@ -30,7 +32,7 @@ The scanner's Network Discovery service must be started before you can run this 
 PS C:\> 
 Start-MIPNetworkDiscovery -JobId f7715158-dc9e-40d5-b78e-9c93a8c30577
 ```
-This example runs the network scan job with a job GUID of **f7715158-dc9e-40d5-b78e-9c93a8c30577.** 
+This example runs the network scan job with a job GUID of **f7715158-dc9e-40d5-b78e-9c93a8c30577**. 
 
 ## PARAMETERS
 
@@ -66,7 +68,9 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. 
+
+For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

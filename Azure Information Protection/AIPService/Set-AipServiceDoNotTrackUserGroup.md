@@ -40,7 +40,9 @@ Specifies the email address of the group whose members will be exempt from being
 
 You can specify a group that contains individual users, or nested groups. The email address must be a valid group email address that already exists in the organization.
 
-Note: Global administrators can always track the activities of these members.
+> [!NOTE]
+> Global administrators can always track the activities of these members.
+> 
 
 ```yaml
 Type: String
@@ -55,7 +57,9 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. 
+
+For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
