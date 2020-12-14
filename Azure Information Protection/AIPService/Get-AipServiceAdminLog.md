@@ -37,7 +37,7 @@ This command generates a log that contains all the administrative protection com
 PS C:\>Get-AipServiceAdminLog -Path "C:\Temp\AdminLog.log" -FromTime "05/01/2015 00:00:00" -ToTime "05/31/2015 23:59:59"
 ```
 
-This command generates a log of administrative protection commands that have been run for your tenant, limited to items that fall within the specific time period by using the *FromTime* and *ToTime* parameters. In this example, the time period is all days in May 2015, using the US date format.
+This command generates a log of administrative protection commands that have been run for your tenant, limited to items that fall within the specific time period by using the *FromTime* and *ToTime* parameters. In this example, the time period is all days in **May 2015**, using the US date format.
 
 ### Example 3: Generate a log of commands for the last 45 days
 ```
@@ -80,7 +80,9 @@ Accept wildcard characters: False
 ```
 
 ### -FromTime
-Specifies the start time (inclusive) for the log file as a **DateTime** object. To obtain a **DateTime** object, use the [Get-Date](/powershell/module/Microsoft.PowerShell.Utility/Get-Date?viewFallbackFrom=powershell-4.0) cmdlet. Specify the date and time according to your system locale settings. For more information, type `Get-Help Get-Date`.
+Specifies the start time (inclusive) for the log file as a **DateTime** object. To obtain a **DateTime** object, use the [Get-Date](/powershell/module/Microsoft.PowerShell.Utility/Get-Date?viewFallbackFrom=powershell-4.0) cmdlet. Specify the date and time according to your system locale settings. 
+
+For more information, type `Get-Help Get-Date`.
 
 ```yaml
 Type: DateTime
@@ -110,7 +112,9 @@ Accept wildcard characters: False
 ```
 
 ### -ToTime
-Specifies the stop time (inclusive) for the log file as a **DateTime** object. To obtain a **DateTime** object, use the **Get-Date** cmdlet. Specify the date and time according to your system locale settings. For more information, type `Get-Help Get-Date`.
+Specifies the stop time (inclusive) for the log file as a **DateTime** object. To obtain a **DateTime** object, use the **Get-Date** cmdlet. Specify the date and time according to your system locale settings. 
+
+For more information, type `Get-Help Get-Date`.
 
 ```yaml
 Type: DateTime
@@ -140,7 +144,9 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. 
+
+For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

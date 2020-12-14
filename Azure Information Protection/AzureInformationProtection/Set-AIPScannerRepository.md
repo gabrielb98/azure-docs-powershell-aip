@@ -8,6 +8,8 @@ schema: 2.0.0
 # Set-AIPScannerRepository
 
 ## SYNOPSIS
+**Relevant for:** Unified labeling client only. Deprecated for the classic client.
+
 Updates an existing repository in an Azure Information Protection content scan job.
 
 ## SYNTAX
@@ -26,14 +28,17 @@ Updates the details for an existing repository defined in your content scan job.
 
 For more information about content scan jobs, see the [Azure Information Protection on-premises scanner documentation](/information-protection/deploy-aip-scanner-configure-install#create-a-content-scan-job).
 
-> [!IMPORTANT]
+> [!NOTE]
 > If you are using the AIP classic client, this cmdlet is deprecated. Instead, use the [Azure portal to configure the scanner](/information-protection/deploy-aip-scanner-classic).
 > 
-
+> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. 
+> 
+> This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+>
 ## EXAMPLES
 
 ### Example 1 Update the repository details using the configured content scan job settings
-```PowerShell
+```powershell
 PS C:\WINDOWS\system32> Set-AIPScannerRepository -OverrideContentScanJob Off -Path 'c:\repoToScan'
 ```
 
@@ -41,7 +46,7 @@ This example sets the **repoToScan** repository settings in your content scan jo
 
 ### Example 2 Update the repository details, overriding the content scan job's current settings
 
-```PowerShell
+```powershell
 PS C:\WINDOWS\system32> Set-AIPScannerRepository -Path 'c:\repoToScan' -OverrideContentScanJob On -Enforce On -DefaultOwner 'ms@gmail.com'
 ```
 
@@ -49,7 +54,7 @@ This example sets the **repoToScan** repository settings to override the current
 
 ### Example 3 Update the repository details, excluding .msg and .tmp files
 
-```PowerShell
+```powershell
 PS C:\WINDOWS\system32> Set-AIPScannerRepository -OverrideContentScanJob On -Path 'c:\repoToScan' -IncludeFileTypes '' -ExcludeFileTypes '.msg,.tmp' 
 ```
 
@@ -60,7 +65,7 @@ This example defines a content scan job that includes all file types except for 
 ### -AllowLabelDowngrade
 Determines whether the content scan job allows for labeling downgrade actions.
 
-Relevant only when the following parameters are set to **on**:
+Relevant only when the following parameters are set to **on:**
 
 - **OverrideContentScanJob**
 - **RelabelFiles**
@@ -192,7 +197,7 @@ Accept wildcard characters: False
 ### -EnforceDefaultLabel
 Determines whether using a default label is always used when relabeling content.
 
-Relevant only when the following parameters are set to **on**:
+Relevant only when the following parameters are set to **on:**
 
 - **RelabelFiles**
 - **OverrideContentScanJob** 
@@ -342,7 +347,7 @@ Specifies the SAMAccountname (**domain\user**), UPN (**user@domain**), or SID of
 
 The owners are granted full control permissions on the file if the permissions on the file are changed by a matched DLP rule.
 
-Relevant only when the following parameters are set to **on**:
+Relevant only when the following parameters are set to **on:**
 
 - **OverrideContentScanJob**
 - **EnableDlp**

@@ -26,6 +26,12 @@ The cmdlet output is a list of template objects that contain all the template pr
 
 For more information about protection templates, including how to configure them in the Azure portal, see [Configuring and managing templates for Azure Information Protection](/information-protection/deploy-use/configure-policy-templates).
 
+**Using the Azure Information Protection unified labeling client?**
+
+The Azure Information Protection unified labeling client uses protection templates indirectly. If you have the unified labeling client, we recommend that you use label-based cmdlets instead of modifying your protection templates directly.
+
+For more information, see [Create and publish sensitivity labels](/microsoft-365/compliance/create-sensitivity-labels) in the Microsoft 365 documentation.
+
 ## EXAMPLES
 
 ### Example 1: Get all templates
@@ -74,7 +80,7 @@ This cmdlet outputs a list comprising all protection templates for the tenant, o
 
 If no name is defined for a template in the current locale, "No name defined in language-code" is returned as the name for that template.
 
-If no description is defined for a template in the current locale, "No description defined in language-code" is returned as the description for that template.
+If no description is defined for a template in the current locale, **No description defined in language-code** is returned as the description for that template.
 
 ## NOTES
 

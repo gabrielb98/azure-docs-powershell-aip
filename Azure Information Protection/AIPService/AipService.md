@@ -18,11 +18,23 @@ These PowerShell cmdlets let you administer Azure Information Protection from th
 
 For more information about when you must use PowerShell cmdlets and to see groupings of cmdlets by administration tasks, see [Administering the protection service from Azure Information Protection by using PowerShell](/information-protection/deploy-use/administer-powershell).
 
->[!TIP]
->
-> The current version of this module is **1.0.0.2**. To check the version you have installed, run: `(Get-Module AIPService -ListAvailable).Version` If this command or any cmdlet from this module fails to run, first run **Import-Module AIPService**.
+- **Current version:** The current version of this module is **1.0.0.4**. 
 
-The .dll file for this module is *AIPService.dll*.
+    To check the version you have installed, run: `(Get-Module AIPService -ListAvailable).Version` If this command or any cmdlet from this module fails to run, first run **Import-Module AIPService**.
+
+- **.dll file:** The .dll file for this module is *AIPService.dll*.
+
+## Protection templates and the AIP unified labeling client
+
+The Azure Information Protection unified labeling client uses protection templates indirectly. If you have the unified labeling client, we recommend that you use label-based cmdlets instead of modifying your protection templates directly.
+
+For more information, see:
+
+- [Create and publish sensitivity labels](/microsoft-365/compliance/create-sensitivity-labels) in the Microsoft 365 documentation
+- [AzureInformationProtection Module](../AzureInformationProtection/AzureInformationProtection.md)
+- [Policy and compliance PowerShell cmdlets](/powershell/module/exchange/?view=exchange-ps#policy-and-compliance)
+- [Custom configurations for the Azure Information Protection unified labeling client](/information-protection/rms-client/clientv2-admin-guide-customizations)
+- [Using PowerShell with the Azure Information Protection unified labeling client](/information-protection/rms-client/clientv2-admin-guide-powershell)
 
 ## AIPService Cmdlets
 ### [Add-AipServiceRoleBasedAdministrator](Add-AipServiceRoleBasedAdministrator.md)

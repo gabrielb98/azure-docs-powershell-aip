@@ -19,7 +19,7 @@ Set-AipServiceMaxUseLicenseValidityTime [-MaxUseLicenseValidityTime] <UInt16> [-
 ```
 
 ## DESCRIPTION
-The **Set-AipServiceMaxUseLicenseValidityTime** cmdlet sets the maximum validity time for use licenses that Azure Information Protection grants for your organization when it protects files and email messages. The default value is 30 days.
+The **Set-AipServiceMaxUseLicenseValidityTime** cmdlet sets the maximum validity time for use licenses that Azure Information Protection grants for your organization when it protects files and email messages. The default value is **30 days**.
 
 You must use PowerShell to set this configuration at the organization level; you cannot do this configuration by using a management portal.
 
@@ -35,7 +35,7 @@ For example, if a user shares a protected file by email and the protected file h
 
 - Amelia opens the file a week after it arrives, and then does not open it again for two months. When she tries to open it this second time, she does not have Internet access and so she cannot open the file.
 
-This setting at the tenant level can be overridden by a more restrictive setting in a protection template because of the *LicenseValidityDuration* parameter in the [Set-AipServiceTemplateProperty](./Set-AipServiceTemplateProperty.md) and [Add-AipServiceTemplate](./Add-AipServiceTemplate.md) cmdlets, which administrators can also set in the Azure portal by configuring the offline access option, "Number of days the content is available without an Internet connection".
+This setting at the tenant level can be overridden by a more restrictive setting in a protection template because of the *LicenseValidityDuration* parameter in the [Set-AipServiceTemplateProperty](./Set-AipServiceTemplateProperty.md) and [Add-AipServiceTemplate](./Add-AipServiceTemplate.md) cmdlets, which administrators can also set in the Azure portal by configuring the offline access option, **Number of days the content is available without an Internet connection**.
 
 When there are different values for the use license, for example, one value for the tenant and one for the template, Azure Information Protection uses the most restrictive value.
 
@@ -89,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxUseLicenseValidityTime
-Specifies the maximum validity time (0 - 65535) for use licenses in days.
+Specifies the maximum validity time **(0 - 65535)** for use licenses in days.
 
 ```yaml
 Type: UInt16
@@ -119,7 +119,9 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. 
+
+For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

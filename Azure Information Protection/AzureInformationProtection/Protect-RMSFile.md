@@ -9,6 +9,8 @@ schema: 2.0.0
 # Protect-RMSFile
 
 ## SYNOPSIS
+**Relevant for:** AIP classic client only
+
 Protects a specified file or the files in a specified folder by using RMS.
 
 ## SYNTAX
@@ -22,7 +24,9 @@ Protect-RMSFile [-File <String>] [-Folder <String>] [-InPlace] [-Recurse] [-Temp
 ## DESCRIPTION
 The **Protect-RMSFile** cmdlet protects a file or all files in a specified folder by using Azure RMS or AD RMS. If the file was previously protected, it will be protected again, to apply any changes such as those that might be made to the template that is being used to protect the file.
 
-Multiple file types can be protected in the same way that the Azure Information Protection client can protect files when you use the "Classify and protect" right-click option from File Explorer. Different levels of protection are automatically applied (native or generic), depending on the file type. You can change the level of protection by editing the registry. In addition, some files change their file name extension after they are protected by Rights Management. For more information, see the [File types supported for protection](/information-protection/rms-client/client-admin-guide-file-types#file-types-supported-for-protection) section from the Azure Information Protection client admin guide.
+Multiple file types can be protected in the same way that the Azure Information Protection client can protect files when you use the "Classify and protect" right-click option from File Explorer. 
+
+Different levels of protection are automatically applied (native or generic), depending on the file type. You can change the level of protection by editing the registry. In addition, some files change their file name extension after they are protected by Rights Management. For more information, see the [File types supported for protection](/information-protection/rms-client/client-admin-guide-file-types#file-types-supported-for-protection) section from the Azure Information Protection client admin guide.
 
 Before you run this cmdlet, you must run [Get-RMSTemplate](./Get-RMSTemplate.md) to download the templates onto your computer. If the template that you want to use has been modified since you ran this cmdlet, run it again with the **-force** parameter to download the revised template.
 
@@ -38,11 +42,16 @@ When you run this cmdlet, you have the following options:
 
 You cannot run this command concurrently but must wait for the original command to complete before running it again. If you try to run it again before the previous command has finished, the new command will fail.
 
-This cmdlet writes to the following log files: **Success.log**, **Failure.log**, and **Debug.log** in %localappdata%\Microsoft\MSIPC\pscmdlet\Logs\\<GUID>.
+This cmdlet writes to the following log files: **Success.log**, **Failure.log**, and **Debug.log** in **%localappdata%\Microsoft\MSIPC\pscmdlet\Logs\\<GUID>**.
 
-Tip: For step-by-step instructions to use this cmdlet to protect files on a Windows Server file share, using File Resource Manager and File Classification Infrastructure, see [RMS Protection with Windows Server File Classification Infrastructure (FCI)](/information-protection/rms-client/configure-fci).
+> [!TIP]
+> For step-by-step instructions to use this cmdlet to protect files on a Windows Server file share, using File Resource Manager and File Classification Infrastructure, see [RMS Protection with Windows Server File Classification Infrastructure (FCI)](/information-protection/rms-client/configure-fci).
+>
 
-This cmdlet is not supported for the Azure Information Protection unified labeling client.
+> [!NOTE]
+> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. 
+> 
+> This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
 
 ## EXAMPLES
 
@@ -54,7 +63,7 @@ InputFile             EncryptedFile
 C:\Test.docx          C:\Test.docx
 ```
 
-This command protects a single file named Test.docx by using a template, and replaces the original unprotected file. The Rights Management owner of the file, and the email address that might be displayed to users when they access the protected file, is automatically set as the email address for the account running the command.
+This command protects a single file named **Test.docx** by using a template, and replaces the original unprotected file. The Rights Management owner of the file, and the email address that might be displayed to users when they access the protected file, is automatically set as the email address for the account running the command.
 
 ### Example 2: Create a protected copy of a single file by using a template
 ```
@@ -64,7 +73,7 @@ InputFile             EncryptedFile
 C:\Test.docx          C:\Test-Copy.docx
 ```
 
-This command is the same as the previous example, except that it doesn't use the InPlace parameter. Because it also doesn't use the OutputFolder parameter, the protected file is created in the current folder with "-Copy" appended to the file name. The original, unprotected file remains in the current folder.
+This command is the same as the previous example, except that it doesn't use the **InPlace** parameter. Because it also doesn't use the **OutputFolder** parameter, the protected file is created in the current folder with "-Copy" appended to the file name. The original, unprotected file remains in the current folder.
 
 ### Example 3: Create a protected version of a file by using a template
 ```
@@ -75,7 +84,7 @@ InputFile             EncryptedFile
 C:\Test.txt           C:\Temp\Test.ptxt
 ```
 
-This command protects a single file named Test.docx by using a template and places this protected version of the file in C:\Temp, leaving the original file unprotected in the root of the C: drive. The Rights Management owner of the file, and the email address that might be displayed to users when they access the protected file, is for the administrator.
+This command protects a single file named **Test.docx** by using a template and places this protected version of the file in **C:\Temp**, leaving the original file unprotected in the root of the C: drive. The Rights Management owner of the file, and the email address that might be displayed to users when they access the protected file, is for the administrator.
 
 ### Example 4: Protected all files in a folder by using a template
 ```
@@ -127,11 +136,13 @@ InputFile             EncryptedFile
 C:\Test.txt           C:\Test.ptxt
 ```
 
-The first command creates an ad-hoc rights policy that grants Edit rights to user1@contoso.com.
+The first command creates an ad-hoc rights policy that grants **Edit** rights to **user1@contoso.com**.
 
 The second command protects a single file named Test.txt by using this ad-hoc rights policy just created, and replaces the original unprotected file.
 
-Note that unless your email address is user1@contoso.com, you will not be able to unprotect this file after the command completes because you do not have any rights to it and you are not the Rights Management owner. If you need to be able to unprotect this file later, you can add your name and grant the user and yourself either the EXTRACT or OWNER right in the ad-hoc rights policy in the first command. Or if you do not want the user to be able to unprotect the file, add *-OwnerEmail \<your email address\>* to the end of the second command.
+Note that unless your email address is user1@contoso.com, you will not be able to unprotect this file after the command completes because you do not have any rights to it and you are not the Rights Management owner. 
+
+If you need to be able to unprotect this file later, you can add your name and grant the user and yourself either the EXTRACT or OWNER right in the ad-hoc rights policy in the first command. Or if you do not want the user to be able to unprotect the file, add *-OwnerEmail \<your email address\>* to the end of the second command.
 
 ## PARAMETERS
 
@@ -140,15 +151,15 @@ Prevents a self-granted end user license for the Rights Management issuer from b
 
 The Rights Management issuer is the account that protects the files. For more information, see [Rights Management issuer and Rights Management owner](/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner). 
 
-By default, this self-granted end user license is saved in both the file itself and on the computer from which the cmdlet is run. The file name starts with EUL and it is created in %localappdata%\Microsoft\MSIPC. Use this parameter to prevent this end user license from saving in the file, on the computer, or both. Specifying this parameter is appropriate if you are protecting files on behalf of others, for example, with Windows Server FCI. In this scenario, the Rights Management issuer will not be opening the protected files and therefore creating and saving the end user license decreases the protection performance and unnecessarily generates a lot of files that can fill up the available disk space.
+By default, this self-granted end user license is saved in both the file itself and on the computer from which the cmdlet is run. The file name starts with EUL and it is created in **%localappdata%\Microsoft\MSIPC**. Use this parameter to prevent this end user license from saving in the file, on the computer, or both. Specifying this parameter is appropriate if you are protecting files on behalf of others, for example, with Windows Server FCI. In this scenario, the Rights Management issuer will not be opening the protected files and therefore creating and saving the end user license decreases the protection performance and unnecessarily generates a lot of files that can fill up the available disk space.
 
 The acceptable values for this parameter:
 
-- **Disk**: An end user license for the Rights Management issuer is not generated for each file in %localappdata%\Microsoft\MSIPC.
+- **Disk:** An end user license for the Rights Management issuer is not generated for each file in %localappdata%\Microsoft\MSIPC.
 
-- **License**:  An end user license for the Rights Management issuer is not inserted in the publishing license for the file.
+- **License:**  An end user license for the Rights Management issuer is not inserted in the publishing license for the file.
 
-- **All**: No end user license for the Rights Management issuer is created and saved when a file is protected.
+- **All:** No end user license for the Rights Management issuer is created and saved when a file is protected.
 
 ```yaml
 Type: String
@@ -198,7 +209,7 @@ Accept wildcard characters: False
 ### -InPlace
 The file or the files in the specified folder are protected in the current location, replacing the unprotected original file or files. This parameter is ignored if the *OutputFolder* parameter is specified.
 
-If neither *InPlace* nor *OutputFolder* is specified, the new file is created in the current directory with "-Copy" appended to the file name, using the same naming convention that File Explorer uses when a file is copied and pasted into the same folder. For example, if a file with Document.docx is unprotected, the protected version is named Document-Copy.docx. If a file named Document-Copy.docx already exists, Document-Copy(2).docx is created, and so on.
+If neither *InPlace* nor *OutputFolder* is specified, the new file is created in the current directory with "-Copy" appended to the file name, using the same naming convention that File Explorer uses when a file is copied and pasted into the same folder. For example, if a file with Document.docx is unprotected, the protected version is named **Document-Copy.docx**. If a file named **Document-Copy.docx** already exists, **Document-Copy(2).docx** is created, and so on.
 
 ```yaml
 Type: SwitchParameter
@@ -300,7 +311,9 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. 
+
+For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

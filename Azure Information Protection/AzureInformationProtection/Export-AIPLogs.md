@@ -8,6 +8,7 @@ schema: 2.0.0
 # Export-AIPLogs
 
 ## SYNOPSIS
+**Relevant for:** AIP unified labeling client only
 
 Gathers and exports Azure Information Protection client and scanner log files to a compressed file.
 
@@ -18,12 +19,9 @@ Export-AIPLogs [-FileName] <String> [-OnBehalfOf <PSCredential>] [<CommonParamet
 ```
 
 ## DESCRIPTION
-
-The Export-AIPLogs cmdlet gathers all client and scanner log files from %localappdata%\Microsoft\MSIP\Logs and saves them to a single, compressed file that has a .zip format. This file can then be sent to Microsoft Support if you are requested to send log files to help investigate a reported issue with the Azure Information Protection unified labeling client or scanner from this client.
+The **Export-AIPLogs** cmdlet gathers all client and scanner log files from **%localappdata%\Microsoft\MSIP\Logs** and saves them to a single, compressed file that has a **.zip** format. This file can then be sent to Microsoft Support if you are requested to send log files to help investigate a reported issue with the Azure Information Protection unified labeling client or scanner from this client.
 
 Use the *OnBehalfOf* parameter if you need to export log files from a service account. For example, an account that has been created to run non-interactively, such as the account for the Azure Information Protection scanner.
-
-This cmdlet is supported only for the Azure Information Protection unified labeling client.
 
 ## EXAMPLES
 
@@ -32,7 +30,7 @@ This cmdlet is supported only for the Azure Information Protection unified label
 PS C:\> Export-AIPLogs -FileName C:\Logs\AIPLogs.zip
 ```
 
-This command gathers and saves all exported logs to the AIPLogs.zip file in the existing C:\Logs folder.
+This command gathers and saves all exported logs to the AIPLogs.zip file in the existing **C:\Logs** folder.
 
 ## PARAMETERS
 
@@ -44,7 +42,7 @@ The path can be local or a network path (mapped drive letter or UNC).
 
 Any folders in the path must already exist. If you specify a file name that already exists in the specified folder, the original file is overwritten.
 
-When you specify the file name, include the .zip file name extension.
+When you specify the file name, include the **.zip** file name extension.
 
 ```yaml
 Type: String
@@ -64,7 +62,7 @@ To use this parameter, you must run your PowerShell session with the **Run as Ad
 
 Specifies the variable that includes the credentials object to use when you need to export log files from an account other than the account you are currently signed in with. For example, you need to collect log files for the service account that runs the Azure Information Protection scanner. In this scenario, if the scanner is installed on the same computer as you're running this cmdlet, the log files also include some information from the scanner's configuration database.
 
-Use the Get-Credentials cmdlet to create the variable that stores the credentials.
+Use the [Get-Credentials](/powershell/module/Microsoft.PowerShell.Security/Get-Credential) cmdlet to create the variable that stores the credentials.
 
 
 ```yaml
@@ -80,7 +78,9 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. 
+
+For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

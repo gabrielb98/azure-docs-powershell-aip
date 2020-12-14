@@ -8,6 +8,8 @@ schema: 2.0.0
 # Get-AIPScannerRepository
 
 ## SYNOPSIS
+**Relevant for:** AIP unified labeling client. Deprecated for the classic client.
+
 Gets repository data for an Azure Information Protection content scan job.
 
 ## SYNTAX
@@ -21,14 +23,18 @@ Gets a list of data repositories that the content scan job is configured to scan
 
 For more information about content scan jobs, see the [Azure Information Protection on-premises scanner documentation](/information-protection/deploy-aip-scanner-configure-install#create-a-content-scan-job).
 
-> [!IMPORTANT]
+> [!NOTE]
 > If you are using the AIP classic client, this cmdlet is deprecated. Instead, use the [Azure portal to configure the scanner](/information-protection/deploy-aip-scanner-classic).
 > 
+> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. 
+> 
+> This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+>
 
 ## EXAMPLES
 
 ### Example 1 Get details for all repositories for the content scan job
-```PowerShell
+```powershell
 PS C:\WINDOWS\system32> Get-AIPScannerRepository
 
 Path: c:\repoToScan1
@@ -68,7 +74,7 @@ ExcludeFileTypes        : .lnk,.exe.,.com,.cmd,.bat,.dll,.ini,.sca,.drm,.sys,.cp
 This example shows a response that includes all repositories configured for the content scan job.
 
 ### Example 2 Get details for a specific repository in the content scan job
-```PowerShell
+```powershell
 PS C:\WINDOWS\system32> Get-AIPScannerRepository -Path 'c:\repoToScan1'
 
 Path: c:\repoToScan1
