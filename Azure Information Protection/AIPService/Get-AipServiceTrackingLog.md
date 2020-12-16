@@ -57,7 +57,7 @@ You can alternatively use the document tracking site to get the protection infor
 
 ## EXAMPLES
 
-### Example 1: (Unified lableling client only) Get tracking data for a specific document, using its contentId
+### Example 1: (Unified labeling client only) Get tracking data for a specific document, using its contentId
 ```
 PS C:\>Get-AipServiceDocumentLog -ContentId c03bf90c-6e40-4f3f-9ba0-2bcd77524b87
 ```

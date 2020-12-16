@@ -38,7 +38,7 @@ Information returned includes:
 - The document content ID, with the document name if available.
 - The Rights Management owner and Rights Management issuer.
 - The users and groups that were granted access.
-- The protection template ID or specific usage rights that protects the document.
+- The protection template ID or specific usage rights that protect the document.
 - Any expiry, offline access, or revocation setting.
 
 You can specify a start time and stop time of entries to include. The output is returned as a list of PowerShell objects in the PowerShell console.
