@@ -46,6 +46,9 @@ Adds a super user to Azure Information Protection.
 ### [Add-AipServiceTemplate](Add-AipServiceTemplate.md)
 Creates a protection template for Azure Information Protection.
 
+### [Clear-AipServiceDocumentRevoke](Clear-AipServiceDocumentRevoked.md)
+Un-revokes a specified, protected document that currently has a revoke status.
+
 ### [Clear-AipServiceDoNotTrackUserGroup](Clear-AipServiceDoNotTrackUserGroup.md)
 Clears the group for the users who must not be tracked by Azure Information Protection.
 
@@ -171,6 +174,9 @@ Removes a super user from Azure Information Protection.
 
 ### [Remove-AipServiceTemplate](Remove-AipServiceTemplate.md)
 Deletes a protection template for Azure Information Protection.
+
+### [Set-AipServiceDocumentRevoked](Set-AipServiceDocumentRevoked.md)
+Revokes access for specified users, to a specified tracked and protected document.
 
 ### [Set-AipServiceDoNotTrackUserGroup](Set-AipServiceDoNotTrackUserGroup.md)
 Sets a group for the users who must not be tracked by Azure Information Protection.
