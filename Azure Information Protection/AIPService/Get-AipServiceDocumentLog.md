@@ -52,7 +52,7 @@ When used with the unified labeling client, the query is based on the document n
 You must specify at least one of the following parameters:
 
 - **ContentName**
-- **OwnerEmail**
+- **Owner**
 
 > [!TIP]
 > If you use the **ContentName** parameter, we recommend that you also use the **FromTime** and **ToTime** parameters to filter your content to a specific time period.
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 
 Specifies the tracked document's full name, including the file extension. 
 
-If you have the unified labeling client, you must include either this parameter, or the **OwnerEmail** parameter, or you can include both.
+If you have the unified labeling client, you must include either this parameter, or the **Owner** parameter, or you can include both.
 
 > [!TIP]
 > If you use this parameter, we recommend that you also use the the **FromTime** and **ToTime** date filters to filter the data returned.
