@@ -20,7 +20,7 @@ This cmdlet is supported by both the Azure Information Protection classic and un
 
 ### Unified labeling client
 ```
-Get-AipServiceDocumentLog -ContentName <String> -OwnerEmail <String> [-FromTime <DateTime>] [-ToTime <DateTime>] [-WhatIf] [-Confirm]
+Get-AipServiceDocumentLog -ContentName <String> -Owner <String> [-FromTime <DateTime>] [-ToTime <DateTime>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 
 ```
@@ -68,14 +68,14 @@ You can alternatively use the document tracking site to get the protection infor
 
 ### Example 1: (Unified labeling client only) Get protection information about all tracked documents with a specific filename, which were protected in a specific timeframe
 ```
-PS C:\>Get-AipServiceDocumentLog -ContentName "test.docx" -FromTime "12/01/2020 00:00:00" -ToTime "12/31/2020 23:59:59"
+Get-AipServiceDocumentLog -ContentName "test.docx" -FromTime "12/01/2020 00:00:00" -ToTime "12/31/2020 23:59:59"
 ```
 
 This command runs a query and returns protection information about all tracked documents stored on your tenant with the filename **test.docx**, which were protected in December 2020.
 
 ### Example 2: (Unified labeling client only) Get protection information about all tracked documents with a specific filename and owner, which were protected in a specific timeframe
 ```
-Get-AipServiceDocumentLog -ContentName "test.docx" -OwnerEmail “alice@microsoft.com” -FromTime "12/01/2020 00:00:00" -ToTime "12/31/2020 23:59:59"
+Get-AipServiceDocumentLog -ContentName "test.docx" -Owner “alice@microsoft.com” -FromTime "12/01/2020 00:00:00" -ToTime "12/31/2020 23:59:59"
 ```
 
 This command runs a query and returns protection information about all tracked documents stored on your tenant that match the following details:
@@ -86,22 +86,22 @@ This command runs a query and returns protection information about all tracked d
 
 ### Example 3: (Classic client only) Get protection information about all tracked documents for a user
 ```
-PS C:\>Get-AipServiceDocumentLog -UserEmail "test@contoso.com"
+Get-AipServiceDocumentLog -UserEmail "test@contoso.com"
 ```
 
 This command gets protection information about the tracked documents for a user who has the email address of "test@contoso.com" and that user is the Rights Management issuer or Rights Management owner for the document, or the document was configured to grant access to that user.
 
 ### Example 4: (Classic client only) Get protection information about tracked documents for a user, for a specific time period
 ```
-PS C:\>Get-AipServiceDocumentLog -UserEmail "test@contoso.com" -FromTime "01/01/2018 00:00:00" -ToTime "01/31/2018 23:59:59"
+Get-AipServiceDocumentLog -UserEmail "test@contoso.com" -FromTime "01/01/2018 00:00:00" -ToTime "01/31/2018 23:59:59"
 ```
 
 This command is the same as the previous example except that results are limited to documents that were protected within a specific time period by using the *FromTime* and *ToTime* parameters. In this example, the time period is all days in January 2018, using the US date format.
 
 ### Example 5: (Classic client only) Get protection information about all tracked documents for a user and save the results to a .csv file
 ```
-PS C:\>$documentLogs = Get-AipServiceDocumentLog -UserEmail "test@microsoft.com"
-PS C:\>$documentLogs | Export-Csv 'C:\Temp\DocumentLog.csv' -NoTypeInformation
+$documentLogs = Get-AipServiceDocumentLog -UserEmail "test@microsoft.com"
+$documentLogs | Export-Csv 'C:\Temp\DocumentLog.csv' -NoTypeInformation
 ```
 
 The first command gets the protection information about the tracked documents for a user who has the email address of "test@contoso.com" and that user is the Rights Management issuer or Rights Management owner for the document, or the document was configured to grant access to that user. The information is saved in a variable.
