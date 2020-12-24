@@ -9,7 +9,7 @@ schema: 2.0.0
 # Enable-AipServiceDocumentTrackingFeature
 
 ## SYNOPSIS
-Enables document tracking for Azure Information Protection.
+Turns on document track and revoke features for Azure Information Protection.
 
 ## SYNTAX
 
@@ -18,24 +18,39 @@ Enable-AipServiceDocumentTrackingFeature [-Force] [-WhatIf] [-Confirm] [<CommonP
 ```
 
 ## DESCRIPTION
-The **Enable-AipServiceDocumentTrackingFeature** cmdlet enables the document tracking feature for Azure Information Protection. This cmdlet enables access to the document tracking site so that users can track or revoke access to documents that they have protected. This setting is organization-wide; you cannot enable document tracking for some users in your organization and not for others.
+The **Enable-AipServiceDocumentTrackingFeature** cmdlet turns on the document track and revoke features for Azure Information Protection.
 
-You must use PowerShell to enable document tracking; you cannot do this configuration by using a management portal.
+Activity related to shared documents (who opened them, when, from which location) is shown for only when the document track and revoke features are turned on. 
 
-By default, document tracking is enabled, so you would run this cmdlet only if somebody had previously disabled document tracking for your tenant. When document tracking is enabled, users can access the document tracking site to see the protected documents that they have shared to date. 
 
-Activity related to shared documents (who opened them, when, from which location) is shown for only when the document tracking site is enabled. For example, a user could revoke a document that they shared when document tracking was disabled but they cannot not see who opened this document when document tracking was disabled.
+- This setting is organization-wide; you cannot turn on document tracking for some users in your organization and not for others.
 
-For additional information about the document tracking site, see [Configuring and using document tracking for Azure Information Protection](/information-protection/rms-client/client-admin-guide-document-tracking) from the Azure Information Protection classic client administrator guide.
+- You must use PowerShell to turn on document tracking; you cannot do this configuration by using a management portal.
+
+- By default, document tracking is turned on, so you would run this cmdlet only if somebody had previously turned off document tracking for your tenant. 
+
+
+For more information, see:
+
+- [Administrator Guide: Track and revoke document access with Azure Information Protection](/information-protection/rms-client/track-and-revoke-admin)
+
+- [User Guide: Revoke document access with Azure Information Protection](/information-protection/rms-client/revoke-access-user) 
+
+**Classic client only**:
+
+If you are using the classic client, document tracking provides uses with access to the document tracking site, where they can view the protected documents that they have shared to date.
+
+For more information, see:
+[Configuring and using document tracking for Azure Information Protection for the classic client](/information-protection/rms-client/client-admin-guide-document-tracking).
 
 ## EXAMPLES
 
-### Example 1: Enable document tracking
+### Example 1: Turn on document tracking
 ```
 PS C:\>EnableAipServiceDocumentTrackingFeature
 ```
 
-This command enables document tracking for Azure Information Protection.
+This command turns on document tracking for Azure Information Protection.
 
 ## PARAMETERS
 
@@ -100,3 +115,5 @@ For more information, see [about_CommonParameters](/powershell/module/microsoft.
 [Disable-AipServiceDocumentTrackingFeature](./Disable-AipServiceDocumentTrackingFeature.md)
 
 [Get-AipServiceDocumentTrackingFeature](./Get-AipServiceDocumentTrackingFeature.md)
+
+[Get-AipServiceDocumentLog](Get-AipServiceDocumentLog.md)
