@@ -9,7 +9,7 @@ schema: 2.0.0
 # Disable-AipServiceDocumentTrackingFeature
 
 ## SYNOPSIS
-Disables document tracking for Azure Information Protection.
+Turns off document tracking for Azure Information Protection.
 
 ## SYNTAX
 
@@ -18,20 +18,35 @@ Disable-AipServiceDocumentTrackingFeature [-Force] [-WhatIf] [-Confirm] [<Common
 ```
 
 ## DESCRIPTION
-The **Disable-AipServiceDocumentTrackingFeature** cmdlet disables the document tracking feature for Azure Information Protection. This cmdlet disables access to the document tracking site so that all users in your organization cannot track or revoke access to documents that they have protected. In addition, activity related to shared documents (who opened them, when, from which location) is not logged to the document tracking site. For example, if you later enable the document tracking site, users will see the documents that they protected while the site was disabled but cannot see who opened them.
+The **Disable-AipServiceDocumentTrackingFeature** cmdlet turns off the document tracking feature for Azure Information Protection, so that users in your organization cannot track or revoke access to documents that they have protected.
 
-You must use PowerShell to disable document tracking; you cannot do this configuration by using a management portal.
+Document tracking is turned on by default, but you may need to turn it off for privacy requirements in your organization or region. This setting is organization-wide, and you cannot turn it off for some users in your organization but not others.
 
-Document tracking is enabled by default for an organization using the protection service from Azure Information Protection, but you might need to disable this feature for privacy requirements that are specific to your organization or region. This setting is organization-wide; you cannot disable document tracking for some users in your organization and not for others.
+Document tracking features differ when working with the unified labeling and classic clients, as described below:
 
-When document tracking is disabled, users still see options that refer to tracking and revocation in applications such as Word and File Explorer, and the Azure Information Protection client. However, when users access the document tracking site, they see the following message:
+**Unified labeling client**
+
+To turn off document tracking features with the unified labeling client, make sure that you set the **EnableTrackAndRevoke** advanced client setting to **False** in addition to running this cmdlet.
+
+> [!NOTE]
+> If you have upgraded to the unified labeling client from the classic client, and have had document tracking turned off, it remains turned off after your upgrade.
+> 
+
+**Classic client**
+
+When working with the classic client, this cmdlet turns off access to the document tracking site so that all users in your organization cannot track or revoke access to documents that they have protected. 
+
+In addition, activity related to shared documents (who opened them, when, from which location) is not logged to the document tracking site. For example, if you later enable the document tracking site, users will see the documents that they protected while the site was disabled but cannot see who opened them.
+
+When document tracking is turned off, users still see options that refer to tracking and revocation in applications such as Word and File Explorer, and the Azure Information Protection client. However, when users access the document tracking site, they see the following message:
 
 **Your administrator has disabled document tracking for your organization**.
 **Contact your administrator for details**.
 
-You can disable document tracking either before you activate the protection service for Azure Information Protection, or after. After you have disabled document tracking, you can re-enable it at any time.
-
 For additional information about the document tracking site, see [Configuring and using document tracking for Azure Information Protection](/information-protection/rms-client/client-admin-guide-document-tracking) from the Azure Information Protection classic client administrator guide.
+
+> [!NOTE]
+> You must use PowerShell to disable document tracking; you cannot do this configuration by using a management portal.
 
 ## EXAMPLES
 
