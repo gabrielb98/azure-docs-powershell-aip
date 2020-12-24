@@ -22,8 +22,6 @@ The **Disable-AipServiceDocumentTrackingFeature** cmdlet turns off the document 
 
 Document tracking is turned on by default, but you may need to turn it off for privacy requirements in your organization or region. This setting is organization-wide, and you cannot turn it off for some users in your organization but not others.
 
-You can turn document tracking off either before you activate AIP protection or after. Once you've turned tracking features off, you can also re-enable them at any time.
-
 Document tracking features differ when working with the unified labeling and classic clients, as described below:
 
 **Unified labeling client**
