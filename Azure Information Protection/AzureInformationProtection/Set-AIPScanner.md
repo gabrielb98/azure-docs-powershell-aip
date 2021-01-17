@@ -157,7 +157,7 @@ Accept wildcard characters: False
 ### -SqlServerInstance
 Specifies the new SQL Server instance on which to create a database for the Azure Information Protection scanner.
 
-For information about the SQL Server requirements, see [Prerequisites for the Azure Information Protection scanner](https://docs.microsoft.com/en-us/azure/information-protection/deploy-aip-scanner#prerequisites-for-the-azure-information-protection-scanner).
+For information about the SQL Server requirements, see [Prerequisites for the Azure Information Protection scanner](/azure/information-protection/deploy-aip-scanner#prerequisites-for-the-azure-information-protection-scanner).
 
 For the default instance, specify the server name. For example: **SQLSERVER1**.
 
@@ -235,4 +235,3 @@ For more information, see [about_CommonParameters](/powershell/module/microsoft.
 [Uninstall-AIPScanner](./Uninstall-AIPScanner.md)
 
 [Update-AIPScanner](./Update-AIPScanner.md)
-
