@@ -24,10 +24,13 @@ The **Clear-AipServiceDocumentRevoked** cmdlet clears the document's revoke stat
 
 For example, use this cmdlet if you have accidentally revoked access to the specified document, and want to now grant access again.
 
+Before running this cmdlet you must first load the **AipService.dll**.
+
 ## EXAMPLES
 
 ### Example 1: Unrevoke access for a specific document
 ```
+Import-Module -Name "C:\Program Files\WindowsPowerShell\Modules\AIPService\1.0.0.4\AipService.dll"
 Clear-AipServiceDocumentRevoked -ContentId c03bf90c-6e40-4f3f-9ba0-2bcd77524b87 - IssuerName  "alice@contoso.com"
 ```
 
