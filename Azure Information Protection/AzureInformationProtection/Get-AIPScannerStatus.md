@@ -68,8 +68,7 @@ Possible values:
 
 ## EXAMPLES
 
-### Example: 1 Get the current status of the scanner service
-**Unified labeling client**
+### Example 1: Get the current status of the scanner service (unified labeling client)
 
 ```
 PS C:\> Get-AIPScannerStatus
@@ -84,7 +83,7 @@ The output shows that a scan is currently running on the `contoso-test` cluster,
 
 The output also shows that the `contoso-test` cluster has 3 nodes.
 
-**Classic client**
+### Example 2: Get the current status of the scanner service (classic client)
 
 ```
 PS C:\> Get-AIPScannerStatus
