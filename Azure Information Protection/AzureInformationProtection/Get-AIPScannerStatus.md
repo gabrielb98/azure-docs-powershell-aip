@@ -95,7 +95,7 @@ The output shows that a scan is currently running on the `contoso-test` cluster,
 
 The output also shows that the `contoso-test` cluster has 3 nodes.
 
-### Example 2: Use the Verbose parameter to get data for current or last scan (unified labeling client)
+### Example 2: Use the Verbose parameter to get data for the current or last scan (unified labeling client)
 
 ```
 PS C:\> Get-AIPScannerStatus -Verbose
@@ -107,7 +107,45 @@ ScannedFiles    MBScanned    CurrentScanSummary                                 
 
 This output shows only a single repository. In cases of multiple repositories, each one will be listed separately.
 
-### Example 3: Use the Verbose parameter and the RepositoriesStatus variable (unified labeling client)
+### Example 3: Use the NodesInfo variable to get details about the scanning status on each node
+
+```powershell
+PS C:\> Get-AIPScannerStatus
+
+Cluster        : contoso-test
+ClusterStatus  : Scanning
+StartTime      : 12/22/2020 9:05:02 AM
+TimeFromStart  : 00:00:00:37
+NodesInfo      : {t-contoso1-T298-corp.contoso.com,t-contoso2-T298-corp.contoso.com}
+
+PS C:\WINDOWS\system32> $x=Get-AIPScannerStatus
+PS C:\WINDOWS\system32> $x.NodesInfo
+
+NodeName                            Status    IsScanning    Summary
+--------                            --------  ----------    -------
+t-contoso1-T298-corp.contoso.com    Scanning        True    Microsoft.InformationProtection.Scanner.ScanSummaryData
+t-contoso2-T298-corp.contoso.com    Scanning     Pending    Microsoft.InformationProtection.Scanner.ScanSummaryData
+
+PS C:\Windows\system32> $x.NodesInfo[0].Summary
+
+
+```powershell
+ScannerID               : t-contoso1-T298-corp.contoso.com
+ScannedFiles            : 2280
+FailedFiles             : 0
+ScannedBytes            : 78478187
+Classified              : 0
+Labeled                 : 0
+....
+
+```
+
+The output first displays details about the current scan status as well as a list of nodes in the cluster, and then details for each node, in a table. 
+
+Further drilldown using the node integer shows a long list of details about the scan on the selected node, such as the number of scanned, classified, and labeled files, as well as the number of bytes scanned.
+
+
+### Example 4: Use the Verbose parameter and the RepositoriesStatus variable (unified labeling client)
 
 ```powershell
 PS C:\Windows\system32> $x.Get-AIPScannerStatus -Verbose
@@ -120,7 +158,7 @@ C:\temp     Scanning
 
 The output shows the scan status for each repository configured for the content scan job.
 
-### Example 4: Use the Verbose parameter and the CurrentScanSummary variable (unified labeling client)
+### Example 5: Use the Verbose parameter and the CurrentScanSummary variable (unified labeling client)
 
 ```powershell
 PS C:\Windows\system32> $x.CurrentScanSummary
