@@ -81,7 +81,6 @@ Possible values:
 ## EXAMPLES
 
 ### Example 1: Get the current status of the scanner service (unified labeling client)
-
 ```
 PS C:\> Get-AIPScannerStatus
 Cluster        : contoso-test
@@ -96,7 +95,6 @@ The output shows that a scan is currently running on the `contoso-test` cluster,
 The output also shows that the `contoso-test` cluster has 3 nodes.
 
 ### Example 2: Use the Verbose parameter to get data for the current or last scan (unified labeling client)
-
 ```
 PS C:\> Get-AIPScannerStatus -Verbose
 
@@ -108,7 +106,6 @@ ScannedFiles    MBScanned    CurrentScanSummary                                 
 This output shows only a single repository. In cases of multiple repositories, each one will be listed separately.
 
 ### Example 3: Use the NodesInfo variable to get details about the scanning status on each node
-
 ```powershell
 PS C:\> Get-AIPScannerStatus
 
