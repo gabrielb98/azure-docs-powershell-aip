@@ -117,18 +117,35 @@ ClusterStatus  : Scanning
 StartTime      : 12/22/2020 9:05:02 AM
 TimeFromStart  : 00:00:00:37
 NodesInfo      : {t-contoso1-T298-corp.contoso.com,t-contoso2-T298-corp.contoso.com}
+```
 
+The output displays details about the current scan status, as well as a list of nodes in the cluster.
+
+Use the **NodesInfo** variable to display further details about each node in the cluster:
+
+```powershell
 PS C:\WINDOWS\system32> $x=Get-AIPScannerStatus
 PS C:\WINDOWS\system32> $x.NodesInfo
+```
 
+The output displays details for each node in a table. For example:
+
+```powershell
 NodeName                            Status    IsScanning    Summary
 --------                            --------  ----------    -------
 t-contoso1-T298-corp.contoso.com    Scanning        True    Microsoft.InformationProtection.Scanner.ScanSummaryData
 t-contoso2-T298-corp.contoso.com    Scanning     Pending    Microsoft.InformationProtection.Scanner.ScanSummaryData
+```
 
+To drill down further into each node, use the **NodesInfo** variable again, with the node integer starting with **0**. For example:
+
+```powershell
 PS C:\Windows\system32> $x.NodesInfo[0].Summary
+```
 
+The output displays a long list of details about the scan on the selected node. For example:
 
+```powershell
 ScannerID               : t-contoso1-T298-corp.contoso.com
 ScannedFiles            : 2280
 FailedFiles             : 0
@@ -136,13 +153,8 @@ ScannedBytes            : 78478187
 Classified              : 0
 Labeled                 : 0
 ....
+
 ```
-
-This output first displays details about the current scan status as well as a list of nodes in the cluster, and then details for each node, in a table. 
-
-Further drilldown using the node integer shows a long list of details about the scan on the selected node, such as the number of scanned, classified, and labeled files, as well as the number of bytes scanned. 
-
-When using the **NodesInfo** variable to drill down to node details, node integers start with **0**.
 
 
 ### Example 4: Use the Verbose parameter and the RepositoriesStatus variable (unified labeling client)
