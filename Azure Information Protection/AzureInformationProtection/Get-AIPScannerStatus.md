@@ -81,6 +81,7 @@ Possible values:
 ## EXAMPLES
 
 ### Example 1: Get the current status of the scanner service (unified labeling client)
+
 ```
 PS C:\> Get-AIPScannerStatus
 Cluster        : contoso-test
@@ -90,11 +91,12 @@ TimeFromStart  : 00:00:00:37
 NodesInfo      : {t-contoso1-T298-corp.contoso.com,t-contoso2-T298-corp.contoso.com,t-contoso3-T298-corp.contoso.com}
 ```
 
-The output shows that a scan is currently running on the `contoso-test` cluster, and was started 37 milliseconds ago, at 03/10/2021 9:05:02 AM.
+This output shows that a scan is currently running on the `contoso-test` cluster, and was started 37 milliseconds ago, at 03/10/2021 9:05:02 AM.
 
 The output also shows that the `contoso-test` cluster has 3 nodes.
 
 ### Example 2: Use the Verbose parameter to get data for the current or last scan (unified labeling client)
+
 ```
 PS C:\> Get-AIPScannerStatus -Verbose
 
@@ -105,7 +107,8 @@ ScannedFiles    MBScanned    CurrentScanSummary                                 
 
 This output shows only a single repository. In cases of multiple repositories, each one will be listed separately.
 
-### Example 3: Use the NodesInfo variable to get details about the scanning status on each node
+### Example 3: Use the NodesInfo variable to get details about the scanning status on each node (unified labeling client)
+
 ```powershell
 PS C:\> Get-AIPScannerStatus
 
@@ -136,7 +139,10 @@ Labeled                 : 0
 ....
 ```
 
-The output first displays details about the current scan status as well as a list of nodes in the cluster, and then details for each node, in a table. Further drilldown using the node integer shows a long list of details about the scan on the selected node.
+This output first displays details about the current scan status as well as a list of nodes in the cluster, and then details for each node, in a table. 
+
+Further drilldown using the node integer shows a long list of details about the scan on the selected node, such as the number of scanned, classified, and labeled files, as well as the number of bytes scanned.
+
 
 ### Example 4: Use the Verbose parameter and the RepositoriesStatus variable (unified labeling client)
 
@@ -168,7 +174,7 @@ Labeled                 : 0
 
 The output shows further details about the scan currently running, including the number of scanned, failed, classified, and labeled files, as well as the number of bytes scanned.
 
-### Example 5: Get the current status of the scanner service (classic client)
+### Example 6: Get the current status of the scanner service (classic client)
 
 ```
 PS C:\> Get-AIPScannerStatus
