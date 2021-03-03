@@ -140,7 +140,9 @@ Labeled                 : 0
 
 This output first displays details about the current scan status as well as a list of nodes in the cluster, and then details for each node, in a table. 
 
-Further drilldown using the node integer shows a long list of details about the scan on the selected node, such as the number of scanned, classified, and labeled files, as well as the number of bytes scanned.
+Further drilldown using the node integer shows a long list of details about the scan on the selected node, such as the number of scanned, classified, and labeled files, as well as the number of bytes scanned. 
+
+When using the **NodesInfo** variable to drill down to node details, node integers start with **0**.
 
 
 ### Example 4: Use the Verbose parameter and the RepositoriesStatus variable (unified labeling client)
