@@ -137,7 +137,6 @@ ScannedBytes            : 78478187
 Classified              : 0
 Labeled                 : 0
 ....
-
 ```
 
 The output first displays details about the current scan status as well as a list of nodes in the cluster, and then details for each node, in a table. Further drilldown using the node integer shows a long list of details about the scan on the selected node, such as the number of scanned, classified, and labeled files, as well as the number of bytes scanned.
@@ -170,6 +169,7 @@ Classified              : 0
 Labeled                 : 0
 ....
 ```
+
 The output shows further details about the scan currently running, including the number of scanned, failed, classified, and labeled files, as well as the number of bytes scanned.
 
 ### Example 5: Get the current status of the scanner service (classic client)
