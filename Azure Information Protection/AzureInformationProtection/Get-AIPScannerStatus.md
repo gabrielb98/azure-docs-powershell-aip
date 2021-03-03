@@ -56,9 +56,6 @@ To obtain further details, use one or both of the following methods:
     - **Finished**, if the last scan has completed
 
 
-
-For more information, see [Verify scanning details per scanner node and repository](/azure/information-protection/deploy-aip-scanner-tsg#verify-scanning-details-per-scanner-node-and-repository).
-
 **Classic client**
 
 The **Get-AIPScannerStatus** cmdlet returns the current status of the scanner service for Azure Information Protection.
@@ -82,7 +79,7 @@ Possible values:
 
 ### Example 1: Get the current status of the scanner service (unified labeling client)
 
-```
+```powershell
 PS C:\> Get-AIPScannerStatus
 Cluster        : contoso-test
 ClusterStatus  : Scanning
@@ -97,7 +94,7 @@ The output also shows that the `contoso-test` cluster has 3 nodes.
 
 ### Example 2: Use the Verbose parameter to get data for the current or last scan (unified labeling client)
 
-```
+```powershell
 PS C:\> Get-AIPScannerStatus -Verbose
 
 ScannedFiles    MBScanned    CurrentScanSummary                                         RepositoriesStatus
@@ -143,7 +140,7 @@ To drill down further into each node, use the **NodesInfo** variable again, with
 PS C:\Windows\system32> $x.NodesInfo[0].Summary
 ```
 
-The output displays a long list of details about the scan on the selected node. For example:
+The output displays a long list of details about the scan on the selected node, such as the number of scanned, classified, and labeled files, and the number of bytes scanned. For example:
 
 ```powershell
 ScannerID               : t-contoso1-T298-corp.contoso.com
