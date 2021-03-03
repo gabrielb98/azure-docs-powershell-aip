@@ -83,7 +83,52 @@ The output shows that a scan is currently running on the `contoso-test` cluster,
 
 The output also shows that the `contoso-test` cluster has 3 nodes.
 
-### Example 2: Get the current status of the scanner service (classic client)
+### Example 2: Use the Verbose parameter to get data for current or last scan (unified labeling client)
+
+```
+PS C:\> Get-AIPScannerStatus -Verbose
+
+ScannedFiles    MBScanned    CurrentScanSummary                                         RepositoriesStatus
+------------    ---------    ------------------                                         ------------------
+        2280    78478187     Microsoft.InformationProtection.Scanner.ScanSummaryData    {​​​​​​{​​​​​​ Path = C:\temp, Status = Scanning }​​​​​​
+```
+
+Drill down further to find more details for the repositories by using the **RepositoriesStatus** or the **CurrentScanSummary** variables.
+
+Possible repository statuses include:
+
+- **Skipped**, if the repository was skipped
+- **Pending**, if the next scan has not yet started
+- **Scanning**, if a scan is currently running
+- **Finished**, if the last scan has completed
+
+**RepositoriesStatus**
+
+```powershell
+PS C:\Windows\system32> $x.Get-AIPScannerStatus -Verbose
+PS C:\Windows\system32> $x.RepositoriesStatus
+
+Path        Status
+----        ------
+C:\temp     Scanning
+```
+
+**CurrentScanSummary**
+
+```powershell
+PS C:\Windows\system32> $x.RepositoriesStatus
+```
+
+ScannerID               : 
+ScannedFiles            : 2280
+FailedFiles             : 0
+ScannedBytes            : 78478187
+Classified              : 0
+Labeled                 : 0
+....
+
+This output shows only a single repository. In cases of multiple repositories, each one will be listed separately.
+### Example 3: Get the current status of the scanner service (classic client)
 
 ```
 PS C:\> Get-AIPScannerStatus
