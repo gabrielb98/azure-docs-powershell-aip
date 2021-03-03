@@ -43,7 +43,19 @@ The **Get-AIPScannerStatus** cmdlet returns the following details about the curr
 To obtain further details, use one or both of the following methods:
 
 - Use the **NodesInfo** variable to view details about the current scanning status for each node. For more information, see the examples below.
+
 - Use the **Verbose** parameter to view details such as the number of scanned files, amount of data scanned, and details for each repository scanned.
+
+    When using the **Verbose** parameter, drill down further to find more details for the repositories by using the **RepositoriesStatus** or the **CurrentScanSummary** variables.
+
+    Possible repository statuses include:
+
+    - **Skipped**, if the repository was skipped
+    - **Pending**, if the next scan has not yet started
+    - **Scanning**, if a scan is currently running
+    - **Finished**, if the last scan has completed
+
+
 
 For more information, see [Verify scanning details per scanner node and repository](/azure/information-protection/deploy-aip-scanner-tsg#verify-scanning-details-per-scanner-node-and-repository).
 
@@ -93,16 +105,9 @@ ScannedFiles    MBScanned    CurrentScanSummary                                 
         2280    78478187     Microsoft.InformationProtection.Scanner.ScanSummaryData    {​​​​​​{​​​​​​ Path = C:\temp, Status = Scanning }​​​​​​
 ```
 
-Drill down further to find more details for the repositories by using the **RepositoriesStatus** or the **CurrentScanSummary** variables.
+This output shows only a single repository. In cases of multiple repositories, each one will be listed separately.
 
-Possible repository statuses include:
-
-- **Skipped**, if the repository was skipped
-- **Pending**, if the next scan has not yet started
-- **Scanning**, if a scan is currently running
-- **Finished**, if the last scan has completed
-
-**RepositoriesStatus**
+### Example 3: Use the Verbose parameter and the RepositoriesStatus variable (unified labeling client)
 
 ```powershell
 PS C:\Windows\system32> $x.Get-AIPScannerStatus -Verbose
@@ -113,11 +118,13 @@ Path        Status
 C:\temp     Scanning
 ```
 
-**CurrentScanSummary**
+The output shows the scan status for each repository configured for the content scan job.
+
+### Example 4: Use the Verbose parameter and the CurrentScanSummary variable (unified labeling client)
 
 ```powershell
-PS C:\Windows\system32> $x.RepositoriesStatus
-```
+PS C:\Windows\system32> $x.CurrentScanSummary
+
 
 ScannerID               : 
 ScannedFiles            : 2280
@@ -126,9 +133,10 @@ ScannedBytes            : 78478187
 Classified              : 0
 Labeled                 : 0
 ....
+```
+The output shows further details about the scan currently running, including the number of scanned, failed, classified, and labeled files, as well as the number of bytes scanned.
 
-This output shows only a single repository. In cases of multiple repositories, each one will be listed separately.
-### Example 3: Get the current status of the scanner service (classic client)
+### Example 5: Get the current status of the scanner service (classic client)
 
 ```
 PS C:\> Get-AIPScannerStatus
