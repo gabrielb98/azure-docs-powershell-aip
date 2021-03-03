@@ -49,7 +49,8 @@ This command gets the current PowerShell configuration settings for the Azure In
 
 In this example, the output shows that the scanner is using the default configuration for online configuration, the report level of **Info**, and a logging level of **Trace**. The cluster name, SQL instance, and database names are listed, and the cloud type is **Commercial**.
 
-### Example 2: Gets the configuration for the Azure Information Protection scanner (classic client)```
+### Example 2: Gets the configuration for the Azure Information Protection scanner (classic client)
+```
 PS C:\> Get-AIPScannerConfiguration
 
 OnlineConfiguration      : On
