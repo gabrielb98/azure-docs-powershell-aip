@@ -129,7 +129,6 @@ t-contoso2-T298-corp.contoso.com    Scanning     Pending    Microsoft.Informatio
 PS C:\Windows\system32> $x.NodesInfo[0].Summary
 
 
-```powershell
 ScannerID               : t-contoso1-T298-corp.contoso.com
 ScannedFiles            : 2280
 FailedFiles             : 0
