@@ -3,7 +3,7 @@ external help file: AIP.dll-Help.xml
 Module Name: AzureInformationProtection
 online version: https://go.microsoft.com/fwlink/?linkid=2004363
 schema: 2.0.0
-author: cabailey
+author: batamig
 ---
 
 # Get-AIPScannerStatus
@@ -21,16 +21,44 @@ Get-AIPScannerStatus [<CommonParameters>]
 
 ## DESCRIPTION
 
-The **Get-AIPScannerStatus** returns the current status of the scanner service for Azure Information Protection. 
+This cmdlet is supported by both the Azure Information Protection classic and unified labeling clients, with different usage, as described below.
+
+**Unified labeling client**
+
+The **Get-AIPScannerStatus** cmdlet returns the following details about the current scanner cluster status:
+
+- **Cluster name**
+
+- **Cluster status**, including:
+
+    - Offline: The service is not started
+    - Idle: The service is running but not currently scanning
+    - Scanning: The service is running and is currently scanning files
+    - Error. The scanner service is running but it has encountered an error that prevents it from scanning files. For example, the service cannot access the database for the scanner configuration.
+
+- **Scan start time**: The time the last scan started, in UTC time format.
+- **Time from start**: The scanning duration, in the following format: `HH:MM:SS:MS`
+- **Node information**: A list of the nodes in the scanner cluster
+
+To obtain further details, use one or both of the following methods:
+
+- Use the **NodesInfo** variable to view details about the current scanning status for each node. For more information, see the examples below.
+- Use the **Verbose** parameter to view details such as the number of scanned files, amount of data scanned, and details for each repository scanned.
+
+For more information, see [Verify scanning details per scanner node and repository](/azure/information-protection/deploy-aip-scanner-tsg#verify-scanning-details-per-scanner-node-and-repository).
+
+**Classic client**
+
+The **Get-AIPScannerStatus** cmdlet returns the current status of the scanner service for Azure Information Protection.
 
 Possible values:
 
-- **Offline:** The service is not started.
-- **Idle:** The service is running but not currently scanning. 
-- **Scanning:** The service is running and currently scanning files.
-- **Error:** The scanner service is running but it has encountered an error that prevents it from scanning files. 
+- **Offline**: The service is not started.
+- **Idle**: The service is running but not currently scanning.
+- **Scanning**: The service is running and currently scanning files.
+- **Error**: The scanner service is running but it has encountered an error that prevents it from scanning files.
 
-    For example, the service cannot access the database for the scanner configuration.
+ For example, the service cannot access the database for the scanner configuration.
 
 > [!NOTE]
 > To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. 
@@ -40,7 +68,24 @@ Possible values:
 
 ## EXAMPLES
 
-### Example 1: Get the current status of the scanner service
+### Example: 1 Get the current status of the scanner service
+**Unified labeling client**
+
+```
+PS C:\> Get-AIPScannerStatus
+Cluster        : contoso-test
+ClusterStatus  : Scanning
+StartTime      : 03/10/2021 9:05:02 AM
+TimeFromStart  : 00:00:00:37
+NodesInfo      : {t-contoso1-T298-corp.contoso.com,t-contoso2-T298-corp.contoso.com,t-contoso3-T298-corp.contoso.com}
+```
+
+The output shows that a scan is currently running on the `contoso-test` cluster, and was started 37 milliseconds ago, at 03/10/2021 9:05:02 AM.
+
+The output also shows that the `contoso-test` cluster has 3 nodes.
+
+**Classic client**
+
 ```
 PS C:\> Get-AIPScannerStatus
 
@@ -58,6 +103,10 @@ The output shows the scanner service to be running but not currently scanning. T
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
 
 For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+
+For the unified labeling client, the **Verbose** parameter provides details about each repository in the cluster, including the number of files scanned, the amount of data scanned, the current scan status, and the repository details. Use the **RepositoriesStatus** and/or **CurrentScanSummary** variables to get more details.
+
+For more information, see [Use the Verbose parameter to get data for the current or last scan](/azure/information-protection/deploy-aip-scanner-tsg#use-the-verbose-parameter-to-get-data-for-current-or-last-scan).
 
 ## INPUTS
 
