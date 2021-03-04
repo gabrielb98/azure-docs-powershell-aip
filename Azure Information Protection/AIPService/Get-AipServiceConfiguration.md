@@ -31,13 +31,13 @@ BPOSId                                    : 9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a
 
 AzureInformationProtectionServiceId                 : 5c6bb73b-1038-4eec-863d-49bded473437
 
-LicensingIntranetDistributionPointUrl     : https://5c6bb73b-1038-4eec-863d-49bded473437.aipservice.na.aadrm.com/_wmcs/licensing
+LicensingIntranetDistributionPointUrl     : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing
 
-LicensingExtranetDistributionPointUrl     : https://5c6bb73b-1038-4eec-863d-49bded473437.aipservice.na.aadrm.com/_wmcs/licensing
+LicensingExtranetDistributionPointUrl     : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing
 
-CertificationIntranetDistributionPointUrl : https://5c6bb73b-1038-4eec-863d-49bded473437.aipservice.na.aadrm.com/_wmcs/certification
+CertificationIntranetDistributionPointUrl : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/certification
 
-CertificationExtranetDistributionPointUrl: https://5c6bb73b-1038-4eec-863d-49bded473437.aipservice.na.aadrm.com/_wmcs/certification
+CertificationExtranetDistributionPointUrl: https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/certification
 
 AdminConnectionUrl                        : https://admin.na.aadrm.com/admin/admin.svc/Tenants/5c6bb73b-1038-4eec-863d-49bded473437
 
