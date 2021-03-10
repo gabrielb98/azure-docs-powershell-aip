@@ -91,7 +91,7 @@ TimeFromStart  : 00:00:00:37
 NodesInfo      : {t-contoso1-T298-corp.contoso.com,t-contoso2-T298-corp.contoso.com,t-contoso3-T298-corp.contoso.com}
 ```
 
-This output shows that a scan is currently running on the `contoso-test` cluster, and was started 37 milliseconds ago, at 03/10/2021 9:05:02 AM.
+This output shows that a scan is currently running on the `contoso-test` cluster, and was started 37 seconds ago, at 03/10/2021 9:05:02 AM.
 
 The output also shows that the `contoso-test` cluster has 3 nodes.
 
