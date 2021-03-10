@@ -1,0 +1,125 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  **Relevant for:** AIP unified labeling and classic clients
+
+  Gets the Azure Information Protection label and protection information for a specified file or files.
+module: AzureInformationProtection
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  description: ""
+outputs:
+- name: <xref href="Microsoft.InformationProtection.Powershell.AIP.Results.GetAIPFileStatusResult" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-AIPAuthentication
+  href: ./Set-AIPAuthentication.yml
+- text: Set-AIPFileClassification
+  href: ./Set-AIPFileClassification.yml
+- text: Set-AIPFileLabel
+  href: ./Set-AIPFileLabel.yml
+- text: Get-RMSTemplate
+  href: ./Get-RMSTemplate.yml
+syntaxes:
+- Get-AIPFileStatus [-Path] <String[]> [<CommonParameters>]
+examples:
+- title: 'Example 1a: (Classic client) Get the label and protection status of a single file'
+  code: |-
+    PS C:\> Get-AIPFileStatus -Path \\Finance\Projects\Project.docx
+
+    FileName        : \\Finance\Projects\Project.docx
+    IsLabeled       : True
+    MainLabelId     : 074e257c-1234-1234-1234-34a182080e71
+    MainLabelName   : Confidential
+    SubLabelId      : d9f23ae3-1234-1234-1234-f515f824c57b
+    SubLabelName    : Finance group
+    LabelingSiteId  : 72f988bf-1234-1234-1234-2d7cd011db47
+    Owner           : John@Contoso.com
+    LabelingMethod  : Manual
+    LabelDate       : 12/12/2016 12:24:36 PM
+    IsRMSProtected  : True
+    RMSTemplateId   : e6ee2481-1234-1234-1234-f744eacd53b0
+    RMSTemplateName : Contoso - Confidential Finance
+    RMSIssuedTime   : 5/6/2018 9:15:03 AM
+    RMSOwner        : John@Contoso.com
+    RMSIssuer       : John@Contoso.com
+  description: |-
+    This command provides information about a file that is labeled as "Confidential \ Finance group". This file was labeled manually by John and it is also protected by using the Rights Management template, "Contoso - Confidential Finance".
+  summary: ""
+- title: 'Example 1b: (Unified labeling client) Get the label and protection status of a single file'
+  code: |-
+    PS C:\> Get-AIPFileStatus -Path \\Finance\Projects\Project.docx
+
+    FileName        : \\Finance\Projects\Project.docx
+    IsLabeled       : True
+    MainLabelId     : 074e257c-1234-1234-1234-34a182080e71
+    MainLabelName   : Confidential
+    SubLabelId      : d9f23ae3-1234-1234-1234-f515f824c57b
+    SubLabelName    : Finance group
+    LabelingMethod  : Privileged
+    LabelDate       : 12/12/2016 12:24:36 PM
+    IsRMSProtected  : True
+    RMSTemplateId   : e6ee2481-1234-1234-1234-f744eacd53b0
+    RMSTemplateName : Contoso - Confidential Finance
+    RMSOwner        : John@Contoso.com
+    RMSIssuer       : John@Contoso.com
+    ContentId       : 4ca757d2-83bf-4ec3-b93b-c7fe9433bf33
+  description: |-
+    This command provides information about a file that is labeled as "Confidential \ Finance group", which is a label that is configured for your tenant. This file was labeled manually by John and it is also protected by using the Rights Management template, "Contoso - Confidential Finance".
+  summary: ""
+- title: 'Example 2: Get the label and protection status for all files in a  folder and export the results to a CSV file'
+  code: |-
+    PS C:\> Get-AIPFileStatus -Path \\Finance\Projects\ | Export-Csv C:\Reports\AIP-status.csv
+  description: |-
+    This command gets the label and protection information of all files on the Finance server, in the Projects folder and any of its subfolders. The results are exported to the file named **AIP-status.csv** so that they can be more easily searched and sorted. If a previous report exists in **C:\Reports\Report.csv**, it will be overwritten.
+  summary: ""
+- title: 'Example 3: List the files labeled "Confidential" and export the results to a CSV file'
+  code: |-
+    PS C:\> Get-AIPFileStatus -Path \\Finance\Projects\ | Where-Object {$_.MainLabelName -eq 'Confidential'} | Export-Csv C:\Reports\AIP-status.csv
+  description: |-
+    This command gets the label and protection information for just the files that are labeled "Confidential" (regardless of their sublabel) on the Finance server, in the Projects folder and any of its subfolders. The results are exported to the file named **AIP-status.csv** so that they can be more easily searched and sorted. If a previous report exists in **C:\Reports\Report.csv**, it will be overwritten.
+  summary: ""
+- title: 'Example 4: Count of files with a "Confidential" label'
+  code: |-
+    PS C:\> (Get-AIPFileStatus -Path C:\Projects\ | Where-Object {$_.MainLabelName -eq 'Confidential'}).Count
+
+    5
+  description: |-
+    This command provides the number of files with the "Confidential" label that are in the **C:\Projects** folder and any of its subfolders. In this example, 5 files are found.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies a local path, network path, or SharePoint Server URL to the files for which you want to get the label and protection information. Wildcards are not supported.
+
+    For SharePoint paths, the following are supported:
+
+    - SharePoint Server 2019
+    - SharePoint Server 2016
+    - SharePoint Server 2013
+
+    For example:
+
+    - C:\Folder\
+    - C:\Folder\Filename
+    - \\\Server\Folder
+    - http://sharepoint.contoso.com/Shared%20Documents/Folder
+
+    Paths can include spaces when you enclose the path value with quotes.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: FullName, FileName
+  parameterValueGroup: ""
+uid: AzureInformationProtection.Get-AIPFileStatus
+name: Get-AIPFileStatus
+description: "The **Get-AIPFileStatus** cmdlet returns the Azure Information Protection status of a specified file or all files in a specified path. This status includes whether the file has a label, and if it does, the label name, who applied it, how it was applied, and when. \r\n\r\nThe status also includes whether the file is protected by Rights Management, and if it is, what Rights Management template was used to apply this protection. If the file was protected with custom permissions (an ad-hoc rights policy) instead of a template, \"Restricted Access\" is displayed instead of the template name. In addition, the [Rights Management owner and Rights Management issuer](/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) is displayed, and when the file was protected.\r\n\r\nNote that password-protected files always return the protection status of **False**.\r\n\r\nYou can run this cmdlet non-interactively. For more information, see the following client admin guides:\r\n\r\n- **[Unified labeling client](/information-protection/rms-client/clientv2-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection)**\r\n\r\n- **[Classic client](/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection)**\r\n\r\n> [!NOTE]\r\n> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. \r\n> \r\n> This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).\r\n>\r\n\r\n**Differences in support between clients**\r\n\r\nIf you have the AIP unified labeling client, functionality differs from the classic client as follows.\r\n\r\nIn the unified labeling client:\r\n\r\n- This cmdlet returns label information from your own tenant only and the *LabelingSiteId* parameter is not displayed in the output.\r\n\r\n- The *Owner* and *RMSIssuedTime* parameters are not supported and are not displayed in the output.\r\n\r\n- The *LabelingMethod* parameter displays the values of **Privileged** or **Standard** instead of **Manual** or **Automatic:**\r\n  \r\n    - **Privileged:** A label was applied by a user, either manually or a result of a labeling recommendation, and is the equivalent of **Manual** for the AIP classic client.\r\n\r\n    - **Standard:** A label was applied automatically, and is the equivalent of **Automatic** for the AIP classic client."
+metadata:
+  external help file: AIP.dll-Help.xml
+  Module Name: AzureInformationProtection
+  ms.assetid: ED3F3730-434E-4EDF-969B-0ABE30D68030
+  online version: https://go.microsoft.com/fwlink/?linkid=838765
+  schema: 2.0.0
