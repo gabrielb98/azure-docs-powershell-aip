@@ -37,7 +37,7 @@ The **Get-AIPScannerStatus** cmdlet returns the following details about the curr
     - Error. The scanner service is running but it has encountered an error that prevents it from scanning files. For example, the service cannot access the database for the scanner configuration.
 
 - **Scan start time**: The time the last scan started, in UTC time format.
-- **Time from start**: The scanning duration, in the following format: `HH:MM:SS:MS`
+- **Time from start**: The scanning duration, in the following format: `Days.HH:MM:SS`
 - **Node information**: A list of the nodes in the scanner cluster
 
 To obtain further details, use one or both of the following methods:
