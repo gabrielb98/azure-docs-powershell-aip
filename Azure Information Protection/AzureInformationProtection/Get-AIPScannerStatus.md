@@ -51,9 +51,10 @@ To obtain further details, use one or both of the following methods:
     Possible repository statuses include:
 
     - **Skipped**, if the repository was skipped
-    - **Pending**, if the current scan has not yet started scanning the repository
-    - **Scanning**, if a scan is currently running on the repository
-    - **Finished**, if the current scan has completed running on the repository
+    - **Pending**, if the next scan has not yet started
+    - **Scanning**, if a scan is currently running
+    - **Finished**, if the last scan has completed
+
 
 
 For more information, see [Verify scanning details per scanner node and repository](/azure/information-protection/deploy-aip-scanner-tsg#verify-scanning-details-per-scanner-node-and-repository).
@@ -196,7 +197,7 @@ For more information, see [about_CommonParameters](/powershell/module/microsoft.
 
 For the unified labeling client, the **Verbose** parameter provides details about each repository in the cluster, including the number of files scanned, the amount of data scanned, the current scan status, and the repository details. Use the **RepositoriesStatus** and/or **CurrentScanSummary** variables to get more details.
 
-For more information, see [Use the Verbose parameter to get data for the current scan](/azure/information-protection/deploy-aip-scanner-tsg#use-the-verbose-parameter-to-get-data-for-current-scan).
+For more information, see [Use the Verbose parameter to get data for the current or last scan](/azure/information-protection/deploy-aip-scanner-tsg#use-the-verbose-parameter-to-get-data-for-current-or-last-scan).
 
 ## INPUTS
 
