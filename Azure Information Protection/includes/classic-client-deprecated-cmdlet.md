@@ -1,6 +1,6 @@
 ---
-title: include file
-description: include file
+title: AIP classic client cmdlet is deprecated
+description: Notes that the specified AIP classic client cmdlet was deprecated in favor of the Azure portal experience, and also that the AIP classic client was deprecated on March 31, 2021. Also provides links for next steps and more information.
 ms.service: information-protection
 author: batamig
 ms.topic: include
