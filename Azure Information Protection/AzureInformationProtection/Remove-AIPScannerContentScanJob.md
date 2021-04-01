@@ -25,9 +25,7 @@ Deletes an entire Azure Information Protection content scan job.
 
 For more information about content scan jobs, see the [Azure Information Protection on-premises scanner documentation](/information-protection/deploy-aip-scanner-configure-install#create-a-content-scan-job).
 
-> [!IMPORTANT]
-> If you are using the AIP classic client, this cmdlet is deprecated. Instead, use the [Azure portal to configure the scanner](/information-protection/deploy-aip-scanner-classic).
-> 
+[!INCLUDE [This classic client cmdlet is deprecated](../includes/classic-client-deprecated-cmdlet.md)]
 
 ## EXAMPLES
 

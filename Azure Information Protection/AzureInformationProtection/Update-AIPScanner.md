@@ -42,10 +42,8 @@ Run this cmdlet with an account that has the database-level role of **db_owner**
     
 If you are upgrading from versions before 1.48.204.0, after the upgrade, the scanner changes how it gets its configuration settings. Instead of using PowerShell to configure the scanner locally, the scanner is now configured from the Azure Information Protection service, by using the Azure portal.
 
-> [!NOTE]
-> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. 
-> 
-> This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+[!INCLUDE [The AIP classic client is deprecated](../includes/classic-client-deprecated.md)]
+
 
 ## EXAMPLES
 

@@ -27,10 +27,8 @@ Use this command when you want to change the account or database details that wa
 
 The new configuration takes effects when the Azure Information Protection Scanner service is next started. This cmdlet does not automatically restart this service.
 
-> [!NOTE]
-> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. 
-> 
-> This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+[!INCLUDE [The AIP classic client is deprecated](../includes/classic-client-deprecated.md)]
+
 
 ## EXAMPLES
 

@@ -60,10 +60,8 @@ When you run this cmdlet with the Azure Information Protection unified labeling 
 
 - The *WhatIf* parameter is supported. You can use the **WhatIf** mode with *DiscoveryInfoTypes* to find known sensitive information types.
 
-> [!NOTE]
-> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. 
-> 
-> This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
+[!INCLUDE [The AIP classic client is deprecated](../includes/classic-client-deprecated.md)]
+
 
 ## EXAMPLES
 
