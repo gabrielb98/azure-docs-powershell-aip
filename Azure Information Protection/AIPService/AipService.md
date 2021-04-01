@@ -12,7 +12,7 @@ Locale: en-US
 This page displays help links for the cmdlets that administer the protection service from Azure Information Protection. 
 
 > [!NOTE]
-> This module replaces the older module, **AADRM**. Support for the AADRM module ends July 15, 2020.
+> This module replaces the older module, **AADRM**. Support for the AADRM module ended on July 15, 2020.
 
 These PowerShell cmdlets let you administer Azure Information Protection from the command line. Although this administration method enables automation, it also supports reliable and repeated processes to help reduce administrative overheads. In addition, advanced configurations and some operations require this PowerShell module.
 
