@@ -28,13 +28,8 @@ Updates the details for an existing repository defined in your content scan job.
 
 For more information about content scan jobs, see the [Azure Information Protection on-premises scanner documentation](/information-protection/deploy-aip-scanner-configure-install#create-a-content-scan-job).
 
-> [!NOTE]
-> If you are using the AIP classic client, this cmdlet is deprecated. Instead, use the [Azure portal to configure the scanner](/information-protection/deploy-aip-scanner-classic).
-> 
-> To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are being **deprecated** as of **March 31, 2021**. 
-> 
-> This time-frame allows all current Azure Information Protection customers to transition to our unified labeling solution using the Microsoft Information Protection Unified Labeling platform. Learn more in the official [deprecation notice](https://aka.ms/aipclassicsunset).
->
+[!INCLUDE [This classic client cmdlet is deprecated](../includes/classic-client-deprecated-cmdlet.md)]
+
 ## EXAMPLES
 
 ### Example 1 Update the repository details using the configured content scan job settings
