@@ -13,9 +13,6 @@ Gets tracking information for documents protected by Azure Information Protectio
 
 This cmdlet is supported by both the Azure Information Protection classic and unified labeling clients, with different usage, as described below.
 
-> [!NOTE]
-> Track and revoke features for the unified labeling client are currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability. 
-> 
 ## SYNTAX
 
 ### Unified labeling client
