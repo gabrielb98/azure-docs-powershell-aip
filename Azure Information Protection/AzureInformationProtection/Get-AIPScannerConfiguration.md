@@ -19,20 +19,34 @@ Get-AIPScannerConfiguration [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+This cmdlet is supported by both the Azure Information Protection classic and unified labeling clients, with different usage, as described below.
+
 The **Get-AIPScannerConfiguration** cmdlet gets the configuration settings for the Azure Information Protection scanner. 
 
-With the current version of the scanner, configuration settings are configured in the Azure portal so the Get-AIPScannerConfiguration cmdlet displays only the settings and values that you can configure with [Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration.md) cmdlet. 
-
-These settings determine whether the scanner gets its configuration online or from a file that you export from the Azure portal, and the report level for the locally created reports.
-
-In addition, if you run [Import-AIPScannerConfiguration](./Import-AIPScannerConfiguration.md), this action automatically configures the scanner to get its configuration offline. As a result, when you run this Get-AIPScannerConfiguration cmdlet after importing settings from a file, **OnlineConfiguration** displays **Off**. 
+If you run [Import-AIPScannerConfiguration](./Import-AIPScannerConfiguration.md), this action automatically configures the scanner to get its configuration offline. As a result, when you run this Get-AIPScannerConfiguration cmdlet after importing settings from a file, **OnlineConfiguration** displays **Off**. 
 
 [!INCLUDE [The AIP classic client is deprecated](../includes/classic-client-deprecated.md)]
 
 
 ## EXAMPLES
 
-### Example 1: Gets the configuration for the Azure Information Protection scanner
+### Example 1: Gets the configuration for the Azure Information Protection scanner (unified labeling client)
+```
+PS C:\> Get-AIPScannerConfiguration
+OnlineConfiguration : On
+ReportLevel         : Info
+LogLevel            : Trace
+Cluster             : contoso-test
+SqlInstance         : localhost\sqlexpress
+DatabaseName        : AIPScannerUL_contoso-test
+Cloud               : Commercial
+```
+
+This command gets the current PowerShell configuration settings for the Azure Information Protection unified labeling scanner. 
+
+In this example, the output shows that the scanner is using the default configuration for online configuration, the report level of **Info**, and a logging level of **Trace**. The cluster name, SQL instance, and database names are listed, and the cloud type is **Commercial**.
+
+### Example 2: Gets the configuration for the Azure Information Protection scanner (classic client)
 ```
 PS C:\> Get-AIPScannerConfiguration
 

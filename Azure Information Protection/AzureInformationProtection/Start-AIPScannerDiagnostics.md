@@ -15,7 +15,7 @@ Starts a series of health checks for a locally installed AIP scanner service.
 ## SYNTAX
 
 ```
-Start-AIPScannerDiagnostics [-OnBehalfOf <PSCredential>] [-ResetConfig] [<CommonParameters>]
+Start-AIPScannerDiagnostics [-OnBehalfOf <PSCredential>] [-ResetConfig] [-VerboseErrorCount <integer>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -32,14 +32,21 @@ Diagnostic checks include whether:
 
 ## EXAMPLES
 
-### Starts the diagnostic tool for a locally installed AIP scanner
+### Example 1: Starts the diagnostic tool for a locally installed AIP scanner
 ```powershell
 PS C:\> $scanner_account_creds= Get-Credential
 PS C:\> Start-AIPScannerDiagnostics -onbehalf $scanner_account_creds
 ```
 
-This example prompts you to enter credentials for a specific account, and then Provide the credentials of the service account used to run the AIP scanner service.
+This example prompts you to enter credentials for a specific account, and then provide the credentials of the service account used to run the AIP scanner service.
 
+### Example 2: Starts the diagnostic tool with a large number of errors printed from the scanner log
+```powershell
+PS C:\> $scanner_account_creds= Get-Credential
+PS C:\> Start-AIPScannerDiagnostics -onbehalf $scanner_account_creds -Verbose -VerboseErrorCount 30
+```
+
+This example prompts you to enter credentials for a specific account, and then provide the credentials of the service account used to run the AIP scanner service. The last 30 errors are printed from the scanner log.
 ## PARAMETERS
 
 ### -OnBehalfOf
@@ -80,8 +87,30 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -VerboseErrorCount
+Relevant only when the **Verbose** parameter is used in the command.
+
+Defines the number of errors you want to see printed from the scanner log, if you want to print a number of errors other than the default of 10.
+
+
+```yaml
+Type: Integer
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. 
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
+
+> [!NOTE]
+> For this cmdlet, the **Verbose** parameter prints the last 10 errors from the scanner log. To change the number of errors printed, use the **VerboseErrorCount** parameter
+> 
 
 For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
