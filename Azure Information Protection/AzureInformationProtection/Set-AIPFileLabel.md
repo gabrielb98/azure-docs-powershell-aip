@@ -323,7 +323,7 @@ Specifies the identity (ID) of the label to apply. When a label has sublabels, a
 
 To find the label ID:
 
-- **For the unified labeling client:** The label ID value is not displayed in the admin center where you manage your labels. However, you can use the following Office 365 Security & Compliance Center PowerShell command to find this value: `Get-Label | Format-Table -Property DisplayName, Name, Guid`
+- **For the unified labeling client:** The label ID value is not displayed in the Microsoft 365 compliance center. However, you can use the following Office 365 Security & Compliance Center PowerShell command to find this value: `Get-Label | Format-Table -Property DisplayName, Name, Guid`
 
 - **For the classic client:** The label ID value is displayed in the Azure portal, on the Label blade, when you view or configure the Azure Information Protection policy. 
 
