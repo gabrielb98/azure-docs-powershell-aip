@@ -19,7 +19,7 @@ Set-AIPScannerContentScanJob [-Schedule <Schedule>] [-DiscoverInformationTypes <
  [-LabelFilesByContent <OnOffEnum>] [-RelabelFiles <OnOffEnum>] [-AllowLabelDowngrade <OnOffEnum>]
  [-EnforceDefaultLabel <OnOffEnum>] [-DefaultLabelType <DefaultLabelType>] [-DefaultLabelId <Guid>]
  [-DefaultOwner <String>] [-RepositoryOwner <String>] [-PreserveFileDetails <OnOffEnum>]
- [-IncludeFileTypes <String>] [-ExcludeFileTypes <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-IncludeFileTypes <String>] [-ExcludeFileTypes <String>] [OverrideContentScanJob OnOffEnum] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -271,7 +271,7 @@ Accept wildcard characters: False
 ```
 
 ### -LabelFilesByContent
-Determines whether the **Label files based on content** content scan job option is enabled or disabled. 
+Determines whether the **Label files based on content** content scan job option is enabled or disabled.
 
 ```yaml
 Type: OnOffEnum
@@ -286,6 +286,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### OverrideContentScanJob
+Determines whether the content scan job settings for the **ExcludeFileTypes** and **IncludeFileTypes** parameters in the command override any settings defined in the Azure portal.
+
+```yaml
+Type: OnOffEnum
+Parameter Sets: (All)
+Aliases:
+Accepted values: On, Off
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 ### -PreserveFileDetails
 Determines whether the file details, including the date modified, last modified, and modified by settings are preserved while scanning and auto-labeling.
 
