@@ -19,7 +19,7 @@ Set-AIPScannerContentScanJob [-Schedule <Schedule>] [-DiscoverInformationTypes <
  [-LabelFilesByContent <OnOffEnum>] [-RelabelFiles <OnOffEnum>] [-AllowLabelDowngrade <OnOffEnum>]
  [-EnforceDefaultLabel <OnOffEnum>] [-DefaultLabelType <DefaultLabelType>] [-DefaultLabelId <Guid>]
  [-DefaultOwner <String>] [-RepositoryOwner <String>] [-PreserveFileDetails <OnOffEnum>]
- [-IncludeFileTypes <String>] [-ExcludeFileTypes <String>] [OverrideContentScanJob OnOffEnum] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-IncludeFileTypes <String>] [-ExcludeFileTypes <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
