@@ -65,7 +65,8 @@
         "Azure"
       ],
       "breadcrumb_path": "/powershell/bread/toc.json",
-      "ms.devlang": "powershell"
+      "ms.devlang": "powershell",
+      "products": ["https://authoring-docs-microsoft.poolparty.biz/devrel/c900d0ba-7127-44a2-8ba8-afc4f786377d"]
     },
     "dest": "azureps-aip",
     "markdownEngineName": "markdig"

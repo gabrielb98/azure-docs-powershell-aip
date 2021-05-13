@@ -76,7 +76,7 @@ Specifies whether the scanner gets its configuration settings directly from the 
 
 - **On:** The default setting. The scanner gets its configuration settings directly from the Azure Information Protection service.
 
-- **Off:** Supported by the AIP classic client only. The scanner is prevented from getting its configuration settings directly from the Azure Information Protection service. Instead, the scanner is configured by settings that you import from a file. 
+- **Off:** The scanner is prevented from getting its configuration settings directly from the Azure Information Protection service. Instead, the scanner is configured by settings that you import from a file. 
 
 If the scanner cannot support online configuration, you must still configure the scanner in the Azure portal. Then, export the scanner configuration from the portal to a .json file and import this file by using the [Import-AIPScannerConfiguration](./Import-AIPScannerConfiguration.md) cmdlet.
 
