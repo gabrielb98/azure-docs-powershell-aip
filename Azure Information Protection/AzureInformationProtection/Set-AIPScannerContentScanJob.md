@@ -237,7 +237,7 @@ Determines any file types that are ignored during your content scan job. Define 
 
 If you define this parameter, define the **IncludeFileTypes** parameter as null. For example, **Example 4** above.
 
-Relevant only when the **OverrideContentScanJob** parameter is set to **on**.
+Relevant only when the **OverrideContentScanJob** parameter is set to **on** in the [Add-AIPScannerRepository](Add-AIPScannerRepository.md) or [Set-AIPScannerRepository](Set-AIPScannerRepository.md) cmdlets.
 
 ```yaml
 Type: String
@@ -256,7 +256,7 @@ Explicitly determines the file types that are scanned by your content scan job. 
 
 If you define this parameter, define the **ExcludeFileTypes** parameter as null. For example, **Example 4** above.
 
-Relevant only when the **OverrideContentScanJob** parameter is set to **on**.
+Relevant only when the **OverrideContentScanJob** parameter is set to **on** in the [Add-AIPScannerRepository](Add-AIPScannerRepository.md) or [Set-AIPScannerRepository](Set-AIPScannerRepository.md) cmdlets.
 
 ```yaml
 Type: String
@@ -286,21 +286,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### OverrideContentScanJob
-Determines whether the content scan job settings for the **ExcludeFileTypes** and **IncludeFileTypes** parameters in the command override any settings defined in the Azure portal.
-
-```yaml
-Type: OnOffEnum
-Parameter Sets: (All)
-Aliases:
-Accepted values: On, Off
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 ### -PreserveFileDetails
 Determines whether the file details, including the date modified, last modified, and modified by settings are preserved while scanning and auto-labeling.
 
