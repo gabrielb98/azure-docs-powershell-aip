@@ -433,7 +433,7 @@ Removes protection from a file. If the file is labeled, the label is not removed
 
 You must have sufficient usage rights or be a super user for your organization to remove protection from files. For more information, see [Configuring super users for Azure Rights Management and discovery services or data recovery](/azure/information-protection/configure-super-users).
 
-Use the **Set-AIPFileLabel** PowerShell cmdlet to enable removal of protection from container files (**zip**, **.rar**, **.7z**, **.msg**, and **.pst**). 
+Use the **Set-AIPFileLabel** PowerShell cmdlet to enable removal of protection from container files (**zip**, **.rar**, **.7z**, and **.pst**). 
 
 > [!NOTE]
 > This remove protection capability is disabled by default and must first be enabled using the [Set-LabelPolicy](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#enable-removal-of-protection-from-compressed-files) cmdlet. 
