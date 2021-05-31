@@ -14,7 +14,7 @@ schema: 2.0.0
 Gets the Azure Information Protection label and protection information for a specified file or files.
 
 > [!NOTE]
-> If your files are stored in SharePoint Online, use the [GetFileSensitivityInfo](/powershell/module/sharepoint-online/get-filesensitivitylabelinfo?view=sharepoint-ps) cmdlet from the **SharePointOnlinePowerShell** module instead.
+> If your files are stored in SharePoint Online, use the [Get-FileSensitivityLabelInfo](/powershell/module/sharepoint-online/get-filesensitivitylabelinfo) cmdlet from the **SharePointOnlinePowerShell** module instead.
 >
 
 ## SYNTAX
