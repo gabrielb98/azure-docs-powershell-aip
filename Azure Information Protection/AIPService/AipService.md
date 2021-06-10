@@ -24,6 +24,8 @@ For more information about when you must use PowerShell cmdlets and to see group
 
 - **.dll file:** The .dll file for this module is *AIPService.dll*.
 
+- **Prerequisites**: For a list of prerequisites for installing this module, see [Installing the AIPService PowerShell module](/azure/information-protection/install-powershell).
+
 ## Protection templates and the AIP unified labeling client
 
 The Azure Information Protection unified labeling client uses protection templates indirectly. If you have the unified labeling client, we recommend that you use label-based cmdlets instead of modifying your protection templates directly.
