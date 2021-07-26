@@ -37,6 +37,7 @@ Information returned includes:
 - The Rights Management issuer.
 - The users who accessed the document, when, and from what location. 
 - What protection template ID or specific usage rights were used to protect the document and whether access was granted or denied.
+- The _IsHiddenInfo_ property, which will always be **false**. This property is used to hide events for users where tracking is disabled. 
 
 You can specify a start time and stop time of entries to include. The output is returned as a list of PowerShell objects in the PowerShell console.
 
