@@ -42,13 +42,13 @@
     },
     "filemetadata": {
       "ms.author": {
-        "Azure Information Protection/**/*.yml": "cabailey"
+        "Azure Information Protection/**/*.yml": "bagol"
       },
       "author": {
-        "Azure Information Protection/**/*.yml": "cabailey"
+        "Azure Information Protection/**/*.yml": "bagol"
       },
       "ms.manager": {
-        "Azure Information Protection/**/*.yml": "mbaldwin"
+        "Azure Information Protection/**/*.yml": "raynew"
       },
       "ms.service": {
         "Azure Information Protection/**/*.yml": "rights-management"
