@@ -11,7 +11,7 @@ ms.custom: include file
 ---
 
 >[!NOTE] 
-> If you are using the AIP classic client, this cmdlet is deprecated. Instead, use the [Azure portal to configure the scanner](/information-protection/deploy-aip-scanner-classic).
+> If you are using the AIP classic client, this cmdlet is deprecated. Instead, use the [Azure portal to configure the scanner](/azure/information-protection/deploy-aip-scanner-classic).
 >
 > To provide a unified and streamlined customer experience, the **Azure Information Protection classic client** and **Label Management** in the Azure Portal are **deprecated** as of **March 31, 2021**. No further support is provided for the classic client and maintenance versions will no longer be released.
 >
