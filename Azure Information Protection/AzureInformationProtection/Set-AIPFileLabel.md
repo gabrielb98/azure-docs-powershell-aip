@@ -60,6 +60,7 @@ When you run this cmdlet with the Azure Information Protection unified labeling 
 
 - When a file isn't labeled because it was manually labeled, there was no match for the conditions that you specified, or the file had a higher classification, the file is skipped with the single comment of "No label to apply".
 
+
 **Classic client support**
 
 For the AIP classic client, the **Set-AIPFileLabel** cmdlet sets or removes an Azure Information Protection label for one or more files. This action can automatically apply or remove protection when labels are configured for protection in the Azure Information Protection policy. When the command runs successfully, any existing label or protection can be replaced.
@@ -433,11 +434,13 @@ Removes protection from a file. If the file is labeled, the label is not removed
 
 You must have sufficient usage rights or be a super user for your organization to remove protection from files. For more information, see [Configuring super users for Azure Rights Management and discovery services or data recovery](/azure/information-protection/configure-super-users).
 
-Use the **Set-AIPFileLabel** PowerShell cmdlet to enable removal of protection from container files (**zip**, **.rar**, **.7z**, and **.pst**). 
+Use the **Set-AIPFileLabel** PowerShell cmdlet to enable removal of protection from container files (**zip**, **.rar**, **.7z**, and **.pst**).
 
 > [!NOTE]
-> This remove protection capability is disabled by default and must first be enabled using the [Set-LabelPolicy](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#enable-removal-of-protection-from-compressed-files) cmdlet. 
-> 
+> - This remove protection capability is disabled by default and must first be enabled using the [Set-LabelPolicy](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#enable-removal-of-protection-from-compressed-files) cmdlet.
+>
+> - For .pst files, 5 GB is the maximum file size supported with this cmdlet.
+>
 
 ```yaml
 Type: SwitchParameter
