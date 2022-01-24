@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -Repositories
-Describes the repositories you want to delete. For example, see [Example 4 Remove a specific repository from your content scan job without piping](#example-4-remove-a-specific-repository-from-your-content-scan-job-without-piping).
+Describes the repositories you want to delete.
 
 ```yaml
 Type: System.Collections.Generic.List`1[Microsoft.InformationProtection.Powershell.AIP.Commandlets.Scanner.MoonCake.RepositoryInfo]
