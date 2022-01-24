@@ -169,10 +169,9 @@ This setting has no effect on templates that are not departmental templates and 
 
 Note that this setting does not affect whether a user can access content that is protected by a departmental template; it only affects the ability for a user to see and therefore select the template itself.
 
-If you have a client application that does not natively support departmental templates, such as Office 2010, you can use a custom script other tools to deploy these templates to the local RMS client folder. Then, these applications will correctly display the departmental templates:
+If you have applications that do not support departmental templates by default, you can use a [custom RMS template download script](/collaborate/connect-redirect?DownloadID=56154) or other tools to deploy these templates to the local RMS client folder. Then, these applications will correctly display the departmental templates.
 
-- For Office 2010, the client folder is **%localappdata%\Microsoft\DRM\Templates**.
-- From a client computer that has downloaded all the templates, you can copy and then paste the template files to other computers.
+From a client computer that has downloaded all the templates, you can copy and then paste the template files to other computers.
 
 ```yaml
 Type: Boolean
