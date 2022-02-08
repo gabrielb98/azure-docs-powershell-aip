@@ -193,7 +193,7 @@ FileName                   Status Comment
 C:\Projects\Analysis.docx  Success
 ```
 
-This command removes protection from a single file named **Analysis.docx**. If the file has label, the label will also be removed. 
+This command removes protection from a single file named **Analysis.docx**. 
 
 ### Example 9: (Unified labeling client only) Remove protection and a label from a file
 
