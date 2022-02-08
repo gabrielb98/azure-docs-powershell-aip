@@ -151,7 +151,17 @@ FileName                   Status Comment
 C:\Projects\Analysis.docx  Success
 ```
 
-This command removes the existing label from the file named **C:\Projects\Analysis.docx**, and specifies a justification message that is required because the Office 365 classification label policy setting is enabled that requires justification for removing a label or lowering the classification. 
+This command removes the existing label from the file named **C:\Projects\Analysis.docx**, and specifies a mandatory justification message.
+
+This justification method is required because the relevant Office 365 classification label policy setting is enabled to require justification for removing a label or lowering the classification.
+
+> [!NOTE]
+> If the label you're removing was protecting your file using a template, this command removes both the label and the protection.
+>
+> If the label you're removing was protecting your file using custom permissions, this command removes only the label.
+>
+
+
 
 ### Example 6: (Unified labeling client only) Protect a file with custom permissions
 
@@ -248,13 +258,8 @@ FileName                   Status Comment
 C:\Projects\Analysis.docx  Success
 ```
 
-This command removes the existing label from the file named **C:\Projects\Analysis.docx**, and specifies a mandatory justification message. This justification message would be required because of a policy setting enabled to require justification for lowering a classification level, removing a label, or removing protection.
+This command removes the existing label from the file named **C:\Projects\Analysis.docx**, and specifies a justification message that is required because the Azure Information Protection policy setting is enabled that requires justification for lowering the classification label, removing a label, or removing protection.
 
-> [!NOTE]
-> If the label you're removing was protecting your file using a template, this command removes both the label and the protection. 
->
-> If the label you're removing was protecting your file using custom permissions, this command removes only the label.
->
 
 ### Example 13: (Classic client only) Apply the "Confidential \ All Employees" label to all files in a folder and register these files with the document tracking site
 
