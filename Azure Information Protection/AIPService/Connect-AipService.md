@@ -89,6 +89,38 @@ After you confirm that these commands result in successfully connecting to Azure
 
 Note that for illustration purposes, this example uses the user name of **admin@contoso.com** with the password of **Passw0rd!** In a production environment when you use this connection method non-interactively, use additional methods to secure the password so that it is not stored in clear text. For example, use the **ConvertTo-SecureString** command or use Key Vault to store the password as a secret.
 
+### Example 4: Connect to Azure Information with client certificate via Service Principal Authentication
+```
+PS C:\ > $Thumbprint = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+PS C:\ > $TenantId = 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyy'
+PS C:\ > $ApplicationId = '00000000-0000-0000-0000-00000000'
+PS C:\> Connect-AipService -CertificateThumbprint $Thumbprint -ApplicationId $ApplicationId -TenantId $TenantId -ServicePrincipal
+
+```
+
+This example connects to an Azure account using certificate-based service principal authentication. The service principal used for authentication must be created with the specified certificate. 
+
+Prerequisites for this example:
+
+- You must update the AIPService PowerShell Module to version 1.0.05 or later.
+- To enable Service Principal authentication, you must add read API permissions (**Application.Read.All**) to the service principal.
+
+For more information, see [Required API permissions - Microsoft Information Protection SDK](/information-protection/develop/concept-api-permissions) and [Use Azure PowerShell to create a service principal with a certificate](/azure/active-directory/develop/howto-authenticate-service-principal-powershell).
+
+### Example 5: Connect to Azure Information Protection with client secret via Service Principal Authentication
+```
+PS C:\ > $Credential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $ApplicationId, $SecuredPassword
+PS C:\ > Connect-AipService -Credential $Credential -TenantId $TenantId -ServicePrincipal
+
+```
+
+In this example:
+
+- The first command prompts for service principal credentials and stores them in the `$Credential` variable. When promoted, enter your application ID for the username value and the service principal secret as the password.
+- The second command connects to the specified Azure tenant using the service principal credentials stored in the `$Credential` variable. The `ServicePrincipal` switch parameter indicates that the account authenticates as a service principal.
+
+To enable Service Principal authentication, you must add read API permissions (**Application.Read.All**) to the service principal. For more information, see [Required API permissions - Microsoft Information Protection SDK](/information-protection/develop/concept-api-permissions).
+
 ## PARAMETERS
 
 ### -AccessToken
