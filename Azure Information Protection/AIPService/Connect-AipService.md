@@ -109,6 +109,8 @@ For more information, see [Required API permissions - Microsoft Information Prot
 
 ### Example 5: Connect to Azure Information Protection with client secret via Service Principal Authentication
 ```
+PS C:\ > $TenantId = 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyy'
+PS C:\ > $ApplicationId = '00000000-0000-0000-0000-00000000'
 PS C:\ > $Credential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $ApplicationId, $SecuredPassword
 PS C:\ > Connect-AipService -Credential $Credential -TenantId $TenantId -ServicePrincipal
 
@@ -136,6 +138,31 @@ Parameter Sets: AccessToken
 Aliases:
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ApplicationID
+Specifies the service principal's application ID.
+
+```yaml
+Type: String
+
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CertificateThumbprint
+
+Specifies the certificate thumbprint of a digital public key X.509 certificate for a service principal that has permissions to perform the given action.
+
+```yaml
+Type: String
+
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -182,6 +209,21 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -ServicePrincipal
+Indicates that the cmdlet specifies service principal authentication.
+
+The service principal must be created with the specified secret.
+
+```yaml
+Type: SwitchParameter
+
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 
 ### -TenantId
 Specifies the tenant GUID. The cmdlet connects to Azure Information Protection for the tenant that you specify by GUID.
