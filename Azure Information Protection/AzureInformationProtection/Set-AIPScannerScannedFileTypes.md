@@ -20,4 +20,4 @@ Set-AIPScannerScannedFileTypes [-Repository <String>] -ScannedFileTypes <String[
 
 ## DESCRIPTION
 
-[!INCLUDE [This classic client cmdlet is deprecated](../includes/classic-client-deprecated-cmdlet.md)]
+[!INCLUDE [This classic client cmdlet is sunset](../includes/classic-client-sunset-cmdlet.md)]

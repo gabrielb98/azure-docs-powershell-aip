@@ -32,7 +32,7 @@ For more information, see:
 > 
 > Check the version that you have installed by running the following command: `(Get-Module AzureInformationProtection -ListAvailable).Version`.
 
-[!INCLUDE [The AIP classic client is deprecated](../includes/classic-client-deprecated.md)]
+[!INCLUDE [The AIP classic client is sunset](../includes/classic-client-sunset.md)]
 
 ## AzureInformationProtection Cmdlets
 ### [Add-AIPScannerRepository](Add-AIPScannerRepository.md)

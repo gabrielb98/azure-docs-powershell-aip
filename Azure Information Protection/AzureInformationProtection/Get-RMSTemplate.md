@@ -22,7 +22,7 @@ Get-RMSTemplate [-RmsServer <String>] [-Force] [-Culture <String>] [<CommonParam
 ## DESCRIPTION
 The **Get-RMSTemplate** cmdlet gets a list of templates from your Rights Management deployment (AD RMS or Azure RMS), which can then be used to protect files. Use this cmdlet to identify the template ID of the template that you want to use.
 
-[!INCLUDE [The AIP classic client is deprecated](../includes/classic-client-deprecated.md)]
+[!INCLUDE [The AIP classic client is sunset](../includes/classic-client-sunset.md)]
 
 
 ## EXAMPLES

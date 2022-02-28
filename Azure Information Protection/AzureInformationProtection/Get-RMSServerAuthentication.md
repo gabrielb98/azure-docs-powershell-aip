@@ -26,7 +26,7 @@ This cmdlet does not apply if you protect or unprotect files by using your user 
 
 To use server mode with the Azure Rights Management service, you must use a service principal account in Azure AD. To use server mode with AD RMS, the computer account must be granted permissions. For more information, see [Using PowerShell with the Azure Information Protection client](/information-protection/rms-client/client-admin-guide-powershell) from the Azure Information Protection client admin guide.
 
-[!INCLUDE [The AIP classic client is deprecated](../includes/classic-client-deprecated.md)]
+[!INCLUDE [The AIP classic client is sunset](../includes/classic-client-sunset.md)]
 
 
 ## EXAMPLES

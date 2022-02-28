@@ -45,7 +45,7 @@ For step-by-step instructions to install, configure, and use the scanner, see:
 - [Unified labeling client instructions for deploying the AIP scanner](/information-protection/deploy-aip-scanner)
 - [Classic client instructions for deploying the AIP scanner](/information-protection/deploy-aip-scanner)
 
-[!INCLUDE [The AIP classic client is deprecated](../includes/classic-client-deprecated.md)]
+[!INCLUDE [The AIP classic client is sunset](../includes/classic-client-sunset.md)]
 
 
 ## EXAMPLES
