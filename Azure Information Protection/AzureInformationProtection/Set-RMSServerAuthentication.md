@@ -9,8 +9,6 @@ schema: 2.0.0
 # Set-RMSServerAuthentication
 
 ## SYNOPSIS
-**Relevant for:** AIP classic client only
-
 Sets the server mode, which is required for non-interactive sessions.
 
 ## SYNTAX

@@ -9,8 +9,6 @@ schema: 2.0.0
 # New-RMSProtectionLicense
 
 ## SYNOPSIS
-**Relevant for:** AIP classic client only
-
 Creates an ad-hoc rights policy for RMS protection.
 
 ## SYNTAX

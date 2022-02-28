@@ -9,8 +9,6 @@ schema: 2.0.0
 # Get-RMSServer
 
 ## SYNOPSIS
-**Relevant for:** AIP classic client only
-
 Gets a list of RMS servers that can issue templates.
 
 ## SYNTAX

@@ -9,8 +9,6 @@ schema: 2.0.0
 # Unprotect-RMSFile
 
 ## SYNOPSIS
-**Relevant for:** AIP classic client only
-
 Unprotects a file that is currently protected by RMS.
 
 ## SYNTAX

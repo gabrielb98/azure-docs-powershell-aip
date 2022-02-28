@@ -49,7 +49,7 @@ For more information, see:
 Clears the user settings and RMS templates for the current user.
 
 ### [Clear-RMSAuthentication](Clear-RMSAuthentication.md)
-**Classic client only:** Clears credentials for a user who is authenticated to the Azure RMS service.
+Clears credentials for a user who is authenticated to the Azure RMS service.
 
 ### [Export-AIPLogs](Export-AIPLogs.md)
 **Unified labeling client only:** Gathers and exports Azure Information Protection client and scanner log files to a compressed file.
@@ -86,13 +86,13 @@ Supported only for the AIP unified labeling client.
 Gets the RMS protection status of a specified file.
 
 ### [Get-RMSServer](Get-RMSServer.md)
-**Classic client only:** Gets a list of RMS servers that can issue templates.
+Gets a list of RMS servers that can issue templates.
 
 ### [Get-RMSServerAuthentication](Get-RMSServerAuthentication.md)
-**Classic** client only: Gets the server mode status that is used for authentication to RMS.
+Gets the server mode status that is used for authentication to RMS.
 
 ### [Get-RMSTemplate](Get-RMSTemplate.md)
-**Classic client only:** Gets a list of RMS templates.
+Gets a list of RMS templates.
 
 For the unified labeling client, use **[Get-RMSFileStatus](Get-RMSFileStatus.md)** instead.
 
@@ -112,19 +112,17 @@ Installs the Azure Information Protection scanner.
 **Unified labeling client only:** Creates an ad-hoc protection policy for custom permissions.
 
 ### [New-RMSProtectionLicense](New-RMSProtectionLicense.md)
-**Classic client only:** Creates an ad-hoc protection policy for RMS protection.
+Creates an ad-hoc protection policy for RMS protection.
 
 For the unified labeling client, use **[New-AIPCustomPermissions](New-AIPCustomPermissions.md)** instead. 
 
 ### [Protect-RMSFile](Protect-RMSFile.md)
-**Classic client only:** Protects a specified file or the files in a specified folder by using RMS.
+Protects a specified file or the files in a specified folder by using RMS.
 
 For the unified labeling client, use **[Set-AIPFileLabel](Set-AIPFileLabel.md)** instead.
 
 ### [Remove-AIPScannerContentScanJob](Remove-AIPScannerContentScanJob.md)
-Deletes the entire Azure Information Protection content scan job.
-
-Supported only for the AIP unified labeling client.
+**Unified labeling client only:** Deletes the entire Azure Information Protection content scan job.
 
 ### [Remove-AIPScannerRepository](Remove-AIPScannerRepository.md)
 **Unified labeling client only:** Removes a repository from an Azure Information Protection content scan job.
@@ -163,7 +161,7 @@ Sets optional configuration for the Azure Information Protection scanner.
 **Unified labeling client only:** Sets optional configurations for the Network Discovery service.
 
 ### [Set-RMSServerAuthentication](Set-RMSServerAuthentication.md)
-**Classic client only:** Sets the server mode, which is required for non-interactive sessions.
+Sets the server mode, which is required for non-interactive sessions.
 
 For the unified labeling client, use **[Set-AIPAuthentication](Set-AIPAuthentication.md)** instead.
 
@@ -186,7 +184,7 @@ Uninstalls the Windows Server service for the Azure Information Protection scann
 **Unified labeling client only:** Uninstalls the Network Discovery Windows server service.
 
 ### [Unprotect-RMSFile](Unprotect-RMSFile.md)
-**Classic client only:** Unprotects a file that is currently protected by RMS.
+Unprotects a file that is currently protected by RMS.
 
 For the unified labeling client, use **[Set-AIPFileLabel](Set-AIPFileLabel.md)** instead.
 

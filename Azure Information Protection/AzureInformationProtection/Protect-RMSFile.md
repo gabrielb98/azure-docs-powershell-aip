@@ -9,8 +9,6 @@ schema: 2.0.0
 # Protect-RMSFile
 
 ## SYNOPSIS
-**Relevant for:** AIP classic client only
-
 Protects a specified file or the files in a specified folder by using RMS.
 
 ## SYNTAX

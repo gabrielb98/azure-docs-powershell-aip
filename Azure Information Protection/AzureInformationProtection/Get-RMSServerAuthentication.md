@@ -9,8 +9,6 @@ schema: 2.0.0
 # Get-RMSServerAuthentication
 
 ## SYNOPSIS
-**Relevant for:** AIP classic client only
-
 Gets the server mode status that is used for authentication to RMS.
 
 ## SYNTAX
