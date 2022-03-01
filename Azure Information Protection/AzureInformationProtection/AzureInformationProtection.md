@@ -25,12 +25,11 @@ For more information, see:
 |**Classic client**     |  - [AIP classic client](/azure/information-protection/rms-client/aip-client) </br>- [Classic client version release history](/azure/information-protection/rms-client/client-version-release-history) </br>- [Using PowerShell with the AIP classic client](/azure/information-protection/rms-client/client-admin-guide-powershell) | 
 | | |
 
-> [!TIP]
-> This docset indicates whenever information is relevant for only one of the clients. If no client is specified, the cmdlet or parameter is relevant for both clients. 
->
->Not sure of the differences between these two clients? See this [FAQ](/azure/information-protection/faqs#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
-> 
-> Check the version that you have installed by running the following command: `(Get-Module AzureInformationProtection -ListAvailable).Version`.
+This docset indicates whenever information is relevant for only one of the clients. If no client is specified, the cmdlet or parameter is relevant for both clients. 
+
+Not sure of the differences between these two clients? See this [FAQ](/azure/information-protection/faqs#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
+
+Check the version that you have installed by running the following command: `(Get-Module AzureInformationProtection -ListAvailable).Version`.
 
 [!INCLUDE [The AIP classic client is sunset](../includes/classic-client-sunset.md)]
 
