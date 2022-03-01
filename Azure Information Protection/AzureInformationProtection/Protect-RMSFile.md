@@ -40,7 +40,7 @@ When you run this cmdlet, you have the following options:
 
 You cannot run this command concurrently but must wait for the original command to complete before running it again. If you try to run it again before the previous command has finished, the new command will fail.
 
-This cmdlet writes to the following log files: **Success.log**, **Failure.log**, and **Debug.log** in **%localappdata%\Microsoft\MSIPC\pscmdlet\Logs\\<GUID>**.
+This cmdlet writes to the following log files: **Success.log**, **Failure.log**, and **Debug.log** in `%localappdata%\Microsoft\MSIPC\pscmdlet\Logs\\<GUID>`.
 
 > [!TIP]
 > For step-by-step instructions to use this cmdlet to protect files on a Windows Server file share, using File Resource Manager and File Classification Infrastructure, see [RMS Protection with Windows Server File Classification Infrastructure (FCI)](/information-protection/rms-client/configure-fci).
