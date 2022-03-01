@@ -9,8 +9,6 @@ schema: 2.0.0
 # Unprotect-RMSFile
 
 ## SYNOPSIS
-**Relevant for:** AIP classic client only
-
 Unprotects a file that is currently protected by RMS.
 
 ## SYNTAX
@@ -41,7 +39,7 @@ When you run this cmdlet, you have the following options:
 
 You can run this command concurrently when you specify a different path for the *LogFile* parameter for each command that runs in parallel. If you don't specify a different log file path and the previous command hasn't finished, the new command will fail.
 
-[!INCLUDE [The AIP classic client is deprecated](../includes/classic-client-deprecated.md)]
+[!INCLUDE [The AIP classic client is sunset](../includes/classic-client-sunset.md)]
 
 
 ## EXAMPLES

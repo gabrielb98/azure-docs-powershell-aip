@@ -9,8 +9,6 @@ schema: 2.0.0
 # New-RMSProtectionLicense
 
 ## SYNOPSIS
-**Relevant for:** AIP classic client only
-
 Creates an ad-hoc rights policy for RMS protection.
 
 ## SYNTAX
@@ -26,7 +24,7 @@ The **New-RMSProtectionLicense** cmdlet creates an ad-hoc rights policy that you
 
 Create an ad-hoc rights policy (also known as a publishing license) when you cannot use a previously created rights policy template.
 
-[!INCLUDE [The AIP classic client is deprecated](../includes/classic-client-deprecated.md)]
+[!INCLUDE [The AIP classic client is sunset](../includes/classic-client-sunset.md)]
 
 
 ## EXAMPLES
