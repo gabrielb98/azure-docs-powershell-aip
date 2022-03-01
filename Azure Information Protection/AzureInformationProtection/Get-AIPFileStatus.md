@@ -13,10 +13,6 @@ schema: 2.0.0
 
 Gets the Azure Information Protection label and protection information for a specified file or files.
 
-> [!NOTE]
-> If your files are stored in SharePoint Online, use the [Get-FileSensitivityLabelInfo](/powershell/module/sharepoint-online/get-filesensitivitylabelinfo) cmdlet from the **SharePointOnlinePowerShell** module instead.
->
-
 ## SYNTAX
 
 ```
@@ -26,7 +22,9 @@ Get-AIPFileStatus [-Path] <String[]> [<CommonParameters>]
 ## DESCRIPTION
 The **Get-AIPFileStatus** cmdlet returns the Azure Information Protection status of a specified file or all files in a specified path. This status includes whether the file has a label, and if it does, the label name, who applied it, how it was applied, and when. 
 
-The status also includes whether the file is protected by Rights Management, and if it is, what Rights Management template was used to apply this protection. If the file was protected with custom permissions (an ad-hoc rights policy) instead of a template, "Restricted Access" is displayed instead of the template name. In addition, the [Rights Management owner and Rights Management issuer](/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) is displayed, and when the file was protected.
+If your files are stored in SharePoint Online, use the [Get-FileSensitivityLabelInfo](/powershell/module/sharepoint-online/get-filesensitivitylabelinfo) cmdlet from the **SharePointOnlinePowerShell** module instead.
+
+The status returned in the **Get-AIPFileStatus** cmdlet also includes whether the file is protected by Rights Management, and if it is, what Rights Management template was used to apply this protection. If the file was protected with custom permissions (an ad-hoc rights policy) instead of a template, "Restricted Access" is displayed instead of the template name. In addition, the [Rights Management owner and Rights Management issuer](/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) is displayed, and when the file was protected.
 
 Note that password-protected files always return the protection status of **False**.
 
@@ -37,7 +35,6 @@ You can run this cmdlet non-interactively. For more information, see the followi
 - **[Classic client](/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection)**
 
 [!INCLUDE [The AIP classic client is sunset](../includes/classic-client-sunset.md)]
-
 
 **Differences in support between clients**
 
