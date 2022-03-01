@@ -72,7 +72,7 @@ Possible values:
 
  For example, the service cannot access the database for the scanner configuration.
 
-[!INCLUDE [The AIP classic client is deprecated](../includes/classic-client-deprecated.md)]
+[!INCLUDE [The AIP classic client is sunset](../includes/classic-client-sunset.md)]
 
 
 ## EXAMPLES

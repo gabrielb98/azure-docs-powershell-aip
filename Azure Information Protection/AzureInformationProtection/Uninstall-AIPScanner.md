@@ -38,7 +38,7 @@ This command does *not* remove the following:
     | | |
 
 
-[!INCLUDE [The AIP classic client is deprecated](../includes/classic-client-deprecated.md)]
+[!INCLUDE [The AIP classic client is sunset](../includes/classic-client-sunset.md)]
 
 
 ## EXAMPLES

@@ -48,7 +48,7 @@ To control when the access token expires, run this cmdlet with parameters. This 
 |**Classic client**    |  For more information see [labeling files non-interactively for the AIP classic client](/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection). </br></br>The classic client supports a *Token* parameter that you cannot specify the first time you run this cmdlet, but can specify subsequently. </br></br>The first time that you run this cmdlet, it generates an access token that you can copy to the clipboard and then specify when you run the cmdlet again. By specifying the access token with this cmdlet, you are not prompted to sign in. </br></br>**Tip:** Use this method for service accounts that cannot be granted the right to log on locally. For full instructions, see [Specify and use the Token parameter for Set-AIPAuthentication](/information-protection/rms-client/client-admin-guide-powershell#specify-and-use-the-token-parameter-for-set-aipauthentication) from the admin guide. </br></br>**Note:** When the Azure AD access token expires, you must rerun the cmdlet to acquire a new token.|
 | | |
 
-[!INCLUDE [The AIP classic client is deprecated](../includes/classic-client-deprecated.md)]
+[!INCLUDE [The AIP classic client is sunset](../includes/classic-client-sunset.md)]
 
 
 ## EXAMPLES

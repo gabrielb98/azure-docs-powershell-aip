@@ -60,7 +60,7 @@ When you run this cmdlet with the Azure Information Protection unified labeling 
 
 - The *WhatIf* parameter is supported. You can use the **WhatIf** mode with *DiscoveryInfoTypes* to find known sensitive information types.
 
-[!INCLUDE [The AIP classic client is deprecated](../includes/classic-client-deprecated.md)]
+[!INCLUDE [The AIP classic client is sunset](../includes/classic-client-sunset.md)]
 
 
 ## EXAMPLES

@@ -69,7 +69,7 @@ For the AIP classic client, the **Set-AIPFileLabel** cmdlet sets or removes an A
 > When using the classic client, you must create and edit labels in the Azure portal. For instructions, see [Configuring the Azure Information Protection policy](/information-protection/configure-policy).
 > 
 
-[!INCLUDE [The AIP classic client is deprecated](../includes/classic-client-deprecated.md)]
+[!INCLUDE [The AIP classic client is sunset](../includes/classic-client-sunset.md)]
 
 
 **Running the cmdlet non-interactively**

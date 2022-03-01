@@ -47,7 +47,7 @@ For more information, see:
     - [Using PowerShell with the AIP classic client](/information-protection/rms-client/client-admin-guide-powershell)
     - [Install the AIP classic client for users](/information-protection/rms-client/client-admin-guide-install)
 
-	[!INCLUDE [The AIP classic client is deprecated](../includes/classic-client-deprecated.md)]
+	[!INCLUDE [The AIP classic client is sunset](../includes/classic-client-sunset.md)]
 
 
 ### Installing the AzureInformationProtection module

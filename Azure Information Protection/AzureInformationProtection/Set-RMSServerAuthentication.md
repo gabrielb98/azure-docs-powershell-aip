@@ -9,8 +9,6 @@ schema: 2.0.0
 # Set-RMSServerAuthentication
 
 ## SYNOPSIS
-**Relevant for:** AIP classic client only
-
 Sets the server mode, which is required for non-interactive sessions.
 
 ## SYNTAX
@@ -33,7 +31,7 @@ This cmdlet does not apply if you use your user account to protect or unprotect 
 
 For information how to get the identifiers that the service principal requires for Azure RMS, and how to grant the permissions for AD RMS, see [Using PowerShell with the AIP classic client](/information-protection/rms-client/client-admin-guide-powershell).
 
-[!INCLUDE [The AIP classic client is deprecated](../includes/classic-client-deprecated.md)]
+[!INCLUDE [The AIP classic client is sunset](../includes/classic-client-sunset.md)]
 
 
 ## EXAMPLES

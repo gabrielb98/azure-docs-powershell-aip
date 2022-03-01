@@ -34,7 +34,7 @@ For a list of files and registry entries that are deleted, see the the details a
 
 - **[Classic client](/information-protection/rms-client/client-admin-guide#more-information-about-the-reset-settings-option)**
 
-[!INCLUDE [The AIP classic client is deprecated](../includes/classic-client-deprecated.md)]
+[!INCLUDE [The AIP classic client is sunset](../includes/classic-client-sunset.md)]
 
 
 ## EXAMPLES
