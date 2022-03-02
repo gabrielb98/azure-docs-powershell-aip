@@ -25,6 +25,8 @@ Network scan jobs enables AIP administrators to scan a specified IP address or r
 
 The scanner's Network Discovery service must be started before you can run this cmdlet.
 
+[!INCLUDE [audit-logs-sunset](../includes/audit-logs-sunset.md)]
+
 ## EXAMPLES
 
 ### Example 1
