@@ -9,8 +9,6 @@ schema: 2.0.0
 # Set-AIPFileLabel
 
 ## SYNOPSIS
-**Relevant for:** AIP unified labeling and classic clients
-
 Sets or removes an Azure Information Protection label for a file, and sets or removes the protection according to the label configuration or custom permissions.
 
 ## SYNTAX
@@ -46,39 +44,13 @@ Set-AIPFileLabel -CustomPermissions <AIPCustomPermissions> [-Owner <String>] [-P
 ```
 
 ## DESCRIPTION
-**Unified labeling client support**
-
 For the AIP unified labeling client, the **Set-AIPFileLabel** cmdlet sets or removes a sensitivity label for one or more files. This action can automatically apply protection when labels are configured to apply encryption. 
 
 Additionally, you can use this cmdlet to apply custom permissions when they are created as an ad-hoc protection policy object with the [New-AIPCustomPermissions](New-AIPCustomPermissions.md) cmdlet. 
 
 When the command runs successfully, any existing label or protection can be replaced.
 
-When you run this cmdlet with the Azure Information Protection unified labeling client, there are other differences from the Azure Information Protection client:
-
-- The *Owner* parameter is not supported.
-
-- When a file isn't labeled because it was manually labeled, there was no match for the conditions that you specified, or the file had a higher classification, the file is skipped with the single comment of "No label to apply".
-
-
-**Classic client support**
-
-For the AIP classic client, the **Set-AIPFileLabel** cmdlet sets or removes an Azure Information Protection label for one or more files. This action can automatically apply or remove protection when labels are configured for protection in the Azure Information Protection policy. When the command runs successfully, any existing label or protection can be replaced.
-
-> [!TIP]
-> When using the classic client, you must create and edit labels in the Azure portal. For instructions, see [Configuring the Azure Information Protection policy](/information-protection/configure-policy).
-> 
-
-[!INCLUDE [The AIP classic client is sunset](../includes/classic-client-sunset.md)]
-
-
-**Running the cmdlet non-interactively**
-
-For both clients, you can run this cmdlet non-interactively. For instructions, see the relevant admin guide for your client:
-
-- **[Classic client](/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection)**
-
-- **[Unified labeling client](/information-protection/rms-client/clientv2-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection)**
+You can run this cmdlet non-interactively. For more information, see the [Unified labeling client admin guide](/information-protection/rms-client/clientv2-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection).
 
 
 ## EXAMPLES
@@ -218,74 +190,10 @@ C:\Projects\Analysis.docx  Success
 This command removes the label and custom protection from a single file named **Analysis.docx**. Because the policy is configured to require justification to remove a label, the justification reason is also supplied so that the command can complete without prompting the user for the reason.
 
 
-### Example 10: (Classic client only) Apply the "General" label to all files in a folder and any of its subfolders
-```
-PS C:\> Set-AIPFileLabel -Path C:\Projects\ -LabelId d9f23ae3-1324-1234-1234-f515f824c57b
-FileName                    Status      Comment
---------                    ------      ------------
-C:\Projects\Project1.docx   Success
-C:\Projects\Datasheet.pdf   Success
-C:\Projects\Image.jpg       Success
-C:\Projects\Analysis.xlsx   Skipped    Justification required
-C:\Projects\Dashboard.xlsx  Success
-```
-
-This command sets a label named "General" on all files in the Projects folder and any of its subfolders.
-
-If the General label is configured in the Azure Information Protection policy to apply Rights Management protection, the files that were successfully labeled with this command will also be protected. In this case, the Rights Management owner (who has the Rights Management Full Control permission) of these files is the user who ran the PowerShell command.
-
-In this example, one file was not labeled (skipped) with the comment that justification is required. This might be the intended outcome to ensure that a file with a higher classification label or protection isn't accidentally overwritten with a lower classification label or has protection removed. 
-
-To enable this safeguard, the Azure Information Protection policy must be configured to require justification for lowering the classification label, removing a label, or removing protection. When you then run this command without the **JustificationMessage** parameter and the label triggers justification, the file is skipped. 
-
-### Example 11: (Classic client only) Apply the "General" label to a single file, which requires justification
-```
-PS C:\> Set-AIPFileLabel -Path \\Finance\Projects\Analysis.xlsx -LabelId d9f23ae3-1324-1234-1234-f515f824c57b -JustificationMessage 'The previous label no longer applies'
-FileName                          Status      Comment
---------                          ------      ------------
-\\finance\projects\analysis.xlsx  Success
-```
-
-This command sets the "General" label for a file that is already labeled with a higher classification label. The Azure Information Protection policy is configured to require justification for lowering the classification label, removing a label, or removing protection. Because the command includes a justification message, the new label is successfully applied and the justification reason is logged on the local computer.
-
-### Example 12: (Classic client only) Remove a label from a file
-
-```
-PS C:\> Set-AIPFileLabel C:\Projects\Analysis.docx -RemoveLabel -JustificationMessage 'The previous label no longer applies'
-
-FileName                   Status Comment
---------                   ------ ------------
-C:\Projects\Analysis.docx  Success
-```
-
-This command removes the existing label from the file named **C:\Projects\Analysis.docx**, and specifies a justification message that is required because the Azure Information Protection policy setting is enabled that requires justification for lowering the classification label, removing a label, or removing protection.
-
-
-### Example 13: (Classic client only) Apply the "Confidential \ All Employees" label to all files in a folder and register these files with the document tracking site
-
-```
-PS C:\> Set-AIPFileLabel -Path C:\Projects\ -LabelId ade72bf1-4714-4714-4714-a325f824c55a -EnableTracking 
-FileName                    Status      Comment 
---------                    ------      ------------ 
-C:\Projects\Project1.docx   Success 
-C:\Projects\Project2.docx   Success 
-C:\Projects\Project3.docx   Success 
-C:\Projects\Project4.docx   Success 
-C:\Projects\Datasheet.pdf   Success 
-C:\Projects\Image.jpg       Success 
-C:\Projects\Dashboard.xlsx  Success
-```
-
- 
-This command sets a label named "Confidential \ All Employees" on all files in the Projects folder and any of its subfolders. The Label ID specified is for the sublabel "All Employees" that has a parent label of "Confidential". 
-
-If the "Confidential \ All Employees" label applies protection, the files that were successfully labeled with this command will also be protected. Because the *EnableTracking* parameter was specified, the protected documents can now be tracked and revoked in the document tracking site by the person who labeled the document, and by global administrators who use the Administrator mode.
 
 ## PARAMETERS
 
 ### -CustomPermissions
-**Relevant for:** Unified labeling client only
-
 Specifies the variable name that stores an ad-hoc protection policy, which was created by using the [New-AIPCustomPermissions](./New-AIPCustomPermissions.md) cmdlet. The ad-hoc protection policy is used to protect the file or files with custom permissions.
 
 ```yaml
@@ -301,8 +209,6 @@ Accept wildcard characters: False
 ```
 
 ### -EnableTracking
-**Relevant for:** Classic client only
-
 Specify this parameter to register a protected document with the document tracking portal. 
 
 The user running this cmdlet and global administrators can then track the protected document and if necessary, revoke it. For more information about the document tracking site, see [Configuring and using document tracking for Azure Information Protection](/azure/information-protection/rms-client/client-admin-guide-document-tracking) from the admin guide. 
@@ -334,9 +240,7 @@ Specifies the identity (ID) of the label to apply. When a label has sublabels, a
 
 To find the label ID:
 
-- **For the unified labeling client:** The label ID value is not displayed in the Microsoft 365 Compliance center. However, you can use the following Office 365 Security & Compliance Center PowerShell command to find this value: `Get-Label | Format-Table -Property DisplayName, Name, Guid`
-
-- **For the classic client:** The label ID value is displayed in the Azure portal, on the Label blade, when you view or configure the Azure Information Protection policy. 
+The label ID value is not displayed in the Microsoft 365 Compliance center. However, you can use the following Office 365 Security & Compliance Center PowerShell command to find this value: `Get-Label | Format-Table -Property DisplayName, Name, Guid`
 
 For files that have labels applied, you can also run the [Get-AIPFileStatus](./Get-AIPFileStatus.md) cmdlet to identify the label ID (MainLabelId or SubLabelId).
 
@@ -353,23 +257,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Owner
-**Relevant for:** Classic client only
-
-Specify the email address that is written to the Owner custom property.
-
-
-```yaml
-Type: String
-Parameter Sets: SetLabel, SetLabelCustom, Custom
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Path
 Specifies a local path, network path, or SharePoint Server URL to the files for which you want to get the label and protection information. 

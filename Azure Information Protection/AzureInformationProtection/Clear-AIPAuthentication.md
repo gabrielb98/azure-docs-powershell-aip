@@ -9,8 +9,6 @@ schema: 2.0.0
 # Clear-AIPAuthentication
 
 ## SYNOPSIS
-**Relevant for:** AIP unified labeling and classic clients
-
 Clears the user settings and RMS templates for the current user.
 
 ## SYNTAX
@@ -29,13 +27,6 @@ The Clear-AIPAuthentication cmdlet resets the user settings for the Azure Rights
 - Rights Management templates are not deleted from the **%LocalAppData\Microsoft\MSIPC** folder that Office uses.
 
 For a list of files and registry entries that are deleted, see the the details about the **Reset Settings** option in the following admin guides:
-
-- **[Unified labeling client](/information-protection/rms-client/clientv2-admin-guide#more-information-about-the-reset-settings-option)**
-
-- **[Classic client](/information-protection/rms-client/client-admin-guide#more-information-about-the-reset-settings-option)**
-
-[!INCLUDE [The AIP classic client is sunset](../includes/classic-client-sunset.md)]
-
 
 ## EXAMPLES
 

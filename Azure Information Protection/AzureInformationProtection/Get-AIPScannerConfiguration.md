@@ -8,8 +8,6 @@ schema: 2.0.0
 # Get-AIPScannerConfiguration
 
 ## SYNOPSIS
-**Relevant for:** AIP unified labeling and classic clients
-
 Gets the configuration settings for the Azure Information Protection scanner.
 
 ## SYNTAX
@@ -19,18 +17,14 @@ Get-AIPScannerConfiguration [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet is supported by both the Azure Information Protection classic and unified labeling clients, with different usage, as described below.
-
 The **Get-AIPScannerConfiguration** cmdlet gets the configuration settings for the Azure Information Protection scanner. 
 
 If you run [Import-AIPScannerConfiguration](./Import-AIPScannerConfiguration.md), this action automatically configures the scanner to get its configuration offline. As a result, when you run this Get-AIPScannerConfiguration cmdlet after importing settings from a file, **OnlineConfiguration** displays **Off**. 
 
-[!INCLUDE [The AIP classic client is sunset](../includes/classic-client-sunset.md)]
-
 
 ## EXAMPLES
 
-### Example 1: Gets the configuration for the Azure Information Protection scanner (unified labeling client)
+### Example 1: Gets the configuration for the Azure Information Protection scanner
 ```
 PS C:\> Get-AIPScannerConfiguration
 OnlineConfiguration : On
@@ -46,15 +40,6 @@ This command gets the current PowerShell configuration settings for the Azure In
 
 In this example, the output shows that the scanner is using the default configuration for online configuration, the report level of **Info**, and a logging level of **Trace**. The cluster name, SQL instance, and database names are listed, and the cloud type is **Commercial**.
 
-### Example 2: Gets the configuration for the Azure Information Protection scanner (classic client)
-```
-PS C:\> Get-AIPScannerConfiguration
-
-OnlineConfiguration      : On
-ReportLevel              : Info
-```
-
-This command gets the current PowerShell configuration settings for the Azure Information Protection scanner. In this example, the output shows that the scanner is using the default configuration for online configuration and the report level of information.
 
 
 ## PARAMETERS

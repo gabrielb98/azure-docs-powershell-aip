@@ -8,8 +8,6 @@ schema: 2.0.0
 # Add-AIPScannerRepository
 
 ## SYNOPSIS
-**Relevant for:** AIP unified labeling client. Deprecated for the classic client.
-
 Adds a repository to an Azure Information Protection content scan job.
 
 ## SYNTAX
@@ -27,8 +25,6 @@ Add-AIPScannerRepository -Path <String> [-OverrideContentScanJob <OnOffEnum>] [-
 Adds a repository for your content scan job to scan.
 
 For more information about content scan jobs, see the [Azure Information Protection on-premises scanner documentation](/information-protection/deploy-aip-scanner-configure-install#create-a-content-scan-job).
-
-[!INCLUDE [This classic client cmdlet is sunset](../includes/classic-client-sunset-cmdlet.md)]
 
 ## EXAMPLES
 

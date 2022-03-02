@@ -33,21 +33,13 @@ For upgrading and installation instructions, see [Installing the AIPService Powe
 
 ## AzureInformationProtection
 
-This module has cmdlets for the Azure Information Protection client, including both the unified labeling and classic clients. The cmdlets are installed together with the client. 
+This module has cmdlets for the Azure Information Protection unified labeling client that are installed together with the client.
 
 For more information, see:
 
-- **Unified labeling client:**
-    - [About the AIP unified labeling client](/information-protection/rms-client/aip-clientv2)
-    - [Using PowerShell with the AIP unified labeling client](/information-protection/rms-client/clientv2-admin-guide-powershell)
-    - [Install the AIP unified labeling client for users](/information-protection/rms-client/clientv2-admin-guide-install)
-
-- **Classic client:**
-    - [About the AIP classic client](/information-protection/rms-client/aip-client)
-    - [Using PowerShell with the AIP classic client](/information-protection/rms-client/client-admin-guide-powershell)
-    - [Install the AIP classic client for users](/information-protection/rms-client/client-admin-guide-install)
-
-	[!INCLUDE [The AIP classic client is sunset](../includes/classic-client-sunset.md)]
+- [About the AIP unified labeling client](/information-protection/rms-client/aip-clientv2)
+- [Using PowerShell with the AIP unified labeling client](/information-protection/rms-client/clientv2-admin-guide-powershell)
+- [Install the AIP unified labeling client for users](/information-protection/rms-client/clientv2-admin-guide-install)
 
 
 ### Installing the AzureInformationProtection module

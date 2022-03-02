@@ -10,8 +10,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Updates the database schema for the Azure Information Protection scanner.
 
-**Relevant for:** AIP unified labeling and classic clients
-
 ## SYNTAX
 
 ```
@@ -22,32 +20,15 @@ Update-AIPScanner [-Cluster | -Profile <String>] [-Force] [<CommonParameters>]
 The **Update-AIPScanner** cmdlet updates the database schema for the Azure Information Protection scanner and if required, the scanner service account is also granted delete permissions for the scanner database. 
 
 Run this cmdlet after upgrading your Azure Information Protection client.
-
-**Unified labeling client support**
    
-The current version of the unified labeling client includes a preview version of the scanner that you can install for testing. 
-
 For more information, see [Installing the Azure Information Protection scanner](/azure/information-protection/rms-client/clientv2-admin-guide#installing-the-azure-information-protection-scanner.md) from the admin guide for the unified labeling client.
     
 Run this cmdlet with an account that has the database-level role of **db_owner** for the configuration database that the scanner is using, named **AIPScannerUL_\<cluster_name>**.
 
-**Classic client support**
-
-For more information about upgrading the scanner for the Azure Information Protection classic client, see [Upgrading the Azure Information Protection scanner](/azure/information-protection/rms-client/client-admin-guide#upgrading-the-azure-information-protection-scanner) from the admin guide.
-    
-Run this cmdlet with an account that has the database-level role of **db_owner** for the configuration database that the scanner is using:
-
-- **For version 1.41.51.0:** This database is named **AzInfoProtectionScanner**.
-- **For version 1.48.204.0:** This database is named **AIPScanner_\<profile_name>**.
-    
-If you are upgrading from versions before 1.48.204.0, after the upgrade, the scanner changes how it gets its configuration settings. Instead of using PowerShell to configure the scanner locally, the scanner is now configured from the Azure Information Protection service, by using the Azure portal.
-
-[!INCLUDE [The AIP classic client is sunset](../includes/classic-client-sunset.md)]
-
 
 ## EXAMPLES
 
-### Example 1: Update the scanner after the Azure Information Protection classic client has been upgraded, and set a scanner cluster  name
+### Example 1: Update the scanner after the Azure Information Protection client has been upgraded, and set a scanner cluster  name
 ```
 PS C:\> Update-AIPScanner –cluster USWEST
 ```
@@ -65,8 +46,6 @@ For reference purposes, a backup of your old configuration is stored in **%local
 
 
 ### -Cluster
-**Relevant for:** Unified labeling client only.
-
 Specifies the configured name of the scanner's database, used to identify the scanner you want to update.
 
 Use the following syntax: **AIPScannerUL_<cluster_name>**. 
@@ -103,15 +82,9 @@ Accept wildcard characters: False
 ### -Profile
 Specifies the configured name of the scanner's database, used to identify the scanner you want to update.
 
-- **Unified labeling client:** Using either this parameter or the **Cluster** parameter is mandatory. Starting in version 2.7.0.0 of the unified labeling client, we recommend using the **Cluster** parameter instead of the this parameter.
+Using either this parameter or the **Cluster** parameter is mandatory. Starting in version 2.7.0.0 of the unified labeling client, we recommend using the **Cluster** parameter instead of the this parameter.
 
-    The database name for the scanner is **AIPScannerUL_\<profile_name>**. 
-
-- **Classic client:** This parameter is optional. 
-
-    - If it's not specified, the default database is used, which is **AIPScanner_\<computer_name>**. 
-
-    - When you specify a profile name with this parameter, the database name for the scanner has the following syntax: **AIPScanner_\<profile_name>**.
+The database name for the scanner is **AIPScannerUL_\<profile_name>**. 
 
 
 ```yaml 

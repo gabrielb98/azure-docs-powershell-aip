@@ -9,36 +9,25 @@ Locale: en-US
 # AzureInformationProtection Module
 ## Description
 
-The following lists links to documentation for the Microsoft Azure Information Protection (AIP) cmdlets. 
+The following lists links to documentation for the Microsoft Azure Information Protection (AIP) cmdlets.
 
-- **Installation:** The AzureInformationProtection module is installed with either the Azure Information Protection unified labeling or classic client. 
+- **Installation:** The AzureInformationProtection module is installed with the  Azure Information Protection unified labeling client.
 
     To check the version you have installed, run: `(Get-Module AIPService -ListAvailable).Version` If this command or any cmdlet from this module fails to run, first run **Import-Module AIPService**.
 
 - **.dll file:** The .dll file for this module is *AIP.dll*.
 
 For more information, see:
-    
-|Client  |References  |
-|---------|---------|
-|**Unified labeling client**     | - [AIP unified labeling client](/azure/information-protection/rms-client/aip-clientv2) </br>- [Unified client version release history](/azure/information-protection/rms-client/unifiedlabelingclient-version-release-history) </br>- [Using PowerShell with the AIP unified labeling client](/azure/information-protection/rms-client/clientv2-admin-guide-powershell)        |
-|**Classic client**     |  - [AIP classic client](/azure/information-protection/rms-client/aip-client) </br>- [Classic client version release history](/azure/information-protection/rms-client/client-version-release-history) </br>- [Using PowerShell with the AIP classic client](/azure/information-protection/rms-client/client-admin-guide-powershell) | 
-| | |
 
-This docset indicates whenever information is relevant for only one of the clients. If no client is specified, the cmdlet or parameter is relevant for both clients. 
-
-Not sure of the differences between these two clients? See this [FAQ](/azure/information-protection/faqs#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
+- [AIP unified labeling client](/azure/information-protection/rms-client/aip-clientv2) 
+- [Unified client version release history](/azure/information-protection/rms-client/unifiedlabelingclient-version-release-history)
+- [Using PowerShell with the AIP unified labeling client](/azure/information-protection/rms-client/clientv2-admin-guide-powershell) 
 
 Check the version that you have installed by running the following command: `(Get-Module AzureInformationProtection -ListAvailable).Version`.
-
-[!INCLUDE [The AIP classic client is sunset](../includes/classic-client-sunset.md)]
 
 ## AzureInformationProtection Cmdlets
 ### [Add-AIPScannerRepository](Add-AIPScannerRepository.md)
 **Unified labeling client only:** Adds a repository to an Azure Information Protection content scan job.
-
-### [Add-AIPScannerScannedFileTypes](Add-AIPScannerScannedFileTypes.md)
-**Deprecated:** Adds new file types to a configured list of file types to scan or exclude from scanning by the Azure Information Protection scanner.
 
 ### [Add-MIPScannerRepository](Add-MIPScannerRepository.md)
 **Unified labeling client only:** Adds a repository to an Azure Information Protection content scan job.
@@ -126,9 +115,6 @@ For the unified labeling client, use **[Set-AIPFileLabel](Set-AIPFileLabel.md)**
 ### [Remove-AIPScannerRepository](Remove-AIPScannerRepository.md)
 **Unified labeling client only:** Removes a repository from an Azure Information Protection content scan job.
 
-### [Remove-AIPScannerScannedFileTypes](Remove-AIPScannerScannedFileTypes.md)
-**Deprecated:** Removes file types from a configured list of file types to scan or exclude from scanning by the Azure Information Protection scanner.
-
 ### [Set-AIPAuthentication](Set-AIPAuthentication.md)
 Sets the authentication credentials for the Azure Information Protection client.
 
@@ -149,9 +135,6 @@ Sets optional configuration for the Azure Information Protection scanner.
 
 ### [Set-AIPScannerRepository](Set-AIPScannerRepository.md)
 **Unified labeling client only:** Updates an existing repository in an Azure Information Protection content scan job.
-
-### [Set-AIPScannerScannedFileTypes](Set-AIPScannerScannedFileTypes.md)
-**Deprecated:** Sets a list of file types to scan or exclude from scanning by the Azure Information Protection scanner.
 
 ### [Set-MIPNetworkDiscovery](Set-MIPNetworkDiscovery.md)
 **Unified labeling client only:** Updates the installation settings for the Network Discovery service.

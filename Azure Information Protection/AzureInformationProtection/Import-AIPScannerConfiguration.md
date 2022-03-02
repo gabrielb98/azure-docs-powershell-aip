@@ -8,8 +8,6 @@ schema: 2.0.0
 # Import-AIPScannerConfiguration
 
 ## SYNOPSIS
-**Relevant for:** AIP unified labeling and classic clients
-
 Imports local configuration for the Azure Information Protection scanner.
 
 ## SYNTAX
@@ -34,8 +32,6 @@ If you need to make configuration changes to the scanner after you have run this
 If you want to change the scanner to use online configuration after you have run this cmdlet, use the [Set-AIPScannerConfiguration](./Set-AIPScannerConfiguration.md) and set the *OnlineConfiguration* parameter to **On**.
 
 Any changes will be used the next time the scanner runs. If you need the changes to take effect immediately, restart the Azure Information Protection Scanner service on the Windows server computer.
-
-[!INCLUDE [The AIP classic client is sunset](../includes/classic-client-sunset.md)]
 
 
 

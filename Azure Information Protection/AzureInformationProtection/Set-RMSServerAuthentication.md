@@ -26,10 +26,10 @@ This cmdlet does not apply if you use your user account to protect or unprotect 
 - **For Azure RMS:** Server mode requires you to specify credentials for a service principal account that authenticates to the Azure Rights Management service. 
 
 - **For AD RMS:** Server mode requires you to specify Windows integrated authentication so that the computer account can be authenticated with the AD RMS service. The computer account must be granted permissions to ServerCertification.asmx.
-    
+
     Server mode for AD RMS requires the current GA version of the Azure Information Protection client.
 
-For information how to get the identifiers that the service principal requires for Azure RMS, and how to grant the permissions for AD RMS, see [Using PowerShell with the AIP classic client](/information-protection/rms-client/client-admin-guide-powershell).
+For information how to get the identifiers that the service principal requires for Azure RMS, and how to grant the permissions for AD RMS, see [Using PowerShell with the AIP unified labeling client](/information-protection/rms-client/clientv2-admin-guide-powershell).
 
 [!INCLUDE [The AIP classic client is sunset](../includes/classic-client-sunset.md)]
 

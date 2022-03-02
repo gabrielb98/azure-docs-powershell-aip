@@ -8,8 +8,6 @@ schema: 2.0.0
 # Set-AIPScanner
 
 ## SYNOPSIS
-**Relevant for:** AIP unified labeling and classic clients
-
 Sets the service account and database for the Azure Information Protection scanner.
 
 ## SYNTAX
@@ -26,8 +24,6 @@ The **Set-AIPScanner** cmdlet updates the service account and SQL Server databas
 Use this command when you want to change the account or database details that was previously specified, for example, when you installed the scanner by running the [Install-AIPScanner](./Install-AIPScanner.md) cmdlet.
 
 The new configuration takes effects when the Azure Information Protection Scanner service is next started. This cmdlet does not automatically restart this service.
-
-[!INCLUDE [The AIP classic client is sunset](../includes/classic-client-sunset.md)]
 
 
 ## EXAMPLES
@@ -83,15 +79,9 @@ Accept wildcard characters: False
 ### -Profile
 Specifies the configured name of the scanner's database, used to identify the scanner you want to set details for.
 
-- **Unified labeling client:** Using either this parameter or the **Cluster** parameter is mandatory. Starting in version 2.7.0.0 of the unified labeling client, we recommend using the **Cluster** parameter instead of the this parameter.
+Using either this parameter or the **Cluster** parameter is mandatory. Starting in version 2.7.0.0 of the unified labeling client, we recommend using the **Cluster** parameter instead of the this parameter.
 
-    The database name for the scanner is **AIPScannerUL_\<profile_name>**. 
-
-- **Classic client:** This parameter is optional. 
-
-    - If it's not specified, the default database name is used, which is **AIPScanner_\<computer_name>**. 
-
-    - When you specify a profile name with this parameter, the database name for the scanner has the following syntax: **AIPScanner_\<profile_name>**.
+The database name for the scanner is **AIPScannerUL_\<profile_name>**. 
 
 
 ### -ServiceUserCredentials

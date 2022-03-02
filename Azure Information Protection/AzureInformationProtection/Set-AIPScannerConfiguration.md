@@ -8,8 +8,6 @@ schema: 2.0.0
 # Set-AIPScannerConfiguration
 
 ## SYNOPSIS
-**Relevant for:** AIP unified labeling and classic clients
-
 Sets optional configuration for the Azure Information Protection scanner.
 
 ## SYNTAX
@@ -24,8 +22,6 @@ The **Set-AIPScannerConfiguration** cmdlet sets local configuration settings for
 You configure most of the scanner configuration settings in the Azure portal, but must use this cmdlet if you need to import configuration settings from a file because the scanner cannot support online configuration, or if you need to change the report level for the locally created reports.
 
 Any changes will be used the next time the scanner runs. If you need the changes to take effect immediately, restart the Azure Information Protection Scanner service on the Windows server computer.
-
-[!INCLUDE [The AIP classic client is sunset](../includes/classic-client-sunset.md)]
 
 
 ## EXAMPLES
@@ -50,7 +46,7 @@ Log files are stored in the **%localappdata%\Microsoft\MSIP\Scanner\Reports** fo
 
 |Log level |Description  |
 |---------|---------|
-|**Debug**     | Logs every file that was discovered and the resulting action. This level of logging is useful for troubleshooting but slows down the Azure Information Protection scanner. This category includes files that don't meet any of the conditions and files that are skipped because of an unsupported file type. </br></br>For example, trying to label a file for classification-only when the file type doesn't support this action, and trying to label files that are automatically excluded. </br></br>For more information, see the following information from the admin guides:  </br>- [Unified labeling client](/information-protection/rms-client/clientv2-admin-guide-file-types)</br>- [Classic client](/information-protection/rms-client/client-admin-guide-file-types)   |
+|**Debug**     | Logs every file that was discovered and the resulting action. This level of logging is useful for troubleshooting but slows down the Azure Information Protection scanner. This category includes files that don't meet any of the conditions and files that are skipped because of an unsupported file type. </br></br>For example, trying to label a file for classification-only when the file type doesn't support this action, and trying to label files that are automatically excluded. </br></br>For more information, see [Unified labeling client admin guide](/information-protection/rms-client/clientv2-admin-guide-file-types).  |
 |**Info**   (Default)  | Logs only the files that:<br>- Were successfully labeled by the scanner<br>- Would have been labeled by the scanner, if the scanner was not in discovery mode<br>- Contain sensitive information types      |
 |**Error**     |  Logs only the files that the scanner attempted to label or identify but could not. For example, a file was in use, or the scanner service did not have write access to the file.       |
 |**Off**     |  Disables reporting, which results in the best performance for the scanner.       |

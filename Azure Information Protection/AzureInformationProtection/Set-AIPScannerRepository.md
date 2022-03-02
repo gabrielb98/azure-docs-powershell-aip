@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-AIPScannerRepository
 
 ## SYNOPSIS
-**Relevant for:** Unified labeling client only. Deprecated for the classic client.
+**Relevant for:** Unified labeling client only.
 
 Updates an existing repository in an Azure Information Protection content scan job.
 
@@ -27,8 +27,6 @@ Set-AIPScannerRepository -Path <String> [-OverrideContentScanJob <OnOffEnum>] [-
 Updates the details for an existing repository defined in your content scan job.
 
 For more information about content scan jobs, see the [Azure Information Protection on-premises scanner documentation](/information-protection/deploy-aip-scanner-configure-install#create-a-content-scan-job).
-
-[!INCLUDE [This classic client cmdlet is sunset](../includes/classic-client-sunset-cmdlet.md)]
 
 ## EXAMPLES
 
