@@ -31,8 +31,6 @@ This cmdlet does not apply if you use your user account to protect or unprotect 
 
 For information how to get the identifiers that the service principal requires for Azure RMS, and how to grant the permissions for AD RMS, see [Using PowerShell with the AIP unified labeling client](/information-protection/rms-client/clientv2-admin-guide-powershell).
 
-[!INCLUDE [The AIP classic client is sunset](../includes/classic-client-sunset.md)]
-
 
 ## EXAMPLES
 
