@@ -89,7 +89,7 @@ After you confirm that these commands result in successfully connecting to Azure
 
 Note that for illustration purposes, this example uses the user name of **admin@contoso.com** with the password of **Passw0rd!** In a production environment when you use this connection method non-interactively, use additional methods to secure the password so that it is not stored in clear text. For example, use the **ConvertTo-SecureString** command or use Key Vault to store the password as a secret.
 
-### Example 4: Connect to Azure Information with client certificate via Service Principal Authentication
+### Example 4: Connect to Azure Information Protection with client certificate via Service Principal Authentication
 ```
 PS C:\ > $Thumbprint = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 PS C:\ > $TenantId = 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyy'
