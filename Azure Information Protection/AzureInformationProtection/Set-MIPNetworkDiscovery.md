@@ -25,6 +25,8 @@ The Network Discovery service enables AIP administrators to scan a specified IP 
 
 Use network scan job results to identify additional repositories in your network to further scan using a content scan job. For more information, see [Create a network scan job](/azure/information-protection/deploy-aip-scanner-configure-install#create-a-network-scan-job-public-preview).
 
+[!INCLUDE [audit-logs-sunset](../includes/audit-logs-sunset.md)]
+
 ## EXAMPLES
 
 ### Example 1: Update the Network Discovery service settings by using a SQL Server instance

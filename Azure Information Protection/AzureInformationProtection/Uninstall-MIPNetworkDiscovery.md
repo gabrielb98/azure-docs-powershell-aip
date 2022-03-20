@@ -28,6 +28,8 @@ To run this command, you must:
 - Have local Administrator rights for the Windows Server computer
 - Restart the computer after running the command to complete the removal process.
 
+[!INCLUDE [audit-logs-sunset](../includes/audit-logs-sunset.md)]
+
 ## EXAMPLES
 
 ### Example 1

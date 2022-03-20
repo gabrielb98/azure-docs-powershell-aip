@@ -31,6 +31,7 @@ Use network scan job results to identify additional repositories in your network
 
 After you have run this command, use the Azure portal to configure the settings in the scanner's network scan jobs. Before you run the scanner, you must run the [Set-MIPNetworkDiscoveryConfiguration](./Set-MIPNetworkDiscoveryConfiguration.md) cmdlet one time to sign in to Azure AD for authentication and authorization. 
 
+[!INCLUDE [audit-logs-sunset](../includes/audit-logs-sunset.md)]
 
 ## EXAMPLES
 
