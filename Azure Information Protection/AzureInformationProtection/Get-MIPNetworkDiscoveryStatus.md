@@ -30,6 +30,8 @@ Possible statuses include:
 - **Scanning:** The service is running and currently scanning the network.
 - **Error:** The service is running but it has encountered an error that prevents it from scanning files. For example, the service cannot access the database for the scanner configuration.
 
+[!INCLUDE [audit-logs-sunset](../includes/audit-logs-sunset.md)]
+
 ## EXAMPLES
 
 ### Example 1: Service idle

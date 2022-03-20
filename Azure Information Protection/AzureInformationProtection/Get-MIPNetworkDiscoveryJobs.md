@@ -23,6 +23,8 @@ The **Get-MIPNetworkDiscoveryJobs** cmdlet gets a list of the Network Discovery 
 
 Network Discovery network scan jobs enable Azure Information Protection administrators to scan specific IP addresses or ranges for risky repositories to add to scan further with content scan jobs.
 
+[!INCLUDE [audit-logs-sunset](../includes/audit-logs-sunset.md)]
+
 ## EXAMPLES
 
 ### Example 1

@@ -28,6 +28,8 @@ The **Get-MIPNetworkDiscoveryConfiguration** cmdlet displays only the settings a
 > [!TIP]
 > Run [Import-MIPNetworkDiscoveryConfiguration](./Import-MIPNetworkDiscoveryConfiguration.md) to configure the scanner to get Network Discovery service settings from an offline file. When you run **Get-MIPNetworkDiscoveryConfiguration** after importing settings from a file, the **OnlineConfiguration** is displayed as **Off**.
 
+[!INCLUDE [audit-logs-sunset](../includes/audit-logs-sunset.md)]
+
 ## EXAMPLES
 
 ### Example 1
