@@ -29,6 +29,8 @@ Before you run this cmdlet, make sure that the Azure Rights Management service p
 
 For security reasons, the **Use-AipServiceKeyVaultKey** cmdlet does not let you set or change the access control for the key in Azure Key Vault. After that access is granted by running **Set-AzKeyVaultAccessPolicy**, run **Use-AipServiceKeyVaultKey** to tell Azure Information Protection to use the key and version that you specify with the *KeyVaultKeyUrl* parameter.
 
+For more information, see [Best practices for choosing your Azure Key Vault location](/azure/information-protection/byok-price-restrictions#choosing-your-key-vault-location).
+
 > [!NOTE]
 > If you run this cmdlet before the permissions are granted to the key vault, you will see an error that displays **The Rights Management service failed to add the key**. 
 >
