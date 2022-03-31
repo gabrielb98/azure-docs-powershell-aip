@@ -22,12 +22,7 @@
         },
         {
             "source_path": "Azure Information Protection/RMSProtection/about_RMSProtection_ADRMS.md",
-            "red        {
-                "source_path": "Azure Information Protection/RMSProtection/RMSProtection.md",
-                "redirect_url": "/powershell/module/azureinformationprotection",
-                "redirect_document_id": false
-            },
-    irect_url": "/information-protection/rms-client/client-admin-guide-powershell#active-directory-rights-management-services",
+            "redirect_url": "/information-protection/rms-client/client-admin-guide-powershell#active-directory-rights-management-services",
             "redirect_document_id": false
         },
 
