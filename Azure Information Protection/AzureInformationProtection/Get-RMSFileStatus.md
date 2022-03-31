@@ -9,8 +9,6 @@ schema: 2.0.0
 # Get-RMSFileStatus
 
 ## SYNOPSIS
-**Relevant for:** AIP unified labeling and classic clients
-
 Gets the RMS protection status of a specified file.
 
 ## SYNTAX

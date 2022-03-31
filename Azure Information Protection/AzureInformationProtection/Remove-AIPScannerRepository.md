@@ -8,8 +8,6 @@ schema: 2.0.0
 # Remove-AIPScannerRepository
 
 ## SYNOPSIS
-**Relevant for:** Unified labeling client only. Deprecated for the classic client.
-
 Removes a repository from an Azure Information Protection content scan job.
 
 ## SYNTAX
@@ -24,8 +22,6 @@ Remove-AIPScannerRepository
 Deletes any repositories described by the **Repositories** parameter, or returned by a piped [Get-AIPScannerRepository](Get-AIPScannerRepository.md) cmdlet.
 
 For more information about content scan jobs, see the [Azure Information Protection on-premises scanner documentation](/information-protection/deploy-aip-scanner-configure-install#create-a-content-scan-job).
-
-[!INCLUDE [This classic client cmdlet is sunset](../includes/classic-client-sunset-cmdlet.md)]
 
 ## EXAMPLES
 
