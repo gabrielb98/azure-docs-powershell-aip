@@ -1,17 +1,17 @@
 {
     "redirections": [
         {
-            "source_path": "Azure Information Protection/AzureInformationProtection/Remove-AIPScannerScannedFileTypes.md",
+            "source_path": "powershell/module/azureinformationprotection/remove-aipscannerrepository",
             "redirect_url": "/previous-versions/azure/information-protection/powershell#remove-aipscannerscannedfiletypes",
             "redirect_document_id": false
         },
         {
-            "source_path": "Azure Information Protection/AzureInformationProtection/Set-AIPScannerScannedFileTypes.md",
+            "source_path": "powershell/module/azureinformationprotection/set-aipscannerscannedfiletypes",
             "redirect_url": "/previous-versions/azure/information-protection/powershell#set-aipscannerscannedfiletypes",
             "redirect_document_id": false
         },
         {
-            "source_path": "Azure Information Protection/AzureInformationProtection/Add-AIPScannerScannedFileTypes.md",
+            "source_path": "powershell/module/azureinformationprotection/add-aipscannerscannedfiletypes.md",
             "redirect_url": "/previous-versions/azure/information-protection/powershell#add-aipscannerscannedfiletypes",
             "redirect_document_id": false
         },
