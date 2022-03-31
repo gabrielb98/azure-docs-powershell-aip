@@ -27,6 +27,8 @@ While most of the network scan job settings are configured in the Azure portal, 
 
 Any changes will be used the next time the network scan jobs run. If you need the changes to take effect immediately, restart the Network Discovery service on the Windows server computer.
 
+[!INCLUDE [audit-logs-sunset](../includes/audit-logs-sunset.md)]
+
 ## EXAMPLES
 
 ### Example 1: Set the Network Discovery service to use online configuration
