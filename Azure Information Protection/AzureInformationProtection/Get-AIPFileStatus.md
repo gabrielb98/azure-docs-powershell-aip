@@ -9,8 +9,6 @@ schema: 2.0.0
 # Get-AIPFileStatus
 
 ## SYNOPSIS
-**Relevant for:** AIP unified labeling and classic clients
-
 Gets the Azure Information Protection label and protection information for a specified file or files.
 
 ## SYNTAX
@@ -26,60 +24,16 @@ If your files are stored in SharePoint Online, use the [Get-FileSensitivityLabel
 
 The status returned in the **Get-AIPFileStatus** cmdlet also includes whether the file is protected by Rights Management, and if it is, what Rights Management template was used to apply this protection. If the file was protected with custom permissions (an ad-hoc rights policy) instead of a template, "Restricted Access" is displayed instead of the template name. In addition, the [Rights Management owner and Rights Management issuer](/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) is displayed, and when the file was protected.
 
+This cmdlet returns label information from your own tenant only.
+
 Note that password-protected files always return the protection status of **False**.
 
-You can run this cmdlet non-interactively. For more information, see the following client admin guides:
-
-- **[Unified labeling client](/information-protection/rms-client/clientv2-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection)**
-
-- **[Classic client](/information-protection/rms-client/client-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection)**
-
-[!INCLUDE [The AIP classic client is sunset](../includes/classic-client-sunset.md)]
-
-**Differences in support between clients**
-
-If you have the AIP unified labeling client, functionality differs from the classic client as follows.
-
-In the unified labeling client:
-
-- This cmdlet returns label information from your own tenant only and the *LabelingSiteId* parameter is not displayed in the output.
-
-- The *Owner* and *RMSIssuedTime* parameters are not supported and are not displayed in the output.
-
-- The *LabelingMethod* parameter displays the values of **Privileged** or **Standard** instead of **Manual** or **Automatic:**
-  
-    - **Privileged:** A label was applied by a user, either manually or a result of a labeling recommendation, and is the equivalent of **Manual** for the AIP classic client.
-
-    - **Standard:** A label was applied automatically, and is the equivalent of **Automatic** for the AIP classic client.
+You can run this cmdlet non-interactively. For more information, see the [Unified labeling client admin guide](/information-protection/rms-client/clientv2-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection).
 
 ## EXAMPLES
 
-### Example 1a: (Classic client) Get the label and protection status of a single file
 
-```
-PS C:\> Get-AIPFileStatus -Path \\Finance\Projects\Project.docx
-
-FileName        : \\Finance\Projects\Project.docx
-IsLabeled       : True
-MainLabelId     : 074e257c-1234-1234-1234-34a182080e71
-MainLabelName   : Confidential
-SubLabelId      : d9f23ae3-1234-1234-1234-f515f824c57b
-SubLabelName    : Finance group
-LabelingSiteId  : 72f988bf-1234-1234-1234-2d7cd011db47
-Owner           : John@Contoso.com
-LabelingMethod  : Manual
-LabelDate       : 12/12/2016 12:24:36 PM
-IsRMSProtected  : True
-RMSTemplateId   : e6ee2481-1234-1234-1234-f744eacd53b0
-RMSTemplateName : Contoso - Confidential Finance
-RMSIssuedTime   : 5/6/2018 9:15:03 AM
-RMSOwner        : John@Contoso.com
-RMSIssuer       : John@Contoso.com
-```
-
-This command provides information about a file that is labeled as "Confidential \ Finance group". This file was labeled manually by John and it is also protected by using the Rights Management template, "Contoso - Confidential Finance". 
-
-### Example 1b: (Unified labeling client) Get the label and protection status of a single file
+### Example 1: Get the label and protection status of a single file
 
 ```
 PS C:\> Get-AIPFileStatus -Path \\Finance\Projects\Project.docx

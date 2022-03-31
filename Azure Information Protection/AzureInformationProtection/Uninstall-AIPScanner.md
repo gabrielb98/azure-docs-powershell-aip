@@ -8,8 +8,6 @@ schema: 2.0.0
 # Uninstall-AIPScanner
 
 ## SYNOPSIS
-**Relevant for:** AIP unified labeling and classic clients
-
 Uninstalls the Windows Server service for the Azure Information Protection scanner.
 
 ## SYNTAX
@@ -29,14 +27,7 @@ This command does *not* remove the following:
 
 - **The SQL Server database** that was created by running the [Install-AIPScanner](./Install-AIPScanner.md) cmdlet when the Azure Information Protection scanner was installed. If this database is no longer required, you must manually remove it. 
 
-    This database is named as follows:
-
-    |Client  |Instructions  |
-    |---------|---------|
-    |**Unified labeling client**     |  For the AIP unified labeling client, the database name for the scanner is **AIPScannerUL_\<cluster_name>**.       |
-    |**Classic client**     |  For the AIP classic client, the default database name for the scanner is **AIPScanner_\<computer_name>** but when you specify a profile name, the database name for the scanner changes to **AIPScanner_\<profile_name)>**.       |
-
-[!INCLUDE [The AIP classic client is sunset](../includes/classic-client-sunset.md)]
+    The database name for the scanner is **AIPScannerUL_\<cluster_name>**.
 
 
 ## EXAMPLES

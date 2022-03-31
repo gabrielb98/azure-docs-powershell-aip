@@ -25,7 +25,6 @@ Deletes an entire Azure Information Protection content scan job.
 
 For more information about content scan jobs, see the [Azure Information Protection on-premises scanner documentation](/information-protection/deploy-aip-scanner-configure-install#create-a-content-scan-job).
 
-[!INCLUDE [This classic client cmdlet is sunset](../includes/classic-client-sunset-cmdlet.md)]
 
 ## EXAMPLES
 

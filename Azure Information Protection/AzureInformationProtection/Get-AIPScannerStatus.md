@@ -9,8 +9,6 @@ author: batamig
 # Get-AIPScannerStatus
 
 ## SYNOPSIS
-**Relevant for:** AIP unified labeling and classic clients
-
 Gets the current status of the service for the Azure Information Protection scanner.
 
 ## SYNTAX
@@ -58,22 +56,6 @@ To obtain further details, use one or both of the following methods:
 
 
 For more information, see [Verify scanning details per scanner node and repository](/azure/information-protection/deploy-aip-scanner-tsg#verify-scanning-details-per-scanner-node-and-repository).
-
-**Classic client**
-
-The **Get-AIPScannerStatus** cmdlet returns the current status of the scanner service for Azure Information Protection.
-
-Possible values:
-
-- **Offline**: The service is not started.
-- **Idle**: The service is running but not currently scanning.
-- **Scanning**: The service is running and currently scanning files.
-- **Error**: The scanner service is running but it has encountered an error that prevents it from scanning files.
-
- For example, the service cannot access the database for the scanner configuration.
-
-[!INCLUDE [The AIP classic client is sunset](../includes/classic-client-sunset.md)]
-
 
 ## EXAMPLES
 
@@ -155,7 +137,7 @@ C:\temp     Scanning
 
 The output shows the scan status for each repository configured for the content scan job.
 
-### Example 5: Use the Verbose parameter and the CurrentScanSummary variable (unified labeling client)
+### Example 5: Use the Verbose parameter and the CurrentScanSummary variable
 
 ```powershell
 PS C:\Windows\system32> $x.CurrentScanSummary
@@ -172,18 +154,6 @@ Labeled                 : 0
 
 The output shows further details about the scan currently running, including the number of scanned, failed, classified, and labeled files, as well as the number of bytes scanned.
 
-### Example 6: Get the current status of the scanner service (classic client)
-
-```
-PS C:\> Get-AIPScannerStatus
-
-NodeName       ScannerStatus    LastTimeStamp
---------       -------------    -------------
-AIPSCANNODE1            Idle    7/2/2018 10:04:07 AM
-
-```
-
-The output shows the scanner service to be running but not currently scanning. This status was reported 7/2/2018 at 10:04:07 AM.
 
 ## PARAMETERS
 

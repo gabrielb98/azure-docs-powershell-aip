@@ -36,13 +36,6 @@ For more information, see:
 
 - [User Guide: Revoke document access with Azure Information Protection](/information-protection/rms-client/revoke-access-user) 
 
-**Classic client only**:
-
-If you are using the classic client, document tracking provides uses with access to the document tracking site, where they can view the protected documents that they have shared to date.
-
-For more information, see:
-[Configuring and using document tracking for Azure Information Protection for the classic client](/information-protection/rms-client/client-admin-guide-document-tracking).
-
 ## EXAMPLES
 
 ### Example 1: Turn on document tracking

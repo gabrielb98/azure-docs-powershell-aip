@@ -8,8 +8,6 @@ schema: 2.0.0
 # Get-AIPScannerRepository
 
 ## SYNOPSIS
-**Relevant for:** AIP unified labeling client. Deprecated for the classic client.
-
 Gets repository data for an Azure Information Protection content scan job.
 
 ## SYNTAX
@@ -22,8 +20,6 @@ Get-AIPScannerRepository [-Path <String>] [<CommonParameters>]
 Gets a list of data repositories that the content scan job is configured to scan.
 
 For more information about content scan jobs, see the [Azure Information Protection on-premises scanner documentation](/information-protection/deploy-aip-scanner-configure-install#create-a-content-scan-job).
-
-[!INCLUDE [This classic client cmdlet is sunset](../includes/classic-client-sunset-cmdlet.md)]
 
 ## EXAMPLES
 
