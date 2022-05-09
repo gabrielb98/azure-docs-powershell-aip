@@ -33,7 +33,10 @@
     " bryanla@microsoft.com"
   ],
   "sync_notification_subscribers": [
-    "bagol@microsoft.com"
+    "bagol@microsoft.com",
+    " mbaldwin@microsoft.com",
+    " cabailey@microsoft.com",
+    " bryanla@microsoft.com"
   ],
   "branches_to_filter": [],
   "git_repository_url_open_to_public_contributors": "https://github.com/Azure/azure-docs-powershell-aip",
