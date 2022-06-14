@@ -25,7 +25,7 @@ You must use PowerShell to get these user logs; you cannot do this action by usi
 
 When you run this command and specify a date only for the **DateTime** objects, the time is assumed to be 00:00:00 in your local time, and then converted to UTC. 
 
-When you specify a time with a date (for example, **-ForDate "2/1/2016 15:00:00"**), that date and time is converted to UTC. The **Get-AipServiceUserLog** command then gets the logs for that UTC time period. 
+When you specify a time with a date (for example, **-ForDate "2/1/2016 15:00:00"**), that date and time is converted to UTC. The **Get-AipServiceUserLog** command then gets the logs for that UTC time period. Usage logs are only available when the “date” field name contains a value of a previous date (in UTC time). Usage logs from the current date are not available.
 
 See the examples for how you might need to change your **DateTime** values, to accommodate the conversion needed for your local time.
 
