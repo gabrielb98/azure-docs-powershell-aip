@@ -54,7 +54,7 @@ You can run this cmdlet non-interactively. For more information, see the [Unifie
 
 > [!NOTE]
 > When running the **Set-AIPFileLabel** cmdlet in a loop, add these two lines after the cmdlet:
-> **[GC]::Collect()**  
+> **[GC]::Collect()**\
 > **[GC]::WaitForPendingFinalizers()** 
 > 
 
