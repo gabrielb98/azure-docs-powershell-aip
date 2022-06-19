@@ -52,6 +52,11 @@ When the command runs successfully, any existing label or protection can be repl
 
 You can run this cmdlet non-interactively. For more information, see the [Unified labeling client admin guide](/information-protection/rms-client/clientv2-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection).
 
+> [!NOTE]
+> When running the **Set-AIPFileLabel** cmdlet in a loop, add these two lines after the cmdlet:
+> **[GC]::Collect()**    
+**[GC]::WaitForPendingFinalizers()** 
+> 
 
 ## EXAMPLES
 
