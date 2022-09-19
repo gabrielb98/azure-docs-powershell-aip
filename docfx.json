@@ -61,6 +61,7 @@
       "showPowerShellPicker": "true",
       "apiPlatform": "powershell",
       "brand": "azure",
+      "uhfHeaderId": "Azure",
       "searchScope": [
         "Azure"
       ],
