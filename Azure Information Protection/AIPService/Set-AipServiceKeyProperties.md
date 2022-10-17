@@ -15,7 +15,7 @@ Updates the properties of a tenant key object for Azure Information Protection.
 
 ```
 Set-AipServiceKeyProperties [-Force] -KeyIdentifier <String> -Active <Boolean> [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [<CommonParameters>] [-RefreshSlcName]
 ```
 
 ## DESCRIPTION
@@ -44,6 +44,13 @@ PS C:\> Set-AipServiceKeyProperties -Force -KeyIdentifier "c0f102b3-02cc-4816-b7
 This command changes the status of a tenant key object from **Archived** to **Active.** The *KeyIdentifier* parameter identifies the tenant key object to change, and this value can be found by running [Get-AipServiceKeys](./Get-AipServiceKeys.md). The tenant key object that previously had a status of **Active** is automatically set to **Archived**.
 
 Because the command specifies the *Force* parameter, the command does not prompt you for confirmation.
+
+### Example 2: Refresh SLC to reflect tenant friendly name
+```
+PS C:\> Set-AipServiceKeyProperties -KeyIdentifier "c0f102b3-02cc-4816-b732-fcee73edd0e6" -RefreshSlcName
+```
+
+This command retrieves the current tenant friendly name from Azure Active Directory and updates the SLC to have the user keys reflect the same name.
 
 ## PARAMETERS
 
@@ -120,6 +127,21 @@ Aliases: wi
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RefreshSlcName
+Refreshes the user key (SLC) to reflect the tenant-friendly name.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
